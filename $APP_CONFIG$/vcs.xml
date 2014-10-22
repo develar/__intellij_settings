@@ -3,4 +3,7 @@
     <option name="myPathToGit" value="/usr/local/bin/git" />
     <option name="SSH_EXECUTABLE" value="NATIVE_SSH" />
   </component>
+  <component name="VcsApplicationSettings">
+    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Dropbox" />
+  </component>
 </application>
