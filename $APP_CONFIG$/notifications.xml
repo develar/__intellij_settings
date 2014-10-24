@@ -24,5 +24,9 @@
     <notification groupId="TeamCity.TestInvestigationAssigned" displayType="STICKY_BALLOON" />
     <notification groupId="Update Checker" displayType="STICKY_BALLOON" />
     <notification groupId="Vcs Important Messages" displayType="STICKY_BALLOON" />
+    <toolWindow group="Find in Path" />
+    <toolWindow group="Debugger messages" />
+    <toolWindow group="Common Version Control Messages" />
+    <toolWindow group="Inspection Results" />
   </component>
 </application>
