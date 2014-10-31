@@ -1,7 +1,5 @@
 <application>
   <component name="XDebuggerSettings">
-    <data-views />
-    <general />
     <debuggers>
       <debugger id="groovy_debugger" />
       <debugger id="javascript" />
