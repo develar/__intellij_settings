@@ -1,8 +1,6 @@
 <application>
   <component name="XDebuggerSettings">
     <debuggers>
-      <debugger id="groovy_debugger" />
-      <debugger id="javascript" />
       <debugger id="kotlin_debugger">
         <configuration>
           <option name="DEBUG_IS_FILTER_FOR_STDLIB_ALREADY_ADDED" value="true" />
