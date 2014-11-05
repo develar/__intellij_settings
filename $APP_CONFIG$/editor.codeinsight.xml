@@ -2,10 +2,13 @@
   <component name="CodeInsightSettings">
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="com.google.common.util.concurrent.AsyncFunction" />
     <EXCLUDED_PACKAGE NAME="com.sun" />
     <EXCLUDED_PACKAGE NAME="com.sun.istack" />
     <EXCLUDED_PACKAGE NAME="com.sun.tools.javac" />
     <EXCLUDED_PACKAGE NAME="io.netty.util.concurrent.Promise" />
+    <EXCLUDED_PACKAGE NAME="java.util.function" />
+    <EXCLUDED_PACKAGE NAME="java.util.function.Function" />
     <EXCLUDED_PACKAGE NAME="org.omg" />
     <EXCLUDED_PACKAGE NAME="sun.rmi" />
   </component>
