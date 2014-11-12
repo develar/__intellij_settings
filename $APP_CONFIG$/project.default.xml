@@ -82,8 +82,8 @@
         <configuration default="true" type="Applet" factoryName="Applet">
           <option name="WIDTH" value="400" />
           <option name="HEIGHT" value="300" />
-          <module />
           <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+          <module />
           <method />
         </configuration>
         <configuration default="true" type="Application" factoryName="Application">
