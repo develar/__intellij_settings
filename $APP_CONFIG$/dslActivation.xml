@@ -1,7 +1,5 @@
 <application>
   <component name="DslActivationStatus">
-    <file url="file://$USER_HOME$/Documents/idea/community/build/scripts/scripts.gdsl" status="Modified" />
-    <file url="file://$USER_HOME$/Documents/idea/community/jps/standalone-builder/src/jps.gdsl" status="Modified" />
     <file url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/metaDsl.gdsl" status="Modified" />
     <file url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/singletonTransform.gdsl" status="Modified" />
     <file url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/closuresInMethod.gdsl" status="Modified" />
@@ -15,5 +13,7 @@
     <file url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/bindableTransform.gdsl" status="Modified" />
     <file url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/defaultMethods.gdsl" status="Modified" />
     <file url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/extensions.gdsl" status="Modified" />
+    <file url="file://$USER_HOME$/Documents/idea/community/build/scripts/scripts.gdsl" status="Modified" />
+    <file url="file://$USER_HOME$/Documents/idea/community/jps/standalone-builder/src/jps.gdsl" status="Modified" />
   </component>
 </application>
