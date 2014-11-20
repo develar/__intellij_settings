@@ -40,7 +40,7 @@
         <property name="MemberChooser.sorted" value="false" />
         <property name="MemberChooser.showClasses" value="true" />
         <property name="MemberChooser.copyJavadoc" value="false" />
-        <property name="options.lastSelected" value="project.propCompiler" />
+        <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
         <property name="options.splitter.main.proportions" value="0.3" />
         <property name="options.splitter.details.proportions" value="0.2" />
       </component>
