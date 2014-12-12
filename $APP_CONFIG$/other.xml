@@ -265,9 +265,6 @@
   <component name="TeamCityHistory">
     <option name="HISTORY" value="http://buildserver&amp;^%$#@vladimir.krivosheev@jetbrains.com" />
   </component>
-  <component name="TemplateSettings">
-    <defaultShortcut shortcut="TAB" />
-  </component>
   <component name="TodoConfiguration">
     <pattern icon="default" useCustomColors="false" case-sensitive="false" pattern="\btodo\b.*">
       <option name="FOREGROUND" value="347fcf" />
@@ -282,35 +279,10 @@
       <option name="EFFECT_TYPE" value="0" />
     </pattern>
   </component>
-  <component name="UsageViewSettings">
-    <option name="filterDuplicatedLine" value="true" />
-    <option name="IS_FILTER_DUPLICATED_LINE" value="true" />
-    <option name="GROUP_BY_USAGE_TYPE" value="false" />
-    <option name="GROUP_BY_PACKAGE" value="false" />
-  </component>
   <component name="VcsApplicationSettings" PATCH_STORAGE_LOCATION="$USER_HOME$/Dropbox">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Dropbox" />
   </component>
   <component name="WebServicesPluginSettings" WebServicesUrlPathPrefix="/services" ASK_TO_INSTALL_SOAPUI="true" />
-  <component name="XDebuggerSettings">
-    <data-views />
-    <general />
-    <debuggers>
-      <debugger id="javascript">
-        <configuration>
-          <custom-object-presentation />
-        </configuration>
-      </debugger>
-      <debugger id="groovy_debugger">
-        <configuration />
-      </debugger>
-      <debugger id="kotlin_debugger">
-        <configuration>
-          <option name="DEBUG_IS_FILTER_FOR_STDLIB_ALREADY_ADDED" value="true" />
-        </configuration>
-      </debugger>
-    </debuggers>
-  </component>
   <component name="com.intellij.ide.fileTemplates.impl.FileTemplateManagerImpl">
     <recent_templates>
       <option name="RECENT_TEMPLATES">
