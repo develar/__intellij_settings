@@ -19,6 +19,10 @@
           </profile>
         </annotationProcessing>
       </component>
+      <component name="CompilerWorkspaceConfiguration">
+        <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+        <option name="PARALLEL_COMPILATION" value="true" />
+      </component>
       <component name="ProjectLevelVcsManager" settingsEditedManually="false">
         <OptionsSetting value="true" id="Add" />
         <OptionsSetting value="true" id="Remove" />
@@ -43,7 +47,7 @@
         <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
         <property name="options.splitter.main.proportions" value="0.3" />
         <property name="options.splitter.details.proportions" value="0.2" />
-        <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+        <property name="settings.editor.selected.configurable" value="project.propCompiler" />
         <property name="settings.editor.splitter.proportion" value="0.2" />
       </component>
       <component name="RunManager">
