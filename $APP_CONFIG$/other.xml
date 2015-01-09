@@ -201,9 +201,6 @@
     <filtersTableLayout />
     <propertiesTableLayout />
   </component>
-  <component name="ImportFilteringUsageViewSetting">
-    <option name="SHOW_IMPORTS" value="false" />
-  </component>
   <component name="LastSelectedPropertiesFileStore" lastSelectedFileUrl="file://$USER_HOME$/Documents/idea/community/platform/platform-resources-en/src/messages/XmlBundle.properties">
     <entry context="file://$USER_HOME$/Documents/idea/flex/tools/flex-ui-designer/idea-plugin/src/com/intellij/flex/uiDesigner/preview/MxmlPreviewPanel.java" url="file://$USER_HOME$/Documents/idea/flex/tools/flex-ui-designer/idea-plugin/resources/messages/FlashUIDesignerBundle.properties" />
     <entry context="file://$USER_HOME$/Documents/idea/community/xml/impl/src/com/intellij/ide/browsers/StartBrowserPanel.java" url="file://$USER_HOME$/Documents/idea/community/platform/platform-resources-en/src/messages/XmlBundle.properties" />
