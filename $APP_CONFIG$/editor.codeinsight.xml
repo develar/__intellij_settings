@@ -10,9 +10,12 @@
     <EXCLUDED_PACKAGE NAME="io.netty.util.concurrent.Promise" />
     <EXCLUDED_PACKAGE NAME="java.util.function" />
     <EXCLUDED_PACKAGE NAME="java.util.function.Function" />
+    <EXCLUDED_PACKAGE NAME="javax.management" />
+    <EXCLUDED_PACKAGE NAME="jdk.nashorn.internal" />
     <EXCLUDED_PACKAGE NAME="jdk.nashorn.internal.objects.annotations" />
     <EXCLUDED_PACKAGE NAME="org.omg" />
     <EXCLUDED_PACKAGE NAME="sun.rmi" />
+    <EXCLUDED_PACKAGE NAME="sun.tools" />
   </component>
   <component name="DaemonCodeAnalyzerSettings">
     <option name="NEXT_ERROR_ACTION_GOES_TO_ERRORS_FIRST" value="false" />
