@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="NodeRendererSettings">
     <option name="HEX_VIEW_ENABLED" value="false" />
@@ -26,6 +25,9 @@
       <option name="SHOW_DECLARED_TYPE" value="false" />
       <option name="SHOW_OBJECT_ID" value="true" />
     </Renderer>
+    <Renderer ID="PrimitiveRenderer">
+      <option name="NAME" value="Primitive" />
+      <option name="SHOW_HEX_VALUE" value="false" />
+    </Renderer>
   </component>
 </application>
-
