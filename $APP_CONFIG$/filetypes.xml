@@ -1,9 +1,10 @@
 <application>
   <component name="FileTypeManager" version="12">
-    <ignoreFiles list="CVS;SCCS;RCS;rcs;.DS_Store;.svn;.pyc;.pyo;*.pyc;*.pyo;.git;*.hprof;_svn;.hg;*.lib;*~;__pycache__;.bundle;*.rbc;" />
+    <ignoreFiles list="CVS;SCCS;RCS;rcs;.DS_Store;.svn;.pyc;.pyo;*.pyc;*.pyo;.git;*.hprof;_svn;.hg;*.lib;*~;__pycache__;.bundle;*.rbc;*.orig;" />
     <extensionMap>
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping ext="ts&quot;],&quot;names&quot;:[],&quot;mappings&quot;:&quot;&quot;}" type="SourceMap" />
     </extensionMap>
+    <setting name="fileTypeChangedCounter" value="1" />
   </component>
 </application>
