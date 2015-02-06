@@ -1,12 +1,12 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Project and Libraries" />
-    <option name="defaultScopeName" value="Project and Libraries" />
+    <option name="customScope" value="File '/Users/develar/Documents/idea/community/java/execution/impl/src/com/intellij/execution/junit/JUnitProcessHandler.java'" />
+    <option name="defaultScopeName" value="File '/Users/develar/Documents/idea/community/java/execution/impl/src/com/intellij/execution/junit/JUnitProcessHandler.java'" />
     <option name="wholeWordsOnly" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
-    <option name="SEARCH_SCOPE" value="Project and Libraries" />
+    <option name="SEARCH_SCOPE" value="File '/Users/develar/Documents/idea/community/java/execution/impl/src/com/intellij/execution/junit/JUnitProcessHandler.java'" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
