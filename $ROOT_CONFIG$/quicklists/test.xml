@@ -1,0 +1,3 @@
+<list display="test" description="f34" readonly="false">
+  <action id="GoToLinkTarget" />
+</list>
