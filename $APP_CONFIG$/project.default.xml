@@ -53,7 +53,7 @@
         <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
         <property name="options.splitter.main.proportions" value="0.3" />
         <property name="options.splitter.details.proportions" value="0.2" />
-        <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+        <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
         <property name="settings.editor.splitter.proportion" value="0.2" />
       </component>
       <component name="RunManager">
@@ -118,6 +118,9 @@
           <option name="PARAMETERS" />
           <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
         </configuration>
+      </component>
+      <component name="SvnConfiguration" myUseAcceleration="nothing">
+        <configuration>$USER_HOME$/.subversion</configuration>
       </component>
       <component name="VcsContentAnnotationSettings">
         <option name="myLimit" value="2678400000" />
