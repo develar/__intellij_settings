@@ -17,7 +17,7 @@
     <EXCLUDED_PACKAGE NAME="sun.rmi" />
     <EXCLUDED_PACKAGE NAME="sun.tools" />
   </component>
-  <component name="DaemonCodeAnalyzerSettings">
+  <component name="DaemonCodeAnalyzerSettings" profile="Fooo">
     <option name="NEXT_ERROR_ACTION_GOES_TO_ERRORS_FIRST" value="false" />
   </component>
   <component name="JavaCodeFoldingSettings">

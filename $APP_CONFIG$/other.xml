@@ -7,37 +7,13 @@
             <id />
           </State>
           <State>
-            <id>Class structure</id>
-          </State>
-          <State>
-            <id>Cloning issues</id>
-          </State>
-          <State>
-            <id>Code maturity issues</id>
-          </State>
-          <State>
-            <id>Code style issues</id>
-          </State>
-          <State>
             <id>Control FlowGroovy</id>
-          </State>
-          <State>
-            <id>Control flow issues</id>
           </State>
           <State>
             <id>Control flow issuesJavaScript</id>
           </State>
           <State>
-            <id>Data flow issues</id>
-          </State>
-          <State>
             <id>Data flow issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Declaration redundancy</id>
-          </State>
-          <State>
-            <id>Error handling</id>
           </State>
           <State>
             <id>Error handlingGroovy</id>
@@ -52,22 +28,10 @@
             <id>Internationalization issues</id>
           </State>
           <State>
-            <id>J2ME issues</id>
-          </State>
-          <State>
             <id>JUnit issues</id>
           </State>
           <State>
-            <id>Java language level migration aids</id>
-          </State>
-          <State>
             <id>JavaScript</id>
-          </State>
-          <State>
-            <id>Method metrics</id>
-          </State>
-          <State>
-            <id>Probable bugs</id>
           </State>
           <State>
             <id>Probable bugsGroovy</id>
@@ -76,24 +40,26 @@
             <id>Probable bugsJavaScript</id>
           </State>
           <State>
-            <id>Resource management issues</id>
-          </State>
-          <State>
-            <id>Security issues</id>
-          </State>
-          <State>
-            <id>Serialization issues</id>
-          </State>
-          <State>
-            <id>Threading issues</id>
-          </State>
-          <State>
             <id>Threading issuesGroovy</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>Abstraction issues</id>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+    <entry key="Fooo">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
           </State>
         </selected-state>
       </profile-state>
@@ -291,5 +257,5 @@
     <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
     <ignored-resource url="http://www.w3.org/2000/svg" />
   </component>
-  <component name="com.intellij.openapi.diff.impl.external.DiffManagerImpl" COMPARISON_POLICY="Ignore spaces" HIGHLIGHT_MODE="BY_WORD" />
+  <component name="com.intellij.openapi.diff.impl.external.DiffManagerImpl" COMPARISON_POLICY="Default" />
 </application>
