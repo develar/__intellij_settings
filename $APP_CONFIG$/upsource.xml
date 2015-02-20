@@ -1,0 +1,17 @@
+<application>
+  <component name="UpsourceGlobalSettings">
+    <option name="connectionInfos">
+      <map>
+        <entry key="http://upsource.labs.intellij.net/">
+          <value>
+            <MyUpsourceConnectionInfo>
+              <option name="accessTime" value="1424429522760" />
+              <option name="accessToken" value="1424430625518.upsource-idea-plugin.18486efd-6d1b-4863-9c2d-d1093c9cb5dd.620c9f82-9c57-4727-a8a5-8639d75e40e5;1.MCwCFG/8EWIUOumCkOESj0rMGz4th0hrAhQDeciSs6GTQMVAgypJSo80AMWwbQ==" />
+              <option name="refreshToken" value="YuqXTlTMqvr8VmnGO4EsYvlLnHRxJG1424427025524" />
+            </MyUpsourceConnectionInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
