@@ -14,9 +14,6 @@
         <PlaceSettings />
       </entry>
     </option>
-    <option name="SHARED_SETTINGS">
-      <SharedSettings />
-    </option>
   </component>
   <component name="TextDiffSettings">
     <option name="PLACES_MAP">
@@ -31,17 +28,11 @@
         </PlaceSettings>
       </entry>
       <entry key="Default">
-        <PlaceSettings>
-          <option name="HIGHLIGHT_POLICY" value="BY_LINE" />
-          <option name="IGNORE_POLICY" value="IGNORE_WHITESPACES_CHUNKS" />
-        </PlaceSettings>
+        <PlaceSettings />
       </entry>
       <entry key="TestsFiledAssertions">
         <PlaceSettings />
       </entry>
-    </option>
-    <option name="SHARED_SETTINGS">
-      <SharedSettings />
     </option>
   </component>
 </application>
