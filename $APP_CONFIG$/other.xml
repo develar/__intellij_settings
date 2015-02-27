@@ -177,20 +177,7 @@
     <file url="resourceBundle:jar:///Users/develar/Documents/fxg2swf/lib/fxg-tools.jar!/com/adobe/fxg/FXGException" separator="\u002e" />
   </component>
   <component name="RefactoringSettings">
-    <option name="RENAME_SEARCH_IN_COMMENTS_FOR_CLASS" value="false" />
-    <option name="RENAME_SEARCH_IN_COMMENTS_FOR_METHOD" value="false" />
-    <option name="RENAME_SEARCH_FOR_TEXT_FOR_PACKAGE" value="false" />
-    <option name="RENAME_SEARCH_FOR_TEXT_FOR_CLASS" value="false" />
-    <option name="RENAME_SEARCH_FOR_TEXT_FOR_METHOD" value="false" />
-    <option name="ENCAPSULATE_FIELDS_USE_ACCESSORS_WHEN_ACCESSIBLE" value="false" />
     <option name="MOVE_PREVIEW_USAGES" value="false" />
-    <option name="MOVE_SEARCH_IN_COMMENTS" value="false" />
-    <option name="MOVE_SEARCH_FOR_TEXT" value="false" />
-    <option name="MOVE_INNER_PREVIEW_USAGES" value="false" />
-    <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
-    <option name="INTRODUCE_CONSTANT_VISIBILITY" value="public" />
-    <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
-    <option name="RENAME_INHERITORS" value="false" />
   </component>
   <component name="SelectProjectTemplateSettings">
     <option name="EXPERT_MODE" value="true" />
