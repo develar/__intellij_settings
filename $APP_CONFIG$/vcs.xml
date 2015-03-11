@@ -91,6 +91,6 @@
     <option name="cloneParentDir" value="$USER_HOME$/Documents" />
   </component>
   <component name="VcsApplicationSettings">
-    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$" />
+    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Documents/cloud-intellij/flux/node.server/flux.orion.integration/patch_orion" />
   </component>
 </application>
