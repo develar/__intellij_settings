@@ -3,8 +3,8 @@
     <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
-      <mapping ext="dart" type="PLAIN_TEXT" />
       <mapping ext="exe" type="PLAIN_TEXT" />
+      <mapping ext="dart" type="PLAIN_TEXT" />
       <mapping ext="ts&quot;],&quot;names&quot;:[],&quot;mappings&quot;:&quot;&quot;}" type="SourceMap" />
     </extensionMap>
   </component>
