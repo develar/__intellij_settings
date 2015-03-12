@@ -1,5 +1,5 @@
 <application>
-  <component name="IgnoreSettings" missingGitignore="true" donationShown="1.0" ignoredFileStatus="true">
+  <component name="IgnoreSettings" missingGitignore="false" donationShown="1.0" ignoredFileStatus="false">
     <userTemplates />
   </component>
 </application>
