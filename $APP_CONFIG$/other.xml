@@ -158,6 +158,7 @@
     <option name="UI_FLATTEN_PACKAGES" value="false" />
     <option name="UI_SHOW_MODULES" value="false" />
     <option name="UI_SHOW_MODULE_GROUPS" value="false" />
+    <option name="SCOPE_TYPE" value="file" />
   </component>
   <component name="ErrorReportConfigurable">
     <option name="ITN_LOGIN" value="develar" />
