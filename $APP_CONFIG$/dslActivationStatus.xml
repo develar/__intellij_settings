@@ -6,12 +6,12 @@
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/newifyTransform.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/vetoableTransform.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/closuresInMethod.gdsl" status="ACTIVE" />
-      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/indexedProperty.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/metaDsl.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/extensions.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/gantScript.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/categoryTransform.gdsl" status="ACTIVE" />
-      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/metaDsl.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/listenerList.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/indexedProperty.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/bindableTransform.gdsl" status="ACTIVE" />
     </option>
   </component>
