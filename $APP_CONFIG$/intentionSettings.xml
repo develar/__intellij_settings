@@ -2,5 +2,6 @@
   <component name="IntentionManagerSettings">
     <ignoreAction name="Kotlin/Specify Custom Kotlin Signature" />
     <ignoreAction name="JavaScript/Control Flow/Replace Switch With If" />
+    <ignoreAction name="Kotlin/Replace Overloaded Operator With Function Call" />
   </component>
 </application>
