@@ -10,8 +10,8 @@
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/extensions.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/gantScript.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/categoryTransform.gdsl" status="ACTIVE" />
-      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/listenerList.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/indexedProperty.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/listenerList.gdsl" status="ACTIVE" />
       <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/bindableTransform.gdsl" status="ACTIVE" />
     </option>
   </component>
