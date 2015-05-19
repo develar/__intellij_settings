@@ -13,4 +13,11 @@
       <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/cloud-intellij" />
     </exec>
   </tool>
+  <tool name="webpack" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="webpack" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$FileDir$" />
+    </exec>
+  </tool>
 </toolSet>
