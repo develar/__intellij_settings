@@ -16,7 +16,7 @@
   <tool name="webpack" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="webpack" />
-      <option name="PARAMETERS" value="--watch --color" />
+      <option name="PARAMETERS" value="--watch --colors --progress" />
       <option name="WORKING_DIRECTORY" value="$FileDir$" />
     </exec>
   </tool>
