@@ -1,5 +1,15 @@
 <application>
   <component name="FileTypeManager" version="14">
-    <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;vssver.scc;vssver2.scc;" />
+    <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
+    <extensionMap>
+      <mapping ext="pref" type="JSON" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
+      <mapping ext="dart" type="PLAIN_TEXT" />
+      <mapping ext="exe" type="PLAIN_TEXT" />
+      <mapping ext="types" type="PLAIN_TEXT" />
+      <mapping ext="cnf" type="PLAIN_TEXT" />
+      <mapping ext="ts&quot;],&quot;names&quot;:[],&quot;mappings&quot;:&quot;&quot;}" type="SourceMap" />
+      <mapping ext="conf" type="nginx file type" />
+    </extensionMap>
   </component>
 </application>
