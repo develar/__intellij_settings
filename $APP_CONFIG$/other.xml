@@ -67,5 +67,11 @@
       <option name="ENABLED" value="true" />
     </filter>
   </component>
+  <component name="ErrorReportConfigurable">
+    <option name="ITN_LOGIN" value="" />
+    <option name="ITN_PASSWORD_CRYPT" value="" />
+    <option name="KEEP_ITN_PASSWORD" value="false" />
+    <option name="EMAIL" value="" />
+  </component>
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
 </application>
