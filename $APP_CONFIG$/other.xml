@@ -74,4 +74,7 @@
     <option name="EMAIL" value="" />
   </component>
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
+  <component name="TeamCityHistory">
+    <option name="HISTORY" value="" />
+  </component>
 </application>
