@@ -74,6 +74,9 @@
     <option name="EMAIL" value="" />
   </component>
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
+  <component name="ImportFilteringUsageViewSetting">
+    <option name="SHOW_IMPORTS" value="false" />
+  </component>
   <component name="RefactoringSettings">
     <option name="MOVE_INNER_PREVIEW_USAGES" value="false" />
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
