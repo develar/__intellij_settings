@@ -19,6 +19,7 @@
     <EXCLUDED_PACKAGE NAME="sun.tools" />
   </component>
   <component name="DaemonCodeAnalyzerSettings">
+    <option name="SHOW_ADD_IMPORT_HINTS" value="false" />
     <option name="NEXT_ERROR_ACTION_GOES_TO_ERRORS_FIRST" value="false" />
   </component>
   <component name="JavaCodeFoldingSettings">
