@@ -1,4 +1,20 @@
 <application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="DebuggerSettings">
     <option name="TRACING_FILTERS_ENABLED" value="true" />
     <option name="FORCE_CLASSIC_VM" value="true" />
@@ -93,6 +109,6 @@
     <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
   </component>
   <component name="TeamCityHistory">
-    <option name="HISTORY" value="http://buildserver.labs.intellij.net&amp;^%$#@develar" />
+    <option name="HISTORY" value="http://buildserver&amp;^%$#@develar" />
   </component>
 </application>
