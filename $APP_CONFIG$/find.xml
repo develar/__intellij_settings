@@ -15,6 +15,7 @@
       <mask>*.xml</mask>
       <mask>*.kt</mask>
       <mask>*.java</mask>
+      <mask>*.gant</mask>
     </recentFileMasks>
   </component>
 </application>
