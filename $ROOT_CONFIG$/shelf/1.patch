@@ -1,0 +1,5473 @@
+Index: org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectInserter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectInserter.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectInserter.java	(revision )
+@@ -46,15 +46,12 @@
+ 
+ package org.eclipse.jgit.lib;
+ 
+-import java.io.ByteArrayInputStream;
+-import java.io.EOFException;
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.security.MessageDigest;
+-
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.transport.PackParser;
+ 
++import java.io.*;
++import java.security.MessageDigest;
++
+ /**
+  * Inserts objects into an existing {@code ObjectDatabase}.
+  * <p>
+@@ -67,7 +64,7 @@
+  * {@link #close()} or {@link #flush()} prior to updating references or
+  * otherwise making the returned ObjectIds visible to other code.
+  */
+-public abstract class ObjectInserter implements AutoCloseable {
++public abstract class ObjectInserter implements Closeable {
+ 	/** An inserter that can be used for formatting and id generation only. */
+ 	public static class Formatter extends ObjectInserter {
+ 		@Override
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/CommitCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/CommitCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/CommitCommand.java	(revision )
+@@ -42,43 +42,13 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.io.PrintStream;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.LinkedList;
+-import java.util.List;
+-
+-import org.eclipse.jgit.api.errors.AbortedByHookException;
+-import org.eclipse.jgit.api.errors.ConcurrentRefUpdateException;
+-import org.eclipse.jgit.api.errors.GitAPIException;
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.api.errors.NoFilepatternException;
+-import org.eclipse.jgit.api.errors.NoHeadException;
+-import org.eclipse.jgit.api.errors.NoMessageException;
+-import org.eclipse.jgit.api.errors.UnmergedPathsException;
+-import org.eclipse.jgit.api.errors.WrongRepositoryStateException;
+-import org.eclipse.jgit.dircache.DirCache;
+-import org.eclipse.jgit.dircache.DirCacheBuildIterator;
+-import org.eclipse.jgit.dircache.DirCacheBuilder;
+-import org.eclipse.jgit.dircache.DirCacheEntry;
+-import org.eclipse.jgit.dircache.DirCacheIterator;
++import org.eclipse.jgit.api.errors.*;
++import org.eclipse.jgit.dircache.*;
+ import org.eclipse.jgit.errors.UnmergedPathException;
+ import org.eclipse.jgit.hooks.Hooks;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.CommitBuilder;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.FileMode;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectInserter;
+-import org.eclipse.jgit.lib.PersonIdent;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefUpdate;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.lib.RepositoryState;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevObject;
+ import org.eclipse.jgit.revwalk.RevTag;
+@@ -88,6 +58,15 @@
+ import org.eclipse.jgit.treewalk.TreeWalk;
+ import org.eclipse.jgit.util.ChangeIdUtil;
+ 
++import java.io.IOException;
++import java.io.InputStream;
++import java.io.PrintStream;
++import java.text.MessageFormat;
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.LinkedList;
++import java.util.List;
++
+ /**
+  * A class used to execute a {@code Commit} command. It has setters for all
+  * supported options and arguments of this command and a {@link #call()} method
+@@ -165,132 +144,148 @@
+ 		checkCallable();
+ 		Collections.sort(only);
+ 
+-		try (RevWalk rw = new RevWalk(repo)) {
++		try {
++      RevWalk rw = new RevWalk(repo);
++      try {
+-			RepositoryState state = repo.getRepositoryState();
+-			if (!state.canCommit())
+-				throw new WrongRepositoryStateException(MessageFormat.format(
+-						JGitText.get().cannotCommitOnARepoWithState,
+-						state.name()));
++        RepositoryState state = repo.getRepositoryState();
++        if (!state.canCommit())
++          throw new WrongRepositoryStateException(MessageFormat.format(
++            JGitText.get().cannotCommitOnARepoWithState,
++            state.name()));
+ 
+-			if (!noVerify) {
+-				Hooks.preCommit(repo, hookOutRedirect).call();
+-			}
++        if (!noVerify) {
++          Hooks.preCommit(repo, hookOutRedirect).call();
++        }
+ 
+-			processOptions(state, rw);
++        processOptions(state, rw);
+ 
+-			if (all && !repo.isBare() && repo.getWorkTree() != null) {
++        if (all && !repo.isBare() && repo.getWorkTree() != null) {
+-				try (Git git = new Git(repo)) {
++          try {
++            Git git = new Git(repo);
++            try {
+-					git.add()
+-							.addFilepattern(".") //$NON-NLS-1$
+-							.setUpdate(true).call();
++              git.add()
++                .addFilepattern(".") //$NON-NLS-1$
++                .setUpdate(true).call();
++            } finally {
++              git.close();
++            }
+-				} catch (NoFilepatternException e) {
+-					// should really not happen
+-					throw new JGitInternalException(e.getMessage(), e);
+-				}
+-			}
++          } catch (NoFilepatternException e) {
++            // should really not happen
++            throw new JGitInternalException(e.getMessage(), e);
++          }
++        }
+ 
+-			Ref head = repo.getRef(Constants.HEAD);
+-			if (head == null)
+-				throw new NoHeadException(
+-						JGitText.get().commitOnRepoWithoutHEADCurrentlyNotSupported);
++        Ref head = repo.getRef(Constants.HEAD);
++        if (head == null)
++          throw new NoHeadException(
++            JGitText.get().commitOnRepoWithoutHEADCurrentlyNotSupported);
+ 
+-			// determine the current HEAD and the commit it is referring to
+-			ObjectId headId = repo.resolve(Constants.HEAD + "^{commit}"); //$NON-NLS-1$
+-			if (headId == null && amend)
+-				throw new WrongRepositoryStateException(
+-						JGitText.get().commitAmendOnInitialNotPossible);
++        // determine the current HEAD and the commit it is referring to
++        ObjectId headId = repo.resolve(Constants.HEAD + "^{commit}"); //$NON-NLS-1$
++        if (headId == null && amend)
++          throw new WrongRepositoryStateException(
++            JGitText.get().commitAmendOnInitialNotPossible);
+ 
+-			if (headId != null)
+-				if (amend) {
+-					RevCommit previousCommit = rw.parseCommit(headId);
+-					for (RevCommit p : previousCommit.getParents())
+-						parents.add(p.getId());
+-					if (author == null)
+-						author = previousCommit.getAuthorIdent();
+-				} else {
+-					parents.add(0, headId);
+-				}
++        if (headId != null)
++          if (amend) {
++            RevCommit previousCommit = rw.parseCommit(headId);
++            for (RevCommit p : previousCommit.getParents())
++              parents.add(p.getId());
++            if (author == null)
++              author = previousCommit.getAuthorIdent();
++          } else {
++            parents.add(0, headId);
++          }
+ 
+-			if (!noVerify) {
+-				message = Hooks.commitMsg(repo, hookOutRedirect)
+-						.setCommitMessage(message).call();
+-			}
++        if (!noVerify) {
++          message = Hooks.commitMsg(repo, hookOutRedirect)
++            .setCommitMessage(message).call();
++        }
+ 
+-			// lock the index
+-			DirCache index = repo.lockDirCache();
++        // lock the index
++        DirCache index = repo.lockDirCache();
+-			try (ObjectInserter odi = repo.newObjectInserter()) {
++        ObjectInserter odi = repo.newObjectInserter();
++        try {
+-				if (!only.isEmpty())
+-					index = createTemporaryIndex(headId, index, rw);
++          if (!only.isEmpty())
++            index = createTemporaryIndex(headId, index, rw);
+ 
+-				// Write the index as tree to the object database. This may
+-				// fail for example when the index contains unmerged paths
+-				// (unresolved conflicts)
+-				ObjectId indexTreeId = index.writeTree(odi);
++          // Write the index as tree to the object database. This may
++          // fail for example when the index contains unmerged paths
++          // (unresolved conflicts)
++          ObjectId indexTreeId = index.writeTree(odi);
+ 
+-				if (insertChangeId)
+-					insertChangeId(indexTreeId);
++          if (insertChangeId)
++            insertChangeId(indexTreeId);
+ 
+-				// Create a Commit object, populate it and write it
+-				CommitBuilder commit = new CommitBuilder();
+-				commit.setCommitter(committer);
+-				commit.setAuthor(author);
+-				commit.setMessage(message);
++          // Create a Commit object, populate it and write it
++          CommitBuilder commit = new CommitBuilder();
++          commit.setCommitter(committer);
++          commit.setAuthor(author);
++          commit.setMessage(message);
+ 
+-				commit.setParentIds(parents);
+-				commit.setTreeId(indexTreeId);
+-				ObjectId commitId = odi.insert(commit);
+-				odi.flush();
++          commit.setParentIds(parents);
++          commit.setTreeId(indexTreeId);
++          ObjectId commitId = odi.insert(commit);
++          odi.flush();
+ 
+-				RevCommit revCommit = rw.parseCommit(commitId);
+-				RefUpdate ru = repo.updateRef(Constants.HEAD);
+-				ru.setNewObjectId(commitId);
+-				if (reflogComment != null) {
+-					ru.setRefLogMessage(reflogComment, false);
+-				} else {
+-					String prefix = amend ? "commit (amend): " //$NON-NLS-1$
+-							: parents.size() == 0 ? "commit (initial): " //$NON-NLS-1$
+-									: "commit: "; //$NON-NLS-1$
+-					ru.setRefLogMessage(prefix + revCommit.getShortMessage(),
+-							false);
+-				}
+-				if (headId != null)
+-					ru.setExpectedOldObjectId(headId);
+-				else
+-					ru.setExpectedOldObjectId(ObjectId.zeroId());
+-				Result rc = ru.forceUpdate();
+-				switch (rc) {
+-				case NEW:
+-				case FORCED:
+-				case FAST_FORWARD: {
+-					setCallable(false);
+-					if (state == RepositoryState.MERGING_RESOLVED
+-							|| isMergeDuringRebase(state)) {
+-						// Commit was successful. Now delete the files
+-						// used for merge commits
+-						repo.writeMergeCommitMsg(null);
+-						repo.writeMergeHeads(null);
+-					} else if (state == RepositoryState.CHERRY_PICKING_RESOLVED) {
+-						repo.writeMergeCommitMsg(null);
+-						repo.writeCherryPickHead(null);
+-					} else if (state == RepositoryState.REVERTING_RESOLVED) {
+-						repo.writeMergeCommitMsg(null);
+-						repo.writeRevertHead(null);
+-					}
+-					return revCommit;
+-				}
+-				case REJECTED:
+-				case LOCK_FAILURE:
+-					throw new ConcurrentRefUpdateException(
+-							JGitText.get().couldNotLockHEAD, ru.getRef(), rc);
+-				default:
+-					throw new JGitInternalException(MessageFormat.format(
+-							JGitText.get().updatingRefFailed, Constants.HEAD,
+-							commitId.toString(), rc));
+-				}
+-			} finally {
++          RevCommit revCommit = rw.parseCommit(commitId);
++          RefUpdate ru = repo.updateRef(Constants.HEAD);
++          ru.setNewObjectId(commitId);
++          if (reflogComment != null) {
++            ru.setRefLogMessage(reflogComment, false);
++          } else {
++            String prefix = amend ? "commit (amend): " //$NON-NLS-1$
++              : parents.size() == 0 ? "commit (initial): " //$NON-NLS-1$
++              : "commit: "; //$NON-NLS-1$
++            ru.setRefLogMessage(prefix + revCommit.getShortMessage(),
++              false);
++          }
++          if (headId != null)
++            ru.setExpectedOldObjectId(headId);
++          else
++            ru.setExpectedOldObjectId(ObjectId.zeroId());
++          Result rc = ru.forceUpdate();
++          switch (rc) {
++            case NEW:
++            case FORCED:
++            case FAST_FORWARD: {
++              setCallable(false);
++              if (state == RepositoryState.MERGING_RESOLVED
++                || isMergeDuringRebase(state)) {
++                // Commit was successful. Now delete the files
++                // used for merge commits
++                repo.writeMergeCommitMsg(null);
++                repo.writeMergeHeads(null);
++              } else if (state == RepositoryState.CHERRY_PICKING_RESOLVED) {
++                repo.writeMergeCommitMsg(null);
++                repo.writeCherryPickHead(null);
++              } else if (state == RepositoryState.REVERTING_RESOLVED) {
++                repo.writeMergeCommitMsg(null);
++                repo.writeRevertHead(null);
++              }
++              return revCommit;
++            }
++            case REJECTED:
++            case LOCK_FAILURE:
++              throw new ConcurrentRefUpdateException(
++                JGitText.get().couldNotLockHEAD, ru.getRef(), rc);
++            default:
++              throw new JGitInternalException(MessageFormat.format(
++                JGitText.get().updatingRefFailed, Constants.HEAD,
++                commitId.toString(), rc));
++          }
++        } finally {
++          try {
+-				index.unlock();
+-			}
++            index.unlock();
++          }
++          finally {
++            odi.close();
++          }
++        }
++      } finally {
++        rw.close();
++      }
+-		} catch (UnmergedPathException e) {
++    } catch (UnmergedPathException e) {
+ 			throw new UnmergedPathsException(e);
+ 		} catch (IOException e) {
+ 			throw new JGitInternalException(
+@@ -327,124 +322,127 @@
+ 		onlyProcessed = new boolean[only.size()];
+ 		boolean emptyCommit = true;
+ 
+-		try (TreeWalk treeWalk = new TreeWalk(repo)) {
++    TreeWalk treeWalk = new TreeWalk(repo);
++    try {
+-			int dcIdx = treeWalk
+-					.addTree(new DirCacheBuildIterator(existingBuilder));
+-			int fIdx = treeWalk.addTree(new FileTreeIterator(repo));
+-			int hIdx = -1;
+-			if (headId != null)
+-				hIdx = treeWalk.addTree(rw.parseTree(headId));
+-			treeWalk.setRecursive(true);
++      int dcIdx = treeWalk
++        .addTree(new DirCacheBuildIterator(existingBuilder));
++      int fIdx = treeWalk.addTree(new FileTreeIterator(repo));
++      int hIdx = -1;
++      if (headId != null)
++        hIdx = treeWalk.addTree(rw.parseTree(headId));
++      treeWalk.setRecursive(true);
+ 
+-			String lastAddedFile = null;
+-			while (treeWalk.next()) {
+-				String path = treeWalk.getPathString();
+-				// check if current entry's path matches a specified path
+-				int pos = lookupOnly(path);
++      String lastAddedFile = null;
++      while (treeWalk.next()) {
++        String path = treeWalk.getPathString();
++        // check if current entry's path matches a specified path
++        int pos = lookupOnly(path);
+ 
+-				CanonicalTreeParser hTree = null;
+-				if (hIdx != -1)
+-					hTree = treeWalk.getTree(hIdx, CanonicalTreeParser.class);
++        CanonicalTreeParser hTree = null;
++        if (hIdx != -1)
++          hTree = treeWalk.getTree(hIdx, CanonicalTreeParser.class);
+ 
+-				DirCacheIterator dcTree = treeWalk.getTree(dcIdx,
+-						DirCacheIterator.class);
++        DirCacheIterator dcTree = treeWalk.getTree(dcIdx,
++          DirCacheIterator.class);
+ 
+-				if (pos >= 0) {
+-					// include entry in commit
++        if (pos >= 0) {
++          // include entry in commit
+ 
+-					FileTreeIterator fTree = treeWalk.getTree(fIdx,
+-							FileTreeIterator.class);
++          FileTreeIterator fTree = treeWalk.getTree(fIdx,
++            FileTreeIterator.class);
+ 
+-					// check if entry refers to a tracked file
+-					boolean tracked = dcTree != null || hTree != null;
+-					if (!tracked)
+-						continue;
++          // check if entry refers to a tracked file
++          boolean tracked = dcTree != null || hTree != null;
++          if (!tracked)
++            continue;
+ 
+-					// for an unmerged path, DirCacheBuildIterator will yield 3
+-					// entries, we only want to add one
+-					if (path.equals(lastAddedFile))
+-						continue;
++          // for an unmerged path, DirCacheBuildIterator will yield 3
++          // entries, we only want to add one
++          if (path.equals(lastAddedFile))
++            continue;
+ 
+-					lastAddedFile = path;
++          lastAddedFile = path;
+ 
+-					if (fTree != null) {
+-						// create a new DirCacheEntry with data retrieved from
+-						// disk
+-						final DirCacheEntry dcEntry = new DirCacheEntry(path);
+-						long entryLength = fTree.getEntryLength();
+-						dcEntry.setLength(entryLength);
+-						dcEntry.setLastModified(fTree.getEntryLastModified());
+-						dcEntry.setFileMode(fTree.getIndexFileMode(dcTree));
++          if (fTree != null) {
++            // create a new DirCacheEntry with data retrieved from
++            // disk
++            final DirCacheEntry dcEntry = new DirCacheEntry(path);
++            long entryLength = fTree.getEntryLength();
++            dcEntry.setLength(entryLength);
++            dcEntry.setLastModified(fTree.getEntryLastModified());
++            dcEntry.setFileMode(fTree.getIndexFileMode(dcTree));
+ 
+-						boolean objectExists = (dcTree != null
+-								&& fTree.idEqual(dcTree))
+-								|| (hTree != null && fTree.idEqual(hTree));
+-						if (objectExists) {
+-							dcEntry.setObjectId(fTree.getEntryObjectId());
+-						} else {
+-							if (FileMode.GITLINK.equals(dcEntry.getFileMode()))
+-								dcEntry.setObjectId(fTree.getEntryObjectId());
+-							else {
+-								// insert object
+-								if (inserter == null)
+-									inserter = repo.newObjectInserter();
+-								long contentLength = fTree
+-										.getEntryContentLength();
+-								InputStream inputStream = fTree
+-										.openEntryStream();
+-								try {
+-									dcEntry.setObjectId(inserter.insert(
+-											Constants.OBJ_BLOB, contentLength,
+-											inputStream));
+-								} finally {
+-									inputStream.close();
+-								}
+-							}
+-						}
++            boolean objectExists = (dcTree != null
++              && fTree.idEqual(dcTree))
++              || (hTree != null && fTree.idEqual(hTree));
++            if (objectExists) {
++              dcEntry.setObjectId(fTree.getEntryObjectId());
++            } else {
++              if (FileMode.GITLINK.equals(dcEntry.getFileMode()))
++                dcEntry.setObjectId(fTree.getEntryObjectId());
++              else {
++                // insert object
++                if (inserter == null)
++                  inserter = repo.newObjectInserter();
++                long contentLength = fTree
++                  .getEntryContentLength();
++                InputStream inputStream = fTree
++                  .openEntryStream();
++                try {
++                  dcEntry.setObjectId(inserter.insert(
++                    Constants.OBJ_BLOB, contentLength,
++                    inputStream));
++                } finally {
++                  inputStream.close();
++                }
++              }
++            }
+ 
+-						// add to existing index
+-						existingBuilder.add(dcEntry);
+-						// add to temporary in-core index
+-						tempBuilder.add(dcEntry);
++            // add to existing index
++            existingBuilder.add(dcEntry);
++            // add to temporary in-core index
++            tempBuilder.add(dcEntry);
+ 
+-						if (emptyCommit
+-								&& (hTree == null || !hTree.idEqual(fTree)
+-										|| hTree.getEntryRawMode() != fTree
+-												.getEntryRawMode()))
+-							// this is a change
+-							emptyCommit = false;
+-					} else {
+-						// if no file exists on disk, neither add it to
+-						// index nor to temporary in-core index
++            if (emptyCommit
++              && (hTree == null || !hTree.idEqual(fTree)
++              || hTree.getEntryRawMode() != fTree
++              .getEntryRawMode()))
++              // this is a change
++              emptyCommit = false;
++          } else {
++            // if no file exists on disk, neither add it to
++            // index nor to temporary in-core index
+ 
+-						if (emptyCommit && hTree != null)
+-							// this is a change
+-							emptyCommit = false;
+-					}
++            if (emptyCommit && hTree != null)
++              // this is a change
++              emptyCommit = false;
++          }
+ 
+-					// keep track of processed path
+-					onlyProcessed[pos] = true;
+-				} else {
+-					// add entries from HEAD for all other paths
+-					if (hTree != null) {
+-						// create a new DirCacheEntry with data retrieved from
+-						// HEAD
+-						final DirCacheEntry dcEntry = new DirCacheEntry(path);
+-						dcEntry.setObjectId(hTree.getEntryObjectId());
+-						dcEntry.setFileMode(hTree.getEntryFileMode());
++          // keep track of processed path
++          onlyProcessed[pos] = true;
++        } else {
++          // add entries from HEAD for all other paths
++          if (hTree != null) {
++            // create a new DirCacheEntry with data retrieved from
++            // HEAD
++            final DirCacheEntry dcEntry = new DirCacheEntry(path);
++            dcEntry.setObjectId(hTree.getEntryObjectId());
++            dcEntry.setFileMode(hTree.getEntryFileMode());
+ 
+-						// add to temporary in-core index
+-						tempBuilder.add(dcEntry);
+-					}
++            // add to temporary in-core index
++            tempBuilder.add(dcEntry);
++          }
+ 
+-					// preserve existing entry in index
+-					if (dcTree != null)
+-						existingBuilder.add(dcTree.getDirCacheEntry());
+-				}
+-			}
++          // preserve existing entry in index
++          if (dcTree != null)
++            existingBuilder.add(dcTree.getDirCacheEntry());
++        }
++      }
++    } finally {
++      treeWalk.close();
+-		}
++    }
+ 
+-		// there must be no unprocessed paths left at this point; otherwise an
++    // there must be no unprocessed paths left at this point; otherwise an
+ 		// untracked or unknown path has been specified
+ 		for (int i = 0; i < onlyProcessed.length; i++)
+ 			if (!onlyProcessed[i])
+Index: org.eclipse.jgit/src/org/eclipse/jgit/lib/RefUpdate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/lib/RefUpdate.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/lib/RefUpdate.java	(revision )
+@@ -44,15 +44,15 @@
+ 
+ package org.eclipse.jgit.lib;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-
+ import org.eclipse.jgit.errors.MissingObjectException;
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevObject;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++
+ /**
+  * Creates, updates or deletes any reference.
+  */
+@@ -460,10 +460,13 @@
+ 	 *             an unexpected IO error occurred while writing changes.
+ 	 */
+ 	public Result update() throws IOException {
+-		try (RevWalk rw = new RevWalk(getRepository())) {
++    RevWalk rw = new RevWalk(getRepository());
++    try {
+-			return update(rw);
++      return update(rw);
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Gracefully update the ref to the new value.
+@@ -507,10 +510,13 @@
+ 	 * @throws IOException
+ 	 */
+ 	public Result delete() throws IOException {
+-		try (RevWalk rw = new RevWalk(getRepository())) {
++    RevWalk rw = new RevWalk(getRepository());
++    try {
+-			return delete(rw);
++      return delete(rw);
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Delete the ref.
+Index: org.eclipse.jgit/src/org/eclipse/jgit/notes/LeafBucket.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/notes/LeafBucket.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/notes/LeafBucket.java	(revision )
+@@ -43,19 +43,15 @@
+ 
+ package org.eclipse.jgit.notes;
+ 
+-import static org.eclipse.jgit.lib.Constants.OBJECT_ID_STRING_LENGTH;
+-import static org.eclipse.jgit.lib.FileMode.REGULAR_FILE;
++import org.eclipse.jgit.lib.*;
++import org.eclipse.jgit.lib.ObjectInserter.Formatter;
+ 
+ import java.io.IOException;
+ import java.util.Iterator;
+ import java.util.NoSuchElementException;
+ 
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectInserter;
+-import org.eclipse.jgit.lib.ObjectInserter.Formatter;
+-import org.eclipse.jgit.lib.ObjectReader;
+-import org.eclipse.jgit.lib.TreeFormatter;
++import static org.eclipse.jgit.lib.Constants.OBJECT_ID_STRING_LENGTH;
++import static org.eclipse.jgit.lib.FileMode.REGULAR_FILE;
+ 
+ /**
+  * A note tree holding only notes, with no subtrees.
+@@ -184,10 +180,13 @@
+ 
+ 	@Override
+ 	ObjectId getTreeId() {
+-		try (Formatter f = new ObjectInserter.Formatter()) {
++    Formatter f = new Formatter();
++    try {
+-			return f.idFor(build());
++      return f.idFor(build());
++    } finally {
++      f.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private TreeFormatter build() {
+ 		byte[] nameBuf = new byte[OBJECT_ID_STRING_LENGTH];
+Index: org.eclipse.jgit/src/org/eclipse/jgit/lib/IndexDiff.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/lib/IndexDiff.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/lib/IndexDiff.java	(revision )
+@@ -47,16 +47,6 @@
+ 
+ package org.eclipse.jgit.lib;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.HashMap;
+-import java.util.HashSet;
+-import java.util.Map;
+-import java.util.Set;
+-
+ import org.eclipse.jgit.dircache.DirCache;
+ import org.eclipse.jgit.dircache.DirCacheEntry;
+ import org.eclipse.jgit.dircache.DirCacheIterator;
+@@ -69,16 +59,16 @@
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.submodule.SubmoduleWalk;
+ import org.eclipse.jgit.submodule.SubmoduleWalk.IgnoreSubmoduleMode;
+-import org.eclipse.jgit.treewalk.AbstractTreeIterator;
+-import org.eclipse.jgit.treewalk.EmptyTreeIterator;
+-import org.eclipse.jgit.treewalk.FileTreeIterator;
+-import org.eclipse.jgit.treewalk.TreeWalk;
+-import org.eclipse.jgit.treewalk.WorkingTreeIterator;
++import org.eclipse.jgit.treewalk.*;
+ import org.eclipse.jgit.treewalk.filter.AndTreeFilter;
+ import org.eclipse.jgit.treewalk.filter.IndexDiffFilter;
+ import org.eclipse.jgit.treewalk.filter.SkipWorkTreeFilter;
+ import org.eclipse.jgit.treewalk.filter.TreeFilter;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.*;
++
+ /**
+  * Compares the index, a tree, and the working directory Ignored files are not
+  * taken into account. The following information is retrieved:
+@@ -402,125 +392,128 @@
+ 			throws IOException {
+ 		dirCache = repository.readDirCache();
+ 
+-		try (TreeWalk treeWalk = new TreeWalk(repository)) {
++    TreeWalk treeWalk = new TreeWalk(repository);
++    try {
+-			treeWalk.setRecursive(true);
+-			// add the trees (tree, dirchache, workdir)
+-			if (tree != null)
+-				treeWalk.addTree(tree);
+-			else
+-				treeWalk.addTree(new EmptyTreeIterator());
+-			treeWalk.addTree(new DirCacheIterator(dirCache));
+-			treeWalk.addTree(initialWorkingTreeIterator);
+-			Collection<TreeFilter> filters = new ArrayList<TreeFilter>(4);
++      treeWalk.setRecursive(true);
++      // add the trees (tree, dirchache, workdir)
++      if (tree != null)
++        treeWalk.addTree(tree);
++      else
++        treeWalk.addTree(new EmptyTreeIterator());
++      treeWalk.addTree(new DirCacheIterator(dirCache));
++      treeWalk.addTree(initialWorkingTreeIterator);
++      Collection<TreeFilter> filters = new ArrayList<TreeFilter>(4);
+ 
+-			if (monitor != null) {
+-				// Get the maximum size of the work tree and index
+-				// and add some (quite arbitrary)
+-				if (estIndexSize == 0)
+-					estIndexSize = dirCache.getEntryCount();
+-				int total = Math.max(estIndexSize * 10 / 9,
+-						estWorkTreeSize * 10 / 9);
+-				monitor.beginTask(title, total);
+-				filters.add(new ProgressReportingFilter(monitor, total));
+-			}
++      if (monitor != null) {
++        // Get the maximum size of the work tree and index
++        // and add some (quite arbitrary)
++        if (estIndexSize == 0)
++          estIndexSize = dirCache.getEntryCount();
++        int total = Math.max(estIndexSize * 10 / 9,
++          estWorkTreeSize * 10 / 9);
++        monitor.beginTask(title, total);
++        filters.add(new ProgressReportingFilter(monitor, total));
++      }
+ 
+-			if (filter != null)
+-				filters.add(filter);
+-			filters.add(new SkipWorkTreeFilter(INDEX));
+-			indexDiffFilter = new IndexDiffFilter(INDEX, WORKDIR);
+-			filters.add(indexDiffFilter);
+-			treeWalk.setFilter(AndTreeFilter.create(filters));
+-			fileModes.clear();
+-			while (treeWalk.next()) {
+-				AbstractTreeIterator treeIterator = treeWalk.getTree(TREE,
+-						AbstractTreeIterator.class);
+-				DirCacheIterator dirCacheIterator = treeWalk.getTree(INDEX,
+-						DirCacheIterator.class);
+-				WorkingTreeIterator workingTreeIterator = treeWalk
+-						.getTree(WORKDIR, WorkingTreeIterator.class);
++      if (filter != null)
++        filters.add(filter);
++      filters.add(new SkipWorkTreeFilter(INDEX));
++      indexDiffFilter = new IndexDiffFilter(INDEX, WORKDIR);
++      filters.add(indexDiffFilter);
++      treeWalk.setFilter(AndTreeFilter.create(filters));
++      fileModes.clear();
++      while (treeWalk.next()) {
++        AbstractTreeIterator treeIterator = treeWalk.getTree(TREE,
++          AbstractTreeIterator.class);
++        DirCacheIterator dirCacheIterator = treeWalk.getTree(INDEX,
++          DirCacheIterator.class);
++        WorkingTreeIterator workingTreeIterator = treeWalk
++          .getTree(WORKDIR, WorkingTreeIterator.class);
+ 
+-				if (dirCacheIterator != null) {
+-					final DirCacheEntry dirCacheEntry = dirCacheIterator
+-							.getDirCacheEntry();
+-					if (dirCacheEntry != null) {
+-						int stage = dirCacheEntry.getStage();
+-						if (stage > 0) {
+-							String path = treeWalk.getPathString();
+-							addConflict(path, stage);
+-							continue;
+-						}
+-					}
+-				}
++        if (dirCacheIterator != null) {
++          final DirCacheEntry dirCacheEntry = dirCacheIterator
++            .getDirCacheEntry();
++          if (dirCacheEntry != null) {
++            int stage = dirCacheEntry.getStage();
++            if (stage > 0) {
++              String path = treeWalk.getPathString();
++              addConflict(path, stage);
++              continue;
++            }
++          }
++        }
+ 
+-				if (treeIterator != null) {
+-					if (dirCacheIterator != null) {
+-						if (!treeIterator.idEqual(dirCacheIterator)
+-								|| treeIterator
+-										.getEntryRawMode() != dirCacheIterator
+-												.getEntryRawMode()) {
+-							// in repo, in index, content diff => changed
+-							if (!isEntryGitLink(treeIterator)
+-									|| !isEntryGitLink(dirCacheIterator)
+-									|| ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
+-								changed.add(treeWalk.getPathString());
+-						}
+-					} else {
+-						// in repo, not in index => removed
+-						if (!isEntryGitLink(treeIterator)
+-								|| ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
+-							removed.add(treeWalk.getPathString());
+-						if (workingTreeIterator != null)
+-							untracked.add(treeWalk.getPathString());
+-					}
+-				} else {
+-					if (dirCacheIterator != null) {
+-						// not in repo, in index => added
+-						if (!isEntryGitLink(dirCacheIterator)
+-								|| ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
+-							added.add(treeWalk.getPathString());
+-					} else {
+-						// not in repo, not in index => untracked
+-						if (workingTreeIterator != null
+-								&& !workingTreeIterator.isEntryIgnored()) {
+-							untracked.add(treeWalk.getPathString());
+-						}
+-					}
+-				}
++        if (treeIterator != null) {
++          if (dirCacheIterator != null) {
++            if (!treeIterator.idEqual(dirCacheIterator)
++              || treeIterator
++              .getEntryRawMode() != dirCacheIterator
++              .getEntryRawMode()) {
++              // in repo, in index, content diff => changed
++              if (!isEntryGitLink(treeIterator)
++                || !isEntryGitLink(dirCacheIterator)
++                || ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
++                changed.add(treeWalk.getPathString());
++            }
++          } else {
++            // in repo, not in index => removed
++            if (!isEntryGitLink(treeIterator)
++              || ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
++              removed.add(treeWalk.getPathString());
++            if (workingTreeIterator != null)
++              untracked.add(treeWalk.getPathString());
++          }
++        } else {
++          if (dirCacheIterator != null) {
++            // not in repo, in index => added
++            if (!isEntryGitLink(dirCacheIterator)
++              || ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
++              added.add(treeWalk.getPathString());
++          } else {
++            // not in repo, not in index => untracked
++            if (workingTreeIterator != null
++              && !workingTreeIterator.isEntryIgnored()) {
++              untracked.add(treeWalk.getPathString());
++            }
++          }
++        }
+ 
+-				if (dirCacheIterator != null) {
+-					if (workingTreeIterator == null) {
+-						// in index, not in workdir => missing
+-						if (!isEntryGitLink(dirCacheIterator)
+-								|| ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
+-							missing.add(treeWalk.getPathString());
+-					} else {
+-						if (workingTreeIterator.isModified(
+-								dirCacheIterator.getDirCacheEntry(), true,
+-								treeWalk.getObjectReader())) {
+-							// in index, in workdir, content differs => modified
+-							if (!isEntryGitLink(dirCacheIterator)
+-									|| !isEntryGitLink(workingTreeIterator)
+-									|| (ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL
+-											&& ignoreSubmoduleMode != IgnoreSubmoduleMode.DIRTY))
+-								modified.add(treeWalk.getPathString());
+-						}
+-					}
+-				}
++        if (dirCacheIterator != null) {
++          if (workingTreeIterator == null) {
++            // in index, not in workdir => missing
++            if (!isEntryGitLink(dirCacheIterator)
++              || ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL)
++              missing.add(treeWalk.getPathString());
++          } else {
++            if (workingTreeIterator.isModified(
++              dirCacheIterator.getDirCacheEntry(), true,
++              treeWalk.getObjectReader())) {
++              // in index, in workdir, content differs => modified
++              if (!isEntryGitLink(dirCacheIterator)
++                || !isEntryGitLink(workingTreeIterator)
++                || (ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL
++                && ignoreSubmoduleMode != IgnoreSubmoduleMode.DIRTY))
++                modified.add(treeWalk.getPathString());
++            }
++          }
++        }
+ 
+-				for (int i = 0; i < treeWalk.getTreeCount(); i++) {
+-					Set<String> values = fileModes.get(treeWalk.getFileMode(i));
+-					String path = treeWalk.getPathString();
+-					if (path != null) {
+-						if (values == null)
+-							values = new HashSet<String>();
+-						values.add(path);
+-						fileModes.put(treeWalk.getFileMode(i), values);
+-					}
+-				}
+-			}
++        for (int i = 0; i < treeWalk.getTreeCount(); i++) {
++          Set<String> values = fileModes.get(treeWalk.getFileMode(i));
++          String path = treeWalk.getPathString();
++          if (path != null) {
++            if (values == null)
++              values = new HashSet<String>();
++            values.add(path);
++            fileModes.put(treeWalk.getFileMode(i), values);
++          }
++        }
++      }
++    } finally {
++      treeWalk.close();
+-		}
++    }
+ 
+-		if (ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL) {
++    if (ignoreSubmoduleMode != IgnoreSubmoduleMode.ALL) {
+ 			IgnoreSubmoduleMode localIgnoreSubmoduleMode = ignoreSubmoduleMode;
+ 			SubmoduleWalk smw = SubmoduleWalk.forIndex(repository);
+ 			while (smw.next()) {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/Git.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/Git.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/Git.java	(revision )
+@@ -43,14 +43,15 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.File;
+-import java.io.IOException;
+-
+ import org.eclipse.jgit.lib.Repository;
+ import org.eclipse.jgit.lib.RepositoryBuilder;
+ import org.eclipse.jgit.lib.RepositoryCache;
+ import org.eclipse.jgit.util.FS;
+ 
++import java.io.Closeable;
++import java.io.File;
++import java.io.IOException;
++
+ /**
+  * Offers a "GitPorcelain"-like API to interact with a git repository.
+  * <p>
+@@ -82,7 +83,7 @@
+  * methods in this class may for example offer too much functionality or they
+  * offer the functionality with the wrong arguments.
+  */
+-public class Git implements AutoCloseable {
++public class Git implements Closeable {
+ 	/** The git repository this class is interacting with */
+ 	private final Repository repo;
+ 
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/ListNotesCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/ListNotesCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/ListNotesCommand.java	(revision )
+@@ -42,11 +42,6 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.Iterator;
+-import java.util.List;
+-
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+ import org.eclipse.jgit.lib.Constants;
+@@ -57,6 +52,11 @@
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.Iterator;
++import java.util.List;
++
+ /**
+  * List object notes.
+  *
+@@ -81,18 +81,23 @@
+ 		checkCallable();
+ 		List<Note> notes = new ArrayList<Note>();
+ 		NoteMap map = NoteMap.newEmptyMap();
+-		try (RevWalk walk = new RevWalk(repo)) {
++		try {
++      RevWalk walk = new RevWalk(repo);
++      try {
+-			Ref ref = repo.getRef(notesRef);
+-			// if we have a notes ref, use it
+-			if (ref != null) {
+-				RevCommit notesCommit = walk.parseCommit(ref.getObjectId());
+-				map = NoteMap.read(walk.getObjectReader(), notesCommit);
+-			}
++        Ref ref = repo.getRef(notesRef);
++        // if we have a notes ref, use it
++        if (ref != null) {
++          RevCommit notesCommit = walk.parseCommit(ref.getObjectId());
++          map = NoteMap.read(walk.getObjectReader(), notesCommit);
++        }
+ 
+-			Iterator<Note> i = map.iterator();
+-			while (i.hasNext())
+-				notes.add(i.next());
++        Iterator<Note> i = map.iterator();
++        while (i.hasNext())
++          notes.add(i.next());
++      } finally {
++        walk.close();
++      }
+-		} catch (IOException e) {
++    } catch (IOException e) {
+ 			throw new JGitInternalException(e.getMessage(), e);
+ 		}
+ 
+Index: org.eclipse.jgit/src/org/eclipse/jgit/transport/BundleFetchConnection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/transport/BundleFetchConnection.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/transport/BundleFetchConnection.java	(revision )
+@@ -47,34 +47,13 @@
+ 
+ package org.eclipse.jgit.transport;
+ 
+-import static org.eclipse.jgit.lib.RefDatabase.ALL;
+-
+-import java.io.BufferedInputStream;
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.HashMap;
+-import java.util.LinkedHashMap;
+-import java.util.List;
+-import java.util.Map;
+-import java.util.Set;
+-
+ import org.eclipse.jgit.errors.MissingBundlePrerequisiteException;
+ import org.eclipse.jgit.errors.MissingObjectException;
+ import org.eclipse.jgit.errors.PackProtocolException;
+ import org.eclipse.jgit.errors.TransportException;
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.internal.storage.file.PackLock;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.NullProgressMonitor;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectIdRef;
+-import org.eclipse.jgit.lib.ObjectInserter;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Ref;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevFlag;
+ import org.eclipse.jgit.revwalk.RevObject;
+@@ -82,6 +61,14 @@
+ import org.eclipse.jgit.util.IO;
+ import org.eclipse.jgit.util.RawParseUtils;
+ 
++import java.io.BufferedInputStream;
++import java.io.IOException;
++import java.io.InputStream;
++import java.text.MessageFormat;
++import java.util.*;
++
++import static org.eclipse.jgit.lib.RefDatabase.ALL;
++
+ /**
+  * Fetch connection for bundle based classes. It used by
+  * instances of {@link TransportBundle}
+@@ -183,15 +170,18 @@
+ 			throws TransportException {
+ 		verifyPrerequisites();
+ 		try {
+-			try (ObjectInserter ins = transport.local.newObjectInserter()) {
++      ObjectInserter ins = transport.local.newObjectInserter();
++      try {
+-				PackParser parser = ins.newPackParser(bin);
+-				parser.setAllowThin(true);
+-				parser.setObjectChecker(transport.getObjectChecker());
+-				parser.setLockMessage(lockMessage);
+-				packLock = parser.parse(NullProgressMonitor.INSTANCE);
+-				ins.flush();
++        PackParser parser = ins.newPackParser(bin);
++        parser.setAllowThin(true);
++        parser.setObjectChecker(transport.getObjectChecker());
++        parser.setLockMessage(lockMessage);
++        packLock = parser.parse(NullProgressMonitor.INSTANCE);
++        ins.flush();
++      } finally {
++        ins.close();
+-			}
+-		} catch (IOException err) {
++      }
++    } catch (IOException err) {
+ 			close();
+ 			throw new TransportException(transport.uri, err.getMessage(), err);
+ 		} catch (RuntimeException err) {
+@@ -214,71 +204,74 @@
+ 		if (prereqs.isEmpty())
+ 			return;
+ 
+-		try (final RevWalk rw = new RevWalk(transport.local)) {
++    final RevWalk rw = new RevWalk(transport.local);
++    try {
+-			final RevFlag PREREQ = rw.newFlag("PREREQ"); //$NON-NLS-1$
+-			final RevFlag SEEN = rw.newFlag("SEEN"); //$NON-NLS-1$
++      final RevFlag PREREQ = rw.newFlag("PREREQ"); //$NON-NLS-1$
++      final RevFlag SEEN = rw.newFlag("SEEN"); //$NON-NLS-1$
+ 
+-			final Map<ObjectId, String> missing = new HashMap<ObjectId, String>();
+-			final List<RevObject> commits = new ArrayList<RevObject>();
+-			for (final Map.Entry<ObjectId, String> e : prereqs.entrySet()) {
+-				ObjectId p = e.getKey();
+-				try {
+-					final RevCommit c = rw.parseCommit(p);
+-					if (!c.has(PREREQ)) {
+-						c.add(PREREQ);
+-						commits.add(c);
+-					}
+-				} catch (MissingObjectException notFound) {
+-					missing.put(p, e.getValue());
+-				} catch (IOException err) {
+-					throw new TransportException(transport.uri, MessageFormat
+-							.format(JGitText.get().cannotReadCommit, p.name()),
+-							err);
+-				}
+-			}
+-			if (!missing.isEmpty())
+-				throw new MissingBundlePrerequisiteException(transport.uri,
+-						missing);
++      final Map<ObjectId, String> missing = new HashMap<ObjectId, String>();
++      final List<RevObject> commits = new ArrayList<RevObject>();
++      for (final Map.Entry<ObjectId, String> e : prereqs.entrySet()) {
++        ObjectId p = e.getKey();
++        try {
++          final RevCommit c = rw.parseCommit(p);
++          if (!c.has(PREREQ)) {
++            c.add(PREREQ);
++            commits.add(c);
++          }
++        } catch (MissingObjectException notFound) {
++          missing.put(p, e.getValue());
++        } catch (IOException err) {
++          throw new TransportException(transport.uri, MessageFormat
++            .format(JGitText.get().cannotReadCommit, p.name()),
++            err);
++        }
++      }
++      if (!missing.isEmpty())
++        throw new MissingBundlePrerequisiteException(transport.uri,
++          missing);
+ 
+-			Map<String, Ref> localRefs;
+-			try {
+-				localRefs = transport.local.getRefDatabase().getRefs(ALL);
+-			} catch (IOException e) {
+-				throw new TransportException(transport.uri, e.getMessage(), e);
+-			}
+-			for (final Ref r : localRefs.values()) {
+-				try {
+-					rw.markStart(rw.parseCommit(r.getObjectId()));
+-				} catch (IOException readError) {
+-					// If we cannot read the value of the ref skip it.
+-				}
+-			}
++      Map<String, Ref> localRefs;
++      try {
++        localRefs = transport.local.getRefDatabase().getRefs(ALL);
++      } catch (IOException e) {
++        throw new TransportException(transport.uri, e.getMessage(), e);
++      }
++      for (final Ref r : localRefs.values()) {
++        try {
++          rw.markStart(rw.parseCommit(r.getObjectId()));
++        } catch (IOException readError) {
++          // If we cannot read the value of the ref skip it.
++        }
++      }
+ 
+-			int remaining = commits.size();
+-			try {
+-				RevCommit c;
+-				while ((c = rw.next()) != null) {
+-					if (c.has(PREREQ)) {
+-						c.add(SEEN);
+-						if (--remaining == 0)
+-							break;
+-					}
+-				}
+-			} catch (IOException err) {
+-				throw new TransportException(transport.uri,
+-						JGitText.get().cannotReadObject, err);
+-			}
++      int remaining = commits.size();
++      try {
++        RevCommit c;
++        while ((c = rw.next()) != null) {
++          if (c.has(PREREQ)) {
++            c.add(SEEN);
++            if (--remaining == 0)
++              break;
++          }
++        }
++      } catch (IOException err) {
++        throw new TransportException(transport.uri,
++          JGitText.get().cannotReadObject, err);
++      }
+ 
+-			if (remaining > 0) {
+-				for (final RevObject o : commits) {
+-					if (!o.has(SEEN))
+-						missing.put(o, prereqs.get(o));
+-				}
+-				throw new MissingBundlePrerequisiteException(transport.uri,
+-						missing);
+-			}
++      if (remaining > 0) {
++        for (final RevObject o : commits) {
++          if (!o.has(SEEN))
++            missing.put(o, prereqs.get(o));
++        }
++        throw new MissingBundlePrerequisiteException(transport.uri,
++          missing);
++      }
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	@Override
+ 	public void close() {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/util/FS_POSIX.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/util/FS_POSIX.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/util/FS_POSIX.java	(revision )
+@@ -42,11 +42,11 @@
+  */
+ package org.eclipse.jgit.util;
+ 
+-import java.io.BufferedReader;
+-import java.io.File;
+-import java.io.IOException;
+-import java.io.InputStreamReader;
+-import java.io.PrintStream;
++import org.eclipse.jgit.api.errors.JGitInternalException;
++import org.eclipse.jgit.lib.Constants;
++import org.eclipse.jgit.lib.Repository;
++
++import java.io.*;
+ import java.nio.charset.Charset;
+ import java.nio.file.Files;
+ import java.nio.file.Path;
+@@ -56,10 +56,6 @@
+ import java.util.List;
+ import java.util.Set;
+ 
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.Repository;
+-
+ /**
+  * Base FS for POSIX based systems
+  *
+@@ -117,18 +113,21 @@
+ 			Process p = Runtime.getRuntime().exec(
+ 					new String[] { "sh", "-c", "umask" }, //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+ 					null, null);
+-			try (BufferedReader lineRead = new BufferedReader(
++      BufferedReader lineRead = new BufferedReader(
+-					new InputStreamReader(p.getInputStream(), Charset
++        new InputStreamReader(p.getInputStream(), Charset
+-							.defaultCharset().name()))) {
++          .defaultCharset().name()));
++      try {
+-				if (p.waitFor() == 0) {
+-					String s = lineRead.readLine();
+-					if (s.matches("0?\\d{3}")) { //$NON-NLS-1$
+-						return Integer.parseInt(s, 8);
+-					}
+-				}
+-				return DEFAULT_UMASK;
++        if (p.waitFor() == 0) {
++          String s = lineRead.readLine();
++          if (s.matches("0?\\d{3}")) { //$NON-NLS-1$
++            return Integer.parseInt(s, 8);
++          }
++        }
++        return DEFAULT_UMASK;
++      } finally {
++        lineRead.close();
+-			}
+-		} catch (Exception e) {
++      }
++    } catch (Exception e) {
+ 			return DEFAULT_UMASK;
+ 		}
+ 	}
+Index: org.eclipse.jgit/src/org/eclipse/jgit/gitrepo/RepoCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/gitrepo/RepoCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/gitrepo/RepoCommand.java	(revision )
+@@ -42,15 +42,6 @@
+  */
+ package org.eclipse.jgit.gitrepo;
+ 
+-import java.io.File;
+-import java.io.FileInputStream;
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.List;
+-import java.util.Map;
+-
+ import org.eclipse.jgit.api.Git;
+ import org.eclipse.jgit.api.GitCommand;
+ import org.eclipse.jgit.api.SubmoduleAddCommand;
+@@ -64,24 +55,21 @@
+ import org.eclipse.jgit.gitrepo.RepoProject.CopyFile;
+ import org.eclipse.jgit.gitrepo.internal.RepoText;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.CommitBuilder;
+-import org.eclipse.jgit.lib.Config;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.FileMode;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectInserter;
+-import org.eclipse.jgit.lib.ObjectReader;
+-import org.eclipse.jgit.lib.PersonIdent;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefDatabase;
+-import org.eclipse.jgit.lib.RefUpdate;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+-import org.eclipse.jgit.lib.Repository;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.util.FileUtils;
+ 
++import java.io.File;
++import java.io.FileInputStream;
++import java.io.IOException;
++import java.io.InputStream;
++import java.text.MessageFormat;
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Map;
++
+ /**
+  * A class used to execute a repo command.
+  *
+@@ -200,11 +188,14 @@
+ 		 */
+ 		protected byte[] readFileFromRepo(Repository repo,
+ 				String ref, String path) throws GitAPIException, IOException {
+-			try (ObjectReader reader = repo.newObjectReader()) {
++      ObjectReader reader = repo.newObjectReader();
++      try {
+-				ObjectId oid = repo.resolve(ref + ":" + path); //$NON-NLS-1$
+-				return reader.open(oid).getBytes(Integer.MAX_VALUE);
++        ObjectId oid = repo.resolve(ref + ":" + path); //$NON-NLS-1$
++        return reader.open(oid).getBytes(Integer.MAX_VALUE);
++      } finally {
++        reader.close();
+-			}
+-		}
++      }
++    }
+ 	}
+ 
+ 	@SuppressWarnings("serial")
+@@ -384,10 +375,12 @@
+ 							proj.getRevision(),
+ 							proj.getCopyFiles());
+ 				}
+-			} catch (GitAPIException | IOException e) {
++			} catch (GitAPIException e) {
+ 				throw new ManifestErrorException(e);
++			} catch (IOException e) {
++				throw new ManifestErrorException(e);
+ 			}
+-		} finally {
++    } finally {
+ 			try {
+ 				if (inputStream != null)
+ 					inputStream.close();
+@@ -400,87 +393,92 @@
+ 			DirCache index = DirCache.newInCore();
+ 			DirCacheBuilder builder = index.builder();
+ 			ObjectInserter inserter = repo.newObjectInserter();
+-			try (RevWalk rw = new RevWalk(repo)) {
++			try {
++        RevWalk rw = new RevWalk(repo);
++        try {
+-				Config cfg = new Config();
+-				for (RepoProject proj : bareProjects) {
+-					String name = proj.getPath();
+-					String nameUri = proj.getName();
+-					cfg.setString("submodule", name, "path", name); //$NON-NLS-1$ //$NON-NLS-2$
+-					cfg.setString("submodule", name, "url", nameUri); //$NON-NLS-1$ //$NON-NLS-2$
+-					// create gitlink
+-					DirCacheEntry dcEntry = new DirCacheEntry(name);
+-					ObjectId objectId;
+-					if (ObjectId.isId(proj.getRevision()))
+-						objectId = ObjectId.fromString(proj.getRevision());
+-					else {
+-						objectId = callback.sha1(nameUri, proj.getRevision());
+-					}
+-					if (objectId == null)
+-						throw new RemoteUnavailableException(nameUri);
+-					dcEntry.setObjectId(objectId);
+-					dcEntry.setFileMode(FileMode.GITLINK);
+-					builder.add(dcEntry);
++          Config cfg = new Config();
++          for (RepoProject proj : bareProjects) {
++            String name = proj.getPath();
++            String nameUri = proj.getName();
++            cfg.setString("submodule", name, "path", name); //$NON-NLS-1$ //$NON-NLS-2$
++            cfg.setString("submodule", name, "url", nameUri); //$NON-NLS-1$ //$NON-NLS-2$
++            // create gitlink
++            DirCacheEntry dcEntry = new DirCacheEntry(name);
++            ObjectId objectId;
++            if (ObjectId.isId(proj.getRevision()))
++              objectId = ObjectId.fromString(proj.getRevision());
++            else {
++              objectId = callback.sha1(nameUri, proj.getRevision());
++            }
++            if (objectId == null)
++              throw new RemoteUnavailableException(nameUri);
++            dcEntry.setObjectId(objectId);
++            dcEntry.setFileMode(FileMode.GITLINK);
++            builder.add(dcEntry);
+ 
+-					for (CopyFile copyfile : proj.getCopyFiles()) {
+-						byte[] src = callback.readFile(
+-								nameUri, proj.getRevision(), copyfile.src);
+-						objectId = inserter.insert(Constants.OBJ_BLOB, src);
+-						dcEntry = new DirCacheEntry(copyfile.dest);
+-						dcEntry.setObjectId(objectId);
+-						dcEntry.setFileMode(FileMode.REGULAR_FILE);
+-						builder.add(dcEntry);
+-					}
+-				}
+-				String content = cfg.toText();
++            for (CopyFile copyfile : proj.getCopyFiles()) {
++              byte[] src = callback.readFile(
++                nameUri, proj.getRevision(), copyfile.src);
++              objectId = inserter.insert(Constants.OBJ_BLOB, src);
++              dcEntry = new DirCacheEntry(copyfile.dest);
++              dcEntry.setObjectId(objectId);
++              dcEntry.setFileMode(FileMode.REGULAR_FILE);
++              builder.add(dcEntry);
++            }
++          }
++          String content = cfg.toText();
+ 
+-				// create a new DirCacheEntry for .gitmodules file.
+-				final DirCacheEntry dcEntry = new DirCacheEntry(Constants.DOT_GIT_MODULES);
+-				ObjectId objectId = inserter.insert(Constants.OBJ_BLOB,
+-						content.getBytes(Constants.CHARACTER_ENCODING));
+-				dcEntry.setObjectId(objectId);
+-				dcEntry.setFileMode(FileMode.REGULAR_FILE);
+-				builder.add(dcEntry);
++          // create a new DirCacheEntry for .gitmodules file.
++          final DirCacheEntry dcEntry = new DirCacheEntry(Constants.DOT_GIT_MODULES);
++          ObjectId objectId = inserter.insert(Constants.OBJ_BLOB,
++            content.getBytes(Constants.CHARACTER_ENCODING));
++          dcEntry.setObjectId(objectId);
++          dcEntry.setFileMode(FileMode.REGULAR_FILE);
++          builder.add(dcEntry);
+ 
+-				builder.finish();
+-				ObjectId treeId = index.writeTree(inserter);
++          builder.finish();
++          ObjectId treeId = index.writeTree(inserter);
+ 
+-				// Create a Commit object, populate it and write it
+-				ObjectId headId = repo.resolve(Constants.HEAD + "^{commit}"); //$NON-NLS-1$
+-				CommitBuilder commit = new CommitBuilder();
+-				commit.setTreeId(treeId);
+-				if (headId != null)
+-					commit.setParentIds(headId);
+-				commit.setAuthor(author);
+-				commit.setCommitter(author);
+-				commit.setMessage(RepoText.get().repoCommitMessage);
++          // Create a Commit object, populate it and write it
++          ObjectId headId = repo.resolve(Constants.HEAD + "^{commit}"); //$NON-NLS-1$
++          CommitBuilder commit = new CommitBuilder();
++          commit.setTreeId(treeId);
++          if (headId != null)
++            commit.setParentIds(headId);
++          commit.setAuthor(author);
++          commit.setCommitter(author);
++          commit.setMessage(RepoText.get().repoCommitMessage);
+ 
+-				ObjectId commitId = inserter.insert(commit);
+-				inserter.flush();
++          ObjectId commitId = inserter.insert(commit);
++          inserter.flush();
+ 
+-				RefUpdate ru = repo.updateRef(Constants.HEAD);
+-				ru.setNewObjectId(commitId);
+-				ru.setExpectedOldObjectId(headId != null ? headId : ObjectId.zeroId());
+-				Result rc = ru.update(rw);
++          RefUpdate ru = repo.updateRef(Constants.HEAD);
++          ru.setNewObjectId(commitId);
++          ru.setExpectedOldObjectId(headId != null ? headId : ObjectId.zeroId());
++          Result rc = ru.update(rw);
+ 
+-				switch (rc) {
+-					case NEW:
+-					case FORCED:
+-					case FAST_FORWARD:
+-						// Successful. Do nothing.
+-						break;
+-					case REJECTED:
+-					case LOCK_FAILURE:
+-						throw new ConcurrentRefUpdateException(
+-								JGitText.get().couldNotLockHEAD, ru.getRef(),
+-								rc);
+-					default:
+-						throw new JGitInternalException(MessageFormat.format(
+-								JGitText.get().updatingRefFailed,
+-								Constants.HEAD, commitId.name(), rc));
+-				}
++          switch (rc) {
++            case NEW:
++            case FORCED:
++            case FAST_FORWARD:
++              // Successful. Do nothing.
++              break;
++            case REJECTED:
++            case LOCK_FAILURE:
++              throw new ConcurrentRefUpdateException(
++                JGitText.get().couldNotLockHEAD, ru.getRef(),
++                rc);
++            default:
++              throw new JGitInternalException(MessageFormat.format(
++                JGitText.get().updatingRefFailed,
++                Constants.HEAD, commitId.name(), rc));
++          }
+ 
+-				return rw.parseCommit(commitId);
++          return rw.parseCommit(commitId);
++        } finally {
++          rw.close();
++        }
+-			} catch (IOException e) {
++      } catch (IOException e) {
+ 				throw new ManifestErrorException(e);
+ 			}
+ 		} else {
+@@ -507,11 +505,14 @@
+ 
+ 			Repository subRepo = add.call();
+ 			if (revision != null) {
+-				try (Git sub = new Git(subRepo)) {
++        Git sub = new Git(subRepo);
++        try {
+-					sub.checkout().setName(findRef(revision, subRepo))
+-							.call();
++          sub.checkout().setName(findRef(revision, subRepo))
++            .call();
++        } finally {
++          sub.close();
+-				}
+-				subRepo.close();
++        }
++        subRepo.close();
+ 				git.add().addFilepattern(name).call();
+ 			}
+ 			for (CopyFile copyfile : copyfiles) {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/util/FS.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/util/FS.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/util/FS.java	(revision )
+@@ -43,16 +43,16 @@
+ 
+ package org.eclipse.jgit.util;
+ 
+-import java.io.BufferedReader;
+-import java.io.BufferedWriter;
+-import java.io.File;
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.io.InputStreamReader;
+-import java.io.OutputStream;
+-import java.io.OutputStreamWriter;
+-import java.io.PrintStream;
+-import java.io.PrintWriter;
++import org.eclipse.jgit.api.errors.JGitInternalException;
++import org.eclipse.jgit.errors.SymlinksNotSupportedException;
++import org.eclipse.jgit.internal.JGitText;
++import org.eclipse.jgit.lib.Constants;
++import org.eclipse.jgit.lib.Repository;
++import org.eclipse.jgit.util.ProcessResult.Status;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.*;
+ import java.nio.charset.Charset;
+ import java.security.AccessController;
+ import java.security.PrivilegedAction;
+@@ -66,15 +66,6 @@
+ import java.util.concurrent.TimeUnit;
+ import java.util.concurrent.atomic.AtomicBoolean;
+ 
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.errors.SymlinksNotSupportedException;
+-import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.util.ProcessResult.Status;
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+-
+ /** Abstraction to support various file system operations not in Java. */
+ public abstract class FS {
+ 	/**
+@@ -561,7 +552,7 @@
+ 
+ 		// Trick Git into printing the path to the config file by using "echo"
+ 		// as the editor.
+-		Map<String, String> env = new HashMap<>();
++		Map<String, String> env = new HashMap<String, String>();
+ 		env.put("GIT_EDITOR", "echo"); //$NON-NLS-1$ //$NON-NLS-2$
+ 
+ 		String w = readPipe(gitExe.getParentFile(),
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/CherryPickCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/CherryPickCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/CherryPickCommand.java	(revision )
+@@ -42,29 +42,12 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.LinkedList;
+-import java.util.List;
+-
+-import org.eclipse.jgit.api.errors.ConcurrentRefUpdateException;
+-import org.eclipse.jgit.api.errors.GitAPIException;
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.api.errors.MultipleParentsNotAllowedException;
+-import org.eclipse.jgit.api.errors.NoHeadException;
+-import org.eclipse.jgit.api.errors.NoMessageException;
+-import org.eclipse.jgit.api.errors.UnmergedPathsException;
+-import org.eclipse.jgit.api.errors.WrongRepositoryStateException;
++import org.eclipse.jgit.api.errors.*;
+ import org.eclipse.jgit.dircache.DirCacheCheckout;
+ import org.eclipse.jgit.errors.MissingObjectException;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectIdRef;
+-import org.eclipse.jgit.lib.Ref;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.Ref.Storage;
+-import org.eclipse.jgit.lib.Repository;
+ import org.eclipse.jgit.merge.MergeMessageFormatter;
+ import org.eclipse.jgit.merge.MergeStrategy;
+ import org.eclipse.jgit.merge.ResolveMerger;
+@@ -72,6 +55,11 @@
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.treewalk.FileTreeIterator;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.LinkedList;
++import java.util.List;
++
+ /**
+  * A class used to execute a {@code cherry-pick} command. It has setters for all
+  * supported options and arguments of this command and a {@link #call()} method
+@@ -123,72 +111,77 @@
+ 		List<Ref> cherryPickedRefs = new LinkedList<Ref>();
+ 		checkCallable();
+ 
+-		try (RevWalk revWalk = new RevWalk(repo)) {
++		try {
++      RevWalk revWalk = new RevWalk(repo);
++      try {
+ 
+-			// get the head commit
+-			Ref headRef = repo.getRef(Constants.HEAD);
+-			if (headRef == null)
+-				throw new NoHeadException(
+-						JGitText.get().commitOnRepoWithoutHEADCurrentlyNotSupported);
++        // get the head commit
++        Ref headRef = repo.getRef(Constants.HEAD);
++        if (headRef == null)
++          throw new NoHeadException(
++            JGitText.get().commitOnRepoWithoutHEADCurrentlyNotSupported);
+ 
+-			newHead = revWalk.parseCommit(headRef.getObjectId());
++        newHead = revWalk.parseCommit(headRef.getObjectId());
+ 
+-			// loop through all refs to be cherry-picked
+-			for (Ref src : commits) {
+-				// get the commit to be cherry-picked
+-				// handle annotated tags
+-				ObjectId srcObjectId = src.getPeeledObjectId();
+-				if (srcObjectId == null)
+-					srcObjectId = src.getObjectId();
+-				RevCommit srcCommit = revWalk.parseCommit(srcObjectId);
++        // loop through all refs to be cherry-picked
++        for (Ref src : commits) {
++          // get the commit to be cherry-picked
++          // handle annotated tags
++          ObjectId srcObjectId = src.getPeeledObjectId();
++          if (srcObjectId == null)
++            srcObjectId = src.getObjectId();
++          RevCommit srcCommit = revWalk.parseCommit(srcObjectId);
+ 
+-				// get the parent of the commit to cherry-pick
+-				final RevCommit srcParent = getParentCommit(srcCommit, revWalk);
++          // get the parent of the commit to cherry-pick
++          final RevCommit srcParent = getParentCommit(srcCommit, revWalk);
+ 
+-				String ourName = calculateOurName(headRef);
+-				String cherryPickName = srcCommit.getId().abbreviate(7).name()
+-						+ " " + srcCommit.getShortMessage(); //$NON-NLS-1$
++          String ourName = calculateOurName(headRef);
++          String cherryPickName = srcCommit.getId().abbreviate(7).name()
++            + " " + srcCommit.getShortMessage(); //$NON-NLS-1$
+ 
+-				ResolveMerger merger = (ResolveMerger) strategy.newMerger(repo);
+-				merger.setWorkingTreeIterator(new FileTreeIterator(repo));
+-				merger.setBase(srcParent.getTree());
++          ResolveMerger merger = (ResolveMerger) strategy.newMerger(repo);
++          merger.setWorkingTreeIterator(new FileTreeIterator(repo));
++          merger.setBase(srcParent.getTree());
+-				merger.setCommitNames(new String[] { "BASE", ourName, //$NON-NLS-1$
++          merger.setCommitNames(new String[]{"BASE", ourName, //$NON-NLS-1$
+-						cherryPickName });
++            cherryPickName});
+-				if (merger.merge(newHead, srcCommit)) {
+-					if (AnyObjectId.equals(newHead.getTree().getId(), merger
+-							.getResultTreeId()))
+-						continue;
+-					DirCacheCheckout dco = new DirCacheCheckout(repo,
+-							newHead.getTree(), repo.lockDirCache(),
+-							merger.getResultTreeId());
+-					dco.setFailOnConflict(true);
+-					dco.checkout();
+-					if (!noCommit)
+-						newHead = new Git(getRepository()).commit()
+-								.setMessage(srcCommit.getFullMessage())
+-								.setReflogComment(reflogPrefix + " " //$NON-NLS-1$
+-										+ srcCommit.getShortMessage())
+-								.setAuthor(srcCommit.getAuthorIdent())
+-								.setNoVerify(true).call();
+-					cherryPickedRefs.add(src);
+-				} else {
+-					if (merger.failed())
+-						return new CherryPickResult(merger.getFailingPaths());
++          if (merger.merge(newHead, srcCommit)) {
++            if (AnyObjectId.equals(newHead.getTree().getId(), merger
++              .getResultTreeId()))
++              continue;
++            DirCacheCheckout dco = new DirCacheCheckout(repo,
++              newHead.getTree(), repo.lockDirCache(),
++              merger.getResultTreeId());
++            dco.setFailOnConflict(true);
++            dco.checkout();
++            if (!noCommit)
++              newHead = new Git(getRepository()).commit()
++                .setMessage(srcCommit.getFullMessage())
++                .setReflogComment(reflogPrefix + " " //$NON-NLS-1$
++                  + srcCommit.getShortMessage())
++                .setAuthor(srcCommit.getAuthorIdent())
++                .setNoVerify(true).call();
++            cherryPickedRefs.add(src);
++          } else {
++            if (merger.failed())
++              return new CherryPickResult(merger.getFailingPaths());
+ 
+-					// there are merge conflicts
++            // there are merge conflicts
+ 
+-					String message = new MergeMessageFormatter()
+-							.formatWithConflicts(srcCommit.getFullMessage(),
+-									merger.getUnmergedPaths());
++            String message = new MergeMessageFormatter()
++              .formatWithConflicts(srcCommit.getFullMessage(),
++                merger.getUnmergedPaths());
+ 
+-					if (!noCommit)
+-						repo.writeCherryPickHead(srcCommit.getId());
+-					repo.writeMergeCommitMsg(message);
++            if (!noCommit)
++              repo.writeCherryPickHead(srcCommit.getId());
++            repo.writeMergeCommitMsg(message);
+ 
+-					return CherryPickResult.CONFLICT;
+-				}
++            return CherryPickResult.CONFLICT;
++          }
++        }
++      } finally {
++        revWalk.close();
+-			}
+-		} catch (IOException e) {
++      }
++    } catch (IOException e) {
+ 			throw new JGitInternalException(
+ 					MessageFormat.format(
+ 							JGitText.get().exceptionCaughtDuringExecutionOfCherryPickCommand,
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/ResetCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/ResetCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/ResetCommand.java	(revision )
+@@ -42,27 +42,12 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.Collection;
+-import java.util.LinkedList;
+-
+ import org.eclipse.jgit.api.errors.CheckoutConflictException;
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.dircache.DirCache;
+-import org.eclipse.jgit.dircache.DirCacheBuildIterator;
+-import org.eclipse.jgit.dircache.DirCacheBuilder;
+-import org.eclipse.jgit.dircache.DirCacheCheckout;
+-import org.eclipse.jgit.dircache.DirCacheEntry;
+-import org.eclipse.jgit.dircache.DirCacheIterator;
++import org.eclipse.jgit.dircache.*;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefUpdate;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.lib.RepositoryState;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.treewalk.AbstractTreeIterator;
+@@ -71,6 +56,11 @@
+ import org.eclipse.jgit.treewalk.TreeWalk;
+ import org.eclipse.jgit.treewalk.filter.PathFilterGroup;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.Collection;
++import java.util.LinkedList;
++
+ /**
+  * A class used to execute a {@code Reset} command. It has setters for all
+  * supported options and arguments of this command and a {@link #call()} method
+@@ -236,9 +226,14 @@
+ 	}
+ 
+ 	private RevCommit parseCommit(final ObjectId commitId) {
+-		try (RevWalk rw = new RevWalk(repo)) {
++		try {
++      RevWalk rw = new RevWalk(repo);
++      try {
+-			return rw.parseCommit(commitId);
++        return rw.parseCommit(commitId);
++      } finally {
++        rw.close();
++      }
+-		} catch (IOException e) {
++    } catch (IOException e) {
+ 			throw new JGitInternalException(MessageFormat.format(
+ 					JGitText.get().cannotReadCommit, commitId.toString()), e);
+ 		}
+@@ -309,33 +304,38 @@
+ 
+ 	private void resetIndexForPaths(ObjectId commitTree) {
+ 		DirCache dc = null;
+-		try (final TreeWalk tw = new TreeWalk(repo)) {
++		try {
++      final TreeWalk tw = new TreeWalk(repo);
++      try {
+-			dc = repo.lockDirCache();
+-			DirCacheBuilder builder = dc.builder();
++        dc = repo.lockDirCache();
++        DirCacheBuilder builder = dc.builder();
+ 
+-			tw.addTree(new DirCacheBuildIterator(builder));
+-			if (commitTree != null)
+-				tw.addTree(commitTree);
+-			else
+-				tw.addTree(new EmptyTreeIterator());
+-			tw.setFilter(PathFilterGroup.createFromStrings(filepaths));
+-			tw.setRecursive(true);
++        tw.addTree(new DirCacheBuildIterator(builder));
++        if (commitTree != null)
++          tw.addTree(commitTree);
++        else
++          tw.addTree(new EmptyTreeIterator());
++        tw.setFilter(PathFilterGroup.createFromStrings(filepaths));
++        tw.setRecursive(true);
+ 
+-			while (tw.next()) {
+-				final CanonicalTreeParser tree = tw.getTree(1,
+-						CanonicalTreeParser.class);
+-				// only keep file in index if it's in the commit
+-				if (tree != null) {
+-				    // revert index to commit
+-					DirCacheEntry entry = new DirCacheEntry(tw.getRawPath());
+-					entry.setFileMode(tree.getEntryFileMode());
+-					entry.setObjectId(tree.getEntryObjectId());
+-					builder.add(entry);
+-				}
+-			}
++        while (tw.next()) {
++          final CanonicalTreeParser tree = tw.getTree(1,
++            CanonicalTreeParser.class);
++          // only keep file in index if it's in the commit
++          if (tree != null) {
++            // revert index to commit
++            DirCacheEntry entry = new DirCacheEntry(tw.getRawPath());
++            entry.setFileMode(tree.getEntryFileMode());
++            entry.setObjectId(tree.getEntryObjectId());
++            builder.add(entry);
++          }
++        }
+ 
+-			builder.commit();
++        builder.commit();
++      } finally {
++        tw.close();
++      }
+-		} catch (IOException e) {
++    } catch (IOException e) {
+ 			throw new RuntimeException(e);
+ 		} finally {
+ 			if (dc != null)
+@@ -345,44 +345,45 @@
+ 
+ 	private void resetIndex(ObjectId commitTree) throws IOException {
+ 		DirCache dc = repo.lockDirCache();
+-		try (TreeWalk walk = new TreeWalk(repo)) {
++    TreeWalk walk = new TreeWalk(repo);
++    try {
+-			DirCacheBuilder builder = dc.builder();
++      DirCacheBuilder builder = dc.builder();
+ 
+-			if (commitTree != null)
+-				walk.addTree(commitTree);
+-			else
+-				walk.addTree(new EmptyTreeIterator());
+-			walk.addTree(new DirCacheIterator(dc));
+-			walk.setRecursive(true);
++      if (commitTree != null)
++        walk.addTree(commitTree);
++      else
++        walk.addTree(new EmptyTreeIterator());
++      walk.addTree(new DirCacheIterator(dc));
++      walk.setRecursive(true);
+ 
+-			while (walk.next()) {
+-				AbstractTreeIterator cIter = walk.getTree(0,
+-						AbstractTreeIterator.class);
+-				if (cIter == null) {
+-					// Not in commit, don't add to new index
+-					continue;
+-				}
++      while (walk.next()) {
++        AbstractTreeIterator cIter = walk.getTree(0,
++          AbstractTreeIterator.class);
++        if (cIter == null) {
++          // Not in commit, don't add to new index
++          continue;
++        }
+ 
+-				final DirCacheEntry entry = new DirCacheEntry(walk.getRawPath());
+-				entry.setFileMode(cIter.getEntryFileMode());
+-				entry.setObjectIdFromRaw(cIter.idBuffer(), cIter.idOffset());
++        final DirCacheEntry entry = new DirCacheEntry(walk.getRawPath());
++        entry.setFileMode(cIter.getEntryFileMode());
++        entry.setObjectIdFromRaw(cIter.idBuffer(), cIter.idOffset());
+ 
+-				DirCacheIterator dcIter = walk.getTree(1,
+-						DirCacheIterator.class);
+-				if (dcIter != null && dcIter.idEqual(cIter)) {
+-					DirCacheEntry indexEntry = dcIter.getDirCacheEntry();
+-					entry.setLastModified(indexEntry.getLastModified());
+-					entry.setLength(indexEntry.getLength());
+-				}
++        DirCacheIterator dcIter = walk.getTree(1,
++          DirCacheIterator.class);
++        if (dcIter != null && dcIter.idEqual(cIter)) {
++          DirCacheEntry indexEntry = dcIter.getDirCacheEntry();
++          entry.setLastModified(indexEntry.getLastModified());
++          entry.setLength(indexEntry.getLength());
++        }
+ 
+-				builder.add(entry);
+-			}
++        builder.add(entry);
++      }
+ 
+-			builder.commit();
+-		} finally {
++      builder.commit();
++    } finally {
+-			dc.unlock();
++      walk.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private void checkoutIndex(ObjectId commitTree) throws IOException,
+ 			GitAPIException {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/CreateBranchCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/CreateBranchCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/CreateBranchCommand.java	(revision )
+@@ -43,27 +43,17 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-
+-import org.eclipse.jgit.api.errors.GitAPIException;
+-import org.eclipse.jgit.api.errors.InvalidRefNameException;
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.api.errors.RefAlreadyExistsException;
+-import org.eclipse.jgit.api.errors.RefNotFoundException;
++import org.eclipse.jgit.api.errors.*;
+ import org.eclipse.jgit.errors.AmbiguousObjectException;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.ConfigConstants;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefUpdate;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.lib.StoredConfig;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++
+ /**
+  * Used to create a local branch.
+  *
+@@ -124,150 +114,155 @@
+ 			RefNotFoundException, InvalidRefNameException {
+ 		checkCallable();
+ 		processOptions();
+-		try (RevWalk revWalk = new RevWalk(repo)) {
++		try {
++      RevWalk revWalk = new RevWalk(repo);
++      try {
+-			Ref refToCheck = repo.getRef(name);
+-			boolean exists = refToCheck != null
+-					&& refToCheck.getName().startsWith(Constants.R_HEADS);
+-			if (!force && exists)
+-				throw new RefAlreadyExistsException(MessageFormat.format(
+-						JGitText.get().refAlreadyExists1, name));
++        Ref refToCheck = repo.getRef(name);
++        boolean exists = refToCheck != null
++          && refToCheck.getName().startsWith(Constants.R_HEADS);
++        if (!force && exists)
++          throw new RefAlreadyExistsException(MessageFormat.format(
++            JGitText.get().refAlreadyExists1, name));
+ 
+-			ObjectId startAt = getStartPointObjectId();
+-			String startPointFullName = null;
+-			if (startPoint != null) {
+-				Ref baseRef = repo.getRef(startPoint);
+-				if (baseRef != null)
+-					startPointFullName = baseRef.getName();
+-			}
++        ObjectId startAt = getStartPointObjectId();
++        String startPointFullName = null;
++        if (startPoint != null) {
++          Ref baseRef = repo.getRef(startPoint);
++          if (baseRef != null)
++            startPointFullName = baseRef.getName();
++        }
+ 
+-			// determine whether we are based on a commit,
+-			// a branch, or a tag and compose the reflog message
+-			String refLogMessage;
+-			String baseBranch = ""; //$NON-NLS-1$
+-			if (startPointFullName == null) {
+-				String baseCommit;
+-				if (startCommit != null)
+-					baseCommit = startCommit.getShortMessage();
+-				else {
+-					RevCommit commit = revWalk.parseCommit(repo
+-							.resolve(getStartPointOrHead()));
+-					baseCommit = commit.getShortMessage();
+-				}
+-				if (exists)
+-					refLogMessage = "branch: Reset start-point to commit " //$NON-NLS-1$
+-							+ baseCommit;
+-				else
+-					refLogMessage = "branch: Created from commit " + baseCommit; //$NON-NLS-1$
++        // determine whether we are based on a commit,
++        // a branch, or a tag and compose the reflog message
++        String refLogMessage;
++        String baseBranch = ""; //$NON-NLS-1$
++        if (startPointFullName == null) {
++          String baseCommit;
++          if (startCommit != null)
++            baseCommit = startCommit.getShortMessage();
++          else {
++            RevCommit commit = revWalk.parseCommit(repo
++              .resolve(getStartPointOrHead()));
++            baseCommit = commit.getShortMessage();
++          }
++          if (exists)
++            refLogMessage = "branch: Reset start-point to commit " //$NON-NLS-1$
++              + baseCommit;
++          else
++            refLogMessage = "branch: Created from commit " + baseCommit; //$NON-NLS-1$
+ 
+-			} else if (startPointFullName.startsWith(Constants.R_HEADS)
+-					|| startPointFullName.startsWith(Constants.R_REMOTES)) {
+-				baseBranch = startPointFullName;
+-				if (exists)
+-					refLogMessage = "branch: Reset start-point to branch " //$NON-NLS-1$
+-							+ startPointFullName; // TODO
+-				else
+-					refLogMessage = "branch: Created from branch " + baseBranch; //$NON-NLS-1$
+-			} else {
+-				startAt = revWalk.peel(revWalk.parseAny(startAt));
+-				if (exists)
+-					refLogMessage = "branch: Reset start-point to tag " //$NON-NLS-1$
+-							+ startPointFullName;
+-				else
+-					refLogMessage = "branch: Created from tag " //$NON-NLS-1$
+-							+ startPointFullName;
+-			}
++        } else if (startPointFullName.startsWith(Constants.R_HEADS)
++          || startPointFullName.startsWith(Constants.R_REMOTES)) {
++          baseBranch = startPointFullName;
++          if (exists)
++            refLogMessage = "branch: Reset start-point to branch " //$NON-NLS-1$
++              + startPointFullName; // TODO
++          else
++            refLogMessage = "branch: Created from branch " + baseBranch; //$NON-NLS-1$
++        } else {
++          startAt = revWalk.peel(revWalk.parseAny(startAt));
++          if (exists)
++            refLogMessage = "branch: Reset start-point to tag " //$NON-NLS-1$
++              + startPointFullName;
++          else
++            refLogMessage = "branch: Created from tag " //$NON-NLS-1$
++              + startPointFullName;
++        }
+ 
+-			RefUpdate updateRef = repo.updateRef(Constants.R_HEADS + name);
+-			updateRef.setNewObjectId(startAt);
+-			updateRef.setRefLogMessage(refLogMessage, false);
+-			Result updateResult;
+-			if (exists && force)
+-				updateResult = updateRef.forceUpdate();
+-			else
+-				updateResult = updateRef.update();
++        RefUpdate updateRef = repo.updateRef(Constants.R_HEADS + name);
++        updateRef.setNewObjectId(startAt);
++        updateRef.setRefLogMessage(refLogMessage, false);
++        Result updateResult;
++        if (exists && force)
++          updateResult = updateRef.forceUpdate();
++        else
++          updateResult = updateRef.update();
+ 
+-			setCallable(false);
++        setCallable(false);
+ 
+-			boolean ok = false;
+-			switch (updateResult) {
+-			case NEW:
+-				ok = !exists;
+-				break;
+-			case NO_CHANGE:
+-			case FAST_FORWARD:
+-			case FORCED:
+-				ok = exists;
+-				break;
+-			default:
+-				break;
+-			}
++        boolean ok = false;
++        switch (updateResult) {
++          case NEW:
++            ok = !exists;
++            break;
++          case NO_CHANGE:
++          case FAST_FORWARD:
++          case FORCED:
++            ok = exists;
++            break;
++          default:
++            break;
++        }
+ 
+-			if (!ok)
+-				throw new JGitInternalException(MessageFormat.format(JGitText
+-						.get().createBranchUnexpectedResult, updateResult
+-						.name()));
++        if (!ok)
++          throw new JGitInternalException(MessageFormat.format(JGitText
++            .get().createBranchUnexpectedResult, updateResult
++            .name()));
+ 
+-			Ref result = repo.getRef(name);
+-			if (result == null)
+-				throw new JGitInternalException(
+-						JGitText.get().createBranchFailedUnknownReason);
++        Ref result = repo.getRef(name);
++        if (result == null)
++          throw new JGitInternalException(
++            JGitText.get().createBranchFailedUnknownReason);
+ 
+-			if (baseBranch.length() == 0) {
+-				return result;
+-			}
++        if (baseBranch.length() == 0) {
++          return result;
++        }
+ 
+-			// if we are based on another branch, see
+-			// if we need to configure upstream configuration: first check
+-			// whether the setting was done explicitly
+-			boolean doConfigure;
+-			if (upstreamMode == SetupUpstreamMode.SET_UPSTREAM
+-					|| upstreamMode == SetupUpstreamMode.TRACK)
+-				// explicitly set to configure
+-				doConfigure = true;
+-			else if (upstreamMode == SetupUpstreamMode.NOTRACK)
+-				// explicitly set to not configure
+-				doConfigure = false;
+-			else {
+-				// if there was no explicit setting, check the configuration
+-				String autosetupflag = repo.getConfig().getString(
+-						ConfigConstants.CONFIG_BRANCH_SECTION, null,
+-						ConfigConstants.CONFIG_KEY_AUTOSETUPMERGE);
+-				if ("false".equals(autosetupflag)) { //$NON-NLS-1$
+-					doConfigure = false;
+-				} else if ("always".equals(autosetupflag)) { //$NON-NLS-1$
+-					doConfigure = true;
+-				} else {
+-					// in this case, the default is to configure
+-					// only in case the base branch was a remote branch
+-					doConfigure = baseBranch.startsWith(Constants.R_REMOTES);
+-				}
+-			}
++        // if we are based on another branch, see
++        // if we need to configure upstream configuration: first check
++        // whether the setting was done explicitly
++        boolean doConfigure;
++        if (upstreamMode == SetupUpstreamMode.SET_UPSTREAM
++          || upstreamMode == SetupUpstreamMode.TRACK)
++          // explicitly set to configure
++          doConfigure = true;
++        else if (upstreamMode == SetupUpstreamMode.NOTRACK)
++          // explicitly set to not configure
++          doConfigure = false;
++        else {
++          // if there was no explicit setting, check the configuration
++          String autosetupflag = repo.getConfig().getString(
++            ConfigConstants.CONFIG_BRANCH_SECTION, null,
++            ConfigConstants.CONFIG_KEY_AUTOSETUPMERGE);
++          if ("false".equals(autosetupflag)) { //$NON-NLS-1$
++            doConfigure = false;
++          } else if ("always".equals(autosetupflag)) { //$NON-NLS-1$
++            doConfigure = true;
++          } else {
++            // in this case, the default is to configure
++            // only in case the base branch was a remote branch
++            doConfigure = baseBranch.startsWith(Constants.R_REMOTES);
++          }
++        }
+ 
+-			if (doConfigure) {
+-				StoredConfig config = repo.getConfig();
++        if (doConfigure) {
++          StoredConfig config = repo.getConfig();
+ 
+-				String remoteName = repo.getRemoteName(baseBranch);
+-				if (remoteName != null) {
+-					String branchName = repo
+-							.shortenRemoteBranchName(baseBranch);
+-					config
+-							.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
+-									name, ConfigConstants.CONFIG_KEY_REMOTE,
+-									remoteName);
+-					config.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
+-							name, ConfigConstants.CONFIG_KEY_MERGE,
+-							Constants.R_HEADS + branchName);
+-				} else {
+-					// set "." as remote
+-					config.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
+-							name, ConfigConstants.CONFIG_KEY_REMOTE, "."); //$NON-NLS-1$
+-					config.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
+-							name, ConfigConstants.CONFIG_KEY_MERGE, baseBranch);
+-				}
+-				config.save();
+-			}
+-			return result;
++          String remoteName = repo.getRemoteName(baseBranch);
++          if (remoteName != null) {
++            String branchName = repo
++              .shortenRemoteBranchName(baseBranch);
++            config
++              .setString(ConfigConstants.CONFIG_BRANCH_SECTION,
++                name, ConfigConstants.CONFIG_KEY_REMOTE,
++                remoteName);
++            config.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
++              name, ConfigConstants.CONFIG_KEY_MERGE,
++              Constants.R_HEADS + branchName);
++          } else {
++            // set "." as remote
++            config.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
++              name, ConfigConstants.CONFIG_KEY_REMOTE, "."); //$NON-NLS-1$
++            config.setString(ConfigConstants.CONFIG_BRANCH_SECTION,
++              name, ConfigConstants.CONFIG_KEY_MERGE, baseBranch);
++          }
++          config.save();
++        }
++        return result;
++      } finally {
++        revWalk.close();
++      }
+-		} catch (IOException ioe) {
++    } catch (IOException ioe) {
+ 			throw new JGitInternalException(ioe.getMessage(), ioe);
+ 		}
+ 	}
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/DiffCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/DiffCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/DiffCommand.java	(revision )
+@@ -42,13 +42,6 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import static org.eclipse.jgit.lib.Constants.HEAD;
+-
+-import java.io.BufferedOutputStream;
+-import java.io.IOException;
+-import java.io.OutputStream;
+-import java.util.List;
+-
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+ import org.eclipse.jgit.api.errors.NoHeadException;
+@@ -56,17 +49,20 @@
+ import org.eclipse.jgit.diff.DiffFormatter;
+ import org.eclipse.jgit.dircache.DirCacheIterator;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.NullProgressMonitor;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectReader;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Repository;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.treewalk.AbstractTreeIterator;
+ import org.eclipse.jgit.treewalk.CanonicalTreeParser;
+ import org.eclipse.jgit.treewalk.FileTreeIterator;
+ import org.eclipse.jgit.treewalk.filter.TreeFilter;
+ import org.eclipse.jgit.util.io.NullOutputStream;
+ 
++import java.io.BufferedOutputStream;
++import java.io.IOException;
++import java.io.OutputStream;
++import java.util.List;
++
++import static org.eclipse.jgit.lib.Constants.HEAD;
++
+ /**
+  * Show changes between commits, commit and working tree, etc.
+  *
+@@ -124,10 +120,13 @@
+ 					if (head == null)
+ 						throw new NoHeadException(JGitText.get().cannotReadTree);
+ 					CanonicalTreeParser p = new CanonicalTreeParser();
+-					try (ObjectReader reader = repo.newObjectReader()) {
++          ObjectReader reader = repo.newObjectReader();
++          try {
+-						p.reset(reader, head);
++            p.reset(reader, head);
++          } finally {
++            reader.close();
+-					}
+-					oldTree = p;
++          }
++          oldTree = p;
+ 				}
+ 				newTree = new DirCacheIterator(repo.readDirCache());
+ 			} else {
+\ No newline at end of file
+Index: org.eclipse.jgit/src/org/eclipse/jgit/diff/DiffFormatter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/diff/DiffFormatter.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/diff/DiffFormatter.java	(revision )
+@@ -44,43 +44,12 @@
+ 
+ package org.eclipse.jgit.diff;
+ 
+-import static org.eclipse.jgit.diff.DiffEntry.ChangeType.ADD;
+-import static org.eclipse.jgit.diff.DiffEntry.ChangeType.COPY;
+-import static org.eclipse.jgit.diff.DiffEntry.ChangeType.DELETE;
+-import static org.eclipse.jgit.diff.DiffEntry.ChangeType.MODIFY;
+-import static org.eclipse.jgit.diff.DiffEntry.ChangeType.RENAME;
+-import static org.eclipse.jgit.diff.DiffEntry.Side.NEW;
+-import static org.eclipse.jgit.diff.DiffEntry.Side.OLD;
+-import static org.eclipse.jgit.lib.Constants.encode;
+-import static org.eclipse.jgit.lib.Constants.encodeASCII;
+-import static org.eclipse.jgit.lib.FileMode.GITLINK;
+-
+-import java.io.ByteArrayOutputStream;
+-import java.io.IOException;
+-import java.io.OutputStream;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.List;
+-
+ import org.eclipse.jgit.diff.DiffAlgorithm.SupportedAlgorithm;
+ import org.eclipse.jgit.diff.DiffEntry.ChangeType;
+ import org.eclipse.jgit.dircache.DirCacheIterator;
+-import org.eclipse.jgit.errors.AmbiguousObjectException;
+-import org.eclipse.jgit.errors.CorruptObjectException;
+-import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+-import org.eclipse.jgit.errors.LargeObjectException;
+-import org.eclipse.jgit.errors.MissingObjectException;
++import org.eclipse.jgit.errors.*;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.AbbreviatedObjectId;
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.ConfigConstants;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.FileMode;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectLoader;
+-import org.eclipse.jgit.lib.ObjectReader;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Repository;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.patch.FileHeader;
+ import org.eclipse.jgit.patch.FileHeader.PatchType;
+ import org.eclipse.jgit.patch.HunkHeader;
+@@ -88,23 +57,30 @@
+ import org.eclipse.jgit.revwalk.RevTree;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.storage.pack.PackConfig;
+-import org.eclipse.jgit.treewalk.AbstractTreeIterator;
+-import org.eclipse.jgit.treewalk.CanonicalTreeParser;
+-import org.eclipse.jgit.treewalk.EmptyTreeIterator;
+-import org.eclipse.jgit.treewalk.TreeWalk;
+-import org.eclipse.jgit.treewalk.WorkingTreeIterator;
+-import org.eclipse.jgit.treewalk.filter.AndTreeFilter;
+-import org.eclipse.jgit.treewalk.filter.IndexDiffFilter;
+-import org.eclipse.jgit.treewalk.filter.NotIgnoredFilter;
+-import org.eclipse.jgit.treewalk.filter.PathFilter;
+-import org.eclipse.jgit.treewalk.filter.TreeFilter;
++import org.eclipse.jgit.treewalk.*;
++import org.eclipse.jgit.treewalk.filter.*;
+ import org.eclipse.jgit.util.QuotedString;
+ import org.eclipse.jgit.util.io.DisabledOutputStream;
+ 
++import java.io.ByteArrayOutputStream;
++import java.io.Closeable;
++import java.io.IOException;
++import java.io.OutputStream;
++import java.util.Collection;
++import java.util.Collections;
++import java.util.List;
++
++import static org.eclipse.jgit.diff.DiffEntry.ChangeType.*;
++import static org.eclipse.jgit.diff.DiffEntry.Side.NEW;
++import static org.eclipse.jgit.diff.DiffEntry.Side.OLD;
++import static org.eclipse.jgit.lib.Constants.encode;
++import static org.eclipse.jgit.lib.Constants.encodeASCII;
++import static org.eclipse.jgit.lib.FileMode.GITLINK;
++
+ /**
+  * Format a Git style patch script.
+  */
+-public class DiffFormatter implements AutoCloseable {
++public class DiffFormatter implements Closeable {
+ 	private static final int DEFAULT_BINARY_FILE_THRESHOLD = PackConfig.DEFAULT_BIG_FILE_THRESHOLD;
+ 
+ 	private static final byte[] noNewLine = encodeASCII("\\ No newline at end of file\n"); //$NON-NLS-1$
+@@ -414,12 +390,15 @@
+ 			throws IOException {
+ 		assertHaveRepository();
+ 
+-		try (RevWalk rw = new RevWalk(reader)) {
++    RevWalk rw = new RevWalk(reader);
++    try {
+-			RevTree aTree = a != null ? rw.parseTree(a) : null;
+-			RevTree bTree = b != null ? rw.parseTree(b) : null;
+-			return scan(aTree, bTree);
++      RevTree aTree = a != null ? rw.parseTree(a) : null;
++      RevTree bTree = b != null ? rw.parseTree(b) : null;
++      return scan(aTree, bTree);
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Determine the differences between two trees.
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/GC.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/GC.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/GC.java	(revision )
+@@ -43,33 +43,6 @@
+  */
+ package org.eclipse.jgit.internal.storage.file;
+ 
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.BITMAP_INDEX;
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.INDEX;
+-import static org.eclipse.jgit.lib.RefDatabase.ALL;
+-
+-import java.io.File;
+-import java.io.FileOutputStream;
+-import java.io.IOException;
+-import java.io.OutputStream;
+-import java.nio.channels.Channels;
+-import java.nio.channels.FileChannel;
+-import java.text.MessageFormat;
+-import java.text.ParseException;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.Comparator;
+-import java.util.Date;
+-import java.util.HashMap;
+-import java.util.HashSet;
+-import java.util.Iterator;
+-import java.util.LinkedList;
+-import java.util.List;
+-import java.util.Map;
+-import java.util.Map.Entry;
+-import java.util.Set;
+-import java.util.TreeMap;
+-
+ import org.eclipse.jgit.dircache.DirCacheIterator;
+ import org.eclipse.jgit.errors.CorruptObjectException;
+ import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+@@ -79,17 +52,8 @@
+ import org.eclipse.jgit.internal.storage.pack.PackExt;
+ import org.eclipse.jgit.internal.storage.pack.PackWriter;
+ import org.eclipse.jgit.internal.storage.pack.PackWriter.ObjectIdSet;
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.ConfigConstants;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.FileMode;
+-import org.eclipse.jgit.lib.NullProgressMonitor;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Ref;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.Ref.Storage;
+-import org.eclipse.jgit.lib.RefDatabase;
+-import org.eclipse.jgit.lib.ReflogEntry;
+ import org.eclipse.jgit.revwalk.ObjectWalk;
+ import org.eclipse.jgit.revwalk.RevObject;
+ import org.eclipse.jgit.revwalk.RevWalk;
+@@ -100,6 +64,21 @@
+ import org.eclipse.jgit.util.GitDateParser;
+ import org.eclipse.jgit.util.SystemReader;
+ 
++import java.io.File;
++import java.io.FileOutputStream;
++import java.io.IOException;
++import java.io.OutputStream;
++import java.nio.channels.Channels;
++import java.nio.channels.FileChannel;
++import java.text.MessageFormat;
++import java.text.ParseException;
++import java.util.*;
++import java.util.Map.Entry;
++
++import static org.eclipse.jgit.internal.storage.pack.PackExt.BITMAP_INDEX;
++import static org.eclipse.jgit.internal.storage.pack.PackExt.INDEX;
++import static org.eclipse.jgit.lib.RefDatabase.ALL;
++
+ /**
+  * A garbage collector for git {@link FileRepository}. Instances of this class
+  * are not thread-safe. Don't use the same instance from multiple threads.
+@@ -641,43 +620,49 @@
+ 		} catch (NoWorkTreeException e) {
+ 			return Collections.emptySet();
+ 		}
+-		try (TreeWalk treeWalk = new TreeWalk(repo)) {
++    TreeWalk treeWalk = new TreeWalk(repo);
++    try {
+-			treeWalk.addTree(new DirCacheIterator(repo.readDirCache()));
+-			ObjectId headID = repo.resolve(Constants.HEAD);
+-			if (headID != null) {
++      treeWalk.addTree(new DirCacheIterator(repo.readDirCache()));
++      ObjectId headID = repo.resolve(Constants.HEAD);
++      if (headID != null) {
+-				try (RevWalk revWalk = new RevWalk(repo)) {
++        RevWalk revWalk = new RevWalk(repo);
++        try {
+-					treeWalk.addTree(revWalk.parseTree(headID));
++          treeWalk.addTree(revWalk.parseTree(headID));
++        } finally {
++          revWalk.close();
+-				}
+-			}
++        }
++      }
+ 
+-			treeWalk.setFilter(TreeFilter.ANY_DIFF);
+-			treeWalk.setRecursive(true);
+-			Set<ObjectId> ret = new HashSet<ObjectId>();
++      treeWalk.setFilter(TreeFilter.ANY_DIFF);
++      treeWalk.setRecursive(true);
++      Set<ObjectId> ret = new HashSet<ObjectId>();
+ 
+-			while (treeWalk.next()) {
+-				ObjectId objectId = treeWalk.getObjectId(0);
+-				switch (treeWalk.getRawMode(0) & FileMode.TYPE_MASK) {
+-				case FileMode.TYPE_MISSING:
+-				case FileMode.TYPE_GITLINK:
+-					continue;
+-				case FileMode.TYPE_TREE:
+-				case FileMode.TYPE_FILE:
+-				case FileMode.TYPE_SYMLINK:
+-					ret.add(objectId);
+-					continue;
+-				default:
+-					throw new IOException(MessageFormat.format(
+-							JGitText.get().corruptObjectInvalidMode3,
+-							String.format("%o", //$NON-NLS-1$
+-									Integer.valueOf(treeWalk.getRawMode(0))),
+-							(objectId == null) ? "null" : objectId.name(), //$NON-NLS-1$
+-							treeWalk.getPathString(), //
+-							repo.getIndexFile()));
+-				}
+-			}
+-			return ret;
++      while (treeWalk.next()) {
++        ObjectId objectId = treeWalk.getObjectId(0);
++        switch (treeWalk.getRawMode(0) & FileMode.TYPE_MASK) {
++          case FileMode.TYPE_MISSING:
++          case FileMode.TYPE_GITLINK:
++            continue;
++          case FileMode.TYPE_TREE:
++          case FileMode.TYPE_FILE:
++          case FileMode.TYPE_SYMLINK:
++            ret.add(objectId);
++            continue;
++          default:
++            throw new IOException(MessageFormat.format(
++              JGitText.get().corruptObjectInvalidMode3,
++              String.format("%o", //$NON-NLS-1$
++                Integer.valueOf(treeWalk.getRawMode(0))),
++              (objectId == null) ? "null" : objectId.name(), //$NON-NLS-1$
++              treeWalk.getPathString(), //
++              repo.getIndexFile()));
++        }
++      }
++      return ret;
++    } finally {
++      treeWalk.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private PackFile writePack(Set<? extends ObjectId> want,
+ 			Set<? extends ObjectId> have, Set<ObjectId> tagTargets,
+@@ -699,136 +684,132 @@
+ 					}
+ 
+ 				});
+-		try (PackWriter pw = new PackWriter(
++    PackWriter pw = new PackWriter(
+-				(pconfig == null) ? new PackConfig(repo) : pconfig,
++      (pconfig == null) ? new PackConfig(repo) : pconfig,
+-				repo.newObjectReader())) {
++      repo.newObjectReader());
++    try {
+-			// prepare the PackWriter
+-			pw.setDeltaBaseAsOffset(true);
+-			pw.setReuseDeltaCommits(false);
+-			if (tagTargets != null)
+-				pw.setTagTargets(tagTargets);
+-			if (excludeObjects != null)
+-				for (ObjectIdSet idx : excludeObjects)
+-					pw.excludeObjects(idx);
+-			pw.preparePack(pm, want, have);
+-			if (pw.getObjectCount() == 0)
+-				return null;
++      // prepare the PackWriter
++      pw.setDeltaBaseAsOffset(true);
++      pw.setReuseDeltaCommits(false);
++      if (tagTargets != null)
++        pw.setTagTargets(tagTargets);
++      if (excludeObjects != null)
++        for (ObjectIdSet idx : excludeObjects)
++          pw.excludeObjects(idx);
++      pw.preparePack(pm, want, have);
++      if (pw.getObjectCount() == 0)
++        return null;
+ 
+-			// create temporary files
+-			String id = pw.computeName().getName();
+-			File packdir = new File(repo.getObjectsDirectory(), "pack"); //$NON-NLS-1$
+-			tmpPack = File.createTempFile("gc_", ".pack_tmp", packdir); //$NON-NLS-1$ //$NON-NLS-2$
+-			final String tmpBase = tmpPack.getName()
+-					.substring(0, tmpPack.getName().lastIndexOf('.'));
+-			File tmpIdx = new File(packdir, tmpBase + ".idx_tmp"); //$NON-NLS-1$
+-			tmpExts.put(INDEX, tmpIdx);
++      // create temporary files
++      String id = pw.computeName().getName();
++      File packdir = new File(repo.getObjectsDirectory(), "pack"); //$NON-NLS-1$
++      tmpPack = File.createTempFile("gc_", ".pack_tmp", packdir); //$NON-NLS-1$ //$NON-NLS-2$
++      final String tmpBase = tmpPack.getName()
++        .substring(0, tmpPack.getName().lastIndexOf('.'));
++      File tmpIdx = new File(packdir, tmpBase + ".idx_tmp"); //$NON-NLS-1$
++      tmpExts.put(INDEX, tmpIdx);
+ 
+-			if (!tmpIdx.createNewFile())
+-				throw new IOException(MessageFormat.format(
+-						JGitText.get().cannotCreateIndexfile, tmpIdx.getPath()));
++      if (!tmpIdx.createNewFile())
++        throw new IOException(MessageFormat.format(
++          JGitText.get().cannotCreateIndexfile, tmpIdx.getPath()));
+ 
+-			// write the packfile
+-			FileOutputStream fos = new FileOutputStream(tmpPack);
+-			FileChannel channel = fos.getChannel();
+-			OutputStream channelStream = Channels.newOutputStream(channel);
+-			try {
+-				pw.writePack(pm, pm, channelStream);
+-			} finally {
+-				channel.force(true);
+-				channelStream.close();
+-				fos.close();
+-			}
++      // write the packfile
++      FileOutputStream fos = new FileOutputStream(tmpPack);
++      FileChannel channel = fos.getChannel();
++      OutputStream channelStream = Channels.newOutputStream(channel);
++      try {
++        pw.writePack(pm, pm, channelStream);
++      } finally {
++        channel.force(true);
++        channelStream.close();
++        fos.close();
++      }
+ 
+-			// write the packindex
+-			fos = new FileOutputStream(tmpIdx);
+-			FileChannel idxChannel = fos.getChannel();
+-			OutputStream idxStream = Channels.newOutputStream(idxChannel);
+-			try {
+-				pw.writeIndex(idxStream);
+-			} finally {
+-				idxChannel.force(true);
+-				idxStream.close();
+-				fos.close();
+-			}
++      // write the packindex
++      fos = new FileOutputStream(tmpIdx);
++      FileChannel idxChannel = fos.getChannel();
++      OutputStream idxStream = Channels.newOutputStream(idxChannel);
++      try {
++        pw.writeIndex(idxStream);
++      } finally {
++        idxChannel.force(true);
++        idxStream.close();
++        fos.close();
++      }
+ 
+-			if (pw.prepareBitmapIndex(pm)) {
+-				File tmpBitmapIdx = new File(packdir, tmpBase + ".bitmap_tmp"); //$NON-NLS-1$
+-				tmpExts.put(BITMAP_INDEX, tmpBitmapIdx);
++      if (pw.prepareBitmapIndex(pm)) {
++        File tmpBitmapIdx = new File(packdir, tmpBase + ".bitmap_tmp"); //$NON-NLS-1$
++        tmpExts.put(BITMAP_INDEX, tmpBitmapIdx);
+ 
+-				if (!tmpBitmapIdx.createNewFile())
+-					throw new IOException(MessageFormat.format(
+-							JGitText.get().cannotCreateIndexfile,
+-							tmpBitmapIdx.getPath()));
++        if (!tmpBitmapIdx.createNewFile())
++          throw new IOException(MessageFormat.format(
++            JGitText.get().cannotCreateIndexfile,
++            tmpBitmapIdx.getPath()));
+ 
+-				fos = new FileOutputStream(tmpBitmapIdx);
+-				idxChannel = fos.getChannel();
+-				idxStream = Channels.newOutputStream(idxChannel);
+-				try {
+-					pw.writeBitmapIndex(idxStream);
+-				} finally {
+-					idxChannel.force(true);
+-					idxStream.close();
+-					fos.close();
+-				}
+-			}
++        fos = new FileOutputStream(tmpBitmapIdx);
++        idxChannel = fos.getChannel();
++        idxStream = Channels.newOutputStream(idxChannel);
++        try {
++          pw.writeBitmapIndex(idxStream);
++        } finally {
++          idxChannel.force(true);
++          idxStream.close();
++          fos.close();
++        }
++      }
+ 
+-			// rename the temporary files to real files
+-			File realPack = nameFor(id, ".pack"); //$NON-NLS-1$
++      // rename the temporary files to real files
++      File realPack = nameFor(id, ".pack"); //$NON-NLS-1$
+ 
+-			// if the packfile already exists (because we are rewriting a
+-			// packfile for the same set of objects maybe with different
+-			// PackConfig) then make sure we get rid of all handles on the file.
+-			// Windows will not allow for rename otherwise.
+-			if (realPack.exists())
+-				for (PackFile p : repo.getObjectDatabase().getPacks())
+-					if (realPack.getPath().equals(p.getPackFile().getPath())) {
+-						p.close();
+-						break;
+-					}
+-			tmpPack.setReadOnly();
+-			boolean delete = true;
+-			try {
+-				FileUtils.rename(tmpPack, realPack);
+-				delete = false;
++      // if the packfile already exists (because we are rewriting a
++      // packfile for the same set of objects maybe with different
++      // PackConfig) then make sure we get rid of all handles on the file.
++      // Windows will not allow for rename otherwise.
++      if (realPack.exists())
++        for (PackFile p : repo.getObjectDatabase().getPacks())
++          if (realPack.getPath().equals(p.getPackFile().getPath())) {
++            p.close();
++            break;
++          }
++      tmpPack.setReadOnly();
++      boolean delete = true;
++      try {
++        FileUtils.rename(tmpPack, realPack);
++        delete = false;
+-				for (Map.Entry<PackExt, File> tmpEntry : tmpExts.entrySet()) {
++        for (Entry<PackExt, File> tmpEntry : tmpExts.entrySet()) {
+-					File tmpExt = tmpEntry.getValue();
+-					tmpExt.setReadOnly();
++          File tmpExt = tmpEntry.getValue();
++          tmpExt.setReadOnly();
+ 
+-					File realExt = nameFor(
+-							id, "." + tmpEntry.getKey().getExtension()); //$NON-NLS-1$
+-					try {
+-						FileUtils.rename(tmpExt, realExt);
+-					} catch (IOException e) {
+-						File newExt = new File(realExt.getParentFile(),
+-								realExt.getName() + ".new"); //$NON-NLS-1$
+-						if (!tmpExt.renameTo(newExt))
+-							newExt = tmpExt;
+-						throw new IOException(MessageFormat.format(
+-								JGitText.get().panicCantRenameIndexFile, newExt,
+-								realExt));
+-					}
+-				}
++          File realExt = nameFor(
++            id, "." + tmpEntry.getKey().getExtension()); //$NON-NLS-1$
++          try {
++            FileUtils.rename(tmpExt, realExt);
++          } catch (IOException e) {
++            File newExt = new File(realExt.getParentFile(),
++              realExt.getName() + ".new"); //$NON-NLS-1$
++            if (!tmpExt.renameTo(newExt))
++              newExt = tmpExt;
++            throw new IOException(MessageFormat.format(
++              JGitText.get().panicCantRenameIndexFile, newExt,
++              realExt));
++          }
++        }
+ 
+-			} finally {
+-				if (delete) {
+-					if (tmpPack.exists())
+-						tmpPack.delete();
+-					for (File tmpExt : tmpExts.values()) {
+-						if (tmpExt.exists())
+-							tmpExt.delete();
+-					}
+-				}
+-			}
+-			return repo.getObjectDatabase().openPack(realPack);
+-		} finally {
++      } finally {
++        if (delete) {
++          if (tmpPack.exists())
++            tmpPack.delete();
++          for (File tmpExt : tmpExts.values()) {
++            if (tmpExt.exists())
++              tmpExt.delete();
++          }
++        }
++      }
++      return repo.getObjectDatabase().openPack(realPack);
++    } finally {
+-			if (tmpPack != null && tmpPack.exists())
+-				tmpPack.delete();
+-			for (File tmpExt : tmpExts.values()) {
+-				if (tmpExt.exists())
+-					tmpExt.delete();
+-			}
++      pw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private File nameFor(String name, String ext) {
+ 		File packdir = new File(repo.getObjectsDirectory(), "pack"); //$NON-NLS-1$
+Index: org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectReader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectReader.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectReader.java	(revision )
+@@ -43,24 +43,21 @@
+ 
+ package org.eclipse.jgit.lib;
+ 
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.Iterator;
+-import java.util.List;
+-import java.util.Set;
+-
+ import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+ import org.eclipse.jgit.errors.MissingObjectException;
+ import org.eclipse.jgit.internal.storage.pack.ObjectReuseAsIs;
+ 
++import java.io.Closeable;
++import java.io.IOException;
++import java.util.*;
++
+ /**
+  * Reads an {@link ObjectDatabase} for a single thread.
+  * <p>
+  * Readers that can support efficient reuse of pack encoded objects should also
+  * implement the companion interface {@link ObjectReuseAsIs}.
+  */
+-public abstract class ObjectReader implements AutoCloseable {
++public abstract class ObjectReader implements Closeable {
+ 	/** Type hint indicating the caller doesn't know the type. */
+ 	public static final int OBJ_ANY = -1;
+ 
+Index: org.eclipse.jgit/src/org/eclipse/jgit/transport/BundleWriter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/transport/BundleWriter.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/transport/BundleWriter.java	(revision )
+@@ -43,6 +43,12 @@
+ 
+ package org.eclipse.jgit.transport;
+ 
++import org.eclipse.jgit.internal.JGitText;
++import org.eclipse.jgit.internal.storage.pack.PackWriter;
++import org.eclipse.jgit.lib.*;
++import org.eclipse.jgit.revwalk.RevCommit;
++import org.eclipse.jgit.storage.pack.PackConfig;
++
+ import java.io.IOException;
+ import java.io.OutputStream;
+ import java.io.OutputStreamWriter;
+@@ -53,17 +59,6 @@
+ import java.util.Set;
+ import java.util.TreeMap;
+ 
+-import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.internal.storage.pack.PackWriter;
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.revwalk.RevCommit;
+-import org.eclipse.jgit.storage.pack.PackConfig;
+-
+ /**
+  * Creates a Git bundle file, for sneaker-net transport to another system.
+  * <p>
+@@ -194,44 +189,47 @@
+ 		PackConfig pc = packConfig;
+ 		if (pc == null)
+ 			pc = new PackConfig(db);
+-		try (PackWriter packWriter = new PackWriter(pc, db.newObjectReader())) {
++    PackWriter packWriter = new PackWriter(pc, db.newObjectReader());
++    try {
+-			final HashSet<ObjectId> inc = new HashSet<ObjectId>();
+-			final HashSet<ObjectId> exc = new HashSet<ObjectId>();
+-			inc.addAll(include.values());
+-			for (final RevCommit r : assume)
+-				exc.add(r.getId());
+-			packWriter.setIndexDisabled(true);
+-			packWriter.setDeltaBaseAsOffset(true);
+-			packWriter.setThin(exc.size() > 0);
+-			packWriter.setReuseValidatingObjects(false);
+-			if (exc.size() == 0)
+-				packWriter.setTagTargets(tagTargets);
+-			packWriter.preparePack(monitor, inc, exc);
++      final HashSet<ObjectId> inc = new HashSet<ObjectId>();
++      final HashSet<ObjectId> exc = new HashSet<ObjectId>();
++      inc.addAll(include.values());
++      for (final RevCommit r : assume)
++        exc.add(r.getId());
++      packWriter.setIndexDisabled(true);
++      packWriter.setDeltaBaseAsOffset(true);
++      packWriter.setThin(exc.size() > 0);
++      packWriter.setReuseValidatingObjects(false);
++      if (exc.size() == 0)
++        packWriter.setTagTargets(tagTargets);
++      packWriter.preparePack(monitor, inc, exc);
+ 
+-			final Writer w = new OutputStreamWriter(os, Constants.CHARSET);
+-			w.write(TransportBundle.V2_BUNDLE_SIGNATURE);
+-			w.write('\n');
++      final Writer w = new OutputStreamWriter(os, Constants.CHARSET);
++      w.write(TransportBundle.V2_BUNDLE_SIGNATURE);
++      w.write('\n');
+ 
+-			final char[] tmp = new char[Constants.OBJECT_ID_STRING_LENGTH];
+-			for (final RevCommit a : assume) {
+-				w.write('-');
+-				a.copyTo(tmp, w);
+-				if (a.getRawBuffer() != null) {
+-					w.write(' ');
+-					w.write(a.getShortMessage());
+-				}
+-				w.write('\n');
+-			}
+-			for (final Map.Entry<String, ObjectId> e : include.entrySet()) {
+-				e.getValue().copyTo(tmp, w);
+-				w.write(' ');
+-				w.write(e.getKey());
+-				w.write('\n');
+-			}
++      final char[] tmp = new char[Constants.OBJECT_ID_STRING_LENGTH];
++      for (final RevCommit a : assume) {
++        w.write('-');
++        a.copyTo(tmp, w);
++        if (a.getRawBuffer() != null) {
++          w.write(' ');
++          w.write(a.getShortMessage());
++        }
++        w.write('\n');
++      }
++      for (final Map.Entry<String, ObjectId> e : include.entrySet()) {
++        e.getValue().copyTo(tmp, w);
++        w.write(' ');
++        w.write(e.getKey());
++        w.write('\n');
++      }
+ 
+-			w.write('\n');
+-			w.flush();
+-			packWriter.writePack(monitor, monitor, os);
++      w.write('\n');
++      w.flush();
++      packWriter.writePack(monitor, monitor, os);
++    } finally {
++      packWriter.close();
+-		}
+-	}
++    }
++  }
+ }
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/RemoveNoteCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/RemoveNoteCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/RemoveNoteCommand.java	(revision )
+@@ -42,24 +42,17 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.lib.CommitBuilder;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectInserter;
+-import org.eclipse.jgit.lib.PersonIdent;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefUpdate;
+-import org.eclipse.jgit.lib.Repository;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.notes.Note;
+ import org.eclipse.jgit.notes.NoteMap;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevObject;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.IOException;
++
+ /**
+  * Remove object notes.
+  *
+@@ -81,21 +74,30 @@
+ 
+ 	public Note call() throws GitAPIException {
+ 		checkCallable();
+-		try (RevWalk walk = new RevWalk(repo);
+-				ObjectInserter inserter = repo.newObjectInserter()) {
++		try {
++      RevWalk walk = new RevWalk(repo);
++      try {
++        ObjectInserter inserter = repo.newObjectInserter();
++        try {
+-			NoteMap map = NoteMap.newEmptyMap();
+-			RevCommit notesCommit = null;
+-			Ref ref = repo.getRef(notesRef);
+-			// if we have a notes ref, use it
+-			if (ref != null) {
+-				notesCommit = walk.parseCommit(ref.getObjectId());
+-				map = NoteMap.read(walk.getObjectReader(), notesCommit);
+-			}
+-			map.set(id, null, inserter);
+-			commitNoteMap(walk, map, notesCommit, inserter,
+-					"Notes removed by 'git notes remove'"); //$NON-NLS-1$
+-			return map.getNote(id);
++          NoteMap map = NoteMap.newEmptyMap();
++          RevCommit notesCommit = null;
++          Ref ref = repo.getRef(notesRef);
++          // if we have a notes ref, use it
++          if (ref != null) {
++            notesCommit = walk.parseCommit(ref.getObjectId());
++            map = NoteMap.read(walk.getObjectReader(), notesCommit);
++          }
++          map.set(id, null, inserter);
++          commitNoteMap(walk, map, notesCommit, inserter,
++            "Notes removed by 'git notes remove'"); //$NON-NLS-1$
++          return map.getNote(id);
++        } finally {
++          inserter.close();
++        }
++      } finally {
++        walk.close();
++      }
+-		} catch (IOException e) {
++    } catch (IOException e) {
+ 			throw new JGitInternalException(e.getMessage(), e);
+ 		}
+ 	}
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/ListBranchCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/ListBranchCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/ListBranchCommand.java	(revision )
+@@ -44,14 +44,6 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.Comparator;
+-import java.util.List;
+-
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+ import org.eclipse.jgit.api.errors.RefNotFoundException;
+@@ -64,6 +56,10 @@
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.revwalk.RevWalkUtils;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.*;
++
+ /**
+  * Used to obtain a list of branches.
+  * <p>
+@@ -139,17 +135,20 @@
+ 		if (containsCommitish == null)
+ 			return refs;
+ 
+-		try (RevWalk walk = new RevWalk(repo)) {
++    RevWalk walk = new RevWalk(repo);
++    try {
+-			ObjectId resolved = repo.resolve(containsCommitish);
+-			if (resolved == null)
+-				throw new RefNotFoundException(MessageFormat.format(
+-						JGitText.get().refNotResolved, containsCommitish));
++      ObjectId resolved = repo.resolve(containsCommitish);
++      if (resolved == null)
++        throw new RefNotFoundException(MessageFormat.format(
++          JGitText.get().refNotResolved, containsCommitish));
+ 
+-			RevCommit containsCommit = walk.parseCommit(resolved);
+-			return RevWalkUtils.findBranchesReachableFrom(containsCommit, walk,
+-					refs);
++      RevCommit containsCommit = walk.parseCommit(resolved);
++      return RevWalkUtils.findBranchesReachableFrom(containsCommit, walk,
++        refs);
++    } finally {
++      walk.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * @param listMode
+Index: org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectDatabase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectDatabase.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/lib/ObjectDatabase.java	(revision )
+@@ -43,11 +43,11 @@
+ 
+ package org.eclipse.jgit.lib;
+ 
+-import java.io.IOException;
+-
+ import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+ import org.eclipse.jgit.errors.MissingObjectException;
+ 
++import java.io.IOException;
++
+ /**
+  * Abstraction of arbitrary object storage.
+  * <p>
+@@ -120,10 +120,13 @@
+ 	 *             the object store cannot be accessed.
+ 	 */
+ 	public boolean has(final AnyObjectId objectId) throws IOException {
+-		try (final ObjectReader or = newReader()) {
++    final ObjectReader or = newReader();
++    try {
+-			return or.has(objectId);
++      return or.has(objectId);
++    } finally {
++      or.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Open an object from this database.
+@@ -169,10 +172,13 @@
+ 	public ObjectLoader open(AnyObjectId objectId, int typeHint)
+ 			throws MissingObjectException, IncorrectObjectTypeException,
+ 			IOException {
+-		try (final ObjectReader or = newReader()) {
++    final ObjectReader or = newReader();
++    try {
+-			return or.open(objectId, typeHint);
++      return or.open(objectId, typeHint);
++    } finally {
++      or.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Create a new cached database instance over this database. This instance might
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/RefDirectoryRename.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/RefDirectoryRename.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/RefDirectoryRename.java	(revision )
+@@ -44,17 +44,16 @@
+ 
+ package org.eclipse.jgit.internal.storage.file;
+ 
+-import java.io.File;
+-import java.io.IOException;
+-
+ import org.eclipse.jgit.lib.Constants;
+ import org.eclipse.jgit.lib.ObjectId;
+ import org.eclipse.jgit.lib.RefRename;
+ import org.eclipse.jgit.lib.RefUpdate;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+ import org.eclipse.jgit.revwalk.RevWalk;
+-import org.eclipse.jgit.util.FileUtils;
+ 
++import java.io.File;
++import java.io.IOException;
++
+ /**
+  * Rename any reference stored by {@link RefDirectory}.
+  * <p>
+@@ -96,89 +95,85 @@
+ 		objId = source.getOldObjectId();
+ 		updateHEAD = needToUpdateHEAD();
+ 		tmp = refdb.newTemporaryUpdate();
+-		try (final RevWalk rw = new RevWalk(refdb.getRepository())) {
++    final RevWalk rw = new RevWalk(refdb.getRepository());
++    try {
+-			// First backup the source so its never unreachable.
+-			tmp.setNewObjectId(objId);
+-			tmp.setForceUpdate(true);
+-			tmp.disableRefLog();
+-			switch (tmp.update(rw)) {
+-			case NEW:
+-			case FORCED:
+-			case NO_CHANGE:
+-				break;
+-			default:
+-				return tmp.getResult();
+-			}
++      // First backup the source so its never unreachable.
++      tmp.setNewObjectId(objId);
++      tmp.setForceUpdate(true);
++      tmp.disableRefLog();
++      switch (tmp.update(rw)) {
++        case NEW:
++        case FORCED:
++        case NO_CHANGE:
++          break;
++        default:
++          return tmp.getResult();
++      }
+ 
+-			// Save the source's log under the temporary name, we must do
+-			// this before we delete the source, otherwise we lose the log.
+-			if (!renameLog(source, tmp))
+-				return Result.IO_FAILURE;
++      // Save the source's log under the temporary name, we must do
++      // this before we delete the source, otherwise we lose the log.
++      if (!renameLog(source, tmp))
++        return Result.IO_FAILURE;
+ 
+-			// If HEAD has to be updated, link it now to destination.
+-			// We have to link before we delete, otherwise the delete
+-			// fails because its the current branch.
+-			RefUpdate dst = destination;
+-			if (updateHEAD) {
+-				if (!linkHEAD(destination)) {
+-					renameLog(tmp, source);
+-					return Result.LOCK_FAILURE;
+-				}
++      // If HEAD has to be updated, link it now to destination.
++      // We have to link before we delete, otherwise the delete
++      // fails because its the current branch.
++      RefUpdate dst = destination;
++      if (updateHEAD) {
++        if (!linkHEAD(destination)) {
++          renameLog(tmp, source);
++          return Result.LOCK_FAILURE;
++        }
+ 
+-				// Replace the update operation so HEAD will log the rename.
+-				dst = refdb.newUpdate(Constants.HEAD, false);
+-				dst.setRefLogIdent(destination.getRefLogIdent());
+-				dst.setRefLogMessage(destination.getRefLogMessage(), false);
+-			}
++        // Replace the update operation so HEAD will log the rename.
++        dst = refdb.newUpdate(Constants.HEAD, false);
++        dst.setRefLogIdent(destination.getRefLogIdent());
++        dst.setRefLogMessage(destination.getRefLogMessage(), false);
++      }
+ 
+-			// Delete the source name so its path is free for replacement.
+-			source.setExpectedOldObjectId(objId);
+-			source.setForceUpdate(true);
+-			source.disableRefLog();
+-			if (source.delete(rw) != Result.FORCED) {
+-				renameLog(tmp, source);
+-				if (updateHEAD)
+-					linkHEAD(source);
+-				return source.getResult();
+-			}
++      // Delete the source name so its path is free for replacement.
++      source.setExpectedOldObjectId(objId);
++      source.setForceUpdate(true);
++      source.disableRefLog();
++      if (source.delete(rw) != Result.FORCED) {
++        renameLog(tmp, source);
++        if (updateHEAD)
++          linkHEAD(source);
++        return source.getResult();
++      }
+ 
+-			// Move the log to the destination.
+-			if (!renameLog(tmp, destination)) {
+-				renameLog(tmp, source);
+-				source.setExpectedOldObjectId(ObjectId.zeroId());
+-				source.setNewObjectId(objId);
+-				source.update(rw);
+-				if (updateHEAD)
+-					linkHEAD(source);
+-				return Result.IO_FAILURE;
+-			}
++      // Move the log to the destination.
++      if (!renameLog(tmp, destination)) {
++        renameLog(tmp, source);
++        source.setExpectedOldObjectId(ObjectId.zeroId());
++        source.setNewObjectId(objId);
++        source.update(rw);
++        if (updateHEAD)
++          linkHEAD(source);
++        return Result.IO_FAILURE;
++      }
+ 
+-			// Create the destination, logging the rename during the creation.
+-			dst.setExpectedOldObjectId(ObjectId.zeroId());
+-			dst.setNewObjectId(objId);
+-			if (dst.update(rw) != Result.NEW) {
+-				// If we didn't create the destination we have to undo
+-				// our work. Put the log back and restore source.
+-				if (renameLog(destination, tmp))
+-					renameLog(tmp, source);
+-				source.setExpectedOldObjectId(ObjectId.zeroId());
+-				source.setNewObjectId(objId);
+-				source.update(rw);
+-				if (updateHEAD)
+-					linkHEAD(source);
+-				return dst.getResult();
+-			}
++      // Create the destination, logging the rename during the creation.
++      dst.setExpectedOldObjectId(ObjectId.zeroId());
++      dst.setNewObjectId(objId);
++      if (dst.update(rw) != Result.NEW) {
++        // If we didn't create the destination we have to undo
++        // our work. Put the log back and restore source.
++        if (renameLog(destination, tmp))
++          renameLog(tmp, source);
++        source.setExpectedOldObjectId(ObjectId.zeroId());
++        source.setNewObjectId(objId);
++        source.update(rw);
++        if (updateHEAD)
++          linkHEAD(source);
++        return dst.getResult();
++      }
+ 
+-			return Result.RENAMED;
+-		} finally {
++      return Result.RENAMED;
++    } finally {
+-			// Always try to free the temporary name.
+-			try {
+-				refdb.delete(tmp);
+-			} catch (IOException err) {
+-				FileUtils.delete(refdb.fileFor(tmp.getName()));
+-			}
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private boolean renameLog(RefUpdate src, RefUpdate dst) {
+ 		File srcLog = refdb.getLogWriter().logFor(src.getName());
+Index: org.eclipse.jgit/src/org/eclipse/jgit/dircache/DirCache.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/dircache/DirCache.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/dircache/DirCache.java	(revision )
+@@ -963,32 +963,35 @@
+ 	 */
+ 	private void updateSmudgedEntries() throws IOException {
+ 		List<String> paths = new ArrayList<String>(128);
+-		try (TreeWalk walk = new TreeWalk(repository)) {
++    TreeWalk walk = new TreeWalk(repository);
++    try {
+-			for (int i = 0; i < entryCnt; i++)
+-				if (sortedEntries[i].isSmudged())
+-					paths.add(sortedEntries[i].getPathString());
+-			if (paths.isEmpty())
+-				return;
+-			walk.setFilter(PathFilterGroup.createFromStrings(paths));
++      for (int i = 0; i < entryCnt; i++)
++        if (sortedEntries[i].isSmudged())
++          paths.add(sortedEntries[i].getPathString());
++      if (paths.isEmpty())
++        return;
++      walk.setFilter(PathFilterGroup.createFromStrings(paths));
+ 
+-			DirCacheIterator iIter = new DirCacheIterator(this);
+-			FileTreeIterator fIter = new FileTreeIterator(repository);
+-			walk.addTree(iIter);
+-			walk.addTree(fIter);
+-			walk.setRecursive(true);
+-			while (walk.next()) {
+-				iIter = walk.getTree(0, DirCacheIterator.class);
+-				if (iIter == null)
+-					continue;
+-				fIter = walk.getTree(1, FileTreeIterator.class);
+-				if (fIter == null)
+-					continue;
+-				DirCacheEntry entry = iIter.getDirCacheEntry();
+-				if (entry.isSmudged() && iIter.idEqual(fIter)) {
+-					entry.setLength(fIter.getEntryLength());
+-					entry.setLastModified(fIter.getEntryLastModified());
+-				}
+-			}
++      DirCacheIterator iIter = new DirCacheIterator(this);
++      FileTreeIterator fIter = new FileTreeIterator(repository);
++      walk.addTree(iIter);
++      walk.addTree(fIter);
++      walk.setRecursive(true);
++      while (walk.next()) {
++        iIter = walk.getTree(0, DirCacheIterator.class);
++        if (iIter == null)
++          continue;
++        fIter = walk.getTree(1, FileTreeIterator.class);
++        if (fIter == null)
++          continue;
++        DirCacheEntry entry = iIter.getDirCacheEntry();
++        if (entry.isSmudged() && iIter.idEqual(fIter)) {
++          entry.setLength(fIter.getEntryLength());
++          entry.setLastModified(fIter.getEntryLastModified());
++        }
++      }
++    } finally {
++      walk.close();
+-		}
+-	}
++    }
++  }
+ }
+Index: org.eclipse.jgit/src/org/eclipse/jgit/util/FS_Win32.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/util/FS_Win32.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/util/FS_Win32.java	(revision )
+@@ -171,7 +171,9 @@
+ 			FileUtil.createSymLink(linkName, tempFile.getPath());
+ 			supportSymlinks = Boolean.TRUE;
+ 			linkName.delete();
+-		} catch (IOException | UnsupportedOperationException e) {
++		} catch (IOException e) {
++			supportSymlinks = Boolean.FALSE;
++		} catch (UnsupportedOperationException e) {
+ 			supportSymlinks = Boolean.FALSE;
+ 		} finally {
+ 			if (tempFile != null)
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsPackCompactor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsPackCompactor.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsPackCompactor.java	(revision )
+@@ -43,17 +43,6 @@
+ 
+ package org.eclipse.jgit.internal.storage.dfs;
+ 
+-import static org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource.COMPACT;
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.INDEX;
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.PACK;
+-import static org.eclipse.jgit.internal.storage.pack.StoredObjectRepresentation.PACK_DELTA;
+-
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.Comparator;
+-import java.util.List;
+-
+ import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.internal.storage.file.PackIndex;
+@@ -70,6 +59,17 @@
+ import org.eclipse.jgit.util.BlockList;
+ import org.eclipse.jgit.util.io.CountingOutputStream;
+ 
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.Comparator;
++import java.util.List;
++
++import static org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource.COMPACT;
++import static org.eclipse.jgit.internal.storage.pack.PackExt.INDEX;
++import static org.eclipse.jgit.internal.storage.pack.PackExt.PACK;
++import static org.eclipse.jgit.internal.storage.pack.StoredObjectRepresentation.PACK_DELTA;
++
+ /**
+  * Combine several pack files into one pack.
+  * <p>
+@@ -179,10 +179,13 @@
+ 	 */
+ 	public DfsPackCompactor exclude(DfsPackFile pack) throws IOException {
+ 		final PackIndex idx;
+-		try (DfsReader ctx = (DfsReader) repo.newObjectReader()) {
++    DfsReader ctx = (DfsReader) repo.newObjectReader();
++    try {
+-			idx = pack.getPackIndex(ctx);
++      idx = pack.getPackIndex(ctx);
++    } finally {
++      ctx.close();
+-		}
+-		return exclude(new PackWriter.ObjectIdSet() {
++    }
++    return exclude(new PackWriter.ObjectIdSet() {
+ 			public boolean contains(AnyObjectId id) {
+ 				return idx.hasObject(id);
+ 			}
+@@ -203,55 +206,56 @@
+ 			pm = NullProgressMonitor.INSTANCE;
+ 
+ 		DfsObjDatabase objdb = repo.getObjectDatabase();
+-		try (DfsReader ctx = (DfsReader) objdb.newReader()) {
++    DfsReader ctx = (DfsReader) objdb.newReader();
++    try {
+-			PackConfig pc = new PackConfig(repo);
+-			pc.setIndexVersion(2);
+-			pc.setDeltaCompress(false);
+-			pc.setReuseDeltas(true);
+-			pc.setReuseObjects(true);
++      PackConfig pc = new PackConfig(repo);
++      pc.setIndexVersion(2);
++      pc.setDeltaCompress(false);
++      pc.setReuseDeltas(true);
++      pc.setReuseObjects(true);
+ 
+-			PackWriter pw = new PackWriter(pc, ctx);
+-			try {
+-				pw.setDeltaBaseAsOffset(true);
+-				pw.setReuseDeltaCommits(false);
++      PackWriter pw = new PackWriter(pc, ctx);
++      try {
++        pw.setDeltaBaseAsOffset(true);
++        pw.setReuseDeltaCommits(false);
+ 
+-				addObjectsToPack(pw, ctx, pm);
+-				if (pw.getObjectCount() == 0) {
+-					List<DfsPackDescription> remove = toPrune();
+-					if (remove.size() > 0)
+-						objdb.commitPack(
+-								Collections.<DfsPackDescription>emptyList(),
+-								remove);
+-					return;
+-				}
++        addObjectsToPack(pw, ctx, pm);
++        if (pw.getObjectCount() == 0) {
++          List<DfsPackDescription> remove = toPrune();
++          if (remove.size() > 0)
++            objdb.commitPack(
++              Collections.<DfsPackDescription>emptyList(),
++              remove);
++          return;
++        }
+ 
+-				boolean rollback = true;
+-				DfsPackDescription pack = objdb.newPack(COMPACT);
+-				try {
+-					writePack(objdb, pack, pw, pm);
+-					writeIndex(objdb, pack, pw);
++        boolean rollback = true;
++        DfsPackDescription pack = objdb.newPack(COMPACT);
++        try {
++          writePack(objdb, pack, pw, pm);
++          writeIndex(objdb, pack, pw);
+ 
+-					PackWriter.Statistics stats = pw.getStatistics();
+-					pw.close();
+-					pw = null;
++          PackWriter.Statistics stats = pw.getStatistics();
++          pw.close();
++          pw = null;
+ 
+-					pack.setPackStats(stats);
+-					objdb.commitPack(Collections.singletonList(pack), toPrune());
+-					newPacks.add(pack);
+-					newStats.add(stats);
+-					rollback = false;
+-				} finally {
+-					if (rollback)
+-						objdb.rollbackPack(Collections.singletonList(pack));
+-				}
+-			} finally {
+-				if (pw != null)
+-					pw.close();
+-			}
+-		} finally {
++          pack.setPackStats(stats);
++          objdb.commitPack(Collections.singletonList(pack), toPrune());
++          newPacks.add(pack);
++          newStats.add(stats);
++          rollback = false;
++        } finally {
++          if (rollback)
++            objdb.rollbackPack(Collections.singletonList(pack));
++        }
++      } finally {
++        if (pw != null)
++          pw.close();
++      }
++    } finally {
+-			rw = null;
++      ctx.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/** @return all of the source packs that fed into this compaction. */
+ 	public List<DfsPackDescription> getSourcePacks() {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/pack/PackWriter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/pack/PackWriter.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/pack/PackWriter.java	(revision )
+@@ -52,6 +52,7 @@
+ import static org.eclipse.jgit.lib.Constants.OBJ_TAG;
+ import static org.eclipse.jgit.lib.Constants.OBJ_TREE;
+ 
++import java.io.Closeable;
+ import java.io.IOException;
+ import java.io.OutputStream;
+ import java.lang.ref.WeakReference;
+@@ -152,7 +153,7 @@
+  * undefined behavior.
+  * </p>
+  */
+-public class PackWriter implements AutoCloseable {
++public class PackWriter implements Closeable {
+ 	private static final int PACK_VERSION_GENERATED = 2;
+ 
+ 	/** A collection of object ids. */
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/CheckoutCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/CheckoutCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/CheckoutCommand.java	(revision )
+@@ -43,44 +43,28 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.EnumSet;
+-import java.util.LinkedList;
+-import java.util.List;
+-
+ import org.eclipse.jgit.api.CheckoutResult.Status;
+-import org.eclipse.jgit.api.errors.CheckoutConflictException;
+-import org.eclipse.jgit.api.errors.GitAPIException;
+-import org.eclipse.jgit.api.errors.InvalidRefNameException;
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.api.errors.RefAlreadyExistsException;
+-import org.eclipse.jgit.api.errors.RefNotFoundException;
+-import org.eclipse.jgit.dircache.DirCache;
+-import org.eclipse.jgit.dircache.DirCacheCheckout;
+-import org.eclipse.jgit.dircache.DirCacheEditor;
++import org.eclipse.jgit.api.errors.*;
++import org.eclipse.jgit.dircache.*;
+ import org.eclipse.jgit.dircache.DirCacheEditor.PathEdit;
+-import org.eclipse.jgit.dircache.DirCacheEntry;
+-import org.eclipse.jgit.dircache.DirCacheIterator;
+ import org.eclipse.jgit.errors.AmbiguousObjectException;
+ import org.eclipse.jgit.errors.UnmergedPathException;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.FileMode;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectReader;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefUpdate;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+-import org.eclipse.jgit.lib.Repository;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevTree;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.treewalk.TreeWalk;
+ import org.eclipse.jgit.treewalk.filter.PathFilterGroup;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.ArrayList;
++import java.util.EnumSet;
++import java.util.LinkedList;
++import java.util.List;
++
+ /**
+  * Checkout a branch to the working tree.
+  * <p>
+@@ -208,18 +192,21 @@
+ 			}
+ 
+ 			if (createBranch) {
+-				try (Git git = new Git(repo)) {
++        Git git = new Git(repo);
++        try {
+-					CreateBranchCommand command = git.branchCreate();
+-					command.setName(name);
+-					if (startCommit != null)
+-						command.setStartPoint(startCommit);
+-					else
+-						command.setStartPoint(startPoint);
+-					if (upstreamMode != null)
+-						command.setUpstreamMode(upstreamMode);
+-					command.call();
++          CreateBranchCommand command = git.branchCreate();
++          command.setName(name);
++          if (startCommit != null)
++            command.setStartPoint(startCommit);
++          else
++            command.setStartPoint(startPoint);
++          if (upstreamMode != null)
++            command.setUpstreamMode(upstreamMode);
++          command.call();
++        } finally {
++          git.close();
+-				}
+-			}
++        }
++      }
+ 
+ 			Ref headRef = repo.getRef(Constants.HEAD);
+ 			String shortHeadRef = getShortBranchName(headRef);
+@@ -246,13 +233,16 @@
+ 
+ 			RevCommit headCommit = null;
+ 			RevCommit newCommit = null;
+-			try (RevWalk revWalk = new RevWalk(repo)) {
++      RevWalk revWalk = new RevWalk(repo);
++      try {
+-				AnyObjectId headId = headRef.getObjectId();
+-				headCommit = headId == null ? null
+-						: revWalk.parseCommit(headId);
+-				newCommit = revWalk.parseCommit(branch);
++        AnyObjectId headId = headRef.getObjectId();
++        headCommit = headId == null ? null
++          : revWalk.parseCommit(headId);
++        newCommit = revWalk.parseCommit(branch);
++      } finally {
++        revWalk.close();
+-			}
+-			RevTree headTree = headCommit == null ? null : headCommit.getTree();
++      }
++      RevTree headTree = headCommit == null ? null : headCommit.getTree();
+ 			DirCacheCheckout dco;
+ 			DirCache dc = repo.lockDirCache();
+ 			try {
+@@ -381,21 +371,31 @@
+ 	protected CheckoutCommand checkoutPaths() throws IOException,
+ 			RefNotFoundException {
+ 		DirCache dc = repo.lockDirCache();
+-		try (RevWalk revWalk = new RevWalk(repo);
+-				TreeWalk treeWalk = new TreeWalk(revWalk.getObjectReader())) {
++    try {
++      RevWalk revWalk = new RevWalk(repo);
++      try {
++        TreeWalk treeWalk = new TreeWalk(revWalk.getObjectReader());
++        try {
+-			treeWalk.setRecursive(true);
+-			if (!checkoutAllPaths)
+-				treeWalk.setFilter(PathFilterGroup.createFromStrings(paths));
+-			if (isCheckoutIndex())
+-				checkoutPathsFromIndex(treeWalk, dc);
+-			else {
+-				RevCommit commit = revWalk.parseCommit(getStartPointObjectId());
+-				checkoutPathsFromCommit(treeWalk, dc, commit);
+-			}
+-		} finally {
++          treeWalk.setRecursive(true);
++          if (!checkoutAllPaths)
++            treeWalk.setFilter(PathFilterGroup.createFromStrings(paths));
++          if (isCheckoutIndex())
++            checkoutPathsFromIndex(treeWalk, dc);
++          else {
++            RevCommit commit = revWalk.parseCommit(getStartPointObjectId());
++            checkoutPathsFromCommit(treeWalk, dc, commit);
++          }
++        } finally {
++          treeWalk.close();
++        }
++      } finally {
++        revWalk.close();
++      }
++    }
++    finally {
+-			dc.unlock();
+-		}
+-		return this;
++      dc.unlock();
++    }
++    return this;
+ 	}
+ 
+ 	private void checkoutPathsFromIndex(TreeWalk treeWalk, DirCache dc)
+Index: org.eclipse.jgit/src/org/eclipse/jgit/dircache/DirCacheCheckout.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/dircache/DirCacheCheckout.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/dircache/DirCacheCheckout.java	(revision )
+@@ -42,38 +42,12 @@
+ 
+ package org.eclipse.jgit.dircache;
+ 
+-import java.io.File;
+-import java.io.FileOutputStream;
+-import java.io.IOException;
+-import java.io.OutputStream;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.HashMap;
+-import java.util.List;
+-import java.util.Map;
+-
+-import org.eclipse.jgit.errors.CheckoutConflictException;
+-import org.eclipse.jgit.errors.CorruptObjectException;
+-import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+-import org.eclipse.jgit.errors.IndexWriteException;
+-import org.eclipse.jgit.errors.MissingObjectException;
++import org.eclipse.jgit.errors.*;
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.lib.CoreConfig.AutoCRLF;
+ import org.eclipse.jgit.lib.CoreConfig.SymLinks;
+-import org.eclipse.jgit.lib.FileMode;
+-import org.eclipse.jgit.lib.ObjectChecker;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectLoader;
+-import org.eclipse.jgit.lib.ObjectReader;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.treewalk.AbstractTreeIterator;
+-import org.eclipse.jgit.treewalk.CanonicalTreeParser;
+-import org.eclipse.jgit.treewalk.EmptyTreeIterator;
+-import org.eclipse.jgit.treewalk.FileTreeIterator;
+-import org.eclipse.jgit.treewalk.NameConflictTreeWalk;
+-import org.eclipse.jgit.treewalk.TreeWalk;
+-import org.eclipse.jgit.treewalk.WorkingTreeIterator;
+-import org.eclipse.jgit.treewalk.WorkingTreeOptions;
++import org.eclipse.jgit.lib.*;
++import org.eclipse.jgit.treewalk.*;
+ import org.eclipse.jgit.treewalk.filter.PathFilter;
+ import org.eclipse.jgit.util.FS;
+ import org.eclipse.jgit.util.FileUtils;
+@@ -81,6 +55,16 @@
+ import org.eclipse.jgit.util.SystemReader;
+ import org.eclipse.jgit.util.io.AutoCRLFOutputStream;
+ 
++import java.io.File;
++import java.io.FileOutputStream;
++import java.io.IOException;
++import java.io.OutputStream;
++import java.text.MessageFormat;
++import java.util.ArrayList;
++import java.util.HashMap;
++import java.util.List;
++import java.util.Map;
++
+ /**
+  * This class handles checking out one or two trees merging with the index.
+  */
+@@ -403,58 +387,61 @@
+ 			MissingObjectException, IncorrectObjectTypeException,
+ 			CheckoutConflictException, IndexWriteException {
+ 		toBeDeleted.clear();
+-		try (ObjectReader objectReader = repo.getObjectDatabase().newReader()) {
++    ObjectReader objectReader = repo.getObjectDatabase().newReader();
++    try {
+-			if (headCommitTree != null)
+-				preScanTwoTrees();
+-			else
+-				prescanOneTree();
++      if (headCommitTree != null)
++        preScanTwoTrees();
++      else
++        prescanOneTree();
+ 
+-			if (!conflicts.isEmpty()) {
+-				if (failOnConflict)
+-					throw new CheckoutConflictException(conflicts.toArray(new String[conflicts.size()]));
+-				else
+-					cleanUpConflicts();
+-			}
++      if (!conflicts.isEmpty()) {
++        if (failOnConflict)
++          throw new CheckoutConflictException(conflicts.toArray(new String[conflicts.size()]));
++        else
++          cleanUpConflicts();
++      }
+ 
+-			// update our index
+-			builder.finish();
++      // update our index
++      builder.finish();
+ 
+-			File file = null;
+-			String last = null;
+-			// when deleting files process them in the opposite order as they have
+-			// been reported. This ensures the files are deleted before we delete
+-			// their parent folders
+-			for (int i = removed.size() - 1; i >= 0; i--) {
+-				String r = removed.get(i);
+-				file = new File(repo.getWorkTree(), r);
+-				if (!file.delete() && repo.getFS().exists(file)) {
+-					// The list of stuff to delete comes from the index
+-					// which will only contain a directory if it is
+-					// a submodule, in which case we shall not attempt
+-					// to delete it. A submodule is not empty, so it
+-					// is safe to check this after a failed delete.
+-					if (!repo.getFS().isDirectory(file))
+-						toBeDeleted.add(r);
+-				} else {
+-					if (last != null && !isSamePrefix(r, last))
+-						removeEmptyParents(new File(repo.getWorkTree(), last));
+-					last = r;
+-				}
+-			}
+-			if (file != null)
+-				removeEmptyParents(file);
++      File file = null;
++      String last = null;
++      // when deleting files process them in the opposite order as they have
++      // been reported. This ensures the files are deleted before we delete
++      // their parent folders
++      for (int i = removed.size() - 1; i >= 0; i--) {
++        String r = removed.get(i);
++        file = new File(repo.getWorkTree(), r);
++        if (!file.delete() && repo.getFS().exists(file)) {
++          // The list of stuff to delete comes from the index
++          // which will only contain a directory if it is
++          // a submodule, in which case we shall not attempt
++          // to delete it. A submodule is not empty, so it
++          // is safe to check this after a failed delete.
++          if (!repo.getFS().isDirectory(file))
++            toBeDeleted.add(r);
++        } else {
++          if (last != null && !isSamePrefix(r, last))
++            removeEmptyParents(new File(repo.getWorkTree(), last));
++          last = r;
++        }
++      }
++      if (file != null)
++        removeEmptyParents(file);
+ 
+-			for (String path : updated.keySet()) {
+-				DirCacheEntry entry = dc.getEntry(path);
+-				if (!FileMode.GITLINK.equals(entry.getRawMode()))
+-					checkoutEntry(repo, entry, objectReader);
+-			}
++      for (String path : updated.keySet()) {
++        DirCacheEntry entry = dc.getEntry(path);
++        if (!FileMode.GITLINK.equals(entry.getRawMode()))
++          checkoutEntry(repo, entry, objectReader);
++      }
+ 
+-			// commit the index builder - a new index is persisted
+-			if (!builder.commit())
+-				throw new IndexWriteException();
++      // commit the index builder - a new index is persisted
++      if (!builder.commit())
++        throw new IndexWriteException();
++    } finally {
++      objectReader.close();
+-		}
+-		return toBeDeleted.size() == 0;
++    }
++    return toBeDeleted.size() == 0;
+ 	}
+ 
+ 	private static boolean isSamePrefix(String a, String b) {
+@@ -1053,26 +1040,29 @@
+ 	 */
+ 	private boolean isModifiedSubtree_IndexWorkingtree(String path)
+ 			throws CorruptObjectException, IOException {
+-		try (NameConflictTreeWalk tw = new NameConflictTreeWalk(repo)) {
++    NameConflictTreeWalk tw = new NameConflictTreeWalk(repo);
++    try {
+-			tw.addTree(new DirCacheIterator(dc));
+-			tw.addTree(new FileTreeIterator(repo));
+-			tw.setRecursive(true);
+-			tw.setFilter(PathFilter.create(path));
+-			DirCacheIterator dcIt;
+-			WorkingTreeIterator wtIt;
+-			while (tw.next()) {
+-				dcIt = tw.getTree(0, DirCacheIterator.class);
+-				wtIt = tw.getTree(1, WorkingTreeIterator.class);
+-				if (dcIt == null || wtIt == null)
+-					return true;
+-				if (wtIt.isModified(dcIt.getDirCacheEntry(), true,
+-						this.walk.getObjectReader())) {
+-					return true;
+-				}
+-			}
+-			return false;
++      tw.addTree(new DirCacheIterator(dc));
++      tw.addTree(new FileTreeIterator(repo));
++      tw.setRecursive(true);
++      tw.setFilter(PathFilter.create(path));
++      DirCacheIterator dcIt;
++      WorkingTreeIterator wtIt;
++      while (tw.next()) {
++        dcIt = tw.getTree(0, DirCacheIterator.class);
++        wtIt = tw.getTree(1, WorkingTreeIterator.class);
++        if (dcIt == null || wtIt == null)
++          return true;
++        if (wtIt.isModified(dcIt.getDirCacheEntry(), true,
++          this.walk.getObjectReader())) {
++          return true;
++        }
++      }
++      return false;
++    } finally {
++      tw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private boolean isModified_IndexTree(String path, ObjectId iId,
+ 			FileMode iMode, ObjectId tId, FileMode tMode, ObjectId rootTree)
+@@ -1099,26 +1089,29 @@
+ 	 */
+ 	private boolean isModifiedSubtree_IndexTree(String path, ObjectId tree)
+ 			throws CorruptObjectException, IOException {
+-		try (NameConflictTreeWalk tw = new NameConflictTreeWalk(repo)) {
++    NameConflictTreeWalk tw = new NameConflictTreeWalk(repo);
++    try {
+-			tw.addTree(new DirCacheIterator(dc));
+-			tw.addTree(tree);
+-			tw.setRecursive(true);
+-			tw.setFilter(PathFilter.create(path));
+-			while (tw.next()) {
+-				AbstractTreeIterator dcIt = tw.getTree(0,
+-						DirCacheIterator.class);
+-				AbstractTreeIterator treeIt = tw.getTree(1,
+-						AbstractTreeIterator.class);
+-				if (dcIt == null || treeIt == null)
+-					return true;
+-				if (dcIt.getEntryRawMode() != treeIt.getEntryRawMode())
+-					return true;
+-				if (!dcIt.getEntryObjectId().equals(treeIt.getEntryObjectId()))
+-					return true;
+-			}
+-			return false;
++      tw.addTree(new DirCacheIterator(dc));
++      tw.addTree(tree);
++      tw.setRecursive(true);
++      tw.setFilter(PathFilter.create(path));
++      while (tw.next()) {
++        AbstractTreeIterator dcIt = tw.getTree(0,
++          DirCacheIterator.class);
++        AbstractTreeIterator treeIt = tw.getTree(1,
++          AbstractTreeIterator.class);
++        if (dcIt == null || treeIt == null)
++          return true;
++        if (dcIt.getEntryRawMode() != treeIt.getEntryRawMode())
++          return true;
++        if (!dcIt.getEntryObjectId().equals(treeIt.getEntryObjectId()))
++          return true;
++      }
++      return false;
++    } finally {
++      tw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Updates the file in the working tree with content and mode from an entry
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/InMemoryRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/InMemoryRepository.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/InMemoryRepository.java	(revision )
+@@ -1,19 +1,5 @@
+ package org.eclipse.jgit.internal.storage.dfs;
+ 
+-import java.io.ByteArrayOutputStream;
+-import java.io.FileNotFoundException;
+-import java.io.IOException;
+-import java.nio.ByteBuffer;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.HashMap;
+-import java.util.List;
+-import java.util.Map;
+-import java.util.Objects;
+-import java.util.concurrent.ConcurrentHashMap;
+-import java.util.concurrent.ConcurrentMap;
+-import java.util.concurrent.atomic.AtomicInteger;
+-
+ import org.eclipse.jgit.internal.storage.pack.PackExt;
+ import org.eclipse.jgit.lib.ObjectId;
+ import org.eclipse.jgit.lib.ObjectIdRef;
+@@ -23,6 +9,15 @@
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.util.RefList;
+ 
++import java.io.ByteArrayOutputStream;
++import java.io.FileNotFoundException;
++import java.io.IOException;
++import java.nio.ByteBuffer;
++import java.util.*;
++import java.util.concurrent.ConcurrentHashMap;
++import java.util.concurrent.ConcurrentMap;
++import java.util.concurrent.atomic.AtomicInteger;
++
+ /**
+  * Git repository stored entirely in the local process memory.
+  * <p>
+@@ -259,12 +254,15 @@
+ 				throws IOException {
+ 			ObjectId id = newRef.getObjectId();
+ 			if (id != null) {
+-				try (RevWalk rw = new RevWalk(getRepository())) {
++        RevWalk rw = new RevWalk(getRepository());
++        try {
+-					// Validate that the target exists in a new RevWalk, as the RevWalk
+-					// from the RefUpdate might be reading back unflushed objects.
+-					rw.parseAny(id);
++          // Validate that the target exists in a new RevWalk, as the RevWalk
++          // from the RefUpdate might be reading back unflushed objects.
++          rw.parseAny(id);
++        } finally {
++          rw.close();
+-				}
+-			}
++        }
++      }
+ 			String name = newRef.getName();
+ 			if (oldRef == null)
+ 				return refs.putIfAbsent(name, newRef) == null;
+Index: org.eclipse.jgit/src/org/eclipse/jgit/lib/Repository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/lib/Repository.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/lib/Repository.java	(revision )
+@@ -47,50 +47,26 @@
+ 
+ package org.eclipse.jgit.lib;
+ 
+-import java.io.BufferedOutputStream;
+-import java.io.File;
+-import java.io.FileNotFoundException;
+-import java.io.FileOutputStream;
+-import java.io.IOException;
+-import java.net.URISyntaxException;
+-import java.text.MessageFormat;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.HashMap;
+-import java.util.HashSet;
+-import java.util.LinkedList;
+-import java.util.List;
+-import java.util.Map;
+-import java.util.Set;
+-import java.util.concurrent.atomic.AtomicInteger;
+-
+ import org.eclipse.jgit.dircache.DirCache;
+-import org.eclipse.jgit.errors.AmbiguousObjectException;
+-import org.eclipse.jgit.errors.CorruptObjectException;
+-import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+-import org.eclipse.jgit.errors.MissingObjectException;
+-import org.eclipse.jgit.errors.NoWorkTreeException;
+-import org.eclipse.jgit.errors.RevisionSyntaxException;
++import org.eclipse.jgit.errors.*;
+ import org.eclipse.jgit.events.IndexChangedEvent;
+ import org.eclipse.jgit.events.IndexChangedListener;
+ import org.eclipse.jgit.events.ListenerList;
+ import org.eclipse.jgit.events.RepositoryEvent;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.revwalk.RevBlob;
+-import org.eclipse.jgit.revwalk.RevCommit;
+-import org.eclipse.jgit.revwalk.RevObject;
+-import org.eclipse.jgit.revwalk.RevTree;
+-import org.eclipse.jgit.revwalk.RevWalk;
++import org.eclipse.jgit.revwalk.*;
+ import org.eclipse.jgit.transport.RefSpec;
+ import org.eclipse.jgit.transport.RemoteConfig;
+ import org.eclipse.jgit.treewalk.TreeWalk;
+-import org.eclipse.jgit.util.FS;
+-import org.eclipse.jgit.util.FileUtils;
+-import org.eclipse.jgit.util.IO;
+-import org.eclipse.jgit.util.RawParseUtils;
+-import org.eclipse.jgit.util.SystemReader;
++import org.eclipse.jgit.util.*;
+ import org.eclipse.jgit.util.io.SafeBufferedOutputStream;
+ 
++import java.io.*;
++import java.net.URISyntaxException;
++import java.text.MessageFormat;
++import java.util.*;
++import java.util.concurrent.atomic.AtomicInteger;
++
+ /**
+  * Represents a Git repository.
+  * <p>
+@@ -99,7 +75,7 @@
+  * <p>
+  * This class is thread-safe.
+  */
+-public abstract class Repository implements AutoCloseable {
++public abstract class Repository implements Closeable {
+ 	private static final ListenerList globalListeners = new ListenerList();
+ 
+ 	/** @return the global listener list observing all events in this JVM. */
+@@ -379,16 +355,19 @@
+ 	public ObjectId resolve(final String revstr)
+ 			throws AmbiguousObjectException, IncorrectObjectTypeException,
+ 			RevisionSyntaxException, IOException {
+-		try (RevWalk rw = new RevWalk(this)) {
++    RevWalk rw = new RevWalk(this);
++    try {
+-			Object resolved = resolve(rw, revstr);
+-			if (resolved instanceof String) {
++      Object resolved = resolve(rw, revstr);
++      if (resolved instanceof String) {
+-				final Ref ref = getRef((String)resolved);
++        final Ref ref = getRef((String) resolved);
+-				return ref != null ? ref.getLeaf().getObjectId() : null;
+-			} else {
+-				return (ObjectId) resolved;
+-			}
++        return ref != null ? ref.getLeaf().getObjectId() : null;
++      } else {
++        return (ObjectId) resolved;
++      }
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/**
+ 	 * Simplify an expression, but unlike {@link #resolve(String)} it will not
+@@ -403,16 +382,19 @@
+ 	 */
+ 	public String simplify(final String revstr)
+ 			throws AmbiguousObjectException, IOException {
+-		try (RevWalk rw = new RevWalk(this)) {
++    RevWalk rw = new RevWalk(this);
++    try {
+-			Object resolved = resolve(rw, revstr);
+-			if (resolved != null)
+-				if (resolved instanceof String)
+-					return (String) resolved;
+-				else
+-					return ((AnyObjectId) resolved).getName();
+-			return null;
++      Object resolved = resolve(rw, revstr);
++      if (resolved != null)
++        if (resolved instanceof String)
++          return (String) resolved;
++        else
++          return ((AnyObjectId) resolved).getName();
++      return null;
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private Object resolve(final RevWalk rw, final String revstr)
+ 			throws IOException {
+@@ -793,16 +775,19 @@
+ 	private ObjectId resolveAbbreviation(final String revstr) throws IOException,
+ 			AmbiguousObjectException {
+ 		AbbreviatedObjectId id = AbbreviatedObjectId.fromString(revstr);
+-		try (ObjectReader reader = newObjectReader()) {
++    ObjectReader reader = newObjectReader();
++    try {
+-			Collection<ObjectId> matches = reader.resolve(id);
+-			if (matches.size() == 0)
+-				return null;
+-			else if (matches.size() == 1)
+-				return matches.iterator().next();
+-			else
+-				throw new AmbiguousObjectException(id, matches);
++      Collection<ObjectId> matches = reader.resolve(id);
++      if (matches.size() == 0)
++        return null;
++      else if (matches.size() == 1)
++        return matches.iterator().next();
++      else
++        throw new AmbiguousObjectException(id, matches);
++    } finally {
++      reader.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	/** Increment the use counter by one, requiring a matched {@link #close()}. */
+ 	public void incrementOpen() {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/transport/FetchProcess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/transport/FetchProcess.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/transport/FetchProcess.java	(revision )
+@@ -44,42 +44,27 @@
+ 
+ package org.eclipse.jgit.transport;
+ 
+-import static org.eclipse.jgit.transport.ReceiveCommand.Result.NOT_ATTEMPTED;
+-import static org.eclipse.jgit.transport.ReceiveCommand.Result.OK;
+-import static org.eclipse.jgit.transport.ReceiveCommand.Result.REJECTED_NONFASTFORWARD;
+-import static org.eclipse.jgit.transport.ReceiveCommand.Type.UPDATE_NONFASTFORWARD;
+-
+-import java.io.File;
+-import java.io.IOException;
+-import java.io.OutputStreamWriter;
+-import java.io.Writer;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.Collections;
+-import java.util.HashMap;
+-import java.util.HashSet;
+-import java.util.Iterator;
+-import java.util.Map;
+-import java.util.Set;
+-import java.util.concurrent.TimeUnit;
+-
+ import org.eclipse.jgit.errors.MissingObjectException;
+ import org.eclipse.jgit.errors.NotSupportedException;
+ import org.eclipse.jgit.errors.TransportException;
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.internal.storage.file.LockFile;
+ import org.eclipse.jgit.internal.storage.file.PackLock;
+-import org.eclipse.jgit.lib.BatchRefUpdate;
+-import org.eclipse.jgit.lib.BatchingProgressMonitor;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefDatabase;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.revwalk.ObjectWalk;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.File;
++import java.io.IOException;
++import java.io.OutputStreamWriter;
++import java.io.Writer;
++import java.text.MessageFormat;
++import java.util.*;
++import java.util.concurrent.TimeUnit;
++
++import static org.eclipse.jgit.transport.ReceiveCommand.Result.*;
++import static org.eclipse.jgit.transport.ReceiveCommand.Type.UPDATE_NONFASTFORWARD;
++
+ class FetchProcess {
+ 	/** Transport we will fetch over. */
+ 	private final Transport transport;
+@@ -197,32 +182,37 @@
+ 				.newBatchUpdate()
+ 				.setAllowNonFastForwards(true)
+ 				.setRefLogMessage("fetch", true); //$NON-NLS-1$
+-		try (final RevWalk walk = new RevWalk(transport.local)) {
++		try {
++      final RevWalk walk = new RevWalk(transport.local);
++      try {
+-			if (monitor instanceof BatchingProgressMonitor) {
+-				((BatchingProgressMonitor) monitor).setDelayStart(
+-						250, TimeUnit.MILLISECONDS);
+-			}
+-			if (transport.isRemoveDeletedRefs())
+-				deleteStaleTrackingRefs(result, batch);
+-			for (TrackingRefUpdate u : localUpdates) {
+-				result.add(u);
+-				batch.addCommand(u.asReceiveCommand());
+-			}
+-			for (ReceiveCommand cmd : batch.getCommands()) {
+-				cmd.updateType(walk);
+-				if (cmd.getType() == UPDATE_NONFASTFORWARD
+-						&& cmd instanceof TrackingRefUpdate.Command
+-						&& !((TrackingRefUpdate.Command) cmd).canForceUpdate())
+-					cmd.setResult(REJECTED_NONFASTFORWARD);
+-			}
+-			if (transport.isDryRun()) {
+-				for (ReceiveCommand cmd : batch.getCommands()) {
+-					if (cmd.getResult() == NOT_ATTEMPTED)
+-						cmd.setResult(OK);
+-				}
+-			} else
+-				batch.execute(walk, monitor);
++        if (monitor instanceof BatchingProgressMonitor) {
++          ((BatchingProgressMonitor) monitor).setDelayStart(
++            250, TimeUnit.MILLISECONDS);
++        }
++        if (transport.isRemoveDeletedRefs())
++          deleteStaleTrackingRefs(result, batch);
++        for (TrackingRefUpdate u : localUpdates) {
++          result.add(u);
++          batch.addCommand(u.asReceiveCommand());
++        }
++        for (ReceiveCommand cmd : batch.getCommands()) {
++          cmd.updateType(walk);
++          if (cmd.getType() == UPDATE_NONFASTFORWARD
++            && cmd instanceof TrackingRefUpdate.Command
++            && !((TrackingRefUpdate.Command) cmd).canForceUpdate())
++            cmd.setResult(REJECTED_NONFASTFORWARD);
++        }
++        if (transport.isDryRun()) {
++          for (ReceiveCommand cmd : batch.getCommands()) {
++            if (cmd.getResult() == NOT_ATTEMPTED)
++              cmd.setResult(OK);
++          }
++        } else
++          batch.execute(walk, monitor);
++      } finally {
++        walk.close();
++      }
+-		} catch (IOException err) {
++    } catch (IOException err) {
+ 			throw new TransportException(MessageFormat.format(
+ 					JGitText.get().failureUpdatingTrackingRef,
+ 					getFirstFailedRefName(batch), err.getMessage()), err);
+@@ -336,14 +326,17 @@
+ 
+ 	private boolean askForIsComplete() throws TransportException {
+ 		try {
+-			try (final ObjectWalk ow = new ObjectWalk(transport.local)) {
++      final ObjectWalk ow = new ObjectWalk(transport.local);
++      try {
+-				for (final ObjectId want : askFor.keySet())
+-					ow.markStart(ow.parseAny(want));
+-				for (final Ref ref : localRefs().values())
+-					ow.markUninteresting(ow.parseAny(ref.getObjectId()));
+-				ow.checkConnectivity();
++        for (final ObjectId want : askFor.keySet())
++          ow.markStart(ow.parseAny(want));
++        for (final Ref ref : localRefs().values())
++          ow.markUninteresting(ow.parseAny(ref.getObjectId()));
++        ow.checkConnectivity();
++      } finally {
++        ow.close();
+-			}
+-			return true;
++      }
++      return true;
+ 		} catch (MissingObjectException e) {
+ 			return false;
+ 		} catch (IOException e) {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/merge/RecursiveMerger.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/merge/RecursiveMerger.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/merge/RecursiveMerger.java	(revision )
+@@ -49,13 +49,6 @@
+  */
+ package org.eclipse.jgit.merge;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.Date;
+-import java.util.List;
+-import java.util.TimeZone;
+-
+ import org.eclipse.jgit.dircache.DirCache;
+ import org.eclipse.jgit.dircache.DirCacheBuilder;
+ import org.eclipse.jgit.dircache.DirCacheEntry;
+@@ -73,6 +66,13 @@
+ import org.eclipse.jgit.treewalk.TreeWalk;
+ import org.eclipse.jgit.treewalk.WorkingTreeIterator;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.ArrayList;
++import java.util.Date;
++import java.util.List;
++import java.util.TimeZone;
++
+ /**
+  * A three-way merger performing a content-merge if necessary across multiple
+  * bases using recursion
+@@ -269,17 +269,20 @@
+ 	private DirCache dircacheFromTree(ObjectId treeId) throws IOException {
+ 		DirCache ret = DirCache.newInCore();
+ 		DirCacheBuilder aBuilder = ret.builder();
+-		try (TreeWalk atw = new TreeWalk(reader)) {
++    TreeWalk atw = new TreeWalk(reader);
++    try {
+-			atw.addTree(treeId);
+-			atw.setRecursive(true);
+-			while (atw.next()) {
+-				DirCacheEntry e = new DirCacheEntry(atw.getRawPath());
+-				e.setFileMode(atw.getFileMode(0));
+-				e.setObjectId(atw.getObjectId(0));
+-				aBuilder.add(e);
+-			}
++      atw.addTree(treeId);
++      atw.setRecursive(true);
++      while (atw.next()) {
++        DirCacheEntry e = new DirCacheEntry(atw.getRawPath());
++        e.setFileMode(atw.getFileMode(0));
++        e.setObjectId(atw.getObjectId(0));
++        aBuilder.add(e);
++      }
++    } finally {
++      atw.close();
+-		}
+-		aBuilder.finish();
++    }
++    aBuilder.finish();
+ 		return ret;
+ 	}
+ }
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsPackFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsPackFile.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsPackFile.java	(revision )
+@@ -493,37 +493,40 @@
+ 
+ 	private long copyPackBypassCache(PackOutputStream out, DfsReader ctx)
+ 			throws IOException {
+-		try (ReadableChannel rc = ctx.db.openFile(packDesc, PACK)) {
++    ReadableChannel rc = ctx.db.openFile(packDesc, PACK);
++    try {
+-			ByteBuffer buf = newCopyBuffer(out, rc);
+-			if (ctx.getOptions().getStreamPackBufferSize() > 0)
+-				rc.setReadAheadBytes(ctx.getOptions().getStreamPackBufferSize());
+-			long position = 12;
+-			long remaining = length - (12 + 20);
+-			while (0 < remaining) {
+-				DfsBlock b = cache.get(key, alignToBlock(position));
+-				if (b != null) {
+-					int ptr = (int) (position - b.start);
+-					int n = (int) Math.min(b.size() - ptr, remaining);
+-					b.write(out, position, n);
+-					position += n;
+-					remaining -= n;
+-					rc.position(position);
+-					continue;
+-				}
++      ByteBuffer buf = newCopyBuffer(out, rc);
++      if (ctx.getOptions().getStreamPackBufferSize() > 0)
++        rc.setReadAheadBytes(ctx.getOptions().getStreamPackBufferSize());
++      long position = 12;
++      long remaining = length - (12 + 20);
++      while (0 < remaining) {
++        DfsBlock b = cache.get(key, alignToBlock(position));
++        if (b != null) {
++          int ptr = (int) (position - b.start);
++          int n = (int) Math.min(b.size() - ptr, remaining);
++          b.write(out, position, n);
++          position += n;
++          remaining -= n;
++          rc.position(position);
++          continue;
++        }
+ 
+-				buf.position(0);
+-				int n = read(rc, buf);
+-				if (n <= 0)
+-					throw packfileIsTruncated();
+-				else if (n > remaining)
+-					n = (int) remaining;
+-				out.write(buf.array(), 0, n);
+-				position += n;
+-				remaining -= n;
+-			}
+-			return position;
++        buf.position(0);
++        int n = read(rc, buf);
++        if (n <= 0)
++          throw packfileIsTruncated();
++        else if (n > remaining)
++          n = (int) remaining;
++        out.write(buf.array(), 0, n);
++        position += n;
++        remaining -= n;
++      }
++      return position;
++    } finally {
++      rc.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private ByteBuffer newCopyBuffer(PackOutputStream out, ReadableChannel rc) {
+ 		int bs = blockSize(rc);
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsGarbageCollector.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsGarbageCollector.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsGarbageCollector.java	(revision )
+@@ -43,37 +43,24 @@
+ 
+ package org.eclipse.jgit.internal.storage.dfs;
+ 
+-import static org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource.GC;
+-import static org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource.UNREACHABLE_GARBAGE;
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.BITMAP_INDEX;
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.INDEX;
+-import static org.eclipse.jgit.internal.storage.pack.PackExt.PACK;
+-import static org.eclipse.jgit.lib.RefDatabase.ALL;
+-
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.HashSet;
+-import java.util.List;
+-import java.util.Map;
+-import java.util.Set;
+-
+ import org.eclipse.jgit.internal.JGitText;
+ import org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource;
+ import org.eclipse.jgit.internal.storage.file.PackIndex;
+ import org.eclipse.jgit.internal.storage.pack.PackExt;
+ import org.eclipse.jgit.internal.storage.pack.PackWriter;
+-import org.eclipse.jgit.lib.AnyObjectId;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.NullProgressMonitor;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectIdOwnerMap;
+-import org.eclipse.jgit.lib.ProgressMonitor;
+-import org.eclipse.jgit.lib.Ref;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.storage.pack.PackConfig;
+ import org.eclipse.jgit.util.io.CountingOutputStream;
+ 
++import java.io.IOException;
++import java.util.*;
++
++import static org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource.GC;
++import static org.eclipse.jgit.internal.storage.dfs.DfsObjDatabase.PackSource.UNREACHABLE_GARBAGE;
++import static org.eclipse.jgit.internal.storage.pack.PackExt.*;
++import static org.eclipse.jgit.lib.RefDatabase.ALL;
++
+ /** Repack and garbage collect a repository. */
+ public class DfsGarbageCollector {
+ 	private final DfsRepository repo;
+@@ -274,26 +261,32 @@
+ 		if (allHeads.isEmpty())
+ 			return;
+ 
+-		try (PackWriter pw = newPackWriter()) {
++    PackWriter pw = newPackWriter();
++    try {
+-			pw.setTagTargets(tagTargets);
++      pw.setTagTargets(tagTargets);
+-			pw.preparePack(pm, allHeads, Collections.<ObjectId> emptySet());
++      pw.preparePack(pm, allHeads, Collections.<ObjectId>emptySet());
+-			if (0 < pw.getObjectCount())
+-				writePack(GC, pw, pm);
++      if (0 < pw.getObjectCount())
++        writePack(GC, pw, pm);
++    } finally {
++      pw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private void packRest(ProgressMonitor pm) throws IOException {
+ 		if (nonHeads.isEmpty())
+ 			return;
+ 
+-		try (PackWriter pw = newPackWriter()) {
++    PackWriter pw = newPackWriter();
++    try {
+-			for (PackWriter.ObjectIdSet packedObjs : newPackObj)
+-				pw.excludeObjects(packedObjs);
+-			pw.preparePack(pm, nonHeads, allHeads);
+-			if (0 < pw.getObjectCount())
+-				writePack(GC, pw, pm);
++      for (PackWriter.ObjectIdSet packedObjs : newPackObj)
++        pw.excludeObjects(packedObjs);
++      pw.preparePack(pm, nonHeads, allHeads);
++      if (0 < pw.getObjectCount())
++        writePack(GC, pw, pm);
++    } finally {
++      pw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private void packGarbage(ProgressMonitor pm) throws IOException {
+ 		// TODO(sop) This is ugly. The garbage pack needs to be deleted.
+@@ -303,28 +296,35 @@
+ 		cfg.setDeltaCompress(false);
+ 		cfg.setBuildBitmaps(false);
+ 
+-		try (PackWriter pw = new PackWriter(cfg, ctx);
+-				RevWalk pool = new RevWalk(ctx)) {
++    PackWriter pw = new PackWriter(cfg, ctx);
++    try {
++      RevWalk pool = new RevWalk(ctx);
++      try {
+-			pw.setDeltaBaseAsOffset(true);
+-			pw.setReuseDeltaCommits(true);
+-			pm.beginTask(JGitText.get().findingGarbage, objectsBefore());
+-			for (DfsPackFile oldPack : packsBefore) {
+-				PackIndex oldIdx = oldPack.getPackIndex(ctx);
+-				for (PackIndex.MutableEntry ent : oldIdx) {
+-					pm.update(1);
+-					ObjectId id = ent.toObjectId();
+-					if (pool.lookupOrNull(id) != null || anyPackHas(id))
+-						continue;
++        pw.setDeltaBaseAsOffset(true);
++        pw.setReuseDeltaCommits(true);
++        pm.beginTask(JGitText.get().findingGarbage, objectsBefore());
++        for (DfsPackFile oldPack : packsBefore) {
++          PackIndex oldIdx = oldPack.getPackIndex(ctx);
++          for (PackIndex.MutableEntry ent : oldIdx) {
++            pm.update(1);
++            ObjectId id = ent.toObjectId();
++            if (pool.lookupOrNull(id) != null || anyPackHas(id))
++              continue;
+ 
+-					int type = oldPack.getObjectType(ctx, ent.getOffset());
+-					pw.addObject(pool.lookupAny(id, type));
+-				}
+-			}
+-			pm.endTask();
+-			if (0 < pw.getObjectCount())
+-				writePack(UNREACHABLE_GARBAGE, pw, pm);
++            int type = oldPack.getObjectType(ctx, ent.getOffset());
++            pw.addObject(pool.lookupAny(id, type));
++          }
++        }
++        pm.endTask();
++        if (0 < pw.getObjectCount())
++          writePack(UNREACHABLE_GARBAGE, pw, pm);
++      } finally {
++        pool.close();
++      }
++    } finally {
++      pw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private boolean anyPackHas(AnyObjectId id) {
+ 		for (PackWriter.ObjectIdSet packedObjs : newPackObj)
+Index: org.eclipse.jgit/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/pom.xml	(date 1436541050000)
++++ org.eclipse.jgit/pom.xml	(revision )
+@@ -109,6 +109,41 @@
+ 
+     <plugins>
+       <plugin>
++        <artifactId>maven-compiler-plugin</artifactId>
++        <version>3.2</version>
++        <configuration>
++          <encoding>UTF-8</encoding>
++          <source>1.6</source>
++          <target>1.6</target>
++        </configuration>
++      </plugin>
++
++      <plugin>
++        <groupId>org.codehaus.mojo</groupId>
++        <artifactId>animal-sniffer-maven-plugin</artifactId>
++        <version>1.13</version>
++        <configuration>
++          <signature>
++            <groupId>org.codehaus.mojo.signature</groupId>
++            <artifactId>java16</artifactId>
++            <version>1.0</version>
++          </signature>
++          <ignores>
++            <ignore>org.eclipse.jgit.transport.AmazonS3</ignore>
++          </ignores>
++        </configuration>
++        <executions>
++          <execution>
++            <id>ensure-java-1.6-class-library</id>
++            <phase>verify</phase>
++            <goals>
++              <goal>check</goal>
++            </goals>
++          </execution>
++        </executions>
++      </plugin>
++
++      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-antrun-plugin</artifactId>
+         <executions>
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/DeleteBranchCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/DeleteBranchCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/DeleteBranchCommand.java	(revision )
+@@ -43,28 +43,23 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.ArrayList;
+-import java.util.HashSet;
+-import java.util.List;
+-import java.util.Set;
+-
+ import org.eclipse.jgit.api.errors.CannotDeleteCurrentBranchException;
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+ import org.eclipse.jgit.api.errors.NotMergedException;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.ConfigConstants;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefUpdate;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.lib.StoredConfig;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.ArrayList;
++import java.util.HashSet;
++import java.util.List;
++import java.util.Set;
++
+ /**
+  * Used to delete one or several branches.
+  *
+@@ -108,24 +103,27 @@
+ 			if (!force) {
+ 				// check if the branches to be deleted
+ 				// are all merged into the current branch
+-				try (RevWalk walk = new RevWalk(repo)) {
++        RevWalk walk = new RevWalk(repo);
++        try {
+-					RevCommit tip = walk
+-							.parseCommit(repo.resolve(Constants.HEAD));
+-					for (String branchName : branchNames) {
+-						if (branchName == null)
+-							continue;
+-						Ref currentRef = repo.getRef(branchName);
+-						if (currentRef == null)
+-							continue;
++          RevCommit tip = walk
++            .parseCommit(repo.resolve(Constants.HEAD));
++          for (String branchName : branchNames) {
++            if (branchName == null)
++              continue;
++            Ref currentRef = repo.getRef(branchName);
++            if (currentRef == null)
++              continue;
+ 
+-						RevCommit base = walk
+-								.parseCommit(repo.resolve(branchName));
+-						if (!walk.isMergedInto(base, tip)) {
+-							throw new NotMergedException();
+-						}
+-					}
++            RevCommit base = walk
++              .parseCommit(repo.resolve(branchName));
++            if (!walk.isMergedInto(base, tip)) {
++              throw new NotMergedException();
++            }
++          }
++        } finally {
++          walk.close();
+-				}
+-			}
++        }
++      }
+ 			setCallable(false);
+ 			for (String branchName : branchNames) {
+ 				if (branchName == null)
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/RefDirectory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/RefDirectory.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/file/RefDirectory.java	(revision )
+@@ -46,23 +46,19 @@
+ 
+ package org.eclipse.jgit.internal.storage.file;
+ 
+-import static org.eclipse.jgit.lib.Constants.CHARSET;
+-import static org.eclipse.jgit.lib.Constants.HEAD;
+-import static org.eclipse.jgit.lib.Constants.OBJECT_ID_STRING_LENGTH;
+-import static org.eclipse.jgit.lib.Constants.PACKED_REFS;
+-import static org.eclipse.jgit.lib.Constants.R_HEADS;
+-import static org.eclipse.jgit.lib.Constants.R_REFS;
+-import static org.eclipse.jgit.lib.Constants.R_TAGS;
+-import static org.eclipse.jgit.lib.Ref.Storage.LOOSE;
+-import static org.eclipse.jgit.lib.Ref.Storage.NEW;
+-import static org.eclipse.jgit.lib.Ref.Storage.PACKED;
++import org.eclipse.jgit.errors.InvalidObjectIdException;
++import org.eclipse.jgit.errors.LockFailedException;
++import org.eclipse.jgit.errors.MissingObjectException;
++import org.eclipse.jgit.errors.ObjectWritingException;
++import org.eclipse.jgit.events.RefsChangedEvent;
++import org.eclipse.jgit.internal.JGitText;
++import org.eclipse.jgit.lib.*;
++import org.eclipse.jgit.revwalk.RevObject;
++import org.eclipse.jgit.revwalk.RevTag;
++import org.eclipse.jgit.revwalk.RevWalk;
++import org.eclipse.jgit.util.*;
+ 
+-import java.io.BufferedReader;
+-import java.io.File;
+-import java.io.FileInputStream;
+-import java.io.FileNotFoundException;
+-import java.io.IOException;
+-import java.io.InputStreamReader;
++import java.io.*;
+ import java.security.DigestInputStream;
+ import java.security.MessageDigest;
+ import java.text.MessageFormat;
+@@ -73,31 +69,8 @@
+ import java.util.concurrent.atomic.AtomicInteger;
+ import java.util.concurrent.atomic.AtomicReference;
+ 
+-import org.eclipse.jgit.errors.InvalidObjectIdException;
+-import org.eclipse.jgit.errors.LockFailedException;
+-import org.eclipse.jgit.errors.MissingObjectException;
+-import org.eclipse.jgit.errors.ObjectWritingException;
+-import org.eclipse.jgit.events.RefsChangedEvent;
+-import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectIdRef;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefComparator;
+-import org.eclipse.jgit.lib.RefDatabase;
+-import org.eclipse.jgit.lib.RefUpdate;
+-import org.eclipse.jgit.lib.RefWriter;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.lib.SymbolicRef;
+-import org.eclipse.jgit.revwalk.RevObject;
+-import org.eclipse.jgit.revwalk.RevTag;
+-import org.eclipse.jgit.revwalk.RevWalk;
+-import org.eclipse.jgit.util.FS;
+-import org.eclipse.jgit.util.FileUtils;
+-import org.eclipse.jgit.util.IO;
+-import org.eclipse.jgit.util.RawParseUtils;
+-import org.eclipse.jgit.util.RefList;
+-import org.eclipse.jgit.util.RefMap;
++import static org.eclipse.jgit.lib.Constants.*;
++import static org.eclipse.jgit.lib.Ref.Storage.*;
+ 
+ /**
+  * Traditional file system based {@link RefDatabase}.
+@@ -477,17 +450,20 @@
+ 
+ 	private ObjectIdRef doPeel(final Ref leaf) throws MissingObjectException,
+ 			IOException {
+-		try (RevWalk rw = new RevWalk(getRepository())) {
++    RevWalk rw = new RevWalk(getRepository());
++    try {
+-			RevObject obj = rw.parseAny(leaf.getObjectId());
+-			if (obj instanceof RevTag) {
+-				return new ObjectIdRef.PeeledTag(leaf.getStorage(), leaf
+-						.getName(), leaf.getObjectId(), rw.peel(obj).copy());
+-			} else {
+-				return new ObjectIdRef.PeeledNonTag(leaf.getStorage(), leaf
+-						.getName(), leaf.getObjectId());
+-			}
++      RevObject obj = rw.parseAny(leaf.getObjectId());
++      if (obj instanceof RevTag) {
++        return new ObjectIdRef.PeeledTag(leaf.getStorage(), leaf
++          .getName(), leaf.getObjectId(), rw.peel(obj).copy());
++      } else {
++        return new ObjectIdRef.PeeledNonTag(leaf.getStorage(), leaf
++          .getName(), leaf.getObjectId());
++      }
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private static Ref recreate(final Ref old, final ObjectIdRef leaf) {
+ 		if (old.isSymbolic()) {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/ListTagCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/ListTagCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/ListTagCommand.java	(revision )
+@@ -42,13 +42,6 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.Comparator;
+-import java.util.List;
+-import java.util.Map;
+-
+ import org.eclipse.jgit.api.errors.GitAPIException;
+ import org.eclipse.jgit.api.errors.JGitInternalException;
+ import org.eclipse.jgit.lib.Constants;
+@@ -56,6 +49,9 @@
+ import org.eclipse.jgit.lib.Repository;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ 
++import java.io.IOException;
++import java.util.*;
++
+ /**
+  * Used to obtain a list of tags.
+  *
+@@ -78,12 +74,17 @@
+ 		checkCallable();
+ 		Map<String, Ref> refList;
+ 		List<Ref> tags = new ArrayList<Ref>();
+-		try (RevWalk revWalk = new RevWalk(repo)) {
++		try {
++      RevWalk revWalk = new RevWalk(repo);
++      try {
+-			refList = repo.getRefDatabase().getRefs(Constants.R_TAGS);
+-			for (Ref ref : refList.values()) {
+-				tags.add(ref);
++        refList = repo.getRefDatabase().getRefs(Constants.R_TAGS);
++        for (Ref ref : refList.values()) {
++          tags.add(ref);
++        }
++      } finally {
++        revWalk.close();
+-			}
+-		} catch (IOException e) {
++      }
++    } catch (IOException e) {
+ 			throw new JGitInternalException(e.getMessage(), e);
+ 		}
+ 		Collections.sort(tags, new Comparator<Ref>() {
+Index: org.eclipse.jgit/src/org/eclipse/jgit/api/MergeCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/api/MergeCommand.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/api/MergeCommand.java	(revision )
+@@ -43,48 +43,26 @@
+  */
+ package org.eclipse.jgit.api;
+ 
+-import java.io.IOException;
+-import java.text.MessageFormat;
+-import java.util.Arrays;
+-import java.util.Collections;
+-import java.util.LinkedList;
+-import java.util.List;
+-import java.util.Map;
+-
+ import org.eclipse.jgit.api.MergeResult.MergeStatus;
+-import org.eclipse.jgit.api.errors.CheckoutConflictException;
+-import org.eclipse.jgit.api.errors.ConcurrentRefUpdateException;
+-import org.eclipse.jgit.api.errors.GitAPIException;
+-import org.eclipse.jgit.api.errors.InvalidMergeHeadsException;
+-import org.eclipse.jgit.api.errors.JGitInternalException;
+-import org.eclipse.jgit.api.errors.NoHeadException;
+-import org.eclipse.jgit.api.errors.NoMessageException;
+-import org.eclipse.jgit.api.errors.WrongRepositoryStateException;
++import org.eclipse.jgit.api.errors.*;
+ import org.eclipse.jgit.dircache.DirCacheCheckout;
+ import org.eclipse.jgit.internal.JGitText;
+-import org.eclipse.jgit.lib.AnyObjectId;
++import org.eclipse.jgit.lib.*;
+ import org.eclipse.jgit.lib.Config.ConfigEnum;
+-import org.eclipse.jgit.lib.Constants;
+-import org.eclipse.jgit.lib.ObjectId;
+-import org.eclipse.jgit.lib.ObjectIdRef;
+-import org.eclipse.jgit.lib.Ref;
+ import org.eclipse.jgit.lib.Ref.Storage;
+-import org.eclipse.jgit.lib.RefUpdate;
+ import org.eclipse.jgit.lib.RefUpdate.Result;
+-import org.eclipse.jgit.lib.Repository;
+-import org.eclipse.jgit.merge.MergeConfig;
+-import org.eclipse.jgit.merge.MergeMessageFormatter;
+-import org.eclipse.jgit.merge.MergeStrategy;
+-import org.eclipse.jgit.merge.Merger;
+-import org.eclipse.jgit.merge.ResolveMerger;
++import org.eclipse.jgit.merge.*;
+ import org.eclipse.jgit.merge.ResolveMerger.MergeFailureReason;
+-import org.eclipse.jgit.merge.SquashMessageFormatter;
+ import org.eclipse.jgit.revwalk.RevCommit;
+ import org.eclipse.jgit.revwalk.RevWalk;
+ import org.eclipse.jgit.revwalk.RevWalkUtils;
+ import org.eclipse.jgit.treewalk.FileTreeIterator;
+ import org.eclipse.jgit.util.StringUtils;
+ 
++import java.io.IOException;
++import java.text.MessageFormat;
++import java.util.*;
++
+ /**
+  * A class used to execute a {@code Merge} command. It has setters for all
+  * supported options and arguments of this command and a {@link #call()} method
+@@ -369,12 +347,15 @@
+ 						mergeStatus = MergeStatus.MERGED_NOT_COMMITTED;
+ 					}
+ 					if (commit && !squash) {
+-						try (Git git = new Git(getRepository())) {
++            Git git = new Git(getRepository());
++            try {
+-							newHeadId = git.commit()
+-									.setReflogComment(refLogMessage.toString())
+-									.call().getId();
++              newHeadId = git.commit()
++                .setReflogComment(refLogMessage.toString())
++                .call().getId();
++            } finally {
++              git.close();
+-						}
+-						mergeStatus = MergeStatus.MERGED;
++            }
++            mergeStatus = MergeStatus.MERGED;
+ 					}
+ 					if (commit && squash) {
+ 						msg = JGitText.get().squashCommitNotUpdatingHEAD;
+Index: org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsRefDatabase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsRefDatabase.java	(date 1436541050000)
++++ org.eclipse.jgit/src/org/eclipse/jgit/internal/storage/dfs/DfsRefDatabase.java	(revision )
+@@ -43,7 +43,13 @@
+ 
+ package org.eclipse.jgit.internal.storage.dfs;
+ 
+-import static org.eclipse.jgit.lib.Ref.Storage.NEW;
++import org.eclipse.jgit.errors.MissingObjectException;
++import org.eclipse.jgit.lib.*;
++import org.eclipse.jgit.revwalk.RevObject;
++import org.eclipse.jgit.revwalk.RevTag;
++import org.eclipse.jgit.revwalk.RevWalk;
++import org.eclipse.jgit.util.RefList;
++import org.eclipse.jgit.util.RefMap;
+ 
+ import java.io.IOException;
+ import java.util.Collections;
+@@ -51,18 +57,7 @@
+ import java.util.Map;
+ import java.util.concurrent.atomic.AtomicReference;
+ 
+-import org.eclipse.jgit.errors.MissingObjectException;
+-import org.eclipse.jgit.lib.ObjectIdRef;
+-import org.eclipse.jgit.lib.Ref;
+-import org.eclipse.jgit.lib.RefDatabase;
+-import org.eclipse.jgit.lib.RefRename;
+-import org.eclipse.jgit.lib.RefUpdate;
+-import org.eclipse.jgit.lib.SymbolicRef;
+-import org.eclipse.jgit.revwalk.RevObject;
+-import org.eclipse.jgit.revwalk.RevTag;
+-import org.eclipse.jgit.revwalk.RevWalk;
+-import org.eclipse.jgit.util.RefList;
+-import org.eclipse.jgit.util.RefMap;
++import static org.eclipse.jgit.lib.Ref.Storage.NEW;
+ 
+ /** */
+ public abstract class DfsRefDatabase extends RefDatabase {
+@@ -183,22 +178,25 @@
+ 
+ 	private Ref doPeel(final Ref leaf) throws MissingObjectException,
+ 			IOException {
+-		try (RevWalk rw = new RevWalk(repository)) {
++    RevWalk rw = new RevWalk(repository);
++    try {
+-			RevObject obj = rw.parseAny(leaf.getObjectId());
+-			if (obj instanceof RevTag) {
+-				return new ObjectIdRef.PeeledTag(
+-						leaf.getStorage(),
+-						leaf.getName(),
+-						leaf.getObjectId(),
+-						rw.peel(obj).copy());
+-			} else {
+-				return new ObjectIdRef.PeeledNonTag(
+-						leaf.getStorage(),
+-						leaf.getName(),
+-						leaf.getObjectId());
+-			}
++      RevObject obj = rw.parseAny(leaf.getObjectId());
++      if (obj instanceof RevTag) {
++        return new ObjectIdRef.PeeledTag(
++          leaf.getStorage(),
++          leaf.getName(),
++          leaf.getObjectId(),
++          rw.peel(obj).copy());
++      } else {
++        return new ObjectIdRef.PeeledNonTag(
++          leaf.getStorage(),
++          leaf.getName(),
++          leaf.getObjectId());
++      }
++    } finally {
++      rw.close();
+-		}
+-	}
++    }
++  }
+ 
+ 	private static Ref recreate(Ref old, Ref leaf) {
+ 		if (old.isSymbolic()) {
