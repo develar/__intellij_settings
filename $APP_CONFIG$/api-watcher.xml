@@ -1,5 +1,0 @@
-<application>
-  <component name="ApiWatcher">
-    <option name="serverUrl" value="http://unit-753.labs.intellij.net:8080" />
-  </component>
-</application>
