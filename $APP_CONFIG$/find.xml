@@ -18,8 +18,8 @@
       <mask>plugin.xml</mask>
       <mask>*.kt</mask>
       <mask>*.gant</mask>
-      <mask>*.java</mask>
       <mask>*.xml</mask>
+      <mask>*.java</mask>
     </recentFileMasks>
   </component>
 </application>
