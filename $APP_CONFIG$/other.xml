@@ -98,6 +98,7 @@
     <option name="SHOW_IMPORTS" value="false" />
   </component>
   <component name="RefactoringSettings">
+    <option name="renameOverloads" value="false" />
     <option name="RENAME_SEARCH_IN_COMMENTS_FOR_METHOD" value="false" />
     <option name="RENAME_SEARCH_IN_COMMENTS_FOR_FIELD" value="false" />
     <option name="RENAME_SEARCH_IN_COMMENTS_FOR_VARIABLE" value="false" />
@@ -110,6 +111,7 @@
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
     <option name="INTRODUCE_CONSTANT_VISIBILITY" value="public" />
     <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
+    <option name="RENAME_OVERLOADS" value="false" />
   </component>
   <component name="TeamCityHistory">
     <option name="HISTORY" value="http://buildserver.labs.intellij.net&amp;^%$#@develar@#$%^&amp;http://buildserver&amp;^%$#@develar" />
