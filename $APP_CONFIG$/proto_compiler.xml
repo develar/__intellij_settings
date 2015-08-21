@@ -1,0 +1,5 @@
+<application>
+  <component name="PbCompilerApplicationSettings">
+    <option name="PATH_TO_COMPILER" value="/usr/local/bin/protoc" />
+  </component>
+</application>

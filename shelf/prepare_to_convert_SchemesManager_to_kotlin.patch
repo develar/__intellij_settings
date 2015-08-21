@@ -1,0 +1,3029 @@
+Index: community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerImpl.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerImpl.kt	(revision )
++++ community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerImpl.kt	(revision )
+@@ -0,0 +1,830 @@
++/*
++ * Copyright 2000-2015 JetBrains s.r.o.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ * http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package com.intellij.openapi.options
++
++import com.intellij.openapi.application.AccessToken
++import com.intellij.openapi.application.ApplicationManager
++import com.intellij.openapi.application.WriteAction
++import com.intellij.openapi.application.ex.DecodeDefaultsUtil
++import com.intellij.openapi.application.writeAction
++import com.intellij.openapi.components.RoamingType
++import com.intellij.openapi.components.ServiceManager
++import com.intellij.openapi.components.impl.stores.DirectoryBasedStorage
++import com.intellij.openapi.components.impl.stores.DirectoryStorageData
++import com.intellij.openapi.components.impl.stores.StorageUtil
++import com.intellij.openapi.components.impl.stores.StreamProvider
++import com.intellij.openapi.diagnostic.Logger
++import com.intellij.openapi.extensions.AbstractExtensionPointBean
++import com.intellij.openapi.util.Comparing
++import com.intellij.openapi.util.Condition
++import com.intellij.openapi.util.JDOMUtil
++import com.intellij.openapi.util.io.FileUtil
++import com.intellij.openapi.util.text.StringUtilRt
++import com.intellij.openapi.vfs.*
++import com.intellij.openapi.vfs.tracker.VirtualFileTracker
++import com.intellij.util.PathUtil
++import com.intellij.util.PathUtilRt
++import com.intellij.util.SmartList
++import com.intellij.util.ThrowableConvertor
++import com.intellij.util.containers.ContainerUtil
++import com.intellij.util.io.URLUtil
++import com.intellij.util.text.UniqueNameGenerator
++import gnu.trove.THashMap
++import gnu.trove.THashSet
++import gnu.trove.TObjectObjectProcedure
++import gnu.trove.TObjectProcedure
++import org.jdom.Document
++import org.jdom.Element
++import java.io.File
++import java.io.InputStream
++import java.util.ArrayList
++import java.util.Collections
++
++val LOG = Logger.getInstance(javaClass<SchemesManagerFactoryImpl>())
++
++public class SchemesManagerImpl<T : Scheme, E : ExternalizableScheme>(private val fileSpec: String,
++                                                                      private val processor: SchemeProcessor<E>,
++                                                                      private val roamingType: RoamingType,
++                                                                      private val provider: StreamProvider?,
++                                                                      private val ioDirectory: File) : SchemesManager<T, E>(), SafeWriteRequestor {
++  private val schemes = ArrayList<T>()
++  private val bundledExternalizableSchemes = THashMap<String, E>()
++
++  private var currentScheme: T? = null
++  private var currentSchemeName: String? = null
++
++  private var directory: VirtualFile? = null
++
++  private val schemeExtension: String
++  private val updateExtension: Boolean
++
++  private val filesToDelete = THashSet<String>()
++
++  // scheme could be changed - so, hashcode will be changed - we must use identity hashing strategy
++  private val schemeToInfo = THashMap<E, ExternalInfo>(ContainerUtil.identityStrategy())
++
++  init {
++    if (processor is SchemeExtensionProvider) {
++      schemeExtension = processor.getSchemeExtension()
++      updateExtension = processor.isUpgradeNeeded()
++    }
++    else {
++      schemeExtension = DirectoryStorageData.DEFAULT_EXT
++      updateExtension = false
++    }
++
++    val application = ApplicationManager.getApplication()
++    val virtualFileTracker = ServiceManager.getService(javaClass<VirtualFileTracker>())
++    if (virtualFileTracker != null) {
++      val baseDirPath = ioDirectory.getAbsolutePath().replace(File.separatorChar, '/')
++      virtualFileTracker.addTracker(LocalFileSystem.PROTOCOL_PREFIX + baseDirPath, object : VirtualFileAdapter() {
++        override fun contentsChanged(event: VirtualFileEvent) {
++          if (event.getRequestor() != null || !isMy(event)) {
++            return
++          }
++
++          val scheme = findExternalizableSchemeByFileName(event.getFile().getName())
++          var oldCurrentScheme: T? = null
++          if (scheme != null) {
++            oldCurrentScheme = getCurrentScheme()
++            @suppress("UNCHECKED_CAST")
++            removeScheme(scheme as T)
++            processor.onSchemeDeleted(scheme)
++          }
++
++          val readScheme = readSchemeFromFile(event.getFile(), false)
++          if (readScheme != null) {
++            processor.initScheme(readScheme)
++            processor.onSchemeAdded(readScheme)
++
++            var newCurrentScheme = getCurrentScheme()
++            if (oldCurrentScheme != null && newCurrentScheme == null) {
++              setCurrentSchemeName(readScheme.getName())
++              newCurrentScheme = getCurrentScheme()
++            }
++
++            if (oldCurrentScheme !== newCurrentScheme) {
++              processor.onCurrentSchemeChanged(oldCurrentScheme)
++            }
++          }
++        }
++
++        override fun fileCreated(event: VirtualFileEvent) {
++          if (event.getRequestor() == null) {
++            if (event.getFile().isDirectory()) {
++              val dir = getDirectory()
++              if (event.getFile() == dir) {
++                for (file in dir!!.getChildren()) {
++                  if (isMy(file)) {
++                    schemeCreatedExternally(file)
++                  }
++                }
++              }
++            }
++            else if (isMy(event)) {
++              schemeCreatedExternally(event.getFile())
++            }
++          }
++        }
++
++        private fun schemeCreatedExternally(file: VirtualFile) {
++          val readScheme = readSchemeFromFile(file, false)
++          if (readScheme != null) {
++            processor.initScheme(readScheme)
++            processor.onSchemeAdded(readScheme)
++          }
++        }
++
++        override fun fileDeleted(event: VirtualFileEvent) {
++          if (event.getRequestor() == null) {
++            if (event.getFile().isDirectory()) {
++              val dir = directory
++              if (event.getFile() == dir) {
++                directory = null
++                for (file in dir!!.getChildren()) {
++                  if (isMy(file)) {
++                    schemeDeletedExternally(file)
++                  }
++                }
++              }
++            }
++            else if (isMy(event)) {
++              schemeDeletedExternally(event.getFile())
++            }
++          }
++        }
++
++        private fun schemeDeletedExternally(file: VirtualFile) {
++          val scheme = findExternalizableSchemeByFileName(file.getName())
++          var oldCurrentScheme: T? = null
++          if (scheme != null) {
++            oldCurrentScheme = getCurrentScheme()
++            @suppress("UNCHECKED_CAST")
++            removeScheme(scheme as T)
++            processor.onSchemeDeleted(scheme)
++          }
++
++          var newCurrentScheme = getCurrentScheme()
++          if (oldCurrentScheme != null && newCurrentScheme == null) {
++            if (!schemes.isEmpty()) {
++              setCurrentSchemeName(schemes.get(0).getName())
++              newCurrentScheme = getCurrentScheme()
++            }
++          }
++
++          if (oldCurrentScheme !== newCurrentScheme) {
++            processor.onCurrentSchemeChanged(oldCurrentScheme)
++          }
++        }
++      }, false, application)
++    }
++  }
++
++  override fun loadBundledScheme(resourceName: String, requestor: Any, convertor: ThrowableConvertor<Element, T, Throwable>) {
++    try {
++      val url = if (requestor is AbstractExtensionPointBean)
++        requestor.getLoaderForClass().getResource(resourceName)
++      else
++        DecodeDefaultsUtil.getDefaults(requestor, resourceName)
++      if (url == null) {
++        LOG.error("Cannot read scheme from $resourceName")
++        return
++      }
++
++      val element = JDOMUtil.load(URLUtil.openStream(url))
++      val scheme = convertor.convert(element)
++      if (scheme is ExternalizableScheme) {
++        val fileName = PathUtilRt.getFileName(url.getPath())
++        val extension = getFileExtension(fileName, true)
++        val info = ExternalInfo(fileName.substring(0, fileName.length() - extension.length()), extension)
++        info.hash = JDOMUtil.getTreeHash(element, true)
++        info.schemeName = scheme.getName()
++        @suppress("UNCHECKED_CAST")
++        val oldInfo = schemeToInfo.put(scheme as E, info)
++        LOG.assertTrue(oldInfo == null)
++        val oldScheme = bundledExternalizableSchemes.put(scheme.getName(), scheme)
++        if (oldScheme != null) {
++          LOG.warn("Duplicated scheme ${scheme.getName()} - old: $oldScheme, new $scheme")
++        }
++      }
++
++      schemes.add(scheme)
++    }
++    catch (e: Throwable) {
++      LOG.error("Cannot read scheme from $resourceName", e)
++    }
++  }
++
++  private fun getFileExtension(fileName: CharSequence, allowAny: Boolean): String {
++    return if (StringUtilRt.endsWithIgnoreCase(fileName, schemeExtension)) {
++      schemeExtension
++    }
++    else if (StringUtilRt.endsWithIgnoreCase(fileName, DirectoryStorageData.DEFAULT_EXT)) {
++      DirectoryStorageData.DEFAULT_EXT
++    }
++    else if (allowAny) {
++      PathUtil.getFileExtension(fileName.toString())!!
++    }
++    else {
++      throw IllegalStateException("Scheme file extension $fileName is unknown, must be filtered out")
++    }
++  }
++
++  private fun isMy(event: VirtualFileEvent) = isMy(event.getFile())
++
++  private fun isMy(file: VirtualFile) = StringUtilRt.endsWithIgnoreCase(file.getNameSequence(), schemeExtension)
++
++  override fun loadSchemes(): Collection<E> {
++    val newSchemesOffset = schemes.size()
++    if (provider != null && provider.isEnabled()) {
++      provider.processChildren(fileSpec, roamingType, { canRead(it) }) { name, input ->
++        loadScheme(name, input, true)
++        true
++      }
++    }
++    else {
++      val dir = getDirectory()
++      val files = dir?.getChildren()
++      if (files != null) {
++        for (file in files) {
++          readSchemeFromFile(file, true)
++        }
++      }
++    }
++
++    val list = SmartList<E>()
++    for (i in newSchemesOffset..schemes.size() - 1) {
++      @suppress("UNCHECKED_CAST")
++      val scheme = schemes[i] as E
++      processor.initScheme(scheme)
++      list.add(scheme)
++    }
++    return list
++  }
++
++  public fun reload() {
++    // we must not remove non-persistent (e.g. predefined) schemes, because we cannot load it (obviously)
++    for (i in schemes.indices.reversed()) {
++      val scheme = schemes.get(i)
++      @suppress("UNCHECKED_CAST")
++      if (scheme is ExternalizableScheme && getState(scheme as E) != BaseSchemeProcessor.State.NON_PERSISTENT) {
++        schemes.remove(i)
++        if (scheme === currentScheme) {
++          currentScheme = null
++        }
++      }
++    }
++
++    retainExternalInfo(schemes)
++
++    loadSchemes()
++  }
++
++  private fun findExternalizableSchemeByFileName(fileName: String): E? {
++    for (scheme in schemes) {
++      @suppress("UNCHECKED_CAST")
++      if (scheme is ExternalizableScheme && fileName == "${getFileName(scheme)}$schemeExtension") {
++        return scheme as E
++      }
++    }
++    return null
++  }
++
++  private fun isOverwriteOnLoad(existingScheme: E): Boolean {
++    if (bundledExternalizableSchemes.get(existingScheme.getName()) === existingScheme) {
++      // so, bundled scheme is shadowed
++      return true
++    }
++
++    val info = schemeToInfo.get(existingScheme)
++    // scheme from file with old extension, so, we must ignore it
++    return info != null && schemeExtension != info.fileExtension
++  }
++
++  private fun loadScheme(fileName: CharSequence, input: InputStream, duringLoad: Boolean): E? {
++    try {
++      val element = JDOMUtil.load(input)
++      @suppress("DEPRECATED_SYMBOL_WITH_MESSAGE", "UNCHECKED_CAST")
++      val scheme = (if (processor is BaseSchemeProcessor<*>) {
++        processor.readScheme(element, duringLoad) as E?
++      }
++      else {
++        processor.readScheme(Document(element.detach() as Element))
++      }) ?: return null
++
++      val extension = getFileExtension(fileName, false)
++      val fileNameWithoutExtension = fileName.subSequence(0, fileName.length() - extension.length()).toString()
++      if (duringLoad) {
++        if (filesToDelete.isNotEmpty() && filesToDelete.contains(fileName.toString())) {
++          LOG.warn("Scheme file $fileName is not loaded because marked to delete")
++          return null
++        }
++
++        val existingScheme = findSchemeByName(scheme.getName())
++        if (existingScheme != null) {
++          @suppress("UNCHECKED_CAST")
++          if (existingScheme is ExternalizableScheme && isOverwriteOnLoad(existingScheme as E)) {
++            removeScheme(existingScheme)
++          }
++          else {
++            // We don't load scheme with duplicated name - if we generate unique name for it, it will be saved then with new name.
++            // It is not what all can expect. Such situation in most cases indicates error on previous level, so, we just warn about it.
++            LOG.warn("Scheme file $fileName is not loaded because defines duplicated name ${scheme.getName()}")
++            return null
++          }
++        }
++      }
++
++      var info: ExternalInfo? = schemeToInfo.get(scheme)
++      if (info == null) {
++        info = ExternalInfo(fileNameWithoutExtension, extension)
++        schemeToInfo.put(scheme, info)
++      }
++      else {
++        info.setFileNameWithoutExtension(fileNameWithoutExtension, extension)
++      }
++      info.hash = JDOMUtil.getTreeHash(element, true)
++      info.schemeName = scheme.getName()
++
++      @suppress("UNCHECKED_CAST")
++      if (duringLoad) {
++        schemes.add(scheme as T)
++      }
++      else {
++        addScheme(scheme as T)
++      }
++      return scheme
++    }
++    catch (e: Exception) {
++      LOG.error("Cannot read scheme $fileName", e)
++      return null
++    }
++  }
++
++  private fun getFileName(scheme: ExternalizableScheme) = schemeToInfo.get(scheme)?.fileNameWithoutExtension
++
++  private fun canRead(name: CharSequence): Boolean {
++    return updateExtension && StringUtilRt.endsWithIgnoreCase(name, DirectoryStorageData.DEFAULT_EXT) || StringUtilRt.endsWithIgnoreCase(name, schemeExtension)
++  }
++
++  private fun readSchemeFromFile(file: VirtualFile, duringLoad: Boolean): E? {
++    val fileName = file.getNameSequence()
++    if (file.isDirectory() || !canRead(fileName)) {
++      return null
++    }
++
++    try {
++      return loadScheme(fileName, file.getInputStream(), duringLoad)
++    }
++    catch (e: Throwable) {
++      LOG.error("Cannot read scheme $fileName", e)
++      return null
++    }
++  }
++
++  fun save(errors: MutableList<Throwable>) {
++    var hasSchemes = false
++    val nameGenerator = UniqueNameGenerator()
++    val schemesToSave = SmartList<E>()
++    for (scheme in schemes) {
++      @suppress("UNCHECKED_CAST")
++      if (scheme is ExternalizableScheme) {
++        val state = getState(scheme as E)
++        if (state === BaseSchemeProcessor.State.NON_PERSISTENT) {
++          continue
++        }
++
++        hasSchemes = true
++
++        if (state !== BaseSchemeProcessor.State.UNCHANGED) {
++          schemesToSave.add(scheme)
++        }
++
++        val fileName = getFileName(scheme)
++        if (fileName != null && !isRenamed(scheme)) {
++          nameGenerator.addExistingName(fileName)
++        }
++      }
++    }
++
++    for (scheme in schemesToSave) {
++      errors.catch {
++        saveScheme(scheme, nameGenerator)
++      }
++    }
++
++    val dir = getDirectory()
++    deleteFiles(dir, errors)
++
++    if (!hasSchemes && dir != null) {
++      removeDirectoryIfEmpty(dir, errors)
++    }
++  }
++
++  private fun removeDirectoryIfEmpty(dir: VirtualFile, errors: MutableList<Throwable>) {
++    for (file in dir.getChildren()) {
++      if (!file.`is`(VFileProperty.HIDDEN)) {
++        LOG.info("Directory " + dir.getNameSequence() + " is not deleted: at least one file " + file.getNameSequence() + " exists")
++        return
++      }
++    }
++
++    LOG.info("Remove schemes directory " + dir.getNameSequence())
++    directory = null
++
++    val token = WriteAction.start()
++    try {
++      dir.delete(this)
++    }
++    catch (e: Throwable) {
++      errors.add(e)
++    }
++    finally {
++      token.finish()
++    }
++  }
++
++  private fun getState(scheme: E): BaseSchemeProcessor.State {
++    return if (processor is BaseSchemeProcessor<*>) {
++      (processor as BaseSchemeProcessor<E>).getState(scheme)
++    }
++    else {
++      @suppress("DEPRECATED_SYMBOL_WITH_MESSAGE")
++      if (processor.shouldBeSaved(scheme)) BaseSchemeProcessor.State.POSSIBLY_CHANGED else BaseSchemeProcessor.State.NON_PERSISTENT
++    }
++  }
++
++  private fun saveScheme(scheme: E, nameGenerator: UniqueNameGenerator) {
++    var externalInfo: ExternalInfo? = schemeToInfo.get(scheme)
++    val currentFileNameWithoutExtension = if (externalInfo == null) null else externalInfo.fileNameWithoutExtension
++    val parent = processor.writeScheme(scheme)
++    val element = if (parent == null || parent is Element) parent as Element? else (parent as Document).detachRootElement()
++    if (JDOMUtil.isEmpty(element)) {
++      externalInfo?.scheduleDelete()
++      return
++    }
++
++    var fileNameWithoutExtension = currentFileNameWithoutExtension
++    if (fileNameWithoutExtension == null || isRenamed(scheme)) {
++      fileNameWithoutExtension = nameGenerator.generateUniqueName(FileUtil.sanitizeName(scheme.getName()))
++    }
++
++    val newHash = JDOMUtil.getTreeHash(element!!, true)
++    if (externalInfo != null && currentFileNameWithoutExtension === fileNameWithoutExtension && newHash == externalInfo.hash) {
++      return
++    }
++
++    // save only if scheme differs from bundled
++    val bundledScheme = bundledExternalizableSchemes.get(scheme.getName())
++    if (bundledScheme != null && schemeToInfo.get(bundledScheme)!!.hash == newHash) {
++      externalInfo?.scheduleDelete()
++      return
++    }
++
++    val fileName = fileNameWithoutExtension!! + schemeExtension
++    // file will be overwritten, so, we don't need to delete it
++    filesToDelete.remove(fileName)
++
++    // stream provider always use LF separator
++    val byteOut = StorageUtil.writeToBytes(element, "\n")
++
++    var providerPath: String?
++    if (provider != null && provider.isEnabled()) {
++      providerPath = fileSpec + '/' + fileName
++      if (!provider.isApplicable(providerPath, roamingType)) {
++        providerPath = null
++      }
++    }
++    else {
++      providerPath = null
++    }
++
++    // if another new scheme uses old name of this scheme, so, we must not delete it (as part of rename operation)
++    val renamed = externalInfo != null && fileNameWithoutExtension !== currentFileNameWithoutExtension && nameGenerator.value(currentFileNameWithoutExtension)
++    if (providerPath == null) {
++      var file: VirtualFile? = null
++      var dir = getDirectory()
++      if (dir == null || !dir.isValid()) {
++        dir = DirectoryBasedStorage.createDir(ioDirectory, this)
++        directory = dir!!
++      }
++
++      if (renamed) {
++        file = dir.findChild(externalInfo!!.fileName)
++        if (file != null) {
++          writeAction {
++            file!!.rename(this, fileName)
++          }
++        }
++      }
++
++      if (file == null) {
++        file = DirectoryBasedStorage.getFile(fileName, dir, this)
++      }
++
++      writeAction {
++        file!!.getOutputStream(this).use {
++          byteOut.writeTo(it)
++        }
++      }
++    }
++    else {
++      if (renamed) {
++        externalInfo!!.scheduleDelete()
++      }
++      provider!!.saveContent(providerPath, byteOut.getInternalBuffer(), byteOut.size(), roamingType)
++    }
++
++    if (externalInfo == null) {
++      externalInfo = ExternalInfo(fileNameWithoutExtension, schemeExtension)
++      schemeToInfo.put(scheme, externalInfo)
++    }
++    else {
++      externalInfo.setFileNameWithoutExtension(fileNameWithoutExtension, schemeExtension)
++    }
++    externalInfo.hash = newHash
++    externalInfo.schemeName = scheme.getName()
++  }
++
++
++  private fun ExternalInfo.scheduleDelete() {
++    filesToDelete.add(fileName)
++  }
++
++  private fun isRenamed(scheme: ExternalizableScheme): Boolean {
++    val info = schemeToInfo.get(scheme)
++    return info != null && scheme.getName() != info.schemeName
++  }
++
++  private fun deleteFiles(dir: VirtualFile?, errors: MutableList<Throwable>) {
++    if (filesToDelete.isEmpty()) {
++      return
++    }
++
++    if (provider != null && provider.isEnabled()) {
++      for (name in filesToDelete) {
++        errors.catch {
++          StorageUtil.delete(provider, fileSpec + '/' + name, roamingType)
++        }
++      }
++    }
++    else if (dir != null) {
++      var token: AccessToken? = null
++      try {
++        for (file in dir.getChildren()) {
++          if (filesToDelete.contains(file.getName())) {
++            if (token == null) {
++              token = WriteAction.start()
++            }
++
++            errors.catch {
++              file.delete(this)
++            }
++          }
++        }
++      }
++      finally {
++        if (token != null) {
++          token.finish()
++        }
++      }
++    }
++
++    filesToDelete.clear()
++  }
++
++  private fun getDirectory(): VirtualFile? {
++    var result = directory
++    if (result == null) {
++      result = LocalFileSystem.getInstance().findFileByIoFile(ioDirectory)
++      directory = result
++    }
++    return result
++  }
++
++  override fun getRootDirectory() = ioDirectory
++
++  override fun setSchemes(newSchemes: List<T>, removeCondition: Condition<T>?) {
++    if (removeCondition == null) {
++      schemes.clear()
++    }
++    else {
++      for (i in schemes.indices.reversed()) {
++        if (removeCondition.value(schemes.get(i))) {
++          schemes.remove(i)
++        }
++      }
++    }
++
++    retainExternalInfo(newSchemes)
++
++    schemes.addAll(newSchemes)
++
++    if (currentSchemeName != null) {
++      currentScheme = findSchemeByName(currentSchemeName!!)
++      if (currentScheme != null) {
++        return
++      }
++    }
++
++    currentScheme = schemes.firstOrNull()
++    currentSchemeName = currentScheme?.getName()
++  }
++
++  private fun retainExternalInfo(newSchemes: List<T>) {
++    if (schemeToInfo.isEmpty()) {
++      return
++    }
++
++    schemeToInfo.retainEntries(object : TObjectObjectProcedure<E, ExternalInfo> {
++      override fun execute(scheme: E, info: ExternalInfo): Boolean {
++        if (bundledExternalizableSchemes.get(scheme.getName()) == scheme) {
++          return true
++        }
++
++        for (t in newSchemes) {
++          // by identity
++          if (t === scheme) {
++            if (filesToDelete.isNotEmpty()) {
++              filesToDelete.remove("${info.fileName}")
++            }
++            return true
++          }
++        }
++
++        info.scheduleDelete()
++        return false
++      }
++    })
++  }
++
++  override fun addNewScheme(scheme: T, replaceExisting: Boolean) {
++    var toReplace = -1
++    for (i in schemes.indices) {
++      val existing = schemes.get(i)
++      if (existing.getName() == scheme.getName()) {
++        if (!Comparing.equal<Class<out Scheme>>(existing.javaClass, scheme.javaClass)) {
++          LOG.warn("'${scheme.getName()}' ${existing.javaClass.getSimpleName()} replaced with ${scheme.javaClass.getSimpleName()}")
++        }
++
++        toReplace = i
++        if (replaceExisting && existing is ExternalizableScheme) {
++          val oldInfo = schemeToInfo.remove(existing)
++          if (oldInfo != null && scheme is ExternalizableScheme && !schemeToInfo.containsKey(scheme)) {
++            @suppress("UNCHECKED_CAST")
++            schemeToInfo.put(scheme as E, oldInfo)
++          }
++        }
++        break
++      }
++    }
++    if (toReplace == -1) {
++      schemes.add(scheme)
++    }
++    else if (replaceExisting || scheme !is ExternalizableScheme) {
++      schemes.set(toReplace, scheme)
++    }
++    else {
++      scheme.renameScheme(UniqueNameGenerator.generateUniqueName(scheme.getName(), collectExistingNames(schemes)))
++      schemes.add(scheme)
++    }
++
++    if (scheme is ExternalizableScheme && filesToDelete.isNotEmpty()) {
++      val info = schemeToInfo.get(scheme)
++      if (info != null) {
++        filesToDelete.remove("${info.fileName}")
++      }
++    }
++  }
++
++  private fun collectExistingNames(schemes: Collection<T>): Collection<String> {
++    val result = THashSet<String>(schemes.size())
++    for (scheme in schemes) {
++      result.add(scheme.getName())
++    }
++    return result
++  }
++
++  override fun clearAllSchemes() {
++    schemeToInfo.forEachValue(object : TObjectProcedure<ExternalInfo> {
++      override fun execute(info: ExternalInfo): Boolean {
++        info.scheduleDelete()
++        return true
++      }
++    })
++
++    currentScheme = null
++    schemes.clear()
++    schemeToInfo.clear()
++  }
++
++  override fun getAllSchemes(): List<T> {
++    return Collections.unmodifiableList(schemes)
++  }
++
++  override fun findSchemeByName(schemeName: String): T? {
++    for (scheme in schemes) {
++      if (scheme.getName() == schemeName) {
++        return scheme
++      }
++    }
++    return null
++  }
++
++  override fun setCurrentSchemeName(schemeName: String?) {
++    currentSchemeName = schemeName
++    currentScheme = null
++  }
++
++  override fun getCurrentScheme(): T? {
++    var scheme = currentScheme
++    if (scheme == null && currentSchemeName != null) {
++      scheme = findSchemeByName(currentSchemeName!!)
++      if (scheme != null) {
++        currentScheme = scheme
++      }
++    }
++    return scheme
++  }
++
++  override fun removeScheme(scheme: T) {
++    for (i in schemes.size() - 1 downTo 0) {
++      val s = schemes.get(i)
++      if (scheme.getName() == s.getName()) {
++        if (currentScheme == s) {
++          currentScheme = null
++        }
++
++        if (s is ExternalizableScheme) {
++          schemeToInfo.remove(s)?.scheduleDelete()
++        }
++        schemes.remove(i)
++        break
++      }
++    }
++  }
++
++  override fun getAllSchemeNames(): Collection<String> {
++    if (schemes.isEmpty()) {
++      return emptyList()
++    }
++
++    val names = ArrayList<String>(schemes.size())
++    for (scheme in schemes) {
++      names.add(scheme.getName())
++    }
++    return names
++  }
++
++  override fun isMetadataEditable(scheme: E) = !bundledExternalizableSchemes.containsKey(scheme.name)
++
++  private class ExternalInfo(var fileNameWithoutExtension: String, var fileExtension: String?) {
++    // we keep it to detect rename
++    var schemeName: String? = null
++    var hash: Int = 0
++
++    val fileName: String
++      get() = "$fileNameWithoutExtension$fileExtension"
++
++    fun setFileNameWithoutExtension(nameWithoutExtension: String, extension: String) {
++      fileNameWithoutExtension = nameWithoutExtension
++      fileExtension = extension
++    }
++
++    override fun toString() = fileName
++  }
++
++  override fun toString() = fileSpec
++}
++
++private fun ExternalizableScheme.renameScheme(newName: String) {
++  if (newName != getName()) {
++    setName(newName)
++    LOG.assertTrue(newName == getName())
++  }
++}
++
++private inline fun MutableList<Throwable>.catch(runnable: () -> Unit) {
++  try {
++    runnable()
++  }
++  catch (e: Throwable) {
++    add(e)
++  }
++}
++
++inline val Scheme.name: String
++  get() = getName()
+\ No newline at end of file
+Index: community/platform/platform-tests/testSrc/com/intellij/openapi/components/impl/ApplicationStoreTest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-tests/testSrc/com/intellij/openapi/components/impl/ApplicationStoreTest.kt	(revision )
++++ community/platform/platform-tests/testSrc/com/intellij/openapi/components/impl/ApplicationStoreTest.kt	(revision )
+@@ -0,0 +1,225 @@
++/*
++ * Copyright 2000-2015 JetBrains s.r.o.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ * http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package com.intellij.openapi.components.impl
++
++import com.intellij.application.options.PathMacrosImpl
++import com.intellij.openapi.Disposable
++import com.intellij.openapi.application.ApplicationManager
++import com.intellij.openapi.components.*
++import com.intellij.openapi.components.impl.stores.*
++import com.intellij.openapi.util.Disposer
++import com.intellij.openapi.util.io.FileUtil
++import com.intellij.openapi.vfs.CharsetToolkit
++import com.intellij.testFramework.LightPlatformTestCase
++import com.intellij.util.messages.MessageBus
++import com.intellij.util.xmlb.XmlSerializerUtil
++import gnu.trove.THashMap
++import org.hamcrest.CoreMatchers.equalTo
++import org.hamcrest.MatcherAssert.assertThat
++import org.intellij.lang.annotations.Language
++import java.io.ByteArrayInputStream
++import java.io.File
++import java.io.IOException
++import java.io.InputStream
++
++public class ApplicationStoreTest : LightPlatformTestCase() {
++  private var testAppConfig: File? = null
++  private var componentStore: MyComponentStore? = null
++
++  throws(Exception::class)
++  override fun setUp() {
++    super.setUp()
++
++    val testAppConfigPath = System.getProperty("test.app.config.path")
++    if (testAppConfigPath == null) {
++      testAppConfig = FileUtil.createTempDirectory("testAppSettings", null)
++    }
++    else {
++      testAppConfig = File(FileUtil.expandUserHome(testAppConfigPath))
++    }
++    FileUtil.delete(testAppConfig!!)
++
++    componentStore = MyComponentStore(testAppConfig!!.getAbsolutePath())
++  }
++
++  throws(Exception::class)
++  override fun tearDown() {
++    try {
++      Disposer.dispose(componentStore!!)
++      componentStore = null
++    }
++    finally {
++      try {
++        super.tearDown()
++      }
++      finally {
++        FileUtil.delete(testAppConfig!!)
++      }
++    }
++  }
++
++  public fun testStreamProviderSaveIfSeveralStoragesConfigured() {
++    val component = SeveralStoragesConfigured()
++
++    val streamProvider = MyStreamProvider()
++    componentStore!!.getStateStorageManager().setStreamProvider(streamProvider)
++
++    componentStore!!.initComponent(component, false)
++    component.foo = "newValue"
++    StoreUtil.save(componentStore!!, null)
++
++    assertThat<String>(streamProvider.data.get(RoamingType.PER_USER)!!.get(StoragePathMacros.APP_CONFIG + "/proxy.settings.xml"), equalTo("<application>\n" + "  <component name=\"HttpConfigurable\">\n" + "    <option name=\"foo\" value=\"newValue\" />\n" + "  </component>\n" + "</application>"))
++  }
++
++  public fun testLoadFromStreamProvider() {
++    val component = SeveralStoragesConfigured()
++
++    val streamProvider = MyStreamProvider()
++    val map = THashMap<String, String>()
++    map.put(StoragePathMacros.APP_CONFIG + "/proxy.settings.xml", "<application>\n" + "  <component name=\"HttpConfigurable\">\n" + "    <option name=\"foo\" value=\"newValue\" />\n" + "  </component>\n" + "</application>")
++    streamProvider.data.put(RoamingType.PER_USER, map)
++
++    componentStore!!.getStateStorageManager().setStreamProvider(streamProvider)
++    componentStore!!.initComponent(component, false)
++    assertThat(component.foo, equalTo("newValue"))
++  }
++
++  public fun testRemoveDeprecatedStorageOnWrite() {
++  }
++
++  public fun testRemoveDeprecatedStorageOnWrite2() {
++    doRemoveDeprecatedStorageOnWrite(ActualStorageLast())
++  }
++
++  private fun doRemoveDeprecatedStorageOnWrite(component: Foo) {
++    val oldFile = saveConfig("other.xml", "<application>" + "  <component name=\"HttpConfigurable\">\n" + "    <option name=\"foo\" value=\"old\" />\n" + "  </component>\n" + "</application>")
++
++    saveConfig("proxy.settings.xml", "<application>\n" + "  <component name=\"HttpConfigurable\">\n" + "    <option name=\"foo\" value=\"new\" />\n" + "  </component>\n" + "</application>")
++
++    componentStore!!.initComponent(component, false)
++    assertThat(component.foo, equalTo("new"))
++
++    component.foo = "new2"
++    StoreUtil.save(componentStore!!, null)
++
++    assertThat(oldFile.exists(), equalTo(false))
++  }
++
++  throws(IOException::class)
++  private fun saveConfig(fileName: String, Language("XML") data: String): File {
++    val file = File(testAppConfig, fileName)
++    FileUtil.writeToFile(file, data)
++    return file
++  }
++
++  private class MyStreamProvider : StreamProvider {
++    public val data: MutableMap<RoamingType, MutableMap<String, String>> = THashMap()
++
++    override fun saveContent(fileSpec: String, content: ByteArray, size: Int, roamingType: RoamingType) {
++      getMap(roamingType).put(fileSpec, String(content, 0, size, CharsetToolkit.UTF8_CHARSET))
++    }
++
++    private fun getMap(roamingType: RoamingType): MutableMap<String, String> {
++      var map = data.get(roamingType)
++      if (map == null) {
++        map = THashMap<String, String>()
++        data.put(roamingType, map)
++      }
++      return map
++    }
++
++    throws(IOException::class)
++    override fun loadContent(fileSpec: String, roamingType: RoamingType): InputStream? {
++      val data = getMap(roamingType).get(fileSpec)
++      return if (data == null) null else ByteArrayInputStream(data.toByteArray(CharsetToolkit.UTF8_CHARSET))
++    }
++
++    override fun delete(fileSpec: String, roamingType: RoamingType) {
++      val map = data.get(roamingType)
++      map?.remove(fileSpec)
++    }
++  }
++
++  class MyComponentStore(testAppConfigPath: String) : ComponentStoreImpl(), Disposable {
++    private val stateStorageManager: StateStorageManager
++
++    init {
++      val macroSubstitutor = ApplicationPathMacroManager().createTrackingSubstitutor()
++      stateStorageManager = object : StateStorageManagerImpl(macroSubstitutor, "application", this, ApplicationManager.getApplication().getPicoContainer()) {
++        override fun createStorageData(fileSpec: String, filePath: String): StorageData {
++          return StorageData("application")
++        }
++
++        override fun getOldStorageSpec(component: Any, componentName: String, operation: StateStorageOperation): String? {
++          return null
++        }
++
++        override fun getMacroSubstitutor(fileSpec: String): TrackingPathMacroSubstitutor? {
++          if (fileSpec == StoragePathMacros.APP_CONFIG + "/" + PathMacrosImpl.EXT_FILE_NAME + ".xml") {
++            return null
++          }
++          return super.getMacroSubstitutor(fileSpec)
++        }
++      }
++
++      stateStorageManager.addMacro(StoragePathMacros.APP_CONFIG, testAppConfigPath)
++    }
++
++    override fun load() {
++    }
++
++    override fun getStateStorageManager(): StateStorageManager {
++      return stateStorageManager
++    }
++
++    override fun dispose() {
++    }
++
++    override fun getPathMacroManagerForDefaults(): PathMacroManager? {
++      return null
++    }
++
++    override fun getMessageBus(): MessageBus {
++      return ApplicationManager.getApplication().getMessageBus()
++    }
++  }
++
++  abstract class Foo {
++    public var foo: String = "defaultValue"
++  }
++
++  State(name = "HttpConfigurable", storages = arrayOf(Storage(file = StoragePathMacros.APP_CONFIG + "/proxy.settings.xml"), Storage(file = StoragePathMacros.APP_CONFIG + "/other.xml", deprecated = true)))
++  class SeveralStoragesConfigured : Foo(), PersistentStateComponent<SeveralStoragesConfigured> {
++    override fun getState(): SeveralStoragesConfigured? {
++      return this
++    }
++
++    override fun loadState(state: SeveralStoragesConfigured) {
++      XmlSerializerUtil.copyBean(state, this)
++    }
++  }
++
++  State(name = "HttpConfigurable", storages = arrayOf(Storage(file = StoragePathMacros.APP_CONFIG + "/other.xml", deprecated = true), Storage(file = StoragePathMacros.APP_CONFIG + "/proxy.settings.xml")))
++  class ActualStorageLast : Foo(), PersistentStateComponent<ActualStorageLast> {
++    override fun getState(): ActualStorageLast? {
++      return this
++    }
++
++    override fun loadState(state: ActualStorageLast) {
++      XmlSerializerUtil.copyBean(state, this)
++    }
++  }
++}
+Index: community/platform/platform-impl/src/com/intellij/openapi/components/impl/stores/StreamProvider.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/components/impl/stores/StreamProvider.kt	(revision )
++++ community/platform/platform-impl/src/com/intellij/openapi/components/impl/stores/StreamProvider.kt	(revision )
+@@ -0,0 +1,285 @@
++/*
++ * Copyright 2000-2015 JetBrains s.r.o.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ * http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package com.intellij.openapi.components.impl.stores
++
++import com.intellij.openapi.components.RoamingType
++import java.io.IOException
++import java.io.InputStream
++
++public interface StreamProvider {
++  public open fun isEnabled(): Boolean = true
++
++  /**
++   * fileSpec Only main fileSpec, not version
++   */
++  public open fun isApplicable(fileSpec: String, roamingType: RoamingType): Boolean = true
++
++  /**
++   * @param fileSpec
++   * *
++   * @param content bytes of content, size of array is not actual size of data, you must use `size`
++   * *
++   * @param size actual size of data
++   */
++  public fun saveContent(fileSpec: String, content: ByteArray, size: Int, roamingType: RoamingType)
++
++  public fun loadContent(fileSpec: String, roamingType: RoamingType): InputStream?
++
++  public open fun listSubFiles(fileSpec: String, roamingType: RoamingType): Collection<String> = emptyList()
++
++  /**
++   * You must close passed input stream.
++   */
++  public open fun processChildren(path: String, roamingType: RoamingType, filter: (name: String) -> Boolean, processor: (name: String, input: InputStream) -> Boolean) {
++    for (name in listSubFiles(path, roamingType)) {
++      if (!filter(name)) {
++        continue
++      }
++
++      val input: InputStream?
++      try {
++        input = loadContent("$path/$name", roamingType)
++      }
++      catch (e: IOException) {
++        StorageUtil.LOG.error(e)
++        continue
++      }
++
++
++      if (input != null && !processor(name, input)) {
++        break
++      }
++    }
++  }
++
++  /**
++   * Delete file or directory
++   */
++  public fun delete(fileSpec: String, roamingType: RoamingType)
++}/*
++ * Copyright 2000-2015 JetBrains s.r.o.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ * http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package com.intellij.openapi.components.impl.stores
++
++import com.intellij.openapi.components.RoamingType
++import java.io.IOException
++import java.io.InputStream
++
++public interface StreamProvider {
++  public open fun isEnabled(): Boolean = true
++
++  /**
++   * fileSpec Only main fileSpec, not version
++   */
++  public open fun isApplicable(fileSpec: String, roamingType: RoamingType): Boolean = true
++
++  /**
++   * @param fileSpec
++   * *
++   * @param content bytes of content, size of array is not actual size of data, you must use `size`
++   * *
++   * @param size actual size of data
++   */
++  public fun saveContent(fileSpec: String, content: ByteArray, size: Int, roamingType: RoamingType)
++
++  public fun loadContent(fileSpec: String, roamingType: RoamingType): InputStream?
++
++  public open fun listSubFiles(fileSpec: String, roamingType: RoamingType): Collection<String> = emptyList()
++
++  /**
++   * You must close passed input stream.
++   */
++  public open fun processChildren(path: String, roamingType: RoamingType, filter: (name: String) -> Boolean, processor: (name: String, input: InputStream) -> Boolean) {
++    for (name in listSubFiles(path, roamingType)) {
++      if (!filter(name)) {
++        continue
++      }
++
++      val input: InputStream?
++      try {
++        input = loadContent("$path/$name", roamingType)
++      }
++      catch (e: IOException) {
++        StorageUtil.LOG.error(e)
++        continue
++      }
++
++
++      if (input != null && !processor(name, input)) {
++        break
++      }
++    }
++  }
++
++  /**
++   * Delete file or directory
++   */
++  public fun delete(fileSpec: String, roamingType: RoamingType)
++}/*
++ * Copyright 2000-2015 JetBrains s.r.o.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ * http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package com.intellij.openapi.components.impl.stores
++
++import com.intellij.openapi.components.RoamingType
++import java.io.IOException
++import java.io.InputStream
++
++public interface StreamProvider {
++  public open fun isEnabled(): Boolean = true
++
++  /**
++   * fileSpec Only main fileSpec, not version
++   */
++  public open fun isApplicable(fileSpec: String, roamingType: RoamingType): Boolean = true
++
++  /**
++   * @param fileSpec
++   * *
++   * @param content bytes of content, size of array is not actual size of data, you must use `size`
++   * *
++   * @param size actual size of data
++   */
++  public fun saveContent(fileSpec: String, content: ByteArray, size: Int, roamingType: RoamingType)
++
++  public fun loadContent(fileSpec: String, roamingType: RoamingType): InputStream?
++
++  public open fun listSubFiles(fileSpec: String, roamingType: RoamingType): Collection<String> = emptyList()
++
++  /**
++   * You must close passed input stream.
++   */
++  public open fun processChildren(path: String, roamingType: RoamingType, filter: (name: String) -> Boolean, processor: (name: String, input: InputStream) -> Boolean) {
++    for (name in listSubFiles(path, roamingType)) {
++      if (!filter(name)) {
++        continue
++      }
++
++      val input: InputStream?
++      try {
++        input = loadContent("$path/$name", roamingType)
++      }
++      catch (e: IOException) {
++        StorageUtil.LOG.error(e)
++        continue
++      }
++
++
++      if (input != null && !processor(name, input)) {
++        break
++      }
++    }
++  }
++
++  /**
++   * Delete file or directory
++   */
++  public fun delete(fileSpec: String, roamingType: RoamingType)
++}/*
++ * Copyright 2000-2015 JetBrains s.r.o.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ * http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package com.intellij.openapi.components.impl.stores
++
++import com.intellij.openapi.components.RoamingType
++import java.io.IOException
++import java.io.InputStream
++
++public interface StreamProvider {
++  public open fun isEnabled(): Boolean = true
++
++  /**
++   * fileSpec Only main fileSpec, not version
++   */
++  public open fun isApplicable(fileSpec: String, roamingType: RoamingType): Boolean = true
++
++  /**
++   * @param fileSpec
++   * *
++   * @param content bytes of content, size of array is not actual size of data, you must use `size`
++   * *
++   * @param size actual size of data
++   */
++  public fun saveContent(fileSpec: String, content: ByteArray, size: Int, roamingType: RoamingType)
++
++  public fun loadContent(fileSpec: String, roamingType: RoamingType): InputStream?
++
++  public open fun listSubFiles(fileSpec: String, roamingType: RoamingType): Collection<String> = emptyList()
++
++  /**
++   * You must close passed input stream.
++   */
++  public open fun processChildren(path: String, roamingType: RoamingType, filter: (name: String) -> Boolean, processor: (name: String, input: InputStream) -> Boolean) {
++    for (name in listSubFiles(path, roamingType)) {
++      if (!filter(name)) {
++        continue
++      }
++
++      val input: InputStream?
++      try {
++        input = loadContent("$path/$name", roamingType)
++      }
++      catch (e: IOException) {
++        StorageUtil.LOG.error(e)
++        continue
++      }
++
++
++      if (input != null && !processor(name, input)) {
++        break
++      }
++    }
++  }
++
++  /**
++   * Delete file or directory
++   */
++  public fun delete(fileSpec: String, roamingType: RoamingType)
++}
+\ No newline at end of file
+Index: community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListsPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListsPanel.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListsPanel.java	(revision )
+@@ -30,7 +30,7 @@
+   @NotNull
+   @Override
+   protected List<QuickList> getSettings() {
+-    return QuickListsManager.getInstance().getQuickLists();
++    return QuickListsManager.getInstance().getSchemeManager().getAllSchemes();
+   }
+ 
+   @Override
+Index: community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerImpl.java
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerImpl.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerImpl.java	(date 1435744807000)
+@@ -1,949 +0,0 @@
+-/*
+- * Copyright 2000-2015 JetBrains s.r.o.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- * http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package com.intellij.openapi.options;
+-
+-import com.intellij.openapi.application.AccessToken;
+-import com.intellij.openapi.application.Application;
+-import com.intellij.openapi.application.ApplicationManager;
+-import com.intellij.openapi.application.WriteAction;
+-import com.intellij.openapi.application.ex.DecodeDefaultsUtil;
+-import com.intellij.openapi.components.RoamingType;
+-import com.intellij.openapi.components.ServiceManager;
+-import com.intellij.openapi.components.impl.stores.DirectoryBasedStorage;
+-import com.intellij.openapi.components.impl.stores.DirectoryStorageData;
+-import com.intellij.openapi.components.impl.stores.StorageUtil;
+-import com.intellij.openapi.components.impl.stores.StreamProvider;
+-import com.intellij.openapi.diagnostic.Logger;
+-import com.intellij.openapi.extensions.AbstractExtensionPointBean;
+-import com.intellij.openapi.util.Comparing;
+-import com.intellij.openapi.util.Condition;
+-import com.intellij.openapi.util.JDOMUtil;
+-import com.intellij.openapi.util.WriteExternalException;
+-import com.intellij.openapi.util.io.BufferExposingByteArrayOutputStream;
+-import com.intellij.openapi.util.io.FileUtil;
+-import com.intellij.openapi.util.text.StringUtilRt;
+-import com.intellij.openapi.vfs.*;
+-import com.intellij.openapi.vfs.tracker.VirtualFileTracker;
+-import com.intellij.util.PathUtil;
+-import com.intellij.util.PathUtilRt;
+-import com.intellij.util.SmartList;
+-import com.intellij.util.ThrowableConvertor;
+-import com.intellij.util.io.URLUtil;
+-import com.intellij.util.lang.CompoundRuntimeException;
+-import com.intellij.util.text.UniqueNameGenerator;
+-import gnu.trove.*;
+-import org.jdom.Document;
+-import org.jdom.Element;
+-import org.jdom.Parent;
+-import org.jetbrains.annotations.NotNull;
+-import org.jetbrains.annotations.Nullable;
+-
+-import java.io.File;
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.io.OutputStream;
+-import java.net.URL;
+-import java.util.*;
+-
+-public final class SchemesManagerImpl<T extends Scheme, E extends ExternalizableScheme> extends SchemesManager<T, E> implements SafeWriteRequestor {
+-  private static final Logger LOG = Logger.getInstance(SchemesManagerFactoryImpl.class);
+-
+-  private final ArrayList<T> mySchemes = new ArrayList<T>();
+-  private volatile T myCurrentScheme;
+-  @Nullable
+-  private String myCurrentSchemeName;
+-
+-  private final String myFileSpec;
+-  private final SchemeProcessor<E> myProcessor;
+-  private final RoamingType myRoamingType;
+-
+-  private final StreamProvider provider;
+-  private final File myIoDir;
+-  private VirtualFile myDir;
+-
+-  private final String mySchemeExtension;
+-  private final boolean myUpdateExtension;
+-
+-  private final Set<String> filesToDelete = new THashSet<String>();
+-
+-  // scheme could be changed - so, hashcode will be changed - we must use identity hashing strategy
+-  @SuppressWarnings("unchecked")
+-  private final THashMap<ExternalizableScheme, ExternalInfo> schemeToInfo = new THashMap<ExternalizableScheme, ExternalInfo>(TObjectHashingStrategy.IDENTITY);
+-
+-  public SchemesManagerImpl(@NotNull String fileSpec,
+-                            @NotNull SchemeProcessor<E> processor,
+-                            @NotNull RoamingType roamingType,
+-                            @Nullable StreamProvider provider,
+-                            @NotNull File baseDir) {
+-    myFileSpec = fileSpec;
+-    myProcessor = processor;
+-    myRoamingType = roamingType;
+-    this.provider = provider;
+-    myIoDir = baseDir;
+-    if (processor instanceof SchemeExtensionProvider) {
+-      mySchemeExtension = ((SchemeExtensionProvider)processor).getSchemeExtension();
+-      myUpdateExtension = ((SchemeExtensionProvider)processor).isUpgradeNeeded();
+-    }
+-    else {
+-      mySchemeExtension = DirectoryStorageData.DEFAULT_EXT;
+-      myUpdateExtension = false;
+-    }
+-
+-    Application application = ApplicationManager.getApplication();
+-    VirtualFileTracker virtualFileTracker = application == null ? null : ServiceManager.getService(VirtualFileTracker.class);
+-    if (virtualFileTracker != null) {
+-      final String baseDirPath = myIoDir.getAbsolutePath().replace(File.separatorChar, '/');
+-      virtualFileTracker.addTracker(LocalFileSystem.PROTOCOL_PREFIX + baseDirPath, new VirtualFileAdapter() {
+-        @Override
+-        public void contentsChanged(@NotNull VirtualFileEvent event) {
+-          if (event.getRequestor() != null || !isMy(event)) {
+-            return;
+-          }
+-
+-          E scheme = findExternalizableSchemeByFileName(event.getFile().getName());
+-          T oldCurrentScheme = null;
+-          if (scheme != null) {
+-            oldCurrentScheme = getCurrentScheme();
+-            //noinspection unchecked
+-            removeScheme((T)scheme);
+-            myProcessor.onSchemeDeleted(scheme);
+-          }
+-
+-          E readScheme = readSchemeFromFile(event.getFile(), null);
+-          if (readScheme != null) {
+-            myProcessor.initScheme(readScheme);
+-            myProcessor.onSchemeAdded(readScheme);
+-
+-            T newCurrentScheme = getCurrentScheme();
+-            if (oldCurrentScheme != null && newCurrentScheme == null) {
+-              setCurrentSchemeName(readScheme.getName());
+-              newCurrentScheme = getCurrentScheme();
+-            }
+-
+-            if (oldCurrentScheme != newCurrentScheme) {
+-              myProcessor.onCurrentSchemeChanged(oldCurrentScheme);
+-            }
+-          }
+-        }
+-
+-        @Override
+-        public void fileCreated(@NotNull VirtualFileEvent event) {
+-          if (event.getRequestor() == null) {
+-            if (event.getFile().isDirectory()) {
+-              VirtualFile dir = getDirectory();
+-              if (event.getFile().equals(dir)) {
+-                for (VirtualFile file : dir.getChildren()) {
+-                  if (isMy(file)) {
+-                    schemeCreatedExternally(file);
+-                  }
+-                }
+-              }
+-            }
+-            else if (isMy(event)) {
+-              schemeCreatedExternally(event.getFile());
+-            }
+-          }
+-        }
+-
+-        private void schemeCreatedExternally(@NotNull VirtualFile file) {
+-          E readScheme = readSchemeFromFile(file, null);
+-          if (readScheme != null) {
+-            myProcessor.initScheme(readScheme);
+-            myProcessor.onSchemeAdded(readScheme);
+-          }
+-        }
+-
+-        @Override
+-        public void fileDeleted(@NotNull VirtualFileEvent event) {
+-          if (event.getRequestor() == null) {
+-            if (event.getFile().isDirectory()) {
+-              VirtualFile dir = myDir;
+-              if (event.getFile().equals(dir)) {
+-                myDir = null;
+-                for (VirtualFile file : dir.getChildren()) {
+-                  if (isMy(file)) {
+-                    schemeDeletedExternally(file);
+-                  }
+-                }
+-              }
+-            }
+-            else if (isMy(event)) {
+-              schemeDeletedExternally(event.getFile());
+-            }
+-          }
+-        }
+-
+-        private void schemeDeletedExternally(@NotNull VirtualFile file) {
+-          E scheme = findExternalizableSchemeByFileName(file.getName());
+-          T oldCurrentScheme = null;
+-          if (scheme != null) {
+-            oldCurrentScheme = getCurrentScheme();
+-            //noinspection unchecked
+-            removeScheme((T)scheme);
+-            myProcessor.onSchemeDeleted(scheme);
+-          }
+-
+-          T newCurrentScheme = getCurrentScheme();
+-          if (oldCurrentScheme != null && newCurrentScheme == null) {
+-            if (!mySchemes.isEmpty()) {
+-              setCurrentSchemeName(mySchemes.get(0).getName());
+-              newCurrentScheme = getCurrentScheme();
+-            }
+-          }
+-
+-          if (oldCurrentScheme != newCurrentScheme) {
+-            myProcessor.onCurrentSchemeChanged(oldCurrentScheme);
+-          }
+-        }
+-      }, false, application);
+-    }
+-  }
+-
+-  @Override
+-  public void loadBundledScheme(@NotNull String resourceName, @NotNull Object requestor, @NotNull ThrowableConvertor<Element, T, Throwable> convertor) {
+-    try {
+-      URL url = requestor instanceof AbstractExtensionPointBean
+-                ? (((AbstractExtensionPointBean)requestor).getLoaderForClass().getResource(resourceName))
+-                : DecodeDefaultsUtil.getDefaults(requestor, resourceName);
+-      if (url == null) {
+-        // Error shouldn't occur during this operation thus we report error instead of info
+-        LOG.error("Cannot read scheme from " + resourceName);
+-        return;
+-      }
+-      Element element = JDOMUtil.load(URLUtil.openStream(url));
+-      T scheme = convertor.convert(element);
+-
+-      if (scheme instanceof ExternalizableScheme) {
+-        String fileName = PathUtilRt.getFileName(url.getPath());
+-        String extension = getFileExtension(fileName, true);
+-        ExternalInfo info = new ExternalInfo(fileName.substring(0, fileName.length() - extension.length()), extension);
+-        info.hash = JDOMUtil.getTreeHash(element, true);
+-        info.schemeName = scheme.getName();
+-        ExternalInfo oldInfo = schemeToInfo.put((ExternalizableScheme)scheme, info);
+-        LOG.assertTrue(oldInfo == null);
+-      }
+-
+-      addNewScheme(scheme, false);
+-    }
+-    catch (Throwable e) {
+-      LOG.error("Cannot read scheme from " + resourceName, e);
+-    }
+-  }
+-
+-  @NotNull
+-  private String getFileExtension(@NotNull CharSequence fileName, boolean allowAny) {
+-    String extension;
+-    if (StringUtilRt.endsWithIgnoreCase(fileName, mySchemeExtension)) {
+-      extension = mySchemeExtension;
+-    }
+-    else if (StringUtilRt.endsWithIgnoreCase(fileName, DirectoryStorageData.DEFAULT_EXT)) {
+-      extension = DirectoryStorageData.DEFAULT_EXT;
+-    }
+-    else if (allowAny) {
+-      extension = PathUtil.getFileExtension(fileName.toString());
+-      LOG.assertTrue(extension != null);
+-    }
+-    else {
+-      throw new IllegalStateException("Scheme file extension " + fileName + " is unknown, must be filtered out");
+-    }
+-    return extension;
+-  }
+-
+-  private boolean isMy(@NotNull VirtualFileEvent event) {
+-    return isMy(event.getFile());
+-  }
+-
+-  private boolean isMy(@NotNull VirtualFile file) {
+-    return StringUtilRt.endsWithIgnoreCase(file.getNameSequence(), mySchemeExtension);
+-  }
+-
+-  @Override
+-  @NotNull
+-  public Collection<E> loadSchemes() {
+-    final Map<String, E> result = new LinkedHashMap<String, E>();
+-    if (provider != null && provider.isEnabled()) {
+-      provider.processChildren(myFileSpec, myRoamingType, new Condition<String>() {
+-        @Override
+-        public boolean value(@NotNull String name) {
+-          return canRead(name);
+-        }
+-      }, new StreamProvider.ChildrenProcessor() {
+-        @Override
+-        public boolean process(@NotNull String name, @NotNull InputStream input) {
+-          loadScheme(name, input, result);
+-          return true;
+-        }
+-      });
+-    }
+-    else {
+-      VirtualFile dir = getDirectory();
+-      VirtualFile[] files = dir == null ? null : dir.getChildren();
+-      if (files != null) {
+-        for (VirtualFile file : files) {
+-          readSchemeFromFile(file, result);
+-        }
+-      }
+-    }
+-
+-    Collection<E> list = result.values();
+-    for (E scheme : list) {
+-      myProcessor.initScheme(scheme);
+-    }
+-    return list;
+-  }
+-
+-  public void reload() {
+-    // we must not remove non-persistent (e.g. predefined) schemes, because we cannot load it (obviously)
+-    for (int i = mySchemes.size() - 1; i >= 0; i--) {
+-      T scheme = mySchemes.get(i);
+-      //noinspection unchecked
+-      if (scheme instanceof ExternalizableScheme && getState(((E)scheme)) != BaseSchemeProcessor.State.NON_PERSISTENT) {
+-        mySchemes.remove(i);
+-        if (scheme == myCurrentScheme) {
+-          myCurrentScheme = null;
+-        }
+-      }
+-    }
+-
+-    retainExternalInfo(mySchemes);
+-
+-    loadSchemes();
+-  }
+-
+-  @Nullable
+-  private E findExternalizableSchemeByFileName(@NotNull String fileName) {
+-    for (T scheme : mySchemes) {
+-      if (scheme instanceof ExternalizableScheme) {
+-        if (fileName.equals((getFileName((ExternalizableScheme)scheme)) + mySchemeExtension)) {
+-          //noinspection CastConflictsWithInstanceof,unchecked
+-          return (E)scheme;
+-        }
+-      }
+-    }
+-    return null;
+-  }
+-
+-  private boolean isOverwriteOnLoad(@NotNull T existingScheme) {
+-    if (existingScheme instanceof ExternalizableScheme) {
+-      ExternalInfo info = schemeToInfo.get(existingScheme);
+-      if (info != null && !mySchemeExtension.equals(info.fileExtension)) {
+-        // scheme from file with old extension, so, we must ignore it
+-        return true;
+-      }
+-    }
+-    return false;
+-  }
+-
+-  @Nullable
+-  private E loadScheme(@NotNull CharSequence fileName, @NotNull InputStream input, @Nullable Map<String, E> result) {
+-    boolean duringLoad = result != null;
+-    try {
+-      Element element = JDOMUtil.load(input);
+-      E scheme;
+-      if (myProcessor instanceof BaseSchemeProcessor) {
+-        scheme = ((BaseSchemeProcessor<E>)myProcessor).readScheme(element, duringLoad);
+-      }
+-      else {
+-        //noinspection deprecation
+-        scheme = myProcessor.readScheme(new Document((Element)element.detach()));
+-      }
+-
+-      if (scheme == null) {
+-        return null;
+-      }
+-
+-      String extension = getFileExtension(fileName, false);
+-      String fileNameWithoutExtension = fileName.subSequence(0, fileName.length() - extension.length()).toString();
+-      if (duringLoad) {
+-        if (filesToDelete.contains(fileName.toString())) {
+-          LOG.warn("Scheme file " + fileName + " is not loaded because marked to delete");
+-          return null;
+-        }
+-
+-        T existingScheme = findSchemeByName(scheme.getName());
+-        if (existingScheme != null) {
+-          if (isOverwriteOnLoad(existingScheme)) {
+-            removeScheme(existingScheme);
+-          }
+-          else {
+-            // We don't load scheme with duplicated name - if we generate unique name for it, it will be saved then with new name.
+-            // It is not what all can expect. Such situation in most cases indicates error on previous level, so, we just warn about it.
+-            LOG.warn("Scheme file " + fileName + " is not loaded because defines duplicated name " + scheme.getName());
+-            return null;
+-          }
+-        }
+-      }
+-
+-      ExternalInfo info = schemeToInfo.get(scheme);
+-      if (info == null) {
+-        info = new ExternalInfo(fileNameWithoutExtension, extension);
+-        schemeToInfo.put(scheme, info);
+-      }
+-      else {
+-        info.setFileNameWithoutExtension(fileNameWithoutExtension, extension);
+-      }
+-      info.hash = JDOMUtil.getTreeHash(element, true);
+-      info.schemeName = scheme.getName();
+-
+-      //noinspection unchecked
+-      T s = (T)scheme;
+-      if (duringLoad) {
+-        mySchemes.add(s);
+-      }
+-      else {
+-        addScheme(s);
+-      }
+-
+-      if (result != null) {
+-        result.put(scheme.getName(), scheme);
+-      }
+-      return scheme;
+-    }
+-    catch (Exception e) {
+-      LOG.error("Cannot read scheme " + fileName, e);
+-    }
+-    return null;
+-  }
+-
+-  @Nullable
+-  private String getFileName(@NotNull ExternalizableScheme scheme) {
+-    ExternalInfo info = schemeToInfo.get(scheme);
+-    return info == null ? null : info.fileNameWithoutExtension;
+-  }
+-
+-  private boolean canRead(@NotNull CharSequence name) {
+-    return myUpdateExtension && StringUtilRt.endsWithIgnoreCase(name, DirectoryStorageData.DEFAULT_EXT) || StringUtilRt.endsWithIgnoreCase(name, mySchemeExtension);
+-  }
+-
+-  @Nullable
+-  private E readSchemeFromFile(@NotNull VirtualFile file, @Nullable Map<String, E> result) {
+-    CharSequence fileName = file.getNameSequence();
+-    if (file.isDirectory() || !canRead(fileName)) {
+-      return null;
+-    }
+-
+-    try {
+-      return loadScheme(fileName, file.getInputStream(), result);
+-    }
+-    catch (IOException e) {
+-      LOG.error("Cannot read scheme " + fileName, e);
+-    }
+-    return null;
+-  }
+-
+-  @Override
+-  public void save() {
+-    boolean hasSchemes = false;
+-    UniqueNameGenerator nameGenerator = new UniqueNameGenerator();
+-    List<E> schemesToSave = new SmartList<E>();
+-    for (T scheme : mySchemes) {
+-      if (scheme instanceof ExternalizableScheme) {
+-        //noinspection CastConflictsWithInstanceof,unchecked
+-        E eScheme = (E)scheme;
+-        BaseSchemeProcessor.State state = getState(eScheme);
+-        if (state == BaseSchemeProcessor.State.NON_PERSISTENT) {
+-          continue;
+-        }
+-
+-        hasSchemes = true;
+-
+-        if (state != BaseSchemeProcessor.State.UNCHANGED) {
+-          schemesToSave.add(eScheme);
+-        }
+-
+-        String fileName = getFileName(eScheme);
+-        if (fileName != null && !isRenamed(eScheme)) {
+-          nameGenerator.addExistingName(fileName);
+-        }
+-      }
+-    }
+-
+-    List<Throwable> errors = null;
+-
+-    for (E scheme : schemesToSave) {
+-      try {
+-        saveScheme(scheme, nameGenerator);
+-      }
+-      catch (Throwable e) {
+-        if (errors == null) {
+-          errors = new SmartList<Throwable>();
+-        }
+-        errors.add(e);
+-      }
+-    }
+-
+-    VirtualFile dir = getDirectory();
+-    errors = deleteFiles(dir, errors);
+-
+-    if (!hasSchemes && dir != null) {
+-      errors = removeDirectoryIfEmpty(dir, errors);
+-    }
+-
+-    CompoundRuntimeException.doThrow(errors);
+-  }
+-
+-  @Nullable
+-  private List<Throwable> removeDirectoryIfEmpty(@NotNull VirtualFile dir, @Nullable List<Throwable> errors) {
+-    for (VirtualFile file : dir.getChildren()) {
+-      if (!file.is(VFileProperty.HIDDEN)) {
+-        LOG.info("Directory " + dir.getNameSequence() + " is not deleted: at least one file " + file.getNameSequence() + " exists");
+-        return errors;
+-      }
+-    }
+-
+-    LOG.info("Remove schemes directory " + dir.getNameSequence());
+-    myDir = null;
+-
+-    AccessToken token = WriteAction.start();
+-    try {
+-      dir.delete(this);
+-    }
+-    catch (Throwable e) {
+-      if (errors == null) {
+-        errors = new SmartList<Throwable>();
+-      }
+-      errors.add(e);
+-    }
+-    finally {
+-      token.finish();
+-    }
+-    return errors;
+-  }
+-
+-  @NotNull
+-  private BaseSchemeProcessor.State getState(@NotNull E scheme) {
+-    if (myProcessor instanceof BaseSchemeProcessor) {
+-      return ((BaseSchemeProcessor<E>)myProcessor).getState(scheme);
+-    }
+-    else {
+-      //noinspection deprecation
+-      return myProcessor.shouldBeSaved(scheme) ? BaseSchemeProcessor.State.POSSIBLY_CHANGED : BaseSchemeProcessor.State.NON_PERSISTENT;
+-    }
+-  }
+-
+-  private void saveScheme(@NotNull E scheme, @NotNull UniqueNameGenerator nameGenerator) throws WriteExternalException, IOException {
+-    @Nullable
+-    ExternalInfo externalInfo = schemeToInfo.get(scheme);
+-    String currentFileNameWithoutExtension = externalInfo == null ? null : externalInfo.fileNameWithoutExtension;
+-    Parent parent = myProcessor.writeScheme(scheme);
+-    Element element = parent == null || parent instanceof Element ? (Element)parent : ((Document)parent).detachRootElement();
+-    if (JDOMUtil.isEmpty(element)) {
+-      if (externalInfo != null) {
+-        scheduleDelete(externalInfo);
+-      }
+-      return;
+-    }
+-
+-    String fileNameWithoutExtension = currentFileNameWithoutExtension;
+-    if (fileNameWithoutExtension == null || isRenamed(scheme)) {
+-      fileNameWithoutExtension = nameGenerator.generateUniqueName(FileUtil.sanitizeName(scheme.getName()));
+-    }
+-
+-    int newHash = JDOMUtil.getTreeHash(element, true);
+-    if (externalInfo != null && currentFileNameWithoutExtension == fileNameWithoutExtension && newHash == externalInfo.hash) {
+-      return;
+-    }
+-
+-    String fileName = fileNameWithoutExtension + mySchemeExtension;
+-    // file will be overwritten, so, we don't need to delete it
+-    filesToDelete.remove(fileName);
+-
+-    // stream provider always use LF separator
+-    BufferExposingByteArrayOutputStream byteOut = StorageUtil.writeToBytes(element, "\n");
+-
+-    String providerPath;
+-    if (provider != null && provider.isEnabled()) {
+-      providerPath = myFileSpec + '/' + fileName;
+-      if (!provider.isApplicable(providerPath, myRoamingType)) {
+-        providerPath = null;
+-      }
+-    }
+-    else {
+-      providerPath = null;
+-    }
+-
+-    // if another new scheme uses old name of this scheme, so, we must not delete it (as part of rename operation)
+-    boolean renamed = externalInfo != null && fileNameWithoutExtension != currentFileNameWithoutExtension && nameGenerator.value(currentFileNameWithoutExtension);
+-    if (providerPath == null) {
+-      VirtualFile file = null;
+-      VirtualFile dir = getDirectory();
+-      if (dir == null || !dir.isValid()) {
+-        dir = DirectoryBasedStorage.createDir(myIoDir, this);
+-        myDir = dir;
+-      }
+-
+-      if (renamed) {
+-        file = dir.findChild(externalInfo.fileNameWithoutExtension + externalInfo.fileExtension);
+-        if (file != null) {
+-          AccessToken token = WriteAction.start();
+-          try {
+-            file.rename(this, fileName);
+-          }
+-          finally {
+-            token.finish();
+-          }
+-        }
+-      }
+-
+-      if (file == null) {
+-        file = DirectoryBasedStorage.getFile(fileName, dir, this);
+-      }
+-
+-      AccessToken token = WriteAction.start();
+-      try {
+-        OutputStream out = file.getOutputStream(this);
+-        try {
+-          byteOut.writeTo(out);
+-        }
+-        finally {
+-          out.close();
+-        }
+-      }
+-      finally {
+-        token.finish();
+-      }
+-    }
+-    else {
+-      if (renamed) {
+-        scheduleDelete(externalInfo);
+-      }
+-      provider.saveContent(providerPath, byteOut.getInternalBuffer(), byteOut.size(), myRoamingType);
+-    }
+-
+-    if (externalInfo == null) {
+-      externalInfo = new ExternalInfo(fileNameWithoutExtension, mySchemeExtension);
+-      schemeToInfo.put(scheme, externalInfo);
+-    }
+-    else {
+-      externalInfo.setFileNameWithoutExtension(fileNameWithoutExtension, mySchemeExtension);
+-    }
+-    externalInfo.hash = newHash;
+-    externalInfo.schemeName = scheme.getName();
+-  }
+-
+-
+-  private void scheduleDelete(@NotNull ExternalInfo externalInfo) {
+-    filesToDelete.add(externalInfo.fileNameWithoutExtension + externalInfo.fileExtension);
+-  }
+-
+-  private boolean isRenamed(@NotNull ExternalizableScheme scheme) {
+-    ExternalInfo info = schemeToInfo.get(scheme);
+-    return info != null && !scheme.getName().equals(info.schemeName);
+-  }
+-
+-  @Nullable
+-  private List<Throwable> deleteFiles(@Nullable VirtualFile dir, List<Throwable> errors) {
+-    if (filesToDelete.isEmpty()) {
+-      return errors;
+-    }
+-
+-    if (provider != null && provider.isEnabled()) {
+-      for (String name : filesToDelete) {
+-        try {
+-          StorageUtil.delete(provider, myFileSpec + '/' + name, myRoamingType);
+-        }
+-        catch (Throwable e) {
+-          if (errors == null) {
+-            errors = new SmartList<Throwable>();
+-          }
+-          errors.add(e);
+-        }
+-      }
+-    }
+-    else if (dir != null) {
+-      AccessToken token = null;
+-      try {
+-        for (VirtualFile file : dir.getChildren()) {
+-          if (filesToDelete.contains(file.getName())) {
+-            if (token == null) {
+-              token = WriteAction.start();
+-            }
+-
+-            try {
+-              file.delete(this);
+-            }
+-            catch (IOException e) {
+-              if (errors == null) {
+-                errors = new SmartList<Throwable>();
+-              }
+-              errors.add(e);
+-            }
+-          }
+-        }
+-      }
+-      finally {
+-        if (token != null) {
+-          token.finish();
+-        }
+-      }
+-    }
+-
+-    filesToDelete.clear();
+-    return errors;
+-  }
+-
+-  @Nullable
+-  private VirtualFile getDirectory() {
+-    VirtualFile result = myDir;
+-    if (result == null) {
+-      result = LocalFileSystem.getInstance().findFileByIoFile(myIoDir);
+-      myDir = result;
+-    }
+-    return result;
+-  }
+-
+-  @Override
+-  public File getRootDirectory() {
+-    return myIoDir;
+-  }
+-
+-  private void schemeAdded(@NotNull T scheme) {
+-    if (!(scheme instanceof ExternalizableScheme)) {
+-      return;
+-    }
+-
+-    ExternalInfo info = schemeToInfo.get(scheme);
+-    if (info != null) {
+-      filesToDelete.remove(info.fileNameWithoutExtension + info.fileExtension);
+-    }
+-  }
+-
+-  @Override
+-  public void setSchemes(@NotNull final List<T> newSchemes, @Nullable Condition<T> removeCondition) {
+-    if (removeCondition == null) {
+-      mySchemes.clear();
+-    }
+-    else {
+-      for (int i = mySchemes.size() - 1; i >= 0; i--) {
+-        T scheme = mySchemes.get(i);
+-        if (removeCondition.value(scheme)) {
+-          mySchemes.remove(i);
+-        }
+-      }
+-    }
+-
+-    retainExternalInfo(newSchemes);
+-
+-    mySchemes.ensureCapacity(newSchemes.size());
+-    for (T scheme : newSchemes) {
+-      mySchemes.add(scheme);
+-      schemeAdded(scheme);
+-    }
+-
+-    if (myCurrentSchemeName != null) {
+-      myCurrentScheme = findSchemeByName(myCurrentSchemeName);
+-      if (myCurrentScheme != null) {
+-        return;
+-      }
+-    }
+-
+-    myCurrentScheme = mySchemes.isEmpty() ? null : mySchemes.get(0);
+-    myCurrentSchemeName = myCurrentScheme == null ? null : myCurrentScheme.getName();
+-  }
+-
+-  private void retainExternalInfo(@NotNull final List<T> schemes) {
+-    if (schemeToInfo.isEmpty()) {
+-      return;
+-    }
+-
+-    schemeToInfo.retainEntries(new TObjectObjectProcedure<ExternalizableScheme, ExternalInfo>() {
+-      @Override
+-      public boolean execute(ExternalizableScheme scheme, ExternalInfo info) {
+-        for (T t : schemes) {
+-          if (t == scheme) {
+-            return true;
+-          }
+-        }
+-
+-        scheduleDelete(info);
+-        return false;
+-      }
+-    });
+-  }
+-
+-  @Override
+-  public void addNewScheme(@NotNull T scheme, boolean replaceExisting) {
+-    int toReplace = -1;
+-    for (int i = 0; i < mySchemes.size(); i++) {
+-      T existing = mySchemes.get(i);
+-      if (existing.getName().equals(scheme.getName())) {
+-        if (!Comparing.equal(existing.getClass(), scheme.getClass())) {
+-          LOG.warn("'" + scheme.getName() + "' " + existing.getClass().getSimpleName() + " replaced with " + scheme.getClass().getSimpleName());
+-        }
+-
+-        toReplace = i;
+-        if (replaceExisting && existing instanceof ExternalizableScheme) {
+-          ExternalInfo oldInfo = schemeToInfo.remove((ExternalizableScheme)existing);
+-          if (oldInfo != null && scheme instanceof ExternalizableScheme) {
+-            ExternalInfo newInfo = schemeToInfo.get((ExternalizableScheme)scheme);
+-            if (newInfo == null) {
+-              schemeToInfo.put((ExternalizableScheme)scheme, oldInfo);
+-            }
+-          }
+-        }
+-        break;
+-      }
+-    }
+-    if (toReplace == -1) {
+-      mySchemes.add(scheme);
+-    }
+-    else if (replaceExisting || !(scheme instanceof ExternalizableScheme)) {
+-      mySchemes.set(toReplace, scheme);
+-    }
+-    else {
+-      //noinspection unchecked
+-      renameScheme((ExternalizableScheme)scheme, UniqueNameGenerator.generateUniqueName(scheme.getName(), collectExistingNames(mySchemes)));
+-      mySchemes.add(scheme);
+-    }
+-
+-    schemeAdded(scheme);
+-  }
+-
+-  @NotNull
+-  private Collection<String> collectExistingNames(@NotNull Collection<T> schemes) {
+-    Set<String> result = new THashSet<String>(schemes.size());
+-    for (T scheme : schemes) {
+-      result.add(scheme.getName());
+-    }
+-    return result;
+-  }
+-
+-  @Override
+-  public void clearAllSchemes() {
+-    schemeToInfo.forEachValue(new TObjectProcedure<ExternalInfo>() {
+-      @Override
+-      public boolean execute(ExternalInfo info) {
+-        scheduleDelete(info);
+-        return true;
+-      }
+-    });
+-
+-    myCurrentScheme = null;
+-    mySchemes.clear();
+-    schemeToInfo.clear();
+-  }
+-
+-  @Override
+-  @NotNull
+-  public List<T> getAllSchemes() {
+-    return Collections.unmodifiableList(mySchemes);
+-  }
+-
+-  @Override
+-  @Nullable
+-  public T findSchemeByName(@NotNull String schemeName) {
+-    for (T scheme : mySchemes) {
+-      if (scheme.getName().equals(schemeName)) {
+-        return scheme;
+-      }
+-    }
+-    return null;
+-  }
+-
+-  @Override
+-  public void setCurrentSchemeName(@Nullable String schemeName) {
+-    myCurrentSchemeName = schemeName;
+-    myCurrentScheme = null;
+-  }
+-
+-  @Override
+-  @Nullable
+-  public T getCurrentScheme() {
+-    T scheme = myCurrentScheme;
+-    if (scheme == null && myCurrentSchemeName != null) {
+-      scheme = findSchemeByName(myCurrentSchemeName);
+-      if (scheme != null) {
+-        myCurrentScheme = scheme;
+-      }
+-    }
+-    return scheme;
+-  }
+-
+-  @Override
+-  public void removeScheme(@NotNull T scheme) {
+-    for (int i = 0, n = mySchemes.size(); i < n; i++) {
+-      T s = mySchemes.get(i);
+-      if (scheme.getName().equals(s.getName())) {
+-        if (myCurrentScheme == s) {
+-          myCurrentScheme = null;
+-        }
+-
+-        if (s instanceof ExternalizableScheme) {
+-          ExternalInfo info = schemeToInfo.remove((ExternalizableScheme)s);
+-          if (info != null) {
+-            scheduleDelete(info);
+-          }
+-        }
+-        mySchemes.remove(i);
+-        break;
+-      }
+-    }
+-  }
+-
+-  @Override
+-  @NotNull
+-  public Collection<String> getAllSchemeNames() {
+-    if (mySchemes.isEmpty()) {
+-      return Collections.emptyList();
+-    }
+-
+-    List<String> names = new ArrayList<String>(mySchemes.size());
+-    for (T scheme : mySchemes) {
+-      names.add(scheme.getName());
+-    }
+-    return names;
+-  }
+-
+-  private static void renameScheme(@NotNull ExternalizableScheme scheme, @NotNull String newName) {
+-    if (!newName.equals(scheme.getName())) {
+-      scheme.setName(newName);
+-      LOG.assertTrue(newName.equals(scheme.getName()));
+-    }
+-  }
+-
+-  private static final class ExternalInfo {
+-    public ExternalInfo(@NotNull String fileNameWithoutExtension, @NotNull String fileExtension) {
+-      this.fileNameWithoutExtension = fileNameWithoutExtension;
+-      this.fileExtension = fileExtension;
+-    }
+-
+-    // we keep it to detect rename
+-    private String schemeName;
+-
+-
+-    @NotNull
+-    private String fileNameWithoutExtension;
+-
+-    private int hash;
+-
+-    private String fileExtension;
+-
+-    public void setFileNameWithoutExtension(@NotNull String nameWithoutExtension, @NotNull String extension) {
+-      fileNameWithoutExtension = nameWithoutExtension;
+-      fileExtension = extension;
+-    }
+-
+-    @Override
+-    public String toString() {
+-      return fileNameWithoutExtension;
+-    }
+-  }
+-
+-  @Override
+-  public String toString() {
+-    return myFileSpec;
+-  }
+-}
+\ No newline at end of file
+Index: community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListPanel.form
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListPanel.form	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListPanel.form	(revision )
+@@ -32,7 +32,7 @@
+             </constraints>
+             <properties/>
+           </component>
+-          <component id="1d65e" class="javax.swing.JTextField" binding="myDisplayName">
++          <component id="1d65e" class="javax.swing.JTextField" binding="myName">
+             <constraints>
+               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                 <preferred-size width="150" height="-1"/>
+Index: community/platform/core-api/src/com/intellij/openapi/options/SchemesManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/core-api/src/com/intellij/openapi/options/SchemesManager.java	(date 1435744807000)
++++ community/platform/core-api/src/com/intellij/openapi/options/SchemesManager.java	(revision )
+@@ -46,8 +46,6 @@
+   @Nullable
+   public abstract T findSchemeByName(@NotNull String schemeName);
+ 
+-  public abstract void save();
+-
+   public abstract void setCurrentSchemeName(@Nullable String schemeName);
+ 
+   @Nullable
+@@ -60,6 +58,9 @@
+ 
+   public abstract File getRootDirectory();
+ 
++  /**
++   * Must be called before {@link #loadSchemes}
++   */
+   public void loadBundledScheme(@NotNull String resourceName, @NotNull Object requestor, @NotNull ThrowableConvertor<Element, T, Throwable> convertor) {
+   }
+ 
+@@ -68,5 +69,12 @@
+   }
+ 
+   public void setSchemes(@NotNull List<T> schemes, @Nullable Condition<T> removeCondition) {
++  }
++
++  /**
++   * Bundled / read-only (or overriding) scheme cannot be renamed or deleted.
++   */
++  public boolean isMetadataEditable(@NotNull E scheme) {
++    return true;
+   }
+ }
+Index: community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListsUi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListsUi.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListsUi.java	(revision )
+@@ -62,7 +62,13 @@
+     public String getName(@NotNull QuickList item) {
+       return item.getName();
+     }
++
++    @Override
++    public boolean isRemovable(@NotNull QuickList item) {
++      return QuickListsManager.getInstance().getSchemeManager().isMetadataEditable(item);
++    }
+   };
++
+   private final ListModelEditor<QuickList> editor = new ListModelEditor<QuickList>(itemEditor);
+ 
+   private JComponent component;
+@@ -90,12 +96,12 @@
+     });
+ 
+     itemPanel = new QuickListPanel(editor.getModel());
+-    itemPanel.myDisplayName.getDocument().addDocumentListener(new DocumentAdapter() {
++    itemPanel.myName.getDocument().addDocumentListener(new DocumentAdapter() {
+       @Override
+       protected void textChanged(DocumentEvent e) {
+         QuickList item = itemPanel.item;
+         if (item != null) {
+-          String name = itemPanel.myDisplayName.getText();
++          String name = itemPanel.myName.getText();
+           boolean changed = !item.getName().equals(name);
+           item.setName(name);
+           if (changed) {
+Index: community/platform/platform-impl/src/com/intellij/openapi/components/impl/stores/StreamProvider.java
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/components/impl/stores/StreamProvider.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/components/impl/stores/StreamProvider.java	(date 1435744807000)
+@@ -1,89 +0,0 @@
+-/*
+- * Copyright 2000-2015 JetBrains s.r.o.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- * http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package com.intellij.openapi.components.impl.stores;
+-
+-import com.intellij.openapi.components.RoamingType;
+-import com.intellij.openapi.util.Condition;
+-import org.jetbrains.annotations.NotNull;
+-import org.jetbrains.annotations.Nullable;
+-
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.util.Collection;
+-import java.util.Collections;
+-
+-public abstract class StreamProvider {
+-  public static final StreamProvider[] EMPTY_ARRAY = new StreamProvider[0];
+-
+-  public boolean isEnabled() {
+-    return true;
+-  }
+-
+-  /**
+-   * fileSpec Only main fileSpec, not version
+-   */
+-  public boolean isApplicable(@NotNull String fileSpec, @NotNull RoamingType roamingType) {
+-    return true;
+-  }
+-
+-  /**
+-   * @param fileSpec
+-   * @param content bytes of content, size of array is not actual size of data, you must use {@code size}
+-   * @param size actual size of data
+-   */
+-  public abstract void saveContent(@NotNull String fileSpec, @NotNull byte[] content, int size, @NotNull RoamingType roamingType) throws IOException;
+-
+-  @Nullable
+-  public abstract InputStream loadContent(@NotNull String fileSpec, @NotNull RoamingType roamingType) throws IOException;
+-
+-  @NotNull
+-  public Collection<String> listSubFiles(@NotNull String fileSpec, @NotNull RoamingType roamingType) {
+-    return Collections.emptyList();
+-  }
+-
+-  /**
+-   * You must close passed input stream.
+-   */
+-  public void processChildren(@NotNull String path, @NotNull RoamingType roamingType, @NotNull Condition<String> filter, @NotNull ChildrenProcessor processor) {
+-    for (String name : listSubFiles(path, roamingType)) {
+-      if (!filter.value(name)) {
+-        continue;
+-      }
+-
+-      InputStream input;
+-      try {
+-        input = loadContent(path + '/' + name, roamingType);
+-      }
+-      catch (IOException e) {
+-        StorageUtil.LOG.error(e);
+-        continue;
+-      }
+-
+-      if (input != null && !processor.process(name, input)) {
+-        break;
+-      }
+-    }
+-  }
+-
+-  public abstract static class ChildrenProcessor {
+-    public abstract boolean process(@NotNull String name, @NotNull InputStream input);
+-  }
+-
+-  /**
+-   * Delete file or directory
+-   */
+-  public abstract void delete(@NotNull String fileSpec, @NotNull RoamingType roamingType);
+-}
+\ No newline at end of file
+Index: community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerFactoryImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerFactoryImpl.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/options/SchemesManagerFactoryImpl.java	(revision )
+@@ -62,15 +62,12 @@
+ 
+   @Override
+   public void save() {
+-    List<Throwable> errors = null;
+-    for (SchemesManager registeredManager : myRegisteredManagers) {
++    List<Throwable> errors = new SmartList<Throwable>();
++    for (SchemesManagerImpl registeredManager : myRegisteredManagers) {
+       try {
+-        registeredManager.save();
++        registeredManager.save(errors);
+       }
+       catch (Throwable e) {
+-        if (errors == null) {
+-          errors = new SmartList<Throwable>();
+-        }
+         errors.add(e);
+       }
+     }
+Index: community/platform/platform-tests/testSrc/com/intellij/openapi/components/impl/ApplicationStoreTest.java
+===================================================================
+--- community/platform/platform-tests/testSrc/com/intellij/openapi/components/impl/ApplicationStoreTest.java	(date 1435744807000)
++++ community/platform/platform-tests/testSrc/com/intellij/openapi/components/impl/ApplicationStoreTest.java	(date 1435744807000)
+@@ -1,288 +0,0 @@
+-/*
+- * Copyright 2000-2015 JetBrains s.r.o.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- * http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package com.intellij.openapi.components.impl;
+-
+-import com.intellij.application.options.PathMacrosImpl;
+-import com.intellij.openapi.Disposable;
+-import com.intellij.openapi.application.ApplicationManager;
+-import com.intellij.openapi.components.*;
+-import com.intellij.openapi.components.impl.stores.*;
+-import com.intellij.openapi.util.Disposer;
+-import com.intellij.openapi.util.io.FileUtil;
+-import com.intellij.openapi.vfs.CharsetToolkit;
+-import com.intellij.testFramework.LightPlatformTestCase;
+-import com.intellij.util.messages.MessageBus;
+-import com.intellij.util.xmlb.XmlSerializerUtil;
+-import gnu.trove.THashMap;
+-import org.intellij.lang.annotations.Language;
+-import org.jetbrains.annotations.NotNull;
+-import org.jetbrains.annotations.Nullable;
+-
+-import java.io.ByteArrayInputStream;
+-import java.io.File;
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.util.Map;
+-
+-import static org.hamcrest.CoreMatchers.equalTo;
+-import static org.hamcrest.MatcherAssert.assertThat;
+-
+-public class ApplicationStoreTest extends LightPlatformTestCase {
+-  private File testAppConfig;
+-  private MyComponentStore componentStore;
+-
+-  @Override
+-  public void setUp() throws Exception {
+-    super.setUp();
+-
+-    String testAppConfigPath = System.getProperty("test.app.config.path");
+-    if (testAppConfigPath == null) {
+-      testAppConfig = FileUtil.createTempDirectory("testAppSettings", null);
+-    }
+-    else {
+-      testAppConfig = new File(FileUtil.expandUserHome(testAppConfigPath));
+-    }
+-    FileUtil.delete(testAppConfig);
+-
+-    componentStore = new MyComponentStore(testAppConfig.getAbsolutePath());
+-  }
+-
+-  @Override
+-  public void tearDown() throws Exception {
+-    try {
+-      Disposer.dispose(componentStore);
+-      componentStore = null;
+-    }
+-    finally {
+-      try {
+-        super.tearDown();
+-      }
+-      finally {
+-        FileUtil.delete(testAppConfig);
+-      }
+-    }
+-  }
+-
+-  public void testStreamProviderSaveIfSeveralStoragesConfigured() throws Throwable {
+-    SeveralStoragesConfigured component = new SeveralStoragesConfigured();
+-
+-    MyStreamProvider streamProvider = new MyStreamProvider();
+-    componentStore.getStateStorageManager().setStreamProvider(streamProvider);
+-
+-    componentStore.initComponent(component, false);
+-    component.foo = "newValue";
+-    StoreUtil.save(componentStore, null);
+-
+-    assertThat(
+-      streamProvider.data.get(RoamingType.PER_USER).get(StoragePathMacros.APP_CONFIG + "/proxy.settings.xml"),
+-      equalTo("<application>\n" +
+-              "  <component name=\"HttpConfigurable\">\n" +
+-              "    <option name=\"foo\" value=\"newValue\" />\n" +
+-              "  </component>\n" +
+-              "</application>"));
+-  }
+-
+-  public void testLoadFromStreamProvider() throws Exception {
+-    SeveralStoragesConfigured component = new SeveralStoragesConfigured();
+-
+-    MyStreamProvider streamProvider = new MyStreamProvider();
+-    THashMap<String, String> map = new THashMap<String, String>();
+-    map.put(StoragePathMacros.APP_CONFIG + "/proxy.settings.xml", "<application>\n" +
+-                                                                  "  <component name=\"HttpConfigurable\">\n" +
+-                                                                  "    <option name=\"foo\" value=\"newValue\" />\n" +
+-                                                                  "  </component>\n" +
+-                                                                  "</application>");
+-    streamProvider.data.put(RoamingType.PER_USER, map);
+-
+-    componentStore.getStateStorageManager().setStreamProvider(streamProvider);
+-    componentStore.initComponent(component, false);
+-    assertThat(component.foo, equalTo("newValue"));
+-  }
+-
+-  public void testRemoveDeprecatedStorageOnWrite() throws Exception {
+-    doRemoveDeprecatedStorageOnWrite(new SeveralStoragesConfigured());
+-  }
+-
+-  public void testRemoveDeprecatedStorageOnWrite2() throws Exception {
+-    doRemoveDeprecatedStorageOnWrite(new ActualStorageLast());
+-  }
+-
+-  private void doRemoveDeprecatedStorageOnWrite(@NotNull Foo component) throws IOException {
+-    File oldFile = saveConfig("other.xml", "<application>" +
+-                                           "  <component name=\"HttpConfigurable\">\n" +
+-                                           "    <option name=\"foo\" value=\"old\" />\n" +
+-                                           "  </component>\n" +
+-                                           "</application>");
+-
+-    saveConfig("proxy.settings.xml", "<application>\n" +
+-                                     "  <component name=\"HttpConfigurable\">\n" +
+-                                     "    <option name=\"foo\" value=\"new\" />\n" +
+-                                     "  </component>\n" +
+-                                     "</application>");
+-
+-    componentStore.initComponent(component, false);
+-    assertThat(component.foo, equalTo("new"));
+-
+-    component.foo = "new2";
+-    StoreUtil.save(componentStore, null);
+-
+-    assertThat(oldFile.exists(), equalTo(false));
+-  }
+-
+-  @NotNull
+-  private File saveConfig(@NotNull String fileName, @Language("XML") String data) throws IOException {
+-    File file = new File(testAppConfig, fileName);
+-    FileUtil.writeToFile(file, data);
+-    return file;
+-  }
+-
+-  private static class MyStreamProvider extends StreamProvider {
+-    public final Map<RoamingType, Map<String, String>> data = new THashMap<RoamingType, Map<String, String>>();
+-
+-    @Override
+-    public void saveContent(@NotNull String fileSpec,
+-                            @NotNull byte[] content,
+-                            int size,
+-                            @NotNull RoamingType roamingType) {
+-      getMap(roamingType).put(fileSpec, new String(content, 0, size, CharsetToolkit.UTF8_CHARSET));
+-    }
+-
+-    private Map<String, String> getMap(@NotNull RoamingType roamingType) {
+-      Map<String, String> map = data.get(roamingType);
+-      if (map == null) {
+-        map = new THashMap<String, String>();
+-        data.put(roamingType, map);
+-      }
+-      return map;
+-    }
+-
+-    @Nullable
+-    @Override
+-    public InputStream loadContent(@NotNull String fileSpec, @NotNull RoamingType roamingType) throws IOException {
+-      String data = getMap(roamingType).get(fileSpec);
+-      return data == null ? null : new ByteArrayInputStream(data.getBytes(CharsetToolkit.UTF8_CHARSET));
+-    }
+-
+-    @Override
+-    public void delete(@NotNull String fileSpec, @NotNull RoamingType roamingType) {
+-      Map<String, String> map = data.get(roamingType);
+-      if (map != null) {
+-        map.remove(fileSpec);
+-      }
+-    }
+-  }
+-
+-  static class MyComponentStore extends ComponentStoreImpl implements Disposable {
+-    private final StateStorageManager stateStorageManager;
+-
+-    MyComponentStore(@NotNull final String testAppConfigPath) {
+-      TrackingPathMacroSubstitutor macroSubstitutor = new ApplicationPathMacroManager().createTrackingSubstitutor();
+-      stateStorageManager = new StateStorageManagerImpl(macroSubstitutor, "application", this, ApplicationManager.getApplication().getPicoContainer()) {
+-        @NotNull
+-        @Override
+-        protected StorageData createStorageData(@NotNull String fileSpec, @NotNull String filePath) {
+-          return new StorageData("application");
+-        }
+-
+-        @Nullable
+-        @Override
+-        protected String getOldStorageSpec(@NotNull Object component, @NotNull String componentName, @NotNull StateStorageOperation operation) {
+-          return null;
+-        }
+-
+-        @Override
+-        protected TrackingPathMacroSubstitutor getMacroSubstitutor(@NotNull final String fileSpec) {
+-          if (fileSpec.equals(StoragePathMacros.APP_CONFIG + "/" + PathMacrosImpl.EXT_FILE_NAME + ".xml")) {
+-            return null;
+-          }
+-          return super.getMacroSubstitutor(fileSpec);
+-        }
+-      };
+-
+-      stateStorageManager.addMacro(StoragePathMacros.APP_CONFIG, testAppConfigPath);
+-    }
+-
+-    @Override
+-    public void load() {
+-    }
+-
+-    @NotNull
+-    @Override
+-    public StateStorageManager getStateStorageManager() {
+-      return stateStorageManager;
+-    }
+-
+-    @Override
+-    public void dispose() {
+-    }
+-
+-    @Nullable
+-    @Override
+-    protected PathMacroManager getPathMacroManagerForDefaults() {
+-      return null;
+-    }
+-
+-    @NotNull
+-    @Override
+-    protected MessageBus getMessageBus() {
+-      return ApplicationManager.getApplication().getMessageBus();
+-    }
+-  }
+-
+-  abstract static class Foo {
+-    public String foo = "defaultValue";
+-  }
+-
+-  @State(
+-    name = "HttpConfigurable",
+-    storages = {
+-      @Storage(file = StoragePathMacros.APP_CONFIG + "/proxy.settings.xml"),
+-      @Storage(file = StoragePathMacros.APP_CONFIG + "/other.xml", deprecated = true)
+-    }
+-  )
+-  static class SeveralStoragesConfigured extends Foo implements PersistentStateComponent<SeveralStoragesConfigured> {
+-    @Nullable
+-    @Override
+-    public SeveralStoragesConfigured getState() {
+-      return this;
+-    }
+-
+-    @Override
+-    public void loadState(SeveralStoragesConfigured state) {
+-      XmlSerializerUtil.copyBean(state, this);
+-    }
+-  }
+-
+-  @State(
+-    name = "HttpConfigurable",
+-    storages = {
+-      @Storage(file = StoragePathMacros.APP_CONFIG + "/other.xml", deprecated = true),
+-      @Storage(file = StoragePathMacros.APP_CONFIG + "/proxy.settings.xml")
+-    }
+-  )
+-  static class ActualStorageLast extends Foo implements PersistentStateComponent<ActualStorageLast> {
+-    @Nullable
+-    @Override
+-    public ActualStorageLast getState() {
+-      return this;
+-    }
+-
+-    @Override
+-    public void loadState(ActualStorageLast state) {
+-      XmlSerializerUtil.copyBean(state, this);
+-    }
+-  }
+-}
+Index: community/platform/platform-tests/platform-tests.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-tests/platform-tests.iml	(date 1435744807000)
++++ community/platform/platform-tests/platform-tests.iml	(revision )
+@@ -25,5 +25,6 @@
+     <orderEntry type="library" name="http-client" level="project" />
+     <orderEntry type="module" module-name="jps-model-impl" scope="TEST" />
+     <orderEntry type="library" name="gson" level="project" />
++    <orderEntry type="library" scope="TEST" name="KotlinJavaRuntime" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListPanel.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/keymap/impl/ui/QuickListPanel.java	(revision )
+@@ -36,7 +36,7 @@
+   private final CollectionListModel<Object> actionsModel;
+   private JPanel myPanel;
+   private final JBList myActionsList;
+-  JTextField myDisplayName;
++  JTextField myName;
+   private JTextField myDescription;
+   private JPanel myListPanel;
+   QuickList item;
+@@ -97,10 +97,10 @@
+       return;
+     }
+ 
+-    item.setName(myDisplayName.getText().trim());
++    item.setName(myName.getText().trim());
+     item.setDescription(myDescription.getText().trim());
+ 
+-    ListModel model = getActionsList().getModel();
++    ListModel model = myActionsList.getModel();
+     int size = model.getSize();
+     String[] ids;
+     if (size == 0) {
+@@ -124,7 +124,7 @@
+       return;
+     }
+ 
+-    myDisplayName.setText(this.item.getName());
++    myName.setText(this.item.getName());
+     myDescription.setText(item.getDescription());
+ 
+     actionsModel.removeAll();
+@@ -138,18 +138,6 @@
+     for (int i = ids.length - 1; i >= 0; i--) {
+       actionsModel.remove(ids[i]);
+     }
+-  }
+-
+-  public JList getActionsList() {
+-    return myActionsList;
+-  }
+-
+-  public String getDescription() {
+-    return myDescription.getText();
+-  }
+-
+-  public String getDisplayName() {
+-    return myDisplayName.getText();
+   }
+ 
+   private void includeActionId(@NotNull String id) {
+Index: community/platform/core-impl/src/com/intellij/openapi/options/EmptySchemesManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/core-impl/src/com/intellij/openapi/options/EmptySchemesManager.java	(date 1435744807000)
++++ community/platform/core-impl/src/com/intellij/openapi/options/EmptySchemesManager.java	(revision )
+@@ -49,10 +49,6 @@
+   }
+ 
+   @Override
+-  public void save() {
+-  }
+-
+-  @Override
+   public void setCurrentSchemeName(String schemeName) {
+   }
+ 
+Index: community/platform/platform-impl/platform-impl.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/platform-impl.iml	(date 1435744807000)
++++ community/platform/platform-impl/platform-impl.iml	(revision )
+@@ -42,5 +42,6 @@
+     <orderEntry type="module" module-name="built-in-server" scope="RUNTIME" />
+     <orderEntry type="library" name="imgscalr" level="project" />
+     <orderEntry type="module" module-name="built-in-server-api" />
++    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: community/platform/platform-impl/src/com/intellij/openapi/actionSystem/ex/QuickListsManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- community/platform/platform-impl/src/com/intellij/openapi/actionSystem/ex/QuickListsManager.java	(date 1435744807000)
++++ community/platform/platform-impl/src/com/intellij/openapi/actionSystem/ex/QuickListsManager.java	(revision )
+@@ -43,11 +43,11 @@
+   private static final String LIST_TAG = "list";
+ 
+   private final ActionManager myActionManager;
+-  private final SchemesManager<QuickList, QuickList> mySchemesManager;
++  private final SchemesManager<QuickList, QuickList> mySchemeManager;
+ 
+   public QuickListsManager(@NotNull ActionManager actionManager, @NotNull SchemesManagerFactory schemesManagerFactory) {
+     myActionManager = actionManager;
+-    mySchemesManager = schemesManagerFactory.createSchemesManager(FILE_SPEC,
++    mySchemeManager = schemesManagerFactory.createSchemesManager(FILE_SPEC,
+                                                                   new BaseSchemeProcessor<QuickList>() {
+                                                                     @NotNull
+                                                                     @Override
+@@ -73,7 +73,7 @@
+   @Override
+   @NotNull
+   public File[] getExportFiles() {
+-    return new File[]{mySchemesManager.getRootDirectory()};
++    return new File[]{mySchemeManager.getRootDirectory()};
+   }
+ 
+   @NotNull
+@@ -99,7 +99,7 @@
+   public void initComponent() {
+     for (BundledQuickListsProvider provider : BundledQuickListsProvider.EP_NAME.getExtensions()) {
+       for (final String path : provider.getBundledListsRelativePaths()) {
+-        mySchemesManager.loadBundledScheme(path, provider, new ThrowableConvertor<Element, QuickList, Throwable>() {
++        mySchemeManager.loadBundledScheme(path, provider, new ThrowableConvertor<Element, QuickList, Throwable>() {
+           @Override
+           public QuickList convert(Element element) throws Throwable {
+             return createItem(element);
+@@ -107,7 +107,7 @@
+         });
+       }
+     }
+-    mySchemesManager.loadSchemes();
++    mySchemeManager.loadSchemes();
+     registerActions();
+   }
+ 
+@@ -116,20 +116,20 @@
+   }
+ 
+   @NotNull
+-  public List<QuickList> getQuickLists() {
+-    return mySchemesManager.getAllSchemes();
++  public SchemesManager<QuickList, QuickList> getSchemeManager() {
++    return mySchemeManager;
+   }
+ 
+   @NotNull
+   public QuickList[] getAllQuickLists() {
+-    Collection<QuickList> lists = mySchemesManager.getAllSchemes();
++    Collection<QuickList> lists = mySchemeManager.getAllSchemes();
+     return lists.toArray(new QuickList[lists.size()]);
+   }
+ 
+   private void registerActions() {
+     // to prevent exception if 2 or more targets have the same name
+     Set<String> registeredIds = new THashSet<String>();
+-    for (QuickList list : mySchemesManager.getAllSchemes()) {
++    for (QuickList list : mySchemeManager.getAllSchemes()) {
+       String actionId = list.getActionId();
+       if (registeredIds.add(actionId)) {
+         myActionManager.registerAction(actionId, new InvokeQuickListAction(list));
+@@ -145,7 +145,7 @@
+ 
+   public void setQuickLists(@NotNull List<QuickList> quickLists) {
+     unregisterActions();
+-    mySchemesManager.setSchemes(quickLists);
++    mySchemeManager.setSchemes(quickLists);
+     registerActions();
+   }
+ 

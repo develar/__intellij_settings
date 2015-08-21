@@ -1,0 +1,51 @@
+<application>
+  <component name="DslActivationStatus">
+    <option name="entries">
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/metaDsl.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/singletonTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/metaDsl.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/closuresInMethod.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/listenerList.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/indexedProperty.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/closuresInMethod.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/categoryTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/indexedProperty.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/categoryTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/newifyTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/gantScript.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/bindableTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/defaultMethods.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/extensions.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/plugins/groovy/mvc/standardDsls/GrailsStandardDSL.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/jps/standalone-builder/src/jps.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/metaDsl.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/singletonTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/closuresInMethod.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/indexedProperty.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/listenerList.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/vetoableTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/categoryTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/jps/standalone-builder/src/jps.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/newifyTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/gantScript.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/listenerList.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/bindableTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/defaultMethods.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/plugins/groovy/groovy-psi/resources/standardDsls/extensions.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/vetoableTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/newifyTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/defaultMethods.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/bindableTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/extensions.gdsl" status="ACTIVE" />
+      <Entry url="jar://$USER_HOME$/Documents/idea141/community/plugins/groovy/testdata/griffon/griffon-cli-1.1.0.jar!/gdsl/griffon.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/gantScript.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/build/scripts/scripts.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea141/community/build/scripts/scripts.gdsl" status="ACTIVE" />
+      <Entry url="jar://$USER_HOME$/Documents/idea/community/plugins/groovy/testdata/griffon/griffon-cli-1.1.0.jar!/gdsl/griffon.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/plugins/groovy/mvc/standardDsls/GrailsStandardDSL.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/plugins/groovy/groovy-psi/resources/standardDsls/vetoableTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/singletonTransform.gdsl" status="ACTIVE" />
+      <Entry url="file://$USER_HOME$/Documents/idea/community/build/scripts/buildScripts.gdsl" status="ACTIVE" />
+    </option>
+  </component>
+</application>

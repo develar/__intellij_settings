@@ -1,22 +1,28 @@
 <application>
   <component name="CodeInsightSettings">
-    <option name="REFORMAT_ON_PASTE" value="2" />
-    <option name="HIGHLIGHT_IDENTIFIER_UNDER_CARET" value="false" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="com.google.common.util.concurrent.AsyncFunction" />
+    <EXCLUDED_PACKAGE NAME="com.intellij.icons.AllIcons.Welcome.Project" />
+    <EXCLUDED_PACKAGE NAME="com.oracle" />
     <EXCLUDED_PACKAGE NAME="com.sun" />
-    <EXCLUDED_PACKAGE NAME="javax.annotation.Nullable" />
-    <EXCLUDED_PACKAGE NAME="sun.java2d" />
-    <EXCLUDED_PACKAGE NAME="sun.misc" />
-    <EXCLUDED_PACKAGE NAME="sun.org" />
-    <EXCLUDED_PACKAGE NAME="sun.security" />
-  </component>
-  <component name="DaemonCodeAnalyzerSettings">
-    <option name="NEXT_ERROR_ACTION_GOES_TO_ERRORS_FIRST" value="false" />
-    <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
+    <EXCLUDED_PACKAGE NAME="com.sun.istack" />
+    <EXCLUDED_PACKAGE NAME="com.sun.tools.javac" />
+    <EXCLUDED_PACKAGE NAME="io.netty.util.concurrent.Promise" />
+    <EXCLUDED_PACKAGE NAME="java.util.function" />
+    <EXCLUDED_PACKAGE NAME="java.util.function.Function" />
+    <EXCLUDED_PACKAGE NAME="javax.management" />
+    <EXCLUDED_PACKAGE NAME="jdk.nashorn.internal" />
+    <EXCLUDED_PACKAGE NAME="jdk.nashorn.internal.objects.annotations" />
+    <EXCLUDED_PACKAGE NAME="org.omg" />
+    <EXCLUDED_PACKAGE NAME="sun.rmi" />
+    <EXCLUDED_PACKAGE NAME="sun.tools" />
   </component>
   <component name="JavaCodeFoldingSettings">
+    <option name="collapseConstructorGenericParameters" value="false" />
     <option name="collapseLambdas" value="false" />
+    <option name="COLLAPSE_ONE_LINE_METHODS" value="false" />
     <option name="COLLAPSE_CLOSURES" value="false" />
+    <option name="COLLAPSE_CONSTRUCTOR_GENERIC_PARAMETERS" value="false" />
   </component>
 </application>
