@@ -1,7 +1,0 @@
-<application>
-  <component name="FileTypeManager" version="15">
-    <extensionMap>
-      <mapping ext="conf" type="nginx file type" />
-    </extensionMap>
-  </component>
-</application>

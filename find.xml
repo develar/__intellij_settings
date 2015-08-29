@@ -20,6 +20,7 @@
       <mask>*.gant</mask>
       <mask>*.xml</mask>
       <mask>*.java</mask>
+      <mask>*.iml</mask>
     </recentFileMasks>
   </component>
 </application>
