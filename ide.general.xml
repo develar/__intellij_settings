@@ -8,6 +8,5 @@
     <entry key="ide.firstStartup" value="false" />
     <entry key="js.debugger.v8.use.any.breakpoint" value="false" />
     <entry key="use.loaded.state.as.existing" value="true" />
-    <entry key="use.read.action.to.init.service" value="false" />
   </component>
 </application>
