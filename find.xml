@@ -7,7 +7,6 @@
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
-    <option name="FILE_MASK" value="*.gant" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
