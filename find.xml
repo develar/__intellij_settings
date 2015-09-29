@@ -1,12 +1,13 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Project and Libraries" />
-    <option name="defaultScopeName" value="Project and Libraries" />
+    <option name="customScope" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
+    <option name="defaultScopeName" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
     <option name="wholeWordsOnly" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
-    <option name="SEARCH_SCOPE" value="Project and Libraries" />
+    <option name="SEARCH_SCOPE" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
+    <option name="FILE_MASK" value="*.gant" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
@@ -17,10 +18,10 @@
       <mask>*.mxml</mask>
       <mask>plugin.xml</mask>
       <mask>*.kt</mask>
-      <mask>*.gant</mask>
       <mask>*.xml</mask>
       <mask>*.java</mask>
       <mask>*.iml</mask>
+      <mask>*.gant</mask>
     </recentFileMasks>
   </component>
 </application>
