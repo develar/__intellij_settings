@@ -9,5 +9,6 @@
     <entry key="js.debugger.v8.use.any.breakpoint" value="false" />
     <entry key="use.loaded.state.as.existing" value="true" />
     <entry key="actionSystem.fixNullFocusedComponent" value="false" />
+    <entry key="ide.mac.yosemite.laf" value="false" />
   </component>
 </application>
