@@ -1,12 +1,12 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
-    <option name="defaultScopeName" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
+    <option name="customScope" value="Module 'settings-repository'" />
+    <option name="defaultScopeName" value="Module 'settings-repository'" />
     <option name="wholeWordsOnly" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
-    <option name="SEARCH_SCOPE" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger/source'" />
+    <option name="SEARCH_SCOPE" value="Module 'settings-repository'" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
