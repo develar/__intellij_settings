@@ -1,0 +1,5 @@
+<templateSet group="Groovy">
+  <template name="serr" value="System.err.println(&quot;$END$&quot;)dwed" description="Prints a string to System.errwefwe" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+</templateSet>
