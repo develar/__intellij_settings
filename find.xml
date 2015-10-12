@@ -18,9 +18,9 @@
       <mask>*.mxml</mask>
       <mask>plugin.xml</mask>
       <mask>*.kt</mask>
-      <mask>*.xml</mask>
       <mask>*.java</mask>
       <mask>*.iml</mask>
+      <mask>*.xml</mask>
       <mask>*.gant</mask>
     </recentFileMasks>
   </component>
