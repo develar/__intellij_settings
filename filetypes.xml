@@ -1,6 +1,6 @@
 <application>
   <component name="FileTypeManager" version="15">
-    <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
+    <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
       <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
