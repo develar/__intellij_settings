@@ -99,7 +99,7 @@
     <option name="cloneParentDir" value="$USER_HOME$/Documents" />
   </component>
   <component name="VcsApplicationSettings">
-    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Dropbox" />
+    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Downloads" />
     <option name="SHOW_LST_WORD_DIFFERENCES" value="false" />
   </component>
 </application>
