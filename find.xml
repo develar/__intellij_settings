@@ -1,8 +1,10 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger'" />
-    <option name="defaultScopeName" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger'" />
-    <option name="SEARCH_SCOPE" value="Directory '/Users/develar/Documents/idea/plugins/JavaScriptDebugger'" />
+    <option name="customScope" value="Project Files" />
+    <option name="defaultScopeName" value="Project Files" />
+    <option name="searchOverloadedMethods" value="true" />
+    <option name="SEARCH_OVERLOADED_METHODS" value="true" />
+    <option name="SEARCH_SCOPE" value="Project Files" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
