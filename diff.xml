@@ -4,20 +4,9 @@
       <entry key="ChangesView">
         <PlaceSettings />
       </entry>
-      <entry key="CommitDialog">
-        <PlaceSettings />
-      </entry>
       <entry key="Default">
         <PlaceSettings />
       </entry>
-      <entry key="TestsFiledAssertions">
-        <PlaceSettings />
-      </entry>
-    </option>
-    <option name="SHARED_SETTINGS">
-      <SharedSettings>
-        <option name="GO_TO_NEXT_FILE_ON_NEXT_DIFFERENCE" value="false" />
-      </SharedSettings>
     </option>
   </component>
   <component name="TextDiffSettings">
@@ -33,12 +22,6 @@
         </PlaceSettings>
       </entry>
       <entry key="Default">
-        <PlaceSettings />
-      </entry>
-      <entry key="Merge">
-        <PlaceSettings />
-      </entry>
-      <entry key="TestsFiledAssertions">
         <PlaceSettings />
       </entry>
     </option>
