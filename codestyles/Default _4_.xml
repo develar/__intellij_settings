@@ -1,5 +1,8 @@
 <code_scheme name="Default (4)">
   <option name="AUTODETECT_INDENTS" value="false" />
+  <XML>
+    <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+  </XML>
   <codeStyleSettings language="JavaScript">
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
