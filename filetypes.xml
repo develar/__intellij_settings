@@ -2,11 +2,11 @@
   <component name="FileTypeManager" version="16">
     <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
-      <mapping pattern="Kt2388" type="PLAIN_TEXT" />
-      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
-      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
-      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
+      <mapping pattern="Kt2388" type="PLAIN_TEXT" />
+      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
+      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern="Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
