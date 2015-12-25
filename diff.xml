@@ -10,6 +10,9 @@
       <entry key="Default">
         <PlaceSettings />
       </entry>
+      <entry key="TestsFiledAssertions">
+        <PlaceSettings />
+      </entry>
     </option>
     <option name="SHARED_SETTINGS">
       <SharedSettings>
@@ -33,6 +36,9 @@
         <PlaceSettings />
       </entry>
       <entry key="Merge">
+        <PlaceSettings />
+      </entry>
+      <entry key="TestsFiledAssertions">
         <PlaceSettings />
       </entry>
     </option>
