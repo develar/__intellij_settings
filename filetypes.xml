@@ -11,6 +11,7 @@
       <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
       <mapping pattern="LICENSE" type="PLAIN_TEXT" />
+      <mapping pattern=".npmignore" type="PLAIN_TEXT" />
       <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
       <mapping ext="conf" type="nginx file type" />
