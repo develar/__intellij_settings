@@ -11,12 +11,12 @@
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="Vladimir Krivosheev" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
   <component name="NodeLocalInterpreterManager">
     <node-interpreter path="/usr/local/bin/node" version="5.3.0" last-modified="1450800270000" />
-    <node-interpreter path="/usr/local/Cellar/node/5.3.0/bin/node" version="5.3.0" last-modified="1450291774000" />
-    <node-interpreter path="/usr/local/Cellar/node/5.2.0/bin/node" version="5.2.0" last-modified="1449677296000" />
-    <node-interpreter path="/usr/local/Cellar/node/5.1.0/bin/node" version="5.1.0" last-modified="1447858627000" />
-    <node-interpreter path="/usr/local/Cellar/node/5.0.0/bin/node" version="5.0.0" last-modified="1446157829000" />
-    <node-interpreter path="/usr/local/Cellar/node/4.2.1/bin/node" version="4.2.1" last-modified="1444786727000" />
-    <node-interpreter path="/usr/local/Cellar/node/5.1.1/bin/node" version="5.1.1" last-modified="1449204084000" />
+    <node-interpreter path="/usr/local/Cellar/node/5.3.0/bin/node" version="(Does not exist)" last-modified="1454334477244" />
+    <node-interpreter path="/usr/local/Cellar/node/5.2.0/bin/node" version="(Does not exist)" last-modified="1454334477245" />
+    <node-interpreter path="/usr/local/Cellar/node/5.1.0/bin/node" version="(Does not exist)" last-modified="1454334477245" />
+    <node-interpreter path="/usr/local/Cellar/node/5.0.0/bin/node" version="(Does not exist)" last-modified="1454334477245" />
+    <node-interpreter path="/usr/local/Cellar/node/4.2.1/bin/node" version="(Does not exist)" last-modified="1454334477245" />
+    <node-interpreter path="/usr/local/Cellar/node/5.1.1/bin/node" version="(Does not exist)" last-modified="1454334477245" />
   </component>
   <component name="RefactoringSettings">
     <option name="MOVE_PREVIEW_USAGES" value="false" />
