@@ -9,9 +9,6 @@
     <option name="EMAIL" value="" />
   </component>
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="Vladimir Krivosheev" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
-  <component name="ImportFilteringUsageViewSetting">
-    <option name="SHOW_IMPORTS" value="false" />
-  </component>
   <component name="NodeLocalInterpreterManager">
     <node-interpreter path="/usr/local/bin/node" version="5.3.0" last-modified="1450800270000" />
     <node-interpreter path="/usr/local/Cellar/node/5.3.0/bin/node" version="5.3.0" last-modified="1450291774000" />
