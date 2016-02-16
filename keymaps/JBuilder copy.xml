@@ -1,4 +1,4 @@
-<keymap version="1" name="JBuilder copy" parent="JBuilder">
+<keymap version="1" name="JBuilder copy">
   <action id="EditorCodeBlockStartWithSelection">
     <keyboard-shortcut first-keystroke="shift ctrl open_bracket" />
     <mouse-shortcut keystroke="button1" />

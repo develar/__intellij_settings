@@ -1,0 +1,5 @@
+<application>
+  <component name="ApiWatcher">
+    <option name="check-before-commit" value="false" />
+  </component>
+</application>
