@@ -1,6 +1,19 @@
 <application>
-  <component name="DependencyUISettings">
-    <option name="SCOPE_TYPE" value="file" />
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ErrorReportConfigurable">
     <option name="ITN_LOGIN" value="" />
@@ -9,14 +22,43 @@
     <option name="EMAIL" value="" />
   </component>
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="Vladimir Krivosheev" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/usr/local/bin/node">
+      <version-cache version="5.7.1" last-modified="1456957265000" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.7.1/bin/node">
+      <version-cache version="5.7.1" last-modified="1456957265000" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.7.0/bin/node">
+      <version-cache version="5.7.0" last-modified="1456201854000" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.3.0/bin/node">
+      <version-cache last-modified="0" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.2.0/bin/node">
+      <version-cache last-modified="0" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.1.1/bin/node">
+      <version-cache last-modified="0" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.1.0/bin/node">
+      <version-cache last-modified="0" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/5.0.0/bin/node">
+      <version-cache last-modified="0" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/4.2.1/bin/node">
+      <version-cache last-modified="0" />
+    </local-interpreter>
+  </component>
   <component name="NodeLocalInterpreterManager">
-    <node-interpreter path="/usr/local/bin/node" version="5.3.0" last-modified="1450800270000" />
-    <node-interpreter path="/usr/local/Cellar/node/5.3.0/bin/node" version="(Does not exist)" last-modified="1455616090308" />
-    <node-interpreter path="/usr/local/Cellar/node/5.2.0/bin/node" version="(Does not exist)" last-modified="1455616090308" />
-    <node-interpreter path="/usr/local/Cellar/node/5.1.0/bin/node" version="(Does not exist)" last-modified="1455616090308" />
-    <node-interpreter path="/usr/local/Cellar/node/5.0.0/bin/node" version="(Does not exist)" last-modified="1455616090308" />
-    <node-interpreter path="/usr/local/Cellar/node/4.2.1/bin/node" version="(Does not exist)" last-modified="1455616090308" />
-    <node-interpreter path="/usr/local/Cellar/node/5.1.1/bin/node" version="(Does not exist)" last-modified="1455616090308" />
+    <node-interpreter path="/usr/local/bin/node" version="5.7.1" last-modified="1456957265000" />
+    <node-interpreter path="/usr/local/Cellar/node/5.3.0/bin/node" version="(Does not exist)" last-modified="1457363748000" />
+    <node-interpreter path="/usr/local/Cellar/node/5.2.0/bin/node" version="(Does not exist)" last-modified="1457363748000" />
+    <node-interpreter path="/usr/local/Cellar/node/5.1.0/bin/node" version="(Does not exist)" last-modified="1457363748000" />
+    <node-interpreter path="/usr/local/Cellar/node/5.0.0/bin/node" version="(Does not exist)" last-modified="1457363748000" />
+    <node-interpreter path="/usr/local/Cellar/node/4.2.1/bin/node" version="(Does not exist)" last-modified="1457363748000" />
+    <node-interpreter path="/usr/local/Cellar/node/5.1.1/bin/node" version="(Does not exist)" last-modified="1457363748000" />
   </component>
   <component name="RefactoringSettings">
     <option name="MOVE_PREVIEW_USAGES" value="false" />
