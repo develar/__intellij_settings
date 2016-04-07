@@ -5,6 +5,8 @@
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
     <EXCLUDED_PACKAGE NAME="com.intellij.compiler.ant" />
     <EXCLUDED_PACKAGE NAME="com.sun" />
+    <EXCLUDED_PACKAGE NAME="com.thoughtworks" />
+    <EXCLUDED_PACKAGE NAME="javafx.scene" />
     <EXCLUDED_PACKAGE NAME="javax.annotation.Nullable" />
     <EXCLUDED_PACKAGE NAME="sun.java2d" />
     <EXCLUDED_PACKAGE NAME="sun.misc" />
