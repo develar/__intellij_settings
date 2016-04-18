@@ -8,5 +8,6 @@
     <entry key="ide.firstStartup" value="false" />
     <entry key="saving.state.in.new.format.is.allowed" value="true" />
     <entry key="js.debugger.v8.use.any.breakpoint" value="false" />
+    <entry key="ide.new.notification.enabled" value="false" />
   </component>
 </application>
