@@ -24,7 +24,7 @@
   <component name="ExceptionAnalyzerConfigurable" Sisyphus.DeveloperName="Vladimir Krivosheev" Sisyphus.DefaultScope="1" Sisyphus.DefaultTeam="1" Sisyphus.HideMyIssuesHeaders="false" Sisyphus.HideAnalyzerHeaders="false" />
   <component name="NodeJsLocalInterpreters">
     <local-interpreter path="/usr/local/bin/node">
-      <version-cache version="5.10.1" last-modified="1459893162000" />
+      <version-cache version="6.0.0" last-modified="1461700228000" />
     </local-interpreter>
     <local-interpreter path="/usr/local/Cellar/node/5.7.1/bin/node">
       <version-cache version="5.7.1" last-modified="1456957265000" />
