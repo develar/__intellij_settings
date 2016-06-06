@@ -95,6 +95,8 @@
     <option name="MOVE_INNER_PREVIEW_USAGES" value="false" />
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
     <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
+    <option name="RENAME_INHERITORS" value="false" />
+    <option name="RENAME_VARIABLES" value="false" />
   </component>
   <component name="TeamCityHistory">
     <option name="HISTORY" value="http://buildserver.labs.intellij.net&amp;^%$#@develar@#$%^&amp;http://buildserver&amp;^%$#@develar" />
