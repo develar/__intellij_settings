@@ -20,7 +20,6 @@
   </JavaCodeStyleSettings>
   <TypeScriptCodeStyleSettings>
     <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
-    <option name="SPACE_AFTER_TYPE_COLON" value="true" />
     <option name="SPACES_WITHIN_IMPORTS" value="true" />
   </TypeScriptCodeStyleSettings>
   <XML>
