@@ -1,13 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="caseSensitive" value="true" />
     <option name="customScope" value="Project and Libraries" />
     <option name="defaultScopeName" value="Project and Libraries" />
-    <option name="wholeWordsOnly" value="true" />
-    <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="Project and Libraries" />
-    <option name="FILE_MASK" value="*.groovy" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
@@ -21,10 +16,10 @@
       <mask>*.iml</mask>
       <mask>*.gant</mask>
       <mask>*.py</mask>
-      <mask>*.java</mask>
       <mask>*.txt</mask>
       <mask>*.xml</mask>
       <mask>*.groovy</mask>
+      <mask>*.java</mask>
     </recentFileMasks>
   </component>
 </application>
