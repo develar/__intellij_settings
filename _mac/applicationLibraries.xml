@@ -1,0 +1,7 @@
+<application>
+  <component name="GwtSdkManager">
+    <gwt-sdk-list>
+      <gwt-sdk url="file:///Volumes/hdd/upsource/lib/gwt" />
+    </gwt-sdk-list>
+  </component>
+</application>
