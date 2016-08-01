@@ -2,7 +2,6 @@
   <component name="GwtSdkManager">
     <gwt-sdk-list>
       <gwt-sdk url="file://$USER_HOME$/Documents/upsource/lib/gwt" />
-      <gwt-sdk url="file:///Volumes/hdd/upsource/lib/gwt" />
     </gwt-sdk-list>
   </component>
 </application>
