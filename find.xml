@@ -7,6 +7,7 @@
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="Project and Libraries" />
+    <option name="FILE_MASK" value="*.java,*.kt" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
@@ -24,6 +25,7 @@
       <mask>*.xml</mask>
       <mask>*.groovy</mask>
       <mask>*.java</mask>
+      <mask>*.java,*.kt</mask>
     </recentFileMasks>
   </component>
 </application>
