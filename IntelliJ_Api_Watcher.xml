@@ -1,5 +1,6 @@
 <application>
   <component name="ApiWatcher">
     <option name="check-before-commit" value="false" />
+    <option name="is-group-by-gategories" value="false" />
   </component>
 </application>
