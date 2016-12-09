@@ -1,6 +1,4 @@
 <keymap version="1" name="My Mac OS X 10.5+" parent="Mac OS X 10.5+">
-  <action id="$Delete" />
-  <action id="Editor Delete" />
   <action id="EditorSelectWord">
     <keyboard-shortcut first-keystroke="alt up" />
     <keyboard-shortcut first-keystroke="ctrl w" />
@@ -12,7 +10,6 @@
     <keyboard-shortcut first-keystroke="meta l" />
     <keyboard-shortcut first-keystroke="meta g" />
   </action>
-  <action id="Images.Thumbnails.UpFolder" />
   <action id="SmartTypeCompletion">
     <keyboard-shortcut first-keystroke="meta space" />
   </action>
@@ -31,5 +28,4 @@
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="ctrl alt up" />
   </action>
-  <action id="ToggleBookmark" />
 </keymap>

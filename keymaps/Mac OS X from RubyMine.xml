@@ -37,7 +37,6 @@
   <action id="CompileDirty">
     <keyboard-shortcut first-keystroke="shift meta alt f5" />
   </action>
-  <action id="Debug" />
   <action id="DebugClass">
     <keyboard-shortcut first-keystroke="shift meta alt f8" />
   </action>
@@ -71,7 +70,6 @@
     <keyboard-shortcut first-keystroke="meta enter" />
     <keyboard-shortcut first-keystroke="ctrl o" />
   </action>
-  <action id="EditorToggleCase" />
   <action id="EditorToggleColumnMode">
     <keyboard-shortcut first-keystroke="shift meta 8" />
     <keyboard-shortcut first-keystroke="shift meta multiply" />
@@ -95,7 +93,6 @@
     <keyboard-shortcut first-keystroke="meta close_bracket" />
     <keyboard-shortcut first-keystroke="meta alt right" />
   </action>
-  <action id="Git.Revert" />
   <action id="GotoTypeDeclaration">
     <keyboard-shortcut first-keystroke="shift meta b" />
     <mouse-shortcut keystroke="shift meta button1" />
@@ -128,7 +125,6 @@
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="shift meta open_bracket" />
   </action>
-  <action id="QuickChangeScheme" />
   <action id="QuickEvaluateExpression">
     <mouse-shortcut keystroke="alt button1" />
     <keyboard-shortcut first-keystroke="meta alt f11" />
@@ -220,5 +216,4 @@
   <action id="XDebugger.MuteBreakpoints">
     <keyboard-shortcut first-keystroke="shift ctrl alt f7" />
   </action>
-  <action id="tasks.activate" />
 </keymap>
