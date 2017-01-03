@@ -1,0 +1,14 @@
+<application>
+  <component name="DiffSettings">
+    <option name="PLACES_MAP">
+      <entry key="Default">
+        <PlaceSettings />
+      </entry>
+    </option>
+    <option name="SHARED_SETTINGS">
+      <SharedSettings>
+        <option name="GO_TO_NEXT_FILE_ON_NEXT_DIFFERENCE" value="false" />
+      </SharedSettings>
+    </option>
+  </component>
+</application>
