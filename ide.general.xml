@@ -10,6 +10,6 @@
     <entry key="js.debugger.v8.use.any.breakpoint" value="false" />
     <entry key="ide.new.notification.enabled" value="false" />
     <entry key="ide.mac.native.save.dialog" value="true" />
-    <entry key="parallel.modules.loading" value="true" />
+    <entry key="parallel.modules.loading" value="false" />
   </component>
 </application>
