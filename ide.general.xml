@@ -11,5 +11,6 @@
     <entry key="ide.new.notification.enabled" value="false" />
     <entry key="ide.mac.native.save.dialog" value="true" />
     <entry key="store.track.module.root.manager.changes" value="true" />
+    <entry key="parallel.modules.loading" value="false" />
   </component>
 </application>
