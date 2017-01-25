@@ -42,6 +42,11 @@
             <PlaceSettings />
           </value>
         </entry>
+        <entry key="Merge">
+          <value>
+            <PlaceSettings />
+          </value>
+        </entry>
         <entry key="TestsFiledAssertions">
           <value>
             <PlaceSettings />
@@ -61,6 +66,9 @@
         </PlaceSettings>
       </entry>
       <entry key="Default">
+        <PlaceSettings />
+      </entry>
+      <entry key="Merge">
         <PlaceSettings />
       </entry>
       <entry key="TestsFiledAssertions">
