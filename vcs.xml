@@ -25,5 +25,6 @@
   <component name="VcsApplicationSettings">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs" />
     <option name="SHOW_LST_WORD_DIFFERENCES" value="false" />
+    <option name="DETECT_PATCH_ON_THE_FLY" value="true" />
   </component>
 </application>
