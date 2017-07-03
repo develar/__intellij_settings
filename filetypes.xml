@@ -6,6 +6,7 @@
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
       <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
+      <mapping pattern="Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern="_redirects" type="PLAIN_TEXT" />
       <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
