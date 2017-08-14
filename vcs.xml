@@ -26,6 +26,9 @@
     </option>
     <option name="cloneParentDir" value="$USER_HOME$/Documents" />
   </component>
+  <component name="Vcs.Log.App.Settings">
+    <option name="MIGRATED" value="true" />
+  </component>
   <component name="VcsApplicationSettings">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs" />
     <option name="DETECT_PATCH_ON_THE_FLY" value="true" />
