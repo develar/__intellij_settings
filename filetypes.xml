@@ -1,0 +1,25 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
+    <extensionMap>
+      <mapping pattern="Dockerfile" type="PLAIN_TEXT" />
+      <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
+      <mapping pattern=".npmignore" type="PLAIN_TEXT" />
+      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
+      <mapping pattern="Kt2388" type="PLAIN_TEXT" />
+      <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
+      <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
+      <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
+      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
+      <mapping pattern="LICENSE" type="PLAIN_TEXT" />
+      <mapping pattern="_redirects" type="PLAIN_TEXT" />
+      <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
+      <mapping ext="run" type="PLAIN_TEXT" />
+      <mapping ext="4_version" type="PLAIN_TEXT" />
+      <mapping ext="conf" type="PLAIN_TEXT" />
+      <mapping ext="eml" type="PLAIN_TEXT" />
+      <mapping ext="py" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

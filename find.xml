@@ -1,7 +1,34 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="caseSensitive" value="true" />
+    <option name="customScope" value="Project Files" />
+    <option name="defaultScopeName" value="Project Files" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="SEARCH_SCOPE" value="Project Files" />
+    <recentFileMasks>
+      <mask>*.properties</mask>
+      <mask>*.html</mask>
+      <mask>*.jsp</mask>
+      <mask>*.as</mask>
+      <mask>*.css</mask>
+      <mask>*.mxml</mask>
+      <mask>plugin.xml</mask>
+      <mask>*.kt</mask>
+      <mask>*.gant</mask>
+      <mask>*.py</mask>
+      <mask>*.txt</mask>
+      <mask>*.xml</mask>
+      <mask>*.groovy</mask>
+      <mask>*.java</mask>
+      <mask>*.java,*.kt</mask>
+      <mask>*.iml</mask>
+      <mask>*.im</mask>
+      <mask>*.i</mask>
+      <mask>*.</mask>
+      <mask>*.j</mask>
+      <mask>*.js</mask>
+      <mask>*.jso</mask>
+      <mask>*.json</mask>
+    </recentFileMasks>
   </component>
 </application>
