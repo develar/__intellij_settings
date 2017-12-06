@@ -20,18 +20,20 @@
       <mask>*.py</mask>
       <mask>*.xml</mask>
       <mask>*.groovy</mask>
-      <mask>*.java</mask>
       <mask>*.java,*.kt</mask>
       <mask>*.iml</mask>
       <mask>*.im</mask>
       <mask>*.i</mask>
-      <mask>*.</mask>
       <mask>*.j</mask>
       <mask>*.js</mask>
       <mask>*.jso</mask>
       <mask>*.json</mask>
-      <mask>*.t</mask>
       <mask>*.txt</mask>
+      <mask>*.tx</mask>
+      <mask>*.t</mask>
+      <mask>*.</mask>
+      <mask>*.ja</mask>
+      <mask>*.java</mask>
     </recentFileMasks>
   </component>
 </application>
