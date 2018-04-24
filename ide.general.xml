@@ -2,6 +2,7 @@
   <component name="GeneralSettings">
     <option name="autoSaveIfInactive" value="true" />
     <option name="confirmExit" value="false" />
+    <option name="inactiveTimeout" value="1" />
     <option name="searchInBackground" value="true" />
     <option name="showTipsOnStartup" value="false" />
     <option name="useSafeWrite" value="false" />
