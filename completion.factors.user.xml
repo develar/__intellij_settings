@@ -1,0 +1,64 @@
+<application>
+  <component name="ApplicationUserFactors">
+    <factor id="binaryFeature:liftShorter" />
+    <factor id="binaryFeature:liftShorterClasses" />
+    <factor id="binaryFeature:middleMatching" />
+    <factor id="binaryFeature:nonGeneric" />
+    <factor id="binaryFeature:prox_inResolveScope" />
+    <factor id="binaryFeature:prox_openedInEditor" />
+    <factor id="binaryFeature:prox_sameDirectory" />
+    <factor id="binaryFeature:prox_sameLogicalRoot" />
+    <factor id="binaryFeature:prox_sdkOrLibrary" />
+    <factor id="binaryFeature:templates" />
+    <factor id="categoricalFeature:accessible" />
+    <factor id="categoricalFeature:expectedType" />
+    <factor id="categoricalFeature:kind" />
+    <factor id="categoricalFeature:prox_groovyReferenceListWeigher" />
+    <factor id="categoricalFeature:prox_javaInheritance" />
+    <factor id="categoricalFeature:prox_referenceList" />
+    <factor id="categoricalFeature:recursion" />
+    <factor id="completionFinishedType">
+      <dailyData date="22-5-2018">
+        <observation name="cancelled" value="9.0" />
+        <observation name="explicitSelect" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionType" />
+    <factor id="completionUsage">
+      <dailyData date="22-5-2018">
+        <observation name="count" value="10.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:explicitProximity" />
+    <factor id="doubleFeature:grouping" />
+    <factor id="doubleFeature:mostUsed" />
+    <factor id="doubleFeature:nameEnd" />
+    <factor id="doubleFeature:position" />
+    <factor id="doubleFeature:prefix" />
+    <factor id="doubleFeature:priority" />
+    <factor id="doubleFeature:prox_explicitlyImported" />
+    <factor id="doubleFeature:prox_knownElement" />
+    <factor id="doubleFeature:prox_sameModule" />
+    <factor id="doubleFeature:prox_samePsiMember" />
+    <factor id="doubleFeature:query_length" />
+    <factor id="doubleFeature:result_length" />
+    <factor id="doubleFeature:sameWords" />
+    <factor id="doubleFeature:shorter" />
+    <factor id="doubleFeature:simple" />
+    <factor id="doubleFeature:sorter" />
+    <factor id="doubleFeature:statics" />
+    <factor id="doubleFeature:stats" />
+    <factor id="itemPosition">
+      <dailyData date="22-5-2018">
+        <observation name="2" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="mnemonicsUsage" />
+    <factor id="prefixLength">
+      <dailyData date="22-5-2018">
+        <observation name="0" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="timeBetweenTyping" />
+  </component>
+</application>
