@@ -14,10 +14,11 @@
       <mapping pattern="LICENSE" type="PLAIN_TEXT" />
       <mapping pattern="_redirects" type="PLAIN_TEXT" />
       <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
+      <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="conf" type="PLAIN_TEXT" />
-      <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
+      <mapping ext="pac" type="PLAIN_TEXT" />
       <mapping ext="py" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
