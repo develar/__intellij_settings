@@ -1,12 +1,12 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Directory '.../community/platform/lang-impl [intellij.platform.lang.impl]'" />
-    <option name="defaultScopeName" value="Directory '.../community/platform/lang-impl [intellij.platform.lang.impl]'" />
+    <option name="customScope" value="Directory '.../ruby [intellij.ruby]'" />
+    <option name="defaultScopeName" value="Directory '.../ruby [intellij.ruby]'" />
     <option name="showResultsInSeparateView" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="SHOW_RESULTS_IN_SEPARATE_VIEW" value="true" />
-    <option name="SEARCH_SCOPE" value="Directory '.../community/platform/lang-impl [intellij.platform.lang.impl]'" />
+    <option name="SEARCH_SCOPE" value="Directory '.../ruby [intellij.ruby]'" />
     <option name="FILE_MASK" value="*.java" />
     <mask>*.properties</mask>
     <mask>*.html</mask>
