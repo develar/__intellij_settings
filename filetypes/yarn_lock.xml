@@ -1,0 +1,9 @@
+<filetype binary="false" default_extension="yarn.lock" description="yarn.lock" name="yarn.lock">
+  <highlighting>
+    <options>
+      <option name="LINE_COMMENT" value="#" />
+      <option name="LINE_COMMENT_AT_START" value="true" />
+    </options>
+    <keywords keywords="dependencies;resolved;version" ignore_case="false" />
+  </highlighting>
+</filetype>
