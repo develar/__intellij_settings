@@ -13,7 +13,7 @@
     <entry key="js.debugger.v8.use.any.breakpoint" value="false" />
     <entry key="ide.new.notification.enabled" value="false" />
     <entry key="java.completion.argument.hints.internal" value="false" />
-    <entry key="feature.usage.event.log.collect.and.upload" value="true" />
     <entry key="compiler.automake.postpone.when.idle.less.than" value="1000" />
+    <entry key="show.affected.tests.in.changelists" value="false" />
   </component>
 </application>
