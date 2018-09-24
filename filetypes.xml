@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="17">
     <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
+      <mapping ext="klib" type="ARCHIVE" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".npmignore" type="PLAIN_TEXT" />
