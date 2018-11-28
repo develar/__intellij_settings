@@ -12,5 +12,6 @@
     <entry key="js.debugger.v8.use.any.breakpoint" value="false" />
     <entry key="java.completion.argument.hints.internal" value="false" />
     <entry key="compiler.automake.postpone.when.idle.less.than" value="0" />
+    <entry key="run.popup.move.folders.to.top" value="true" />
   </component>
 </application>
