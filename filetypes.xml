@@ -4,10 +4,11 @@
     <extensionMap>
       <mapping ext="klib" type="ARCHIVE" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
-      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
+      <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
       <mapping pattern=".npmignore" type="PLAIN_TEXT" />
       <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
@@ -16,9 +17,9 @@
       <mapping pattern="_redirects" type="PLAIN_TEXT" />
       <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
-      <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="conf" type="PLAIN_TEXT" />
+      <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
       <mapping ext="pac" type="PLAIN_TEXT" />
       <mapping ext="meta" type="PLAIN_TEXT" />
