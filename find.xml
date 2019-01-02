@@ -19,5 +19,7 @@
     <mask>*.txt</mask>
     <mask>*.md</mask>
     <mask>*.properties</mask>
+    <mask>plugin.xml</mask>
+    <mask>pom.xml</mask>
   </component>
 </application>
