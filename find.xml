@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="customScope" value="File '.../community/platform/platform-impl/src/com/intellij/ide/RecentProjectsManagerBase.java [intellij.platform.ide.impl]'" />
+    <option name="defaultScopeName" value="File '.../community/platform/platform-impl/src/com/intellij/ide/RecentProjectsManagerBase.java [intellij.platform.ide.impl]'" />
+    <option name="SEARCH_SCOPE" value="File '.../community/platform/platform-impl/src/com/intellij/ide/RecentProjectsManagerBase.java [intellij.platform.ide.impl]'" />
     <mask>*.html</mask>
     <mask>*.jsp</mask>
     <mask>*.js</mask>
