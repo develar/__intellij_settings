@@ -12,5 +12,6 @@
     <entry key="compiler.automake.postpone.when.idle.less.than" value="100" />
     <entry key="compiler.document.save.trigger.delay" value="300" />
     <entry key="store.save.in.pooled.thread" value="true" />
+    <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
   </component>
 </application>
