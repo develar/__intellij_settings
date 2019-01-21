@@ -14,7 +14,6 @@
     <mask>*.gant</mask>
     <mask>*.ts</mask>
     <mask>*.json</mask>
-    <mask>*.xml</mask>
     <mask>*.java</mask>
     <mask>*.txt</mask>
     <mask>*.md</mask>
@@ -22,5 +21,6 @@
     <mask>pom.xml</mask>
     <mask>plugin.xml</mask>
     <mask>*.kt</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
