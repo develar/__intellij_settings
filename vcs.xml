@@ -32,6 +32,7 @@
   </component>
   <component name="VcsApplicationSettings">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/idea-shefs/IDEA-202707_If_PersistentStateComponent__loadState_failed_with_exception_it_won't_be_calle" />
+    <option name="SHOW_LST_WORD_DIFFERENCES" value="false" />
     <option name="DETECT_PATCH_ON_THE_FLY" value="true" />
   </component>
 </application>
