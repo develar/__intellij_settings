@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="customScope" value="ExtensionComponentAdapter - no need to hold instance" />
+    <option name="defaultScopeName" value="ExtensionComponentAdapter - no need to hold instance" />
+    <option name="SEARCH_SCOPE" value="ExtensionComponentAdapter - no need to hold instance" />
     <mask>*.html</mask>
     <mask>*.jsp</mask>
     <mask>*.js</mask>
