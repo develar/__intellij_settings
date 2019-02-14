@@ -3,5 +3,8 @@
     <account id="39ca545d-58e0-41ec-84cc-b49db37b4a32" name="develar">
       <server useHttp="false" host="github.com" />
     </account>
+    <account id="e6c9821f-0b87-4894-bdaa-a52e0dd516a1" name="develar">
+      <server host="github.com" />
+    </account>
   </component>
 </application>
