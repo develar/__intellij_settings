@@ -3,7 +3,6 @@
     <option name="SHOW_EXTERNAL_ANNOTATIONS_INLINE" value="false" />
     <option name="SHOW_METHOD_CHAIN_TYPES_INLINE" value="false" />
     <option name="REFORMAT_ON_PASTE" value="2" />
-    <option name="USE_INSTANCEOF_ON_EQUALS_PARAMETER" value="true" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
     <EXCLUDED_PACKAGE NAME="com.intellij.compiler.ant" />
