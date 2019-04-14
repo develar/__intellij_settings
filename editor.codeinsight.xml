@@ -11,6 +11,7 @@
     <EXCLUDED_PACKAGE NAME="com.thoughtworks" />
     <EXCLUDED_PACKAGE NAME="javafx.scene" />
     <EXCLUDED_PACKAGE NAME="javax.annotation.Nullable" />
+    <EXCLUDED_PACKAGE NAME="jdk.nashorn" />
     <EXCLUDED_PACKAGE NAME="sun.java2d" />
     <EXCLUDED_PACKAGE NAME="sun.misc" />
     <EXCLUDED_PACKAGE NAME="sun.org" />
