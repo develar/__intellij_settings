@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.groovy" />
     <mask>*.html</mask>
     <mask>*.jsp</mask>
     <mask>*.js</mask>
@@ -10,7 +11,6 @@
     <mask>*.css</mask>
     <mask>*.mxml</mask>
     <mask>*.iml</mask>
-    <mask>*.groovy</mask>
     <mask>*.gant</mask>
     <mask>*.ts</mask>
     <mask>*.json</mask>
@@ -22,5 +22,6 @@
     <mask>plugin.xml</mask>
     <mask>*.kt</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
