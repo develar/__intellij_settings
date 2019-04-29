@@ -11,5 +11,6 @@
     <entry key="ide.firstStartup" value="false" />
     <entry key="store.save.in.pooled.thread" value="true" />
     <entry key="ide.new.tabs" value="false" />
+    <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
   </component>
 </application>
