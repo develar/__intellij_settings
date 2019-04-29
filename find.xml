@@ -22,7 +22,7 @@
     <mask>pom.xml</mask>
     <mask>plugin.xml</mask>
     <mask>*.kt</mask>
-    <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
