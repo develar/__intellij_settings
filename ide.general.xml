@@ -14,5 +14,6 @@
     <entry key="store.save.in.pooled.thread" value="true" />
     <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
     <entry key="java.completion.argument.hints.internal" value="false" />
+    <entry key="ide.new.tabs" value="false" />
   </component>
 </application>
