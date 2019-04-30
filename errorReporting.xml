@@ -115,6 +115,7 @@
         <developer id="125204" name="Ilya Chernikov" />
         <developer id="365967" name="Ilya Gorbunov" />
         <developer id="85848" name="Ilya Kazakevich" />
+        <developer id="984557" name="Ilya Kirillov" />
         <developer id="27897" name="Ilya Ryzhenkov" />
         <developer id="72144" name="Irina Chernushina" />
         <developer id="602787" name="Ivan Bessonov" />
@@ -255,6 +256,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1556523616575" />
+    <option name="timestamp" value="1556623487408" />
   </component>
 </application>
