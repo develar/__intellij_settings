@@ -13,6 +13,6 @@
     <entry key="java.completion.argument.hints.internal" value="false" />
     <entry key="compiler.automake.postpone.when.idle.less.than" value="100" />
     <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
-    <entry key="ide.new.tabs" value="true" />
+    <entry key="ide.new.tabs" value="false" />
   </component>
 </application>
