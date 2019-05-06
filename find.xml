@@ -16,11 +16,11 @@
     <mask>*.java</mask>
     <mask>*.txt</mask>
     <mask>*.md</mask>
-    <mask>*.properties</mask>
     <mask>pom.xml</mask>
     <mask>plugin.xml</mask>
-    <mask>*.kt</mask>
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>*.kt</mask>
+    <mask>*.properties</mask>
   </component>
 </application>
