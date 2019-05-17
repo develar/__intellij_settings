@@ -216,6 +216,7 @@
         <developer id="977641" name="Simon Ogorodnik" />
         <developer id="614936" name="Stanislav Dombrovsky" />
         <developer id="120981" name="Stanislav Erokhin" />
+        <developer id="984147" name="Stefan Su" />
         <developer id="98497" name="Svetlana Isakova" />
         <developer id="108593" name="Svetlana Zemlyanskaya" />
         <developer id="976932" name="Svyatoslav Ilinskiy" />
@@ -256,6 +257,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1558017508695" />
+    <option name="timestamp" value="1558104125302" />
   </component>
 </application>
