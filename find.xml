@@ -21,10 +21,10 @@
     <mask>*.md</mask>
     <mask>pom.xml</mask>
     <mask>plugin.xml</mask>
-    <mask>*.groovy</mask>
     <mask>*.xml</mask>
     <mask>*.kt</mask>
     <mask>*.properties</mask>
     <mask>*.iml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
