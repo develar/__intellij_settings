@@ -146,6 +146,7 @@
         <developer id="169283" name="Liana Bakradze" />
         <developer id="979692" name="Lilia Abdulina" />
         <developer id="982322" name="Liudmila Kornilova" />
+        <developer id="984629" name="Maksim Pelevin" />
         <developer id="417489" name="Marat Akhin" />
         <developer id="979281" name="Marat Khabibullin" />
         <developer id="152617" name="Maria Baburina" />
@@ -257,6 +258,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1558862775878" />
+    <option name="timestamp" value="1559152855900" />
   </component>
 </application>
