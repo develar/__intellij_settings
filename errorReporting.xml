@@ -162,6 +162,7 @@
         <developer id="984315" name="Mikhail Chernyavsky" />
         <developer id="353249" name="Mikhail Glukhikh" />
         <developer id="122376" name="Mikhail Golubev" />
+        <developer id="984447" name="Mikhail Mazurkevich" />
         <developer id="164019" name="Mikhail Mutcianko" />
         <developer id="73188" name="Mikhail Senkov" />
         <developer id="981088" name="Mikhail Sokolov" />
@@ -258,6 +259,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1559152855900" />
+    <option name="timestamp" value="1559301463558" />
   </component>
 </application>
