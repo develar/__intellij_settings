@@ -15,5 +15,6 @@
     <entry key="compiler.automake.postpone.when.idle.less.than" value="100" />
     <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
     <entry key="ide.new.tabs" value="false" />
+    <entry key="debugger.valueTooltipAutoShow" value="false" />
   </component>
 </application>
