@@ -16,5 +16,6 @@
     <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
     <entry key="ide.new.tabs" value="false" />
     <entry key="debugger.valueTooltipAutoShow" value="false" />
+    <entry key="debugger.auto.fetch.icons" value="false" />
   </component>
 </application>
