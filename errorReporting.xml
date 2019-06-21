@@ -3,6 +3,7 @@
     <option name="developers">
       <list>
         <developer id="-1" name="&lt;none&gt;" />
+        <developer id="985014" name="Aleksander Movsesov" />
         <developer id="979559" name="Aleksandr Gribovich" />
         <developer id="866273" name="Aleksandr Samofalov" />
         <developer id="984032" name="Aleksei Kniazev" />
@@ -259,6 +260,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1560843267586" />
+    <option name="timestamp" value="1561125517050" />
   </component>
 </application>
