@@ -5,5 +5,12 @@
         <option value="TypeScript.ts.chain.hints" />
       </set>
     </option>
+    <settingsMapElement>
+      <JAVA.annotation.hints>
+        <Settings>
+          <option name="showInferred" value="false" />
+        </Settings>
+      </JAVA.annotation.hints>
+    </settingsMapElement>
   </component>
 </application>
