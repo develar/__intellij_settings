@@ -28,6 +28,7 @@
       <mapping ext="meta" type="PLAIN_TEXT" />
       <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
+      <mapping ext="plist" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
