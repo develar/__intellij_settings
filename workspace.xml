@@ -8,6 +8,7 @@
     <settingsMapElement>
       <JAVA.annotation.hints>
         <Settings>
+          <option name="showExternal" value="false" />
           <option name="showInferred" value="false" />
         </Settings>
       </JAVA.annotation.hints>
