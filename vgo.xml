@@ -2,6 +2,7 @@
   <component name="vgo">
     <proxies>
       <list>
+        <option value="https://proxy.golang.org/" />
         <option value="https://gocenter.io/" />
         <option value="direct" />
       </list>
