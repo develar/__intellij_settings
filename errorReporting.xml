@@ -78,6 +78,7 @@
         <developer id="983570" name="Dmitrii Naumenko" />
         <developer id="982168" name="Dmitriy Dolovov" />
         <developer id="983912" name="Dmitriy Novozhilov" />
+        <developer id="982020" name="Dmitriy Panov" />
         <developer id="977029" name="Dmitriy Tseyler" />
         <developer id="30782" name="Dmitry Avdeev" />
         <developer id="114616" name="Dmitry Batkovich" />
@@ -262,6 +263,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1562593230173" />
+    <option name="timestamp" value="1562739315529" />
   </component>
 </application>
