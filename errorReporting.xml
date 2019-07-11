@@ -70,6 +70,7 @@
         <developer id="981924" name="Artem Mukhin" />
         <developer id="983684" name="Artemiy Sartakov" />
         <developer id="198" name="Bas Leijdekkers" />
+        <developer id="984224" name="Daniel Below" />
         <developer id="115741" name="Daniil Ovchinnikov" />
         <developer id="120994" name="Denis Fokin" />
         <developer id="979798" name="Denis Sharypov" />
@@ -114,6 +115,7 @@
         <developer id="45910" name="Gregory Shrago" />
         <developer id="983004" name="Henry Wylde" />
         <developer id="984184" name="Igor Yakovlev" />
+        <developer id="984642" name="Ilia MOTORNYI" />
         <developer id="979349" name="Ilmir Usmanov" />
         <developer id="125204" name="Ilya Chernikov" />
         <developer id="365967" name="Ilya Gorbunov" />
@@ -124,6 +126,7 @@
         <developer id="602787" name="Ivan Bessonov" />
         <developer id="978687" name="Ivan Buryak" />
         <developer id="88848" name="Ivan Chirkov" />
+        <developer id="984692" name="Ivan Donchevskii" />
         <developer id="978979" name="Ivan Fedorov" />
         <developer id="979508" name="Ivan Semenov" />
         <developer id="71783" name="Julia Beliaeva" />
@@ -144,6 +147,7 @@
         <developer id="126886" name="Konstantin Kolosovsky" />
         <developer id="103058" name="Konstantin Ulitin" />
         <developer id="511255" name="Leonid Bushuev" />
+        <developer id="985357" name="Leonid Mashinskiy" />
         <developer id="43742" name="Leonid Shalupov" />
         <developer id="981319" name="Leonid Startsev" />
         <developer id="169283" name="Liana Bakradze" />
@@ -154,6 +158,7 @@
         <developer id="979281" name="Marat Khabibullin" />
         <developer id="152617" name="Maria Baburina" />
         <developer id="73166" name="Max Medvedev" />
+        <developer id="980742" name="Maxim Banaev" />
         <developer id="112399" name="Maxim Kolmakov" />
         <developer id="977785" name="Maxim Kropotov" />
         <developer id="73184" name="Maxim Manuylov" />
@@ -260,9 +265,10 @@
         <developer id="431562" name="Yan Zhulanow" />
         <developer id="1697" name="Yann Cebron" />
         <developer id="979292" name="Yaroslav Pankratyev" />
+        <developer id="984972" name="Yuriy Artamonov" />
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1562739315529" />
+    <option name="timestamp" value="1562860050868" />
   </component>
 </application>
