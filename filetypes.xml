@@ -7,11 +7,11 @@
       <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
       <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".npmignore" type="PLAIN_TEXT" />
       <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
       <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
-      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
