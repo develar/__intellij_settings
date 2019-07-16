@@ -1,0 +1,5 @@
+<application>
+  <component name="ParameterNameHintsSettings">
+    <option id="SHOW_LAMBDA_RETURN_EXPRESSION" value="false" />
+  </component>
+</application>
