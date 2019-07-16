@@ -14,6 +14,9 @@
     <keyboard-shortcut first-keystroke="meta l" />
     <keyboard-shortcut first-keystroke="meta g" />
   </action>
+  <action id="QuickList.qrqwe">
+    <keyboard-shortcut first-keystroke="alt c" />
+  </action>
   <action id="SmartTypeCompletion">
     <keyboard-shortcut first-keystroke="meta space" />
   </action>
