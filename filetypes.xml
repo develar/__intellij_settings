@@ -4,30 +4,30 @@
     <extensionMap>
       <mapping ext="geojson" type="JSON" />
       <mapping ext="gradle.kts" type="Kotlin" />
-      <mapping pattern="LICENSE" type="PLAIN_TEXT" />
-      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
-      <mapping pattern="desktop-common" type="PLAIN_TEXT" />
+      <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
+      <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
       <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
       <mapping pattern=".npmignore" type="PLAIN_TEXT" />
-      <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
-      <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
-      <mapping pattern="desktop-init" type="PLAIN_TEXT" />
+      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
+      <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
+      <mapping pattern="Kt2388" type="PLAIN_TEXT" />
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
-      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
-      <mapping pattern="_redirects" type="PLAIN_TEXT" />
-      <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
-      <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
-      <mapping pattern="Kt2388" type="PLAIN_TEXT" />
-      <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
+      <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
+      <mapping pattern="desktop-common" type="PLAIN_TEXT" />
+      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
+      <mapping pattern="LICENSE" type="PLAIN_TEXT" />
+      <mapping pattern="_redirects" type="PLAIN_TEXT" />
+      <mapping pattern="desktop-init" type="PLAIN_TEXT" />
+      <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
+      <mapping ext="poly" type="PLAIN_TEXT" />
+      <mapping ext="configurationscript" type="PLAIN_TEXT" />
+      <mapping ext="run" type="PLAIN_TEXT" />
+      <mapping ext="eml" type="PLAIN_TEXT" />
+      <mapping ext="meta" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="ttf" type="PLAIN_TEXT" />
-      <mapping ext="eml" type="PLAIN_TEXT" />
-      <mapping ext="poly" type="PLAIN_TEXT" />
-      <mapping ext="meta" type="PLAIN_TEXT" />
-      <mapping ext="run" type="PLAIN_TEXT" />
-      <mapping ext="configurationscript" type="PLAIN_TEXT" />
       <removed_mapping pattern=".gitmodules" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
