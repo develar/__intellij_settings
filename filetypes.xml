@@ -23,9 +23,9 @@
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="ttf" type="PLAIN_TEXT" />
-      <mapping ext="eml" type="PLAIN_TEXT" />
       <mapping ext="poly" type="PLAIN_TEXT" />
       <mapping ext="meta" type="PLAIN_TEXT" />
+      <mapping ext="eml" type="PLAIN_TEXT" />
       <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
       <removed_mapping pattern=".gitmodules" approved="true" type="PLAIN_TEXT" />
