@@ -14,6 +14,12 @@
     <keyboard-shortcut first-keystroke="meta l" />
     <keyboard-shortcut first-keystroke="meta g" />
   </action>
+  <action id="NextWindow">
+    <keyboard-shortcut first-keystroke="meta back_quote" />
+  </action>
+  <action id="PreviousWindow">
+    <keyboard-shortcut first-keystroke="meta back_quote" />
+  </action>
   <action id="QuickList.qrqwe">
     <keyboard-shortcut first-keystroke="alt c" />
   </action>
