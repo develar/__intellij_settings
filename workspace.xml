@@ -2,6 +2,7 @@
   <component name="InlayHintsSettings">
     <option name="disabledHintProviderIds">
       <set>
+        <option value="JavaScript.js.chain.hints" />
         <option value="TypeScript.ts.chain.hints" />
       </set>
     </option>
