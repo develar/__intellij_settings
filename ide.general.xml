@@ -1,7 +1,5 @@
 <application>
   <component name="GeneralSettings">
-    <option name="confirmExit" value="false" />
-    <option name="searchInBackground" value="true" />
     <option name="showTipsOnStartup" value="false" />
   </component>
   <component name="Registry">
@@ -9,7 +7,6 @@
     <entry key="store.save.in.pooled.thread" value="true" />
     <entry key="java.completion.argument.hints.internal" value="false" />
     <entry key="compiler.automake.postpone.when.idle.less.than" value="100" />
-    <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
     <entry key="ide.new.tabs" value="false" />
     <entry key="debugger.valueTooltipAutoShow" value="false" />
     <entry key="debugger.auto.fetch.icons" value="false" />
