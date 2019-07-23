@@ -105,6 +105,7 @@
         <developer id="73183" name="Elena Shaverdova" />
         <developer id="128486" name="Elizabeth Shashkova" />
         <developer id="73169" name="Eugene Kudelevsky" />
+        <developer id="31782" name="Eugene Petrenko" />
         <developer id="74674" name="Eugene Toporov" />
         <developer id="5" name="Eugene Zhuravlev" />
         <developer id="159363" name="Evgeniy Stepanov" />
@@ -113,6 +114,7 @@
         <developer id="979888" name="Florian Kistner" />
         <developer id="982998" name="Georgy Bronnikov" />
         <developer id="45910" name="Gregory Shrago" />
+        <developer id="981445" name="Grigory Panov" />
         <developer id="983004" name="Henry Wylde" />
         <developer id="984184" name="Igor Yakovlev" />
         <developer id="984642" name="Ilia MOTORNYI" />
@@ -145,7 +147,9 @@
         <developer id="977786" name="Konstantin Aleev" />
         <developer id="63017" name="Konstantin Bulenkov" />
         <developer id="126886" name="Konstantin Kolosovsky" />
+        <developer id="985403" name="Konstantin Rybkin" />
         <developer id="103058" name="Konstantin Ulitin" />
+        <developer id="985397" name="Kotlin IDE" />
         <developer id="511255" name="Leonid Bushuev" />
         <developer id="985357" name="Leonid Mashinskiy" />
         <developer id="43742" name="Leonid Shalupov" />
@@ -265,10 +269,11 @@
         <developer id="431562" name="Yan Zhulanow" />
         <developer id="1697" name="Yann Cebron" />
         <developer id="979292" name="Yaroslav Pankratyev" />
+        <developer id="28358" name="Yegor Yarko" />
         <developer id="984972" name="Yuriy Artamonov" />
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1563276863567" />
+    <option name="timestamp" value="1563802328187" />
   </component>
 </application>
