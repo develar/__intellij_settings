@@ -13,6 +13,5 @@
     <entry key="debugger.valueTooltipAutoShow" value="false" />
     <entry key="debugger.auto.fetch.icons" value="false" />
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
-    <entry key="ide.project.loading.show.last.state" value="true" />
   </component>
 </application>
