@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="customScope" value="start-up-visualizer" />
+    <option name="defaultScopeName" value="start-up-visualizer" />
+    <option name="SEARCH_SCOPE" value="start-up-visualizer" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
