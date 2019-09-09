@@ -203,6 +203,7 @@
         <developer id="121949" name="Nikolay Tropin" />
         <developer id="10308" name="Olesya Smirnova" />
         <developer id="978574" name="Olga Strizhenko" />
+        <developer id="985575" name="Pavel Bakhvalov" />
         <developer id="889733" name="Pavel Dolgov" />
         <developer id="73170" name="Pavel Fatin" />
         <developer id="103852" name="Pavel Talanov" />
@@ -280,6 +281,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1567950217349" />
+    <option name="timestamp" value="1568054818342" />
   </component>
 </application>
