@@ -11,5 +11,6 @@
     <entry key="ide.new.tabs" value="false" />
     <entry key="debugger.auto.fetch.icons" value="false" />
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
+    <entry key="java.completion.argument.hints.internal" value="false" />
   </component>
 </application>
