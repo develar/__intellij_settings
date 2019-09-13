@@ -6,6 +6,7 @@
     <disabledLanguages>
       <language id="JAVA" />
       <language id="TypeScript" />
+      <language id="JSX Harmony" />
       <language id="JavaScript" />
       <language id="go" />
       <language id="kotlin" />
