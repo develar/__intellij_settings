@@ -13,5 +13,6 @@
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
     <entry key="java.completion.argument.hints.internal" value="false" />
     <entry key="analyze.exceptions.on.the.fly" value="true" />
+    <entry key="vcs.local.changes.toolbar.horizontal" value="false" />
   </component>
 </application>
