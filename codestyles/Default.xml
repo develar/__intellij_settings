@@ -13,6 +13,9 @@
     <option name="FORCE_QUOTE_STYlE" value="true" />
     <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
   </JSCodeStyleSettings>
+  <SQLiteCodeStyleSettings version="2">
+    <option name="USE_GENERIC_STYLE" value="true" />
+  </SQLiteCodeStyleSettings>
   <TypeScriptCodeStyleSettings version="0">
     <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
     <option name="FORCE_SEMICOLON_STYLE" value="true" />
@@ -57,6 +60,14 @@
   </codeStyleSettings>
   <codeStyleSettings language="JavaScript">
     <option name="ELSE_ON_NEW_LINE" value="true" />
+    <indentOptions>
+      <option name="INDENT_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="SQL">
+    <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
       <option name="CONTINUATION_INDENT_SIZE" value="2" />
