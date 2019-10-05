@@ -20,6 +20,7 @@
       <mapping pattern="_redirects" type="PLAIN_TEXT" />
       <mapping pattern="desktop-init" type="PLAIN_TEXT" />
       <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
+      <mapping pattern="DockerFile" type="PLAIN_TEXT" />
       <mapping ext="poly" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
       <mapping ext="run" type="PLAIN_TEXT" />
