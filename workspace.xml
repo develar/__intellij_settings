@@ -2,12 +2,14 @@
   <component name="InlayHintsSettings">
     <option name="disabledHintProviderIds">
       <set>
+        <option value="Groovy.groovy.parameters.hints" />
         <option value="JAVA.chain.hints" />
         <option value="JavaScript.js.chain.hints" />
         <option value="TypeScript.ts.chain.hints" />
         <option value="TypeScript.ts.type.hints" />
       </set>
     </option>
+    <option name="lastViewedProviderKeyId" value="parameter.hints.old" />
     <settingsMapElement>
       <JAVA.annotation.hints>
         <Settings>
