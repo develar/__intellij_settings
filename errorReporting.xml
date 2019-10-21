@@ -214,6 +214,7 @@
         <developer id="165468" name="Philipp Smorygo" />
         <developer id="982408" name="Piotr Tomiak" />
         <developer id="133579" name="Roman Belov" />
+        <developer id="985478" name="Roman Golyshev" />
         <developer id="979344" name="Roman Ivanov" />
         <developer id="126049" name="Roman Shein" />
         <developer id="73172" name="Roman Shevchenko" />
@@ -284,6 +285,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1571411523341" />
+    <option name="timestamp" value="1571651046706" />
   </component>
 </application>
