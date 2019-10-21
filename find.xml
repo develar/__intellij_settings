@@ -11,7 +11,7 @@
     <mask>*java</mask>
     <mask>*.ts</mask>
     <mask>*.</mask>
-    <mask>*.xml</mask>
     <mask>*.yaml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
