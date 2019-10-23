@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.ideTalk.core'" />
-    <option name="defaultScopeName" value="Module 'intellij.ideTalk.core'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.ideTalk.core'" />
+    <option name="customScope" value="Module 'intellij.platform.extensions'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.extensions'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.extensions'" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
