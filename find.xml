@@ -13,6 +13,7 @@
     <mask>*.ts</mask>
     <mask>*.</mask>
     <mask>*.yaml</mask>
+    <mask>*.groovy</mask>
     <mask>*.xml</mask>
   </component>
 </application>
