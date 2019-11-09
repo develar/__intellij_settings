@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="17">
     <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
+      <mapping pattern="Dockerfile.*" type="Dockerfile" />
       <mapping ext="geojson" type="JSON" />
       <mapping ext="gradle.kts" type="Kotlin" />
       <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
@@ -44,7 +45,6 @@
       <removed_mapping ext="conf" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="snakefile" approved="true" type="textmate" />
-      <mapping pattern="Dockerfile.*" type="Dockerfile" />
     </extensionMap>
   </component>
 </application>
