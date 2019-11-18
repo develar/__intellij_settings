@@ -2,6 +2,7 @@
   <component name="ParameterNameHintsSettings">
     <option id="SHOW_PARAMETER_HINT" value="false" />
     <option id="SHOW_LAMBDA_IMPLICIT_PARAMETER_RECEIVER" value="false" />
+    <option id="clojure.parameter.hints" value="true" />
     <option id="sql.show.column.names.in.select" value="true" />
     <option id="SHOW_LAMBDA_RETURN_EXPRESSION" value="false" />
     <disabledLanguages>
@@ -13,6 +14,7 @@
       <language id="go" />
       <language id="kotlin" />
       <language id="Groovy" />
+      <language id="Clojure" />
     </disabledLanguages>
   </component>
 </application>
