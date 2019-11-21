@@ -8,10 +8,10 @@
       <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
       <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
-      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
       <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
@@ -31,10 +31,10 @@
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <mapping ext="ttf" type="PLAIN_TEXT" />
-      <removed_mapping pattern=".gitmodules" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping pattern=".gitmodules" approved="true" type="PLAIN_TEXT" />
       <mapping pattern="desktop-gnome-specic" type="Shell Script" />
       <removed_mapping ext="pac" approved="true" type="PLAIN_TEXT" />
       <removed_mapping pattern=".gitmodules" approved="true" type="PLAIN_TEXT" />
