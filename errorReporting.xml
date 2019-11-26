@@ -135,6 +135,7 @@
         <developer id="88848" name="Ivan Chirkov" />
         <developer id="984692" name="Ivan Donchevskii" />
         <developer id="978979" name="Ivan Fedorov" />
+        <developer id="986425" name="Ivan Kubyshkin" />
         <developer id="979508" name="Ivan Semenov" />
         <developer id="71783" name="Julia Beliaeva" />
         <developer id="977330" name="Justin Kaeser" />
@@ -167,6 +168,7 @@
         <developer id="984629" name="Maksim Pelevin" />
         <developer id="417489" name="Marat Akhin" />
         <developer id="979281" name="Marat Khabibullin" />
+        <developer id="986421" name="Margarita Bobova" />
         <developer id="152617" name="Maria Baburina" />
         <developer id="73166" name="Max Medvedev" />
         <developer id="980742" name="Maxim Banaev" />
@@ -228,6 +230,8 @@
         <developer id="979800" name="Semyon Kolton" />
         <developer id="976571" name="Semyon Proshev" />
         <developer id="70" name="Serge Baranov" />
+        <developer id="983987" name="Sergei Dubrov" />
+        <developer id="986329" name="Sergei Pecherkin" />
         <developer id="983269" name="Sergei Vorobyov" />
         <developer id="979461" name="Sergey Anchipolevsky" />
         <developer id="100942" name="Sergey Ignatov" />
@@ -288,6 +292,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1574689019003" />
+    <option name="timestamp" value="1574791488723" />
   </component>
 </application>
