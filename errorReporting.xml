@@ -158,6 +158,7 @@
         <developer id="985403" name="Konstantin Rybkin" />
         <developer id="103058" name="Konstantin Ulitin" />
         <developer id="985397" name="Kotlin IDE" />
+        <developer id="984198" name="Ksenia Shurukhina" />
         <developer id="984667" name="Lada Gagina" />
         <developer id="511255" name="Leonid Bushuev" />
         <developer id="985357" name="Leonid Mashinskiy" />
@@ -295,6 +296,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1576598527684" />
+    <option name="timestamp" value="1576685608295" />
   </component>
 </application>
