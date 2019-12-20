@@ -18,10 +18,6 @@
   <component name="DaemonCodeAnalyzerSettings" profile="fewrf">
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
-  <component name="DefaultFont">
-    <option name="FONT_SIZE" value="12" />
-    <option name="LINE_SPACING" value="1.0" />
-  </component>
   <component name="EditorSettings">
     <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
     <option name="SOFT_WRAP_FILE_MASKS" value="*.md; *.txt; *.rst; *.adoc" />
