@@ -250,6 +250,7 @@
         <developer id="77466" name="Sergey Shkredov" />
         <developer id="73193" name="Sergey Simonchik" />
         <developer id="33386" name="Sergey Vasiliev" />
+        <developer id="985513" name="sergey.stoyanovsky@jetbrains.com" />
         <developer id="977641" name="Simon Ogorodnik" />
         <developer id="614936" name="Stanislav Dombrovsky" />
         <developer id="120981" name="Stanislav Erokhin" />
@@ -302,6 +303,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1579259659396" />
+    <option name="timestamp" value="1579511242801" />
   </component>
 </application>
