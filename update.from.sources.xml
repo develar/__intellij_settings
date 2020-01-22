@@ -1,6 +1,7 @@
 <application>
   <component name="UpdateFromSourcesSettings">
     <option name="buildDisabledPlugins" value="true" />
+    <option name="showSettings" value="false" />
     <option name="workIdePath" value="$APPLICATION_HOME_DIR$" />
   </component>
 </application>
