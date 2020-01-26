@@ -7,6 +7,7 @@
         <developer id="979559" name="Aleksandr Gribovich" />
         <developer id="985613" name="Aleksandr Izmaylov" />
         <developer id="984615" name="Aleksandr Krasilnikov" />
+        <developer id="986644" name="Aleksandr Prokopyev" />
         <developer id="985207" name="Aleksandr Rasnyuk" />
         <developer id="866273" name="Aleksandr Samofalov" />
         <developer id="984032" name="Aleksei Kniazev" />
@@ -303,6 +304,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1579882547133" />
+    <option name="timestamp" value="1580023428060" />
   </component>
 </application>
