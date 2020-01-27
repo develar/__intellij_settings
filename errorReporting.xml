@@ -43,6 +43,7 @@
         <developer id="159713" name="Alexey Tsvetkov" />
         <developer id="128028" name="Alexey Ushakov" />
         <developer id="129452" name="Alexey Utkin" />
+        <developer id="985938" name="Anastasia Ivanova" />
         <developer id="976868" name="Andrew Kozlov" />
         <developer id="134578" name="Andrey Akinshin" />
         <developer id="58852" name="Andrey Breslav" />
@@ -304,6 +305,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1580023428060" />
+    <option name="timestamp" value="1580121918037" />
   </component>
 </application>
