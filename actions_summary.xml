@@ -58,6 +58,14 @@
             </ActionSummary>
           </value>
         </entry>
+        <entry key="ChangesView.CreatePatchToClipboard">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1580974985145" />
+              <option name="times" value="1" />
+            </ActionSummary>
+          </value>
+        </entry>
         <entry key="ChangesView.Move">
           <value>
             <ActionSummary>
@@ -823,6 +831,14 @@
             <ActionSummary>
               <option name="last" value="1580918958378" />
               <option name="times" value="2" />
+            </ActionSummary>
+          </value>
+        </entry>
+        <entry key="com.intellij.ide.ReopenProjectAction">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1580974976777" />
+              <option name="times" value="1" />
             </ActionSummary>
           </value>
         </entry>
