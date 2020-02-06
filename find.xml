@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.properties" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -14,8 +15,8 @@
     <mask>plugin.xml</mask>
     <mask>*.groovy</mask>
     <mask>*.js</mask>
-    <mask>*.properties</mask>
     <mask>*.xml</mask>
     <mask>*.go</mask>
+    <mask>*.properties</mask>
   </component>
 </application>
