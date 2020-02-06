@@ -106,6 +106,14 @@
             </ActionSummary>
           </value>
         </entry>
+        <entry key="CompareClipboardWithSelection">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1580972508858" />
+              <option name="times" value="1" />
+            </ActionSummary>
+          </value>
+        </entry>
         <entry key="CompileDirty">
           <value>
             <ActionSummary>
@@ -253,8 +261,8 @@
         <entry key="EditorPaste">
           <value>
             <ActionSummary>
-              <option name="last" value="1580911664678" />
-              <option name="times" value="83" />
+              <option name="last" value="1580972499269" />
+              <option name="times" value="84" />
             </ActionSummary>
           </value>
         </entry>
@@ -375,6 +383,14 @@
             <ActionSummary>
               <option name="last" value="1580908883207" />
               <option name="times" value="3" />
+            </ActionSummary>
+          </value>
+        </entry>
+        <entry key="NewScratchFile">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1580972497306" />
+              <option name="times" value="1" />
             </ActionSummary>
           </value>
         </entry>
