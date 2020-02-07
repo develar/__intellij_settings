@@ -381,8 +381,8 @@
         <entry key="EditorSelectWord">
           <value>
             <ActionSummary>
-              <option name="last" value="1581057806749" />
-              <option name="times" value="542" />
+              <option name="last" value="1581066233880" />
+              <option name="times" value="546" />
             </ActionSummary>
           </value>
         </entry>
@@ -509,8 +509,8 @@
         <entry key="GotoClass">
           <value>
             <ActionSummary>
-              <option name="last" value="1581063752823" />
-              <option name="times" value="59" />
+              <option name="last" value="1581066216441" />
+              <option name="times" value="60" />
             </ActionSummary>
           </value>
         </entry>
@@ -1117,8 +1117,8 @@
         <entry key="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1581063758261" />
-              <option name="times" value="123" />
+              <option name="last" value="1581066217640" />
+              <option name="times" value="124" />
             </ActionSummary>
           </value>
         </entry>
