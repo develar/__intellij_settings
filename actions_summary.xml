@@ -66,6 +66,14 @@
             </ActionSummary>
           </value>
         </entry>
+        <entry key="BuildServer.LoginInfo">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1581092775896" />
+              <option name="times" value="1" />
+            </ActionSummary>
+          </value>
+        </entry>
         <entry key="ChangesView.CreatePatch">
           <value>
             <ActionSummary>
@@ -901,8 +909,8 @@
         <entry key="TeamCity.MainMenu.RemoteRunPushAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1581092749388" />
-              <option name="times" value="10" />
+              <option name="last" value="1581092785525" />
+              <option name="times" value="11" />
             </ActionSummary>
           </value>
         </entry>
