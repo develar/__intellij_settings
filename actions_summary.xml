@@ -933,8 +933,8 @@
         <entry key="Vcs.UpdateProject">
           <value>
             <ActionSummary>
-              <option name="last" value="1580999659311" />
-              <option name="times" value="10" />
+              <option name="last" value="1581056412517" />
+              <option name="times" value="11" />
             </ActionSummary>
           </value>
         </entry>
@@ -1093,8 +1093,8 @@
         <entry key="com.intellij.notification.NotificationAction$1">
           <value>
             <ActionSummary>
-              <option name="last" value="1581000864965" />
-              <option name="times" value="2" />
+              <option name="last" value="1581056480894" />
+              <option name="times" value="3" />
             </ActionSummary>
           </value>
         </entry>
@@ -1149,8 +1149,8 @@
         <entry key="com.intellij.openapi.vcs.changes.ui.ChangesBrowserBase$MyShowDiffAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1581005488439" />
-              <option name="times" value="23" />
+              <option name="last" value="1581056493556" />
+              <option name="times" value="24" />
             </ActionSummary>
           </value>
         </entry>
