@@ -237,8 +237,8 @@
         <entry key="EditorBackSpace">
           <value>
             <ActionSummary>
-              <option name="last" value="1581057861627" />
-              <option name="times" value="973" />
+              <option name="last" value="1581063659164" />
+              <option name="times" value="979" />
             </ActionSummary>
           </value>
         </entry>
@@ -509,8 +509,8 @@
         <entry key="GotoClass">
           <value>
             <ActionSummary>
-              <option name="last" value="1581057636652" />
-              <option name="times" value="57" />
+              <option name="last" value="1581063653486" />
+              <option name="times" value="58" />
             </ActionSummary>
           </value>
         </entry>
@@ -933,8 +933,8 @@
         <entry key="Vcs.UpdateProject">
           <value>
             <ActionSummary>
-              <option name="last" value="1581056412517" />
-              <option name="times" value="11" />
+              <option name="last" value="1581063649768" />
+              <option name="times" value="12" />
             </ActionSummary>
           </value>
         </entry>
@@ -1021,8 +1021,8 @@
         <entry key="com.intellij.ide.ReopenProjectAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1580998078462" />
-              <option name="times" value="4" />
+              <option name="last" value="1581063500297" />
+              <option name="times" value="5" />
             </ActionSummary>
           </value>
         </entry>
