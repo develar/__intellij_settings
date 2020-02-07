@@ -101,8 +101,8 @@
         <entry key="CheckForUpdate">
           <value>
             <ActionSummary>
-              <option name="last" value="1580911573058" />
-              <option name="times" value="4" />
+              <option name="last" value="1581057325888" />
+              <option name="times" value="5" />
             </ActionSummary>
           </value>
         </entry>
@@ -213,8 +213,8 @@
         <entry key="EditorBackSpace">
           <value>
             <ActionSummary>
-              <option name="last" value="1580999853101" />
-              <option name="times" value="834" />
+              <option name="last" value="1581057361137" />
+              <option name="times" value="835" />
             </ActionSummary>
           </value>
         </entry>
@@ -749,8 +749,8 @@
         <entry key="Run">
           <value>
             <ActionSummary>
-              <option name="last" value="1580998143349" />
-              <option name="times" value="18" />
+              <option name="last" value="1581057282903" />
+              <option name="times" value="20" />
             </ActionSummary>
           </value>
         </entry>
@@ -957,8 +957,8 @@
         <entry key="com.intellij.execution.actions.RunConfigurationsComboBoxAction$SelectConfigAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1580999001705" />
-              <option name="times" value="6" />
+              <option name="last" value="1581057279470" />
+              <option name="times" value="7" />
             </ActionSummary>
           </value>
         </entry>
@@ -1087,6 +1087,14 @@
             <ActionSummary>
               <option name="last" value="1580999623368" />
               <option name="times" value="19" />
+            </ActionSummary>
+          </value>
+        </entry>
+        <entry key="com.intellij.openapi.updateSettings.impl.UpdateChecker$showNotification$1">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1581057332363" />
+              <option name="times" value="1" />
             </ActionSummary>
           </value>
         </entry>
