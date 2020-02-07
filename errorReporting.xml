@@ -158,6 +158,7 @@
         <developer id="981086" name="Kirill Timofeev" />
         <developer id="122532" name="Kirill Zorin" />
         <developer id="977786" name="Konstantin Aleev" />
+        <developer id="984655" name="Konstantin Annikov" />
         <developer id="63017" name="Konstantin Bulenkov" />
         <developer id="126886" name="Konstantin Kolosovsky" />
         <developer id="985875" name="Konstantin Nisht" />
@@ -306,6 +307,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1580993775859" />
+    <option name="timestamp" value="1581085609619" />
   </component>
 </application>
