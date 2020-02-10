@@ -485,8 +485,8 @@
         <entry key="FileStructurePopup">
           <value>
             <ActionSummary>
-              <option name="last" value="1581086045250" />
-              <option name="times" value="10" />
+              <option name="last" value="1581340805028" />
+              <option name="times" value="11" />
             </ActionSummary>
           </value>
         </entry>
@@ -1245,8 +1245,8 @@
         <entry key="com.intellij.openapi.fileEditor.impl.EditorTabbedContainer$CloseTab">
           <value>
             <ActionSummary>
-              <option name="last" value="1581339367450" />
-              <option name="times" value="485" />
+              <option name="last" value="1581340803841" />
+              <option name="times" value="487" />
             </ActionSummary>
           </value>
         </entry>
