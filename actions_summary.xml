@@ -373,8 +373,8 @@
         <entry key="EditorPaste">
           <value>
             <ActionSummary>
-              <option name="last" value="1581339417397" />
-              <option name="times" value="538" />
+              <option name="last" value="1581340566544" />
+              <option name="times" value="539" />
             </ActionSummary>
           </value>
         </entry>
@@ -557,8 +557,8 @@
         <entry key="GotoClass">
           <value>
             <ActionSummary>
-              <option name="last" value="1581338629805" />
-              <option name="times" value="60" />
+              <option name="last" value="1581340566414" />
+              <option name="times" value="61" />
             </ActionSummary>
           </value>
         </entry>
@@ -829,8 +829,8 @@
         <entry key="Rerun">
           <value>
             <ActionSummary>
-              <option name="last" value="1581339522355" />
-              <option name="times" value="40" />
+              <option name="last" value="1581340664118" />
+              <option name="times" value="42" />
             </ActionSummary>
           </value>
         </entry>
@@ -1061,8 +1061,8 @@
         <entry key="com.intellij.codeInsight.daemon.NavigateAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1581338870226" />
-              <option name="times" value="105" />
+              <option name="last" value="1581340569179" />
+              <option name="times" value="106" />
             </ActionSummary>
           </value>
         </entry>
@@ -1253,8 +1253,8 @@
         <entry key="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1581338630868" />
-              <option name="times" value="133" />
+              <option name="last" value="1581340567198" />
+              <option name="times" value="134" />
             </ActionSummary>
           </value>
         </entry>
