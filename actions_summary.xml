@@ -117,8 +117,8 @@
         <entry key="CheckForUpdate">
           <value>
             <ActionSummary>
-              <option name="last" value="1581409112932" />
-              <option name="times" value="8" />
+              <option name="last" value="1581409558628" />
+              <option name="times" value="9" />
             </ActionSummary>
           </value>
         </entry>
@@ -261,8 +261,8 @@
         <entry key="EditorBackSpace">
           <value>
             <ActionSummary>
-              <option name="last" value="1581409101058" />
-              <option name="times" value="2123" />
+              <option name="last" value="1581409579659" />
+              <option name="times" value="2124" />
             </ActionSummary>
           </value>
         </entry>
@@ -1037,8 +1037,8 @@
         <entry key="Unscramble">
           <value>
             <ActionSummary>
-              <option name="last" value="1581409296900" />
-              <option name="times" value="2" />
+              <option name="last" value="1581409552888" />
+              <option name="times" value="3" />
             </ActionSummary>
           </value>
         </entry>
