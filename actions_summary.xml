@@ -13,8 +13,8 @@
         <entry key="$Delete">
           <value>
             <ActionSummary>
-              <option name="last" value="1581324185513" />
-              <option name="times" value="6" />
+              <option name="last" value="1581408230417" />
+              <option name="times" value="7" />
             </ActionSummary>
           </value>
         </entry>
@@ -103,6 +103,14 @@
             <ActionSummary>
               <option name="last" value="1581338254833" />
               <option name="times" value="5" />
+            </ActionSummary>
+          </value>
+        </entry>
+        <entry key="ChangesView.Shelve">
+          <value>
+            <ActionSummary>
+              <option name="last" value="1581408082218" />
+              <option name="times" value="1" />
             </ActionSummary>
           </value>
         </entry>
@@ -253,8 +261,8 @@
         <entry key="EditorBackSpace">
           <value>
             <ActionSummary>
-              <option name="last" value="1581348317945" />
-              <option name="times" value="2120" />
+              <option name="last" value="1581408086137" />
+              <option name="times" value="2121" />
             </ActionSummary>
           </value>
         </entry>
@@ -1069,8 +1077,8 @@
         <entry key="Vcs.UpdateProject">
           <value>
             <ActionSummary>
-              <option name="last" value="1581334476590" />
-              <option name="times" value="23" />
+              <option name="last" value="1581408231824" />
+              <option name="times" value="24" />
             </ActionSummary>
           </value>
         </entry>
