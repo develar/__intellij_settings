@@ -389,8 +389,8 @@
         <entry key="EditorPaste">
           <value>
             <ActionSummary>
-              <option name="last" value="1581348295646" />
-              <option name="times" value="645" />
+              <option name="last" value="1581408934343" />
+              <option name="times" value="646" />
             </ActionSummary>
           </value>
         </entry>
@@ -573,8 +573,8 @@
         <entry key="GotoClass">
           <value>
             <ActionSummary>
-              <option name="last" value="1581344466734" />
-              <option name="times" value="64" />
+              <option name="last" value="1581408934169" />
+              <option name="times" value="65" />
             </ActionSummary>
           </value>
         </entry>
@@ -605,8 +605,8 @@
         <entry key="GotoNextError">
           <value>
             <ActionSummary>
-              <option name="last" value="1581348322247" />
-              <option name="times" value="685" />
+              <option name="last" value="1581408903850" />
+              <option name="times" value="686" />
             </ActionSummary>
           </value>
         </entry>
@@ -1293,16 +1293,16 @@
         <entry key="com.intellij.openapi.fileEditor.impl.EditorTabbedContainer$CloseTab">
           <value>
             <ActionSummary>
-              <option name="last" value="1581348248909" />
-              <option name="times" value="578" />
+              <option name="last" value="1581408905793" />
+              <option name="times" value="581" />
             </ActionSummary>
           </value>
         </entry>
         <entry key="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
           <value>
             <ActionSummary>
-              <option name="last" value="1581348215435" />
-              <option name="times" value="141" />
+              <option name="last" value="1581408935123" />
+              <option name="times" value="142" />
             </ActionSummary>
           </value>
         </entry>
