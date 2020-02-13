@@ -1,11 +1,5 @@
 <application>
   <component name="GraziConfig">
-    <option name="userDisabledRules">
-      <set>
-        <option value="PASSIVE_VOICE" />
-        <option value="USELESS_THAT" />
-      </set>
-    </option>
     <option name="lastSeenVersion" value="201.SNAPSHOT" />
   </component>
 </application>
