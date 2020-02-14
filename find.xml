@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project 'idea-plugin'" />
-    <option name="defaultScopeName" value="Project 'idea-plugin'" />
-    <option name="SEARCH_SCOPE" value="Project 'idea-plugin'" />
+    <option name="customScope" value="default" />
+    <option name="defaultScopeName" value="default" />
+    <option name="SEARCH_SCOPE" value="default" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -12,10 +12,10 @@
     <mask>*.</mask>
     <mask>*.yaml</mask>
     <mask>plugin.xml</mask>
-    <mask>*.groovy</mask>
     <mask>*.js</mask>
     <mask>*.go</mask>
     <mask>*.properties</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
