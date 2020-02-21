@@ -49,6 +49,7 @@
         <developer id="58852" name="Andrey Breslav" />
         <developer id="977432" name="Andrey Cheptsov" />
         <developer id="976903" name="Andrey Dernov" />
+        <developer id="986683" name="Andrey Lesnikov" />
         <developer id="983490" name="Andrey Lisin" />
         <developer id="984183" name="Andrey Matveev" />
         <developer id="119040" name="Andrey Sokolov" />
@@ -307,6 +308,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1582200824279" />
+    <option name="timestamp" value="1582288496767" />
   </component>
 </application>
