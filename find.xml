@@ -15,7 +15,7 @@
     <mask>*.js</mask>
     <mask>*.go</mask>
     <mask>*.properties</mask>
-    <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
