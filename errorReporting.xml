@@ -128,6 +128,7 @@
         <developer id="45910" name="Gregory Shrago" />
         <developer id="981445" name="Grigory Panov" />
         <developer id="983004" name="Henry Wylde" />
+        <developer id="987280" name="Igor Smirnov" />
         <developer id="984184" name="Igor Yakovlev" />
         <developer id="984642" name="Ilia MOTORNYI" />
         <developer id="979349" name="Ilmir Usmanov" />
@@ -308,6 +309,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1583145762400" />
+    <option name="timestamp" value="1583244659151" />
   </component>
 </application>
