@@ -10,7 +10,6 @@
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
-    <mask>*.java</mask>
     <mask>*java</mask>
     <mask>*.ts</mask>
     <mask>*.</mask>
@@ -21,5 +20,6 @@
     <mask>*.properties</mask>
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>*.java</mask>
   </component>
 </application>
