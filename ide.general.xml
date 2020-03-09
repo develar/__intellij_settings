@@ -17,6 +17,5 @@
     <entry key="analyze.exceptions.on.the.fly" value="true" />
     <entry key="sdk.auto.check.unknown.sdk" value="false" />
     <entry key="vcs.commit.tool.window" value="false" />
-    <entry key="ide.plugins.allow.unload" value="false" />
   </component>
 </application>
