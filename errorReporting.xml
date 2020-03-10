@@ -146,6 +146,8 @@
         <developer id="978979" name="Ivan Fedorov" />
         <developer id="986425" name="Ivan Kubyshkin" />
         <developer id="979508" name="Ivan Semenov" />
+        <developer id="987453" name="Jakub Chrzanowski" />
+        <developer id="987454" name="Jakub Senohrábek" />
         <developer id="71783" name="Julia Beliaeva" />
         <developer id="977330" name="Justin Kaeser" />
         <developer id="977836" name="karashevich" />
@@ -177,6 +179,7 @@
         <developer id="169283" name="Liana Bakradze" />
         <developer id="979692" name="Lilia Abdulina" />
         <developer id="982322" name="Liudmila Kornilova" />
+        <developer id="987461" name="Maarten Balliauw" />
         <developer id="984629" name="Maksim Pelevin" />
         <developer id="417489" name="Marat Akhin" />
         <developer id="979281" name="Marat Khabibullin" />
@@ -310,6 +313,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1583756392550" />
+    <option name="timestamp" value="1583847979067" />
   </component>
 </application>
