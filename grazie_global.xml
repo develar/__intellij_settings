@@ -1,5 +1,13 @@
 <application>
   <component name="GraziConfig">
-    <option name="lastSeenVersion" value="201.SNAPSHOT.20200128" />
+    <option name="enabledProgrammingLanguages">
+      <set />
+    </option>
+    <option name="userDisabledRules">
+      <set>
+        <option value="PASSIVE_VOICE" />
+      </set>
+    </option>
+    <option name="version" value="1" />
   </component>
 </application>
