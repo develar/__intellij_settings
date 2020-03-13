@@ -3,7 +3,7 @@
     <settingsMapElement>
       <JAVA.annotation.hints>
         <Settings>
-          <option name="showInferred" value="true" />
+          <option name="showExternal" value="false" />
         </Settings>
       </JAVA.annotation.hints>
     </settingsMapElement>
