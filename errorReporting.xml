@@ -44,6 +44,7 @@
         <developer id="128028" name="Alexey Ushakov" />
         <developer id="129452" name="Alexey Utkin" />
         <developer id="985938" name="Anastasia Ivanova" />
+        <developer id="985530" name="Andrei Kuznetsov" />
         <developer id="976868" name="Andrew Kozlov" />
         <developer id="134578" name="Andrey Akinshin" />
         <developer id="58852" name="Andrey Breslav" />
@@ -197,6 +198,7 @@
         <developer id="278845" name="Michael Nedzelsky" />
         <developer id="117892" name="Mikhael Bogdanov" />
         <developer id="984315" name="Mikhail Chernyavsky" />
+        <developer id="900230" name="Mikhail Filippov" />
         <developer id="353249" name="Mikhail Glukhikh" />
         <developer id="122376" name="Mikhail Golubev" />
         <developer id="986311" name="Mikhail Khorkov" />
@@ -313,6 +315,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1584684239173" />
+    <option name="timestamp" value="1584775048615" />
   </component>
 </application>
