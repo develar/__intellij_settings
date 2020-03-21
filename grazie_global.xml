@@ -1,13 +1,9 @@
 <application>
   <component name="GraziConfig">
-    <option name="enabledProgrammingLanguages">
-      <set />
-    </option>
     <option name="userDisabledRules">
       <set>
         <option value="PASSIVE_VOICE" />
       </set>
     </option>
-    <option name="version" value="1" />
   </component>
 </application>
