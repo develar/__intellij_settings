@@ -4,8 +4,8 @@
     <extensionMap>
       <mapping pattern="Dockerfile.*" type="Dockerfile" />
       <mapping ext="geojson" type="JSON" />
-      <mapping ext="main.kts" type="Kotlin" />
       <mapping ext="gradle.kts" type="Kotlin" />
+      <mapping ext="main.kts" type="Kotlin" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
       <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
@@ -23,15 +23,15 @@
       <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
-      <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="poly" type="PLAIN_TEXT" />
-      <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <mapping ext="cfg" type="PLAIN_TEXT" />
-      <mapping ext="meta" type="PLAIN_TEXT" />
-      <mapping ext="srt" type="PLAIN_TEXT" />
-      <mapping ext="eml" type="PLAIN_TEXT" />
-      <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
+      <mapping ext="srt" type="PLAIN_TEXT" />
+      <mapping ext="run" type="PLAIN_TEXT" />
+      <mapping ext="eml" type="PLAIN_TEXT" />
+      <mapping ext="meta" type="PLAIN_TEXT" />
+      <mapping ext="4_version" type="PLAIN_TEXT" />
+      <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
