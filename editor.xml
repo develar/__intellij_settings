@@ -47,6 +47,11 @@
     <option name="collapseLambdas" value="false" />
     <option name="collapseOneLineMethods" value="false" />
   </component>
+  <component name="KubernetesFoldingSettings">
+    <option name="COLLAPSE_HELM_VALUES" value="false" />
+    <option name="COLLAPSE_ENV_VARS" value="false" />
+    <option name="COLLAPSE_EXEC_ACTIONS" value="false" />
+  </component>
   <component name="TodoConfiguration">
     <pattern pattern="\btodo\b.*" />
   </component>
