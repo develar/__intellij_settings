@@ -19,9 +19,9 @@
     <mask>*.go</mask>
     <mask>*.properties</mask>
     <mask>*.groovy</mask>
-    <mask>*.xml</mask>
     <mask>*.java</mask>
     <mask>package.json</mask>
     <mask>*.xm</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
