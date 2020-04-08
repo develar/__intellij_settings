@@ -15,7 +15,7 @@
     <EXCLUDED_PACKAGE NAME="sun.org" />
     <EXCLUDED_PACKAGE NAME="sun.security" />
   </component>
-  <component name="DaemonCodeAnalyzerSettings" profile="fewrf">
+  <component name="DaemonCodeAnalyzerSettings" profile="my idea.default">
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
   <component name="DefaultFont">
