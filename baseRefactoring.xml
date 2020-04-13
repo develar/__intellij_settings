@@ -18,6 +18,7 @@
     <option name="MOVE_SEARCH_FOR_TEXT" value="false" />
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
     <option name="INLINE_METHOD_THIS" value="true" />
+    <option name="INLINE_SUPER_CLASS_THIS" value="true" />
     <option name="INTRODUCE_CONSTANT_VISIBILITY" value="public" />
     <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
     <option name="INLINE_CLASS_SEARCH_IN_COMMENTS" value="false" />
