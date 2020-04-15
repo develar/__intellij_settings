@@ -117,6 +117,7 @@
         <developer id="73191" name="Ekaterina Tuzova" />
         <developer id="986623" name="Ekaterina Zhuvarova" />
         <developer id="977503" name="Eldar Abusalimov" />
+        <developer id="983278" name="Elena Sayapina" />
         <developer id="73183" name="Elena Shaverdova" />
         <developer id="128486" name="Elizabeth Shashkova" />
         <developer id="73169" name="Eugene Kudelevsky" />
@@ -316,6 +317,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1586858048036" />
+    <option name="timestamp" value="1586946501419" />
   </component>
 </application>
