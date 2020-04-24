@@ -1,5 +1,6 @@
 <application>
   <component name="TeamCityPluginSettings">
+    <option name="filterDataByCurrentProject" value="true" />
     <option name="hideIconInStatusBar" value="true" />
   </component>
 </application>
