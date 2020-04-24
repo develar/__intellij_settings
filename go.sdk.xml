@@ -3,25 +3,6 @@
     <sdk-path>
       <set>
         <option value="" />
-        <option value="/usr/local/Cellar/go/1.11.2/libexec" />
-        <option value="/usr/local/Cellar/go/1.11.4/libexec" />
-        <option value="/usr/local/Cellar/go/1.11.5/libexec" />
-        <option value="/usr/local/Cellar/go/1.12.1/libexec" />
-        <option value="/usr/local/Cellar/go/1.12.5/libexec" />
-        <option value="/usr/local/Cellar/go/1.12.6/libexec" />
-        <option value="/usr/local/Cellar/go/1.12.7/libexec" />
-        <option value="/usr/local/Cellar/go/1.12/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.1/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.3/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.4/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.5/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.6/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.7/libexec" />
-        <option value="/usr/local/Cellar/go/1.13.8/libexec" />
-        <option value="/usr/local/Cellar/go/1.13/libexec" />
-        <option value="/usr/local/Cellar/go/1.14.1/libexec" />
-        <option value="/usr/local/Cellar/go/1.14.2_1/libexec" />
-        <option value="/usr/local/Cellar/go/1.14/libexec" />
       </set>
     </sdk-path>
   </component>
