@@ -296,6 +296,7 @@
         <developer id="980220" name="Viktoria Shirunova" />
         <developer id="977012" name="Vitaliy Bibaev" />
         <developer id="981235" name="Vitaly Gordeev" />
+        <developer id="978404" name="Vitaly Provodin" />
         <developer id="984823" name="Vladimir Dolzhenko" />
         <developer id="986608" name="Vladimir Ilmov" />
         <developer id="979474" name="Vladimir Koshelev" />
@@ -320,6 +321,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1588236430734" />
+    <option name="timestamp" value="1588341324256" />
   </component>
 </application>
