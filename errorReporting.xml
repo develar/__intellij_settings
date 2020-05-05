@@ -303,6 +303,7 @@
         <developer id="55194" name="Vladimir Krivosheev" />
         <developer id="983660" name="Vladimir Lagunov" />
         <developer id="105785" name="Vladimir Orlov" />
+        <developer id="987636" name="Vladimir Panimaskin" />
         <developer id="983365" name="Vladimir Petrenko" />
         <developer id="977615" name="Vladimir Plyashkun" />
         <developer id="47674" name="Vladimir Reshetnikov" />
@@ -321,6 +322,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1588574288273" />
+    <option name="timestamp" value="1588661312318" />
   </component>
 </application>
