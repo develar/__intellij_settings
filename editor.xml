@@ -31,6 +31,15 @@
     <option name="SHOW_BREADCRUMBS" value="false" />
     <option name="KEEP_TRAILING_SPACE_ON_CARET_LINE" value="false" />
   </component>
+  <component name="InlayHintsSettings">
+    <settingsMapElement>
+      <JAVA.annotation.hints>
+        <Settings>
+          <option name="showExternal" value="false" />
+        </Settings>
+      </JAVA.annotation.hints>
+    </settingsMapElement>
+  </component>
   <component name="InspectionProfileManager">
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="INFORMATION" />
