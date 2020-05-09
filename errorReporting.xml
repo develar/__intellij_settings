@@ -38,6 +38,7 @@
         <developer id="707244" name="Alexey Andreev" />
         <developer id="982083" name="Alexey Belkov" />
         <developer id="1711" name="Alexey Gopachenko" />
+        <developer id="988270" name="Alexey Kalina" />
         <developer id="164" name="Alexey Kudravtsev" />
         <developer id="982085" name="Alexey Merkulov" />
         <developer id="113072" name="Alexey Sedunov" />
@@ -322,6 +323,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1588851213973" />
+    <option name="timestamp" value="1589003581161" />
   </component>
 </application>
