@@ -12,6 +12,7 @@
       <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
       <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
+      <mapping pattern=".mvn/maven.config" type="PLAIN_TEXT" />
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
