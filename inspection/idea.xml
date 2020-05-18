@@ -1525,6 +1525,13 @@
   <inspection_tool class="TrivialStringConcatenation" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="TryFinallyCanBeTryWithResources" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="TryWithIdenticalCatches" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="TypeMayBeWeakened" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="useRighthandTypeAsWeakestTypeInAssignments" value="true" />
+    <option name="useParameterizedTypeForCollectionMethods" value="true" />
+    <option name="doNotWeakenToJavaLangObject" value="true" />
+    <option name="onlyWeakentoInterface" value="true" />
+    <stopClasses>java.util.Set,java.util.List</stopClasses>
+  </inspection_tool>
   <inspection_tool class="TypeParameterExtendsFinalClass" enabled="true" level="WARNING" enabled_by_default="true">
     <scope name="Tests" level="WARNING" enabled="true" />
   </inspection_tool>
