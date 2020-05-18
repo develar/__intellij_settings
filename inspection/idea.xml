@@ -1530,7 +1530,7 @@
     <option name="useParameterizedTypeForCollectionMethods" value="true" />
     <option name="doNotWeakenToJavaLangObject" value="true" />
     <option name="onlyWeakentoInterface" value="true" />
-    <stopClasses>java.util.Set,java.util.List</stopClasses>
+    <stopClasses>java.util.Set,java.util.List,it.unimi.dsi.fastutil.objects.Object2IntMap</stopClasses>
   </inspection_tool>
   <inspection_tool class="TypeParameterExtendsFinalClass" enabled="true" level="WARNING" enabled_by_default="true">
     <scope name="Tests" level="WARNING" enabled="true" />
