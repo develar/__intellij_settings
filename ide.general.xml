@@ -26,7 +26,6 @@
         <entry key="IncomingChanges" value="false" />
         <entry key="LineSeparator" value="false" />
         <entry key="ReadOnlyAttribute" value="false" />
-        <entry key="com.intellij.psi.codeStyle.statusbar.CodeStyleStatusBarWidget" value="false" />
       </map>
     </option>
   </component>
