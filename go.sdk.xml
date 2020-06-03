@@ -4,6 +4,7 @@
       <set>
         <option value="" />
         <option value="/usr/local/Cellar/go/1.14.2_1/libexec" />
+        <option value="/usr/local/Cellar/go/1.14.3/libexec" />
       </set>
     </sdk-path>
   </component>
