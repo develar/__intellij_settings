@@ -18,6 +18,7 @@
     <entry key="sdk.auto.check.unknown.sdk" value="false" />
     <entry key="vcs.commit.tool.window" value="false" />
     <entry key="git.update.incoming.outgoing.info" value="false" />
+    <entry key="ide.allow.merge.buttons" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
