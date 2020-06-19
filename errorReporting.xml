@@ -74,6 +74,7 @@
         <developer id="124606" name="Anton Lobov" />
         <developer id="53045" name="Anton Makeev" />
         <developer id="588040" name="Anton Tarasov" />
+        <developer id="879044" name="Anton Yalyshev" />
         <developer id="983420" name="Arseniy Nisnevich" />
         <developer id="981347" name="Arseniy Pendryak" />
         <developer id="977830" name="Arseny Chernyaev" />
@@ -328,6 +329,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1592464187652" />
+    <option name="timestamp" value="1592559759840" />
   </component>
 </application>
