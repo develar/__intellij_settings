@@ -1,0 +1,8 @@
+<application>
+  <component name="download-consent">
+    <option name="consentItems">
+      <item download="ALLOWED" kind="jdk" url="https://index-cdn.jetbrains.com" />
+      <item download="ALLOWED" kind="project" url="https://minio.labs.jb.gg/index-cdn/v1/project/intellij" />
+    </option>
+  </component>
+</application>
