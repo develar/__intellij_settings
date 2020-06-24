@@ -67,6 +67,7 @@
         <developer id="73186" name="andrey zaytsev" />
         <developer id="980023" name="Anna Gromova" />
         <developer id="31077" name="Anna Kozlova" />
+        <developer id="977248" name="Anna Kutarba" />
         <developer id="986173" name="Anna Marchenko" />
         <developer id="976743" name="Anna Soloveva" />
         <developer id="978500" name="Anton Bannykh" />
@@ -329,6 +330,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1592850930809" />
+    <option name="timestamp" value="1592980267931" />
   </component>
 </application>
