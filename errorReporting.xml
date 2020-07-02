@@ -157,6 +157,7 @@
         <developer id="978979" name="Ivan Fedorov" />
         <developer id="986425" name="Ivan Kubyshkin" />
         <developer id="979508" name="Ivan Semenov" />
+        <developer id="985469" name="Ivan Yarkov" />
         <developer id="987453" name="Jakub Chrzanowski" />
         <developer id="987454" name="Jakub Senohrábek" />
         <developer id="71783" name="Julia Beliaeva" />
@@ -331,6 +332,6 @@
         <developer id="108987" name="Zalim Bashorov" />
       </list>
     </option>
-    <option name="timestamp" value="1593157226264" />
+    <option name="timestamp" value="1593582730461" />
   </component>
 </application>
