@@ -123,7 +123,7 @@
         <developer id="988133" name="Egor Tolstoy" />
         <developer id="137356" name="Egor Ushakov" />
         <developer id="977019" name="Egor Zhdan" />
-        <developer id="73191" name="Ekaterina Tuzova" />
+        <developer id="73191" name="Ekaterina Smal" />
         <developer id="986623" name="Ekaterina Zhuvarova" />
         <developer id="977503" name="Eldar Abusalimov" />
         <developer id="983278" name="Elena Sayapina" />
@@ -242,6 +242,7 @@
         <developer id="201593" name="Nikolay Obedin" />
         <developer id="983697" name="Nikolay Rykunov" />
         <developer id="121949" name="Nikolay Tropin" />
+        <developer id="984689" name="Olesya Bogdanova" />
         <developer id="10308" name="Olesya Smirnova" />
         <developer id="978574" name="Olga Strizhenko" />
         <developer id="985575" name="Pavel Bakhvalov" />
@@ -335,6 +336,6 @@
         <developer id="989455" name="Zarina Kurbatova" />
       </list>
     </option>
-    <option name="timestamp" value="1594901227363" />
+    <option name="timestamp" value="1595222834093" />
   </component>
 </application>
