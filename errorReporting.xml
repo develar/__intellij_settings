@@ -229,6 +229,7 @@
         <developer id="982836" name="Nikita Ashikhmin" />
         <developer id="983919" name="Nikita Bobko" />
         <developer id="988128" name="Nikita Eshkeev" />
+        <developer id="988261" name="Nikita Gubarkov" />
         <developer id="982846" name="Nikita Katkov" />
         <developer id="983799" name="Nikita Movshin" />
         <developer id="983413" name="Nikita Pavlenko" />
@@ -336,6 +337,6 @@
         <developer id="989455" name="Zarina Kurbatova" />
       </list>
     </option>
-    <option name="timestamp" value="1595317482411" />
+    <option name="timestamp" value="1595412291928" />
   </component>
 </application>
