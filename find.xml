@@ -5,6 +5,7 @@
     <option name="defaultScopeName" value="All Places" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -22,5 +23,6 @@
     <mask>*.xm</mask>
     <mask>*.kt</mask>
     <mask>*.xml</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
