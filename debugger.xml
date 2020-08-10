@@ -113,6 +113,15 @@
     <CustomRenderers VERSION="8">
       <Renderer ID="CompoundNodeRenderer">
         <option name="ENABLED" value="true" />
+        <option name="QUALIFIED_NAME" value="org.h2.mvstore.MVMap" />
+        <Renderer ID="LabelRenderer" role="label">
+          <option name="QUALIFIED_NAME" value="org.h2.mvstore.MVMap" />
+          <option name="ON_DEMAND" value="true" />
+          <option name="LABEL_EXPRESSION" value="&#13;&#13;JAVA" />
+        </Renderer>
+      </Renderer>
+      <Renderer ID="CompoundNodeRenderer">
+        <option name="ENABLED" value="true" />
         <option name="QUALIFIED_NAME" value="org.jetbrains.mvstore.MVMap" />
         <Renderer ID="LabelRenderer" role="label">
           <option name="QUALIFIED_NAME" value="org.jetbrains.mvstore.MVMap" />
