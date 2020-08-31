@@ -22,6 +22,8 @@
     <entry key="ide.allow.merge.buttons" value="false" />
     <entry key="ide.usage.group.navigate.on.double.click.disabled" value="true" />
     <entry key="ide.tree.expand.navigatable.on.double.click.disabled" value="true" />
+    <entry key="ide.new.project.model" value="false" />
+    <entry key="ide.mac.message.sheets.java.emulation.dialogs" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
