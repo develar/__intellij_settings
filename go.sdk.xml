@@ -1,9 +1,10 @@
 <application>
   <component name="GoSdkList">
-    <sdk-path>
+    <sdk-url>
       <set>
         <option value="" />
+        <option value="file://" />
       </set>
-    </sdk-path>
+    </sdk-url>
   </component>
 </application>
