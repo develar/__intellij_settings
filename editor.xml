@@ -62,6 +62,9 @@
     <option name="collapseLambdas" value="false" />
     <option name="collapseOneLineMethods" value="false" />
   </component>
+  <component name="JetEditorOptions">
+    <option name="donTShowConversionDialog" value="true" />
+  </component>
   <component name="KubernetesFoldingSettings">
     <option name="COLLAPSE_HELM_VALUES" value="false" />
     <option name="COLLAPSE_ENV_VARS" value="false" />
