@@ -21,5 +21,7 @@
     <mask>*.kt</mask>
     <mask>*.iml</mask>
     <mask>*.xml</mask>
+    <mask>icon-robotx.tsx</mask>
+    <mask>icon-robots.txt</mask>
   </component>
 </application>
