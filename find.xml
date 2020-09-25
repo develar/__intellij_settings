@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.svg" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -23,5 +24,6 @@
     <mask>*.xml</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>icon-robots.txt</mask>
+    <mask>*.svg</mask>
   </component>
 </application>
