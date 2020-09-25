@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.database.dialects.greenplum'" />
-    <option name="defaultScopeName" value="Module 'intellij.database.dialects.greenplum'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.database.dialects.greenplum'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -21,5 +21,7 @@
     <mask>*.kt</mask>
     <mask>*.iml</mask>
     <mask>*.xml</mask>
+    <mask>icon-robotx.tsx</mask>
+    <mask>icon-robots.txt</mask>
   </component>
 </application>
