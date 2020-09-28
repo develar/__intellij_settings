@@ -1,6 +1,6 @@
 <application>
-  <component name="FileTypeManager" version="17">
-    <ignoreFiles list="*.hprof;*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
+  <component name="FileTypeManager" version="18">
+    <ignoreFiles list="*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
       <mapping pattern="Dockerfile.*" type="Dockerfile" />
       <mapping pattern=".watchmanconfig" type="JSON" />
@@ -30,8 +30,8 @@
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
       <mapping ext="run" type="PLAIN_TEXT" />
-      <mapping ext="poly" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
+      <mapping ext="poly" type="PLAIN_TEXT" />
       <mapping ext="srt" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="cfg" type="PLAIN_TEXT" />
