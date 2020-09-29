@@ -3,6 +3,6 @@
     <macro name="MAVEN_REPOSITORY" value="/Volumes/data/.m2/repository" />
     <macro name="BUILDSERVER_PROJECT_HOME" value="/Volumes/data/Documents/teamcity" />
     <macro name="IDEA_PROJECT_HOME" value="/Volumes/data/Documents/idea" />
-    <macro name="KOTLIN_BUNDLED" value="/Volumes/data/Library/Application Support/JetBrains/IntelliJIdea2020.2/plugins/Kotlin/kotlinc" />
+    <macro name="KOTLIN_BUNDLED" value="/Applications/Idea.app/Contents/plugins/Kotlin/kotlinc" />
   </component>
 </application>
