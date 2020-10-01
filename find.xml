@@ -1,8 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.css.impl'" />
-    <option name="defaultScopeName" value="Module 'intellij.css.impl'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.css.impl'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -20,9 +21,9 @@
     <mask>*.xm</mask>
     <mask>*.kt</mask>
     <mask>*.iml</mask>
-    <mask>*.xml</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.svg</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
