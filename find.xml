@@ -20,9 +20,9 @@
     <mask>*.xm</mask>
     <mask>*.kt</mask>
     <mask>*.iml</mask>
-    <mask>*.xml</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.svg</mask>
+    <mask>*.xml</mask>
   </component>
 </application>

@@ -600,6 +600,14 @@
             </plugin>
           </value>
         </entry>
+        <entry key="*.gotime">
+          <value>
+            <plugin>
+              <option name="myPluginId" value="org.jetbrains.plugins.go" />
+              <option name="myPluginName" value="Go" />
+            </plugin>
+          </value>
+        </entry>
         <entry key="*.gradle">
           <value>
             <plugin>
