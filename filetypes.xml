@@ -23,6 +23,7 @@
       <mapping pattern=".mvn/maven.config" type="PLAIN_TEXT" />
       <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
+      <mapping pattern=".helmignore" type="PLAIN_TEXT" />
       <mapping pattern="_redirects" type="PLAIN_TEXT" />
       <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
       <mapping pattern="DockerFile" type="PLAIN_TEXT" />
