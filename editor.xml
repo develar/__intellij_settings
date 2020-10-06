@@ -40,6 +40,7 @@
     <option name="disabledHintProviderIds">
       <set>
         <option value="TypeScript.ts.type.hints" />
+        <option value="kotlin.KotlinLambdasHintsProvider" />
       </set>
     </option>
     <option name="lastViewedProviderKeyId" value="parameter.hints.old" />
