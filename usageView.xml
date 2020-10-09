@@ -1,4 +1,7 @@
 <application>
+  <component name="GoUsageSettings">
+    <option name="SHOW_USAGES_IN_COMMENTS" value="false" />
+  </component>
   <component name="ImportFilteringUsageViewSetting">
     <option name="SHOW_IMPORTS" value="false" />
   </component>
