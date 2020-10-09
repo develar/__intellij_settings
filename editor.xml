@@ -39,6 +39,7 @@
   <component name="InlayHintsSettings">
     <option name="disabledHintProviderIds">
       <set>
+        <option value="JAVA.java.implicit.types" />
         <option value="TypeScript.ts.type.hints" />
         <option value="kotlin.KotlinLambdasHintsProvider" />
       </set>
