@@ -77,8 +77,8 @@
         <entry key="*.apk">
           <value>
             <plugin>
-              <option name="myPluginId" value="com.intellij" />
-              <option name="myPluginName" value="IDEA CORE" />
+              <option name="myPluginId" value="org.jetbrains.android" />
+              <option name="myPluginName" value="Android" />
               <option name="myBundled" value="true" />
             </plugin>
           </value>
@@ -873,7 +873,7 @@
           <value>
             <plugin>
               <option name="myPluginId" value="com.intellij.java" />
-              <option name="myPluginName" value="Java" />
+              <option name="myPluginName" value="com.intellij.java" />
               <option name="myBundled" value="true" />
             </plugin>
           </value>
@@ -1091,7 +1091,7 @@
           <value>
             <plugin>
               <option name="myPluginId" value="com.intellij.kubernetes" />
-              <option name="myPluginName" value="Kubernetes" />
+              <option name="myPluginName" value="com.intellij.kubernetes" />
             </plugin>
           </value>
         </entry>
@@ -1099,7 +1099,7 @@
           <value>
             <plugin>
               <option name="myPluginId" value="com.intellij.kubernetes" />
-              <option name="myPluginName" value="Kubernetes" />
+              <option name="myPluginName" value="com.intellij.kubernetes" />
             </plugin>
           </value>
         </entry>
@@ -1528,8 +1528,8 @@
         <entry key="*.psd">
           <value>
             <plugin>
-              <option name="myPluginId" value="com.intellij.platform.images" />
-              <option name="myPluginName" value="com.intellij.platform.images" />
+              <option name="myPluginId" value="org.jetbrains.android" />
+              <option name="myPluginName" value="Android" />
               <option name="myBundled" value="true" />
             </plugin>
           </value>
@@ -2954,7 +2954,7 @@
                   </entry>
                   <entry key="KotlinJavaScriptTestRunnerProtractor">
                     <value>
-                      <FeaturePluginData displayName="Protractor (Kotlin)" pluginName="Kotlin" pluginId="org.jetbrains.kotlin" />
+                      <FeaturePluginData displayName="Protractor (Kotlin)" pluginName="org.jetbrains.kotlin" pluginId="org.jetbrains.kotlin" />
                     </value>
                   </entry>
                   <entry key="KotlinStandaloneScriptRunConfigurationType">
