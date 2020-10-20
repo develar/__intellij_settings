@@ -1091,7 +1091,7 @@
           <value>
             <plugin>
               <option name="myPluginId" value="com.intellij.kubernetes" />
-              <option name="myPluginName" value="Kubernetes" />
+              <option name="myPluginName" value="com.intellij.kubernetes" />
             </plugin>
           </value>
         </entry>
@@ -1099,7 +1099,7 @@
           <value>
             <plugin>
               <option name="myPluginId" value="com.intellij.kubernetes" />
-              <option name="myPluginName" value="Kubernetes" />
+              <option name="myPluginName" value="com.intellij.kubernetes" />
             </plugin>
           </value>
         </entry>
