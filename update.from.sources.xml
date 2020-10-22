@@ -91,6 +91,9 @@
         <option value="arquillian-core" />
         <option value="JavaeeExtensions" />
         <option value="AngularJS" />
+        <option value="android" />
+        <option value="smali" />
+        <option value="webp" />
       </list>
     </option>
     <option name="showSettings" value="false" />
