@@ -94,6 +94,7 @@
         <option value="android" />
         <option value="smali" />
         <option value="webp" />
+        <option value="gradle-dependencyUpdater" />
       </list>
     </option>
     <option name="showSettings" value="false" />
