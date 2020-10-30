@@ -92,7 +92,6 @@
         <option value="AngularJS" />
         <option value="webp" />
         <option value="gradle-dependencyUpdater" />
-        <option value="smali" />
       </list>
     </option>
     <option name="showSettings" value="false" />
