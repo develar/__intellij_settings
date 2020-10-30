@@ -93,6 +93,8 @@
         <option value="webp" />
         <option value="gradle-dependencyUpdater" />
         <option value="smali" />
+        <option value="maven-ext" />
+        <option value="android" />
       </list>
     </option>
     <option name="showSettings" value="false" />
