@@ -1,9 +1,10 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Directory '.../community/plugins [intellij.idea.community.main]'" />
-    <option name="defaultScopeName" value="Directory '.../community/plugins [intellij.idea.community.main]'" />
-    <option name="SEARCH_SCOPE" value="Directory '.../community/plugins [intellij.idea.community.main]'" />
-    <option name="FILE_MASK" value="plugin.xml" />
+    <option name="caseSensitive" value="true" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="SEARCH_SCOPE" value="All Places" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -11,6 +12,7 @@
     <mask>*.ts</mask>
     <mask>*.</mask>
     <mask>*.yaml</mask>
+    <mask>plugin.xml</mask>
     <mask>*.js</mask>
     <mask>*.go</mask>
     <mask>*.properties</mask>
@@ -24,6 +26,5 @@
     <mask>icon-robots.txt</mask>
     <mask>*.svg</mask>
     <mask>*.xml</mask>
-    <mask>plugin.xml</mask>
   </component>
 </application>
