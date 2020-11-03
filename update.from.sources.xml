@@ -92,10 +92,9 @@
         <option value="AngularJS" />
         <option value="webp" />
         <option value="gradle-dependencyUpdater" />
-        <option value="gradle-ext" />
-        <option value="tslint" />
         <option value="android" />
         <option value="smali" />
+        <option value="maven-ext" />
       </list>
     </option>
     <option name="showSettings" value="false" />
