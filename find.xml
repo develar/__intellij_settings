@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Directory '.../contrib [intellij.tools.content]'" />
-    <option name="defaultScopeName" value="Directory '.../contrib [intellij.tools.content]'" />
-    <option name="SEARCH_SCOPE" value="Directory '.../contrib [intellij.tools.content]'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
