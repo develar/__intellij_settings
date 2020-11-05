@@ -94,8 +94,6 @@
         <option value="gradle-dependencyUpdater" />
         <option value="android" />
         <option value="smali" />
-        <option value="gradle-ext" />
-        <option value="tslint" />
       </list>
     </option>
     <option name="showSettings" value="false" />
