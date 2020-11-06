@@ -15,7 +15,6 @@
     <mask>*.go</mask>
     <mask>*.properties</mask>
     <mask>*.groovy</mask>
-    <mask>*.java</mask>
     <mask>package.json</mask>
     <mask>*.xm</mask>
     <mask>*.kt</mask>
@@ -24,5 +23,6 @@
     <mask>icon-robots.txt</mask>
     <mask>*.svg</mask>
     <mask>*.xml</mask>
+    <mask>*.java</mask>
   </component>
 </application>
