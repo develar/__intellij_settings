@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="icon-robots.txt" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -20,9 +21,9 @@
     <mask>*.kt</mask>
     <mask>*.iml</mask>
     <mask>icon-robotx.tsx</mask>
-    <mask>icon-robots.txt</mask>
     <mask>*.svg</mask>
     <mask>*.xml</mask>
     <mask>*.java</mask>
+    <mask>icon-robots.txt</mask>
   </component>
 </application>
