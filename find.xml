@@ -21,8 +21,8 @@
     <mask>*.iml</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>*.svg</mask>
-    <mask>*.xml</mask>
     <mask>*.java</mask>
     <mask>icon-robots.txt</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
