@@ -15,7 +15,6 @@
         <option value="eclipse" />
         <option value="javaHttpClients" />
         <option value="drools" />
-        <option value="codeWithMe-plugin" />
         <option value="xslt-debugger" />
         <option value="haml" />
         <option value="WebServices" />
@@ -91,7 +90,6 @@
         <option value="JavaeeExtensions" />
         <option value="AngularJS" />
         <option value="webp" />
-        <option value="gradle-dependencyUpdater" />
         <option value="android" />
         <option value="smali" />
         <option value="maven-ext" />
