@@ -1,0 +1,10 @@
+<keymap version="1" name="my macOS System Shortcuts" parent="macOS System Shortcuts">
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="alt up" />
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
+  <action id="SmartTypeCompletion">
+    <keyboard-shortcut first-keystroke="shift ctrl space" />
+    <keyboard-shortcut first-keystroke="meta space" />
+  </action>
+</keymap>
