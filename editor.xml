@@ -7,6 +7,7 @@
     <EXCLUDED_PACKAGE NAME="com.google.common.io.Files" />
     <EXCLUDED_PACKAGE NAME="com.intellij.compiler.ant" />
     <EXCLUDED_PACKAGE NAME="com.intellij.icons.AllIcons.Welcome.Project" />
+    <EXCLUDED_PACKAGE NAME="com.intellij.util.containers.IntArrayList" />
     <EXCLUDED_PACKAGE NAME="com.sun" />
     <EXCLUDED_PACKAGE NAME="com.thoughtworks" />
     <EXCLUDED_PACKAGE NAME="javafx.scene" />
