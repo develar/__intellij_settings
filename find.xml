@@ -24,5 +24,6 @@
     <mask>*.java</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.xml</mask>
+    <mask>icon-robo</mask>
   </component>
 </application>
