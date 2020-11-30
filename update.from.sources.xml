@@ -92,8 +92,6 @@
         <option value="webp" />
         <option value="android" />
         <option value="smali" />
-        <option value="tslint" />
-        <option value="gradle-ext" />
         <option value="performanceTesting-gradle" />
       </list>
     </option>
