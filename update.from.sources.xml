@@ -93,6 +93,8 @@
         <option value="android" />
         <option value="smali" />
         <option value="performanceTesting-gradle" />
+        <option value="tslint" />
+        <option value="gradle-ext" />
       </list>
     </option>
     <option name="showSettings" value="false" />
