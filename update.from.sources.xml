@@ -93,7 +93,6 @@
         <option value="android" />
         <option value="smali" />
         <option value="performanceTesting-gradle" />
-        <option value="maven-ext" />
       </list>
     </option>
     <option name="showSettings" value="false" />
