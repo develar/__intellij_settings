@@ -98,7 +98,6 @@
         <option value="space" />
         <option value="maven-ext" />
         <option value="filePrediction" />
-        <option value="gradle-ext" />
       </list>
     </option>
     <option name="showSettings" value="false" />
