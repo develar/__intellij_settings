@@ -3,6 +3,7 @@
     <option name="customScope" value="Project and Libraries" />
     <option name="defaultScopeName" value="Project and Libraries" />
     <option name="SEARCH_SCOPE" value="Project and Libraries" />
+    <option name="FILE_MASK" value="package.json" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -14,7 +15,6 @@
     <mask>*.js</mask>
     <mask>*.go</mask>
     <mask>*.properties</mask>
-    <mask>package.json</mask>
     <mask>*.xm</mask>
     <mask>*.kt</mask>
     <mask>*.iml</mask>
@@ -25,5 +25,6 @@
     <mask>icon-robo</mask>
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>package.json</mask>
   </component>
 </application>
