@@ -103,6 +103,7 @@
         <option value="gradle-javaee" />
         <option value="gradle-java" />
         <option value="gradle-java-maven" />
+        <option value="ant" />
       </list>
     </option>
     <option name="showSettings" value="false" />
