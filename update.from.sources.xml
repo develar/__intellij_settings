@@ -100,6 +100,7 @@
         <option value="filePrediction" />
         <option value="gradle-ext" />
         <option value="ant" />
+        <option value="codeWithMe-plugin" />
       </list>
     </option>
     <option name="showSettings" value="false" />
