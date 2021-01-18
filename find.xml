@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="get rid of guava in ConcurrentTasksProgressManager" />
-    <option name="defaultScopeName" value="get rid of guava in ConcurrentTasksProgressManager" />
-    <option name="SEARCH_SCOPE" value="get rid of guava in ConcurrentTasksProgressManager" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
