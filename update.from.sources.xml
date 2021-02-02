@@ -98,6 +98,10 @@
         <option value="space" />
         <option value="maven-ext" />
         <option value="filePrediction" />
+        <option value="codeWithMe-plugin" />
+        <option value="gradle-ext" />
+        <option value="ant" />
+        <option value="indexing-shared-ultimate" />
       </list>
     </option>
     <option name="showSettings" value="false" />
