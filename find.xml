@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Update IStubElementType.java" />
-    <option name="defaultScopeName" value="Update IStubElementType.java" />
-    <option name="SEARCH_SCOPE" value="Update IStubElementType.java" />
+    <option name="customScope" value="Directory '.../community/plugins/sh [intellij.sh]'" />
+    <option name="defaultScopeName" value="Directory '.../community/plugins/sh [intellij.sh]'" />
+    <option name="SEARCH_SCOPE" value="Directory '.../community/plugins/sh [intellij.sh]'" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
