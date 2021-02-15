@@ -98,6 +98,7 @@
         <option value="ant" />
         <option value="indexing-shared-ultimate" />
         <option value="indexing-shared" />
+        <option value="cwm-plugin" />
       </list>
     </option>
     <option name="showSettings" value="false" />
