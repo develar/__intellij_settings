@@ -97,6 +97,7 @@
         <option value="gradle-ext" />
         <option value="ant" />
         <option value="indexing-shared-ultimate" />
+        <option value="indexing-shared" />
       </list>
     </option>
     <option name="showSettings" value="false" />
