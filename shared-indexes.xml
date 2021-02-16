@@ -4,6 +4,8 @@
       <item download="ALLOWED" kind="jdk" url="https://index-cdn.jetbrains.com" />
       <item download="ALLOWED" kind="project" url="https://minio.labs.jb.gg/index-cdn/v1/project/intellij" />
       <item download="DENIED" kind="project" url="https://secure.index-cdn.jetbrains.com/v1/project/intellij-ultimate" />
+      <item download="DENIED" kind="jdk" url="https://index-cdn.jetbrains.com/v2/jdk" />
+      <item download="DENIED" kind="mvn" url="https://index-cdn.jetbrains.com/v2/mvn" />
     </option>
   </component>
 </application>
