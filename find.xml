@@ -22,8 +22,9 @@
     <mask>*.java</mask>
     <mask>icon-robots.txt</mask>
     <mask>icon-robo</mask>
-    <mask>*.groovy</mask>
     <mask>package.json</mask>
+    <mask>*.json</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>

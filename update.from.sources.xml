@@ -96,6 +96,8 @@
         <option value="indexing-shared-ultimate" />
         <option value="indexing-shared" />
         <option value="cwm-plugin" />
+        <option value="ant" />
+        <option value="gradle-ext" />
       </list>
     </option>
     <option name="showSettings" value="false" />

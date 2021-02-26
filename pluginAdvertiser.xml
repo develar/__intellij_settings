@@ -12,11 +12,6 @@
                       <FeaturePluginData displayName="Plugin" pluginName="Plugin DevKit" pluginId="DevKit" bundled="true" />
                     </value>
                   </entry>
-                  <entry key="AntRunConfiguration">
-                    <value>
-                      <FeaturePluginData displayName="Ant Target" pluginName="Ant" pluginId="AntSupport" bundled="true" />
-                    </value>
-                  </entry>
                   <entry key="Application">
                     <value>
                       <FeaturePluginData displayName="Application" pluginName="Java" pluginId="com.intellij.java" bundled="true" />
@@ -160,6 +155,11 @@
                   <entry key="ShConfigurationType">
                     <value>
                       <FeaturePluginData displayName="Shell Script" pluginName="Shell Script" pluginId="com.jetbrains.sh" bundled="true" />
+                    </value>
+                  </entry>
+                  <entry key="SpaceRunConfiguration">
+                    <value>
+                      <FeaturePluginData displayName="Space Task" pluginName="Space" pluginId="com.jetbrains.space" bundled="true" />
                     </value>
                   </entry>
                   <entry key="TSqltConfigurationType">
