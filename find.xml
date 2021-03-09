@@ -26,5 +26,6 @@
     <mask>*.json</mask>
     <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*.md</mask>
   </component>
 </application>
