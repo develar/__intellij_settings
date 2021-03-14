@@ -7,11 +7,11 @@
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="Default Changelist" />
+    <option name="FILE_MASK" value="*.ts" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
     <mask>*java</mask>
-    <mask>*.ts</mask>
     <mask>*.</mask>
     <mask>*.yaml</mask>
     <mask>plugin.xml</mask>
@@ -31,5 +31,6 @@
     <mask>*.groovy</mask>
     <mask>*.md</mask>
     <mask>*.json</mask>
+    <mask>*.ts</mask>
   </component>
 </application>
