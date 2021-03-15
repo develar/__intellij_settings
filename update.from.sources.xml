@@ -95,10 +95,6 @@
         <option value="tslint" />
         <option value="indexing-shared-ultimate" />
         <option value="indexing-shared" />
-        <option value="filePrediction" />
-        <option value="maven-ext" />
-        <option value="featuresTrainer" />
-        <option value="space" />
       </list>
     </option>
     <option name="showSettings" value="false" />
