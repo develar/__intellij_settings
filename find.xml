@@ -26,10 +26,10 @@
     <mask>icon-robots.txt</mask>
     <mask>icon-robo</mask>
     <mask>package.json</mask>
-    <mask>*.xml</mask>
     <mask>*.groovy</mask>
     <mask>*.md</mask>
     <mask>*.json</mask>
     <mask>*.ts</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
