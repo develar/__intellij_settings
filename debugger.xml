@@ -139,11 +139,6 @@
           <custom-object-presentation />
         </configuration>
       </debugger>
-      <debugger id="kotlin_debugger">
-        <configuration>
-          <option name="debugDisableCoroutineAgent" value="true" />
-        </configuration>
-      </debugger>
     </debuggers>
   </component>
 </application>
