@@ -98,6 +98,7 @@
         <option value="cwm-plugin" />
         <option value="gradle-ext" />
         <option value="ant" />
+        <option value="gradle-javaee" />
       </list>
     </option>
     <option name="showSettings" value="false" />
