@@ -15,7 +15,6 @@
     <mask>*.properties</mask>
     <mask>*.xm</mask>
     <mask>*.kt</mask>
-    <mask>*.iml</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>*.svg</mask>
     <mask>*.java</mask>
@@ -27,5 +26,6 @@
     <mask>*.json</mask>
     <mask>*.ts</mask>
     <mask>*.xml</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
