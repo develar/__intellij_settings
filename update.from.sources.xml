@@ -96,10 +96,6 @@
         <option value="indexing-shared-ultimate" />
         <option value="gradle-javaee" />
         <option value="dynamicPluginsTests-performanceTesting" />
-        <option value="maven-ext" />
-        <option value="filePrediction" />
-        <option value="space" />
-        <option value="featuresTrainer" />
       </list>
     </option>
     <option name="showSettings" value="false" />
