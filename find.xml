@@ -14,7 +14,6 @@
     <mask>*.go</mask>
     <mask>*.properties</mask>
     <mask>*.xm</mask>
-    <mask>*.kt</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>*.svg</mask>
     <mask>*.java</mask>
@@ -28,5 +27,6 @@
     <mask>*.iml</mask>
     <mask>*.sh</mask>
     <mask>*.xml</mask>
+    <mask>*.kt</mask>
   </component>
 </application>

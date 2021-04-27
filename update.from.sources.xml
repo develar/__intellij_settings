@@ -96,6 +96,15 @@
         <option value="indexing-shared-ultimate" />
         <option value="gradle-javaee" />
         <option value="dynamicPluginsTests-performanceTesting" />
+        <option value="microservices-ui" />
+        <option value="cwm-plugin" />
+        <option value="laf-macos" />
+        <option value="indexing-shared" />
+        <option value="Ktor" />
+        <option value="packageSearch" />
+        <option value="ant" />
+        <option value="featuresTrainer" />
+        <option value="gradle-ext" />
       </list>
     </option>
     <option name="showSettings" value="false" />
