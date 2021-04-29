@@ -104,6 +104,7 @@
         <option value="packageSearch" />
         <option value="featuresTrainer" />
         <option value="gradle-ext" />
+        <option value="protoeditor" />
       </list>
     </option>
     <option name="showSettings" value="false" />
