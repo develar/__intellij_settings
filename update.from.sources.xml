@@ -102,9 +102,9 @@
         <option value="indexing-shared" />
         <option value="Ktor" />
         <option value="packageSearch" />
-        <option value="ant" />
         <option value="featuresTrainer" />
         <option value="gradle-ext" />
+        <option value="protoeditor" />
       </list>
     </option>
     <option name="showSettings" value="false" />
