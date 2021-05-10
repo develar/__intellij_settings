@@ -33,6 +33,7 @@
       <map>
         <entry key="Encoding" value="false" />
         <entry key="LineSeparator" value="false" />
+        <entry key="Position" value="false" />
         <entry key="ReadOnlyAttribute" value="false" />
       </map>
     </option>
