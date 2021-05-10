@@ -102,6 +102,10 @@
         <option value="protoeditor" />
         <option value="pwa-core" />
         <option value="laf-macos" />
+        <option value="cwm-plugin" />
+        <option value="indexing-shared" />
+        <option value="gradle-ext" />
+        <option value="Ktor" />
       </list>
     </option>
     <option name="showSettings" value="false" />
