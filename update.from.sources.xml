@@ -97,14 +97,12 @@
         <option value="gradle-javaee" />
         <option value="dynamicPluginsTests-performanceTesting" />
         <option value="microservices-ui" />
-        <option value="cwm-plugin" />
-        <option value="laf-macos" />
-        <option value="indexing-shared" />
-        <option value="Ktor" />
         <option value="packageSearch" />
         <option value="featuresTrainer" />
-        <option value="gradle-ext" />
         <option value="protoeditor" />
+        <option value="maven-ext" />
+        <option value="filePrediction" />
+        <option value="space" />
       </list>
     </option>
     <option name="showSettings" value="false" />
