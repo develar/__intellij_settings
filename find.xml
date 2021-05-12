@@ -21,12 +21,12 @@
     <mask>package.json</mask>
     <mask>*.md</mask>
     <mask>*.json</mask>
-    <mask>*.ts</mask>
     <mask>*.iml</mask>
     <mask>*.sh</mask>
     <mask>*.kt</mask>
     <mask>plugin.xml</mask>
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>*.ts</mask>
   </component>
 </application>
