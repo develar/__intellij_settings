@@ -3,6 +3,7 @@
     <option name="customScope" value="Default Changelist" />
     <option name="defaultScopeName" value="Default Changelist" />
     <option name="SEARCH_SCOPE" value="Default Changelist" />
+    <option name="FILE_MASK" value="*.json" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -20,7 +21,6 @@
     <mask>icon-robo</mask>
     <mask>package.json</mask>
     <mask>*.md</mask>
-    <mask>*.json</mask>
     <mask>*.iml</mask>
     <mask>*.sh</mask>
     <mask>*.kt</mask>
@@ -28,5 +28,6 @@
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
     <mask>*.ts</mask>
+    <mask>*.json</mask>
   </component>
 </application>
