@@ -3,7 +3,7 @@
     <option name="customScope" value="Default Changelist" />
     <option name="defaultScopeName" value="Default Changelist" />
     <option name="SEARCH_SCOPE" value="Default Changelist" />
-    <option name="FILE_MASK" value="*.json" />
+    <option name="FILE_MASK" value="*.ts" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -27,7 +27,7 @@
     <mask>plugin.xml</mask>
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
-    <mask>*.ts</mask>
     <mask>*.json</mask>
+    <mask>*.ts</mask>
   </component>
 </application>
