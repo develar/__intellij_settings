@@ -1,12 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
-    <option name="wholeWordsOnly" value="true" />
-    <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="WHOLE_WORDS_ONLY" value="true" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="plugin.xml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -24,13 +21,13 @@
     <mask>icon-robo</mask>
     <mask>package.json</mask>
     <mask>*.md</mask>
-    <mask>*.json</mask>
-    <mask>*.ts</mask>
     <mask>*.iml</mask>
     <mask>*.sh</mask>
     <mask>*.kt</mask>
-    <mask>plugin.xml</mask>
     <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>*.json</mask>
+    <mask>*.ts</mask>
+    <mask>plugin.xml</mask>
   </component>
 </application>
