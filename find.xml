@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.java" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -15,7 +16,6 @@
     <mask>*.xm</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>*.svg</mask>
-    <mask>*.java</mask>
     <mask>icon-robots.txt</mask>
     <mask>icon-robo</mask>
     <mask>package.json</mask>
@@ -23,10 +23,11 @@
     <mask>*.iml</mask>
     <mask>*.sh</mask>
     <mask>*.kt</mask>
-    <mask>*.groovy</mask>
-    <mask>*.xml</mask>
     <mask>*.json</mask>
     <mask>*.ts</mask>
+    <mask>*.groovy</mask>
+    <mask>*.xml</mask>
     <mask>plugin.xml</mask>
+    <mask>*.java</mask>
   </component>
 </application>
