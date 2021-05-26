@@ -24,9 +24,9 @@
     <mask>*.kt</mask>
     <mask>*.json</mask>
     <mask>*.ts</mask>
-    <mask>*.groovy</mask>
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
