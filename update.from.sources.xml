@@ -99,16 +99,9 @@
         <option value="microservices-ui" />
         <option value="packageSearch" />
         <option value="featuresTrainer" />
-        <option value="protoeditor" />
         <option value="pwa-core" />
-        <option value="grpc" />
         <option value="maven-ext" />
         <option value="filePrediction" />
-        <option value="space" />
-        <option value="cwm-plugin" />
-        <option value="indexing-shared" />
-        <option value="gradle-ext" />
-        <option value="laf-macos" />
         <option value="Ktor" />
       </list>
     </option>
