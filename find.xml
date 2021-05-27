@@ -3,7 +3,7 @@
     <option name="customScope" value="default" />
     <option name="defaultScopeName" value="default" />
     <option name="SEARCH_SCOPE" value="default" />
-    <option name="FILE_MASK" value="*.xml" />
+    <option name="FILE_MASK" value="*.groovy" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -27,7 +27,7 @@
     <mask>*.ts</mask>
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
-    <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
