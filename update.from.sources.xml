@@ -110,6 +110,7 @@
         <option value="gradle-ext" />
         <option value="laf-macos" />
         <option value="Ktor" />
+        <option value="vcs-git-featuresTrainer" />
       </list>
     </option>
     <option name="showSettings" value="false" />
