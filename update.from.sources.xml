@@ -105,6 +105,7 @@
         <option value="Ktor" />
         <option value="vcs-git-featuresTrainer" />
         <option value="ant" />
+        <option value="laf-macos" />
       </list>
     </option>
     <option name="showSettings" value="false" />
