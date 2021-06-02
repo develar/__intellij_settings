@@ -1,6 +1,5 @@
 <application>
   <component name="UpdateFromSourcesSettings">
-    <option name="buildDisabledPlugins" value="true" />
     <option name="pluginDirectoriesForDisabledPlugins">
       <list>
         <option value="hg4idea" />
