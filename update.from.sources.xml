@@ -110,6 +110,7 @@
         <option value="protoeditor" />
         <option value="grpc" />
         <option value="gradle-ext" />
+        <option value="java-pwa" />
       </list>
     </option>
     <option name="showSettings" value="false" />
