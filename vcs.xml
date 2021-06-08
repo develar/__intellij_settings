@@ -49,6 +49,5 @@
   <component name="VcsApplicationSettings">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$" />
     <option name="DETECT_PATCH_ON_THE_FLY" value="true" />
-    <option name="COMMIT_FROM_LOCAL_CHANGES" value="true" />
   </component>
 </application>
