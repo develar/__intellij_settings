@@ -28,6 +28,7 @@
     <entry key="twooh.userid" value="5bb72298-1649-447d-8c3b-4ba93580d00a" />
     <entry key="ide.recent.files.tool.window.list" value="false" />
     <entry key="ide.new.tool.window.dnd" value="false" />
+    <entry key="ide.message.dialogs.as.swing.alert" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
