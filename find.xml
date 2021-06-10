@@ -3,6 +3,7 @@
     <option name="customScope" value="default" />
     <option name="defaultScopeName" value="default" />
     <option name="SEARCH_SCOPE" value="default" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
