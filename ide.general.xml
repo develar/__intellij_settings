@@ -17,8 +17,6 @@
     <entry key="java.completion.argument.hints.internal" value="false" />
     <entry key="analyze.exceptions.on.the.fly" value="true" />
     <entry key="sdk.auto.check.unknown.sdk" value="false" />
-    <entry key="vcs.commit.tool.window" value="false" />
-    <entry key="git.update.incoming.outgoing.info" value="false" />
     <entry key="ide.allow.merge.buttons" value="false" />
     <entry key="ide.usage.group.navigate.on.double.click.disabled" value="true" />
     <entry key="ide.tree.expand.navigatable.on.double.click.disabled" value="true" />
@@ -29,6 +27,7 @@
     <entry key="ide.recent.files.tool.window.list" value="false" />
     <entry key="ide.new.tool.window.dnd" value="false" />
     <entry key="ide.mac.bigsur.alerts.enabled" value="true" />
+    <entry key="ide.message.dialogs.as.swing.alert" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
