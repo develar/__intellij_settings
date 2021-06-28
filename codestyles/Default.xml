@@ -13,12 +13,12 @@
     <option name="FORCE_SEMICOLON_STYLE" value="true" />
     <option name="FORCE_QUOTE_STYlE" value="true" />
     <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
+    <option name="SPACES_WITHIN_IMPORTS" value="true" />
   </JSCodeStyleSettings>
   <JetCodeStyleSettings>
     <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
   </JetCodeStyleSettings>
-  <SQLiteCodeStyleSettings version="2">
-    <option name="myVersion" value="2" />
+  <SQLiteCodeStyleSettings version="6">
     <option name="USE_GENERIC_STYLE" value="true" />
   </SQLiteCodeStyleSettings>
   <TypeScriptCodeStyleSettings version="0">
