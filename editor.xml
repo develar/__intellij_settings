@@ -41,6 +41,7 @@
     <option name="disabledHintProviderIds">
       <set>
         <option value="JAVA.java.implicit.types" />
+        <option value="JavaScript.js.chain.hints" />
         <option value="JavaScript.js.type.hints" />
         <option value="TypeScript.ts.type.hints" />
         <option value="kotlin.KotlinLambdasHintsProvider" />
