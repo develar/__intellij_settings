@@ -3,7 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.iml" />
+    <option name="FILE_MASK" value="*.groovy" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -26,8 +26,8 @@
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
     <mask>*.kt</mask>
-    <mask>*.groovy</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
