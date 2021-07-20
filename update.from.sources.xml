@@ -110,6 +110,7 @@
         <option value="grpc" />
         <option value="gradle-ext" />
         <option value="java-pwa" />
+        <option value="android-androidCwm" />
       </list>
     </option>
     <option name="showSettings" value="false" />
