@@ -27,8 +27,8 @@
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
     <mask>*.kt</mask>
-    <mask>*.groovy</mask>
     <mask>*.iml</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
