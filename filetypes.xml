@@ -45,6 +45,7 @@
       <mapping ext="cfg" type="PLAIN_TEXT" />
       <mapping pattern="desktop-gnome-specic" type="Shell Script" />
       <mapping pattern=".werf/*.tmpl" type="YAML" />
+      <mapping ext="tpl" type="YAML" />
       <mapping ext="tmpl" type="YAML" />
       <removed_mapping ext="apk" approved="true" type="ARCHIVE" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
