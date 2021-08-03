@@ -31,8 +31,8 @@
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern="desktop-init" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
-      <mapping ext="env" type="PLAIN_TEXT" />
       <mapping ext="meta" type="PLAIN_TEXT" />
+      <mapping ext="env" type="PLAIN_TEXT" />
       <mapping ext="plist" type="PLAIN_TEXT" />
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
