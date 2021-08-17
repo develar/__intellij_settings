@@ -5,6 +5,7 @@
         <option name="suppressed">
           <set>
             <option value="little bit" />
+            <option value="a select is" />
           </set>
         </option>
       </SuppressingContext>
