@@ -6,6 +6,7 @@
           <set>
             <option value="little bit" />
             <option value="a select is" />
+            <option value="an assert" />
           </set>
         </option>
       </SuppressingContext>
