@@ -1,0 +1,15 @@
+<application>
+  <component name="GraziConfig">
+    <option name="suppressingContext">
+      <SuppressingContext>
+        <option name="suppressed">
+          <set>
+            <option value="little bit" />
+            <option value="a select is" />
+            <option value="an assert" />
+          </set>
+        </option>
+      </SuppressingContext>
+    </option>
+  </component>
+</application>

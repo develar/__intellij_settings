@@ -14,6 +14,7 @@
     <option name="FORCE_QUOTE_STYlE" value="true" />
     <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
     <option name="SPACES_WITHIN_IMPORTS" value="true" />
+    <option name="IMPORT_SORT_MODULE_NAME" value="true" />
   </JSCodeStyleSettings>
   <JetCodeStyleSettings>
     <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
@@ -21,6 +22,9 @@
   <SQLiteCodeStyleSettings version="6">
     <option name="USE_GENERIC_STYLE" value="true" />
   </SQLiteCodeStyleSettings>
+  <ScssCodeStyleSettings>
+    <option name="ENFORCE_QUOTES_ON_FORMAT" value="true" />
+  </ScssCodeStyleSettings>
   <TypeScriptCodeStyleSettings version="0">
     <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
     <option name="FORCE_SEMICOLON_STYLE" value="true" />
