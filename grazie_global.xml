@@ -7,6 +7,8 @@
             <option value="little bit" />
             <option value="a select is" />
             <option value="an assert" />
+            <option value="a nats server," />
+            <option value="a single nats server cluster" />
           </set>
         </option>
       </SuppressingContext>
