@@ -44,6 +44,7 @@
       <mapping ext="ion" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="cfg" type="PLAIN_TEXT" />
+      <mapping ext="plantuml" type="PlantUML file" />
       <mapping pattern="desktop-gnome-specic" type="Shell Script" />
       <mapping pattern=".werf/*.tmpl" type="YAML" />
       <mapping ext="tpl" type="YAML" />
