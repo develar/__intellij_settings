@@ -1,17 +1,13 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
-    <mask>*.css</mask>
-    <mask>*.html</mask>
-    <mask>*.jsp</mask>
+    <option name="customScope" value="Default Changelist" />
+    <option name="defaultScopeName" value="Default Changelist" />
+    <option name="SEARCH_SCOPE" value="Default Changelist" />
     <mask>*java</mask>
     <mask>*.</mask>
     <mask>*.yaml</mask>
     <mask>*.js</mask>
     <mask>*.go</mask>
-    <mask>*.properties</mask>
     <mask>*.xm</mask>
     <mask>icon-robotx.tsx</mask>
     <mask>*.svg</mask>
@@ -21,12 +17,16 @@
     <mask>*.md</mask>
     <mask>*.sh</mask>
     <mask>plugin.xml</mask>
-    <mask>*.java</mask>
     <mask>*.kt</mask>
     <mask>*.ts</mask>
     <mask>*.iml</mask>
     <mask>*.groovy</mask>
     <mask>*.json</mask>
+    <mask>*.css</mask>
+    <mask>*.html</mask>
     <mask>*.xml</mask>
+    <mask>*.jsp</mask>
+    <mask>*.properties</mask>
+    <mask>*.java</mask>
   </component>
 </application>
