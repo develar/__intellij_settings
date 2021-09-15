@@ -98,7 +98,6 @@
         <option value="microservices-ui" />
         <option value="packageSearch" />
         <option value="featuresTrainer" />
-        <option value="pwa-core" />
         <option value="Ktor" />
         <option value="vcs-git-featuresTrainer" />
         <option value="ant" />
@@ -109,7 +108,6 @@
         <option value="protoeditor" />
         <option value="grpc" />
         <option value="gradle-ext" />
-        <option value="java-pwa" />
         <option value="android-androidCwm" />
         <option value="ExpressionLanguage" />
       </list>
