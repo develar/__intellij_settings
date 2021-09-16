@@ -29,6 +29,7 @@
     <entry key="ide.mac.bigsur.alerts.enabled" value="true" />
     <entry key="ide.message.dialogs.as.swing.alert" value="false" />
     <entry key="debugger.new.tool.window.layout" value="false" />
+    <entry key="vcs.code.author.inlay.hints" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
