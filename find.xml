@@ -5,6 +5,7 @@
     <option name="localRegularExpressions" value="true" />
     <option name="LOCAL_REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="educe usages of Trove" />
+    <option name="FILE_MASK" value="*.groovy" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -28,7 +29,7 @@
     <mask>*.properties</mask>
     <mask>*.java</mask>
     <mask>*.json</mask>
-    <mask>*.groovy</mask>
     <mask>*.go</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
