@@ -1,9 +1,7 @@
 <application>
   <component name="UpdateFromSourcesSettings">
-    <option name="buildDisabledPlugins" value="true" />
     <option name="pluginDirectoriesForDisabledPlugins">
       <list>
-        <option value="java-pwa" />
         <option value="AngularJS" />
         <option value="microservices-ui" />
         <option value="javaSqlApis" />
@@ -56,7 +54,6 @@
         <option value="SpringWebSocket" />
         <option value="JPA" />
         <option value="Tomcat" />
-        <option value="pwa-core" />
         <option value="SpringSecurity" />
         <option value="featuresTrainer" />
         <option value="Web" />
@@ -94,6 +91,7 @@
         <option value="javaHttpClients" />
         <option value="Jetty" />
         <option value="aop-common" />
+        <option value="ExpressionLanguage" />
       </list>
     </option>
   </component>
