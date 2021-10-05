@@ -12,6 +12,7 @@
     <option name="enabled" value="false" />
   </component>
   <component name="UsageViewSettings">
+    <option name="GROUP_BY_USAGE_TYPE" value="false" />
     <option name="IS_PREVIEW_USAGES" value="false" />
   </component>
 </application>
