@@ -21,11 +21,6 @@
   <component name="DaemonCodeAnalyzerSettings" profile="idea.default (final)">
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
-  <component name="DefaultFont">
-    <option name="FONT_REGULAR_SUB_FAMILY" value="Regular" />
-    <option name="FONT_BOLD_SUB_FAMILY" value="Bold" />
-    <option name="USE_LIGATURES" value="true" />
-  </component>
   <component name="EditorSettings">
     <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR:CONSOLE" />
     <option name="SOFT_WRAP_FILE_MASKS" value="*.md; *.txt; *.rst; *.adoc; *.http" />
