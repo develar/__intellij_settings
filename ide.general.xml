@@ -30,11 +30,14 @@
     <entry key="ide.message.dialogs.as.swing.alert" value="false" />
     <entry key="vcs.code.author.inlay.hints" value="false" />
     <entry key="vcs.show.affected.files.as.tab" value="false" />
+    <entry key="ide.experimental.ui" value="true" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
       <map>
         <entry key="Encoding" value="false" />
+        <entry key="InsertOverwrite" value="false" />
+        <entry key="JSONSchemaSelector" value="false" />
         <entry key="LineSeparator" value="false" />
         <entry key="ReadOnlyAttribute" value="false" />
       </map>
