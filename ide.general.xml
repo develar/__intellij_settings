@@ -22,6 +22,7 @@
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
     <entry key="analyze.exceptions.on.the.fly" value="true" />
     <entry key="ide.recent.files.tool.window.list" value="false" />
+    <entry key="ide.allow.merge.buttons" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
