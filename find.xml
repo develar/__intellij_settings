@@ -28,5 +28,6 @@
     <mask>*.iml</mask>
     <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*Icons.java</mask>
   </component>
 </application>
