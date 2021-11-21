@@ -4,32 +4,47 @@
     <extensionMap>
       <mapping ext="sum" type="AUTO_DETECTED" />
       <mapping pattern="Dockerfile.*" type="Dockerfile" />
+      <mapping pattern="jest.config" type="JSON" />
+      <mapping pattern=".eslintrc" type="JSON" />
+      <mapping pattern=".stylelintrc" type="JSON" />
+      <mapping pattern=".babelrc" type="JSON" />
+      <mapping pattern="bowerrc" type="JSON" />
       <mapping pattern=".watchmanconfig" type="JSON" />
       <mapping pattern=".graphqlconfig" type="JSON" />
       <mapping ext="geojson" type="JSON" />
+      <mapping ext="jsb3" type="JSON" />
+      <mapping ext="jsb2" type="JSON" />
       <mapping ext="space.kts" type="Kotlin" />
       <mapping ext="gradle.kts" type="Kotlin" />
       <mapping ext="main.kts" type="Kotlin" />
-      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
       <mapping pattern=".env.local" type="PLAIN_TEXT" />
+      <mapping pattern=".jshintignore" type="PLAIN_TEXT" />
       <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
-      <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
-      <mapping pattern="desktop-common" type="PLAIN_TEXT" />
+      <mapping pattern=".stylelintignore" type="PLAIN_TEXT" />
       <mapping pattern="LICENSE" type="PLAIN_TEXT" />
-      <mapping pattern="DockerFile" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
-      <mapping pattern=".env" type="PLAIN_TEXT" />
       <mapping pattern=".yarnclean" type="PLAIN_TEXT" />
-      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
+      <mapping pattern=".npmrc" type="PLAIN_TEXT" />
       <mapping pattern="callFunInInit" type="PLAIN_TEXT" />
-      <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
       <mapping pattern="_redirects" type="PLAIN_TEXT" />
-      <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
-      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
-      <mapping pattern="desktop-init" type="PLAIN_TEXT" />
       <mapping pattern="scaleway-s3-config" type="PLAIN_TEXT" />
       <mapping pattern=".helmignore" type="PLAIN_TEXT" />
       <mapping pattern=".mvn/maven.config" type="PLAIN_TEXT" />
+      <mapping pattern=".npmignore" type="PLAIN_TEXT" />
+      <mapping pattern=".yarnrc" type="PLAIN_TEXT" />
+      <mapping pattern="inheritFromJetIterator" type="PLAIN_TEXT" />
+      <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
+      <mapping pattern="desktop-common" type="PLAIN_TEXT" />
+      <mapping pattern="DockerFile" type="PLAIN_TEXT" />
+      <mapping pattern=".env" type="PLAIN_TEXT" />
+      <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
+      <mapping pattern=".nvmrc" type="PLAIN_TEXT" />
+      <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
+      <mapping pattern=".node-version" type="PLAIN_TEXT" />
+      <mapping pattern=".eslintignore" type="PLAIN_TEXT" />
+      <mapping pattern="objectInheritingFromClass" type="PLAIN_TEXT" />
+      <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
+      <mapping pattern="desktop-init" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
       <mapping ext="meta" type="PLAIN_TEXT" />
       <mapping ext="env" type="PLAIN_TEXT" />

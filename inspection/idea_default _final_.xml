@@ -142,7 +142,6 @@
   <inspection_tool class="AssignmentToStaticFieldFromInstanceMethod" enabled="true" level="WARNING" enabled_by_default="true">
     <scope name="Tests" level="WARNING" enabled="false" />
   </inspection_tool>
-  <inspection_tool class="AssignmentUsedAsCondition" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="BadExpressionStatementJS" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="BindingAnnotationWithoutInject" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="BlockingMethodInNonBlockingContext" enabled="true" level="WARNING" enabled_by_default="true">
@@ -187,7 +186,6 @@
   <inspection_tool class="ConditionalBreakInInfiniteLoop" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="noConversionToDoWhile" value="true" />
   </inspection_tool>
-  <inspection_tool class="ConditionalExpressionWithIdenticalBranches" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="ConfusingOctalEscape" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="ConstantConditionalExpression" enabled="true" level="WARNING" enabled_by_default="true">
     <scope name="Tests" level="WARNING" enabled="false" />
@@ -246,7 +244,6 @@
   <inspection_tool class="EmptyStatementBodyJS" enabled="false" level="WARNING" enabled_by_default="false">
     <option name="m_reportEmptyBlocks" value="false" />
   </inspection_tool>
-  <inspection_tool class="EmptySynchronizedStatement" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="EqualsWithItself" enabled="true" level="WARNING" enabled_by_default="true">
     <scope name="Tests" level="WARNING" enabled="false" />
   </inspection_tool>
@@ -263,7 +260,6 @@
   <inspection_tool class="Finalize" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="ignoreTrivialFinalizers" value="true" />
   </inspection_tool>
-  <inspection_tool class="FinalizeNotProtected" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="FoldInitializerAndIfToElvis" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
   <inspection_tool class="ForLoopThatDoesntUseLoopVariable" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="GemInspection" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -431,7 +427,6 @@
     <exclude classes="Math" />
   </inspection_tool>
   <inspection_tool class="JSUndeclaredVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-  <inspection_tool class="JSUnfilteredForInLoop" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="JSUnnecessarySemicolon" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="JSUnresolvedFunction" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
   <inspection_tool class="JSUnresolvedLibraryURL" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -698,7 +693,6 @@
   <inspection_tool class="PrivatePropertyName" enabled="true" level="WEAK WARNING" enabled_by_default="true">
     <option name="namePattern" value="([A-Z_][A-Z_\d]*)|(_?[a-z][A-Za-z\d]*)" />
   </inspection_tool>
-  <inspection_tool class="ProtectedMemberInFinalClass" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="PublicConstructorInNonPublicClass" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="PublicFieldAccessedInSynchronizedContext" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="Query_bound_parameters" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -706,9 +700,6 @@
   <inspection_tool class="Query_restricted" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="RawUseOfParameterizedType" enabled="true" level="WEAK WARNING" enabled_by_default="true">
     <option name="ignoreParametersOfOverridingMethods" value="true" />
-  </inspection_tool>
-  <inspection_tool class="RedundantCast" enabled="true" level="WARNING" enabled_by_default="true">
-    <option name="IGNORE_SUSPICIOUS_METHOD_CALLS" value="true" />
   </inspection_tool>
   <inspection_tool class="RedundantSamConstructor" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
   <inspection_tool class="RedundantScopeBinding" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -1845,7 +1836,6 @@
   <inspection_tool class="ValidatorModelInspection" enabled="false" level="ERROR" enabled_by_default="false" />
   <inspection_tool class="WaitNotInLoop" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="WaitNotInSynchronizedContext" enabled="true" level="WARNING" enabled_by_default="true" />
-  <inspection_tool class="WaitWhileHoldingTwoLocks" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="WeakerAccess" enabled="false" level="WARNING" enabled_by_default="true">
     <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="false" />
     <option name="SUGGEST_PACKAGE_LOCAL_FOR_TOP_CLASSES" value="false" />
