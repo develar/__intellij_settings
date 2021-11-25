@@ -14,7 +14,6 @@
     <mask>*.md</mask>
     <mask>*.sh</mask>
     <mask>plugin.xml</mask>
-    <mask>*.kt</mask>
     <mask>*.ts</mask>
     <mask>*java</mask>
     <mask>*.yaml</mask>
@@ -23,11 +22,12 @@
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>*.java</mask>
-    <mask>*.json</mask>
     <mask>*.go</mask>
     <mask>*.iml</mask>
     <mask>*.xml</mask>
-    <mask>*.groovy</mask>
     <mask>*Icons.java</mask>
+    <mask>*.kt</mask>
+    <mask>*.json</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
