@@ -2,5 +2,6 @@
   <component name="NotificationConfiguration">
     <notification groupId="Dependencies from package.json" displayType="NONE" shouldLog="false" />
     <notification groupId="Docker: Dockerfile detection" displayType="NONE" shouldLog="false" />
+    <notification groupId="Test Runner" displayType="NONE" shouldLog="false" />
   </component>
 </application>
