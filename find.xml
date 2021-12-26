@@ -3,7 +3,6 @@
     <option name="customScope" value="exclude" />
     <option name="defaultScopeName" value="exclude" />
     <option name="SEARCH_SCOPE" value="exclude" />
-    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
