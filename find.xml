@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="exclude" />
-    <option name="defaultScopeName" value="exclude" />
-    <option name="SEARCH_SCOPE" value="exclude" />
+    <option name="customScope" value="cleanup" />
+    <option name="defaultScopeName" value="cleanup" />
+    <option name="SEARCH_SCOPE" value="cleanup" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -27,7 +27,7 @@
     <mask>*.kt</mask>
     <mask>*.json</mask>
     <mask>*.iml</mask>
-    <mask>*.groovy</mask>
     <mask>*.xml</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
