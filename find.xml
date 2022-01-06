@@ -3,7 +3,6 @@
     <option name="customScope" value="cleanup" />
     <option name="defaultScopeName" value="cleanup" />
     <option name="SEARCH_SCOPE" value="cleanup" />
-    <option name="FILE_MASK" value="*.groovy" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -28,7 +27,7 @@
     <mask>*.kt</mask>
     <mask>*.json</mask>
     <mask>*.iml</mask>
-    <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
