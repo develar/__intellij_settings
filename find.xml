@@ -5,6 +5,7 @@
     <option name="wholeWordsOnly" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="default" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -29,8 +30,8 @@
     <mask>*.kt</mask>
     <mask>*.json</mask>
     <mask>*.groovy</mask>
-    <mask>*.xml</mask>
     <mask>*.vue</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
