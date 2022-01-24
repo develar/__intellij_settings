@@ -17,7 +17,6 @@
     <entry key="ide.usage.group.navigate.on.double.click.disabled" value="true" />
     <entry key="ide.tree.expand.navigatable.on.double.click.disabled" value="true" />
     <entry key="twooh.userid" value="5bb72298-1649-447d-8c3b-4ba93580d00a" />
-    <entry key="vcs.code.author.inlay.hints" value="false" />
     <entry key="ide.experimental.ui" value="true" />
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
     <entry key="analyze.exceptions.on.the.fly" value="true" />
