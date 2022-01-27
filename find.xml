@@ -25,11 +25,11 @@
     <mask>*.go</mask>
     <mask>*Icons.java</mask>
     <mask>*.kt</mask>
-    <mask>*.json</mask>
     <mask>*.vue</mask>
     <mask>*.iml</mask>
     <mask>*.propeties</mask>
     <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*.json</mask>
   </component>
 </application>
