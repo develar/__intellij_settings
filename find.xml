@@ -3,6 +3,7 @@
     <option name="customScope" value="default" />
     <option name="defaultScopeName" value="default" />
     <option name="SEARCH_SCOPE" value="default" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -29,7 +30,7 @@
     <mask>*.propeties</mask>
     <mask>*.groovy</mask>
     <mask>*.json</mask>
-    <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
