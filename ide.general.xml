@@ -24,7 +24,6 @@
     <entry key="ide.allow.merge.buttons" value="false" />
     <entry key="vcs.show.affected.files.as.tab" value="false" />
     <entry key="vcs.blame.show.affected.files.in.log" value="false" />
-    <entry key="git.enable.stash.toolwindow" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
