@@ -29,6 +29,7 @@
     </option>
     <option name="disabledCodeVisionProviderIds">
       <set>
+        <option value="java.inheritors" />
         <option value="java.references" />
         <option value="references" />
         <option value="vcs.code.vision" />
@@ -59,7 +60,7 @@
         <option value="kotlin.kotlin.ranges.hints" />
       </set>
     </option>
-    <option name="lastViewedProviderKeyId" value=".references" />
+    <option name="lastViewedProviderKeyId" value=".inheritors" />
     <settingsMapElement>
       <JavaScript.js.type.hints>
         <Settings>
