@@ -1,8 +1,16 @@
 <application>
   <component name="ParameterNameHintsSettings">
     <option id="SHOW_PARAMETER_HINT" value="false" />
-    <option id="SHOW_LAMBDA_IMPLICIT_PARAMETER_RECEIVER" value="false" />
+    <option id="vuejs.show.names.for.filters" value="false" />
+    <option id="java.enums" value="false" />
     <option id="clojure.parameter.hints" value="true" />
+    <option id="go.return.parameters" value="false" />
+    <option id="go.struct.unnamed.struct.fields" value="false" />
+    <option id="js.only.show.names.for.tagged" value="false" />
+    <option id="java.new.expr" value="false" />
+    <option id="js.only.show.names.for.pipes" value="false" />
+    <option id="SHOW_LAMBDA_IMPLICIT_PARAMETER_RECEIVER" value="false" />
+    <option id="js.param.hints.show.names.for.tagged" value="false" />
     <option id="sql.show.column.names.in.select" value="true" />
     <option id="SHOW_LAMBDA_RETURN_EXPRESSION" value="false" />
     <disabledLanguages>
