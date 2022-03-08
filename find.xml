@@ -29,7 +29,7 @@
     <mask>*.propeties</mask>
     <mask>*.json</mask>
     <mask>*.iml</mask>
-    <mask>*.xml</mask>
     <mask>*.groovy</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
