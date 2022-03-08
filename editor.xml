@@ -29,6 +29,7 @@
     </option>
     <option name="disabledCodeVisionProviderIds">
       <set>
+        <option value="inheritors" />
         <option value="java.inheritors" />
         <option value="java.references" />
         <option value="references" />
