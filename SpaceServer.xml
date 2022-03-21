@@ -8,6 +8,7 @@
     </option>
     <option name="serverSettings">
       <SpaceServerSettings>
+        <option name="enabled" value="true" />
         <option name="server" value="https://jetbrains.team" />
       </SpaceServerSettings>
     </option>
