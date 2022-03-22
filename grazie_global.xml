@@ -9,9 +9,10 @@
             <option value="a single nats server cluster" />
             <option value="size pairs int -" />
             <option value="}" />
+            <option value="under write" />
             <option value="an assert" />
             <option value="a nats server," />
-            <option value="under write" />
+            <option value="(" />
           </set>
         </option>
       </SuppressingContext>
