@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="customScope" value="Module 'intellij.maven.server'" />
+    <option name="defaultScopeName" value="Module 'intellij.maven.server'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.maven.server'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
