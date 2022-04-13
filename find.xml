@@ -3,7 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="package.json" />
+    <option name="FILE_MASK" value="*.groovy" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -30,7 +30,7 @@
     <mask>*.json</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
-    <mask>*.groovy</mask>
     <mask>package.json</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
