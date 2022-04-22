@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -28,8 +29,8 @@
     <mask>*.propeties</mask>
     <mask>*.json</mask>
     <mask>*.xml</mask>
-    <mask>*.iml</mask>
     <mask>package.json</mask>
     <mask>*.groovy</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
