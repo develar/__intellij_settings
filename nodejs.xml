@@ -6,11 +6,14 @@
     <local-interpreter path="/usr/local/opt/node@14/bin/node">
       <version-cache last-modified="0" />
     </local-interpreter>
-    <local-interpreter path="/usr/local/Cellar/node/17.8.0/bin/node">
-      <version-cache version="17.8.0" last-modified="1648017605954" />
+    <local-interpreter path="/usr/local/Cellar/node/18.0.0/bin/node">
+      <version-cache version="18.0.0" last-modified="1650822964360" />
     </local-interpreter>
     <local-interpreter path="/usr/local/bin/node">
       <version-cache version="18.0.0" last-modified="1650822964360" />
+    </local-interpreter>
+    <local-interpreter path="/usr/local/Cellar/node/17.8.0/bin/node">
+      <version-cache last-modified="0" />
     </local-interpreter>
     <local-interpreter path="/usr/local/Cellar/node/16.7.0/bin/node">
       <version-cache last-modified="0" />
@@ -34,7 +37,7 @@
       <version-cache version="10.7.0" last-modified="1649770840797" />
     </local-interpreter>
     <local-interpreter path="/usr/local/bin/ts-node-transpile-only">
-      <version-cache version="10.7.0" last-modified="1649770840799" />
+      <version-cache version="10.7.0" last-modified="1651236788924" />
     </local-interpreter>
   </component>
   <component name="NodeJsLocalInterpreters">
