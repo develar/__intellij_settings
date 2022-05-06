@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -27,9 +28,9 @@
     <mask>*.vue</mask>
     <mask>*.propeties</mask>
     <mask>*.json</mask>
-    <mask>*.xml</mask>
     <mask>package.json</mask>
     <mask>*.iml</mask>
     <mask>*.groovy</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
