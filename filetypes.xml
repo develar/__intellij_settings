@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="18">
     <ignoreFiles list="*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs" />
     <extensionMap>
+      <mapping pattern="module" type="AUTO_DETECTED" />
       <mapping ext="sum" type="AUTO_DETECTED" />
       <mapping pattern="Dockerfile.*" type="Dockerfile" />
       <mapping pattern=".watchmanconfig" type="JSON" />
@@ -31,8 +32,8 @@
       <mapping pattern="fcg-vmp" type="PLAIN_TEXT" />
       <mapping pattern="desktop-init" type="PLAIN_TEXT" />
       <mapping pattern="Kt2388" type="PLAIN_TEXT" />
-      <mapping ext="meta" type="PLAIN_TEXT" />
       <mapping ext="env" type="PLAIN_TEXT" />
+      <mapping ext="meta" type="PLAIN_TEXT" />
       <mapping ext="plist" type="PLAIN_TEXT" />
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />

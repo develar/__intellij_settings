@@ -13,7 +13,6 @@
     <mask>*.md</mask>
     <mask>*.sh</mask>
     <mask>plugin.xml</mask>
-    <mask>*.ts</mask>
     <mask>*java</mask>
     <mask>*.yaml</mask>
     <mask>*.css</mask>
@@ -27,9 +26,10 @@
     <mask>*.vue</mask>
     <mask>*.propeties</mask>
     <mask>*.json</mask>
-    <mask>*.xml</mask>
     <mask>package.json</mask>
-    <mask>*.iml</mask>
     <mask>*.groovy</mask>
+    <mask>*.xml</mask>
+    <mask>*.iml</mask>
+    <mask>*.ts</mask>
   </component>
 </application>
