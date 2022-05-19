@@ -3,6 +3,7 @@
     <option name="customScope" value="default" />
     <option name="defaultScopeName" value="default" />
     <option name="SEARCH_SCOPE" value="default" />
+    <option name="FILE_MASK" value="*.kt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -22,7 +23,6 @@
     <mask>*.java</mask>
     <mask>*.go</mask>
     <mask>*Icons.java</mask>
-    <mask>*.kt</mask>
     <mask>*.vue</mask>
     <mask>*.propeties</mask>
     <mask>*.json</mask>
@@ -31,5 +31,6 @@
     <mask>*.xml</mask>
     <mask>*.iml</mask>
     <mask>*.ts</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
