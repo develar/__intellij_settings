@@ -30,11 +30,11 @@
     <mask>*.propeties</mask>
     <mask>*.json</mask>
     <mask>package.json</mask>
-    <mask>*.groovy</mask>
     <mask>*.xml</mask>
     <mask>*.ts</mask>
     <mask>*.txt</mask>
     <mask>*.iml</mask>
     <mask>*.kt</mask>
+    <mask>*.groovy</mask>
   </component>
 </application>
