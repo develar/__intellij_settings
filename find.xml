@@ -3,6 +3,7 @@
     <option name="customScope" value="Project and Libraries" />
     <option name="defaultScopeName" value="Project and Libraries" />
     <option name="SEARCH_SCOPE" value="Project and Libraries" />
+    <option name="FILE_MASK" value="*.vue" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -22,7 +23,6 @@
     <mask>*.java</mask>
     <mask>*.go</mask>
     <mask>*Icons.java</mask>
-    <mask>*.vue</mask>
     <mask>*.propeties</mask>
     <mask>*.json</mask>
     <mask>package.json</mask>
@@ -32,5 +32,6 @@
     <mask>*.iml</mask>
     <mask>*.kt</mask>
     <mask>*.groovy</mask>
+    <mask>*.vue</mask>
   </component>
 </application>
