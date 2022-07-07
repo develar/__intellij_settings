@@ -78,11 +78,6 @@
           <option name="showExternal" value="false" />
         </Settings>
       </JAVA.annotation.hints>
-      <kotlin.kotlin.lambdas.hints>
-        <Settings>
-          <option name="implicitReceiversAndParams" value="false" />
-        </Settings>
-      </kotlin.kotlin.lambdas.hints>
     </settingsMapElement>
   </component>
   <component name="InspectionProfileManager">
