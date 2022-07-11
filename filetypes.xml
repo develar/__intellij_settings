@@ -8,9 +8,9 @@
       <mapping pattern=".watchmanconfig" type="JSON" />
       <mapping pattern=".graphqlconfig" type="JSON" />
       <mapping ext="geojson" type="JSON" />
+      <mapping ext="main.kts" type="Kotlin" />
       <mapping ext="gradle.kts" type="Kotlin" />
       <mapping ext="space.kts" type="Kotlin" />
-      <mapping ext="main.kts" type="Kotlin" />
       <mapping pattern=".env.local" type="PLAIN_TEXT" />
       <mapping pattern="Caddyfile" type="PLAIN_TEXT" />
       <mapping pattern="LICENSE" type="PLAIN_TEXT" />
@@ -35,18 +35,17 @@
       <mapping ext="py" type="PLAIN_TEXT" />
       <mapping ext="ion" type="PLAIN_TEXT" />
       <mapping ext="meta" type="PLAIN_TEXT" />
-      <mapping ext="cfg" type="PLAIN_TEXT" />
-      <mapping ext="run" type="PLAIN_TEXT" />
-      <mapping ext="4_version" type="PLAIN_TEXT" />
-      <mapping ext="eml" type="PLAIN_TEXT" />
-      <mapping ext="env" type="PLAIN_TEXT" />
       <mapping ext="log" type="PLAIN_TEXT" />
       <mapping ext="plist" type="PLAIN_TEXT" />
+      <mapping ext="cfg" type="PLAIN_TEXT" />
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
+      <mapping ext="run" type="PLAIN_TEXT" />
+      <mapping ext="4_version" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
+      <mapping ext="eml" type="PLAIN_TEXT" />
+      <mapping ext="env" type="PLAIN_TEXT" />
       <mapping ext="srt" type="PLAIN_TEXT" />
       <mapping ext="poly" type="PLAIN_TEXT" />
-      <mapping ext="plantuml" type="PlantUML file" />
       <mapping pattern="desktop-gnome-specic" type="Shell Script" />
       <mapping pattern=".werf/*.tmpl" type="YAML" />
       <mapping ext="tmpl" type="YAML" />
@@ -64,6 +63,7 @@
       <removed_mapping pattern=".gitmodules" approved="true" type="PLAIN_TEXT" />
       <removed_mapping pattern=".graphqlconfig" approved="true" type="PLAIN_TEXT" />
       <removed_mapping pattern=".werf/go.tmpl" approved="true" type="Go Template" />
+      <mapping ext="plantuml" type="PlantUML file" />
     </extensionMap>
   </component>
 </application>
