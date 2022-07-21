@@ -2,8 +2,6 @@
   <component name="FindSettings">
     <option name="customScope" value="default" />
     <option name="defaultScopeName" value="default" />
-    <option name="wholeWordsOnly" value="true" />
-    <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="default" />
     <mask>*.</mask>
     <mask>*.js</mask>
