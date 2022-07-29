@@ -3,6 +3,7 @@
     <option name="pluginIds">
       <list>
         <option value="ru.artyushov" />
+        <option value="com.intellij.bigdatatools" />
       </list>
     </option>
   </component>
