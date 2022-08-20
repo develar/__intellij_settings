@@ -24,6 +24,8 @@
     <entry key="ide.allow.merge.buttons" value="false" />
     <entry key="vcs.show.affected.files.as.tab" value="false" />
     <entry key="vcs.blame.show.affected.files.in.log" value="false" />
+    <entry key="debugger.new.tool.window.layout.toolbar" value="[After|Vertical*]" />
+    <entry key="debugger.new.tool.window.layout" value="true" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
