@@ -18,6 +18,7 @@
     <EXCLUDED_PACKAGE NAME="sun.misc" />
     <EXCLUDED_PACKAGE NAME="sun.org" />
     <EXCLUDED_PACKAGE NAME="sun.security" />
+    <EXCLUDED_PACKAGE NAME="sun.tools" />
   </component>
   <component name="CodeVisionSettings">
     <option name="codeVisionGroupToPosition">
