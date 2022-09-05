@@ -1,12 +1,12 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Module 'intellij.platform.util.trove'" />
-    <option name="defaultScopeName" value="Module 'intellij.platform.util.trove'" />
+    <option name="customScope" value="Project 'jps-javac-extension'" />
+    <option name="defaultScopeName" value="Project 'jps-javac-extension'" />
     <option name="localRegularExpressions" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="LOCAL_REGULAR_EXPRESSIONS" value="true" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.util.trove'" />
+    <option name="SEARCH_SCOPE" value="Project 'jps-javac-extension'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
