@@ -5,7 +5,6 @@
     <option name="defaultScopeName" value="changelist 3" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="SEARCH_SCOPE" value="changelist 3" />
-    <option name="FILE_MASK" value="*.kt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
