@@ -1,10 +1,11 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
+    <option name="customScope" value="changelist 3" />
+    <option name="defaultScopeName" value="changelist 3" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="SEARCH_SCOPE" value="changelist 3" />
+    <option name="FILE_MASK" value="*.kt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -31,9 +32,9 @@
     <mask>*.groovy</mask>
     <mask>*.vue</mask>
     <mask>*.xml</mask>
-    <mask>*.kt</mask>
     <mask>*.java</mask>
     <mask>*.iml</mask>
     <mask>*.py</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
