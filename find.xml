@@ -1,8 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="changelist 3" />
-    <option name="defaultScopeName" value="changelist 3" />
-    <option name="SEARCH_SCOPE" value="changelist 3" />
+    <option name="customScope" value="Module 'intellij.platform.util.jdom'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.util.jdom'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.util.jdom'" />
+    <option name="FILE_MASK" value="*.kt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
