@@ -2,4 +2,7 @@
   <component name="GoFoldingSettings">
     <option name="isOneLineReturns" value="false" />
   </component>
+  <component name="KotlinCodeInsightSettings">
+    <option name="addUnambiguousImportsOnTheFly" value="true" />
+  </component>
 </application>
