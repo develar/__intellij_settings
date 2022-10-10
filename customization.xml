@@ -5,21 +5,9 @@
       <path value="Main Toolbar Right" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="StopWithDropDown" is_action="true" action_type="-1" position="2">
-      <path value="root" />
-      <path value="Main Toolbar Right" />
-      <path value="RunToolbarWidgetCustomizableActionGroup" />
-      <option name="myInitialPosition" value="-1" />
-    </group>
     <group value="SearchEverywhere" is_action="true" action_type="-1" position="1">
       <path value="root" />
       <path value="Main Toolbar Right" />
-      <option name="myInitialPosition" value="-1" />
-    </group>
-    <group value="RedesignedRunToolbarWrapper" is_action="true" action_type="-1" position="1">
-      <path value="root" />
-      <path value="Main Toolbar Right" />
-      <path value="RunToolbarWidgetCustomizableActionGroup" />
       <option name="myInitialPosition" value="-1" />
     </group>
     <group value="main.toolbar.Project" is_action="true" action_type="-1" position="0">
@@ -27,10 +15,9 @@
       <path value="Main Toolbar Left" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group seperator="true" action_type="-1" position="0">
+    <group value="main.toolbar.Project" is_action="true" action_type="1" position="0">
       <path value="root" />
-      <path value="Navigation Bar Toolbar" />
-      <path value="space.actions.MainToolbarActionGroup" />
+      <path value="Main Toolbar Center" />
       <option name="myInitialPosition" value="-1" />
     </group>
   </component>
