@@ -34,5 +34,6 @@
     <mask>*.xml</mask>
     <mask>!*.xml</mask>
     <mask>*.iml</mask>
+    <mask>go</mask>
   </component>
 </application>
