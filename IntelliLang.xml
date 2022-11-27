@@ -1,5 +1,10 @@
 <application>
   <component name="LanguageInjectionConfiguration">
+    <injection language="SQL" injector-id="go">
+      <display-name>SQL insert</display-name>
+      <single-file value="true" />
+      <place disabled="true"><![CDATA[goStringLiteralThatMatches(" *INSERT +((OR +)?IGNORE +)?INTO .*")]]></place>
+    </injection>
     <injection language="RegExp" injector-id="groovy">
       <display-name>RegExp</display-name>
       <single-file value="true" />
