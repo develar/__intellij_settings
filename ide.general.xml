@@ -34,7 +34,6 @@
         <entry key="InsertOverwrite" value="false" />
         <entry key="JSONSchemaSelector" value="false" />
         <entry key="LineSeparator" value="false" />
-        <entry key="Position" value="false" />
         <entry key="ReadOnlyAttribute" value="false" />
         <entry key="TypeScriptInfo" value="false" />
       </map>
