@@ -4,6 +4,11 @@
       <list>
         <option value="ru.artyushov" />
         <option value="com.intellij.bigdatatools" />
+        <option value="com.intellij.reactivestreams" />
+        <option value="com.intellij.javaee.jpa" />
+        <option value="TestNG-J" />
+        <option value="cucumber-java" />
+        <option value="idea.plugin.protoeditor" />
       </list>
     </option>
   </component>
