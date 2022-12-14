@@ -13,6 +13,7 @@
             <option value="under write" />
             <option value="an assert" />
             <option value="a nats server," />
+            <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
           </set>
         </option>
       </SuppressingContext>
