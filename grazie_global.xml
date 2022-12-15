@@ -16,6 +16,7 @@
             <option value="a nats server," />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
+            <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
           </set>
         </option>
       </SuppressingContext>
