@@ -4,20 +4,21 @@
       <SuppressingContext>
         <option name="suppressed">
           <set>
-            <option value="little bit" />
             <option value="a select is" />
+            <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
             <option value="a single nats server cluster" />
             <option value="(" />
             <option value="dumb" />
             <option value="size pairs int -" />
+            <option value="a nats server," />
+            <option value="little bit" />
+            <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
+            <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
             <option value="}" />
             <option value="under write" />
             <option value="an assert" />
-            <option value="a nats server," />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
-            <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
-            <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
-            <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
+            <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
           </set>
         </option>
       </SuppressingContext>
