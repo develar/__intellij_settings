@@ -1,5 +1,6 @@
 <application>
   <component name="GrazieProConfig">
     <option name="token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJHcmF6aWUgQXV0aGVudGljYXRpb24iLCJ1aWQiOiIxNTA4OGIxZi1hOGNjLTQ1OTQtOWYxNC00MjU4NTFjNjNhMTYiLCJhY2Nlc3MiOiJBTEwiLCJleHAiOjE2NzIyNzIwMDB9.WqX97hnaS7qfYdvyQhr_Ch89cXC0pRHB9c-iEyKaYnIc8Uahm_QZisK7HhCxc0mZBNRLx6xhzOUPb_lh2cyCoh0NlPWYFGgFrC0Cuaw97j2sTnYRfmvzq8s4bhuZbxr5tHy2OfbzP7mvcy-af-JQzjJRG5tCf6V9mmwvqrVOF0h2asAIeyuxVHSHh-s902WF5tQE7A55AtGiLVC_K3n-IQ91U5gnWddXfO89zYpUaHI7zRVwmnZUBLC1Rb-7UK9yUbVgumZ7qaO0FoWPvQnpevRI1xVACID5--La9ApG2se-7U4himO3svYaa_6g-2Q1IJpZ1YplioCI491-Mxtc9A" />
+    <option name="explicitlyChosenProcessing" value="Local" />
   </component>
 </application>
