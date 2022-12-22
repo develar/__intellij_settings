@@ -5,6 +5,7 @@
         <option name="suppressed">
           <set>
             <option value="a select is" />
+            <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
             <option value="a single nats server cluster" />
             <option value="(" />
@@ -18,7 +19,7 @@
             <option value="under write" />
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
-            <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
+            <option value="the|the value to normalize" />
           </set>
         </option>
       </SuppressingContext>
