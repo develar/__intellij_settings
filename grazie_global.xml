@@ -11,6 +11,7 @@
             <option value="(" />
             <option value="dumb" />
             <option value="size pairs int -" />
+            <option value="the|the value to normalize" />
             <option value="a nats server," />
             <option value="little bit" />
             <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
@@ -19,7 +20,7 @@
             <option value="under write" />
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
-            <option value="the|the value to normalize" />
+            <option value="the|Returns a copy of the provided with darkness set to ." />
           </set>
         </option>
       </SuppressingContext>
