@@ -14,6 +14,7 @@
             <option value="the|the value to normalize" />
             <option value="a nats server," />
             <option value="little bit" />
+            <option value="tipsPath" />
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
             <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
@@ -21,7 +22,7 @@
             <option value="under write" />
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
-            <option value="tipsPath" />
+            <option value="of the zip64 end of|disk number with the start of the zip64 end of central directory" />
           </set>
         </option>
       </SuppressingContext>
