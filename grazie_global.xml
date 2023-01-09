@@ -24,6 +24,7 @@
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
+            <option value="'" />
           </set>
         </option>
       </SuppressingContext>
