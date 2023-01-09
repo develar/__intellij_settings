@@ -7,6 +7,7 @@
             <option value="a select is" />
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
+            <option value="'" />
             <option value="a single nats server cluster" />
             <option value="(" />
             <option value="dumb" />
@@ -24,7 +25,7 @@
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="'" />
+            <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
           </set>
         </option>
       </SuppressingContext>
