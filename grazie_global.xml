@@ -13,6 +13,7 @@
             <option value="dumb" />
             <option value="size pairs int -" />
             <option value="the|the value to normalize" />
+            <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
             <option value="a nats server," />
             <option value="little bit" />
             <option value="tipsPath" />
@@ -25,7 +26,7 @@
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
+            <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
           </set>
         </option>
       </SuppressingContext>
