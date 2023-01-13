@@ -23,10 +23,11 @@
             <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
             <option value="}" />
             <option value="under write" />
+            <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
+            <option value="SQLite connection" />
           </set>
         </option>
       </SuppressingContext>
