@@ -1,13 +1,13 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.platform.util.batik'" />
-    <option name="defaultScopeName" value="Module 'intellij.platform.util.batik'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.util.batik'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.svg" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
     <mask>icon-robotx.tsx</mask>
-    <mask>*.svg</mask>
     <mask>icon-robots.txt</mask>
     <mask>icon-robo</mask>
     <mask>*.md</mask>
@@ -36,5 +36,6 @@
     <mask>*.sh</mask>
     <mask>*.iml</mask>
     <mask>kotlin*</mask>
+    <mask>*.svg</mask>
   </component>
 </application>
