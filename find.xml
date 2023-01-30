@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project 'batik-anim'" />
-    <option name="defaultScopeName" value="Project 'batik-anim'" />
-    <option name="SEARCH_SCOPE" value="Project 'batik-anim'" />
+    <option name="customScope" value="Module 'intellij.platform.util.batik'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.util.batik'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.util.batik'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
