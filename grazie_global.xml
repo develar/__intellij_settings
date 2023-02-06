@@ -35,6 +35,8 @@
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
+            <option value="flag|See [https://stackoverflow.com/a/5428795](https://stackoverflow.com/a/5428795) about resolve flag." />
+            <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
           </set>
         </option>
       </SuppressingContext>
