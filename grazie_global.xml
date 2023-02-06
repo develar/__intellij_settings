@@ -33,6 +33,8 @@
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
+            <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
+            <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
           </set>
         </option>
       </SuppressingContext>
