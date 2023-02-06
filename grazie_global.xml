@@ -19,6 +19,7 @@
             <option value="'" />
             <option value="a single nats server cluster" />
             <option value="(" />
+            <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
             <option value="the|the value to normalize" />
             <option value="a nats server," />
             <option value="little bit" />
@@ -30,7 +31,8 @@
             <option value="}" />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
+            <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
+            <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
           </set>
         </option>
       </SuppressingContext>
