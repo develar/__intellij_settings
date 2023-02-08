@@ -1,12 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Project 'idea-push'" />
-    <option name="defaultScopeName" value="Project 'idea-push'" />
-    <option name="wholeWordsOnly" value="true" />
-    <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="WHOLE_WORDS_ONLY" value="true" />
-    <option name="SEARCH_SCOPE" value="Project 'idea-push'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -37,8 +34,8 @@
     <mask>*.properties</mask>
     <mask>*.kt</mask>
     <mask>*.sh</mask>
-    <mask>*.iml</mask>
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
