@@ -1,6 +1,5 @@
 <application>
   <component name="KotlinRefactoringSettings">
-    <option name="INLINE_LOCAL_THIS" value="true" />
     <option name="INLINE_METHOD_THIS" value="true" />
     <option name="MOVE_PREVIEW_USAGES" value="false" />
     <option name="MOVE_SEARCH_IN_COMMENTS" value="false" />
