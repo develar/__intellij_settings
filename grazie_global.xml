@@ -7,6 +7,7 @@
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
             <option value="The|The region of output you are interested in generating dependencies for." />
             <option value="flag|See [https://stackoverflow.com/a/5428795](https://stackoverflow.com/a/5428795) about resolve flag." />
+            <option value="Quiche" />
             <option value="a select is" />
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
@@ -26,6 +27,7 @@
             <option value="a single nats server cluster" />
             <option value="(" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
+            <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
             <option value="the|the value to normalize" />
             <option value="a nats server," />
             <option value="little bit" />
@@ -38,8 +40,7 @@
             <option value="}" />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="Quiche" />
-            <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
+            <option value="resolveDependenciesMaxAttempts" />
           </set>
         </option>
       </SuppressingContext>
