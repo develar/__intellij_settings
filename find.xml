@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="customScope" value="pppp" />
+    <option name="defaultScopeName" value="pppp" />
+    <option name="SEARCH_SCOPE" value="pppp" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
