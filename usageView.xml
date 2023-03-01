@@ -7,8 +7,8 @@
   </component>
   <component name="UsageFilteringRuleState">
     <option value="com.intellij.usages.impl.rules.UsageInGeneratedCodeFilteringRule" />
-    <option value="com.intellij.usages.impl.rules.WriteAccessFilteringRule" />
     <option value="com.intellij.usages.impl.rules.ImportUsageFilteringRule" />
+    <option value="com.intellij.usages.impl.rules.ReadAccessFilteringRule" />
   </component>
   <component name="UsageInGeneratedCodeFilteringSetting">
     <option name="enabled" value="false" />
