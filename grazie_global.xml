@@ -16,6 +16,7 @@
             <option value="dumb" />
             <option value="size pairs int -" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
+            <option value="dummy" />
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="IntelliJ|Used directly by IntelliJ IDEA." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
@@ -41,7 +42,7 @@
             <option value="}" />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="dummy" />
+            <option value="Later,|Later, it may be needed to implement more interfaces here." />
           </set>
         </option>
       </SuppressingContext>
