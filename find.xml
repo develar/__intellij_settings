@@ -27,7 +27,6 @@
     <mask>*.vue</mask>
     <mask>*.java</mask>
     <mask>*.py</mask>
-    <mask>*.xml</mask>
     <mask>!*.xml</mask>
     <mask>go</mask>
     <mask>*.properties</mask>
@@ -36,5 +35,6 @@
     <mask>*.svg</mask>
     <mask>*.iml</mask>
     <mask>*.kt</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
