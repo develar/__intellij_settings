@@ -43,6 +43,7 @@
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
+            <option value="an|for instance, ShadowPainter updates the context from an outside" />
           </set>
         </option>
       </SuppressingContext>
