@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="customScope" value="Module 'lz4'" />
+    <option name="defaultScopeName" value="Module 'lz4'" />
+    <option name="SEARCH_SCOPE" value="Module 'lz4'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
