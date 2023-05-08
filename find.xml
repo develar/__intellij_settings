@@ -3,6 +3,7 @@
     <option name="customScope" value="All Changed Files" />
     <option name="defaultScopeName" value="All Changed Files" />
     <option name="SEARCH_SCOPE" value="All Changed Files" />
+    <option name="FILE_MASK" value="*.go" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -15,7 +16,6 @@
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
-    <mask>*.go</mask>
     <mask>*Icons.java</mask>
     <mask>*.propeties</mask>
     <mask>*.json</mask>
@@ -36,5 +36,6 @@
     <mask>*.iml</mask>
     <mask>plugin.xml</mask>
     <mask>*.properties</mask>
+    <mask>*.go</mask>
   </component>
 </application>
