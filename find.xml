@@ -3,6 +3,7 @@
     <option name="customScope" value="All Changed Files" />
     <option name="defaultScopeName" value="All Changed Files" />
     <option name="SEARCH_SCOPE" value="All Changed Files" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -31,10 +32,10 @@
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
     <mask>*.kt</mask>
-    <mask>*.xml</mask>
     <mask>*.iml</mask>
     <mask>plugin.xml</mask>
     <mask>*.properties</mask>
     <mask>*.go</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
