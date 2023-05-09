@@ -9,6 +9,7 @@
         <option value="TestNG-J" />
         <option value="cucumber-java" />
         <option value="idea.plugin.protoeditor" />
+        <option value="com.intellij.bigdatatools.kafka" />
       </list>
     </option>
   </component>
