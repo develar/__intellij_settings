@@ -28,6 +28,8 @@
     <entry key="vcs.log.index.limit.minutes" value="200" />
     <entry key="debugger.valueTooltipAutoShow" value="false" />
     <entry key="debugger.auto.fetch.icons" value="false" />
+    <entry key="ide.experimental.ui.inter.font" value="false" />
+    <entry key="idea.plugins.compatible.build" value="" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
