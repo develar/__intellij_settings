@@ -1,9 +1,10 @@
 <application>
   <component name="PlantUmlSettingsNew">
     <option name="PLANTUML_LIMIT_SIZE" value="" />
-    <option name="customPlantumlJarPath" value="" />
+    <option name="customPlantumlJarPath" value="$USER_HOME$/p" />
     <option name="dotExecutable" value="/opt/homebrew/Cellar/graphviz/8.0.5/bin/dot" />
     <option name="includedPaths" value="" />
     <option name="lastBundledVersion" value="1.2023.7" />
+    <option name="useBundled" value="false" />
   </component>
 </application>
