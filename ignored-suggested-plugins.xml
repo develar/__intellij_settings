@@ -10,6 +10,7 @@
         <option value="cucumber-java" />
         <option value="idea.plugin.protoeditor" />
         <option value="com.intellij.bigdatatools.kafka" />
+        <option value="com.intellij.bigdatatools.rfs" />
       </list>
     </option>
   </component>
