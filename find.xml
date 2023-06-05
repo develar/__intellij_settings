@@ -31,10 +31,10 @@
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
     <mask>*.kt</mask>
-    <mask>*.iml</mask>
     <mask>plugin.xml</mask>
     <mask>*.properties</mask>
     <mask>*.go</mask>
     <mask>*.xml</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
