@@ -89,9 +89,6 @@
     </filter>
   </component>
   <component name="NodeRendererSettings">
-    <Renderer ID="ToStringRenderer">
-      <option name="ON_DEMAND" value="true" />
-    </Renderer>
     <CustomRenderers VERSION="8">
       <Renderer ID="CompoundNodeRenderer">
         <option name="ENABLED" value="true" />
@@ -114,10 +111,7 @@
     </CustomRenderers>
   </component>
   <component name="XDebuggerSettings">
-    <data-views>
-      <option name="autoExpressions" value="false" />
-      <show-values-inline>false</show-values-inline>
-    </data-views>
+    <data-views />
     <general />
     <debuggers>
       <debugger id="javascript">
