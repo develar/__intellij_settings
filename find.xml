@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="customScope" value="Module 'intellij.platform.analysis'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.analysis'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.analysis'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
