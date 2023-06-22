@@ -3,11 +3,11 @@
     <option name="customScope" value="Changes" />
     <option name="defaultScopeName" value="Changes" />
     <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="icon-robots.txt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
     <mask>icon-robotx.tsx</mask>
-    <mask>icon-robots.txt</mask>
     <mask>icon-robo</mask>
     <mask>*.md</mask>
     <mask>*java</mask>
@@ -20,7 +20,6 @@
     <mask>*.json</mask>
     <mask>package.json</mask>
     <mask>*.ts</mask>
-    <mask>*.txt</mask>
     <mask>*.groovy</mask>
     <mask>*.vue</mask>
     <mask>*.java</mask>
@@ -36,5 +35,7 @@
     <mask>*.go</mask>
     <mask>*.iml</mask>
     <mask>*.xml</mask>
+    <mask>*.txt</mask>
+    <mask>icon-robots.txt</mask>
   </component>
 </application>
