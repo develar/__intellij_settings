@@ -9,7 +9,6 @@
   </component>
   <component name="Registry">
     <entry key="debugger.valueTooltipAutoShow" value="false" />
-    <entry key="ide.project.loading.show.last.state" value="true" />
     <entry key="ide.tree.expand.navigatable.on.double.click.disabled" value="true" />
     <entry key="sdk.auto.check.unknown.sdk" value="false" />
     <entry key="ide.usage.group.navigate.on.double.click.disabled" value="true" />
