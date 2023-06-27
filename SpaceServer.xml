@@ -3,7 +3,7 @@
     <option name="cloneType" value="SSH" />
     <option name="permissionsStorage">
       <SpacePermissionsStorage>
-        <option name="version" value="6" />
+        <option name="version" value="7" />
       </SpacePermissionsStorage>
     </option>
     <option name="serverSettings">
