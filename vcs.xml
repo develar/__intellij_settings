@@ -35,7 +35,6 @@
     <option name="cloneParentDir" value="$USER_HOME$/Documents" />
   </component>
   <component name="Vcs.Log.App.Settings">
-    <option name="SHOW_CHANGES_FROM_PARENTS" value="true" />
     <option name="COLUMN_ID_ORDER">
       <list>
         <option value="Default.Root" />
@@ -45,10 +44,12 @@
         <option value="Default.Subject" />
       </list>
     </option>
+    <option name="SHOW_CHANGES_FROM_PARENTS" value="true" />
   </component>
   <component name="VcsApplicationSettings">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/patches" />
     <option name="DETECT_PATCH_ON_THE_FLY" value="true" />
+    <option name="COMMIT_FROM_LOCAL_CHANGES" value="false" />
     <option name="SHOW_EDITOR_PREVIEW_ON_DOUBLE_CLICK" value="false" />
   </component>
   <component name="VcsEditorTab.Settings">
