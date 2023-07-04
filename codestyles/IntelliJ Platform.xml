@@ -1,13 +1,28 @@
-<code_scheme name="idea copy" version="173">
+<code_scheme name="IntelliJ Platform" version="173">
   <option name="OTHER_INDENT_OPTIONS">
     <value>
       <option name="INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      <option name="TAB_SIZE" value="8" />
     </value>
   </option>
   <option name="LINE_SEPARATOR" value="&#10;" />
+  <option name="FIELD_NAME_PREFIX" value="my" />
+  <option name="STATIC_FIELD_NAME_PREFIX" value="our" />
+  <option name="PREFER_LONGER_NAMES" value="false" />
+  <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
+    <value>
+      <package name="java.awt" withSubpackages="false" static="false" />
+      <package name="javax.tools" withSubpackages="true" static="false" />
+      <package name="javax.swing" withSubpackages="false" static="false" />
+    </value>
+  </option>
+  <option name="STATIC_METHODS_ORDER_WEIGHT" value="5" />
+  <option name="METHODS_ORDER_WEIGHT" value="4" />
   <option name="RIGHT_MARGIN" value="140" />
   <option name="FORMATTER_TAGS_ENABLED" value="true" />
+  <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
+  <option name="BLOCK_COMMENT_AT_FIRST_COLUMN" value="false" />
   <GroovyCodeStyleSettings>
     <option name="STATIC_METHODS_ORDER_WEIGHT" value="5" />
     <option name="METHODS_ORDER_WEIGHT" value="4" />
@@ -16,7 +31,6 @@
     <option name="FIELD_NAME_PREFIX" value="my" />
     <option name="STATIC_FIELD_NAME_PREFIX" value="our" />
     <option name="PREFER_LONGER_NAMES" value="false" />
-    <option name="VISIBILITY" value="EscalateVisible" />
     <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
       <value>
         <package name="java.awt" withSubpackages="false" static="false" />
@@ -34,9 +48,6 @@
       </value>
     </option>
   </JetCodeStyleSettings>
-  <TypeScriptCodeStyleSettings version="1">
-    <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
-  </TypeScriptCodeStyleSettings>
   <codeStyleSettings language="CFML">
     <option name="ELSE_ON_NEW_LINE" value="true" />
     <option name="WHILE_ON_NEW_LINE" value="true" />
@@ -51,13 +62,7 @@
     <option name="TERNARY_OPERATION_SIGNS_ON_NEXT_LINE" value="true" />
     <option name="FOR_STATEMENT_WRAP" value="5" />
     <option name="ASSIGNMENT_WRAP" value="1" />
-  </codeStyleSettings>
-  <codeStyleSettings language="CSS">
-    <indentOptions>
-      <option name="INDENT_SIZE" value="2" />
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
-    </indentOptions>
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
   </codeStyleSettings>
   <codeStyleSettings language="ECMA Script Level 4">
     <option name="ELSE_ON_NEW_LINE" value="true" />
@@ -82,6 +87,7 @@
     <option name="DOWHILE_BRACE_FORCE" value="1" />
     <option name="WHILE_BRACE_FORCE" value="1" />
     <option name="FOR_BRACE_FORCE" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
   </codeStyleSettings>
   <codeStyleSettings language="Groovy">
     <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
@@ -117,12 +123,10 @@
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="HTML">
-    <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
-    <option name="BLOCK_COMMENT_AT_FIRST_COLUMN" value="false" />
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      <option name="TAB_SIZE" value="8" />
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="JAVA">
@@ -277,6 +281,17 @@
               <AND>
                 <FIELD>true</FIELD>
                 <FINAL>true</FINAL>
+                <PUBLIC>true</PUBLIC>
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD>true</FIELD>
+                <FINAL>true</FINAL>
                 <PROTECTED>true</PROTECTED>
               </AND>
             </match>
@@ -416,12 +431,6 @@
       </rules>
     </arrangement>
   </codeStyleSettings>
-  <codeStyleSettings language="JSON">
-    <indentOptions>
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
-    </indentOptions>
-  </codeStyleSettings>
   <codeStyleSettings language="JavaScript">
     <option name="ELSE_ON_NEW_LINE" value="true" />
     <option name="WHILE_ON_NEW_LINE" value="true" />
@@ -468,40 +477,24 @@
     <option name="DOWHILE_BRACE_FORCE" value="1" />
     <option name="WHILE_BRACE_FORCE" value="1" />
     <option name="FOR_BRACE_FORCE" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
   </codeStyleSettings>
-  <codeStyleSettings language="TypeScript">
-    <option name="ELSE_ON_NEW_LINE" value="true" />
-    <option name="WHILE_ON_NEW_LINE" value="true" />
-    <option name="IF_BRACE_FORCE" value="3" />
-    <indentOptions>
-      <option name="INDENT_SIZE" value="2" />
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
-    </indentOptions>
+  <codeStyleSettings language="Python">
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
   </codeStyleSettings>
   <codeStyleSettings language="XML">
-    <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
-    <option name="BLOCK_COMMENT_AT_FIRST_COLUMN" value="false" />
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
-    </indentOptions>
-  </codeStyleSettings>
-  <codeStyleSettings language="go">
-    <indentOptions>
-      <option name="INDENT_SIZE" value="2" />
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      <option name="TAB_SIZE" value="8" />
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="kotlin">
-    <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
-    <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
     <option name="ELSE_ON_NEW_LINE" value="true" />
     <option name="WHILE_ON_NEW_LINE" value="true" />
     <option name="CATCH_ON_NEW_LINE" value="true" />
     <option name="FINALLY_ON_NEW_LINE" value="true" />
+    <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
     <option name="ALIGN_MULTILINE_BINARY_OPERATION" value="true" />
     <option name="ALIGN_MULTILINE_EXTENDS_LIST" value="true" />
     <option name="CALL_PARAMETERS_WRAP" value="1" />
