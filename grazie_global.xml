@@ -28,6 +28,7 @@
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="sub-stack" />
+            <option value="Co|Converts this promise to an instance of ." />
             <option value="'" />
             <option value="a single nats server cluster" />
             <option value="(" />
@@ -47,7 +48,7 @@
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="Co|Converts this promise to an instance of ." />
+            <option value="do|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
           </set>
         </option>
       </SuppressingContext>
