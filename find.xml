@@ -32,9 +32,9 @@
     <mask>plugin.xml</mask>
     <mask>*.properties</mask>
     <mask>*.go</mask>
-    <mask>*.iml</mask>
     <mask>*.xml</mask>
     <mask>*.txt</mask>
     <mask>icon-robots.txt</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
