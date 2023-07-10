@@ -1,5 +1,6 @@
 <application>
   <component name="OverrideFileTypeManager">
     <file url="file://$USER_HOME$/2ij-speedscope.textproto.json" value="prototext" />
+    <file url="file://$USER_HOME$/Downloads/2.perfetto_trace.proto" value="protobuf" />
   </component>
 </application>
