@@ -1,13 +1,5 @@
 <application>
   <component name="OverrideFileTypeManager">
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/.helm/templates/002-backend.yaml" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/.helm/templates/004-ingress.yaml" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/.helm/templates/_helpers.tpl" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/.werf/frontend-spa.tmpl" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/.werf/go.tmpl" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/.werf/nginx-distroless.tmpl" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/ij-developer-dashboard/cmd/backend/dcache/GroupCachePeersUpdater" value="DGM" />
-    <file url="file://$USER_HOME$/Documents/werf-spa-go-example/.werf/frontend-spa.tmpl" value="Helm YAML template" />
-    <file url="file://$USER_HOME$/Documents/werf-spa-go-example/.werf/nginx-distroless.tmpl" value="Helm YAML template" />
+    <file url="file://$USER_HOME$/2ij-speedscope.textproto.json" value="prototext" />
   </component>
 </application>
