@@ -3,6 +3,7 @@
     <option name="customScope" value="Project Files" />
     <option name="defaultScopeName" value="Project Files" />
     <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="FILE_MASK" value="*.sh" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -25,7 +26,6 @@
     <mask>*.py</mask>
     <mask>!*.xml</mask>
     <mask>go</mask>
-    <mask>*.sh</mask>
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
     <mask>*.kt</mask>
@@ -36,5 +36,6 @@
     <mask>*.txt</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.iml</mask>
+    <mask>*.sh</mask>
   </component>
 </application>
