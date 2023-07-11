@@ -9,6 +9,7 @@
             <option value="flag|See [https://stackoverflow.com/a/5428795](https://stackoverflow.com/a/5428795) about resolve flag." />
             <option value="Quiche" />
             <option value="resolveDependenciesMaxAttempts" />
+            <option value="do|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
             <option value="a select is" />
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
@@ -48,7 +49,6 @@
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="do|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
           </set>
         </option>
       </SuppressingContext>
