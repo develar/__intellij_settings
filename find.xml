@@ -33,8 +33,8 @@
     <mask>*.go</mask>
     <mask>*.txt</mask>
     <mask>icon-robots.txt</mask>
-    <mask>*.iml</mask>
     <mask>*.sh</mask>
     <mask>*.xml</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
