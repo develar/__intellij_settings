@@ -1,7 +1,7 @@
 <application>
   <component name="ExportableFileTemplateSettings">
     <internal_templates>
-      <template name="Kotlin Class.kt" file-name="opentelemetry" reformat="true" live-template-enabled="false" enabled="true" />
+      <template name="Kotlin Class.kt" file-name="client" reformat="true" live-template-enabled="false" enabled="true" />
     </internal_templates>
   </component>
 </application>
