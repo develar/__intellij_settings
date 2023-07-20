@@ -1,7 +1,0 @@
-<application>
-  <component name="ExportableFileTemplateSettings">
-    <internal_templates>
-      <template name="Kotlin Class.kt" file-name="traceShim" reformat="true" live-template-enabled="false" enabled="true" />
-    </internal_templates>
-  </component>
-</application>
