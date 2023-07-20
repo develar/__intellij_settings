@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.kt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -27,7 +28,6 @@
     <mask>go</mask>
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
-    <mask>*.kt</mask>
     <mask>plugin.xml</mask>
     <mask>*.properties</mask>
     <mask>*.go</mask>
@@ -36,5 +36,6 @@
     <mask>*.sh</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
