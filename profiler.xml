@@ -7,6 +7,7 @@
     </option>
     <option name="flameGraphState">
       <flame-graph-ui>
+        <option name="experimentalStyleForNewUi" value="true" />
         <option name="navigateWithSingleClick" value="false" />
       </flame-graph-ui>
     </option>
