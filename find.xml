@@ -34,7 +34,7 @@
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
     <mask>*.kt</mask>
-    <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
