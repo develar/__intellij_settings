@@ -9,137 +9,119 @@
     </replaceConfiguration>
   </component>
   <component name="ui-state">
+    <option name="migrated" value="true" />
     <option name="templatesTreeState">
       <TreeState>
         <myExpandedPaths>
           <array>
             <item name="" type="" />
-            <item name="Recent" type="cbb8eebc:String" user="Recent" />
+            <item name="Saved Templates" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Saved Templates" type="cbb8eebc:String" user="Saved Templates" />
+            <item name="Java" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
+            <item name="Java" type="cbb8eebc:String" />
+            <item name="Expressions" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Class-based" type="cbb8eebc:String" user="Class-based" />
+            <item name="Java" type="cbb8eebc:String" />
+            <item name="Generics" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Comments, Javadoc and Metadata" type="cbb8eebc:String" user="Comments, Javadoc and Metadata" />
+            <item name="Java" type="cbb8eebc:String" />
+            <item name="Interesting" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Expressions" type="cbb8eebc:String" user="Expressions" />
+            <item name="Java" type="cbb8eebc:String" />
+            <item name="Java EE" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Generics" type="cbb8eebc:String" user="Generics" />
+            <item name="Java" type="cbb8eebc:String" />
+            <item name="Miscellaneous" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Interesting" type="cbb8eebc:String" user="Interesting" />
+            <item name="Java" type="cbb8eebc:String" />
+            <item name="Operators" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Java EE" type="cbb8eebc:String" user="Java EE" />
+            <item name="JavaScript" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Miscellaneous" type="cbb8eebc:String" user="Miscellaneous" />
+            <item name="JavaScript" type="cbb8eebc:String" />
+            <item name="General" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
-            <item name="Operators" type="cbb8eebc:String" user="Operators" />
+            <item name="JavaScript" type="cbb8eebc:String" />
+            <item name="Suspicious" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="JavaScript" type="cbb8eebc:String" user="JavaScript" />
+            <item name="Kotlin" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="JavaScript" type="cbb8eebc:String" user="JavaScript" />
-            <item name="General" type="cbb8eebc:String" user="General" />
+            <item name="Kotlin" type="cbb8eebc:String" />
+            <item name="Class-based" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="JavaScript" type="cbb8eebc:String" user="JavaScript" />
-            <item name="Suspicious" type="cbb8eebc:String" user="Suspicious" />
+            <item name="Kotlin" type="cbb8eebc:String" />
+            <item name="Comments, KDoc and Metadata" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
+            <item name="Kotlin" type="cbb8eebc:String" />
+            <item name="Expressions" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
-            <item name="Class-based" type="cbb8eebc:String" user="Class-based" />
+            <item name="Kotlin" type="cbb8eebc:String" />
+            <item name="Interesting" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
-            <item name="Comments, KDoc and Metadata" type="cbb8eebc:String" user="Comments, KDoc and Metadata" />
+            <item name="Kotlin" type="cbb8eebc:String" />
+            <item name="Operators" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
-            <item name="Expressions" type="cbb8eebc:String" user="Expressions" />
+            <item name="Properties files" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
-            <item name="Functions" type="cbb8eebc:String" user="Functions" />
+            <item name="SQL" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
-            <item name="Interesting" type="cbb8eebc:String" user="Interesting" />
+            <item name="SQL" type="cbb8eebc:String" />
+            <item name="Common" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Kotlin" type="cbb8eebc:String" user="Kotlin" />
-            <item name="Operators" type="cbb8eebc:String" user="Operators" />
+            <item name="SQL" type="cbb8eebc:String" />
+            <item name="Common" type="cbb8eebc:String" />
+            <item name="Contexts" type="cbb8eebc:String" />
           </array>
           <array>
             <item name="" type="" />
-            <item name="Properties files" type="cbb8eebc:String" user="Properties files" />
-          </array>
-          <array>
-            <item name="" type="" />
-            <item name="SQL" type="cbb8eebc:String" user="SQL" />
-          </array>
-          <array>
-            <item name="" type="" />
-            <item name="SQL" type="cbb8eebc:String" user="SQL" />
-            <item name="Common" type="cbb8eebc:String" user="Common" />
-          </array>
-          <array>
-            <item name="" type="" />
-            <item name="SQL" type="cbb8eebc:String" user="SQL" />
-            <item name="Common" type="cbb8eebc:String" user="Common" />
-            <item name="Contexts" type="cbb8eebc:String" user="Contexts" />
-          </array>
-          <array>
-            <item name="" type="" />
-            <item name="XML/HTML" type="cbb8eebc:String" user="XML/HTML" />
+            <item name="XML/HTML" type="cbb8eebc:String" />
           </array>
         </myExpandedPaths>
         <mySelectedPaths>
           <array>
             <item name="" type="" />
-            <item name="Java" type="cbb8eebc:String" user="Java" />
+            <item name="Draft Template" type="cbb8eebc:String" />
           </array>
         </mySelectedPaths>
       </TreeState>
