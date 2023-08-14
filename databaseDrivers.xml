@@ -8,6 +8,9 @@
     </driver>
     <driver id="sqlite.xerial">
       <artifact id="Xerial SQLiteJDBC" name="Xerial SQLiteJDBC" use="true" version="3.39.2" />
+      <library>
+        <url>file://$USER_HOME$/projects/idea/out/dev-data/idea/config/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
+      </library>
     </driver>
   </component>
 </application>
