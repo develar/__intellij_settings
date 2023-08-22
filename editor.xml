@@ -43,6 +43,7 @@
     </option>
   </component>
   <component name="DaemonCodeAnalyzerSettings" profile="idea.default (final)">
+    <option name="AUTOREPARSE_DELAY" value="0" />
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
   <component name="DeclarativeInlayHintsSettings">
