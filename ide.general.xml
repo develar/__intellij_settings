@@ -35,6 +35,7 @@
     <option name="widgets">
       <map>
         <entry key="Encoding" value="false" />
+        <entry key="FullLine" value="false" />
         <entry key="InsertOverwrite" value="false" />
         <entry key="JSONSchemaSelector" value="false" />
         <entry key="LineSeparator" value="false" />
