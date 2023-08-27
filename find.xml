@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.platform.ide.impl'" />
-    <option name="defaultScopeName" value="Module 'intellij.platform.ide.impl'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.ide.impl'" />
+    <option name="customScope" value="Module 'intellij.platform.codeStyle.impl'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.codeStyle.impl'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.codeStyle.impl'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
