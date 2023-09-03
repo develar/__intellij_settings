@@ -1,9 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.javascript.duplicatesDetection'" />
-    <option name="defaultScopeName" value="Module 'intellij.javascript.duplicatesDetection'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.javascript.duplicatesDetection'" />
-    <option name="FILE_MASK" value="*.iml" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.json" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -17,7 +17,6 @@
     <mask>*.jsp</mask>
     <mask>*Icons.java</mask>
     <mask>*.propeties</mask>
-    <mask>*.json</mask>
     <mask>package.json</mask>
     <mask>*.ts</mask>
     <mask>*.groovy</mask>
@@ -37,5 +36,6 @@
     <mask>*.kt</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.json</mask>
   </component>
 </application>
