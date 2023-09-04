@@ -1,8 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.ruby'" />
-    <option name="defaultScopeName" value="Module 'intellij.ruby'" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.ruby'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -33,8 +34,8 @@
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
     <mask>*.kt</mask>
-    <mask>*.xml</mask>
     <mask>*.iml</mask>
     <mask>*.json</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
