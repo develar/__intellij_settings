@@ -3,6 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.json" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -34,7 +35,7 @@
     <mask>*.sh</mask>
     <mask>*.kt</mask>
     <mask>*.iml</mask>
-    <mask>*.json</mask>
     <mask>*.xml</mask>
+    <mask>*.json</mask>
   </component>
 </application>
