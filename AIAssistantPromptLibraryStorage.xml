@@ -2,6 +2,17 @@
   <component name="AIAssistantPromptLibraryStorage">
     <option name="prompts">
       <map>
+        <entry key="50cff232-5acd-4c71-9fff-31f40d60e8d3">
+          <value>
+            <AIAssistantStoredPrompt>
+              <option name="content" value="please proofread the following text: $SELECTION" />
+              <option name="createdAt" value="1694286923" />
+              <option name="hasCustomTitle" value="true" />
+              <option name="id" value="50cff232-5acd-4c71-9fff-31f40d60e8d3" />
+              <option name="name" value="Proofread" />
+            </AIAssistantStoredPrompt>
+          </value>
+        </entry>
         <entry key="builtin_findproblems">
           <value>
             <AIAssistantStoredPrompt>
