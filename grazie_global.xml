@@ -22,6 +22,7 @@
             <option value="dummy" />
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="IntelliJ|Used directly by IntelliJ IDEA." />
+            <option value="plugin|Returns URL to plugin repository without a trailing slash." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="under write" />
             <option value="an assert" />
@@ -50,7 +51,7 @@
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="plugin|Returns URL to plugin repository without a trailing slash." />
+            <option value="255|255 here is not a mistake - we want to explicitly set that corresponding color as non-transparent" />
           </set>
         </option>
       </SuppressingContext>
