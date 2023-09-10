@@ -14,6 +14,7 @@
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
             <option value="of the type of|a node of the type of this." />
+            <option value="255|255 here is not a mistake - we want to explicitly set that corresponding color as non-transparent" />
             <option value="dumb" />
             <option value="size pairs int -" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
@@ -51,7 +52,7 @@
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="255|255 here is not a mistake - we want to explicitly set that corresponding color as non-transparent" />
+            <option value="1)|we don't need to update digest for a bundled scheme because 1) it can be computed on demand later (because a bundled scheme is not mutable) 2) in the future user copy of a bundled scheme will use a bundled scheme as parent (not as full copy)" />
           </set>
         </option>
       </SuppressingContext>
