@@ -40,8 +40,8 @@
         <option value="Default.Root" />
         <option value="Default.Author" />
         <option value="Default.Date" />
-        <option value="Space.CommitStatus" />
         <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
       </list>
     </option>
     <option name="SHOW_CHANGES_FROM_PARENTS" value="true" />
