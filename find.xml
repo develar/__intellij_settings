@@ -3,7 +3,7 @@
     <option name="customScope" value="Changes" />
     <option name="defaultScopeName" value="Changes" />
     <option name="SEARCH_SCOPE" value="Changes" />
-    <option name="FILE_MASK" value="*.xml" />
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -35,7 +35,7 @@
     <mask>*.sh</mask>
     <mask>*.kt</mask>
     <mask>*.json</mask>
-    <mask>*.iml</mask>
     <mask>*.xml</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
