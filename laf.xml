@@ -2,7 +2,7 @@
   <component name="LafManager">
     <laf themeId="ExperimentalLight" />
     <lafs-to-previous-schemes>
-      <laf-to-scheme laf="Darcula" scheme="_@user_Darcula" />
+      <laf-to-scheme laf="Darcula" scheme="_@user_Light" />
     </lafs-to-previous-schemes>
   </component>
 </application>
