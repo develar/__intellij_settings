@@ -1,11 +1,14 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.platform.lang'" />
-    <option name="defaultScopeName" value="Module 'intellij.platform.lang'" />
+    <option name="caseSensitive" value="true" />
+    <option name="customScope" value="sqlite" />
+    <option name="defaultScopeName" value="sqlite" />
     <option name="fromCursor" value="false" />
+    <option name="wholeWordsOnly" value="true" />
     <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.lang'" />
-    <option name="FILE_MASK" value="*.kt" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="WHOLE_WORDS_ONLY" value="true" />
+    <option name="SEARCH_SCOPE" value="sqlite" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -36,8 +39,8 @@
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
     <mask>*.xml</mask>
-    <mask>*.iml</mask>
     <mask>*.json</mask>
     <mask>*.kt</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
