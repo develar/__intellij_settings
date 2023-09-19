@@ -14,6 +14,9 @@
     <keyboard-shortcut first-keystroke="meta l" />
     <keyboard-shortcut first-keystroke="meta g" />
   </action>
+  <action id="InsertInlineCompletionAction">
+    <keyboard-shortcut first-keystroke="tab" />
+  </action>
   <action id="NextWindow">
     <keyboard-shortcut first-keystroke="meta back_quote" />
   </action>
