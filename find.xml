@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="FILE_MASK" value="*.kt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -34,9 +35,9 @@
     <mask>*.txt</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
-    <mask>*.kt</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
     <mask>*.json</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
