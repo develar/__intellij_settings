@@ -42,6 +42,7 @@
             <option value="size pairs int -" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
             <option value="adjustOptionsUI" />
+            <option value="of the XML data of|the system ID of the XML data of the element." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="a single nats server cluster" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
@@ -53,7 +54,8 @@
             <option value="}" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="of the XML data of|the system ID of the XML data of the element." />
+            <option value="224|224 bit and not 256/512 - use a slightly shorter filename xxh3 is not used as it is not secure and moreover, better to stick to JDK API" />
+            <option value="of usage of|It should help to solve the problem of detecting from which source existing compilation outputs were produced (it's the problem of usage of portable caches and compilation outputs, produced by JPS)." />
           </set>
         </option>
       </SuppressingContext>
