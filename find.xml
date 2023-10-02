@@ -1,10 +1,10 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="1212" />
-    <option name="defaultScopeName" value="1212" />
+    <option name="customScope" value="Module 'intellij.platform.editor.ex'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.editor.ex'" />
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="1212" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.editor.ex'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
