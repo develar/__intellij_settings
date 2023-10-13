@@ -11,6 +11,7 @@
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
             <option value="an|for instance, ShadowPainter updates the context from an outside" />
             <option value="dummy" />
+            <option value="2|2 fields below fully describe PMap configuration:" />
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="IntelliJ|Used directly by IntelliJ IDEA." />
             <option value="plugin|Returns URL to plugin repository without a trailing slash." />
@@ -43,7 +44,9 @@
             <option value="size pairs int -" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
             <option value="adjustOptionsUI" />
+            <option value="4|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="of the XML data of|the system ID of the XML data of the element." />
+            <option value="8|It is important to note that offset is non-negative and can be 4 or 8 bytes, depending on the size of the &quot;.values&quot; file." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="a single nats server cluster" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
@@ -55,11 +58,8 @@
             <option value="SQLite connection" />
             <option value="}" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
-            <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="8|It is important to note that offset is non-negative and can be 4 or 8 bytes, depending on the size of the &quot;.values&quot; file." />
-            <option value="4|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
-            <option value="2|2 fields below fully describe PMap configuration:" />
+            <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
           </set>
         </option>
       </SuppressingContext>
