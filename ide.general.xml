@@ -36,6 +36,7 @@
   <component name="StatusBar">
     <option name="widgets">
       <map>
+        <entry key="AIAssistant" value="false" />
         <entry key="Encoding" value="false" />
         <entry key="FullLine" value="false" />
         <entry key="InsertOverwrite" value="false" />
