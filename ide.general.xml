@@ -43,6 +43,7 @@
         <entry key="JSONSchemaSelector" value="false" />
         <entry key="LineSeparator" value="false" />
         <entry key="ReadOnlyAttribute" value="false" />
+        <entry key="SmartModeIndicator" value="true" />
         <entry key="TypeScriptInfo" value="false" />
         <entry key="kotlin.fir.ide" value="false" />
       </map>
