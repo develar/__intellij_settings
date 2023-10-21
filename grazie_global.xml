@@ -8,6 +8,7 @@
             <option value="Quiche" />
             <option value="resolveDependenciesMaxAttempts" />
             <option value="do|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
+            <option value="3,|an unexpected delay of 3 seconds is considered as several delays: of 3, 2 and 1 seconds, because otherwise this background thread would be sampled 3 times." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
             <option value="an|for instance, ShadowPainter updates the context from an outside" />
             <option value="dummy" />
@@ -30,6 +31,7 @@
             <option value="of bounds of|union of bounds of all default screen devices." />
             <option value="of the zip64 end of|disk number with the start of the zip64 end of central directory" />
             <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
+            <option value="crazy" />
             <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
@@ -60,8 +62,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="3,|an unexpected delay of 3 seconds is considered as several delays: of 3, 2 and 1 seconds, because otherwise this background thread would be sampled 3 times." />
-            <option value="crazy" />
+            <option value="We|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
           </set>
         </option>
       </SuppressingContext>
