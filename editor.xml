@@ -33,6 +33,7 @@
         <entry key="Usages" value="Default" />
       </map>
     </option>
+    <option name="defaultPosition" value="Right" />
     <option name="disabledCodeVisionProviderIds">
       <set>
         <option value="inheritors" />
