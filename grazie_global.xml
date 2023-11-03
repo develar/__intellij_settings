@@ -59,11 +59,13 @@
             <option value="premature" />
             <option value="1)|we don't need to update digest for a bundled scheme because 1) it can be computed on demand later (because a bundled scheme is not mutable) 2) in the future user copy of a bundled scheme will use a bundled scheme as parent (not as full copy)" />
             <option value="SQLite connection" />
+            <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="}" />
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
+            <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
+            <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
           </set>
         </option>
       </SuppressingContext>
