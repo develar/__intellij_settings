@@ -20,6 +20,7 @@
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
+            <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="sub-stack" />
             <option value="Co|Converts this promise to an instance of ." />
@@ -51,6 +52,7 @@
             <option value="of the XML data of|the system ID of the XML data of the element." />
             <option value="8|It is important to note that offset is non-negative and can be 4 or 8 bytes, depending on the size of the &quot;.values&quot; file." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
+            <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="a single nats server cluster" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
             <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
@@ -64,8 +66,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
-            <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
+            <option value="don't forget|if you will change it, don't forget to increase timeout in BackendOTSpansTransferTest" />
           </set>
         </option>
       </SuppressingContext>
