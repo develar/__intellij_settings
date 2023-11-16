@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="pom.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -37,7 +38,7 @@
     <mask>*.kt</mask>
     <mask>*.json</mask>
     <mask>*.xml</mask>
-    <mask>pom.xml</mask>
     <mask>*.iml</mask>
+    <mask>pom.xml</mask>
   </component>
 </application>
