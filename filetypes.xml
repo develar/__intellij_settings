@@ -1,6 +1,6 @@
 <application>
-  <component name="FileTypeManager" version="18">
-    <ignoreFiles list="*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs" />
+  <component name="FileTypeManager" version="19">
+    <ignoreFiles list="*.orig;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.mypy_cache;.pytest_cache;.ruff_cache;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs" />
     <extensionMap>
       <mapping pattern="module" type="AUTO_DETECTED" />
       <mapping ext="sum" type="AUTO_DETECTED" />
