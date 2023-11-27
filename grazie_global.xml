@@ -44,6 +44,7 @@
             <option value="of usage of|It should help to solve the problem of detecting from which source existing compilation outputs were produced (it's the problem of usage of portable caches and compilation outputs, produced by JPS)." />
             <option value="of the type of|a node of the type of this." />
             <option value="255|255 here is not a mistake - we want to explicitly set that corresponding color as non-transparent" />
+            <option value="prepended|The plugin ID is automatically and implicitly prepended to it." />
             <option value="dumb" />
             <option value="size pairs int -" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
@@ -67,7 +68,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="prepended|The plugin ID is automatically and implicitly prepended to it." />
+            <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
           </set>
         </option>
       </SuppressingContext>
