@@ -32,6 +32,7 @@
     <entry key="debugger.new.tool.window.layout.toolbar" value="[After|Vertical*]" />
     <entry key="vcs.log.index.sqlite.storage" value="true" />
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
+    <entry key="safe.push.via.space" value="true" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
