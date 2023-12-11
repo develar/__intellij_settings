@@ -33,7 +33,6 @@
     <mask>*.txt</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
-    <mask>*.json</mask>
     <mask>*.xml</mask>
     <mask>pom.xml</mask>
     <mask>package*</mask>
@@ -41,5 +40,6 @@
     <mask>*.iml</mask>
     <mask>*.kt</mask>
     <mask>*.java</mask>
+    <mask>*.json</mask>
   </component>
 </application>
