@@ -5,7 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value=".editorConfig" />
+    <option name="FILE_MASK" value="plugin.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -28,7 +28,6 @@
     <mask>go</mask>
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
-    <mask>plugin.xml</mask>
     <mask>*.properties</mask>
     <mask>*.go</mask>
     <mask>*.txt</mask>
@@ -43,5 +42,6 @@
     <mask>*.json</mask>
     <mask>*.iml</mask>
     <mask>.editorConfig</mask>
+    <mask>plugin.xml</mask>
   </component>
 </application>
