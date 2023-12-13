@@ -4,6 +4,7 @@
     <extensionMap>
       <mapping pattern="module" type="AUTO_DETECTED" />
       <mapping ext="sum" type="AUTO_DETECTED" />
+      <mapping pattern="Dockerfile.*" type="Dockerfile" />
       <mapping pattern=".watchmanconfig" type="JSON" />
       <mapping pattern=".graphqlconfig" type="JSON" />
       <mapping ext="geojson" type="JSON" />
@@ -64,7 +65,6 @@
       <removed_mapping pattern=".graphqlconfig" approved="true" type="PLAIN_TEXT" />
       <removed_mapping pattern=".werf/go.tmpl" approved="true" type="Go Template" />
       <mapping ext="plantuml" type="PlantUML file" />
-      <mapping pattern="Dockerfile.*" type="Dockerfile" />
     </extensionMap>
   </component>
 </application>
