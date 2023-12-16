@@ -51,7 +51,7 @@
   <component name="DeclarativeInlayHintsSettings">
     <option name="providerIdToEnabled">
       <map>
-        <entry key="devkit.threading" value="true" />
+        <entry key="devkit.threading" value="false" />
         <entry key="java.implicit.types" value="false" />
         <entry key="java.method.chains" value="true" />
         <entry key="js.chain.hints" value="true" />
