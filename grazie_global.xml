@@ -40,6 +40,7 @@
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
             <option value="The|The region of output you are interested in generating dependencies for." />
             <option value="a select is" />
+            <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="of usage of|It should help to solve the problem of detecting from which source existing compilation outputs were produced (it's the problem of usage of portable caches and compilation outputs, produced by JPS)." />
             <option value="of the type of|a node of the type of this." />
@@ -68,7 +69,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
+            <option value="Kotlin serialization" />
           </set>
         </option>
       </SuppressingContext>
