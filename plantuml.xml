@@ -4,6 +4,6 @@
     <option name="customPlantumlJarPath" value="$USER_HOME$/p" />
     <option name="dotExecutable" value="/opt/homebrew/Cellar/graphviz/8.0.5/bin/dot" />
     <option name="includedPaths" value="" />
-    <option name="lastBundledVersion" value="1.2023.9" />
+    <option name="lastBundledVersion" value="1.2023.11" />
   </component>
 </application>
