@@ -1,0 +1,12 @@
+<application>
+  <component name="libraryTable">
+    <library name="JFlex &amp; idea-flex.skeleton">
+      <CLASSES>
+        <root url="file://$USER_HOME$/projects/d2-intellij/jflex-1.9.1.jar" />
+        <root url="file://$USER_HOME$/projects/d2-intellij/idea-flex.skeleton" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</application>
