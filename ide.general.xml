@@ -34,6 +34,7 @@
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
     <entry key="llm.generate.commit.summary" value="true" />
     <entry key="safe.push.via.space" value="true" />
+    <entry key="instant.git.url.external" value="true" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
