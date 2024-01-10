@@ -35,6 +35,7 @@
     <entry key="llm.generate.commit.summary" value="true" />
     <entry key="safe.push.via.space" value="true" />
     <entry key="instant.git.url.external" value="true" />
+    <entry key="workspace.model.global.sdk.bridge" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
