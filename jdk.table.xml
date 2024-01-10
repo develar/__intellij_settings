@@ -165,25 +165,6 @@
       </roots>
     </jdk>
     <jdk version="2">
-      <name value="Kotlin SDK" />
-      <type value="KotlinSDK" />
-      <homePath value="" />
-      <roots>
-        <annotationsPath>
-          <root type="composite" />
-        </annotationsPath>
-        <classPath>
-          <root type="composite" />
-        </classPath>
-        <javadocPath>
-          <root type="composite" />
-        </javadocPath>
-        <sourcePath>
-          <root type="composite" />
-        </sourcePath>
-      </roots>
-    </jdk>
-    <jdk version="2">
       <name value="corretto-11" />
       <type value="JavaSDK" />
       <version value="Amazon Corretto version 11.0.21" />
@@ -343,51 +324,6 @@
             <root url="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.21/Contents/Home/lib/src.zip!/jdk.internal.vm.compiler" type="simple" />
             <root url="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.21/Contents/Home/lib/src.zip!/jdk.scripting.nashorn.shell" type="simple" />
             <root url="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.21/Contents/Home/lib/src.zip!/jdk.internal.vm.compiler.management" type="simple" />
-          </root>
-        </sourcePath>
-      </roots>
-    </jdk>
-    <jdk version="2">
-      <name value="zulu-1.8" />
-      <type value="JavaSDK" />
-      <version value="Azul Zulu version 1.8.0_392" />
-      <homePath value="$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home" />
-      <roots>
-        <annotationsPath>
-          <root type="composite">
-            <root url="jar://$APPLICATION_HOME_DIR$/plugins/java/lib/resources/jdkAnnotations.jar!/" type="simple" />
-          </root>
-        </annotationsPath>
-        <classPath>
-          <root type="composite">
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/cat.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/charsets.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/cldrdata.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/crs-agent.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/dnsns.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/jaccess.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/jfxrt.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/localedata.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/sunec.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/ext/zipfs.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/jce.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/jfr.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/jfxswt.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/jsse.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/management-agent.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/resources.jar!/" type="simple" />
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/jre/lib/rt.jar!/" type="simple" />
-          </root>
-        </classPath>
-        <javadocPath>
-          <root type="composite" />
-        </javadocPath>
-        <sourcePath>
-          <root type="composite">
-            <root url="jar://$USER_HOME$/.gradle/jdks/azul_systems__inc_-8-aarch64-os_x/zulu8.74.0.17-ca-fx-jdk8.0.392-macosx_aarch64/zulu-8.jdk/Contents/Home/src.zip!/" type="simple" />
           </root>
         </sourcePath>
       </roots>
