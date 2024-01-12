@@ -1,0 +1,37 @@
+<application>
+  <component name="BigDataIdeGlobalConnectionSettings">
+    <option name="connections">
+      <list>
+        <ExtendedConnectionData>
+          <option name="anonymous" value="true" />
+          <option name="extended">
+            <map>
+              <entry key="defaultNotebookName" value="rO0ABXQAE0lERUFfUGx1Z2luL2RlZmF1bHQ=" />
+              <entry key="enableBasicAuth" value="rO0ABXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAA=" />
+              <entry key="enableProxy" value="rO0ABXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAA=" />
+              <entry key="flinkVersion" value="rO0ABXQABjEuMTQuNQ==" />
+              <entry key="hadoopVersion" value="rO0ABXQABTIuNy4z" />
+              <entry key="isZtoolsEnabled" value="rO0ABXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAE=" />
+              <entry key="notifyAfter" value="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAA8" />
+              <entry key="proxyAuthEnabled" value="rO0ABXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAA=" />
+              <entry key="proxyEnableType" value="rO0ABX5yADxjb20uamV0YnJhaW5zLmJpZ2RhdGF0b29scy5jb21tb24uY29ubmVjdGlvbi5Qcm94eUVuYWJsZVR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhESVNBQkxFRA==" />
+              <entry key="proxyHost" value="rO0ABXQAAA==" />
+              <entry key="proxyPort" value="rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAABQ" />
+              <entry key="proxyType" value="rO0ABX5yADZjb20uamV0YnJhaW5zLmJpZ2RhdGF0b29scy5jb21tb24uY29ubmVjdGlvbi5Qcm94eVR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AARIVFRQ" />
+              <entry key="scalaVersion" value="rO0ABXQABDIuMTE=" />
+              <entry key="sparkVersion" value="rO0ABXQABTIuMi4w" />
+              <entry key="systemNotificationEnabled" value="rO0ABXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAE=" />
+              <entry key="tunnel" value="rO0ABXNyAFdjb20uamV0YnJhaW5zLmJpZ2RhdGF0b29scy5jb21tb24uY29ubmVjdGlvbi50dW5uZWwubW9kZWwuQ29ubmVjdGlvblNzaFR1bm5lbERhdGFMZWdhY3mINKLe8MxKawIABVoACWlzRW5hYmxlZEkACnJlbW90ZVBvcnRMAAhjb25maWdJZHQAEkxqYXZhL2xhbmcvU3RyaW5nO0wACWxvY2FsUG9ydHQAE0xqYXZhL2xhbmcvSW50ZWdlcjtMAApyZW1vdGVIb3N0cQB+AAF4cAD/////dAAAcHEAfgAE" />
+              <entry key="zeppelinVersion" value="rO0ABXQAAA==" />
+            </map>
+          </option>
+          <option name="fqn" value="com.intellij.bigdatatools.zeppelin.settings.ZeppelinConnectionData" />
+          <option name="groupId" value="ZeppelinConnections" />
+          <option name="innerId" value="Zeppelin@ZeppelinConnections@-7273190306614431223" />
+          <option name="name" value="Zeppelin" />
+          <option name="uri" value="localhost:8080" />
+        </ExtendedConnectionData>
+      </list>
+    </option>
+  </component>
+</application>

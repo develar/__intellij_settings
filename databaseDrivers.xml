@@ -12,5 +12,10 @@
         <url>file://$USER_HOME$/projects/idea/out/dev-data/idea/config/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
       </library>
     </driver>
+    <driver id="com.dbschema.ZeppelinSparkJdbcDriver" name="BDT Zeppelin Connection" driver-class="com.dbschema.ZeppelinSparkJdbcDriver" icon="icons/zeppelin.svg">
+      <library>
+        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Zeppelin/zeppelin-jdbc-2.jar</url>
+      </library>
+    </driver>
   </component>
 </application>
