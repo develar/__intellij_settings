@@ -1,0 +1,11 @@
+<application>
+  <component name="aeInstalledPlugins">
+    <option name="myPlugins">
+      <map>
+        <entry key="Pythonid" value="1705064441509" />
+        <entry key="intellij.jupyter" value="1705064441598" />
+        <entry key="org.jetbrains.plugins.kotlin.jupyter" value="1705064442991" />
+      </map>
+    </option>
+  </component>
+</application>
