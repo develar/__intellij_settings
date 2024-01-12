@@ -1,4 +1,7 @@
 <keymap version="1" name="My macOS" parent="Mac OS X 10.5+">
+  <action id="ActivateBigDataToolWindowToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl meta b" />
+  </action>
   <action id="EditorLineStart">
     <keyboard-shortcut first-keystroke="home" />
     <keyboard-shortcut first-keystroke="meta left" />

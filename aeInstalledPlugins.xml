@@ -2,9 +2,12 @@
   <component name="aeInstalledPlugins">
     <option name="myPlugins">
       <map>
-        <entry key="Pythonid" value="1705064441509" />
-        <entry key="intellij.jupyter" value="1705064441598" />
-        <entry key="org.jetbrains.plugins.kotlin.jupyter" value="1705064442991" />
+        <entry key="com.intellij.bigdatatools.binary.files" value="1705072493781" />
+        <entry key="com.intellij.bigdatatools.core" value="1705072493776" />
+        <entry key="com.intellij.bigdatatools.metastore.core" value="1705072494238" />
+        <entry key="com.intellij.bigdatatools.rfs" value="1705072494075" />
+        <entry key="com.intellij.bigdatatools.spark" value="1705072494260" />
+        <entry key="com.intellij.bigdatatools.zeppelin" value="1705072499141" />
       </map>
     </option>
   </component>
