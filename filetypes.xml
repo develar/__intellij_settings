@@ -55,6 +55,7 @@
       <removed_mapping ext="pac" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="pdf" approved="true" type="Native" />
       <removed_mapping ext="psd" approved="true" type="Image" />
+      <removed_mapping ext="py" approved="true" type="Python" />
       <removed_mapping ext="tmpl" approved="true" type="Go Template" />
       <removed_mapping ext="vue" approved="true" type="PLAIN_TEXT" />
       <removed_mapping pattern=".dockerignore" approved="true" type="DockerIgnore file" />
