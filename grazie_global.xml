@@ -16,12 +16,14 @@
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="IntelliJ|Used directly by IntelliJ IDEA." />
             <option value="plugin|Returns URL to plugin repository without a trailing slash." />
+            <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message" />
             <option value="under write" />
             <option value="an assert" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
             <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
+            <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message (cause)" />
             <option value="sub-stack" />
             <option value="Co|Converts this promise to an instance of ." />
             <option value="'" />
@@ -70,8 +72,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message" />
-            <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message (cause)" />
+            <option value="of bytes of|if it succeeded there will be an 'nmsize' attribute which indicates the number of bytes of instruction produced by the compile" />
           </set>
         </option>
       </SuppressingContext>
