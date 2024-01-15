@@ -49,6 +49,11 @@
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
   <component name="DeclarativeInlayHintsSettings">
+    <option name="disabledOptions">
+      <set>
+        <option value="ts.type.hints#variables.and.fields" />
+      </set>
+    </option>
     <option name="providerIdToEnabled">
       <map>
         <entry key="devkit.threading" value="false" />
