@@ -36,6 +36,7 @@
     <option name="defaultPosition" value="Right" />
     <option name="disabledCodeVisionProviderIds">
       <set>
+        <option value="component.usage" />
         <option value="inheritors" />
         <option value="java.inheritors" />
         <option value="java.references" />
