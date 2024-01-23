@@ -10,6 +10,7 @@
             <option value="do|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
             <option value="3,|an unexpected delay of 3 seconds is considered as several delays: of 3, 2 and 1 seconds, because otherwise this background thread would be sampled 3 times." />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
+            <option value="of bytes of|if it succeeded there will be an 'nmsize' attribute which indicates the number of bytes of instruction produced by the compile" />
             <option value="an|for instance, ShadowPainter updates the context from an outside" />
             <option value="dummy" />
             <option value="2|2 fields below fully describe PMap configuration:" />
@@ -72,7 +73,8 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="of bytes of|if it succeeded there will be an 'nmsize' attribute which indicates the number of bytes of instruction produced by the compile" />
+            <option value="at|For a directory-based project, it's an arbitrary string specified by user at project creation or later in a project settings." />
+            <option value="Re|Returns a workspace file:" />
           </set>
         </option>
       </SuppressingContext>
