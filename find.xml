@@ -1,10 +1,10 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.grid.impl'" />
-    <option name="defaultScopeName" value="Module 'intellij.grid.impl'" />
+    <option name="customScope" value="Module 'intellij.grid.core.impl'" />
+    <option name="defaultScopeName" value="Module 'intellij.grid.core.impl'" />
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.grid.impl'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.grid.core.impl'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
