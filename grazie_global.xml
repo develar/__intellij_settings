@@ -48,6 +48,7 @@
             <option value="of usage of|It should help to solve the problem of detecting from which source existing compilation outputs were produced (it's the problem of usage of portable caches and compilation outputs, produced by JPS)." />
             <option value="of the type of|a node of the type of this." />
             <option value="255|255 here is not a mistake - we want to explicitly set that corresponding color as non-transparent" />
+            <option value="Re|Returns a workspace file:" />
             <option value="prepended|The plugin ID is automatically and implicitly prepended to it." />
             <option value="dumb" />
             <option value="size pairs int -" />
@@ -59,6 +60,7 @@
             <option value="Kotlin serialization" />
             <option value="8|It is important to note that offset is non-negative and can be 4 or 8 bytes, depending on the size of the &quot;.values&quot; file." />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
+            <option value="at|For a directory-based project, it's an arbitrary string specified by user at project creation or later in a project settings." />
             <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="a single nats server cluster" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
@@ -73,8 +75,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="at|For a directory-based project, it's an arbitrary string specified by user at project creation or later in a project settings." />
-            <option value="Re|Returns a workspace file:" />
+            <option value="anymore|After that, few of the most relevant displayed items are considered &quot;frozen&quot; and not re-sorted anymore, to avoid changes around the selected item that the user already sees and can interact with." />
           </set>
         </option>
       </SuppressingContext>
