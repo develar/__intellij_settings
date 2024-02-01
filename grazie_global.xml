@@ -62,6 +62,7 @@
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="at|For a directory-based project, it's an arbitrary string specified by user at project creation or later in a project settings." />
             <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
+            <option value="anymore|After that, few of the most relevant displayed items are considered &quot;frozen&quot; and not re-sorted anymore, to avoid changes around the selected item that the user already sees and can interact with." />
             <option value="a single nats server cluster" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
             <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
@@ -75,7 +76,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="anymore|After that, few of the most relevant displayed items are considered &quot;frozen&quot; and not re-sorted anymore, to avoid changes around the selected item that the user already sees and can interact with." />
+            <option value="re|returns true iff exists control flow path completing normally, i.e. not resulting in return,break,continue or exception thrown." />
           </set>
         </option>
       </SuppressingContext>
