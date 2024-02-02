@@ -32,6 +32,7 @@
             <option value="the|the value to normalize" />
             <option value="a nats server," />
             <option value="little bit" />
+            <option value="re|returns true iff exists control flow path completing normally, i.e. not resulting in return,break,continue or exception thrown." />
             <option value="of bounds of|union of bounds of all default screen devices." />
             <option value="of the zip64 end of|disk number with the start of the zip64 end of central directory" />
             <option value="don't forget|if you will change it, don't forget to increase timeout in BackendOTSpansTransferTest" />
@@ -76,7 +77,7 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="re|returns true iff exists control flow path completing normally, i.e. not resulting in return,break,continue or exception thrown." />
+            <option value="So|Sort the files heuristically to load the plugin jar containing plugin descriptors without extra ZipFile accesses." />
           </set>
         </option>
       </SuppressingContext>
