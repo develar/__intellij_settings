@@ -13,6 +13,7 @@
         <option value="com.intellij.bigdatatools.rfs" />
         <option value="com.intellij.aqua" />
         <option value="dev.nx.console" />
+        <option value="com.jetbrains.writerside" />
       </list>
     </option>
   </component>
