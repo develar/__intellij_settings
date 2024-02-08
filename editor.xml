@@ -50,10 +50,10 @@
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
   <component name="DeclarativeInlayHintsSettings">
-    <option name="disabledOptions">
-      <set>
-        <option value="ts.type.hints#variables.and.fields" />
-      </set>
+    <option name="enabledOptions">
+      <map>
+        <entry key="kotlin.references.types.hints#hints.type.variable" value="false" />
+      </map>
     </option>
     <option name="providerIdToEnabled">
       <map>
@@ -62,6 +62,7 @@
         <entry key="java.method.chains" value="true" />
         <entry key="js.chain.hints" value="true" />
         <entry key="js.type.hints" value="false" />
+        <entry key="kotlin.references.types.hints" value="true" />
         <entry key="ts.chain.hints" value="true" />
         <entry key="ts.enum.hints" value="true" />
         <entry key="ts.type.hints" value="false" />
