@@ -78,6 +78,8 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
+            <option value="be used|Universal native file can be used by any platform" />
+            <option value="be used|universal native file can be used by any platform" />
           </set>
         </option>
       </SuppressingContext>
