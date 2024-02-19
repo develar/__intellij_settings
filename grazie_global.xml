@@ -70,6 +70,7 @@
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
             <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
             <option value="224|224 bit and not 256/512 - use a slightly shorter filename xxh3 is not used as it is not secure and moreover, better to stick to JDK API" />
+            <option value="whitespace|Case content is empty or all insignificant whitespace" />
             <option value="tipsPath" />
             <option value="premature" />
             <option value="1)|we don't need to update digest for a bundled scheme because 1) it can be computed on demand later (because a bundled scheme is not mutable) 2) in the future user copy of a bundled scheme will use a bundled scheme as parent (not as full copy)" />
@@ -80,7 +81,7 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="whitespace|Case content is empty or all insignificant whitespace" />
+            <option value="Caveat|Caveat: do not touch telemetry API during init, it is not ready yet." />
           </set>
         </option>
       </SuppressingContext>
