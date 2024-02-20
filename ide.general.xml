@@ -14,7 +14,6 @@
     <entry key="sdk.auto.check.unknown.sdk" value="false" />
     <entry key="ide.usage.group.navigate.on.double.click.disabled" value="true" />
     <entry key="vcs.show.affected.files.as.tab" value="false" />
-    <entry key="enable.combined.diff" value="false" />
     <entry key="ide.recent.files.tool.window.list" value="false" />
     <entry key="ide.new.tabs" value="false" />
     <entry key="debugger.new.tool.window.layout" value="true" />
