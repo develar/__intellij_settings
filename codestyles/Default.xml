@@ -14,7 +14,7 @@
   <JetCodeStyleSettings>
     <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
   </JetCodeStyleSettings>
-  <SQLiteCodeStyleSettings version="6">
+  <SQLiteCodeStyleSettings version="7">
     <option name="USE_GENERIC_STYLE" value="true" />
   </SQLiteCodeStyleSettings>
   <ScssCodeStyleSettings>
