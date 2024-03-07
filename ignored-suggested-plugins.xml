@@ -14,6 +14,7 @@
         <option value="com.intellij.aqua" />
         <option value="dev.nx.console" />
         <option value="com.jetbrains.writerside" />
+        <option value="com.intellij.beanValidation" />
       </list>
     </option>
   </component>
