@@ -20,6 +20,7 @@
             <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message" />
             <option value="under write" />
             <option value="an assert" />
+            <option value="weird|getting state after a load with an active controller can lead to weird issues" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
             <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
@@ -82,7 +83,6 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="weird|getting state after a load with an active controller can lead to weird issues" />
           </set>
         </option>
       </SuppressingContext>
