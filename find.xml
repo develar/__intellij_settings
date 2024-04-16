@@ -1,10 +1,10 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Module 'intellij.javaee.reverseEngineering'" />
-    <option name="defaultScopeName" value="Module 'intellij.javaee.reverseEngineering'" />
+    <option name="customScope" value="Module 'intellij.platform.ide.impl'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.ide.impl'" />
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="Module 'intellij.javaee.reverseEngineering'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.ide.impl'" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
