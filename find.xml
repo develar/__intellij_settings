@@ -9,6 +9,7 @@
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="*.json" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -41,10 +42,10 @@
     <mask>mac*.xml</mask>
     <mask>*.kt</mask>
     <mask>*.java</mask>
-    <mask>*.json</mask>
     <mask>.editorConfig</mask>
     <mask>plugin.xml</mask>
     <mask>*.iml</mask>
     <mask>*.xml</mask>
+    <mask>*.json</mask>
   </component>
 </application>
