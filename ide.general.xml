@@ -32,6 +32,7 @@
     <entry key="java.find.usages.always.use.top.hierarchy.methods" value="false" />
     <entry key="llm.generate.commit.summary" value="true" />
     <entry key="profiler.widget.in.run.console" value="false" />
+    <entry key="eslint.additional.file.extensions" value="svelte" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
