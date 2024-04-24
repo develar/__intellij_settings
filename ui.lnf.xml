@@ -47,8 +47,5 @@
     <option name="MAX_LOOKUP_WIDTH2" value="1022" />
     <option name="SHOW_EDITOR_TOOLTIP" value="false" />
     <option name="SHOW_NAVIGATION_BAR" value="false" />
-    <option name="SHOW_TOOL_WINDOW_NAMES" value="true" />
-    <option name="TOOL_WINDOW_LEFT_SIDE_CUSTOM_WIDTH" value="55" />
-    <option name="TOOL_WINDOW_RIGHT_SIDE_CUSTOM_WIDTH" value="55" />
   </component>
 </application>
