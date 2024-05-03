@@ -9,6 +9,7 @@
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -33,7 +34,6 @@
     <mask>*.svg</mask>
     <mask>*.properties</mask>
     <mask>*.go</mask>
-    <mask>*.txt</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
     <mask>pom.xml</mask>
@@ -43,8 +43,9 @@
     <mask>*.java</mask>
     <mask>.editorConfig</mask>
     <mask>plugin.xml</mask>
-    <mask>*.xml</mask>
     <mask>*.json</mask>
+    <mask>*.txt</mask>
+    <mask>*.xml</mask>
     <mask>*.iml</mask>
   </component>
 </application>
