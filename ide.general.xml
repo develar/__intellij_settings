@@ -34,6 +34,7 @@
     <entry key="profiler.widget.in.run.console" value="false" />
     <entry key="eslint.additional.file.extensions" value="svelte" />
     <entry key="forced.switch.to.new.ui" value="false" />
+    <entry key="safe.push.via.space" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
