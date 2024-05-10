@@ -57,6 +57,7 @@
             <option value="Re|Returns a workspace file:" />
             <option value="prepended|The plugin ID is automatically and implicitly prepended to it." />
             <option value="dumb" />
+            <option value="langPluginsResultDir" />
             <option value="size pairs int -" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
             <option value="adjustOptionsUI" />
@@ -85,7 +86,7 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="langPluginsResultDir" />
+            <option value="suggest|List of file extensions (without a leading dot) which the installer will suggest to associate with the product." />
           </set>
         </option>
       </SuppressingContext>
