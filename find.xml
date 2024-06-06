@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.java" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -34,13 +35,13 @@
     <mask>pom.xml</mask>
     <mask>package*</mask>
     <mask>mac*.xml</mask>
-    <mask>*.java</mask>
     <mask>.editorConfig</mask>
     <mask>*.json</mask>
     <mask>*.txt</mask>
-    <mask>*.kt</mask>
     <mask>*.iml</mask>
     <mask>plugin.xml</mask>
     <mask>*.xml</mask>
+    <mask>*.kt</mask>
+    <mask>*.java</mask>
   </component>
 </application>
