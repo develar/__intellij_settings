@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.properties" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -27,7 +28,6 @@
     <mask>go</mask>
     <mask>kotlin*</mask>
     <mask>*.svg</mask>
-    <mask>*.properties</mask>
     <mask>*.go</mask>
     <mask>icon-robots.txt</mask>
     <mask>*.sh</mask>
@@ -39,8 +39,9 @@
     <mask>*.txt</mask>
     <mask>*.iml</mask>
     <mask>plugin.xml</mask>
-    <mask>*.xml</mask>
     <mask>*.kt</mask>
     <mask>*.java</mask>
+    <mask>*.xml</mask>
+    <mask>*.properties</mask>
   </component>
 </application>
