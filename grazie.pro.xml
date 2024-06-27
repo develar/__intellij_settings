@@ -1,5 +1,5 @@
 <application>
   <component name="GrazieProConfig">
-    <option name="explicitlyChosenProcessing" value="Cloud" />
+    <option name="explicitlyChosenProcessing" value="Local" />
   </component>
 </application>
