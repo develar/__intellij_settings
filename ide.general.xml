@@ -42,6 +42,7 @@
         <entry key="Encoding" value="false" />
         <entry key="FlowJSInfo" value="false" />
         <entry key="FullLine" value="false" />
+        <entry key="GrazieStatusBarWidget" value="false" />
         <entry key="InsertOverwrite" value="false" />
         <entry key="JSONSchemaSelector" value="false" />
         <entry key="LineSeparator" value="false" />
