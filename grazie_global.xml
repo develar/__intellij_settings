@@ -35,6 +35,7 @@
             <option value="(" />
             <option value="be used|Universal native file can be used by any platform" />
             <option value="the|the value to normalize" />
+            <option value="Even if the above/below adjacent editor is shifted a bit to the right from the left edge of the current editor, still try to choose an editor that is visually above/below - shifted nor more than a quarter of editor width.|Even if the above/below adjacent editor is shifted a bit to the right from the left edge of the current editor, still try to choose an editor that is visually above/below - shifted nor more than a quarter of editor width." />
             <option value="a nats server," />
             <option value="little bit" />
             <option value="re|returns true iff exists control flow path completing normally, i.e. not resulting in return,break,continue or exception thrown." />
@@ -87,7 +88,8 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="Even if the above/below adjacent editor is shifted a bit to the right from the left edge of the current editor, still try to choose an editor that is visually above/below - shifted nor more than a quarter of editor width.|Even if the above/below adjacent editor is shifted a bit to the right from the left edge of the current editor, still try to choose an editor that is visually above/below - shifted nor more than a quarter of editor width." />
+            <option value="selection|temporary state to make selection fully visible (scrolled in view)" />
+            <option value="E.g.|In particular, it's required when a focus transfer has just been requested to another component." />
           </set>
         </option>
       </SuppressingContext>
