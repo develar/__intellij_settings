@@ -1,10 +1,10 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
+    <option name="customScope" value="gprc" />
+    <option name="defaultScopeName" value="gprc" />
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="SEARCH_SCOPE" value="gprc" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -40,7 +40,7 @@
     <mask>*.kt</mask>
     <mask>*.java</mask>
     <mask>*.properties</mask>
-    <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
