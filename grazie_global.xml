@@ -18,12 +18,14 @@
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="IntelliJ|Used directly by IntelliJ IDEA." />
             <option value="plugin|Returns URL to plugin repository without a trailing slash." />
+            <option value="allow-listed|do not create an extension if not allow-listed" />
             <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message" />
             <option value="under write" />
             <option value="an assert" />
             <option value="weird|getting state after a load with an active controller can lead to weird issues" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
+            <option value="we aim|In the future, we aim to avoid .joinAll in runPostStartupActivities altogether." />
             <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message (cause)" />
@@ -51,6 +53,7 @@
             <option value="The|The region of output you are interested in generating dependencies for." />
             <option value="a select is" />
             <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
+            <option value="hang" />
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="of usage of|It should help to solve the problem of detecting from which source existing compilation outputs were produced (it's the problem of usage of portable caches and compilation outputs, produced by JPS)." />
             <option value="of the type of|a node of the type of this." />
@@ -88,9 +91,7 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="allow-listed|do not create an extension if not allow-listed" />
-            <option value="we aim|In the future, we aim to avoid .joinAll in runPostStartupActivities altogether." />
-            <option value="hang" />
+            <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant" />
           </set>
         </option>
       </SuppressingContext>
