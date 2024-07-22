@@ -51,6 +51,7 @@
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
             <option value="The|The region of output you are interested in generating dependencies for." />
+            <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant" />
             <option value="a select is" />
             <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
             <option value="hang" />
@@ -91,7 +92,7 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant" />
+            <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant https://packages.jetbrains.team/files/p/llm-videos/llm-videos/llm/video/llm-video-1.0.zip" />
           </set>
         </option>
       </SuppressingContext>
