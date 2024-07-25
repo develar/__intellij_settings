@@ -37,10 +37,10 @@
     <mask>*.json</mask>
     <mask>*.txt</mask>
     <mask>plugin.xml</mask>
-    <mask>*.kt</mask>
     <mask>*.java</mask>
     <mask>*.properties</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
