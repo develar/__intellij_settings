@@ -1,5 +1,6 @@
 <application>
   <component name="KotlinFirRefactoringSettings">
     <option name="INLINE_METHOD_THIS" value="true" />
+    <option name="MOVE_PREVIEW_USAGES" value="false" />
   </component>
 </application>
