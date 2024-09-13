@@ -1,4 +1,18 @@
 <application>
+  <component name="CoroutinesLibraryCompatibilityStore">
+    <option name="artifactId" value="kotlinx-coroutines-core" />
+    <option name="groupId" value="org.jetbrains.kotlinx" />
+    <option name="ideVersion" value="2024.3 EAP" />
+    <option name="versions">
+      <map>
+        <entry key="1.5" value="1.5.2" />
+        <entry key="1.6" value="1.6.4" />
+        <entry key="1.8" value="1.7.3" />
+        <entry key="1.9" value="1.8.1" />
+        <entry key="2.0" value="1.8.1" />
+      </map>
+    </option>
+  </component>
   <component name="KotlinWizardDependencyVersionStore">
     <option name="ideVersion" value="2023.3 EAP" />
     <option name="versions">
