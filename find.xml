@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.bazel" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -43,5 +44,6 @@
     <mask>*.yaml</mask>
     <mask>*.iml</mask>
     <mask>BUILD.bazel</mask>
+    <mask>*.bazel</mask>
   </component>
 </application>
