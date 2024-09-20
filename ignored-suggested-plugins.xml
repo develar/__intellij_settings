@@ -15,6 +15,7 @@
         <option value="dev.nx.console" />
         <option value="com.jetbrains.writerside" />
         <option value="com.intellij.beanValidation" />
+        <option value="com.intellij.flyway" />
       </list>
     </option>
   </component>
