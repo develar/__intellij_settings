@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.txt" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -35,7 +36,6 @@
     <mask>mac*.xml</mask>
     <mask>.editorConfig</mask>
     <mask>*.json</mask>
-    <mask>*.txt</mask>
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
     <mask>*.properties</mask>
@@ -43,5 +43,6 @@
     <mask>*.kt</mask>
     <mask>*.iml</mask>
     <mask>BUILD.bazel</mask>
+    <mask>*.txt</mask>
   </component>
 </application>
