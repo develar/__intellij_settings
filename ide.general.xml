@@ -35,6 +35,7 @@
     <entry key="eslint.additional.file.extensions" value="svelte" />
     <entry key="forced.switch.to.new.ui" value="false" />
     <entry key="i18n.locale" value="" />
+    <entry key="ui.inspector.save.stacktraces" value="true" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
