@@ -78,20 +78,8 @@
     <group value="EditorGutterPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="3">
       <path value="root" />
     </group>
-    <group value="main.toolbar.git.push" is_action="true" action_type="-1" position="3">
-      <path value="root" />
-      <path value="Main Toolbar" />
-      <path value="Left" />
-      <path value="VCS Group" />
-    </group>
     <group value="EditorPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="2">
       <path value="root" />
-    </group>
-    <group value="main.toolbar.git.update" is_action="true" action_type="-1" position="2">
-      <path value="root" />
-      <path value="Main Toolbar" />
-      <path value="Left" />
-      <path value="VCS Group" />
     </group>
     <group value="MainMenu" is_group="true" forse_popup="false" action_type="-1" position="0">
       <path value="root" />
