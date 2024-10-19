@@ -80,6 +80,7 @@
             <option value="Caveat|Caveat: do not touch telemetry API during init, it is not ready yet." />
             <option value="at|For a directory-based project, it's an arbitrary string specified by user at project creation or later in a project settings." />
             <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
+            <option value="needed|these icons are only needed to prevent Swing from trying to fetch defaults with AWT ImageFetcher threads (IDEA-322089), but might as well just put something sensibly-looking there, just in case they show up due to some bug" />
             <option value="anymore|After that, few of the most relevant displayed items are considered &quot;frozen&quot; and not re-sorted anymore, to avoid changes around the selected item that the user already sees and can interact with." />
             <option value="a single nats server cluster" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
@@ -97,7 +98,7 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="needed|these icons are only needed to prevent Swing from trying to fetch defaults with AWT ImageFetcher threads (IDEA-322089), but might as well just put something sensibly-looking there, just in case they show up due to some bug" />
+            <option value="just|if we close the project at the end of the test, just mark it closed; if we are shutting down the entire test framework, proceed to full dispose" />
           </set>
         </option>
       </SuppressingContext>
