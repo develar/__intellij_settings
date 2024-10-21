@@ -7,6 +7,7 @@
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -40,10 +41,10 @@
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
     <mask>*.properties</mask>
-    <mask>*.xml</mask>
     <mask>*.kt</mask>
     <mask>BUILD.bazel</mask>
     <mask>*.txt</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
