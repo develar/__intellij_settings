@@ -16,6 +16,7 @@
             <option value="Wh|override fun getKey(sourcePath: String): LongArray { val stringKey = relativizer.toRelative(sourcePath).toByteArray() We should sort by target id for data locality - the high integer (high) is shifted to the higher 32 bits of the long value, while the low integer (low) occupies the lower 32 bits." />
             <option value="suggest|List of file extensions (without a leading dot) which the installer will suggest to associate with the product." />
             <option value="an|for instance, ShadowPainter updates the context from an outside" />
+            <option value="just|if we close the project at the end of the test, just mark it closed; if we are shutting down the entire test framework, proceed to full dispose" />
             <option value="dummy" />
             <option value="2|2 fields below fully describe PMap configuration:" />
             <option value="the|Returns a copy of the provided with darkness set to ." />
@@ -98,7 +99,6 @@
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="be used|universal native file can be used by any platform" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="just|if we close the project at the end of the test, just mark it closed; if we are shutting down the entire test framework, proceed to full dispose" />
           </set>
         </option>
       </SuppressingContext>
