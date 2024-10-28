@@ -36,6 +36,7 @@
     <entry key="forced.switch.to.new.ui" value="false" />
     <entry key="i18n.locale" value="" />
     <entry key="space.plugin.load.all.diffs" value="false" />
+    <entry key="devkit.debugger.prevent.pce.while.stepping" value="false" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
