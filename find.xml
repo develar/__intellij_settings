@@ -1,10 +1,11 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="121" />
-    <option name="defaultScopeName" value="121" />
+    <option name="customScope" value="Changes" />
+    <option name="defaultScopeName" value="Changes" />
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="121" />
+    <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -41,7 +42,7 @@
     <mask>BUILD.bazel</mask>
     <mask>*.txt</mask>
     <mask>*.iml</mask>
-    <mask>*.xml</mask>
     <mask>*.yaml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
