@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="*.bzl" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -43,5 +44,6 @@
     <mask>*.xml</mask>
     <mask>*.iml</mask>
     <mask>*.yaml</mask>
+    <mask>*.bzl</mask>
   </component>
 </application>
