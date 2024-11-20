@@ -1,5 +1,6 @@
 <application>
   <component name="KotlinFirRefactoringSettings">
+    <option name="INLINE_METHOD_THIS" value="true" />
     <option name="MOVE_MPP_DECLARATIONS" value="false" />
     <option name="MOVE_PREVIEW_USAGES" value="false" />
     <option name="MOVE_SEARCH_FOR_TEXT" value="false" />
