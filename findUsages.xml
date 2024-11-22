@@ -1,7 +1,7 @@
 <application>
   <component name="FindUsagesSettings">
-    <option name="customScope" value="File '…/community/java/java-impl/resources/META-INF/JavaPlugin.xml [intellij.java.impl]'" />
-    <option name="defaultScopeName" value="File '…/community/java/java-impl/resources/META-INF/JavaPlugin.xml [intellij.java.impl]'" />
-    <option name="SEARCH_SCOPE" value="File '…/community/java/java-impl/resources/META-INF/JavaPlugin.xml [intellij.java.impl]'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
   </component>
 </application>
