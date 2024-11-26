@@ -36,6 +36,7 @@
       <mapping ext="py" type="PLAIN_TEXT" />
       <mapping ext="ion" type="PLAIN_TEXT" />
       <mapping ext="meta" type="PLAIN_TEXT" />
+      <mapping ext="key" type="PLAIN_TEXT" />
       <mapping ext="cfg" type="PLAIN_TEXT" />
       <mapping ext="run" type="PLAIN_TEXT" />
       <mapping ext="4_version" type="PLAIN_TEXT" />
@@ -46,6 +47,7 @@
       <mapping ext="plist" type="PLAIN_TEXT" />
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
+      <mapping ext="crt" type="PLAIN_TEXT" />
       <mapping ext="srt" type="PLAIN_TEXT" />
       <mapping ext="poly" type="PLAIN_TEXT" />
       <mapping pattern="desktop-gnome-specic" type="Shell Script" />
