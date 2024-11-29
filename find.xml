@@ -5,6 +5,7 @@
     <option name="fromCursor" value="false" />
     <option name="FIND_ORIGIN" value="entire_scope" />
     <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="BUILD.bazel" />
     <mask>*.</mask>
     <mask>*.js</mask>
     <mask>*.xm</mask>
@@ -38,7 +39,6 @@
     <mask>*.java</mask>
     <mask>*.properties</mask>
     <mask>*.kt</mask>
-    <mask>BUILD.bazel</mask>
     <mask>*.txt</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
@@ -47,5 +47,6 @@
     <mask>MODULE.bazel</mask>
     <mask>*.bazel</mask>
     <mask>module-info.java</mask>
+    <mask>BUILD.bazel</mask>
   </component>
 </application>
