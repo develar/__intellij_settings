@@ -47,5 +47,6 @@
     <mask>module-info.java</mask>
     <mask>*.iml</mask>
     <mask>BUILD.bazel</mask>
+    <mask />
   </component>
 </application>
