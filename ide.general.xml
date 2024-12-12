@@ -34,7 +34,6 @@
     <entry key="profiler.widget.in.run.console" value="false" source="SYSTEM" />
     <entry key="eslint.additional.file.extensions" value="svelte" source="SYSTEM" />
     <entry key="forced.switch.to.new.ui" value="false" source="SYSTEM" />
-    <entry key="i18n.locale" value="" source="SYSTEM" />
     <entry key="space.plugin.load.all.diffs" value="false" source="SYSTEM" />
     <entry key="devkit.debugger.prevent.pce.while.stepping" value="false" source="SYSTEM" />
     <entry key="jvm.dfa.analysis.ui.security.analysis.window.was.shown" value="true" source="SYSTEM" />
