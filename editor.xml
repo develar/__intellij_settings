@@ -65,6 +65,7 @@
         <entry key="java.method.chains" value="true" />
         <entry key="js.chain.hints" value="true" />
         <entry key="js.type.hints" value="false" />
+        <entry key="kotlin.parameters.hints" value="false" />
         <entry key="kotlin.references.types.hints" value="false" />
         <entry key="ts.chain.hints" value="true" />
         <entry key="ts.enum.hints" value="true" />
