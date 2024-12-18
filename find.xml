@@ -44,9 +44,9 @@
     <mask>*.bzl</mask>
     <mask>*.bazel</mask>
     <mask>module-info.java</mask>
-    <mask>BUILD.bazel</mask>
     <mask />
     <mask>MODULE.bazel</mask>
     <mask>*.iml</mask>
+    <mask>BUILD.bazel</mask>
   </component>
 </application>
