@@ -37,7 +37,6 @@
     <mask>plugin.xml</mask>
     <mask>*.java</mask>
     <mask>*.properties</mask>
-    <mask>*.kt</mask>
     <mask>*.txt</mask>
     <mask>*.xml</mask>
     <mask>*.yaml</mask>
@@ -48,5 +47,6 @@
     <mask>MODULE.bazel</mask>
     <mask>*.iml</mask>
     <mask>BUILD.bazel</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
