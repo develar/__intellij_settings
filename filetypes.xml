@@ -46,6 +46,7 @@
       <mapping ext="lock" type="PLAIN_TEXT" />
       <mapping ext="plist" type="PLAIN_TEXT" />
       <mapping ext="mockmaker" type="PLAIN_TEXT" />
+      <mapping ext="jdeps" type="PLAIN_TEXT" />
       <mapping ext="configurationscript" type="PLAIN_TEXT" />
       <mapping ext="crt" type="PLAIN_TEXT" />
       <mapping ext="srt" type="PLAIN_TEXT" />
