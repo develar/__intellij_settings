@@ -1,8 +1,5 @@
 <application>
   <component name="DebuggerSettings">
-    <option name="SHOW_ALTERNATIVE_SOURCE" value="false" />
-    <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAlways" />
-    <option name="HOTSWAP_SHOW_FLOATING_BUTTON" value="false" />
     <filter>
       <option name="PATTERN" value="com.sun.*" />
       <option name="ENABLED" value="true" />
@@ -79,12 +76,12 @@
       <option name="INCLUDE" value="true" />
     </filter>
     <filter>
-      <option name="PATTERN" value="kotlin.*" />
+      <option name="PATTERN" value="org.mockito.*" />
       <option name="ENABLED" value="true" />
       <option name="INCLUDE" value="true" />
     </filter>
     <filter>
-      <option name="PATTERN" value="androidx.compose.runtime.*" />
+      <option name="PATTERN" value="kotlin.*" />
       <option name="ENABLED" value="true" />
       <option name="INCLUDE" value="true" />
     </filter>
@@ -93,28 +90,11 @@
       <option name="ENABLED" value="true" />
       <option name="INCLUDE" value="true" />
     </filter>
-  </component>
-  <component name="NodeRendererSettings">
-    <CustomRenderers VERSION="8">
-      <Renderer ID="CompoundNodeRenderer">
-        <option name="ENABLED" value="true" />
-        <option name="QUALIFIED_NAME" value="org.h2.mvstore.MVMap" />
-        <Renderer ID="LabelRenderer" role="label">
-          <option name="QUALIFIED_NAME" value="org.h2.mvstore.MVMap" />
-          <option name="ON_DEMAND" value="true" />
-          <option name="LABEL_EXPRESSION" value="&#13;&#13;JAVA" />
-        </Renderer>
-      </Renderer>
-      <Renderer ID="CompoundNodeRenderer">
-        <option name="ENABLED" value="true" />
-        <option name="QUALIFIED_NAME" value="org.jetbrains.mvstore.MVMap" />
-        <Renderer ID="LabelRenderer" role="label">
-          <option name="QUALIFIED_NAME" value="org.jetbrains.mvstore.MVMap" />
-          <option name="ON_DEMAND" value="false" />
-          <option name="LABEL_EXPRESSION" value="toString()&#13;&#13;JAVA" />
-        </Renderer>
-      </Renderer>
-    </CustomRenderers>
+    <filter>
+      <option name="PATTERN" value="androidx.compose.runtime.*" />
+      <option name="ENABLED" value="true" />
+      <option name="INCLUDE" value="true" />
+    </filter>
   </component>
   <component name="XDebuggerSettings">
     <data-views>
@@ -122,11 +102,6 @@
     </data-views>
     <general />
     <debuggers>
-      <debugger id="kotlin_debugger">
-        <configuration>
-          <option name="debugDisableCoroutineAgent" value="true" />
-        </configuration>
-      </debugger>
       <debugger id="javascript">
         <configuration>
           <custom-object-presentation />

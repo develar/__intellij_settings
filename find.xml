@@ -1,49 +1,17 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
-    <option name="fromCursor" value="false" />
-    <option name="FIND_ORIGIN" value="entire_scope" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
-    <mask>*.</mask>
-    <mask>*.js</mask>
-    <mask>*.xm</mask>
-    <mask>icon-robotx.tsx</mask>
-    <mask>icon-robo</mask>
-    <mask>*.md</mask>
-    <mask>*java</mask>
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
     <mask>*.css</mask>
     <mask>*.html</mask>
-    <mask>*.jsp</mask>
-    <mask>*Icons.java</mask>
-    <mask>*.propeties</mask>
-    <mask>package.json</mask>
-    <mask>*.ts</mask>
-    <mask>*.groovy</mask>
-    <mask>*.vue</mask>
-    <mask>*.py</mask>
-    <mask>!*.xml</mask>
-    <mask>go</mask>
-    <mask>kotlin*</mask>
-    <mask>*.svg</mask>
-    <mask>*.properties</mask>
-    <mask>*.go</mask>
-    <mask>icon-robots.txt</mask>
-    <mask>*.sh</mask>
-    <mask>pom.xml</mask>
-    <mask>package*</mask>
-    <mask>mac*.xml</mask>
-    <mask>*.java</mask>
-    <mask>*.json</mask>
-    <mask>*.txt</mask>
-    <mask>*.kt</mask>
-    <mask>plugin.xml</mask>
-    <mask>.editorConfig</mask>
     <mask>*.xml</mask>
+    <mask>*.jsp</mask>
+    <mask>*.properties</mask>
+    <mask>*.java</mask>
+    <mask>*.BUILD.bazel</mask>
     <mask>BUILD.bazel</mask>
-    <mask>*.bazel</mask>
-    <mask>.idea</mask>
+    <mask>*.kts</mask>
     <mask>*.iml</mask>
-    <mask>*.yaml</mask>
   </component>
 </application>
