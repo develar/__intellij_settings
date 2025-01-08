@@ -37,6 +37,7 @@
     <entry key="devkit.debugger.prevent.pce.while.stepping" value="false" source="SYSTEM" />
     <entry key="jvm.dfa.analysis.ui.security.analysis.window.was.shown" value="true" source="SYSTEM" />
     <entry key="terminal.new.ui" value="true" source="SYSTEM" />
+    <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
