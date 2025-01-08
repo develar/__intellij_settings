@@ -16,8 +16,6 @@
         <option value="com.jetbrains.writerside" />
         <option value="com.intellij.beanValidation" />
         <option value="com.intellij.flyway" />
-        <option value="Lombook Plugin" />
-        <option value="com.intellij.grpc" />
       </list>
     </option>
   </component>
