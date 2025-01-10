@@ -62,7 +62,7 @@
         <entry key="devkit.threading" value="false" />
         <entry key="java.implicit.lambdaParameter" value="false" />
         <entry key="java.implicit.types" value="false" />
-        <entry key="java.method.chains" value="true" />
+        <entry key="java.method.chains" value="false" />
         <entry key="js.chain.hints" value="true" />
         <entry key="js.type.hints" value="false" />
         <entry key="kotlin.parameters.hints" value="false" />
