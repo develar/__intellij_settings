@@ -21,5 +21,10 @@
       </library>
     </driver>
     <driver id="java.sql.Driver" name="User Driver" driver-class="java.sql.Driver" />
+    <driver id="b6369e2f-c28e-4ee8-bdf8-cd31f5157c18" name="Apache Arrow" driver-class="org.apache.arrow.driver.jdbc.ArrowFlightJdbcDriver">
+      <library>
+        <url>file://$USER_HOME$/Downloads/flight-sql-jdbc-driver-18.1.0.jar</url>
+      </library>
+    </driver>
   </component>
 </application>
