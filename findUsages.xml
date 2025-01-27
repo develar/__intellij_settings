@@ -1,7 +1,7 @@
 <application>
   <component name="FindUsagesSettings">
-    <option name="customScope" value="Directory '…/ruby [intellij.ruby]'" />
-    <option name="defaultScopeName" value="Directory '…/ruby [intellij.ruby]'" />
-    <option name="SEARCH_SCOPE" value="Directory '…/ruby [intellij.ruby]'" />
+    <option name="customScope" value="Module 'intellij.platform.ide.impl'" />
+    <option name="defaultScopeName" value="Module 'intellij.platform.ide.impl'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.platform.ide.impl'" />
   </component>
 </application>
