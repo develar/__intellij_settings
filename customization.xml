@@ -33,16 +33,19 @@
     <group value="RunTab.TopToolbar" is_group="true" forse_popup="false" action_type="-1" position="16">
       <path value="root" />
     </group>
+    <group value="Console.TableResult.FloatingToolbarGroup" is_group="true" forse_popup="false" action_type="-1" position="15">
+      <path value="root" />
+    </group>
     <group value="Markdown.Toolbar.Floating" is_group="true" forse_popup="false" action_type="-1" position="15">
       <path value="root" />
     </group>
     <group value="RunTab.TopToolbar.More" is_group="true" forse_popup="false" action_type="-1" position="15">
       <path value="root" />
     </group>
-    <group value="Console.TableResult.FloatingToolbarGroup" is_group="true" forse_popup="false" action_type="-1" position="14">
+    <group value="Markdown.Toolbar.Floating" is_group="true" forse_popup="false" action_type="-1" position="14">
       <path value="root" />
     </group>
-    <group value="Markdown.Toolbar.Floating" is_group="true" forse_popup="false" action_type="-1" position="14">
+    <group value="Console.TableResult.FloatingToolbarGroup" is_group="true" forse_popup="false" action_type="-1" position="14">
       <path value="root" />
     </group>
     <group value="Floating.CodeToolbar" is_group="true" forse_popup="false" action_type="-1" position="13">
