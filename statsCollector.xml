@@ -1,0 +1,5 @@
+<application>
+  <component name="StatsCollectorSettings">
+    <option name="dataSendAllowed" value="true" />
+  </component>
+</application>

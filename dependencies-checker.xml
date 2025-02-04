@@ -1,0 +1,19 @@
+<application>
+  <component name="DependenciesCheckerSettings">
+    <option name="repos">
+      <list>
+        <Repo>
+          <option name="active" value="true" />
+          <option name="name" value="Maven Central" />
+          <option name="url" value="https://repo.maven.apache.org/maven2" />
+        </Repo>
+        <Repo>
+          <option name="active" value="true" />
+          <option name="name" value="Google’s Android" />
+          <option name="url" value="https://dl.google.com/dl/android/maven2" />
+        </Repo>
+      </list>
+    </option>
+    <option name="unstablePatterns" value="alpha, beta, -M, incubator, rc, snapshot" />
+  </component>
+</application>

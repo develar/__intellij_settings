@@ -1,0 +1,5 @@
+<application>
+  <component name="ChangeReminderUserStorage">
+    <option name="turnedOn" value="false" />
+  </component>
+</application>

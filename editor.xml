@@ -1,0 +1,156 @@
+<application>
+  <component name="CodeInsightSettings">
+    <option name="AUTO_POPUP_JAVADOC_INFO" value="true" />
+    <option name="REFORMAT_ON_PASTE" value="2" />
+    <option name="ENABLE_SECOND_REFORMAT" value="true" />
+    <option name="USE_INSTANCEOF_ON_EQUALS_PARAMETER" value="true" />
+    <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
+    <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="com.github.weisj.jsvg.nodes.Path" />
+    <EXCLUDED_PACKAGE NAME="com.google.common.base.Supplier" />
+    <EXCLUDED_PACKAGE NAME="com.intellij.compiler.ant" />
+    <EXCLUDED_PACKAGE NAME="com.intellij.execution.configurations.ParameterTargetValuePart.Path" />
+    <EXCLUDED_PACKAGE NAME="com.intellij.icons.AllIcons.Welcome.Project" />
+    <EXCLUDED_PACKAGE NAME="com.sun" />
+    <EXCLUDED_PACKAGE NAME="com.thoughtworks" />
+    <EXCLUDED_PACKAGE NAME="javafx.scene" />
+    <EXCLUDED_PACKAGE NAME="javax.annotation.Nullable" />
+    <EXCLUDED_PACKAGE NAME="jdk.jpackage" />
+    <EXCLUDED_PACKAGE NAME="jdk.nashorn" />
+    <EXCLUDED_PACKAGE NAME="okio.IOException" />
+    <EXCLUDED_PACKAGE NAME="org.gradle.api.internal.file.FileCollectionFactory" />
+    <EXCLUDED_PACKAGE NAME="sun.java2d" />
+    <EXCLUDED_PACKAGE NAME="sun.misc" />
+    <EXCLUDED_PACKAGE NAME="sun.org" />
+    <EXCLUDED_PACKAGE NAME="sun.security" />
+    <EXCLUDED_PACKAGE NAME="sun.tools" />
+  </component>
+  <component name="CodeVisionSettings">
+    <option name="codeVisionGroupToPosition">
+      <map>
+        <entry key="Code author" value="Default" />
+        <entry key="Inheritors" value="Default" />
+        <entry key="Related problems" value="Default" />
+        <entry key="Usages" value="Default" />
+      </map>
+    </option>
+    <option name="defaultPosition" value="Right" />
+    <option name="disabledCodeVisionProviderIds">
+      <set>
+        <option value="component.usage" />
+        <option value="inheritors" />
+        <option value="java.inheritors" />
+        <option value="java.references" />
+        <option value="references" />
+        <option value="vcs.code.vision" />
+      </set>
+    </option>
+  </component>
+  <component name="DaemonCodeAnalyzerSettings" profile="idea.default (final)">
+    <option name="AUTOREPARSE_DELAY" value="0" />
+    <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
+  </component>
+  <component name="DeclarativeInlayHintsSettings">
+    <option name="enabledOptions">
+      <map>
+        <entry key="kotlin.references.types.hints#hints.type.function.return" value="false" />
+        <entry key="kotlin.references.types.hints#hints.type.variable" value="true" />
+      </map>
+    </option>
+    <option name="providerIdToEnabled">
+      <map>
+        <entry key="devkit.threading" value="false" />
+        <entry key="java.implicit.lambdaParameter" value="false" />
+        <entry key="java.implicit.types" value="false" />
+        <entry key="java.method.chains" value="false" />
+        <entry key="js.chain.hints" value="true" />
+        <entry key="js.type.hints" value="false" />
+        <entry key="kotlin.parameters.hints" value="false" />
+        <entry key="kotlin.references.types.hints" value="false" />
+        <entry key="ts.chain.hints" value="true" />
+        <entry key="ts.enum.hints" value="true" />
+        <entry key="ts.type.hints" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="EditorSettings">
+    <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
+    <option name="SOFT_WRAP_FILE_MASKS" value="*.md; *.txt; *.rst; *.adoc; *.http" />
+    <option name="SHOW_QUICK_DOC_ON_MOUSE_OVER_ELEMENT" value="false" />
+    <option name="SHOW_INSPECTION_WIDGET" value="false" />
+    <option name="ARE_LINE_NUMBERS_SHOWN" value="false" />
+    <option name="SHOW_BREADCRUMBS" value="false" />
+    <option name="KEEP_TRAILING_SPACE_ON_CARET_LINE" value="false" />
+  </component>
+  <component name="InlayHintsSettings">
+    <option name="disabledHintProviderIds">
+      <set>
+        <option value="JAVA.java.implicit.types" />
+        <option value="JavaScript.js.chain.hints" />
+        <option value="JavaScript.js.type.hints" />
+        <option value="TypeScript.ts.chain.hints" />
+        <option value="TypeScript.ts.type.hints" />
+        <option value="kotlin.KotlinLambdasHintsProvider" />
+        <option value="kotlin.kotlin.ranges.hints" />
+      </set>
+    </option>
+    <option name="lastViewedProviderKeyId" value=".inheritors" />
+    <settingsMapElement>
+      <JavaScript.js.type.hints>
+        <Settings>
+          <option name="showForInferredParameters" value="false" />
+        </Settings>
+      </JavaScript.js.type.hints>
+      <TypeScript.ts.type.hints>
+        <Settings>
+          <option name="showForInferredParameters" value="false" />
+        </Settings>
+      </TypeScript.ts.type.hints>
+      <JAVA.annotation.hints>
+        <Settings>
+          <option name="showExternal" value="false" />
+        </Settings>
+      </JAVA.annotation.hints>
+      <kotlin.kotlin.lambdas.hints>
+        <Settings>
+          <option name="implicitReceiversAndParams" value="false" />
+        </Settings>
+      </kotlin.kotlin.lambdas.hints>
+    </settingsMapElement>
+  </component>
+  <component name="InlineCompletionOnboarding">
+    <option name="onboardingFinished" value="true" />
+  </component>
+  <component name="InspectionProfileManager">
+    <list size="12">
+      <item index="0" class="java.lang.String" itemvalue="INFORMATION" />
+      <item index="1" class="java.lang.String" itemvalue="TEXT ATTRIBUTES" />
+      <item index="2" class="java.lang.String" itemvalue="STYLE_SUGGESTION" />
+      <item index="3" class="java.lang.String" itemvalue="STYLE_WARNING" />
+      <item index="4" class="java.lang.String" itemvalue="STYLE_ERROR" />
+      <item index="5" class="java.lang.String" itemvalue="TYPO" />
+      <item index="6" class="java.lang.String" itemvalue="GRAMMAR_ERROR" />
+      <item index="7" class="java.lang.String" itemvalue="WEAK WARNING" />
+      <item index="8" class="java.lang.String" itemvalue="WARNING" />
+      <item index="9" class="java.lang.String" itemvalue="SERVER PROBLEM" />
+      <item index="10" class="java.lang.String" itemvalue="INFO" />
+      <item index="11" class="java.lang.String" itemvalue="ERROR" />
+    </list>
+  </component>
+  <component name="JavaCodeFoldingSettings">
+    <option name="collapseConstructorGenericParameters" value="false" />
+    <option name="collapseLambdas" value="false" />
+    <option name="collapseOneLineMethods" value="false" />
+  </component>
+  <component name="JetEditorOptions">
+    <option name="donTShowConversionDialog" value="true" />
+  </component>
+  <component name="KubernetesFoldingSettings">
+    <option name="COLLAPSE_HELM_VALUES" value="false" />
+    <option name="COLLAPSE_ENV_VARS" value="false" />
+    <option name="COLLAPSE_EXEC_ACTIONS" value="false" />
+  </component>
+  <component name="TodoConfiguration">
+    <pattern pattern="\btodo\b.*" />
+  </component>
+</application>

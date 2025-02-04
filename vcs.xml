@@ -1,0 +1,26 @@
+<application>
+  <component name="DiffApplicationSettings">
+    <option name="SHOW_LST_WORD_DIFFERENCES" value="false" />
+  </component>
+  <component name="Vcs.Log.App.Settings">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+    <option name="SHOW_CHANGES_FROM_PARENTS" value="true" />
+  </component>
+  <component name="VcsApplicationSettings">
+    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/patches" />
+    <option name="DETECT_PATCH_ON_THE_FLY" value="true" />
+    <option name="COMMIT_FROM_LOCAL_CHANGES" value="false" />
+    <option name="SHOW_EDITOR_PREVIEW_ON_DOUBLE_CLICK" value="false" />
+  </component>
+  <component name="VcsEditorTab.Settings">
+    <option name="openInNewWindow" value="true" />
+  </component>
+</application>

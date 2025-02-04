@@ -1,0 +1,30 @@
+<application>
+  <component name="LocalDatabaseDriverManager" version="201">
+    <driver id="duckdb">
+      <artifact id="DuckDB" name="DuckDB" use="true" version="0.9.2" />
+    </driver>
+    <driver id="clickhouse">
+      <artifact id="ClickHouse" name="ClickHouse" use="true" version="0.3.2.11" />
+    </driver>
+    <driver id="postgresql">
+      <artifact id="PostgreSQL" name="PostgreSQL" use="true" version="42.2.22" />
+    </driver>
+    <driver id="sqlite.xerial">
+      <artifact id="Xerial SQLiteJDBC" name="Xerial SQLiteJDBC" use="true" version="3.43.0" />
+      <library>
+        <url>file://$USER_HOME$/projects/idea/out/dev-data/idea/config/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
+      </library>
+    </driver>
+    <driver id="com.dbschema.ZeppelinSparkJdbcDriver" name="BDT Zeppelin Connection" driver-class="com.dbschema.ZeppelinSparkJdbcDriver" icon="icons/zeppelin.svg">
+      <library>
+        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Zeppelin/zeppelin-jdbc-2.jar</url>
+      </library>
+    </driver>
+    <driver id="java.sql.Driver" name="User Driver" driver-class="java.sql.Driver" />
+    <driver id="b6369e2f-c28e-4ee8-bdf8-cd31f5157c18" name="Apache Arrow" driver-class="org.apache.arrow.driver.jdbc.ArrowFlightJdbcDriver">
+      <library>
+        <url>file://$USER_HOME$/Downloads/flight-sql-jdbc-driver-18.1.0.jar</url>
+      </library>
+    </driver>
+  </component>
+</application>

@@ -1,0 +1,5 @@
+<application>
+  <component name="GrazieProConfig">
+    <option name="explicitlyChosenProcessing" value="Local" />
+  </component>
+</application>
