@@ -127,11 +127,6 @@
           <option name="debugDisableCoroutineAgent" value="true" />
         </configuration>
       </debugger>
-      <debugger id="javascript">
-        <configuration>
-          <custom-object-presentation />
-        </configuration>
-      </debugger>
     </debuggers>
   </component>
 </application>
