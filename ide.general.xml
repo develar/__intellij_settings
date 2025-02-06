@@ -22,7 +22,6 @@
     <entry key="terminal.new.ui" value="true" source="SYSTEM" />
     <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
     <entry key="forced.switch.to.new.ui" value="false" source="SYSTEM" />
-    <entry key="moved.to.new.ui" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
