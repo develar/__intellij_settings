@@ -13,6 +13,7 @@
             <option value="an|for instance, ShadowPainter updates the context from an outside" />
             <option value="dummy" />
             <option value="the|Returns a copy of the provided with darkness set to ." />
+            <option value="out|if out jar doesn't exist, make sure that we do not to use existing cache - set `isRebuild` to true and clear caches in this case" />
             <option value="allow-listed|do not create an extension if not allow-listed" />
             <option value="under write" />
             <option value="an assert" />
@@ -101,7 +102,7 @@
             <option value="1)|we don't need to update digest for a bundled scheme because 1) it can be computed on demand later (because a bundled scheme is not mutable) 2) in the future user copy of a bundled scheme will use a bundled scheme as parent (not as full copy)" />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="out|if out jar doesn't exist, make sure that we do not to use existing cache - set `isRebuild` to true and clear caches in this case" />
+            <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
           </set>
         </option>
       </SuppressingContext>
