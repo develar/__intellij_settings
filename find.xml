@@ -11,7 +11,7 @@
     <mask>*.java</mask>
     <mask>*.bzl</mask>
     <mask>*.bazelversion</mask>
-    <mask>BUILD.bazel</mask>
     <mask>*.iml</mask>
+    <mask>BUILD.bazel</mask>
   </component>
 </application>
