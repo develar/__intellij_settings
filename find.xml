@@ -3,7 +3,6 @@
     <option name="customScope" value="changes" />
     <option name="defaultScopeName" value="changes" />
     <option name="SEARCH_SCOPE" value="changes" />
-    <option name="FILE_MASK" value="BUILD.bazel" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.xml</mask>
