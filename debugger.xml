@@ -96,9 +96,6 @@
   </component>
   <component name="NodeRendererSettings">
     <option name="ALTERNATIVE_COLLECTION_VIEW_ENABLED" value="false" />
-    <Renderer ID="ToStringRenderer">
-      <option name="ON_DEMAND" value="true" />
-    </Renderer>
     <CustomRenderers VERSION="8">
       <Renderer ID="CompoundNodeRenderer">
         <option name="ENABLED" value="true" />
@@ -113,7 +110,6 @@
   </component>
   <component name="XDebuggerSettings">
     <data-views>
-      <option name="autoExpressions" value="false" />
       <option name="showLibraryStackFrames" value="true" />
     </data-views>
     <general />
