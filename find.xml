@@ -9,9 +9,5 @@
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>*.java</mask>
-    <mask>*.bzl</mask>
-    <mask>*.bazelversion</mask>
-    <mask>BUILD.bazel</mask>
-    <mask>*.iml</mask>
   </component>
 </application>
