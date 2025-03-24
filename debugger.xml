@@ -98,6 +98,16 @@
     <option name="ALTERNATIVE_COLLECTION_VIEW_ENABLED" value="false" />
     <CustomRenderers VERSION="8">
       <Renderer ID="CompoundNodeRenderer">
+        <option name="NAME" value="bytes" />
+        <option name="ENABLED" value="true" />
+        <option name="QUALIFIED_NAME" value="net.openhft.chronicle.bytes.Bytes" />
+        <Renderer ID="LabelRenderer" role="label">
+          <option name="QUALIFIED_NAME" value="net.openhft.chronicle.bytes.Bytes" />
+          <option name="ON_DEMAND" value="false" />
+          <option name="LABEL_EXPRESSION" value="this.toDebugString()&#13;&#13;JAVA" />
+        </Renderer>
+      </Renderer>
+      <Renderer ID="CompoundNodeRenderer">
         <option name="ENABLED" value="true" />
         <option name="QUALIFIED_NAME" value="org.h2.mvstore.MVMap" />
         <Renderer ID="LabelRenderer" role="label">
