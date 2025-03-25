@@ -16,6 +16,7 @@
         <option value="com.jetbrains.writerside" />
         <option value="com.intellij.beanValidation" />
         <option value="com.intellij.flyway" />
+        <option value="org.jetbrains.bazel" />
       </list>
     </option>
   </component>
