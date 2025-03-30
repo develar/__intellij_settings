@@ -2,9 +2,10 @@
   <component name="RfsDownloadedStorageManager">
     <option name="fileList">
       <list>
-        <option value="file__Users_develar_projects_idea_dbe_database_testData_dbimport_scripted_NewOptionalGroupInList_parquet_0/NewOptionalGroupInList.parquet(downloaded)" />
-        <option value="konbert-output-43fa4879.parquet" />
+        <option value="Users/develar/projects/idea/tests/classes-duration/ALL_EXCLUDE_DEFINED.csv" />
         <option value="file__Users_develar_Downloads_konbert_output_43fa4879_parquet_0/konbert_output_43fa4879.parquet(downloaded)" />
+        <option value="konbert-output-43fa4879.parquet" />
+        <option value="file__Users_develar_projects_idea_dbe_database_testData_dbimport_scripted_NewOptionalGroupInList_parquet_0/NewOptionalGroupInList.parquet(downloaded)" />
       </list>
     </option>
     <option name="mainDirPath" value="/private/var/folders/vm/w4pyj7p93f73jyfj52l1l_c40000gn/T/HDFS-downloaded" />
