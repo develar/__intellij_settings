@@ -10,5 +10,6 @@
     <mask>*.properties</mask>
     <mask>*.java</mask>
     <mask>*.bazel</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
