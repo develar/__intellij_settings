@@ -36,6 +36,7 @@
             <option value="if|if chunk's SDK is 9 or higher, there is no way to specify full platform classpath because platform classes are stored in `jimage` binary files with unknown format." />
             <option value="The|The region of output you are interested in generating dependencies for." />
             <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant" />
+            <option value="file|FileSource(relativePath = it.file, size = it.size, hash = it.hash, file = baseDir.resolve(it.file))" />
             <option value="a select is" />
             <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
             <option value="hang" />
@@ -101,14 +102,15 @@
             <option value="a single nats server cluster" />
             <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
             <option value="we )|non-bundled plugin may duplicated bundled one - first check non-bundled: any valid mismatch will lead to test failure - then check bundled: may be a mismatch due to a difference between bundled and non-bundled one (we )" />
+            <option value="Gradle Daemon classpath|separate file to use in Gradle Daemon classpath" />
             <option value="whitespace|Case content is empty or all insignificant whitespace" />
             <option value="premature" />
             <option value="1)|we don't need to update digest for a bundled scheme because 1) it can be computed on demand later (because a bundled scheme is not mutable) 2) in the future user copy of a bundled scheme will use a bundled scheme as parent (not as full copy)" />
             <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="Gradle Daemon classpath|separate file to use in Gradle Daemon classpath" />
-            <option value="file|FileSource(relativePath = it.file, size = it.size, hash = it.hash, file = baseDir.resolve(it.file))" />
+            <option value="ability|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
+            <option value="`read|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
           </set>
         </option>
       </SuppressingContext>
