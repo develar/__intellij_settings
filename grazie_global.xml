@@ -75,6 +75,7 @@
             <option value="weird|getting state after a load with an active controller can lead to weird issues" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
+            <option value="ability|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
             <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="build|Currently, the flag is used for faster unit tests / debug IDE instance, because an IDEA's build process (as of 14.1) ensures deletion of such information upon appearing new file for output root." />
             <option value="So|Sort the files heuristically to load the plugin jar containing plugin descriptors without extra ZipFile accesses." />
@@ -98,6 +99,7 @@
             <option value="Kotlin serialization" />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
+            <option value="`read|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
             <option value="anymore|After that, few of the most relevant displayed items are considered &quot;frozen&quot; and not re-sorted anymore, to avoid changes around the selected item that the user already sees and can interact with." />
             <option value="a single nats server cluster" />
             <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
@@ -109,8 +111,7 @@
             <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="ability|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
-            <option value="`read|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
+            <option value="enumerate|during save, we enumerate strings, so we cannot save as a part of close, as in this case string enumerator maps maybe not saved (as being closed)" />
           </set>
         </option>
       </SuppressingContext>
