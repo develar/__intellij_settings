@@ -27,6 +27,7 @@
             <option value="selection|temporary state to make selection fully visible (scrolled in view)" />
             <option value="the|the value to normalize" />
             <option value="a nats server," />
+            <option value="enumerate|during save, we enumerate strings, so we cannot save as a part of close, as in this case string enumerator maps maybe not saved (as being closed)" />
             <option value="re|returns true iff exists control flow path completing normally, i.e. not resulting in return,break,continue or exception thrown." />
             <option value="of bounds of|union of bounds of all default screen devices." />
             <option value="of the zip64 end of|disk number with the start of the zip64 end of central directory" />
@@ -111,7 +112,7 @@
             <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="enumerate|during save, we enumerate strings, so we cannot save as a part of close, as in this case string enumerator maps maybe not saved (as being closed)" />
+            <option value="allows ensure" />
           </set>
         </option>
       </SuppressingContext>
