@@ -69,6 +69,7 @@
             <option value="weird|In fact, both check that the node is visible, but in a rather weird way: the root is always considered visible, regardless of the `isRootVisible` value." />
             <option value="just|if we close the project at the end of the test, just mark it closed; if we are shutting down the entire test framework, proceed to full dispose" />
             <option value="2|2 fields below fully describe PMap configuration:" />
+            <option value="allows ensure" />
             <option value="IntelliJ|Used directly by IntelliJ IDEA." />
             <option value="va|When we do compare two long values, the higher 32 bits (which contain the high integer) dictate the order." />
             <option value="plugin|Returns URL to plugin repository without a trailing slash." />
@@ -112,7 +113,7 @@
             <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="allows ensure" />
+            <option value="key -|used as a key - immutable instance cannot be used" />
           </set>
         </option>
       </SuppressingContext>
