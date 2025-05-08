@@ -1,16 +1,13 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Changes" />
-    <option name="defaultScopeName" value="Changes" />
-    <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
     <mask>*.css</mask>
     <mask>*.html</mask>
+    <mask>*.xml</mask>
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>*.java</mask>
-    <mask>*.bazel</mask>
-    <mask>*.iml</mask>
-    <mask>*.bzl</mask>
-    <mask>*.xml</mask>
   </component>
 </application>
