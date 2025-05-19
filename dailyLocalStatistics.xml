@@ -1,106 +1,24 @@
 <application>
   <component name="DailyLocalStatistics">
     <dateToStats>
-      <entry key="2025-5-19-10">
-        <DateState>
-          <values>
-            <entry key="file_language">
-              <MetricValue>
-                <option name="count" value="158" />
-                <distribution>
-                  <entry key="Language: kotlin" value="158" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="finish_type">
-              <MetricValue>
-                <option name="count" value="158" />
-                <distribution>
-                  <entry key="CARET_CHANGED" value="5" />
-                  <entry key="EMPTY" value="89" />
-                  <entry key="ESCAPE_PRESSED" value="1" />
-                  <entry key="INVALIDATED" value="58" />
-                  <entry key="MOUSE_PRESSED" value="4" />
-                  <entry key="SELECTED" value="1" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="total_inserted_length">
-              <MetricValue>
-                <option name="count" value="4" />
-                <option name="sum" value="17.0" />
-              </MetricValue>
-            </entry>
-            <entry key="total_inserted_lines">
-              <MetricValue>
-                <option name="count" value="4" />
-                <option name="sum" value="1.0" />
-              </MetricValue>
-            </entry>
-            <entry key="was_shown">
-              <MetricValue>
-                <option name="count" value="158" />
-                <distribution>
-                  <entry key="false" value="154" />
-                  <entry key="true" value="4" />
-                </distribution>
-              </MetricValue>
-            </entry>
-          </values>
-        </DateState>
-      </entry>
-      <entry key="2025-5-19-11">
-        <DateState>
-          <values>
-            <entry key="file_language">
-              <MetricValue>
-                <option name="count" value="74" />
-                <distribution>
-                  <entry key="Language: kotlin" value="74" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="finish_type">
-              <MetricValue>
-                <option name="count" value="74" />
-                <distribution>
-                  <entry key="BACKSPACE_PRESSED" value="2" />
-                  <entry key="CARET_CHANGED" value="5" />
-                  <entry key="EMPTY" value="26" />
-                  <entry key="INVALIDATED" value="41" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="was_shown">
-              <MetricValue>
-                <option name="count" value="74" />
-                <distribution>
-                  <entry key="false" value="74" />
-                </distribution>
-              </MetricValue>
-            </entry>
-          </values>
-        </DateState>
-      </entry>
       <entry key="2025-5-19-12">
         <DateState>
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="31" />
+                <option name="count" value="21" />
                 <distribution>
-                  <entry key="Language: kotlin" value="31" />
+                  <entry key="Language: kotlin" value="21" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="31" />
+                <option name="count" value="21" />
                 <distribution>
-                  <entry key="BACKSPACE_PRESSED" value="1" />
                   <entry key="CARET_CHANGED" value="1" />
-                  <entry key="EMPTY" value="7" />
-                  <entry key="INVALIDATED" value="21" />
+                  <entry key="EMPTY" value="10" />
+                  <entry key="INVALIDATED" value="9" />
                   <entry key="SELECTED" value="1" />
                 </distribution>
               </MetricValue>
@@ -108,7 +26,7 @@
             <entry key="total_inserted_length">
               <MetricValue>
                 <option name="count" value="1" />
-                <option name="sum" value="13.0" />
+                <option name="sum" value="20.0" />
               </MetricValue>
             </entry>
             <entry key="total_inserted_lines">
@@ -119,105 +37,10 @@
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="31" />
+                <option name="count" value="21" />
                 <distribution>
-                  <entry key="false" value="30" />
+                  <entry key="false" value="20" />
                   <entry key="true" value="1" />
-                </distribution>
-              </MetricValue>
-            </entry>
-          </values>
-        </DateState>
-      </entry>
-      <entry key="2025-5-19-7">
-        <DateState>
-          <values>
-            <entry key="file_language">
-              <MetricValue>
-                <option name="count" value="35" />
-                <distribution>
-                  <entry key="Language: kotlin" value="35" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="finish_type">
-              <MetricValue>
-                <option name="count" value="35" />
-                <distribution>
-                  <entry key="EMPTY" value="24" />
-                  <entry key="INVALIDATED" value="11" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="was_shown">
-              <MetricValue>
-                <option name="count" value="35" />
-                <distribution>
-                  <entry key="false" value="35" />
-                </distribution>
-              </MetricValue>
-            </entry>
-          </values>
-        </DateState>
-      </entry>
-      <entry key="2025-5-19-8">
-        <DateState>
-          <values>
-            <entry key="file_language">
-              <MetricValue>
-                <option name="count" value="129" />
-                <distribution>
-                  <entry key="Language: kotlin" value="129" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="finish_type">
-              <MetricValue>
-                <option name="count" value="129" />
-                <distribution>
-                  <entry key="BACKSPACE_PRESSED" value="2" />
-                  <entry key="CARET_CHANGED" value="1" />
-                  <entry key="EMPTY" value="84" />
-                  <entry key="ESCAPE_PRESSED" value="1" />
-                  <entry key="INVALIDATED" value="41" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="was_shown">
-              <MetricValue>
-                <option name="count" value="129" />
-                <distribution>
-                  <entry key="false" value="129" />
-                </distribution>
-              </MetricValue>
-            </entry>
-          </values>
-        </DateState>
-      </entry>
-      <entry key="2025-5-19-9">
-        <DateState>
-          <values>
-            <entry key="file_language">
-              <MetricValue>
-                <option name="count" value="13" />
-                <distribution>
-                  <entry key="Language: kotlin" value="13" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="finish_type">
-              <MetricValue>
-                <option name="count" value="13" />
-                <distribution>
-                  <entry key="EMPTY" value="13" />
-                </distribution>
-              </MetricValue>
-            </entry>
-            <entry key="was_shown">
-              <MetricValue>
-                <option name="count" value="13" />
-                <distribution>
-                  <entry key="false" value="13" />
                 </distribution>
               </MetricValue>
             </entry>
