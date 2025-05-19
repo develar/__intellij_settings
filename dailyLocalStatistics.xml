@@ -6,39 +6,42 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="95" />
+                <option name="count" value="133" />
                 <distribution>
-                  <entry key="Language: kotlin" value="95" />
+                  <entry key="Language: kotlin" value="133" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="95" />
+                <option name="count" value="133" />
                 <distribution>
-                  <entry key="CARET_CHANGED" value="4" />
-                  <entry key="EMPTY" value="57" />
-                  <entry key="INVALIDATED" value="31" />
-                  <entry key="MOUSE_PRESSED" value="3" />
+                  <entry key="CARET_CHANGED" value="5" />
+                  <entry key="EMPTY" value="77" />
+                  <entry key="INVALIDATED" value="46" />
+                  <entry key="MOUSE_PRESSED" value="4" />
+                  <entry key="SELECTED" value="1" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="total_inserted_length">
               <MetricValue>
-                <option name="count" value="2" />
+                <option name="count" value="3" />
+                <option name="sum" value="17.0" />
               </MetricValue>
             </entry>
             <entry key="total_inserted_lines">
               <MetricValue>
-                <option name="count" value="2" />
+                <option name="count" value="3" />
+                <option name="sum" value="1.0" />
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="95" />
+                <option name="count" value="133" />
                 <distribution>
-                  <entry key="false" value="93" />
-                  <entry key="true" value="2" />
+                  <entry key="false" value="130" />
+                  <entry key="true" value="3" />
                 </distribution>
               </MetricValue>
             </entry>
