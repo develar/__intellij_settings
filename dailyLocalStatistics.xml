@@ -101,46 +101,97 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="214" />
+                <option name="count" value="526" />
                 <distribution>
-                  <entry key="Language: kotlin" value="214" />
+                  <entry key="Language: JAVA" value="34" />
+                  <entry key="Language: kotlin" value="492" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="214" />
+                <option name="count" value="526" />
                 <distribution>
-                  <entry key="BACKSPACE_PRESSED" value="9" />
-                  <entry key="CARET_CHANGED" value="7" />
-                  <entry key="EMPTY" value="41" />
-                  <entry key="ESCAPE_PRESSED" value="3" />
-                  <entry key="FOCUS_LOST" value="3" />
-                  <entry key="INVALIDATED" value="143" />
-                  <entry key="MOUSE_PRESSED" value="2" />
-                  <entry key="SELECTED" value="5" />
-                  <entry key="TYPED" value="1" />
+                  <entry key="BACKSPACE_PRESSED" value="24" />
+                  <entry key="CARET_CHANGED" value="16" />
+                  <entry key="EMPTY" value="137" />
+                  <entry key="ESCAPE_PRESSED" value="4" />
+                  <entry key="FOCUS_LOST" value="4" />
+                  <entry key="INVALIDATED" value="323" />
+                  <entry key="MOUSE_PRESSED" value="5" />
+                  <entry key="SELECTED" value="11" />
+                  <entry key="TYPED" value="2" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="total_inserted_length">
               <MetricValue>
-                <option name="count" value="16" />
-                <option name="sum" value="222.0" />
+                <option name="count" value="37" />
+                <option name="sum" value="537.0" />
               </MetricValue>
             </entry>
             <entry key="total_inserted_lines">
               <MetricValue>
-                <option name="count" value="16" />
-                <option name="sum" value="5.0" />
+                <option name="count" value="37" />
+                <option name="sum" value="12.0" />
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="214" />
+                <option name="count" value="526" />
                 <distribution>
-                  <entry key="false" value="198" />
-                  <entry key="true" value="16" />
+                  <entry key="false" value="489" />
+                  <entry key="true" value="37" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
+      <entry key="2025-5-19-15">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="136" />
+                <distribution>
+                  <entry key="Language: JAVA" value="7" />
+                  <entry key="Language: kotlin" value="129" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="136" />
+                <distribution>
+                  <entry key="BACKSPACE_PRESSED" value="3" />
+                  <entry key="CARET_CHANGED" value="8" />
+                  <entry key="EMPTY" value="70" />
+                  <entry key="ESCAPE_PRESSED" value="1" />
+                  <entry key="INVALIDATED" value="51" />
+                  <entry key="MOUSE_PRESSED" value="1" />
+                  <entry key="SELECTED" value="2" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_length">
+              <MetricValue>
+                <option name="count" value="3" />
+                <option name="sum" value="18.0" />
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_lines">
+              <MetricValue>
+                <option name="count" value="3" />
+                <option name="sum" value="2.0" />
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="136" />
+                <distribution>
+                  <entry key="false" value="133" />
+                  <entry key="true" value="3" />
                 </distribution>
               </MetricValue>
             </entry>
