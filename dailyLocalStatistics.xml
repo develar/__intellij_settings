@@ -153,45 +153,45 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="136" />
+                <option name="count" value="166" />
                 <distribution>
                   <entry key="Language: JAVA" value="7" />
-                  <entry key="Language: kotlin" value="129" />
+                  <entry key="Language: kotlin" value="159" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="136" />
+                <option name="count" value="166" />
                 <distribution>
                   <entry key="BACKSPACE_PRESSED" value="3" />
-                  <entry key="CARET_CHANGED" value="8" />
-                  <entry key="EMPTY" value="70" />
-                  <entry key="ESCAPE_PRESSED" value="1" />
-                  <entry key="INVALIDATED" value="51" />
-                  <entry key="MOUSE_PRESSED" value="1" />
-                  <entry key="SELECTED" value="2" />
+                  <entry key="CARET_CHANGED" value="9" />
+                  <entry key="EMPTY" value="81" />
+                  <entry key="ESCAPE_PRESSED" value="4" />
+                  <entry key="INVALIDATED" value="62" />
+                  <entry key="MOUSE_PRESSED" value="4" />
+                  <entry key="SELECTED" value="3" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="total_inserted_length">
               <MetricValue>
-                <option name="count" value="3" />
-                <option name="sum" value="18.0" />
+                <option name="count" value="7" />
+                <option name="sum" value="28.0" />
               </MetricValue>
             </entry>
             <entry key="total_inserted_lines">
               <MetricValue>
-                <option name="count" value="3" />
-                <option name="sum" value="2.0" />
+                <option name="count" value="7" />
+                <option name="sum" value="3.0" />
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="136" />
+                <option name="count" value="166" />
                 <distribution>
-                  <entry key="false" value="133" />
-                  <entry key="true" value="3" />
+                  <entry key="false" value="159" />
+                  <entry key="true" value="7" />
                 </distribution>
               </MetricValue>
             </entry>
