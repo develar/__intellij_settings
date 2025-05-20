@@ -366,21 +366,21 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="86" />
+                <option name="count" value="113" />
                 <distribution>
-                  <entry key="Language: kotlin" value="86" />
+                  <entry key="Language: kotlin" value="113" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="86" />
+                <option name="count" value="113" />
                 <distribution>
                   <entry key="BACKSPACE_PRESSED" value="5" />
-                  <entry key="CARET_CHANGED" value="2" />
+                  <entry key="CARET_CHANGED" value="4" />
                   <entry key="EMPTY" value="22" />
-                  <entry key="FOCUS_LOST" value="1" />
-                  <entry key="INVALIDATED" value="52" />
+                  <entry key="FOCUS_LOST" value="2" />
+                  <entry key="INVALIDATED" value="76" />
                   <entry key="MOUSE_PRESSED" value="1" />
                   <entry key="SELECTED" value="3" />
                 </distribution>
@@ -400,9 +400,9 @@
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="86" />
+                <option name="count" value="113" />
                 <distribution>
-                  <entry key="false" value="81" />
+                  <entry key="false" value="108" />
                   <entry key="true" value="5" />
                 </distribution>
               </MetricValue>
