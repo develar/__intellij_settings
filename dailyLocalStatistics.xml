@@ -693,6 +693,56 @@
           </values>
         </DateState>
       </entry>
+      <entry key="2025-5-20-22">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="302" />
+                <distribution>
+                  <entry key="Language: kotlin" value="302" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="302" />
+                <distribution>
+                  <entry key="BACKSPACE_PRESSED" value="5" />
+                  <entry key="CARET_CHANGED" value="7" />
+                  <entry key="EMPTY" value="129" />
+                  <entry key="ESCAPE_PRESSED" value="3" />
+                  <entry key="FOCUS_LOST" value="3" />
+                  <entry key="INVALIDATED" value="142" />
+                  <entry key="MOUSE_PRESSED" value="12" />
+                  <entry key="SELECTED" value="1" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_length">
+              <MetricValue>
+                <option name="count" value="4" />
+                <option name="sum" value="9.0" />
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_lines">
+              <MetricValue>
+                <option name="count" value="4" />
+                <option name="sum" value="1.0" />
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="302" />
+                <distribution>
+                  <entry key="false" value="298" />
+                  <entry key="true" value="4" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
       <entry key="2025-5-20-7">
         <DateState>
           <values>
