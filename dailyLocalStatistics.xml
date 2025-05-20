@@ -415,29 +415,63 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="75" />
+                <option name="count" value="89" />
                 <distribution>
-                  <entry key="Language: kotlin" value="75" />
+                  <entry key="Language: kotlin" value="89" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="75" />
+                <option name="count" value="89" />
                 <distribution>
                   <entry key="BACKSPACE_PRESSED" value="2" />
-                  <entry key="CARET_CHANGED" value="2" />
-                  <entry key="EMPTY" value="49" />
+                  <entry key="CARET_CHANGED" value="3" />
+                  <entry key="EMPTY" value="51" />
                   <entry key="FOCUS_LOST" value="1" />
-                  <entry key="INVALIDATED" value="21" />
+                  <entry key="INVALIDATED" value="32" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="75" />
+                <option name="count" value="89" />
                 <distribution>
-                  <entry key="false" value="75" />
+                  <entry key="false" value="89" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
+      <entry key="2025-5-20-15">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="66" />
+                <distribution>
+                  <entry key="Language: kotlin" value="66" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="66" />
+                <distribution>
+                  <entry key="BACKSPACE_PRESSED" value="2" />
+                  <entry key="CARET_CHANGED" value="1" />
+                  <entry key="EMPTY" value="46" />
+                  <entry key="ESCAPE_PRESSED" value="1" />
+                  <entry key="INVALIDATED" value="16" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="66" />
+                <distribution>
+                  <entry key="false" value="66" />
                 </distribution>
               </MetricValue>
             </entry>
