@@ -366,42 +366,44 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="61" />
+                <option name="count" value="86" />
                 <distribution>
-                  <entry key="Language: kotlin" value="61" />
+                  <entry key="Language: kotlin" value="86" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="61" />
+                <option name="count" value="86" />
                 <distribution>
                   <entry key="BACKSPACE_PRESSED" value="5" />
-                  <entry key="CARET_CHANGED" value="1" />
-                  <entry key="EMPTY" value="18" />
-                  <entry key="INVALIDATED" value="35" />
-                  <entry key="SELECTED" value="2" />
+                  <entry key="CARET_CHANGED" value="2" />
+                  <entry key="EMPTY" value="22" />
+                  <entry key="FOCUS_LOST" value="1" />
+                  <entry key="INVALIDATED" value="52" />
+                  <entry key="MOUSE_PRESSED" value="1" />
+                  <entry key="SELECTED" value="3" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="total_inserted_length">
               <MetricValue>
-                <option name="count" value="4" />
-                <option name="sum" value="37.0" />
+                <option name="count" value="5" />
+                <option name="sum" value="94.0" />
               </MetricValue>
             </entry>
             <entry key="total_inserted_lines">
               <MetricValue>
-                <option name="count" value="4" />
-                <option name="sum" value="2.0" />
+                <option name="count" value="5" />
+                <option name="sum" value="3.0" />
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="61" />
+                <option name="count" value="86" />
                 <distribution>
-                  <entry key="false" value="57" />
-                  <entry key="true" value="4" />
+                  <entry key="false" value="81" />
+                  <entry key="true" value="5" />
                 </distribution>
               </MetricValue>
             </entry>
