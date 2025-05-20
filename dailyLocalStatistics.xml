@@ -247,6 +247,91 @@
           </values>
         </DateState>
       </entry>
+      <entry key="2025-5-20-7">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="294" />
+                <distribution>
+                  <entry key="Language: JAVA" value="93" />
+                  <entry key="Language: kotlin" value="201" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="294" />
+                <distribution>
+                  <entry key="BACKSPACE_PRESSED" value="8" />
+                  <entry key="CARET_CHANGED" value="11" />
+                  <entry key="EMPTY" value="60" />
+                  <entry key="ESCAPE_PRESSED" value="3" />
+                  <entry key="FOCUS_LOST" value="2" />
+                  <entry key="INVALIDATED" value="205" />
+                  <entry key="MOUSE_PRESSED" value="1" />
+                  <entry key="SELECTED" value="4" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_length">
+              <MetricValue>
+                <option name="count" value="15" />
+                <option name="sum" value="117.0" />
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_lines">
+              <MetricValue>
+                <option name="count" value="15" />
+                <option name="sum" value="4.0" />
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="294" />
+                <distribution>
+                  <entry key="false" value="279" />
+                  <entry key="true" value="15" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
+      <entry key="2025-5-20-8">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="41" />
+                <distribution>
+                  <entry key="Language: JAVA" value="7" />
+                  <entry key="Language: kotlin" value="34" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="41" />
+                <distribution>
+                  <entry key="BACKSPACE_PRESSED" value="1" />
+                  <entry key="CARET_CHANGED" value="1" />
+                  <entry key="EMPTY" value="22" />
+                  <entry key="INVALIDATED" value="17" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="41" />
+                <distribution>
+                  <entry key="false" value="41" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
     </dateToStats>
   </component>
 </application>
