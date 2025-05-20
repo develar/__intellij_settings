@@ -303,29 +303,29 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="41" />
+                <option name="count" value="51" />
                 <distribution>
                   <entry key="Language: JAVA" value="7" />
-                  <entry key="Language: kotlin" value="34" />
+                  <entry key="Language: kotlin" value="44" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="41" />
+                <option name="count" value="51" />
                 <distribution>
                   <entry key="BACKSPACE_PRESSED" value="1" />
                   <entry key="CARET_CHANGED" value="1" />
-                  <entry key="EMPTY" value="22" />
-                  <entry key="INVALIDATED" value="17" />
+                  <entry key="EMPTY" value="31" />
+                  <entry key="INVALIDATED" value="18" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="41" />
+                <option name="count" value="51" />
                 <distribution>
-                  <entry key="false" value="41" />
+                  <entry key="false" value="51" />
                 </distribution>
               </MetricValue>
             </entry>
