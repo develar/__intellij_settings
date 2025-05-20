@@ -333,25 +333,28 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="2" />
+                <option name="count" value="15" />
                 <distribution>
+                  <entry key="Language: kotlin" value="13" />
                   <entry key="Language: yaml" value="2" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="2" />
+                <option name="count" value="15" />
                 <distribution>
-                  <entry key="INVALIDATED" value="2" />
+                  <entry key="CARET_CHANGED" value="1" />
+                  <entry key="EMPTY" value="8" />
+                  <entry key="INVALIDATED" value="6" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="2" />
+                <option name="count" value="15" />
                 <distribution>
-                  <entry key="false" value="2" />
+                  <entry key="false" value="15" />
                 </distribution>
               </MetricValue>
             </entry>
