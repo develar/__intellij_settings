@@ -203,21 +203,163 @@
           <values>
             <entry key="file_language">
               <MetricValue>
-                <option name="count" value="54" />
+                <option name="count" value="89" />
                 <distribution>
                   <entry key="Language: JAVA" value="1" />
-                  <entry key="Language: kotlin" value="53" />
+                  <entry key="Language: kotlin" value="88" />
                 </distribution>
               </MetricValue>
             </entry>
             <entry key="finish_type">
               <MetricValue>
-                <option name="count" value="54" />
+                <option name="count" value="89" />
                 <distribution>
                   <entry key="BACKSPACE_PRESSED" value="2" />
                   <entry key="CARET_CHANGED" value="3" />
-                  <entry key="EMPTY" value="7" />
-                  <entry key="INVALIDATED" value="40" />
+                  <entry key="EMPTY" value="13" />
+                  <entry key="INVALIDATED" value="68" />
+                  <entry key="MOUSE_PRESSED" value="1" />
+                  <entry key="SELECTED" value="2" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_length">
+              <MetricValue>
+                <option name="count" value="5" />
+                <option name="sum" value="27.0" />
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_lines">
+              <MetricValue>
+                <option name="count" value="5" />
+                <option name="sum" value="2.0" />
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="89" />
+                <distribution>
+                  <entry key="false" value="84" />
+                  <entry key="true" value="5" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
+      <entry key="2025-5-19-17">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="158" />
+                <distribution>
+                  <entry key="Language: JAVA" value="13" />
+                  <entry key="Language: kotlin" value="145" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="158" />
+                <distribution>
+                  <entry key="BACKSPACE_PRESSED" value="2" />
+                  <entry key="CARET_CHANGED" value="5" />
+                  <entry key="EMPTY" value="66" />
+                  <entry key="ESCAPE_PRESSED" value="2" />
+                  <entry key="FOCUS_LOST" value="2" />
+                  <entry key="INVALIDATED" value="77" />
+                  <entry key="MOUSE_PRESSED" value="1" />
+                  <entry key="SELECTED" value="3" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_length">
+              <MetricValue>
+                <option name="count" value="9" />
+                <option name="sum" value="65.0" />
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_lines">
+              <MetricValue>
+                <option name="count" value="9" />
+                <option name="sum" value="3.0" />
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="158" />
+                <distribution>
+                  <entry key="false" value="149" />
+                  <entry key="true" value="9" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
+      <entry key="2025-5-19-18">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="60" />
+                <distribution>
+                  <entry key="Language: kotlin" value="60" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="60" />
+                <distribution>
+                  <entry key="CARET_CHANGED" value="3" />
+                  <entry key="EMPTY" value="11" />
+                  <entry key="INVALIDATED" value="45" />
+                  <entry key="TYPED" value="1" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_length">
+              <MetricValue>
+                <option name="count" value="2" />
+              </MetricValue>
+            </entry>
+            <entry key="total_inserted_lines">
+              <MetricValue>
+                <option name="count" value="2" />
+              </MetricValue>
+            </entry>
+            <entry key="was_shown">
+              <MetricValue>
+                <option name="count" value="60" />
+                <distribution>
+                  <entry key="false" value="58" />
+                  <entry key="true" value="2" />
+                </distribution>
+              </MetricValue>
+            </entry>
+          </values>
+        </DateState>
+      </entry>
+      <entry key="2025-5-19-21">
+        <DateState>
+          <values>
+            <entry key="file_language">
+              <MetricValue>
+                <option name="count" value="38" />
+                <distribution>
+                  <entry key="Language: kotlin" value="38" />
+                </distribution>
+              </MetricValue>
+            </entry>
+            <entry key="finish_type">
+              <MetricValue>
+                <option name="count" value="38" />
+                <distribution>
+                  <entry key="CARET_CHANGED" value="1" />
+                  <entry key="EMPTY" value="19" />
+                  <entry key="INVALIDATED" value="16" />
                   <entry key="MOUSE_PRESSED" value="1" />
                   <entry key="SELECTED" value="1" />
                 </distribution>
@@ -225,22 +367,22 @@
             </entry>
             <entry key="total_inserted_length">
               <MetricValue>
-                <option name="count" value="3" />
-                <option name="sum" value="11.0" />
+                <option name="count" value="1" />
+                <option name="sum" value="63.0" />
               </MetricValue>
             </entry>
             <entry key="total_inserted_lines">
               <MetricValue>
-                <option name="count" value="3" />
-                <option name="sum" value="1.0" />
+                <option name="count" value="1" />
+                <option name="sum" value="2.0" />
               </MetricValue>
             </entry>
             <entry key="was_shown">
               <MetricValue>
-                <option name="count" value="54" />
+                <option name="count" value="38" />
                 <distribution>
-                  <entry key="false" value="51" />
-                  <entry key="true" value="3" />
+                  <entry key="false" value="37" />
+                  <entry key="true" value="1" />
                 </distribution>
               </MetricValue>
             </entry>
