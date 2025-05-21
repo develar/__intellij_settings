@@ -10,15 +10,17 @@
               <option value="com.intellij.openapi.vcs.changes.patch.tool.ApplyPatchDiffTool" />
               <option value="com.intellij.openapi.vcs.changes.patch.tool.PatchDiffTool.Unified" />
               <option value="com.intellij.openapi.vcs.changes.patch.tool.PatchDiffTool.SideBySide" />
-              <option value="com.intellij.ml.llm.core.diff.AIOneSideDiffTool" />
-              <option value="com.intellij.ml.llm.core.diff.AIUnifiedDiffTool" />
-              <option value="com.intellij.ml.llm.core.diff.AITwoSideDiffTool" />
               <option value="com.intellij.database.model.diff.SchemaDiffTool" />
               <option value="com.intellij.database.diff.TableDiffTool" />
               <option value="com.intellij.diff.tools.simple.SimpleDiffTool" />
               <option value="com.intellij.diff.tools.fragmented.UnifiedDiffTool" />
               <option value="com.intellij.diff.tools.binary.BinaryDiffTool" />
               <option value="com.intellij.diff.tools.dir.DirDiffTool" />
+              <option value="com.intellij.ml.llm.codeGeneration.diff.AIOneSideDiffTool" />
+              <option value="com.intellij.ml.llm.codeGeneration.diff.AIUnifiedDiffTool" />
+              <option value="com.intellij.ml.llm.codeGeneration.diff.AITwoSideDiffTool" />
+              <option value="com.intellij.ml.llm.core.chat.multifile.ui.change.LlmDiffChangeUnifiedDiffTool" />
+              <option value="com.intellij.ml.llm.core.chat.multifile.ui.change.LlmDiffChangeSimpleDiffTool" />
             </list>
           </option>
         </PlaceSettings>
@@ -61,6 +63,7 @@
     <option name="SHARED_SETTINGS">
       <SharedSettings>
         <option name="GO_TO_NEXT_FILE_ON_NEXT_DIFFERENCE" value="false" />
+        <option name="IS_INCLUDED_IN_NAVIGATION_HISTORY" value="Never" />
       </SharedSettings>
     </option>
   </component>
@@ -69,11 +72,6 @@
   </component>
   <component name="TextDiffSettings">
     <option name="PLACES_MAP">
-      <entry key="Default">
-        <PlaceSettings>
-          <option name="HIGHLIGHT_POLICY" value="BY_LINE" />
-        </PlaceSettings>
-      </entry>
       <entry key="Merge">
         <PlaceSettings>
           <option name="IGNORE_POLICY" value="IGNORE_WHITESPACES" />

@@ -17,6 +17,7 @@
         <option value="com.intellij.beanValidation" />
         <option value="com.intellij.flyway" />
         <option value="org.jetbrains.bazel" />
+        <option value="Lombook Plugin" />
       </list>
     </option>
   </component>

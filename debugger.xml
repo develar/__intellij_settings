@@ -95,7 +95,6 @@
     </filter>
   </component>
   <component name="NodeRendererSettings">
-    <option name="ALTERNATIVE_COLLECTION_VIEW_ENABLED" value="false" />
     <CustomRenderers VERSION="8">
       <Renderer ID="CompoundNodeRenderer">
         <option name="NAME" value="bytes" />
