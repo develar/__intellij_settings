@@ -8,6 +8,7 @@
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>*.java</mask>
+    <mask>*.BAZEL</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
     <mask>*.txt</mask>
