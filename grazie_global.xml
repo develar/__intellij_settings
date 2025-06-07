@@ -38,6 +38,7 @@
             <option value="The|The region of output you are interested in generating dependencies for." />
             <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant" />
             <option value="file|FileSource(relativePath = it.file, size = it.size, hash = it.hash, file = baseDir.resolve(it.file))" />
+            <option value="hash4j" />
             <option value="a select is" />
             <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
             <option value="hang" />
@@ -114,7 +115,7 @@
             <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="hash4j" />
+            <option value="dispose|separate disposable must be used, because container will dispose bus connections in a separate step" />
           </set>
         </option>
       </SuppressingContext>
