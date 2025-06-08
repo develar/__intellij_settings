@@ -1,0 +1,5 @@
+<application>
+  <component name="McpServerPluginSettings">
+    <option name="shouldShowClaudeNotification" value="false" />
+  </component>
+</application>
