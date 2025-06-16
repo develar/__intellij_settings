@@ -1,6 +1,7 @@
 <application>
   <component name="GeneralSettings">
     <option name="showTipsOnStartup" value="false" />
+    <option name="backgroundSyncFiles" value="false" />
     <option name="autoSaveIfInactive" value="true" />
     <option name="searchInBackground" value="true" />
     <option name="confirmExit" value="false" />
