@@ -13,12 +13,16 @@
   <action id="FindNext">
     <keyboard-shortcut first-keystroke="f3" />
   </action>
+  <action id="Git.Reword.Commit" />
   <action id="GotoLine">
     <keyboard-shortcut first-keystroke="meta l" />
     <keyboard-shortcut first-keystroke="meta g" />
   </action>
   <action id="InsertInlineCompletionAction">
     <keyboard-shortcut first-keystroke="tab" />
+  </action>
+  <action id="MonorepoDevkit.Git.Reword.Commit">
+    <keyboard-shortcut first-keystroke="f2" />
   </action>
   <action id="NextWindow">
     <keyboard-shortcut first-keystroke="meta back_quote" />
