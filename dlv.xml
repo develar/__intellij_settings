@@ -1,0 +1,5 @@
+<application>
+  <component name="DlvSettings">
+    <option name="enableStringView" value="true" />
+  </component>
+</application>
