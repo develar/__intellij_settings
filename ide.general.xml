@@ -23,6 +23,7 @@
     <entry key="forced.switch.to.new.ui" value="false" source="SYSTEM" />
     <entry key="jvm.dfa.analysis.ui.security.analysis.window.was.shown" value="true" source="SYSTEM" />
     <entry key="idea.islands.gradient.enabled" value="false" source="USER" />
+    <entry key="ide.images.show.chessboard" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
