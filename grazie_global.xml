@@ -127,6 +127,10 @@
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
             <option value="cache|Workspace model loaded without cache." />
             <option value="cache|Workspace model loaded from cache." />
+            <option value="second opening of light project|earlyDisposable must be null on second opening of light project" />
+            <option value="suitable constructor|Cannot find suitable constructor," />
+            <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
+            <option value="project state|If project state was cleared because of roots changed or this is the first compilation after project opening, ensure the project model is saved on disk, so that automake sees the latest model state." />
           </set>
         </option>
       </SuppressingContext>
