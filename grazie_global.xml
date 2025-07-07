@@ -20,6 +20,7 @@
             <option value="the|Returns a copy of the provided with darkness set to ." />
             <option value="out|if out jar doesn't exist, make sure that we do not to use existing cache - set `isRebuild` to true and clear caches in this case" />
             <option value="allow-listed|do not create an extension if not allow-listed" />
+            <option value="cache|Workspace model loaded from cache." />
             <option value="under write" />
             <option value="an assert" />
             <option value="we aim|In the future, we aim to avoid .joinAll in runPostStartupActivities altogether." />
@@ -74,6 +75,7 @@
             <option value="flag|See [https://stackoverflow.com/a/5428795](https://stackoverflow.com/a/5428795) about resolve flag." />
             <option value="resolveDependenciesMaxAttempts" />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
+            <option value="suitable constructor|Cannot find suitable constructor," />
             <option value="weird|In fact, both check that the node is visible, but in a rather weird way: the root is always considered visible, regardless of the `isRootVisible` value." />
             <option value="just|if we close the project at the end of the test, just mark it closed; if we are shutting down the entire test framework, proceed to full dispose" />
             <option value="2|2 fields below fully describe PMap configuration:" />
@@ -95,6 +97,7 @@
             <option value="status bar|Creating status bar" />
             <option value="little bit" />
             <option value="of inheritors of|If a list of inheritors of sealed class has changed, it should be recompiled with all the inheritors Here we have a small optimization." />
+            <option value="project state|If project state was cleared because of roots changed or this is the first compilation after project opening, ensure the project model is saved on disk, so that automake sees the latest model state." />
             <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
             <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
@@ -105,9 +108,11 @@
             <option value="Re|Returns a workspace file:" />
             <option value="prepended|The plugin ID is automatically and implicitly prepended to it." />
             <option value="dumb" />
+            <option value="second opening of light project|earlyDisposable must be null on second opening of light project" />
             <option value="size pairs int -" />
             <option value="4|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
             <option value="of the XML data of|the system ID of the XML data of the element." />
+            <option value="cache|Workspace model loaded without cache." />
             <option value="Kotlin serialization" />
             <option value="of a computed list of|cache of a computed list of all parents (not only direct)" />
             <option value="`read|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
@@ -124,13 +129,9 @@
             <option value="so|some compilers (and compiler plugins) may produce different outputs for the same set of inputs." />
             <option value="e.g.|This can prevent tool windows in non-default view modes (e.g. 'Undock') to close when focus is transferred to a component not in tool window hierarchy, but logically belonging to it (e.g. when component is added to the window's layered pane)." />
             <option value="task|Project is null for task: , progress is not shown" />
-            <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="cache|Workspace model loaded without cache." />
-            <option value="cache|Workspace model loaded from cache." />
-            <option value="second opening of light project|earlyDisposable must be null on second opening of light project" />
-            <option value="suitable constructor|Cannot find suitable constructor," />
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
-            <option value="project state|If project state was cleared because of roots changed or this is the first compilation after project opening, ensure the project model is saved on disk, so that automake sees the latest model state." />
+            <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
+            <option value="a new one|Since jobs are removed on completion, any job still in the set is a new one." />
           </set>
         </option>
       </SuppressingContext>
