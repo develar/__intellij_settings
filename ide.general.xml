@@ -26,6 +26,7 @@
     <entry key="ide.images.show.chessboard" value="true" source="SYSTEM" />
     <entry key="llm.chat.agent.claude.code.enabled" value="true" source="USER" />
     <entry key="llm.agent" value="[disabled|experimental-internal|experimental-disabled|experimental-enabled|enabled*]" source="USER" />
+    <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
