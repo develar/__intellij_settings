@@ -24,6 +24,8 @@
     <entry key="jvm.dfa.analysis.ui.security.analysis.window.was.shown" value="true" source="SYSTEM" />
     <entry key="idea.islands.gradient.enabled" value="false" source="USER" />
     <entry key="ide.images.show.chessboard" value="true" source="SYSTEM" />
+    <entry key="llm.chat.agent.claude.code.enabled" value="true" source="USER" />
+    <entry key="llm.chat.agent.wrench.enabled" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
