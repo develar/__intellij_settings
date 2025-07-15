@@ -1,3 +1,10 @@
 <application>
-  <component name="Logs.Categories"><![CDATA[{}]]></component>
+  <component name="Logs.Categories"><![CDATA[{
+  "categories": [
+    {
+      "category": "com.intellij.ml.llm.agents.claude.code",
+      "level": "DEBUG"
+    }
+  ]
+}]]></component>
 </application>
