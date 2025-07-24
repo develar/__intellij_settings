@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Changes" />
-    <option name="defaultScopeName" value="Changes" />
-    <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="customScope" value="version" />
+    <option name="defaultScopeName" value="version" />
+    <option name="SEARCH_SCOPE" value="version" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
