@@ -8,11 +8,11 @@
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>*.java</mask>
-    <mask>*.xml</mask>
     <mask>*.yaml</mask>
     <mask>*.BAZEL</mask>
     <mask>*.kt</mask>
     <mask>*.iml</mask>
     <mask>*.vue</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
