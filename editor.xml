@@ -56,6 +56,7 @@
         <entry key="java.annotation.hints#showInferred" value="false" />
         <entry key="kotlin.references.types.hints#hints.type.function.return" value="false" />
         <entry key="kotlin.references.types.hints#hints.type.variable" value="true" />
+        <entry key="ts.type.hints#function.returns" value="true" />
       </map>
     </option>
     <option name="providerIdToEnabled">
@@ -70,7 +71,7 @@
         <entry key="kotlin.references.types.hints" value="false" />
         <entry key="ts.chain.hints" value="true" />
         <entry key="ts.enum.hints" value="true" />
-        <entry key="ts.type.hints" value="false" />
+        <entry key="ts.type.hints" value="true" />
       </map>
     </option>
   </component>
