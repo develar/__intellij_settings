@@ -1,5 +1,10 @@
 <application>
   <component name="AIChatContextPopupPromotionState"><![CDATA[{
-  "promotedFeatures": {}
+  "promotedFeatures": {
+    "ADD_IMAGE": {
+      "wasShownTimes": 0,
+      "isFinished": true
+    }
+  }
 }]]></component>
 </application>
