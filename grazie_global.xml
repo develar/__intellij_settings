@@ -76,12 +76,14 @@
             <option value="Later,|Later, it may be needed to implement more interfaces here." />
             <option value="}" />
             <option value="be used|universal native file can be used by any platform" />
+            <option value="instance,|If .idea is missing in the recent project's dir, this might mean, for instance, that 'git clean' was called." />
             <option value="do|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
             <option value="flag|See [https://stackoverflow.com/a/5428795](https://stackoverflow.com/a/5428795) about resolve flag." />
             <option value="resolveDependenciesMaxAttempts" />
             <option value="suitable constructor|Cannot find suitable constructor," />
             <option value="width|Splitter has width of one pixel - we need to step at least 2 pixels to be over an adjacent editor" />
             <option value="weird|In fact, both check that the node is visible, but in a rather weird way: the root is always considered visible, regardless of the `isRootVisible` value." />
+            <option value="deleted|Reopening such a project should be similar to opening the dir first time (and trying to import known project formats) IDEA-144453 IDEA rejects opening a recent project if there are no .idea subfolder CPP-12106 Auto-load CMakeLists.txt on opening from Recent projects when .idea and cmake-build-debug was deleted" />
             <option value="just|if we close the project at the end of the test, just mark it closed; if we are shutting down the entire test framework, proceed to full dispose" />
             <option value="2|2 fields below fully describe PMap configuration:" />
             <option value="allows ensure" />
@@ -136,8 +138,8 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="instance,|If .idea is missing in the recent project's dir, this might mean, for instance, that 'git clean' was called." />
-            <option value="deleted|Reopening such a project should be similar to opening the dir first time (and trying to import known project formats) IDEA-144453 IDEA rejects opening a recent project if there are no .idea subfolder CPP-12106 Auto-load CMakeLists.txt on opening from Recent projects when .idea and cmake-build-debug was deleted" />
+            <option value="splash hidden|splash hidden" />
+            <option value="splash shown|splash shown" />
           </set>
         </option>
       </SuppressingContext>
