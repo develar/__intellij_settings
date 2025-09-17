@@ -28,7 +28,6 @@
     <entry key="llm.agent" value="[disabled|experimental-internal|experimental-disabled|experimental-enabled|enabled*]" source="USER" />
     <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
     <entry key="llm.chat.agent.claude.code.replace.tools" value="true" source="USER" />
-    <entry key="monorepo.devkit.use.bazel.compile" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
