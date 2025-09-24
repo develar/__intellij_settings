@@ -141,6 +141,7 @@
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
             <option value="Metadata not specified|Metadata not specified for" />
+            <option value="does|doesn't exist" />
           </set>
         </option>
       </SuppressingContext>
