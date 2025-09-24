@@ -70,6 +70,7 @@
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
             <option value="224|224 bit and not 256/512 - use a slightly shorter filename xxh3 is not used as it is not secure and moreover, better to stick to JDK API" />
             <option value="tipsPath" />
+            <option value="splash hidden|splash hidden" />
             <option value="SQLite connection" />
             <option value="enumerate|during save, we enumerate strings, so, we cannot save as a part of close, as in this case string enumerator maps maybe not saved (as being closed)" />
             <option value="8|[.values file offset 4 or 8 bytes], however, for unique integral keys enumerate_id isn't produced." />
@@ -94,6 +95,7 @@
             <option value="weird|getting state after a load with an active controller can lead to weird issues" />
             <option value="reset|reset as bus will not remove disposed connection from a list immediately" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well." />
+            <option value="splash shown|splash shown" />
             <option value="ability|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
             <option value="is hidden|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="So|Sort the files heuristically to load the plugin jar containing plugin descriptors without extra ZipFile accesses." />
@@ -138,8 +140,7 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="splash hidden|splash hidden" />
-            <option value="splash shown|splash shown" />
+            <option value="Metadata not specified|Metadata not specified for" />
           </set>
         </option>
       </SuppressingContext>
