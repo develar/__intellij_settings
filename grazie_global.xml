@@ -2,6 +2,7 @@
   <component name="GraziConfig">
     <option name="userDisabledRules">
       <set>
+        <option value="Grazie.RuleEngine.En.Typography.VARIANT_QUOTE_PUNCTUATION" />
         <option value="LanguageTool.EN.OXFORD_SPELLING_Z_NOT_S" />
         <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
         <option value="LanguageTool.EN.OXFORD_SPELLING_GRAM" />
@@ -144,6 +145,7 @@
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
             <option value="+|Core + Plugin Manager — provides the essential runtime and ability to install/manage plugins" />
             <option value="+|Core + Plugin Manager — provides the essential runtime and ability to install/manage plugins." />
+            <option value="project&quot;,|Under the hood, file belongs to some &quot;project&quot;, and under &quot;project&quot; here we use term from a workspace project model." />
           </set>
         </option>
       </SuppressingContext>
@@ -152,6 +154,15 @@
       <CheckingContext>
         <option name="isCheckInStringLiteralsEnabled" value="true" />
       </CheckingContext>
+    </option>
+    <option name="parameters">
+      <map>
+        <entry key="ENGLISH">
+          <value>
+            <map />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
 </application>
