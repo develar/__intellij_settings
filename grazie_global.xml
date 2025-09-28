@@ -16,6 +16,7 @@
             <option value="Quiche" />
             <option value="3,|an unexpected delay of 3 seconds is considered as several delays: of 3, 2 and 1 seconds, because otherwise this background thread would be sampled 3 times." />
             <option value="community|well, &quot;Idea&quot; it is community, and &quot;idea&quot; it is ultimate, but LLM uses upper-case variant https://packages.jetbrains.team/files/p/llm-videos/llm-videos/llm/video/llm-video-1.0.zip" />
+            <option value="project&quot;,|Under the hood, file belongs to some &quot;project&quot;, and under &quot;project&quot; here we use term from a workspace project model." />
             <option value="of bytes of|if it succeeded there will be an 'nmsize' attribute which indicates the number of bytes of instruction produced by the compile" />
             <option value="Wh|override fun getKey(sourcePath: String): LongArray { val stringKey = relativizer.toRelative(sourcePath).toByteArray() We should sort by target id for data locality - the high integer (high) is shifted to the higher 32 bits of the long value, while the low integer (low) occupies the lower 32 bits." />
             <option value="suggest|List of file extensions (without a leading dot) which the installer will suggest to associate with the product." />
@@ -29,6 +30,7 @@
             <option value="under write" />
             <option value="an assert" />
             <option value="we aim|In the future, we aim to avoid .joinAll in runPostStartupActivities altogether." />
+            <option value="+|Core + Plugin Manager — provides the essential runtime and ability to install/manage plugins." />
             <option value="gradle|gradle doesn't support correct presentation of assertion in console, use diff as a message (cause)" />
             <option value="depends" />
             <option value="Co|Converts this promise to an instance of ." />
@@ -118,6 +120,7 @@
             <option value="co|common-ide-modules.xml — shared set of product modules for regular IDE." />
             <option value="Re|Returns a workspace file:" />
             <option value="prepended|The plugin ID is automatically and implicitly prepended to it." />
+            <option value="+|Core + Plugin Manager — provides the essential runtime and ability to install/manage plugins" />
             <option value="dumb" />
             <option value="second opening of light project|earlyDisposable must be null on second opening of light project" />
             <option value="size pairs int -" />
@@ -143,9 +146,7 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="+|Core + Plugin Manager — provides the essential runtime and ability to install/manage plugins" />
-            <option value="+|Core + Plugin Manager — provides the essential runtime and ability to install/manage plugins." />
-            <option value="project&quot;,|Under the hood, file belongs to some &quot;project&quot;, and under &quot;project&quot; here we use term from a workspace project model." />
+            <option value="+|# IJ Light IJ Void + Predefined Plugins - Lightweight editing - Can enable full IDE capabilities" />
           </set>
         </option>
       </SuppressingContext>
@@ -157,11 +158,7 @@
     </option>
     <option name="parameters">
       <map>
-        <entry key="ENGLISH">
-          <value>
-            <map />
-          </value>
-        </entry>
+        <entry key="ENGLISH" />
       </map>
     </option>
   </component>
