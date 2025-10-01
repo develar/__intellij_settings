@@ -25,7 +25,6 @@
     <entry key="idea.islands.gradient.enabled" value="false" source="USER" />
     <entry key="llm.chat.agent.claude.code.enabled" value="true" source="USER" />
     <entry key="llm.agent" value="[disabled|experimental-internal|experimental-disabled|experimental-enabled|enabled*]" source="USER" />
-    <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
     <entry key="llm.chat.agent.claude.code.replace.tools" value="true" source="USER" />
     <entry key="ide.show.progress.without.status.bar" value="false" source="USER" />
     <entry key="progresses.show.counter.icon.instead.of.show.link" value="false" source="USER" />
