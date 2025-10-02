@@ -75,6 +75,12 @@
       <entry key="ChangesTreeDiffPreview">
         <PlaceSettings>
           <option name="HIGHLIGHTING_LEVEL" value="ADVANCED" />
+          <option name="USE_SOFT_WRAPS" value="true" />
+        </PlaceSettings>
+      </entry>
+      <entry key="Default">
+        <PlaceSettings>
+          <option name="USE_SOFT_WRAPS" value="true" />
         </PlaceSettings>
       </entry>
       <entry key="Merge">
