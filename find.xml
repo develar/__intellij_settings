@@ -3,6 +3,7 @@
     <option name="customScope" value="Changes" />
     <option name="defaultScopeName" value="Changes" />
     <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -11,8 +12,8 @@
     <mask>*.yaml</mask>
     <mask>*.BAZEL</mask>
     <mask>*.vue</mask>
-    <mask>*.iml</mask>
     <mask>*.kt</mask>
     <mask>*.xml</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
