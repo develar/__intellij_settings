@@ -1,10 +1,10 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="Changes" />
-    <option name="defaultScopeName" value="Changes" />
+    <option name="customScope" value="123" />
+    <option name="defaultScopeName" value="123" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="SEARCH_SCOPE" value="123" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
