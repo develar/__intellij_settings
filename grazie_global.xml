@@ -11,6 +11,14 @@
     </option>
     <option name="domainDisabledRules">
       <map>
+        <entry key="CodeDocumentation">
+          <value>
+            <set>
+              <option value="Grazie.MLEC.En.MissingArticle" />
+              <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
+            </set>
+          </value>
+        </entry>
         <entry key="CodeComment">
           <value>
             <set>
@@ -23,6 +31,11 @@
     </option>
     <option name="domainEnabledRules">
       <map>
+        <entry key="CodeDocumentation">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="CodeComment">
           <value>
             <set />
@@ -184,7 +197,7 @@
     </option>
     <option name="parametersPerDomain">
       <map>
-        <entry key="CodeComment">
+        <entry key="CodeDocumentation">
           <value>
             <map>
               <entry key="ENGLISH">
