@@ -12,7 +12,7 @@
     <mask>*.vue</mask>
     <mask>*.kt</mask>
     <mask>*.iml</mask>
-    <mask>*.xml</mask>
     <mask>*.yaml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
