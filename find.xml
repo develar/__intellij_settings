@@ -3,7 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.iml" />
+    <option name="FILE_MASK" value="*.xml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -13,7 +13,7 @@
     <mask>*.vue</mask>
     <mask>*.kt</mask>
     <mask>*.yaml</mask>
-    <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
