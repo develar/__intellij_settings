@@ -29,6 +29,7 @@
     <entry key="ide.show.progress.without.status.bar" value="false" source="USER" />
     <entry key="progresses.show.counter.icon.instead.of.show.link" value="false" source="USER" />
     <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
+    <entry key="git.in.memory.commit.editing.operations.enabled" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
