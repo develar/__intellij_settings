@@ -99,6 +99,7 @@
             <option value="langPluginsResultDir" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
             <option value="adjustOptionsUI" />
+            <option value="3|Maven id must contain 3 parts, but found :" />
             <option value="We|docked and sliding windows If there is a tool window on the same side, then we have to hide it, i.e., clear place for a tool window to be shown." />
             <option value="a new one|Since jobs are removed on completion, any job still in the set is a new one." />
             <option value="8|It is important to note that offset is non-negative and can be 4 or 8 bytes, depending on the size of the &quot;.values&quot; file." />
@@ -107,6 +108,7 @@
             <option value="at|For a directory-based project, it's an arbitrary string specified by user at project creation or later in a project settings." />
             <option value="needed|these icons are only needed to prevent Swing from trying to fetch defaults with AWT ImageFetcher threads (IDEA-322089), but might as well just put something sensibly-looking there, just in case they show up due to some bug" />
             <option value="set|classLoader must be set - otherwise sub descriptor considered as inactive" />
+            <option value="3|Maven id must contain 3 parts, but found : (maven-id: )" />
             <option value="224|224 bit and not 256/512 - use a slightly shorter filename xxh3 is not used as it is not secure and moreover, better to stick to JDK API" />
             <option value="tipsPath" />
             <option value="splash hidden|splash hidden" />
@@ -182,8 +184,7 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="3|Maven id must contain 3 parts, but found :" />
-            <option value="3|Maven id must contain 3 parts, but found : (maven-id: )" />
+            <option value="files|check class files validity after scrambling" />
           </set>
         </option>
       </SuppressingContext>
