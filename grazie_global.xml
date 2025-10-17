@@ -12,6 +12,7 @@
           <value>
             <set>
               <option value="Grazie.MLEC.En.MissingArticle" />
+              <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
             </set>
           </value>
         </entry>
