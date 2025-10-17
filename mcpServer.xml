@@ -1,0 +1,9 @@
+<application>
+  <component name="McpServerPluginSettings">
+    <option name="shouldShowClaudeNotification" value="false" />
+  </component>
+  <component name="McpServerSettings">
+    <option name="enableBraveMode" value="true" />
+    <option name="enableMcpServer" value="true" />
+  </component>
+</application>

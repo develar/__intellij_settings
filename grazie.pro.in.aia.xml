@@ -1,0 +1,13 @@
+<application>
+  <component name="GrazieProConfigInAia">
+    <option name="parameters">
+      <map>
+        <entry key="ENGLISH">
+          <value>
+            <map />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>

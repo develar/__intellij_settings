@@ -18,6 +18,8 @@
         <option value="com.intellij.flyway" />
         <option value="org.jetbrains.bazel" />
         <option value="Lombook Plugin" />
+        <option value="intellij.nextjs" />
+        <option value="com.intellij.react" />
       </list>
     </option>
   </component>

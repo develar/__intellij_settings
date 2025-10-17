@@ -47,7 +47,6 @@
     </option>
   </component>
   <component name="DaemonCodeAnalyzerSettings" profile="idea.default (final)">
-    <option name="AUTOREPARSE_DELAY" value="0" />
     <option name="ERROR_STRIPE_MARK_MIN_HEIGHT" value="3" />
   </component>
   <component name="DeclarativeInlayHintsSettings">
@@ -56,6 +55,7 @@
         <entry key="java.annotation.hints#showInferred" value="false" />
         <entry key="kotlin.references.types.hints#hints.type.function.return" value="false" />
         <entry key="kotlin.references.types.hints#hints.type.variable" value="true" />
+        <entry key="ts.type.hints#function.returns" value="true" />
       </map>
     </option>
     <option name="providerIdToEnabled">
@@ -89,9 +89,12 @@
         <option value="JAVA.java.implicit.types" />
         <option value="JavaScript.js.chain.hints" />
         <option value="JavaScript.js.type.hints" />
+        <option value="Rust.chain-method.hints" />
+        <option value="Rust.rust.type.hints" />
         <option value="TypeScript.ts.chain.hints" />
         <option value="TypeScript.ts.type.hints" />
         <option value="kotlin.KotlinLambdasHintsProvider" />
+        <option value="kotlin.kotlin.compiler.plugins.declarations" />
         <option value="kotlin.kotlin.ranges.hints" />
       </set>
     </option>
