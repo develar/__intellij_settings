@@ -153,6 +153,7 @@
             <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
+            <option value="files|check class files validity after scrambling" />
             <option value="of any of|only primitive, String, Class, Enum, another Annotation or array of any of these are allowed" />
             <option value="255|255 here is not a mistake - we want to explicitly set that corresponding color as non-transparent" />
             <option value="co|common-ide-modules.xml — shared set of product modules for regular IDE." />
@@ -184,7 +185,8 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="files|check class files validity after scrambling" />
+            <option value="plugin|Module intellij.featuresTrainer contains, so it is a plugin, but plugin must be not included in a platform (chain: [intellij.pycharm.community, intellij.python.featuresTrainer])" />
+            <option value="plugin|Module contains , so it is a plugin, but plugin must be not included in a platform (chain: )" />
           </set>
         </option>
       </SuppressingContext>
