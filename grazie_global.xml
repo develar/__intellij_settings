@@ -150,6 +150,7 @@
             <option value="of inheritors of|If a list of inheritors of sealed class has changed, it should be recompiled with all the inheritors Here we have a small optimization." />
             <option value="project state|If project state was cleared because of roots changed or this is the first compilation after project opening, ensure the project model is saved on disk, so that automake sees the latest model state." />
             <option value="of comparison of|a comparator which receives a middle index and returns the result of comparison of the value at this index and the goal value (e.g 0 if found, -1 if the value[middleIndex] &lt; goal, or 1 if value[middleIndex] &gt; goal)" />
+            <option value="plugin|Module contains , so it is a plugin, but plugin must be not included in a platform (chain: )" />
             <option value="close|clicks on the close window button don't count in determining whether we have a double click on the tab (IDEA-70403)" />
             <option value="is loaded|the first row is loaded by execute(), so do not step() again" />
             <option value="platform|Since we always want to load reflect from platform, we should force those classes with platform classloader as well" />
@@ -171,6 +172,7 @@
             <option value="`read|FileChannel is strongly required because only FileChannel provides `read(ByteBuffer dst, long position)` method - ability to read data without setting channel position, as setting channel position will require synchronization" />
             <option value="tool window|When tool window is hidden by a shortcut, we want focus to return to previously focused splitters." />
             <option value="Metadata not specified|Metadata not specified for" />
+            <option value="plugin|Module intellij.featuresTrainer contains, so it is a plugin, but plugin must be not included in a platform (chain: [intellij.pycharm.community, intellij.python.featuresTrainer])" />
             <option value="anymore|After that, few of the most relevant displayed items are considered &quot;frozen&quot; and not re-sorted anymore, to avoid changes around the selected item that the user already sees and can interact with." />
             <option value="a single nats server cluster" />
             <option value="of names of|list of names of JAR files which cannot be included in the product 'lib' directory in plain form" />
@@ -185,8 +187,7 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="plugin|Module intellij.featuresTrainer contains, so it is a plugin, but plugin must be not included in a platform (chain: [intellij.pycharm.community, intellij.python.featuresTrainer])" />
-            <option value="plugin|Module contains , so it is a plugin, but plugin must be not included in a platform (chain: )" />
+            <option value="SDK in intellij project|but only '21' is supported as SDK in intellij project" />
           </set>
         </option>
       </SuppressingContext>
