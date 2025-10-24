@@ -10,5 +10,6 @@
     <mask>*.java</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.yaml</mask>
   </component>
 </application>
