@@ -5,9 +5,12 @@
     <option name="SEARCH_SCOPE" value="Changes" />
     <mask>*.css</mask>
     <mask>*.html</mask>
-    <mask>*.xml</mask>
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>*.java</mask>
+    <mask>*.iml</mask>
+    <mask>*.yaml</mask>
+    <mask>*.xml</mask>
+    <mask>properties</mask>
   </component>
 </application>

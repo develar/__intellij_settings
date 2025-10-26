@@ -1,12 +1,24 @@
 <application>
   <component name="com.intellij.ide.ui.customization.CustomActionsSchema">
+    <group value="Vcs.Operations.Popup" is_group="true" forse_popup="false" action_type="-1" position="23">
+      <path value="root" />
+    </group>
+    <group value="Vcs.Log.Toolbar.RightCorner" is_group="true" forse_popup="false" action_type="-1" position="22">
+      <path value="root" />
+    </group>
     <group value="Vcs.Operations.Popup" is_group="true" forse_popup="false" action_type="-1" position="22">
+      <path value="root" />
+    </group>
+    <group value="Vcs.Log.ChangesBrowser.Toolbar" is_group="true" forse_popup="false" action_type="-1" position="21">
       <path value="root" />
     </group>
     <group value="Vcs.Log.Toolbar.RightCorner" is_group="true" forse_popup="false" action_type="-1" position="21">
       <path value="root" />
     </group>
     <group value="Vcs.Operations.Popup" is_group="true" forse_popup="false" action_type="-1" position="21">
+      <path value="root" />
+    </group>
+    <group value="ChangesViewToolbar" is_group="true" forse_popup="false" action_type="-1" position="20">
       <path value="root" />
     </group>
     <group value="Vcs.Log.ChangesBrowser.Toolbar" is_group="true" forse_popup="false" action_type="-1" position="20">
@@ -16,6 +28,9 @@
       <path value="root" />
     </group>
     <group value="Vcs.Operations.Popup" is_group="true" forse_popup="false" action_type="-1" position="20">
+      <path value="root" />
+    </group>
+    <group value="Floating.CodeToolbar.SQL" is_group="true" forse_popup="false" action_type="-1" position="19">
       <path value="root" />
     </group>
     <group value="ChangesViewToolbar" is_group="true" forse_popup="false" action_type="-1" position="19">
@@ -93,6 +108,11 @@
     <group value="NavbarPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="7">
       <path value="root" />
     </group>
+    <group value="TrialStateWidget" is_action="true" action_type="-1" position="7">
+      <path value="root" />
+      <path value="Main Toolbar" />
+      <path value="Right" />
+    </group>
     <group value="ScopeViewPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="6">
       <path value="root" />
     </group>
@@ -105,13 +125,18 @@
     <group value="EditorGutterPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="3">
       <path value="root" />
     </group>
-    <group value="EditorPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="2">
-      <path value="root" />
-    </group>
-    <group value="AIAssistantHubPopupAction" is_action="true" action_type="-1" position="2">
+    <group value="AIAssistantHubPopupAction" is_action="true" action_type="-1" position="3">
       <path value="root" />
       <path value="Main Toolbar" />
       <path value="Right" />
+    </group>
+    <group value="EditorPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="2">
+      <path value="root" />
+    </group>
+    <group value="tasks.switch" is_action="true" action_type="-1" position="2">
+      <path value="root" />
+      <path value="Main Toolbar" />
+      <path value="Left" />
     </group>
     <group value="MainMenu" is_group="true" forse_popup="false" action_type="-1" position="0">
       <path value="root" />
@@ -126,5 +151,12 @@
       <path value="Main Toolbar" />
       <path value="Center" />
     </group>
+    <group value="tasks.switch" is_action="true" action_type="1" position="2">
+      <path value="root" />
+      <path value="Main Toolbar" />
+      <path value="Left" />
+      <path value="VCS Group" />
+    </group>
+    <action id="tasks.switch" icon="jar:file:/Applications/Idea.app/Contents/lib/app.jar!/expui/toolbar/unknown.svg" />
   </component>
 </application>
