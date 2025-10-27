@@ -9,24 +9,24 @@
     <option name="processCloseConfirmation" value="TERMINATE" />
   </component>
   <component name="Registry">
-    <entry key="ide.experimental.ui" value="true" source="SYSTEM" />
-    <entry key="forced.switch.to.new.ui" value="false" source="SYSTEM" />
-    <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
     <entry key="debugger.valueTooltipAutoShow" value="false" source="SYSTEM" />
     <entry key="vcs.show.affected.files.as.tab" value="false" source="SYSTEM" />
     <entry key="ide.recent.files.tool.window.list" value="false" source="SYSTEM" />
     <entry key="debugger.auto.fetch.icons" value="false" source="SYSTEM" />
+    <entry key="ide.experimental.ui" value="true" source="SYSTEM" />
     <entry key="analyze.exceptions.on.the.fly" value="true" source="SYSTEM" />
     <entry key="ide.allow.merge.buttons" value="false" source="SYSTEM" />
     <entry key="vcs.blame.show.affected.files.in.log" value="false" source="SYSTEM" />
     <entry key="debugger.new.tool.window.layout.toolbar" value="[After|Vertical*]" source="SYSTEM" />
     <entry key="terminal.new.ui" value="true" source="SYSTEM" />
-    <entry key="llm.agent" value="[disabled|experimental-internal|experimental-disabled|experimental-enabled|enabled*]" source="SYSTEM" />
-    <entry key="llm.chat.agent.claude.code.replace.tools" value="true" source="SYSTEM" />
-    <entry key="ide.show.progress.without.status.bar" value="false" source="SYSTEM" />
-    <entry key="progresses.show.counter.icon.instead.of.show.link" value="false" source="SYSTEM" />
-    <entry key="llm.agent.claude.use.proxy.server" value="false" source="SYSTEM" />
-    <entry key="git.in.memory.commit.editing.operations.enabled" value="true" source="SYSTEM" />
+    <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
+    <entry key="forced.switch.to.new.ui" value="false" source="SYSTEM" />
+    <entry key="llm.agent" value="[disabled|experimental-internal|experimental-disabled|experimental-enabled|enabled*]" source="USER" />
+    <entry key="llm.chat.agent.claude.code.replace.tools" value="true" source="USER" />
+    <entry key="ide.show.progress.without.status.bar" value="false" source="USER" />
+    <entry key="progresses.show.counter.icon.instead.of.show.link" value="false" source="USER" />
+    <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
+    <entry key="git.in.memory.commit.editing.operations.enabled" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
