@@ -53,7 +53,7 @@
     <option name="enabledOptions">
       <map>
         <entry key="java.annotation.hints#showInferred" value="false" />
-        <entry key="kotlin.references.types.hints#hints.type.function.return" value="false" />
+        <entry key="kotlin.references.types.hints#hints.type.function.return" value="true" />
         <entry key="kotlin.references.types.hints#hints.type.variable" value="true" />
         <entry key="ts.type.hints#function.returns" value="true" />
       </map>
