@@ -28,6 +28,7 @@
     <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
     <entry key="git.in.memory.commit.editing.operations.enabled" value="true" source="USER" />
     <entry key="profiler.widget.in.run.console" value="false" source="SYSTEM" />
+    <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
