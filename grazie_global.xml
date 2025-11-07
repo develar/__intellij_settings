@@ -97,6 +97,7 @@
             <option value="of|The list of included module libraries." />
             <option value="key -|used as a key - immutable instance cannot be used" />
             <option value="langPluginsResultDir" />
+            <option value="optional|For optional includes that may not exist in all builds (always uses xi:fallback): Example: deprecatedInclude(&quot;intellij.rider.languages&quot;, &quot;intellij.rider.languages.xml&quot;, optional = true)" />
             <option value="opening project|if we are opening project in the current process (not yet PER_PROJECT), lock per-project directory" />
             <option value="adjustOptionsUI" />
             <option value="3|Maven id must contain 3 parts, but found :" />
@@ -188,7 +189,7 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="optional|For optional includes that may not exist in all builds (always uses xi:fallback): Example: deprecatedInclude(&quot;intellij.rider.languages&quot;, &quot;intellij.rider.languages.xml&quot;, optional = true)" />
+            <option value="include|No overrides - use xi:include as before" />
           </set>
         </option>
       </SuppressingContext>
