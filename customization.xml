@@ -108,13 +108,13 @@
     <group value="NavbarPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="7">
       <path value="root" />
     </group>
-    <group value="TrialStateWidget" is_action="true" action_type="-1" position="7">
+    <group value="ScopeViewPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="6">
+      <path value="root" />
+    </group>
+    <group value="TrialStateWidget" is_action="true" action_type="-1" position="6">
       <path value="root" />
       <path value="Main Toolbar" />
       <path value="Right" />
-    </group>
-    <group value="ScopeViewPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="6">
-      <path value="root" />
     </group>
     <group value="ProjectViewPopupMenu" is_group="true" forse_popup="false" action_type="-1" position="5">
       <path value="root" />
@@ -150,12 +150,6 @@
       <path value="root" />
       <path value="Main Toolbar" />
       <path value="Center" />
-    </group>
-    <group value="tasks.switch" is_action="true" action_type="1" position="2">
-      <path value="root" />
-      <path value="Main Toolbar" />
-      <path value="Left" />
-      <path value="VCS Group" />
     </group>
     <action id="tasks.switch" icon="jar:file:/Applications/Idea.app/Contents/lib/app.jar!/expui/toolbar/unknown.svg" />
   </component>
