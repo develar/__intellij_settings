@@ -11,8 +11,8 @@
     <mask>properties</mask>
     <mask>plugin.xml</mask>
     <mask>*.kt</mask>
-    <mask>*.xml</mask>
     <mask>*.yaml</mask>
     <mask>*.iml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
