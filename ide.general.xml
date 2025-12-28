@@ -29,7 +29,6 @@
     <entry key="git.in.memory.commit.editing.operations.enabled" value="true" source="USER" />
     <entry key="profiler.widget.in.run.console" value="false" source="SYSTEM" />
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
-    <entry key="monorepo.devkit.generate.bazel.build.files" value="false" source="USER" />
     <entry key="monorepo.devkit.use.bazel.compile" value="true" source="USER" />
   </component>
   <component name="StatusBar">
