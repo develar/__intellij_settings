@@ -26,7 +26,6 @@
     <entry key="ide.show.progress.without.status.bar" value="false" source="USER" />
     <entry key="progresses.show.counter.icon.instead.of.show.link" value="false" source="USER" />
     <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
-    <entry key="git.in.memory.commit.editing.operations.enabled" value="true" source="USER" />
     <entry key="profiler.widget.in.run.console" value="false" source="SYSTEM" />
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
     <entry key="monorepo.devkit.use.bazel.compile" value="true" source="USER" />
