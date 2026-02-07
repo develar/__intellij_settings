@@ -1,7 +1,7 @@
 <application>
   <component name="FindUsagesSettings">
-    <option name="customScope" value="Project and Libraries" />
-    <option name="defaultScopeName" value="Project and Libraries" />
-    <option name="SEARCH_SCOPE" value="Project and Libraries" />
+    <option name="customScope" value="Module 'intellij.agent.workbench.sessions'" />
+    <option name="defaultScopeName" value="Module 'intellij.agent.workbench.sessions'" />
+    <option name="SEARCH_SCOPE" value="Module 'intellij.agent.workbench.sessions'" />
   </component>
 </application>
