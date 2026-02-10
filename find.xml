@@ -3,6 +3,7 @@
     <option name="customScope" value="Changes" />
     <option name="defaultScopeName" value="Changes" />
     <option name="SEARCH_SCOPE" value="Changes" />
+    <option name="FILE_MASK" value="*.kt" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -27,9 +28,9 @@
     <mask>RiderProperties.kt</mask>
     <mask>PluginGraphBuilder.kt</mask>
     <mask>PluginDependencyGeneratorTest.kt</mask>
-    <mask>*.kt</mask>
     <mask>UltimateRepositoryModules.kt</mask>
     <mask>PluginDependencyTestDsl.kt</mask>
     <mask>*.iml</mask>
+    <mask>*.kt</mask>
   </component>
 </application>
