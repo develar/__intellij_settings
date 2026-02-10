@@ -3,14 +3,13 @@
     <option name="customScope" value="Changes" />
     <option name="defaultScopeName" value="Changes" />
     <option name="SEARCH_SCOPE" value="Changes" />
-    <option name="FILE_MASK" value="*.kt" />
+    <option name="FILE_MASK" value="*.txt" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
     <mask>properties</mask>
     <mask>plugin.xml</mask>
-    <mask>*.txt</mask>
     <mask>*.form</mask>
     <mask>*.yaml</mask>
     <mask>*.bazel</mask>
@@ -32,5 +31,6 @@
     <mask>PluginDependencyTestDsl.kt</mask>
     <mask>*.iml</mask>
     <mask>*.kt</mask>
+    <mask>*.txt</mask>
   </component>
 </application>
