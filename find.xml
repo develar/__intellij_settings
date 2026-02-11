@@ -28,8 +28,8 @@
     <mask>PluginDependencyGeneratorTest.kt</mask>
     <mask>UltimateRepositoryModules.kt</mask>
     <mask>PluginDependencyTestDsl.kt</mask>
-    <mask>*.iml</mask>
     <mask>*.kt</mask>
     <mask>*.txt</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
