@@ -30,6 +30,7 @@
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
     <entry key="monorepo.devkit.use.bazel.compile" value="true" source="USER" />
     <entry key="git.enable.working.trees.feature" value="false" source="USER" />
+    <entry key="switched.from.classic.to.islands" value="false" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
