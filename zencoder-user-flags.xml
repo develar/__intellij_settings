@@ -1,0 +1,9 @@
+<application>
+  <component name="ai.zencoder.plugin.user.flags">
+    <flags>
+      <map>
+        <entry key="auto-plus-model-tutorial" value="&quot;dismissed&quot;" />
+      </map>
+    </flags>
+  </component>
+</application>

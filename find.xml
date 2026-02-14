@@ -1,21 +1,35 @@
 <application>
   <component name="FindSettings">
-    <option name="caseSensitive" value="true" />
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.xml" />
+    <option name="customScope" value="123" />
+    <option name="defaultScopeName" value="123" />
+    <option name="SEARCH_SCOPE" value="123" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
     <mask>*.properties</mask>
-    <mask>*.java</mask>
     <mask>properties</mask>
     <mask>plugin.xml</mask>
-    <mask>*.kt</mask>
-    <mask>*.yaml</mask>
-    <mask>*.iml</mask>
+    <mask>*.form</mask>
+    <mask>*.bazel</mask>
     <mask>*.xml</mask>
+    <mask>*.json</mask>
+    <mask>*.md</mask>
+    <mask>FindModel.kt</mask>
+    <mask>*.java</mask>
+    <mask>TESTING-internals.md</mask>
+    <mask>PluginModelGraphBuilder.kt</mask>
+    <mask>ContentModuleDependencyGeneratorTest.kt</mask>
+    <mask>suppressions.json</mask>
+    <mask>*PyCharmProperties.kt</mask>
+    <mask>PyCharmProperties.kt</mask>
+    <mask>RiderProperties.kt</mask>
+    <mask>PluginGraphBuilder.kt</mask>
+    <mask>PluginDependencyGeneratorTest.kt</mask>
+    <mask>UltimateRepositoryModules.kt</mask>
+    <mask>PluginDependencyTestDsl.kt</mask>
+    <mask>*.kt</mask>
+    <mask>*.txt</mask>
+    <mask>*.iml</mask>
+    <mask>*.yaml</mask>
   </component>
 </application>

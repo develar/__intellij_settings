@@ -53,6 +53,7 @@
             <option value="project&quot;,|Under the hood, file belongs to some &quot;project&quot;, and under &quot;project&quot; here we use term from a workspace project model." />
             <option value="of bytes of|if it succeeded there will be an 'nmsize' attribute which indicates the number of bytes of instruction produced by the compile" />
             <option value="Wh|override fun getKey(sourcePath: String): LongArray { val stringKey = relativizer.toRelative(sourcePath).toByteArray() We should sort by target id for data locality - the high integer (high) is shifted to the higher 32 bits of the long value, while the low integer (low) occupies the lower 32 bits." />
+            <option value="$task&quot; -|STATE: EntryGuard IF missing &quot;$task&quot; -&gt; RESPOND &quot;This skill only runs when the user explicitly includes $task.&quot;" />
             <option value="suggest|List of file extensions (without a leading dot) which the installer will suggest to associate with the product." />
             <option value="an|for instance, ShadowPainter updates the context from an outside" />
             <option value="does|doesn't exist" />
@@ -91,6 +92,7 @@
             <option value="a select is" />
             <option value="hang" />
             <option value="sub element|It can be in that case separator will be added to a group described in the &lt;add-to-group ...&gt; sub element." />
+            <option value="compile|The loading=&quot;embedded&quot; attribute is required here because the intellij.platform.find module (which is loaded in embedded mode) has a compile dependency on intellij.platform.scopes." />
             <option value="a|This method allows delaying (if needed) execution of a given runnable until the editor is fully loaded." />
             <option value="of usage of|It should help to solve the problem of detecting from which source existing compilation outputs were produced (it's the problem of usage of portable caches and compilation outputs, produced by JPS)." />
             <option value="of the type of|a node of the type of this." />
@@ -146,6 +148,7 @@
             <option value="a|It allows us to accumulate a larger chunk of data before writing, improving I/O efficiency, *without* requiring us to allocate a large buffer upfront for every archive, even small ones." />
             <option value="master|Failed to get master reference: %v" />
             <option value="status bar|Creating status bar" />
+            <option value="include|No overrides - use xi:include as before" />
             <option value="+|# IJ Light IJ Void + Predefined Plugins - Lightweight editing - Can enable full IDE capabilities" />
             <option value="little bit" />
             <option value="of inheritors of|If a list of inheritors of sealed class has changed, it should be recompiled with all the inheritors Here we have a small optimization." />
@@ -189,7 +192,7 @@
             <option value="ordinary &quot;make|For ordinary &quot;make all&quot; build, app settings and unsaved docs are always saved before the build starts." />
             <option value="task|Project is null for task: , progress is not shown" />
             <option value="the|algorithm: 1. map version -&gt; int (and weight major, minor, micro accordingly) 2. compute distance between starting point and candidate 3. select the version with the smallest distance if two or more candidates have the same distance, the which one is returned is undefined" />
-            <option value="include|No overrides - use xi:include as before" />
+            <option value="IDEA-331827).|But if it doesn't even present in the default layout, there's little we can do except at least make the window invisible (otherwise it'll stick around for no reason, see IDEA-321129), and also remove its stripe button for similar reasons (IDEA-331827)." />
           </set>
         </option>
       </SuppressingContext>
