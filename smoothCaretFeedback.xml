@@ -1,5 +1,7 @@
 <application>
   <component name="SmoothCaretFeedback">
+    <option name="feedbackNotificationShown" value="true" />
+    <option name="feedbackNotificationShownTime" value="1771426907026" />
     <option name="firstEapRunDate" value="2026-02-11" />
   </component>
 </application>
