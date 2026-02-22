@@ -24,7 +24,6 @@
     <entry key="llm.agent.claude.use.proxy.server" value="false" source="USER" />
     <entry key="profiler.widget.in.run.console" value="false" source="SYSTEM" />
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
-    <entry key="monorepo.devkit.use.bazel.compile" value="true" source="USER" />
     <entry key="git.enable.working.trees.feature" value="false" source="USER" />
     <entry key="switched.from.classic.to.islands" value="false" source="SYSTEM" />
   </component>
