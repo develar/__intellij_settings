@@ -33,6 +33,7 @@
       <map>
         <entry key="AIAssistant" value="false" />
         <entry key="Encoding" value="false" />
+        <entry key="EnterSplitModeWidget" value="false" />
         <entry key="FlowJSInfo" value="false" />
         <entry key="FullLine" value="false" />
         <entry key="GrazieStatusBarWidget" value="false" />
