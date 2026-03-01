@@ -27,6 +27,8 @@
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
     <entry key="git.enable.working.trees.feature" value="false" source="USER" />
     <entry key="switched.from.classic.to.islands" value="false" source="SYSTEM" />
+    <entry key="mcp.server.tools.enable.apply.patch" value="true" source="USER" />
+    <entry key="mcp.server.tools.enable.git.status" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
