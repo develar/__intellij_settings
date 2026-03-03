@@ -28,9 +28,9 @@
     <mask>PluginDependencyTestDsl.kt</mask>
     <mask>*.txt</mask>
     <mask>*.iml</mask>
-    <mask>*.yaml</mask>
     <mask>module</mask>
     <mask>*.xml</mask>
     <mask>*.kt</mask>
+    <mask>*.yaml</mask>
   </component>
 </application>
