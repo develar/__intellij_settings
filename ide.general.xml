@@ -14,6 +14,7 @@
     <entry key="ide.allow.merge.buttons" value="false" source="USER" />
     <entry key="debugger.new.tool.window.layout.toolbar" value="[After|Vertical*]" source="USER" />
     <entry key="ide.experimental.ui" value="true" source="SYSTEM" />
+    <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
