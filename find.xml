@@ -29,8 +29,8 @@
     <mask>*.txt</mask>
     <mask>*.iml</mask>
     <mask>module</mask>
-    <mask>*.xml</mask>
     <mask>*.kt</mask>
     <mask>*.yaml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
