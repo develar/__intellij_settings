@@ -16,6 +16,13 @@
     <entry key="ide.experimental.ui" value="true" source="SYSTEM" />
     <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
     <entry key="compiler.ref.index" value="false" source="USER" />
+    <entry key="matterhorn.use.aie" value="true" source="SYSTEM" />
+    <entry key="git.in.memory.interactive.rebase.notify.errors" value="false" source="SYSTEM" />
+    <entry key="debugger.auto.attach.from.console" value="true" source="SYSTEM" />
+    <entry key="llm.ignore.default.prompt.rules.aie" value="false" source="SYSTEM" />
+    <entry key="llm.nextEdit.render.rating.controls" value="true" source="SYSTEM" />
+    <entry key="llm.riderNext.chronicles" value="true" source="SYSTEM" />
+    <entry key="llm.grouped.diff.enabled" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
