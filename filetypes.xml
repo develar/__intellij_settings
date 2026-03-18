@@ -25,6 +25,7 @@
       <mapping pattern="8-ia32/Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="desktop-common" type="PLAIN_TEXT" />
       <mapping pattern="DockerFile" type="PLAIN_TEXT" />
+      <mapping pattern=".bazelrc-user.bazelrc" type="PLAIN_TEXT" />
       <mapping pattern=".env" type="PLAIN_TEXT" />
       <mapping pattern="forOnIterator" type="PLAIN_TEXT" />
       <mapping pattern="Tiltfile" type="PLAIN_TEXT" />
