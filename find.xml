@@ -3,7 +3,6 @@
     <option name="customScope" value="123" />
     <option name="defaultScopeName" value="123" />
     <option name="SEARCH_SCOPE" value="123" />
-    <option name="FILE_MASK" value="*.yaml" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
