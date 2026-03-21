@@ -15,7 +15,7 @@
     <entry key="debugger.new.tool.window.layout.toolbar" value="[After|Vertical*]" source="USER" />
     <entry key="ide.experimental.ui" value="true" source="SYSTEM" />
     <entry key="debugger.new.tool.window.layout" value="true" source="SYSTEM" />
-    <entry key="compiler.ref.index" value="false" source="SYSTEM" />
+    <entry key="compiler.ref.index" value="false" source="USER" />
     <entry key="debugger.auto.attach.from.console" value="true" source="SYSTEM" />
     <entry key="llm.ignore.default.prompt.rules.aie" value="false" source="SYSTEM" />
     <entry key="llm.nextEdit.render.rating.controls" value="true" source="SYSTEM" />
