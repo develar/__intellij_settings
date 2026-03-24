@@ -3,7 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.iml" />
+    <option name="FILE_MASK" value="*.bazel" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
@@ -11,7 +11,6 @@
     <mask>properties</mask>
     <mask>plugin.xml</mask>
     <mask>*.form</mask>
-    <mask>*.bazel</mask>
     <mask>*.json</mask>
     <mask>*.md</mask>
     <mask>FindModel.kt</mask>
@@ -33,5 +32,6 @@
     <mask>*.yaml</mask>
     <mask>*.xml</mask>
     <mask>*.iml</mask>
+    <mask>*.bazel</mask>
   </component>
 </application>
