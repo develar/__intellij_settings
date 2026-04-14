@@ -30,20 +30,20 @@
         <entry key="CodeDocumentation">
           <value>
             <set>
-              <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
-              <option value="Grazie.MLEC.En.MissingArticle" />
               <option value="LanguageTool.EN.OXFORD_SPELLING_Z_NOT_S" />
+              <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
               <option value="LanguageTool.EN.OXFORD_SPELLING_GRAM" />
+              <option value="Grazie.MLEC.En.MissingArticle" />
             </set>
           </value>
         </entry>
         <entry key="CodeComment">
           <value>
             <set>
-              <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
-              <option value="Grazie.MLEC.En.MissingArticle" />
               <option value="LanguageTool.EN.OXFORD_SPELLING_Z_NOT_S" />
+              <option value="Grazie.RuleEngine.En.Grammar.MISSING_ARTICLE" />
               <option value="LanguageTool.EN.OXFORD_SPELLING_GRAM" />
+              <option value="Grazie.MLEC.En.MissingArticle" />
             </set>
           </value>
         </entry>
