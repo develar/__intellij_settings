@@ -10,9 +10,7 @@
     <mask>properties</mask>
     <mask>plugin.xml</mask>
     <mask>*.form</mask>
-    <mask>*.bazel</mask>
     <mask>*.json</mask>
-    <mask>*.md</mask>
     <mask>FindModel.kt</mask>
     <mask>*.java</mask>
     <mask>TESTING-internals.md</mask>
@@ -30,7 +28,9 @@
     <mask>module</mask>
     <mask>*.kt</mask>
     <mask>*.yaml</mask>
-    <mask>*.iml</mask>
+    <mask>*.bazel</mask>
     <mask>*.xml</mask>
+    <mask>*.md</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
