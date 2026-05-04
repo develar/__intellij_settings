@@ -19,6 +19,7 @@
     <entry key="debugger.auto.attach.from.console" value="true" source="SYSTEM" />
     <entry key="llm.ignore.default.prompt.rules.aie" value="false" source="SYSTEM" />
     <entry key="llm.nextEdit.render.rating.controls" value="true" source="SYSTEM" />
+    <entry key="vcs.merge.conflict.iterative.resolution" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
