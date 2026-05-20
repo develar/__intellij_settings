@@ -121,7 +121,9 @@
         <mySelectedPaths>
           <array>
             <item name="" type="" />
-            <item name="Draft Template" type="cbb8eebc:String" />
+            <item name="Kotlin" type="cbb8eebc:String" />
+            <item name="Expressions" type="cbb8eebc:String" />
+            <item name="com.intellij.structuralsearch.plugin.ui.SearchConfiguration@ca6f462e" type="3c4764e4:SearchConfiguration" />
           </array>
         </mySelectedPaths>
       </TreeState>
