@@ -4,5 +4,6 @@
     <option name="defaultScopeName" value="Changes" />
     <option name="SEARCH_SCOPE" value="Changes" />
     <mask>*.yaml</mask>
+    <mask>*.xml</mask>
   </component>
 </application>
