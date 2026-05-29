@@ -877,15 +877,22 @@
     "019e73b7-1810-7c41-a6e6-3989e58fb3fd": {
       "cwd": "/Users/develar/projects/idea-2",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/05/29/rollout-2026-05-29T14-30-39-019e73b7-1810-7c41-a6e6-3989e58fb3fd.jsonl",
-      "updatedAt": 1780057842000,
+      "updatedAt": 1780067293000,
       "frozenCost": {
-        "kind": "UNAVAILABLE"
+        "amountUsd": "25.5171480",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
       }
     },
     "019e73b5-efb3-7e22-9df3-b0454eb3baa2": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/05/29/rollout-2026-05-29T14-29-23-019e73b5-efb3-7e22-9df3-b0454eb3baa2.jsonl",
-      "updatedAt": 1780059711000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-05-29T14-29-23-019e73b5-efb3-7e22-9df3-b0454eb3baa2.jsonl",
+      "updatedAt": 1780059891000,
+      "frozenCost": {
+        "amountUsd": "13.2152960",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
