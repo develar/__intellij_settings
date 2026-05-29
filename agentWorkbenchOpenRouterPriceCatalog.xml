@@ -1,0 +1,4590 @@
+<application>
+  <component name="OpenRouterPriceCatalogService"><![CDATA[{
+  "snapshot": {
+    "fetchedAt": 1780038914779,
+    "entries": [
+      {
+        "id": "stepfun/step-3.7-flash",
+        "canonicalSlug": "stepfun/step-3.7-flash-20260528",
+        "displayName": "StepFun: Step 3.7 Flash",
+        "normalizedNames": [
+          "stepfun-step-3-7-flash",
+          "step-3-7-flash",
+          "stepfun-step-3-7-flash-20260528",
+          "step-3-7-flash-20260528"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.00000115",
+        "cacheReadTokenPriceUsd": "0.00000004"
+      },
+      {
+        "id": "anthropic/claude-opus-4.8-fast",
+        "canonicalSlug": "anthropic/claude-4.8-opus-fast-20260528",
+        "displayName": "Anthropic: Claude Opus 4.8 (Fast)",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-8-fast",
+          "claude-opus-4-8-fast",
+          "anthropic-claude-4-8-opus-fast-20260528",
+          "claude-4-8-opus-fast-20260528"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00005",
+        "cacheReadTokenPriceUsd": "0.000001",
+        "cacheWriteTokenPriceUsd": "0.0000125"
+      },
+      {
+        "id": "anthropic/claude-opus-4.8",
+        "canonicalSlug": "anthropic/claude-4.8-opus-20260528",
+        "displayName": "Anthropic: Claude Opus 4.8",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-8",
+          "claude-opus-4-8",
+          "anthropic-claude-4-8-opus-20260528",
+          "claude-4-8-opus-20260528"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.000025",
+        "cacheReadTokenPriceUsd": "0.0000005",
+        "cacheWriteTokenPriceUsd": "0.00000625"
+      },
+      {
+        "id": "qwen/qwen3.7-max",
+        "canonicalSlug": "qwen/qwen3.7-max-20260520",
+        "displayName": "Qwen: Qwen3.7 Max",
+        "normalizedNames": [
+          "qwen-qwen3-7-max",
+          "qwen3-7-max",
+          "qwen-qwen3-7-max-20260520",
+          "qwen3-7-max-20260520"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00000375",
+        "cacheReadTokenPriceUsd": "0.00000025",
+        "cacheWriteTokenPriceUsd": "0.0000015625"
+      },
+      {
+        "id": "x-ai/grok-build-0.1",
+        "canonicalSlug": "x-ai/grok-build-0.1-20260520",
+        "displayName": "xAI: Grok Build 0.1",
+        "normalizedNames": [
+          "x-ai-grok-build-0-1",
+          "grok-build-0-1",
+          "x-ai-grok-build-0-1-20260520",
+          "grok-build-0-1-20260520",
+          "xai-grok-build-0-1"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "google/gemini-3.5-flash",
+        "canonicalSlug": "google/gemini-3.5-flash-20260519",
+        "displayName": "Google: Gemini 3.5 Flash",
+        "normalizedNames": [
+          "google-gemini-3-5-flash",
+          "gemini-3-5-flash",
+          "google-gemini-3-5-flash-20260519",
+          "gemini-3-5-flash-20260519"
+        ],
+        "promptTokenPriceUsd": "0.0000015",
+        "completionTokenPriceUsd": "0.000009",
+        "cacheReadTokenPriceUsd": "0.00000015",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "anthropic/claude-opus-4.7-fast",
+        "canonicalSlug": "anthropic/claude-4.7-opus-fast-20260512",
+        "displayName": "Anthropic: Claude Opus 4.7 (Fast)",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-7-fast",
+          "claude-opus-4-7-fast",
+          "anthropic-claude-4-7-opus-fast-20260512",
+          "claude-4-7-opus-fast-20260512"
+        ],
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00015",
+        "cacheReadTokenPriceUsd": "0.000003",
+        "cacheWriteTokenPriceUsd": "0.0000375"
+      },
+      {
+        "id": "perceptron/perceptron-mk1",
+        "canonicalSlug": "perceptron/perceptron-mk1-20260512",
+        "displayName": "Perceptron: Perceptron Mk1",
+        "normalizedNames": [
+          "perceptron-perceptron-mk1",
+          "perceptron-mk1",
+          "perceptron-perceptron-mk1-20260512",
+          "perceptron-mk1-20260512"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000015"
+      },
+      {
+        "id": "inclusionai/ring-2.6-1t",
+        "canonicalSlug": "inclusionai/ring-2.6-1t-20260508",
+        "displayName": "inclusionAI: Ring-2.6-1T",
+        "normalizedNames": [
+          "inclusionai-ring-2-6-1t",
+          "ring-2-6-1t",
+          "inclusionai-ring-2-6-1t-20260508",
+          "ring-2-6-1t-20260508"
+        ],
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.000000625",
+        "cacheReadTokenPriceUsd": "0.000000015"
+      },
+      {
+        "id": "google/gemini-3.1-flash-lite",
+        "canonicalSlug": "google/gemini-3.1-flash-lite-20260507",
+        "displayName": "Google: Gemini 3.1 Flash Lite",
+        "normalizedNames": [
+          "google-gemini-3-1-flash-lite",
+          "gemini-3-1-flash-lite",
+          "google-gemini-3-1-flash-lite-20260507",
+          "gemini-3-1-flash-lite-20260507"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.0000015",
+        "cacheReadTokenPriceUsd": "0.000000025",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "openai/gpt-chat-latest",
+        "canonicalSlug": "openai/gpt-chat-latest-20260505",
+        "displayName": "OpenAI: GPT Chat Latest",
+        "normalizedNames": [
+          "openai-gpt-chat-latest",
+          "gpt-chat-latest",
+          "openai-gpt-chat-latest-20260505",
+          "gpt-chat-latest-20260505"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.00003",
+        "cacheReadTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "x-ai/grok-4.3",
+        "canonicalSlug": "x-ai/grok-4.3-20260430",
+        "displayName": "xAI: Grok 4.3",
+        "normalizedNames": [
+          "x-ai-grok-4-3",
+          "grok-4-3",
+          "x-ai-grok-4-3-20260430",
+          "grok-4-3-20260430",
+          "xai-grok-4-3"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.0000025",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "ibm-granite/granite-4.1-8b",
+        "canonicalSlug": "ibm-granite/granite-4.1-8b-20260429",
+        "displayName": "IBM: Granite 4.1 8B",
+        "normalizedNames": [
+          "ibm-granite-granite-4-1-8b",
+          "granite-4-1-8b",
+          "ibm-granite-granite-4-1-8b-20260429",
+          "granite-4-1-8b-20260429",
+          "ibm-granite-4-1-8b"
+        ],
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.0000001",
+        "cacheReadTokenPriceUsd": "0.00000005"
+      },
+      {
+        "id": "mistralai/mistral-medium-3-5",
+        "canonicalSlug": "mistralai/mistral-medium-3.5-20260430",
+        "displayName": "Mistral: Mistral Medium 3.5",
+        "normalizedNames": [
+          "mistralai-mistral-medium-3-5",
+          "mistral-medium-3-5",
+          "mistralai-mistral-medium-3-5-20260430",
+          "mistral-medium-3-5-20260430",
+          "mistral-mistral-medium-3-5"
+        ],
+        "promptTokenPriceUsd": "0.0000015",
+        "completionTokenPriceUsd": "0.0000075"
+      },
+      {
+        "id": "openrouter/owl-alpha",
+        "canonicalSlug": "openrouter/owl-alpha",
+        "displayName": "Owl Alpha",
+        "normalizedNames": [
+          "openrouter-owl-alpha",
+          "owl-alpha"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "canonicalSlug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428",
+        "displayName": "NVIDIA: Nemotron 3 Nano Omni (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free",
+          "nemotron-3-nano-omni-30b-a3b-reasoning-free",
+          "nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-20260428",
+          "nemotron-3-nano-omni-30b-a3b-reasoning-20260428",
+          "nvidia-nemotron-3-nano-omni-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "poolside/laguna-xs.2:free",
+        "canonicalSlug": "poolside/laguna-xs.2-20260421",
+        "displayName": "Poolside: Laguna XS.2 (free)",
+        "normalizedNames": [
+          "poolside-laguna-xs-2-free",
+          "laguna-xs-2-free",
+          "poolside-laguna-xs-2-20260421",
+          "laguna-xs-2-20260421"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "poolside/laguna-m.1:free",
+        "canonicalSlug": "poolside/laguna-m.1-20260312",
+        "displayName": "Poolside: Laguna M.1 (free)",
+        "normalizedNames": [
+          "poolside-laguna-m-1-free",
+          "laguna-m-1-free",
+          "poolside-laguna-m-1-20260312",
+          "laguna-m-1-20260312"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "~anthropic/claude-haiku-latest",
+        "canonicalSlug": "~anthropic/claude-haiku-latest",
+        "displayName": "Anthropic Claude Haiku Latest",
+        "normalizedNames": [
+          "anthropic-claude-haiku-latest",
+          "claude-haiku-latest"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000005",
+        "cacheReadTokenPriceUsd": "0.0000001",
+        "cacheWriteTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "~openai/gpt-mini-latest",
+        "canonicalSlug": "~openai/gpt-mini-latest",
+        "displayName": "OpenAI GPT Mini Latest",
+        "normalizedNames": [
+          "openai-gpt-mini-latest",
+          "gpt-mini-latest"
+        ],
+        "promptTokenPriceUsd": "0.00000075",
+        "completionTokenPriceUsd": "0.0000045",
+        "cacheReadTokenPriceUsd": "0.000000075"
+      },
+      {
+        "id": "~google/gemini-pro-latest",
+        "canonicalSlug": "~google/gemini-pro-latest",
+        "displayName": "Google Gemini Pro Latest",
+        "normalizedNames": [
+          "google-gemini-pro-latest",
+          "gemini-pro-latest"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000012",
+        "cacheReadTokenPriceUsd": "0.0000002",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "~moonshotai/kimi-latest",
+        "canonicalSlug": "~moonshotai/kimi-latest",
+        "displayName": "MoonshotAI Kimi Latest",
+        "normalizedNames": [
+          "moonshotai-kimi-latest",
+          "kimi-latest"
+        ],
+        "promptTokenPriceUsd": "0.00000073",
+        "completionTokenPriceUsd": "0.00000349",
+        "cacheReadTokenPriceUsd": "0.00000025"
+      },
+      {
+        "id": "~google/gemini-flash-latest",
+        "canonicalSlug": "~google/gemini-flash-latest",
+        "displayName": "Google Gemini Flash Latest",
+        "normalizedNames": [
+          "google-gemini-flash-latest",
+          "gemini-flash-latest"
+        ],
+        "promptTokenPriceUsd": "0.0000015",
+        "completionTokenPriceUsd": "0.000009",
+        "cacheReadTokenPriceUsd": "0.00000015",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "~anthropic/claude-sonnet-latest",
+        "canonicalSlug": "~anthropic/claude-sonnet-latest",
+        "displayName": "Anthropic Claude Sonnet Latest",
+        "normalizedNames": [
+          "anthropic-claude-sonnet-latest",
+          "claude-sonnet-latest"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000015",
+        "cacheReadTokenPriceUsd": "0.0000003",
+        "cacheWriteTokenPriceUsd": "0.00000375"
+      },
+      {
+        "id": "~openai/gpt-latest",
+        "canonicalSlug": "~openai/gpt-latest",
+        "displayName": "OpenAI GPT Latest",
+        "normalizedNames": [
+          "openai-gpt-latest",
+          "gpt-latest"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.00003",
+        "cacheReadTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "qwen/qwen3.5-plus-20260420",
+        "canonicalSlug": "qwen/qwen3.5-plus-20260420",
+        "displayName": "Qwen: Qwen3.5 Plus 2026-04-20",
+        "normalizedNames": [
+          "qwen-qwen3-5-plus-20260420",
+          "qwen3-5-plus-20260420",
+          "qwen-qwen3-5-plus-2026-04-20"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000018",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "qwen/qwen3.6-flash",
+        "canonicalSlug": "qwen/qwen3.6-flash",
+        "displayName": "Qwen: Qwen3.6 Flash",
+        "normalizedNames": [
+          "qwen-qwen3-6-flash",
+          "qwen3-6-flash"
+        ],
+        "promptTokenPriceUsd": "0.0000001875",
+        "completionTokenPriceUsd": "0.000001125",
+        "cacheWriteTokenPriceUsd": "0.000000234375"
+      },
+      {
+        "id": "qwen/qwen3.6-35b-a3b",
+        "canonicalSlug": "qwen/qwen3.6-35b-a3b-20260415",
+        "displayName": "Qwen: Qwen3.6 35B A3B",
+        "normalizedNames": [
+          "qwen-qwen3-6-35b-a3b",
+          "qwen3-6-35b-a3b",
+          "qwen-qwen3-6-35b-a3b-20260415",
+          "qwen3-6-35b-a3b-20260415"
+        ],
+        "promptTokenPriceUsd": "0.00000014",
+        "completionTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "qwen/qwen3.6-max-preview",
+        "canonicalSlug": "qwen/qwen3.6-max-preview-20260420",
+        "displayName": "Qwen: Qwen3.6 Max Preview",
+        "normalizedNames": [
+          "qwen-qwen3-6-max-preview",
+          "qwen3-6-max-preview",
+          "qwen-qwen3-6-max-preview-20260420",
+          "qwen3-6-max-preview-20260420"
+        ],
+        "promptTokenPriceUsd": "0.00000104",
+        "completionTokenPriceUsd": "0.00000624",
+        "cacheWriteTokenPriceUsd": "0.0000013"
+      },
+      {
+        "id": "qwen/qwen3.6-27b",
+        "canonicalSlug": "qwen/qwen3.6-27b-20260422",
+        "displayName": "Qwen: Qwen3.6 27B",
+        "normalizedNames": [
+          "qwen-qwen3-6-27b",
+          "qwen3-6-27b",
+          "qwen-qwen3-6-27b-20260422",
+          "qwen3-6-27b-20260422"
+        ],
+        "promptTokenPriceUsd": "0.00000029",
+        "completionTokenPriceUsd": "0.0000032"
+      },
+      {
+        "id": "openai/gpt-5.5-pro",
+        "canonicalSlug": "openai/gpt-5.5-pro-20260423",
+        "displayName": "OpenAI: GPT-5.5 Pro",
+        "normalizedNames": [
+          "openai-gpt-5-5-pro",
+          "gpt-5-5-pro",
+          "openai-gpt-5-5-pro-20260423",
+          "gpt-5-5-pro-20260423"
+        ],
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00018"
+      },
+      {
+        "id": "openai/gpt-5.5",
+        "canonicalSlug": "openai/gpt-5.5-20260423",
+        "displayName": "OpenAI: GPT-5.5",
+        "normalizedNames": [
+          "openai-gpt-5-5",
+          "gpt-5-5",
+          "openai-gpt-5-5-20260423",
+          "gpt-5-5-20260423"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.00003",
+        "cacheReadTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "deepseek/deepseek-v4-pro",
+        "canonicalSlug": "deepseek/deepseek-v4-pro-20260423",
+        "displayName": "DeepSeek: DeepSeek V4 Pro",
+        "normalizedNames": [
+          "deepseek-deepseek-v4-pro",
+          "deepseek-v4-pro",
+          "deepseek-deepseek-v4-pro-20260423",
+          "deepseek-v4-pro-20260423"
+        ],
+        "promptTokenPriceUsd": "0.000000435",
+        "completionTokenPriceUsd": "0.00000087",
+        "cacheReadTokenPriceUsd": "0.000000003625"
+      },
+      {
+        "id": "deepseek/deepseek-v4-flash:free",
+        "canonicalSlug": "deepseek/deepseek-v4-flash-20260423",
+        "displayName": "DeepSeek: DeepSeek V4 Flash (free)",
+        "normalizedNames": [
+          "deepseek-deepseek-v4-flash-free",
+          "deepseek-v4-flash-free",
+          "deepseek-deepseek-v4-flash-20260423",
+          "deepseek-v4-flash-20260423"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "deepseek/deepseek-v4-flash",
+        "canonicalSlug": "deepseek/deepseek-v4-flash-20260423",
+        "displayName": "DeepSeek: DeepSeek V4 Flash",
+        "normalizedNames": [
+          "deepseek-deepseek-v4-flash",
+          "deepseek-v4-flash",
+          "deepseek-deepseek-v4-flash-20260423",
+          "deepseek-v4-flash-20260423"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000002",
+        "cacheReadTokenPriceUsd": "0.00000002"
+      },
+      {
+        "id": "inclusionai/ling-2.6-1t",
+        "canonicalSlug": "inclusionai/ling-2.6-1t-20260423",
+        "displayName": "inclusionAI: Ling-2.6-1T",
+        "normalizedNames": [
+          "inclusionai-ling-2-6-1t",
+          "ling-2-6-1t",
+          "inclusionai-ling-2-6-1t-20260423",
+          "ling-2-6-1t-20260423"
+        ],
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.000000625",
+        "cacheReadTokenPriceUsd": "0.000000015"
+      },
+      {
+        "id": "tencent/hy3-preview",
+        "canonicalSlug": "tencent/hy3-preview-20260421",
+        "displayName": "Tencent: Hy3 preview",
+        "normalizedNames": [
+          "tencent-hy3-preview",
+          "hy3-preview",
+          "tencent-hy3-preview-20260421",
+          "hy3-preview-20260421"
+        ],
+        "promptTokenPriceUsd": "0.000000063",
+        "completionTokenPriceUsd": "0.00000021",
+        "cacheReadTokenPriceUsd": "0.000000021"
+      },
+      {
+        "id": "xiaomi/mimo-v2.5-pro",
+        "canonicalSlug": "xiaomi/mimo-v2.5-pro-20260422",
+        "displayName": "Xiaomi: MiMo-V2.5-Pro",
+        "normalizedNames": [
+          "xiaomi-mimo-v2-5-pro",
+          "mimo-v2-5-pro",
+          "xiaomi-mimo-v2-5-pro-20260422",
+          "mimo-v2-5-pro-20260422"
+        ],
+        "promptTokenPriceUsd": "0.000000435",
+        "completionTokenPriceUsd": "0.00000087",
+        "cacheReadTokenPriceUsd": "0.0000000036"
+      },
+      {
+        "id": "xiaomi/mimo-v2.5",
+        "canonicalSlug": "xiaomi/mimo-v2.5-20260422",
+        "displayName": "Xiaomi: MiMo-V2.5",
+        "normalizedNames": [
+          "xiaomi-mimo-v2-5",
+          "mimo-v2-5",
+          "xiaomi-mimo-v2-5-20260422",
+          "mimo-v2-5-20260422"
+        ],
+        "promptTokenPriceUsd": "0.00000014",
+        "completionTokenPriceUsd": "0.00000028",
+        "cacheReadTokenPriceUsd": "0.0000000028"
+      },
+      {
+        "id": "openai/gpt-5.4-image-2",
+        "canonicalSlug": "openai/gpt-5.4-image-2-20260421",
+        "displayName": "OpenAI: GPT-5.4 Image 2",
+        "normalizedNames": [
+          "openai-gpt-5-4-image-2",
+          "gpt-5-4-image-2",
+          "openai-gpt-5-4-image-2-20260421",
+          "gpt-5-4-image-2-20260421"
+        ],
+        "promptTokenPriceUsd": "0.000008",
+        "completionTokenPriceUsd": "0.000015",
+        "cacheReadTokenPriceUsd": "0.000002"
+      },
+      {
+        "id": "inclusionai/ling-2.6-flash",
+        "canonicalSlug": "inclusionai/ling-2.6-flash-20260421",
+        "displayName": "inclusionAI: Ling-2.6-flash",
+        "normalizedNames": [
+          "inclusionai-ling-2-6-flash",
+          "ling-2-6-flash",
+          "inclusionai-ling-2-6-flash-20260421",
+          "ling-2-6-flash-20260421"
+        ],
+        "promptTokenPriceUsd": "0.00000001",
+        "completionTokenPriceUsd": "0.00000003",
+        "cacheReadTokenPriceUsd": "0.000000002"
+      },
+      {
+        "id": "~anthropic/claude-opus-latest",
+        "canonicalSlug": "~anthropic/claude-opus-latest",
+        "displayName": "Anthropic: Claude Opus Latest",
+        "normalizedNames": [
+          "anthropic-claude-opus-latest",
+          "claude-opus-latest"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.000025",
+        "cacheReadTokenPriceUsd": "0.0000005",
+        "cacheWriteTokenPriceUsd": "0.00000625"
+      },
+      {
+        "id": "openrouter/pareto-code",
+        "canonicalSlug": "openrouter/pareto-code",
+        "displayName": "Pareto Code Router",
+        "normalizedNames": [
+          "openrouter-pareto-code",
+          "pareto-code",
+          "pareto-code-router"
+        ],
+        "promptTokenPriceUsd": "-1",
+        "completionTokenPriceUsd": "-1"
+      },
+      {
+        "id": "moonshotai/kimi-k2.6:free",
+        "canonicalSlug": "moonshotai/kimi-k2.6-20260420",
+        "displayName": "MoonshotAI: Kimi K2.6 (free)",
+        "normalizedNames": [
+          "moonshotai-kimi-k2-6-free",
+          "kimi-k2-6-free",
+          "moonshotai-kimi-k2-6-20260420",
+          "kimi-k2-6-20260420"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "moonshotai/kimi-k2.6",
+        "canonicalSlug": "moonshotai/kimi-k2.6-20260420",
+        "displayName": "MoonshotAI: Kimi K2.6",
+        "normalizedNames": [
+          "moonshotai-kimi-k2-6",
+          "kimi-k2-6",
+          "moonshotai-kimi-k2-6-20260420",
+          "kimi-k2-6-20260420"
+        ],
+        "promptTokenPriceUsd": "0.00000073",
+        "completionTokenPriceUsd": "0.00000349",
+        "cacheReadTokenPriceUsd": "0.00000025"
+      },
+      {
+        "id": "anthropic/claude-opus-4.7",
+        "canonicalSlug": "anthropic/claude-4.7-opus-20260416",
+        "displayName": "Anthropic: Claude Opus 4.7",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-7",
+          "claude-opus-4-7",
+          "anthropic-claude-4-7-opus-20260416",
+          "claude-4-7-opus-20260416"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.000025",
+        "cacheReadTokenPriceUsd": "0.0000005",
+        "cacheWriteTokenPriceUsd": "0.00000625"
+      },
+      {
+        "id": "anthropic/claude-opus-4.6-fast",
+        "canonicalSlug": "anthropic/claude-4.6-opus-fast-20260407",
+        "displayName": "Anthropic: Claude Opus 4.6 (Fast)",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-6-fast",
+          "claude-opus-4-6-fast",
+          "anthropic-claude-4-6-opus-fast-20260407",
+          "claude-4-6-opus-fast-20260407"
+        ],
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00015",
+        "cacheReadTokenPriceUsd": "0.000003",
+        "cacheWriteTokenPriceUsd": "0.0000375"
+      },
+      {
+        "id": "z-ai/glm-5.1",
+        "canonicalSlug": "z-ai/glm-5.1-20260406",
+        "displayName": "Z.ai: GLM 5.1",
+        "normalizedNames": [
+          "z-ai-glm-5-1",
+          "glm-5-1",
+          "z-ai-glm-5-1-20260406",
+          "glm-5-1-20260406"
+        ],
+        "promptTokenPriceUsd": "0.00000098",
+        "completionTokenPriceUsd": "0.00000308",
+        "cacheReadTokenPriceUsd": "0.000000182"
+      },
+      {
+        "id": "google/gemma-4-26b-a4b-it:free",
+        "canonicalSlug": "google/gemma-4-26b-a4b-it-20260403",
+        "displayName": "Google: Gemma 4 26B A4B  (free)",
+        "normalizedNames": [
+          "google-gemma-4-26b-a4b-it-free",
+          "gemma-4-26b-a4b-it-free",
+          "google-gemma-4-26b-a4b-it-20260403",
+          "gemma-4-26b-a4b-it-20260403",
+          "google-gemma-4-26b-a4b-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "google/gemma-4-26b-a4b-it",
+        "canonicalSlug": "google/gemma-4-26b-a4b-it-20260403",
+        "displayName": "Google: Gemma 4 26B A4B ",
+        "normalizedNames": [
+          "google-gemma-4-26b-a4b-it",
+          "gemma-4-26b-a4b-it",
+          "google-gemma-4-26b-a4b-it-20260403",
+          "gemma-4-26b-a4b-it-20260403",
+          "google-gemma-4-26b-a4b"
+        ],
+        "promptTokenPriceUsd": "0.00000006",
+        "completionTokenPriceUsd": "0.00000033"
+      },
+      {
+        "id": "google/gemma-4-31b-it:free",
+        "canonicalSlug": "google/gemma-4-31b-it-20260402",
+        "displayName": "Google: Gemma 4 31B (free)",
+        "normalizedNames": [
+          "google-gemma-4-31b-it-free",
+          "gemma-4-31b-it-free",
+          "google-gemma-4-31b-it-20260402",
+          "gemma-4-31b-it-20260402",
+          "google-gemma-4-31b-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "google/gemma-4-31b-it",
+        "canonicalSlug": "google/gemma-4-31b-it-20260402",
+        "displayName": "Google: Gemma 4 31B",
+        "normalizedNames": [
+          "google-gemma-4-31b-it",
+          "gemma-4-31b-it",
+          "google-gemma-4-31b-it-20260402",
+          "gemma-4-31b-it-20260402",
+          "google-gemma-4-31b"
+        ],
+        "promptTokenPriceUsd": "0.00000012",
+        "completionTokenPriceUsd": "0.00000037"
+      },
+      {
+        "id": "qwen/qwen3.6-plus",
+        "canonicalSlug": "qwen/qwen3.6-plus-04-02",
+        "displayName": "Qwen: Qwen3.6 Plus",
+        "normalizedNames": [
+          "qwen-qwen3-6-plus",
+          "qwen3-6-plus",
+          "qwen-qwen3-6-plus-04-02",
+          "qwen3-6-plus-04-02"
+        ],
+        "promptTokenPriceUsd": "0.000000325",
+        "completionTokenPriceUsd": "0.00000195",
+        "cacheWriteTokenPriceUsd": "0.00000040625"
+      },
+      {
+        "id": "z-ai/glm-5v-turbo",
+        "canonicalSlug": "z-ai/glm-5v-turbo-20260401",
+        "displayName": "Z.ai: GLM 5V Turbo",
+        "normalizedNames": [
+          "z-ai-glm-5v-turbo",
+          "glm-5v-turbo",
+          "z-ai-glm-5v-turbo-20260401",
+          "glm-5v-turbo-20260401"
+        ],
+        "promptTokenPriceUsd": "0.0000012",
+        "completionTokenPriceUsd": "0.000004",
+        "cacheReadTokenPriceUsd": "0.00000024"
+      },
+      {
+        "id": "arcee-ai/trinity-large-thinking",
+        "canonicalSlug": "arcee-ai/trinity-large-thinking",
+        "displayName": "Arcee AI: Trinity Large Thinking",
+        "normalizedNames": [
+          "arcee-ai-trinity-large-thinking",
+          "trinity-large-thinking"
+        ],
+        "promptTokenPriceUsd": "0.00000022",
+        "completionTokenPriceUsd": "0.00000085",
+        "cacheReadTokenPriceUsd": "0.00000006"
+      },
+      {
+        "id": "x-ai/grok-4.20-multi-agent",
+        "canonicalSlug": "x-ai/grok-4.20-multi-agent-20260309",
+        "displayName": "xAI: Grok 4.20 Multi-Agent",
+        "normalizedNames": [
+          "x-ai-grok-4-20-multi-agent",
+          "grok-4-20-multi-agent",
+          "x-ai-grok-4-20-multi-agent-20260309",
+          "grok-4-20-multi-agent-20260309",
+          "xai-grok-4-20-multi-agent"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000006",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "x-ai/grok-4.20",
+        "canonicalSlug": "x-ai/grok-4.20-20260309",
+        "displayName": "xAI: Grok 4.20",
+        "normalizedNames": [
+          "x-ai-grok-4-20",
+          "grok-4-20",
+          "x-ai-grok-4-20-20260309",
+          "grok-4-20-20260309",
+          "xai-grok-4-20"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.0000025",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "google/lyria-3-pro-preview",
+        "canonicalSlug": "google/lyria-3-pro-preview-20260330",
+        "displayName": "Google: Lyria 3 Pro Preview",
+        "normalizedNames": [
+          "google-lyria-3-pro-preview",
+          "lyria-3-pro-preview",
+          "google-lyria-3-pro-preview-20260330",
+          "lyria-3-pro-preview-20260330"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "google/lyria-3-clip-preview",
+        "canonicalSlug": "google/lyria-3-clip-preview-20260330",
+        "displayName": "Google: Lyria 3 Clip Preview",
+        "normalizedNames": [
+          "google-lyria-3-clip-preview",
+          "lyria-3-clip-preview",
+          "google-lyria-3-clip-preview-20260330",
+          "lyria-3-clip-preview-20260330"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "kwaipilot/kat-coder-pro-v2",
+        "canonicalSlug": "kwaipilot/kat-coder-pro-v2-20260327",
+        "displayName": "Kwaipilot: KAT-Coder-Pro V2",
+        "normalizedNames": [
+          "kwaipilot-kat-coder-pro-v2",
+          "kat-coder-pro-v2",
+          "kwaipilot-kat-coder-pro-v2-20260327",
+          "kat-coder-pro-v2-20260327"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000012",
+        "cacheReadTokenPriceUsd": "0.00000006"
+      },
+      {
+        "id": "rekaai/reka-edge",
+        "canonicalSlug": "rekaai/reka-edge-2603",
+        "displayName": "Reka Edge",
+        "normalizedNames": [
+          "rekaai-reka-edge",
+          "reka-edge",
+          "rekaai-reka-edge-2603",
+          "reka-edge-2603"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000001"
+      },
+      {
+        "id": "xiaomi/mimo-v2-omni",
+        "canonicalSlug": "xiaomi/mimo-v2-omni-20260318",
+        "displayName": "Xiaomi: MiMo-V2-Omni",
+        "normalizedNames": [
+          "xiaomi-mimo-v2-omni",
+          "mimo-v2-omni",
+          "xiaomi-mimo-v2-omni-20260318",
+          "mimo-v2-omni-20260318"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "xiaomi/mimo-v2-pro",
+        "canonicalSlug": "xiaomi/mimo-v2-pro-20260318",
+        "displayName": "Xiaomi: MiMo-V2-Pro",
+        "normalizedNames": [
+          "xiaomi-mimo-v2-pro",
+          "mimo-v2-pro",
+          "xiaomi-mimo-v2-pro-20260318",
+          "mimo-v2-pro-20260318"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000003",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "minimax/minimax-m2.7",
+        "canonicalSlug": "minimax/minimax-m2.7-20260318",
+        "displayName": "MiniMax: MiniMax M2.7",
+        "normalizedNames": [
+          "minimax-minimax-m2-7",
+          "minimax-m2-7",
+          "minimax-minimax-m2-7-20260318",
+          "minimax-m2-7-20260318"
+        ],
+        "promptTokenPriceUsd": "0.000000279",
+        "completionTokenPriceUsd": "0.0000012"
+      },
+      {
+        "id": "openai/gpt-5.4-nano",
+        "canonicalSlug": "openai/gpt-5.4-nano-20260317",
+        "displayName": "OpenAI: GPT-5.4 Nano",
+        "normalizedNames": [
+          "openai-gpt-5-4-nano",
+          "gpt-5-4-nano",
+          "openai-gpt-5-4-nano-20260317",
+          "gpt-5-4-nano-20260317"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.00000125",
+        "cacheReadTokenPriceUsd": "0.00000002"
+      },
+      {
+        "id": "openai/gpt-5.4-mini",
+        "canonicalSlug": "openai/gpt-5.4-mini-20260317",
+        "displayName": "OpenAI: GPT-5.4 Mini",
+        "normalizedNames": [
+          "openai-gpt-5-4-mini",
+          "gpt-5-4-mini",
+          "openai-gpt-5-4-mini-20260317",
+          "gpt-5-4-mini-20260317"
+        ],
+        "promptTokenPriceUsd": "0.00000075",
+        "completionTokenPriceUsd": "0.0000045",
+        "cacheReadTokenPriceUsd": "0.000000075"
+      },
+      {
+        "id": "mistralai/mistral-small-2603",
+        "canonicalSlug": "mistralai/mistral-small-2603",
+        "displayName": "Mistral: Mistral Small 4",
+        "normalizedNames": [
+          "mistralai-mistral-small-2603",
+          "mistral-small-2603",
+          "mistral-mistral-small-4"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006",
+        "cacheReadTokenPriceUsd": "0.000000015"
+      },
+      {
+        "id": "z-ai/glm-5-turbo",
+        "canonicalSlug": "z-ai/glm-5-turbo-20260315",
+        "displayName": "Z.ai: GLM 5 Turbo",
+        "normalizedNames": [
+          "z-ai-glm-5-turbo",
+          "glm-5-turbo",
+          "z-ai-glm-5-turbo-20260315",
+          "glm-5-turbo-20260315"
+        ],
+        "promptTokenPriceUsd": "0.0000012",
+        "completionTokenPriceUsd": "0.000004",
+        "cacheReadTokenPriceUsd": "0.00000024"
+      },
+      {
+        "id": "nvidia/nemotron-3-super-120b-a12b:free",
+        "canonicalSlug": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "displayName": "NVIDIA: Nemotron 3 Super (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-3-super-120b-a12b-free",
+          "nemotron-3-super-120b-a12b-free",
+          "nvidia-nemotron-3-super-120b-a12b-20230311",
+          "nemotron-3-super-120b-a12b-20230311",
+          "nvidia-nemotron-3-super-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nvidia/nemotron-3-super-120b-a12b",
+        "canonicalSlug": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "displayName": "NVIDIA: Nemotron 3 Super",
+        "normalizedNames": [
+          "nvidia-nemotron-3-super-120b-a12b",
+          "nemotron-3-super-120b-a12b",
+          "nvidia-nemotron-3-super-120b-a12b-20230311",
+          "nemotron-3-super-120b-a12b-20230311",
+          "nvidia-nemotron-3-super"
+        ],
+        "promptTokenPriceUsd": "0.00000009",
+        "completionTokenPriceUsd": "0.00000045"
+      },
+      {
+        "id": "bytedance-seed/seed-2.0-lite",
+        "canonicalSlug": "bytedance-seed/seed-2.0-lite-20260309",
+        "displayName": "ByteDance Seed: Seed-2.0-Lite",
+        "normalizedNames": [
+          "bytedance-seed-seed-2-0-lite",
+          "seed-2-0-lite",
+          "bytedance-seed-seed-2-0-lite-20260309",
+          "seed-2-0-lite-20260309"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.000002"
+      },
+      {
+        "id": "qwen/qwen3.5-9b",
+        "canonicalSlug": "qwen/qwen3.5-9b-20260310",
+        "displayName": "Qwen: Qwen3.5-9B",
+        "normalizedNames": [
+          "qwen-qwen3-5-9b",
+          "qwen3-5-9b",
+          "qwen-qwen3-5-9b-20260310",
+          "qwen3-5-9b-20260310"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000015"
+      },
+      {
+        "id": "openai/gpt-5.4-pro",
+        "canonicalSlug": "openai/gpt-5.4-pro-20260305",
+        "displayName": "OpenAI: GPT-5.4 Pro",
+        "normalizedNames": [
+          "openai-gpt-5-4-pro",
+          "gpt-5-4-pro",
+          "openai-gpt-5-4-pro-20260305",
+          "gpt-5-4-pro-20260305"
+        ],
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00018"
+      },
+      {
+        "id": "openai/gpt-5.4",
+        "canonicalSlug": "openai/gpt-5.4-20260305",
+        "displayName": "OpenAI: GPT-5.4",
+        "normalizedNames": [
+          "openai-gpt-5-4",
+          "gpt-5-4",
+          "openai-gpt-5-4-20260305",
+          "gpt-5-4-20260305"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.000015",
+        "cacheReadTokenPriceUsd": "0.00000025"
+      },
+      {
+        "id": "inception/mercury-2",
+        "canonicalSlug": "inception/mercury-2-20260304",
+        "displayName": "Inception: Mercury 2",
+        "normalizedNames": [
+          "inception-mercury-2",
+          "mercury-2",
+          "inception-mercury-2-20260304",
+          "mercury-2-20260304"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.00000075",
+        "cacheReadTokenPriceUsd": "0.000000025"
+      },
+      {
+        "id": "openai/gpt-5.3-chat",
+        "canonicalSlug": "openai/gpt-5.3-chat-20260303",
+        "displayName": "OpenAI: GPT-5.3 Chat",
+        "normalizedNames": [
+          "openai-gpt-5-3-chat",
+          "gpt-5-3-chat",
+          "openai-gpt-5-3-chat-20260303",
+          "gpt-5-3-chat-20260303"
+        ],
+        "promptTokenPriceUsd": "0.00000175",
+        "completionTokenPriceUsd": "0.000014",
+        "cacheReadTokenPriceUsd": "0.000000175"
+      },
+      {
+        "id": "google/gemini-3.1-flash-lite-preview",
+        "canonicalSlug": "google/gemini-3.1-flash-lite-preview-20260303",
+        "displayName": "Google: Gemini 3.1 Flash Lite Preview",
+        "normalizedNames": [
+          "google-gemini-3-1-flash-lite-preview",
+          "gemini-3-1-flash-lite-preview",
+          "google-gemini-3-1-flash-lite-preview-20260303",
+          "gemini-3-1-flash-lite-preview-20260303"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.0000015",
+        "cacheReadTokenPriceUsd": "0.000000025",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "bytedance-seed/seed-2.0-mini",
+        "canonicalSlug": "bytedance-seed/seed-2.0-mini-20260224",
+        "displayName": "ByteDance Seed: Seed-2.0-Mini",
+        "normalizedNames": [
+          "bytedance-seed-seed-2-0-mini",
+          "seed-2-0-mini",
+          "bytedance-seed-seed-2-0-mini-20260224",
+          "seed-2-0-mini-20260224"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "google/gemini-3.1-flash-image-preview",
+        "canonicalSlug": "google/gemini-3.1-flash-image-preview-20260226",
+        "displayName": "Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+        "normalizedNames": [
+          "google-gemini-3-1-flash-image-preview",
+          "gemini-3-1-flash-image-preview",
+          "google-gemini-3-1-flash-image-preview-20260226",
+          "gemini-3-1-flash-image-preview-20260226",
+          "google-nano-banana-2-gemini-3-1-flash-image-preview"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.000003"
+      },
+      {
+        "id": "qwen/qwen3.5-35b-a3b",
+        "canonicalSlug": "qwen/qwen3.5-35b-a3b-20260224",
+        "displayName": "Qwen: Qwen3.5-35B-A3B",
+        "normalizedNames": [
+          "qwen-qwen3-5-35b-a3b",
+          "qwen3-5-35b-a3b",
+          "qwen-qwen3-5-35b-a3b-20260224",
+          "qwen3-5-35b-a3b-20260224"
+        ],
+        "promptTokenPriceUsd": "0.000000139",
+        "completionTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "qwen/qwen3.5-27b",
+        "canonicalSlug": "qwen/qwen3.5-27b-20260224",
+        "displayName": "Qwen: Qwen3.5-27B",
+        "normalizedNames": [
+          "qwen-qwen3-5-27b",
+          "qwen3-5-27b",
+          "qwen-qwen3-5-27b-20260224",
+          "qwen3-5-27b-20260224"
+        ],
+        "promptTokenPriceUsd": "0.000000195",
+        "completionTokenPriceUsd": "0.00000156"
+      },
+      {
+        "id": "qwen/qwen3.5-122b-a10b",
+        "canonicalSlug": "qwen/qwen3.5-122b-a10b-20260224",
+        "displayName": "Qwen: Qwen3.5-122B-A10B",
+        "normalizedNames": [
+          "qwen-qwen3-5-122b-a10b",
+          "qwen3-5-122b-a10b",
+          "qwen-qwen3-5-122b-a10b-20260224",
+          "qwen3-5-122b-a10b-20260224"
+        ],
+        "promptTokenPriceUsd": "0.00000026",
+        "completionTokenPriceUsd": "0.00000208"
+      },
+      {
+        "id": "qwen/qwen3.5-flash-02-23",
+        "canonicalSlug": "qwen/qwen3.5-flash-20260224",
+        "displayName": "Qwen: Qwen3.5-Flash",
+        "normalizedNames": [
+          "qwen-qwen3-5-flash-02-23",
+          "qwen3-5-flash-02-23",
+          "qwen-qwen3-5-flash-20260224",
+          "qwen3-5-flash-20260224",
+          "qwen-qwen3-5-flash"
+        ],
+        "promptTokenPriceUsd": "0.000000065",
+        "completionTokenPriceUsd": "0.00000026"
+      },
+      {
+        "id": "liquid/lfm-2-24b-a2b",
+        "canonicalSlug": "liquid/lfm-2-24b-a2b-20260224",
+        "displayName": "LiquidAI: LFM2-24B-A2B",
+        "normalizedNames": [
+          "liquid-lfm-2-24b-a2b",
+          "lfm-2-24b-a2b",
+          "liquid-lfm-2-24b-a2b-20260224",
+          "lfm-2-24b-a2b-20260224",
+          "liquidai-lfm2-24b-a2b"
+        ],
+        "promptTokenPriceUsd": "0.00000003",
+        "completionTokenPriceUsd": "0.00000012"
+      },
+      {
+        "id": "google/gemini-3.1-pro-preview-customtools",
+        "canonicalSlug": "google/gemini-3.1-pro-preview-customtools-20260219",
+        "displayName": "Google: Gemini 3.1 Pro Preview Custom Tools",
+        "normalizedNames": [
+          "google-gemini-3-1-pro-preview-customtools",
+          "gemini-3-1-pro-preview-customtools",
+          "google-gemini-3-1-pro-preview-customtools-20260219",
+          "gemini-3-1-pro-preview-customtools-20260219",
+          "google-gemini-3-1-pro-preview-custom-tools"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000012",
+        "cacheReadTokenPriceUsd": "0.0000002",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "openai/gpt-5.3-codex",
+        "canonicalSlug": "openai/gpt-5.3-codex-20260224",
+        "displayName": "OpenAI: GPT-5.3-Codex",
+        "normalizedNames": [
+          "openai-gpt-5-3-codex",
+          "gpt-5-3-codex",
+          "openai-gpt-5-3-codex-20260224",
+          "gpt-5-3-codex-20260224"
+        ],
+        "promptTokenPriceUsd": "0.00000175",
+        "completionTokenPriceUsd": "0.000014",
+        "cacheReadTokenPriceUsd": "0.000000175"
+      },
+      {
+        "id": "aion-labs/aion-2.0",
+        "canonicalSlug": "aion-labs/aion-2.0-20260223",
+        "displayName": "AionLabs: Aion-2.0",
+        "normalizedNames": [
+          "aion-labs-aion-2-0",
+          "aion-2-0",
+          "aion-labs-aion-2-0-20260223",
+          "aion-2-0-20260223",
+          "aionlabs-aion-2-0"
+        ],
+        "promptTokenPriceUsd": "0.0000008",
+        "completionTokenPriceUsd": "0.0000016",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "google/gemini-3.1-pro-preview",
+        "canonicalSlug": "google/gemini-3.1-pro-preview-20260219",
+        "displayName": "Google: Gemini 3.1 Pro Preview",
+        "normalizedNames": [
+          "google-gemini-3-1-pro-preview",
+          "gemini-3-1-pro-preview",
+          "google-gemini-3-1-pro-preview-20260219",
+          "gemini-3-1-pro-preview-20260219"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000012",
+        "cacheReadTokenPriceUsd": "0.0000002",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "anthropic/claude-sonnet-4.6",
+        "canonicalSlug": "anthropic/claude-4.6-sonnet-20260217",
+        "displayName": "Anthropic: Claude Sonnet 4.6",
+        "normalizedNames": [
+          "anthropic-claude-sonnet-4-6",
+          "claude-sonnet-4-6",
+          "anthropic-claude-4-6-sonnet-20260217",
+          "claude-4-6-sonnet-20260217"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000015",
+        "cacheReadTokenPriceUsd": "0.0000003",
+        "cacheWriteTokenPriceUsd": "0.00000375"
+      },
+      {
+        "id": "qwen/qwen3.5-plus-02-15",
+        "canonicalSlug": "qwen/qwen3.5-plus-20260216",
+        "displayName": "Qwen: Qwen3.5 Plus 2026-02-15",
+        "normalizedNames": [
+          "qwen-qwen3-5-plus-02-15",
+          "qwen3-5-plus-02-15",
+          "qwen-qwen3-5-plus-20260216",
+          "qwen3-5-plus-20260216",
+          "qwen-qwen3-5-plus-2026-02-15"
+        ],
+        "promptTokenPriceUsd": "0.00000026",
+        "completionTokenPriceUsd": "0.00000156"
+      },
+      {
+        "id": "qwen/qwen3.5-397b-a17b",
+        "canonicalSlug": "qwen/qwen3.5-397b-a17b-20260216",
+        "displayName": "Qwen: Qwen3.5 397B A17B",
+        "normalizedNames": [
+          "qwen-qwen3-5-397b-a17b",
+          "qwen3-5-397b-a17b",
+          "qwen-qwen3-5-397b-a17b-20260216",
+          "qwen3-5-397b-a17b-20260216"
+        ],
+        "promptTokenPriceUsd": "0.00000039",
+        "completionTokenPriceUsd": "0.00000234"
+      },
+      {
+        "id": "minimax/minimax-m2.5:free",
+        "canonicalSlug": "minimax/minimax-m2.5-20260211",
+        "displayName": "MiniMax: MiniMax M2.5 (free)",
+        "normalizedNames": [
+          "minimax-minimax-m2-5-free",
+          "minimax-m2-5-free",
+          "minimax-minimax-m2-5-20260211",
+          "minimax-m2-5-20260211"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "minimax/minimax-m2.5",
+        "canonicalSlug": "minimax/minimax-m2.5-20260211",
+        "displayName": "MiniMax: MiniMax M2.5",
+        "normalizedNames": [
+          "minimax-minimax-m2-5",
+          "minimax-m2-5",
+          "minimax-minimax-m2-5-20260211",
+          "minimax-m2-5-20260211"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.00000115"
+      },
+      {
+        "id": "z-ai/glm-5",
+        "canonicalSlug": "z-ai/glm-5-20260211",
+        "displayName": "Z.ai: GLM 5",
+        "normalizedNames": [
+          "z-ai-glm-5",
+          "glm-5",
+          "z-ai-glm-5-20260211",
+          "glm-5-20260211"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.00000192",
+        "cacheReadTokenPriceUsd": "0.00000012"
+      },
+      {
+        "id": "qwen/qwen3-max-thinking",
+        "canonicalSlug": "qwen/qwen3-max-thinking-20260123",
+        "displayName": "Qwen: Qwen3 Max Thinking",
+        "normalizedNames": [
+          "qwen-qwen3-max-thinking",
+          "qwen3-max-thinking",
+          "qwen-qwen3-max-thinking-20260123",
+          "qwen3-max-thinking-20260123"
+        ],
+        "promptTokenPriceUsd": "0.00000078",
+        "completionTokenPriceUsd": "0.0000039"
+      },
+      {
+        "id": "anthropic/claude-opus-4.6",
+        "canonicalSlug": "anthropic/claude-4.6-opus-20260205",
+        "displayName": "Anthropic: Claude Opus 4.6",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-6",
+          "claude-opus-4-6",
+          "anthropic-claude-4-6-opus-20260205",
+          "claude-4-6-opus-20260205"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.000025",
+        "cacheReadTokenPriceUsd": "0.0000005",
+        "cacheWriteTokenPriceUsd": "0.00000625"
+      },
+      {
+        "id": "qwen/qwen3-coder-next",
+        "canonicalSlug": "qwen/qwen3-coder-next-2025-02-03",
+        "displayName": "Qwen: Qwen3 Coder Next",
+        "normalizedNames": [
+          "qwen-qwen3-coder-next",
+          "qwen3-coder-next",
+          "qwen-qwen3-coder-next-2025-02-03",
+          "qwen3-coder-next-2025-02-03"
+        ],
+        "promptTokenPriceUsd": "0.00000011",
+        "completionTokenPriceUsd": "0.0000008",
+        "cacheReadTokenPriceUsd": "0.00000007"
+      },
+      {
+        "id": "openrouter/free",
+        "canonicalSlug": "openrouter/free",
+        "displayName": "Free Models Router",
+        "normalizedNames": [
+          "openrouter-free",
+          "free",
+          "free-models-router"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "stepfun/step-3.5-flash",
+        "canonicalSlug": "stepfun/step-3.5-flash",
+        "displayName": "StepFun: Step 3.5 Flash",
+        "normalizedNames": [
+          "stepfun-step-3-5-flash",
+          "step-3-5-flash"
+        ],
+        "promptTokenPriceUsd": "0.00000009",
+        "completionTokenPriceUsd": "0.0000003",
+        "cacheReadTokenPriceUsd": "0.00000002"
+      },
+      {
+        "id": "moonshotai/kimi-k2.5",
+        "canonicalSlug": "moonshotai/kimi-k2.5-0127",
+        "displayName": "MoonshotAI: Kimi K2.5",
+        "normalizedNames": [
+          "moonshotai-kimi-k2-5",
+          "kimi-k2-5",
+          "moonshotai-kimi-k2-5-0127",
+          "kimi-k2-5-0127"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000019",
+        "cacheReadTokenPriceUsd": "0.00000009"
+      },
+      {
+        "id": "upstage/solar-pro-3",
+        "canonicalSlug": "upstage/solar-pro-3",
+        "displayName": "Upstage: Solar Pro 3",
+        "normalizedNames": [
+          "upstage-solar-pro-3",
+          "solar-pro-3"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006",
+        "cacheReadTokenPriceUsd": "0.000000015"
+      },
+      {
+        "id": "minimax/minimax-m2-her",
+        "canonicalSlug": "minimax/minimax-m2-her-20260123",
+        "displayName": "MiniMax: MiniMax M2-her",
+        "normalizedNames": [
+          "minimax-minimax-m2-her",
+          "minimax-m2-her",
+          "minimax-minimax-m2-her-20260123",
+          "minimax-m2-her-20260123"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000012",
+        "cacheReadTokenPriceUsd": "0.00000003"
+      },
+      {
+        "id": "writer/palmyra-x5",
+        "canonicalSlug": "writer/palmyra-x5-20250428",
+        "displayName": "Writer: Palmyra X5",
+        "normalizedNames": [
+          "writer-palmyra-x5",
+          "palmyra-x5",
+          "writer-palmyra-x5-20250428",
+          "palmyra-x5-20250428"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.000006"
+      },
+      {
+        "id": "liquid/lfm-2.5-1.2b-thinking:free",
+        "canonicalSlug": "liquid/lfm-2.5-1.2b-thinking-20260120",
+        "displayName": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+        "normalizedNames": [
+          "liquid-lfm-2-5-1-2b-thinking-free",
+          "lfm-2-5-1-2b-thinking-free",
+          "liquid-lfm-2-5-1-2b-thinking-20260120",
+          "lfm-2-5-1-2b-thinking-20260120",
+          "liquidai-lfm2-5-1-2b-thinking-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "liquid/lfm-2.5-1.2b-instruct:free",
+        "canonicalSlug": "liquid/lfm-2.5-1.2b-instruct-20260120",
+        "displayName": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+        "normalizedNames": [
+          "liquid-lfm-2-5-1-2b-instruct-free",
+          "lfm-2-5-1-2b-instruct-free",
+          "liquid-lfm-2-5-1-2b-instruct-20260120",
+          "lfm-2-5-1-2b-instruct-20260120",
+          "liquidai-lfm2-5-1-2b-instruct-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "openai/gpt-audio",
+        "canonicalSlug": "openai/gpt-audio",
+        "displayName": "OpenAI: GPT Audio",
+        "normalizedNames": [
+          "openai-gpt-audio",
+          "gpt-audio"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "openai/gpt-audio-mini",
+        "canonicalSlug": "openai/gpt-audio-mini",
+        "displayName": "OpenAI: GPT Audio Mini",
+        "normalizedNames": [
+          "openai-gpt-audio-mini",
+          "gpt-audio-mini"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.0000024"
+      },
+      {
+        "id": "z-ai/glm-4.7-flash",
+        "canonicalSlug": "z-ai/glm-4.7-flash-20260119",
+        "displayName": "Z.ai: GLM 4.7 Flash",
+        "normalizedNames": [
+          "z-ai-glm-4-7-flash",
+          "glm-4-7-flash",
+          "z-ai-glm-4-7-flash-20260119",
+          "glm-4-7-flash-20260119"
+        ],
+        "promptTokenPriceUsd": "0.00000006",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.00000001"
+      },
+      {
+        "id": "openai/gpt-5.2-codex",
+        "canonicalSlug": "openai/gpt-5.2-codex-20260114",
+        "displayName": "OpenAI: GPT-5.2-Codex",
+        "normalizedNames": [
+          "openai-gpt-5-2-codex",
+          "gpt-5-2-codex",
+          "openai-gpt-5-2-codex-20260114",
+          "gpt-5-2-codex-20260114"
+        ],
+        "promptTokenPriceUsd": "0.00000175",
+        "completionTokenPriceUsd": "0.000014",
+        "cacheReadTokenPriceUsd": "0.000000175"
+      },
+      {
+        "id": "bytedance-seed/seed-1.6-flash",
+        "canonicalSlug": "bytedance-seed/seed-1.6-flash-20250625",
+        "displayName": "ByteDance Seed: Seed 1.6 Flash",
+        "normalizedNames": [
+          "bytedance-seed-seed-1-6-flash",
+          "seed-1-6-flash",
+          "bytedance-seed-seed-1-6-flash-20250625",
+          "seed-1-6-flash-20250625"
+        ],
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.0000003"
+      },
+      {
+        "id": "bytedance-seed/seed-1.6",
+        "canonicalSlug": "bytedance-seed/seed-1.6-20250625",
+        "displayName": "ByteDance Seed: Seed 1.6",
+        "normalizedNames": [
+          "bytedance-seed-seed-1-6",
+          "seed-1-6",
+          "bytedance-seed-seed-1-6-20250625",
+          "seed-1-6-20250625"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.000002"
+      },
+      {
+        "id": "minimax/minimax-m2.1",
+        "canonicalSlug": "minimax/minimax-m2.1",
+        "displayName": "MiniMax: MiniMax M2.1",
+        "normalizedNames": [
+          "minimax-minimax-m2-1",
+          "minimax-m2-1"
+        ],
+        "promptTokenPriceUsd": "0.00000029",
+        "completionTokenPriceUsd": "0.00000095",
+        "cacheReadTokenPriceUsd": "0.00000003"
+      },
+      {
+        "id": "z-ai/glm-4.7",
+        "canonicalSlug": "z-ai/glm-4.7-20251222",
+        "displayName": "Z.ai: GLM 4.7",
+        "normalizedNames": [
+          "z-ai-glm-4-7",
+          "glm-4-7",
+          "z-ai-glm-4-7-20251222",
+          "glm-4-7-20251222"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.00000175",
+        "cacheReadTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "google/gemini-3-flash-preview",
+        "canonicalSlug": "google/gemini-3-flash-preview-20251217",
+        "displayName": "Google: Gemini 3 Flash Preview",
+        "normalizedNames": [
+          "google-gemini-3-flash-preview",
+          "gemini-3-flash-preview",
+          "google-gemini-3-flash-preview-20251217",
+          "gemini-3-flash-preview-20251217"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.000003",
+        "cacheReadTokenPriceUsd": "0.00000005",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "xiaomi/mimo-v2-flash",
+        "canonicalSlug": "xiaomi/mimo-v2-flash-20251210",
+        "displayName": "Xiaomi: MiMo-V2-Flash",
+        "normalizedNames": [
+          "xiaomi-mimo-v2-flash",
+          "mimo-v2-flash",
+          "xiaomi-mimo-v2-flash-20251210",
+          "mimo-v2-flash-20251210"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000003",
+        "cacheReadTokenPriceUsd": "0.00000001"
+      },
+      {
+        "id": "nvidia/nemotron-3-nano-30b-a3b:free",
+        "canonicalSlug": "nvidia/nemotron-3-nano-30b-a3b",
+        "displayName": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-3-nano-30b-a3b-free",
+          "nemotron-3-nano-30b-a3b-free",
+          "nvidia-nemotron-3-nano-30b-a3b",
+          "nemotron-3-nano-30b-a3b"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nvidia/nemotron-3-nano-30b-a3b",
+        "canonicalSlug": "nvidia/nemotron-3-nano-30b-a3b",
+        "displayName": "NVIDIA: Nemotron 3 Nano 30B A3B",
+        "normalizedNames": [
+          "nvidia-nemotron-3-nano-30b-a3b",
+          "nemotron-3-nano-30b-a3b"
+        ],
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "openai/gpt-5.2-chat",
+        "canonicalSlug": "openai/gpt-5.2-chat-20251211",
+        "displayName": "OpenAI: GPT-5.2 Chat",
+        "normalizedNames": [
+          "openai-gpt-5-2-chat",
+          "gpt-5-2-chat",
+          "openai-gpt-5-2-chat-20251211",
+          "gpt-5-2-chat-20251211"
+        ],
+        "promptTokenPriceUsd": "0.00000175",
+        "completionTokenPriceUsd": "0.000014",
+        "cacheReadTokenPriceUsd": "0.000000175"
+      },
+      {
+        "id": "openai/gpt-5.2-pro",
+        "canonicalSlug": "openai/gpt-5.2-pro-20251211",
+        "displayName": "OpenAI: GPT-5.2 Pro",
+        "normalizedNames": [
+          "openai-gpt-5-2-pro",
+          "gpt-5-2-pro",
+          "openai-gpt-5-2-pro-20251211",
+          "gpt-5-2-pro-20251211"
+        ],
+        "promptTokenPriceUsd": "0.000021",
+        "completionTokenPriceUsd": "0.000168"
+      },
+      {
+        "id": "openai/gpt-5.2",
+        "canonicalSlug": "openai/gpt-5.2-20251211",
+        "displayName": "OpenAI: GPT-5.2",
+        "normalizedNames": [
+          "openai-gpt-5-2",
+          "gpt-5-2",
+          "openai-gpt-5-2-20251211",
+          "gpt-5-2-20251211"
+        ],
+        "promptTokenPriceUsd": "0.00000175",
+        "completionTokenPriceUsd": "0.000014",
+        "cacheReadTokenPriceUsd": "0.000000175"
+      },
+      {
+        "id": "mistralai/devstral-2512",
+        "canonicalSlug": "mistralai/devstral-2512",
+        "displayName": "Mistral: Devstral 2 2512",
+        "normalizedNames": [
+          "mistralai-devstral-2512",
+          "devstral-2512",
+          "mistral-devstral-2-2512"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.00000004"
+      },
+      {
+        "id": "relace/relace-search",
+        "canonicalSlug": "relace/relace-search-20251208",
+        "displayName": "Relace: Relace Search",
+        "normalizedNames": [
+          "relace-relace-search",
+          "relace-search",
+          "relace-relace-search-20251208",
+          "relace-search-20251208"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000003"
+      },
+      {
+        "id": "z-ai/glm-4.6v",
+        "canonicalSlug": "z-ai/glm-4.6-20251208",
+        "displayName": "Z.ai: GLM 4.6V",
+        "normalizedNames": [
+          "z-ai-glm-4-6v",
+          "glm-4-6v",
+          "z-ai-glm-4-6-20251208",
+          "glm-4-6-20251208"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000009",
+        "cacheReadTokenPriceUsd": "0.00000005"
+      },
+      {
+        "id": "nex-agi/deepseek-v3.1-nex-n1",
+        "canonicalSlug": "nex-agi/deepseek-v3.1-nex-n1",
+        "displayName": "Nex AGI: DeepSeek V3.1 Nex N1",
+        "normalizedNames": [
+          "nex-agi-deepseek-v3-1-nex-n1",
+          "deepseek-v3-1-nex-n1"
+        ],
+        "promptTokenPriceUsd": "0.000000135",
+        "completionTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "essentialai/rnj-1-instruct",
+        "canonicalSlug": "essentialai/rnj-1-instruct",
+        "displayName": "EssentialAI: Rnj 1 Instruct",
+        "normalizedNames": [
+          "essentialai-rnj-1-instruct",
+          "rnj-1-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.00000015"
+      },
+      {
+        "id": "openrouter/bodybuilder",
+        "canonicalSlug": "openrouter/bodybuilder",
+        "displayName": "Body Builder (beta)",
+        "normalizedNames": [
+          "openrouter-bodybuilder",
+          "bodybuilder",
+          "body-builder-beta"
+        ],
+        "promptTokenPriceUsd": "-1",
+        "completionTokenPriceUsd": "-1"
+      },
+      {
+        "id": "openai/gpt-5.1-codex-max",
+        "canonicalSlug": "openai/gpt-5.1-codex-max-20251204",
+        "displayName": "OpenAI: GPT-5.1-Codex-Max",
+        "normalizedNames": [
+          "openai-gpt-5-1-codex-max",
+          "gpt-5-1-codex-max",
+          "openai-gpt-5-1-codex-max-20251204",
+          "gpt-5-1-codex-max-20251204"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125"
+      },
+      {
+        "id": "amazon/nova-2-lite-v1",
+        "canonicalSlug": "amazon/nova-2-lite-v1",
+        "displayName": "Amazon: Nova 2 Lite",
+        "normalizedNames": [
+          "amazon-nova-2-lite-v1",
+          "nova-2-lite-v1",
+          "amazon-nova-2-lite"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000025"
+      },
+      {
+        "id": "mistralai/ministral-14b-2512",
+        "canonicalSlug": "mistralai/ministral-14b-2512",
+        "displayName": "Mistral: Ministral 3 14B 2512",
+        "normalizedNames": [
+          "mistralai-ministral-14b-2512",
+          "ministral-14b-2512",
+          "mistral-ministral-3-14b-2512"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.0000002",
+        "cacheReadTokenPriceUsd": "0.00000002"
+      },
+      {
+        "id": "mistralai/ministral-8b-2512",
+        "canonicalSlug": "mistralai/ministral-8b-2512",
+        "displayName": "Mistral: Ministral 3 8B 2512",
+        "normalizedNames": [
+          "mistralai-ministral-8b-2512",
+          "ministral-8b-2512",
+          "mistral-ministral-3-8b-2512"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.00000015",
+        "cacheReadTokenPriceUsd": "0.000000015"
+      },
+      {
+        "id": "mistralai/ministral-3b-2512",
+        "canonicalSlug": "mistralai/ministral-3b-2512",
+        "displayName": "Mistral: Ministral 3 3B 2512",
+        "normalizedNames": [
+          "mistralai-ministral-3b-2512",
+          "ministral-3b-2512",
+          "mistral-ministral-3-3b-2512"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000001",
+        "cacheReadTokenPriceUsd": "0.00000001"
+      },
+      {
+        "id": "mistralai/mistral-large-2512",
+        "canonicalSlug": "mistralai/mistral-large-2512",
+        "displayName": "Mistral: Mistral Large 3 2512",
+        "normalizedNames": [
+          "mistralai-mistral-large-2512",
+          "mistral-large-2512",
+          "mistral-mistral-large-3-2512"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.0000015",
+        "cacheReadTokenPriceUsd": "0.00000005"
+      },
+      {
+        "id": "arcee-ai/trinity-mini",
+        "canonicalSlug": "arcee-ai/trinity-mini-20251201",
+        "displayName": "Arcee AI: Trinity Mini",
+        "normalizedNames": [
+          "arcee-ai-trinity-mini",
+          "trinity-mini",
+          "arcee-ai-trinity-mini-20251201",
+          "trinity-mini-20251201"
+        ],
+        "promptTokenPriceUsd": "0.000000045",
+        "completionTokenPriceUsd": "0.00000015"
+      },
+      {
+        "id": "deepseek/deepseek-v3.2",
+        "canonicalSlug": "deepseek/deepseek-v3.2-20251201",
+        "displayName": "DeepSeek: DeepSeek V3.2",
+        "normalizedNames": [
+          "deepseek-deepseek-v3-2",
+          "deepseek-v3-2",
+          "deepseek-deepseek-v3-2-20251201",
+          "deepseek-v3-2-20251201"
+        ],
+        "promptTokenPriceUsd": "0.000000252",
+        "completionTokenPriceUsd": "0.000000378",
+        "cacheReadTokenPriceUsd": "0.0000000252"
+      },
+      {
+        "id": "prime-intellect/intellect-3",
+        "canonicalSlug": "prime-intellect/intellect-3-20251126",
+        "displayName": "Prime Intellect: INTELLECT-3",
+        "normalizedNames": [
+          "prime-intellect-intellect-3",
+          "intellect-3",
+          "prime-intellect-intellect-3-20251126",
+          "intellect-3-20251126"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.0000011"
+      },
+      {
+        "id": "anthropic/claude-opus-4.5",
+        "canonicalSlug": "anthropic/claude-4.5-opus-20251124",
+        "displayName": "Anthropic: Claude Opus 4.5",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-5",
+          "claude-opus-4-5",
+          "anthropic-claude-4-5-opus-20251124",
+          "claude-4-5-opus-20251124"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.000025",
+        "cacheReadTokenPriceUsd": "0.0000005",
+        "cacheWriteTokenPriceUsd": "0.00000625"
+      },
+      {
+        "id": "allenai/olmo-3-32b-think",
+        "canonicalSlug": "allenai/olmo-3-32b-think-20251121",
+        "displayName": "AllenAI: Olmo 3 32B Think",
+        "normalizedNames": [
+          "allenai-olmo-3-32b-think",
+          "olmo-3-32b-think",
+          "allenai-olmo-3-32b-think-20251121",
+          "olmo-3-32b-think-20251121"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "google/gemini-3-pro-image-preview",
+        "canonicalSlug": "google/gemini-3-pro-image-preview-20251120",
+        "displayName": "Google: Nano Banana Pro (Gemini 3 Pro Image Preview)",
+        "normalizedNames": [
+          "google-gemini-3-pro-image-preview",
+          "gemini-3-pro-image-preview",
+          "google-gemini-3-pro-image-preview-20251120",
+          "gemini-3-pro-image-preview-20251120",
+          "google-nano-banana-pro-gemini-3-pro-image-preview"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000012",
+        "cacheReadTokenPriceUsd": "0.0000002",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "deepcogito/cogito-v2.1-671b",
+        "canonicalSlug": "deepcogito/cogito-v2.1-671b-20251118",
+        "displayName": "Deep Cogito: Cogito v2.1 671B",
+        "normalizedNames": [
+          "deepcogito-cogito-v2-1-671b",
+          "cogito-v2-1-671b",
+          "deepcogito-cogito-v2-1-671b-20251118",
+          "cogito-v2-1-671b-20251118",
+          "deep-cogito-cogito-v2-1-671b"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "openai/gpt-5.1",
+        "canonicalSlug": "openai/gpt-5.1-20251113",
+        "displayName": "OpenAI: GPT-5.1",
+        "normalizedNames": [
+          "openai-gpt-5-1",
+          "gpt-5-1",
+          "openai-gpt-5-1-20251113",
+          "gpt-5-1-20251113"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.00000013"
+      },
+      {
+        "id": "openai/gpt-5.1-chat",
+        "canonicalSlug": "openai/gpt-5.1-chat-20251113",
+        "displayName": "OpenAI: GPT-5.1 Chat",
+        "normalizedNames": [
+          "openai-gpt-5-1-chat",
+          "gpt-5-1-chat",
+          "openai-gpt-5-1-chat-20251113",
+          "gpt-5-1-chat-20251113"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.00000013"
+      },
+      {
+        "id": "openai/gpt-5.1-codex",
+        "canonicalSlug": "openai/gpt-5.1-codex-20251113",
+        "displayName": "OpenAI: GPT-5.1-Codex",
+        "normalizedNames": [
+          "openai-gpt-5-1-codex",
+          "gpt-5-1-codex",
+          "openai-gpt-5-1-codex-20251113",
+          "gpt-5-1-codex-20251113"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.00000013"
+      },
+      {
+        "id": "openai/gpt-5.1-codex-mini",
+        "canonicalSlug": "openai/gpt-5.1-codex-mini-20251113",
+        "displayName": "OpenAI: GPT-5.1-Codex-Mini",
+        "normalizedNames": [
+          "openai-gpt-5-1-codex-mini",
+          "gpt-5-1-codex-mini",
+          "openai-gpt-5-1-codex-mini-20251113",
+          "gpt-5-1-codex-mini-20251113"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.000000025"
+      },
+      {
+        "id": "moonshotai/kimi-k2-thinking",
+        "canonicalSlug": "moonshotai/kimi-k2-thinking-20251106",
+        "displayName": "MoonshotAI: Kimi K2 Thinking",
+        "normalizedNames": [
+          "moonshotai-kimi-k2-thinking",
+          "kimi-k2-thinking",
+          "moonshotai-kimi-k2-thinking-20251106",
+          "kimi-k2-thinking-20251106"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.0000025"
+      },
+      {
+        "id": "amazon/nova-premier-v1",
+        "canonicalSlug": "amazon/nova-premier-v1",
+        "displayName": "Amazon: Nova Premier 1.0",
+        "normalizedNames": [
+          "amazon-nova-premier-v1",
+          "nova-premier-v1",
+          "amazon-nova-premier-1-0"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.0000125",
+        "cacheReadTokenPriceUsd": "0.000000625"
+      },
+      {
+        "id": "perplexity/sonar-pro-search",
+        "canonicalSlug": "perplexity/sonar-pro-search",
+        "displayName": "Perplexity: Sonar Pro Search",
+        "normalizedNames": [
+          "perplexity-sonar-pro-search",
+          "sonar-pro-search"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000015"
+      },
+      {
+        "id": "mistralai/voxtral-small-24b-2507",
+        "canonicalSlug": "mistralai/voxtral-small-24b-2507",
+        "displayName": "Mistral: Voxtral Small 24B 2507",
+        "normalizedNames": [
+          "mistralai-voxtral-small-24b-2507",
+          "voxtral-small-24b-2507",
+          "mistral-voxtral-small-24b-2507"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000003",
+        "cacheReadTokenPriceUsd": "0.00000001"
+      },
+      {
+        "id": "openai/gpt-oss-safeguard-20b",
+        "canonicalSlug": "openai/gpt-oss-safeguard-20b",
+        "displayName": "OpenAI: gpt-oss-safeguard-20b",
+        "normalizedNames": [
+          "openai-gpt-oss-safeguard-20b",
+          "gpt-oss-safeguard-20b"
+        ],
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.0000003",
+        "cacheReadTokenPriceUsd": "0.000000037"
+      },
+      {
+        "id": "nvidia/nemotron-nano-12b-v2-vl:free",
+        "canonicalSlug": "nvidia/nemotron-nano-12b-v2-vl",
+        "displayName": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-nano-12b-v2-vl-free",
+          "nemotron-nano-12b-v2-vl-free",
+          "nvidia-nemotron-nano-12b-v2-vl",
+          "nemotron-nano-12b-v2-vl",
+          "nvidia-nemotron-nano-12b-2-vl-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "minimax/minimax-m2",
+        "canonicalSlug": "minimax/minimax-m2",
+        "displayName": "MiniMax: MiniMax M2",
+        "normalizedNames": [
+          "minimax-minimax-m2",
+          "minimax-m2"
+        ],
+        "promptTokenPriceUsd": "0.000000255",
+        "completionTokenPriceUsd": "0.000001",
+        "cacheReadTokenPriceUsd": "0.00000003"
+      },
+      {
+        "id": "qwen/qwen3-vl-32b-instruct",
+        "canonicalSlug": "qwen/qwen3-vl-32b-instruct",
+        "displayName": "Qwen: Qwen3 VL 32B Instruct",
+        "normalizedNames": [
+          "qwen-qwen3-vl-32b-instruct",
+          "qwen3-vl-32b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000000104",
+        "completionTokenPriceUsd": "0.000000416"
+      },
+      {
+        "id": "ibm-granite/granite-4.0-h-micro",
+        "canonicalSlug": "ibm-granite/granite-4.0-h-micro",
+        "displayName": "IBM: Granite 4.0 Micro",
+        "normalizedNames": [
+          "ibm-granite-granite-4-0-h-micro",
+          "granite-4-0-h-micro",
+          "ibm-granite-4-0-micro"
+        ],
+        "promptTokenPriceUsd": "0.000000017",
+        "completionTokenPriceUsd": "0.000000112"
+      },
+      {
+        "id": "microsoft/phi-4-mini-instruct",
+        "canonicalSlug": "microsoft/phi-4-mini-instruct",
+        "displayName": "Microsoft: Phi 4 Mini Instruct",
+        "normalizedNames": [
+          "microsoft-phi-4-mini-instruct",
+          "phi-4-mini-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000008",
+        "completionTokenPriceUsd": "0.00000035",
+        "cacheReadTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "openai/gpt-5-image-mini",
+        "canonicalSlug": "openai/gpt-5-image-mini",
+        "displayName": "OpenAI: GPT-5 Image Mini",
+        "normalizedNames": [
+          "openai-gpt-5-image-mini",
+          "gpt-5-image-mini"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.00000025"
+      },
+      {
+        "id": "anthropic/claude-haiku-4.5",
+        "canonicalSlug": "anthropic/claude-4.5-haiku-20251001",
+        "displayName": "Anthropic: Claude Haiku 4.5",
+        "normalizedNames": [
+          "anthropic-claude-haiku-4-5",
+          "claude-haiku-4-5",
+          "anthropic-claude-4-5-haiku-20251001",
+          "claude-4-5-haiku-20251001"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000005",
+        "cacheReadTokenPriceUsd": "0.0000001",
+        "cacheWriteTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "qwen/qwen3-vl-8b-thinking",
+        "canonicalSlug": "qwen/qwen3-vl-8b-thinking",
+        "displayName": "Qwen: Qwen3 VL 8B Thinking",
+        "normalizedNames": [
+          "qwen-qwen3-vl-8b-thinking",
+          "qwen3-vl-8b-thinking"
+        ],
+        "promptTokenPriceUsd": "0.000000117",
+        "completionTokenPriceUsd": "0.000001365"
+      },
+      {
+        "id": "qwen/qwen3-vl-8b-instruct",
+        "canonicalSlug": "qwen/qwen3-vl-8b-instruct",
+        "displayName": "Qwen: Qwen3 VL 8B Instruct",
+        "normalizedNames": [
+          "qwen-qwen3-vl-8b-instruct",
+          "qwen3-vl-8b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000008",
+        "completionTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "openai/gpt-5-image",
+        "canonicalSlug": "openai/gpt-5-image",
+        "displayName": "OpenAI: GPT-5 Image",
+        "normalizedNames": [
+          "openai-gpt-5-image",
+          "gpt-5-image"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "openai/o3-deep-research",
+        "canonicalSlug": "openai/o3-deep-research-2025-06-26",
+        "displayName": "OpenAI: o3 Deep Research",
+        "normalizedNames": [
+          "openai-o3-deep-research",
+          "o3-deep-research",
+          "openai-o3-deep-research-2025-06-26",
+          "o3-deep-research-2025-06-26"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00004",
+        "cacheReadTokenPriceUsd": "0.0000025"
+      },
+      {
+        "id": "openai/o4-mini-deep-research",
+        "canonicalSlug": "openai/o4-mini-deep-research-2025-06-26",
+        "displayName": "OpenAI: o4 Mini Deep Research",
+        "normalizedNames": [
+          "openai-o4-mini-deep-research",
+          "o4-mini-deep-research",
+          "openai-o4-mini-deep-research-2025-06-26",
+          "o4-mini-deep-research-2025-06-26"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000008",
+        "cacheReadTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+        "canonicalSlug": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+        "displayName": "NVIDIA: Llama 3.3 Nemotron Super 49B V1.5",
+        "normalizedNames": [
+          "nvidia-llama-3-3-nemotron-super-49b-v1-5",
+          "llama-3-3-nemotron-super-49b-v1-5"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "baidu/ernie-4.5-21b-a3b-thinking",
+        "canonicalSlug": "baidu/ernie-4.5-21b-a3b-thinking",
+        "displayName": "Baidu: ERNIE 4.5 21B A3B Thinking",
+        "normalizedNames": [
+          "baidu-ernie-4-5-21b-a3b-thinking",
+          "ernie-4-5-21b-a3b-thinking"
+        ],
+        "promptTokenPriceUsd": "0.00000007",
+        "completionTokenPriceUsd": "0.00000028"
+      },
+      {
+        "id": "google/gemini-2.5-flash-image",
+        "canonicalSlug": "google/gemini-2.5-flash-image",
+        "displayName": "Google: Nano Banana (Gemini 2.5 Flash Image)",
+        "normalizedNames": [
+          "google-gemini-2-5-flash-image",
+          "gemini-2-5-flash-image",
+          "google-nano-banana-gemini-2-5-flash-image"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000025",
+        "cacheReadTokenPriceUsd": "0.00000003",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "qwen/qwen3-vl-30b-a3b-thinking",
+        "canonicalSlug": "qwen/qwen3-vl-30b-a3b-thinking",
+        "displayName": "Qwen: Qwen3 VL 30B A3B Thinking",
+        "normalizedNames": [
+          "qwen-qwen3-vl-30b-a3b-thinking",
+          "qwen3-vl-30b-a3b-thinking"
+        ],
+        "promptTokenPriceUsd": "0.00000013",
+        "completionTokenPriceUsd": "0.00000156"
+      },
+      {
+        "id": "qwen/qwen3-vl-30b-a3b-instruct",
+        "canonicalSlug": "qwen/qwen3-vl-30b-a3b-instruct",
+        "displayName": "Qwen: Qwen3 VL 30B A3B Instruct",
+        "normalizedNames": [
+          "qwen-qwen3-vl-30b-a3b-instruct",
+          "qwen3-vl-30b-a3b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000013",
+        "completionTokenPriceUsd": "0.00000052"
+      },
+      {
+        "id": "openai/gpt-5-pro",
+        "canonicalSlug": "openai/gpt-5-pro-2025-10-06",
+        "displayName": "OpenAI: GPT-5 Pro",
+        "normalizedNames": [
+          "openai-gpt-5-pro",
+          "gpt-5-pro",
+          "openai-gpt-5-pro-2025-10-06",
+          "gpt-5-pro-2025-10-06"
+        ],
+        "promptTokenPriceUsd": "0.000015",
+        "completionTokenPriceUsd": "0.00012"
+      },
+      {
+        "id": "z-ai/glm-4.6",
+        "canonicalSlug": "z-ai/glm-4.6",
+        "displayName": "Z.ai: GLM 4.6",
+        "normalizedNames": [
+          "z-ai-glm-4-6",
+          "glm-4-6"
+        ],
+        "promptTokenPriceUsd": "0.00000043",
+        "completionTokenPriceUsd": "0.00000174",
+        "cacheReadTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "anthropic/claude-sonnet-4.5",
+        "canonicalSlug": "anthropic/claude-4.5-sonnet-20250929",
+        "displayName": "Anthropic: Claude Sonnet 4.5",
+        "normalizedNames": [
+          "anthropic-claude-sonnet-4-5",
+          "claude-sonnet-4-5",
+          "anthropic-claude-4-5-sonnet-20250929",
+          "claude-4-5-sonnet-20250929"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000015",
+        "cacheReadTokenPriceUsd": "0.0000003",
+        "cacheWriteTokenPriceUsd": "0.00000375"
+      },
+      {
+        "id": "deepseek/deepseek-v3.2-exp",
+        "canonicalSlug": "deepseek/deepseek-v3.2-exp",
+        "displayName": "DeepSeek: DeepSeek V3.2 Exp",
+        "normalizedNames": [
+          "deepseek-deepseek-v3-2-exp",
+          "deepseek-v3-2-exp"
+        ],
+        "promptTokenPriceUsd": "0.00000027",
+        "completionTokenPriceUsd": "0.00000041"
+      },
+      {
+        "id": "thedrummer/cydonia-24b-v4.1",
+        "canonicalSlug": "thedrummer/cydonia-24b-v4.1",
+        "displayName": "TheDrummer: Cydonia 24B V4.1",
+        "normalizedNames": [
+          "thedrummer-cydonia-24b-v4-1",
+          "cydonia-24b-v4-1"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000005",
+        "cacheReadTokenPriceUsd": "0.00000015"
+      },
+      {
+        "id": "relace/relace-apply-3",
+        "canonicalSlug": "relace/relace-apply-3",
+        "displayName": "Relace: Relace Apply 3",
+        "normalizedNames": [
+          "relace-relace-apply-3",
+          "relace-apply-3"
+        ],
+        "promptTokenPriceUsd": "0.00000085",
+        "completionTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "canonicalSlug": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "displayName": "Google: Gemini 2.5 Flash Lite Preview 09-2025",
+        "normalizedNames": [
+          "google-gemini-2-5-flash-lite-preview-09-2025",
+          "gemini-2-5-flash-lite-preview-09-2025"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.00000001",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "qwen/qwen3-vl-235b-a22b-thinking",
+        "canonicalSlug": "qwen/qwen3-vl-235b-a22b-thinking",
+        "displayName": "Qwen: Qwen3 VL 235B A22B Thinking",
+        "normalizedNames": [
+          "qwen-qwen3-vl-235b-a22b-thinking",
+          "qwen3-vl-235b-a22b-thinking"
+        ],
+        "promptTokenPriceUsd": "0.00000026",
+        "completionTokenPriceUsd": "0.0000026"
+      },
+      {
+        "id": "qwen/qwen3-vl-235b-a22b-instruct",
+        "canonicalSlug": "qwen/qwen3-vl-235b-a22b-instruct",
+        "displayName": "Qwen: Qwen3 VL 235B A22B Instruct",
+        "normalizedNames": [
+          "qwen-qwen3-vl-235b-a22b-instruct",
+          "qwen3-vl-235b-a22b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.00000088",
+        "cacheReadTokenPriceUsd": "0.00000011"
+      },
+      {
+        "id": "qwen/qwen3-max",
+        "canonicalSlug": "qwen/qwen3-max",
+        "displayName": "Qwen: Qwen3 Max",
+        "normalizedNames": [
+          "qwen-qwen3-max",
+          "qwen3-max"
+        ],
+        "promptTokenPriceUsd": "0.00000078",
+        "completionTokenPriceUsd": "0.0000039",
+        "cacheReadTokenPriceUsd": "0.000000156",
+        "cacheWriteTokenPriceUsd": "0.000000975"
+      },
+      {
+        "id": "qwen/qwen3-coder-plus",
+        "canonicalSlug": "qwen/qwen3-coder-plus",
+        "displayName": "Qwen: Qwen3 Coder Plus",
+        "normalizedNames": [
+          "qwen-qwen3-coder-plus",
+          "qwen3-coder-plus"
+        ],
+        "promptTokenPriceUsd": "0.00000065",
+        "completionTokenPriceUsd": "0.00000325",
+        "cacheReadTokenPriceUsd": "0.00000013",
+        "cacheWriteTokenPriceUsd": "0.0000008125"
+      },
+      {
+        "id": "openai/gpt-5-codex",
+        "canonicalSlug": "openai/gpt-5-codex",
+        "displayName": "OpenAI: GPT-5 Codex",
+        "normalizedNames": [
+          "openai-gpt-5-codex",
+          "gpt-5-codex"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125"
+      },
+      {
+        "id": "deepseek/deepseek-v3.1-terminus",
+        "canonicalSlug": "deepseek/deepseek-v3.1-terminus",
+        "displayName": "DeepSeek: DeepSeek V3.1 Terminus",
+        "normalizedNames": [
+          "deepseek-deepseek-v3-1-terminus",
+          "deepseek-v3-1-terminus"
+        ],
+        "promptTokenPriceUsd": "0.00000027",
+        "completionTokenPriceUsd": "0.00000095",
+        "cacheReadTokenPriceUsd": "0.00000013"
+      },
+      {
+        "id": "qwen/qwen3-coder-flash",
+        "canonicalSlug": "qwen/qwen3-coder-flash",
+        "displayName": "Qwen: Qwen3 Coder Flash",
+        "normalizedNames": [
+          "qwen-qwen3-coder-flash",
+          "qwen3-coder-flash"
+        ],
+        "promptTokenPriceUsd": "0.000000195",
+        "completionTokenPriceUsd": "0.000000975",
+        "cacheReadTokenPriceUsd": "0.000000039",
+        "cacheWriteTokenPriceUsd": "0.00000024375"
+      },
+      {
+        "id": "qwen/qwen3-next-80b-a3b-thinking",
+        "canonicalSlug": "qwen/qwen3-next-80b-a3b-thinking-2509",
+        "displayName": "Qwen: Qwen3 Next 80B A3B Thinking",
+        "normalizedNames": [
+          "qwen-qwen3-next-80b-a3b-thinking",
+          "qwen3-next-80b-a3b-thinking",
+          "qwen-qwen3-next-80b-a3b-thinking-2509",
+          "qwen3-next-80b-a3b-thinking-2509"
+        ],
+        "promptTokenPriceUsd": "0.0000000975",
+        "completionTokenPriceUsd": "0.00000078"
+      },
+      {
+        "id": "qwen/qwen3-next-80b-a3b-instruct:free",
+        "canonicalSlug": "qwen/qwen3-next-80b-a3b-instruct-2509",
+        "displayName": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
+        "normalizedNames": [
+          "qwen-qwen3-next-80b-a3b-instruct-free",
+          "qwen3-next-80b-a3b-instruct-free",
+          "qwen-qwen3-next-80b-a3b-instruct-2509",
+          "qwen3-next-80b-a3b-instruct-2509"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "qwen/qwen3-next-80b-a3b-instruct",
+        "canonicalSlug": "qwen/qwen3-next-80b-a3b-instruct-2509",
+        "displayName": "Qwen: Qwen3 Next 80B A3B Instruct",
+        "normalizedNames": [
+          "qwen-qwen3-next-80b-a3b-instruct",
+          "qwen3-next-80b-a3b-instruct",
+          "qwen-qwen3-next-80b-a3b-instruct-2509",
+          "qwen3-next-80b-a3b-instruct-2509"
+        ],
+        "promptTokenPriceUsd": "0.00000009",
+        "completionTokenPriceUsd": "0.0000011"
+      },
+      {
+        "id": "qwen/qwen-plus-2025-07-28:thinking",
+        "canonicalSlug": "qwen/qwen-plus-2025-07-28",
+        "displayName": "Qwen: Qwen Plus 0728 (thinking)",
+        "normalizedNames": [
+          "qwen-qwen-plus-2025-07-28-thinking",
+          "qwen-plus-2025-07-28-thinking",
+          "qwen-qwen-plus-2025-07-28",
+          "qwen-plus-2025-07-28",
+          "qwen-qwen-plus-0728-thinking"
+        ],
+        "promptTokenPriceUsd": "0.00000026",
+        "completionTokenPriceUsd": "0.00000078",
+        "cacheWriteTokenPriceUsd": "0.000000325"
+      },
+      {
+        "id": "qwen/qwen-plus-2025-07-28",
+        "canonicalSlug": "qwen/qwen-plus-2025-07-28",
+        "displayName": "Qwen: Qwen Plus 0728",
+        "normalizedNames": [
+          "qwen-qwen-plus-2025-07-28",
+          "qwen-plus-2025-07-28",
+          "qwen-qwen-plus-0728"
+        ],
+        "promptTokenPriceUsd": "0.00000026",
+        "completionTokenPriceUsd": "0.00000078"
+      },
+      {
+        "id": "nvidia/nemotron-nano-9b-v2:free",
+        "canonicalSlug": "nvidia/nemotron-nano-9b-v2",
+        "displayName": "NVIDIA: Nemotron Nano 9B V2 (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-nano-9b-v2-free",
+          "nemotron-nano-9b-v2-free",
+          "nvidia-nemotron-nano-9b-v2",
+          "nemotron-nano-9b-v2"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nvidia/nemotron-nano-9b-v2",
+        "canonicalSlug": "nvidia/nemotron-nano-9b-v2",
+        "displayName": "NVIDIA: Nemotron Nano 9B V2",
+        "normalizedNames": [
+          "nvidia-nemotron-nano-9b-v2",
+          "nemotron-nano-9b-v2"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000016"
+      },
+      {
+        "id": "moonshotai/kimi-k2-0905",
+        "canonicalSlug": "moonshotai/kimi-k2-0905",
+        "displayName": "MoonshotAI: Kimi K2 0905",
+        "normalizedNames": [
+          "moonshotai-kimi-k2-0905",
+          "kimi-k2-0905"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.0000025"
+      },
+      {
+        "id": "qwen/qwen3-30b-a3b-thinking-2507",
+        "canonicalSlug": "qwen/qwen3-30b-a3b-thinking-2507",
+        "displayName": "Qwen: Qwen3 30B A3B Thinking 2507",
+        "normalizedNames": [
+          "qwen-qwen3-30b-a3b-thinking-2507",
+          "qwen3-30b-a3b-thinking-2507"
+        ],
+        "promptTokenPriceUsd": "0.00000008",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "nousresearch/hermes-4-70b",
+        "canonicalSlug": "nousresearch/hermes-4-70b",
+        "displayName": "Nous: Hermes 4 70B",
+        "normalizedNames": [
+          "nousresearch-hermes-4-70b",
+          "hermes-4-70b",
+          "nous-hermes-4-70b"
+        ],
+        "promptTokenPriceUsd": "0.00000013",
+        "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "nousresearch/hermes-4-405b",
+        "canonicalSlug": "nousresearch/hermes-4-405b",
+        "displayName": "Nous: Hermes 4 405B",
+        "normalizedNames": [
+          "nousresearch-hermes-4-405b",
+          "hermes-4-405b",
+          "nous-hermes-4-405b"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000003"
+      },
+      {
+        "id": "deepseek/deepseek-chat-v3.1",
+        "canonicalSlug": "deepseek/deepseek-chat-v3.1",
+        "displayName": "DeepSeek: DeepSeek V3.1",
+        "normalizedNames": [
+          "deepseek-deepseek-chat-v3-1",
+          "deepseek-chat-v3-1",
+          "deepseek-deepseek-v3-1"
+        ],
+        "promptTokenPriceUsd": "0.00000021",
+        "completionTokenPriceUsd": "0.00000079",
+        "cacheReadTokenPriceUsd": "0.00000013"
+      },
+      {
+        "id": "openai/gpt-4o-audio-preview",
+        "canonicalSlug": "openai/gpt-4o-audio-preview",
+        "displayName": "OpenAI: GPT-4o Audio",
+        "normalizedNames": [
+          "openai-gpt-4o-audio-preview",
+          "gpt-4o-audio-preview",
+          "openai-gpt-4o-audio"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "mistralai/mistral-medium-3.1",
+        "canonicalSlug": "mistralai/mistral-medium-3.1",
+        "displayName": "Mistral: Mistral Medium 3.1",
+        "normalizedNames": [
+          "mistralai-mistral-medium-3-1",
+          "mistral-medium-3-1",
+          "mistral-mistral-medium-3-1"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.00000004"
+      },
+      {
+        "id": "baidu/ernie-4.5-21b-a3b",
+        "canonicalSlug": "baidu/ernie-4.5-21b-a3b",
+        "displayName": "Baidu: ERNIE 4.5 21B A3B",
+        "normalizedNames": [
+          "baidu-ernie-4-5-21b-a3b",
+          "ernie-4-5-21b-a3b"
+        ],
+        "promptTokenPriceUsd": "0.00000007",
+        "completionTokenPriceUsd": "0.00000028"
+      },
+      {
+        "id": "baidu/ernie-4.5-vl-28b-a3b",
+        "canonicalSlug": "baidu/ernie-4.5-vl-28b-a3b",
+        "displayName": "Baidu: ERNIE 4.5 VL 28B A3B",
+        "normalizedNames": [
+          "baidu-ernie-4-5-vl-28b-a3b",
+          "ernie-4-5-vl-28b-a3b"
+        ],
+        "promptTokenPriceUsd": "0.00000014",
+        "completionTokenPriceUsd": "0.00000056"
+      },
+      {
+        "id": "z-ai/glm-4.5v",
+        "canonicalSlug": "z-ai/glm-4.5v",
+        "displayName": "Z.ai: GLM 4.5V",
+        "normalizedNames": [
+          "z-ai-glm-4-5v",
+          "glm-4-5v"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.0000018",
+        "cacheReadTokenPriceUsd": "0.00000011"
+      },
+      {
+        "id": "ai21/jamba-large-1.7",
+        "canonicalSlug": "ai21/jamba-large-1.7",
+        "displayName": "AI21: Jamba Large 1.7",
+        "normalizedNames": [
+          "ai21-jamba-large-1-7",
+          "jamba-large-1-7"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000008"
+      },
+      {
+        "id": "openai/gpt-5-chat",
+        "canonicalSlug": "openai/gpt-5-chat-2025-08-07",
+        "displayName": "OpenAI: GPT-5 Chat",
+        "normalizedNames": [
+          "openai-gpt-5-chat",
+          "gpt-5-chat",
+          "openai-gpt-5-chat-2025-08-07",
+          "gpt-5-chat-2025-08-07"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125"
+      },
+      {
+        "id": "openai/gpt-5",
+        "canonicalSlug": "openai/gpt-5-2025-08-07",
+        "displayName": "OpenAI: GPT-5",
+        "normalizedNames": [
+          "openai-gpt-5",
+          "gpt-5",
+          "openai-gpt-5-2025-08-07",
+          "gpt-5-2025-08-07"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125"
+      },
+      {
+        "id": "openai/gpt-5-mini",
+        "canonicalSlug": "openai/gpt-5-mini-2025-08-07",
+        "displayName": "OpenAI: GPT-5 Mini",
+        "normalizedNames": [
+          "openai-gpt-5-mini",
+          "gpt-5-mini",
+          "openai-gpt-5-mini-2025-08-07",
+          "gpt-5-mini-2025-08-07"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.000000025"
+      },
+      {
+        "id": "openai/gpt-5-nano",
+        "canonicalSlug": "openai/gpt-5-nano-2025-08-07",
+        "displayName": "OpenAI: GPT-5 Nano",
+        "normalizedNames": [
+          "openai-gpt-5-nano",
+          "gpt-5-nano",
+          "openai-gpt-5-nano-2025-08-07",
+          "gpt-5-nano-2025-08-07"
+        ],
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.00000001"
+      },
+      {
+        "id": "openai/gpt-oss-120b:free",
+        "canonicalSlug": "openai/gpt-oss-120b",
+        "displayName": "OpenAI: gpt-oss-120b (free)",
+        "normalizedNames": [
+          "openai-gpt-oss-120b-free",
+          "gpt-oss-120b-free",
+          "openai-gpt-oss-120b",
+          "gpt-oss-120b"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "openai/gpt-oss-120b",
+        "canonicalSlug": "openai/gpt-oss-120b",
+        "displayName": "OpenAI: gpt-oss-120b",
+        "normalizedNames": [
+          "openai-gpt-oss-120b",
+          "gpt-oss-120b"
+        ],
+        "promptTokenPriceUsd": "0.000000039",
+        "completionTokenPriceUsd": "0.00000018"
+      },
+      {
+        "id": "openai/gpt-oss-20b:free",
+        "canonicalSlug": "openai/gpt-oss-20b",
+        "displayName": "OpenAI: gpt-oss-20b (free)",
+        "normalizedNames": [
+          "openai-gpt-oss-20b-free",
+          "gpt-oss-20b-free",
+          "openai-gpt-oss-20b",
+          "gpt-oss-20b"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "openai/gpt-oss-20b",
+        "canonicalSlug": "openai/gpt-oss-20b",
+        "displayName": "OpenAI: gpt-oss-20b",
+        "normalizedNames": [
+          "openai-gpt-oss-20b",
+          "gpt-oss-20b"
+        ],
+        "promptTokenPriceUsd": "0.00000003",
+        "completionTokenPriceUsd": "0.00000014"
+      },
+      {
+        "id": "anthropic/claude-opus-4.1",
+        "canonicalSlug": "anthropic/claude-4.1-opus-20250805",
+        "displayName": "Anthropic: Claude Opus 4.1",
+        "normalizedNames": [
+          "anthropic-claude-opus-4-1",
+          "claude-opus-4-1",
+          "anthropic-claude-4-1-opus-20250805",
+          "claude-4-1-opus-20250805"
+        ],
+        "promptTokenPriceUsd": "0.000015",
+        "completionTokenPriceUsd": "0.000075",
+        "cacheReadTokenPriceUsd": "0.0000015",
+        "cacheWriteTokenPriceUsd": "0.00001875"
+      },
+      {
+        "id": "mistralai/codestral-2508",
+        "canonicalSlug": "mistralai/codestral-2508",
+        "displayName": "Mistral: Codestral 2508",
+        "normalizedNames": [
+          "mistralai-codestral-2508",
+          "codestral-2508",
+          "mistral-codestral-2508"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000009",
+        "cacheReadTokenPriceUsd": "0.00000003"
+      },
+      {
+        "id": "qwen/qwen3-coder-30b-a3b-instruct",
+        "canonicalSlug": "qwen/qwen3-coder-30b-a3b-instruct",
+        "displayName": "Qwen: Qwen3 Coder 30B A3B Instruct",
+        "normalizedNames": [
+          "qwen-qwen3-coder-30b-a3b-instruct",
+          "qwen3-coder-30b-a3b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000007",
+        "completionTokenPriceUsd": "0.00000027"
+      },
+      {
+        "id": "qwen/qwen3-30b-a3b-instruct-2507",
+        "canonicalSlug": "qwen/qwen3-30b-a3b-instruct-2507",
+        "displayName": "Qwen: Qwen3 30B A3B Instruct 2507",
+        "normalizedNames": [
+          "qwen-qwen3-30b-a3b-instruct-2507",
+          "qwen3-30b-a3b-instruct-2507"
+        ],
+        "promptTokenPriceUsd": "0.00000009",
+        "completionTokenPriceUsd": "0.0000003"
+      },
+      {
+        "id": "z-ai/glm-4.5",
+        "canonicalSlug": "z-ai/glm-4.5",
+        "displayName": "Z.ai: GLM 4.5",
+        "normalizedNames": [
+          "z-ai-glm-4-5",
+          "glm-4-5"
+        ],
+        "promptTokenPriceUsd": "0.0000006",
+        "completionTokenPriceUsd": "0.0000022",
+        "cacheReadTokenPriceUsd": "0.00000011"
+      },
+      {
+        "id": "z-ai/glm-4.5-air:free",
+        "canonicalSlug": "z-ai/glm-4.5-air",
+        "displayName": "Z.ai: GLM 4.5 Air (free)",
+        "normalizedNames": [
+          "z-ai-glm-4-5-air-free",
+          "glm-4-5-air-free",
+          "z-ai-glm-4-5-air",
+          "glm-4-5-air"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "z-ai/glm-4.5-air",
+        "canonicalSlug": "z-ai/glm-4.5-air",
+        "displayName": "Z.ai: GLM 4.5 Air",
+        "normalizedNames": [
+          "z-ai-glm-4-5-air",
+          "glm-4-5-air"
+        ],
+        "promptTokenPriceUsd": "0.000000125",
+        "completionTokenPriceUsd": "0.00000085",
+        "cacheReadTokenPriceUsd": "0.00000006"
+      },
+      {
+        "id": "qwen/qwen3-235b-a22b-thinking-2507",
+        "canonicalSlug": "qwen/qwen3-235b-a22b-thinking-2507",
+        "displayName": "Qwen: Qwen3 235B A22B Thinking 2507",
+        "normalizedNames": [
+          "qwen-qwen3-235b-a22b-thinking-2507",
+          "qwen3-235b-a22b-thinking-2507"
+        ],
+        "promptTokenPriceUsd": "0.0000001495",
+        "completionTokenPriceUsd": "0.000001495"
+      },
+      {
+        "id": "z-ai/glm-4-32b",
+        "canonicalSlug": "z-ai/glm-4-32b-0414",
+        "displayName": "Z.ai: GLM 4 32B ",
+        "normalizedNames": [
+          "z-ai-glm-4-32b",
+          "glm-4-32b",
+          "z-ai-glm-4-32b-0414",
+          "glm-4-32b-0414"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000001"
+      },
+      {
+        "id": "qwen/qwen3-coder:free",
+        "canonicalSlug": "qwen/qwen3-coder-480b-a35b-07-25",
+        "displayName": "Qwen: Qwen3 Coder 480B A35B (free)",
+        "normalizedNames": [
+          "qwen-qwen3-coder-free",
+          "qwen3-coder-free",
+          "qwen-qwen3-coder-480b-a35b-07-25",
+          "qwen3-coder-480b-a35b-07-25",
+          "qwen-qwen3-coder-480b-a35b-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "qwen/qwen3-coder",
+        "canonicalSlug": "qwen/qwen3-coder-480b-a35b-07-25",
+        "displayName": "Qwen: Qwen3 Coder 480B A35B",
+        "normalizedNames": [
+          "qwen-qwen3-coder",
+          "qwen3-coder",
+          "qwen-qwen3-coder-480b-a35b-07-25",
+          "qwen3-coder-480b-a35b-07-25",
+          "qwen-qwen3-coder-480b-a35b"
+        ],
+        "promptTokenPriceUsd": "0.00000022",
+        "completionTokenPriceUsd": "0.0000018"
+      },
+      {
+        "id": "bytedance/ui-tars-1.5-7b",
+        "canonicalSlug": "bytedance/ui-tars-1.5-7b",
+        "displayName": "ByteDance: UI-TARS 7B ",
+        "normalizedNames": [
+          "bytedance-ui-tars-1-5-7b",
+          "ui-tars-1-5-7b",
+          "bytedance-ui-tars-7b"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000002",
+        "cacheReadTokenPriceUsd": "0.0000001"
+      },
+      {
+        "id": "google/gemini-2.5-flash-lite",
+        "canonicalSlug": "google/gemini-2.5-flash-lite",
+        "displayName": "Google: Gemini 2.5 Flash Lite",
+        "normalizedNames": [
+          "google-gemini-2-5-flash-lite",
+          "gemini-2-5-flash-lite"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.00000001",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "qwen/qwen3-235b-a22b-2507",
+        "canonicalSlug": "qwen/qwen3-235b-a22b-07-25",
+        "displayName": "Qwen: Qwen3 235B A22B Instruct 2507",
+        "normalizedNames": [
+          "qwen-qwen3-235b-a22b-2507",
+          "qwen3-235b-a22b-2507",
+          "qwen-qwen3-235b-a22b-07-25",
+          "qwen3-235b-a22b-07-25",
+          "qwen-qwen3-235b-a22b-instruct-2507"
+        ],
+        "promptTokenPriceUsd": "0.000000071",
+        "completionTokenPriceUsd": "0.0000001"
+      },
+      {
+        "id": "switchpoint/router",
+        "canonicalSlug": "switchpoint/router",
+        "displayName": "Switchpoint Router",
+        "normalizedNames": [
+          "switchpoint-router",
+          "router"
+        ],
+        "promptTokenPriceUsd": "0.00000085",
+        "completionTokenPriceUsd": "0.0000034"
+      },
+      {
+        "id": "moonshotai/kimi-k2",
+        "canonicalSlug": "moonshotai/kimi-k2",
+        "displayName": "MoonshotAI: Kimi K2 0711",
+        "normalizedNames": [
+          "moonshotai-kimi-k2",
+          "kimi-k2",
+          "moonshotai-kimi-k2-0711"
+        ],
+        "promptTokenPriceUsd": "0.00000057",
+        "completionTokenPriceUsd": "0.0000023"
+      },
+      {
+        "id": "mistralai/devstral-medium",
+        "canonicalSlug": "mistralai/devstral-medium-2507",
+        "displayName": "Mistral: Devstral Medium",
+        "normalizedNames": [
+          "mistralai-devstral-medium",
+          "devstral-medium",
+          "mistralai-devstral-medium-2507",
+          "devstral-medium-2507",
+          "mistral-devstral-medium"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.00000004"
+      },
+      {
+        "id": "mistralai/devstral-small",
+        "canonicalSlug": "mistralai/devstral-small-2507",
+        "displayName": "Mistral: Devstral Small 1.1",
+        "normalizedNames": [
+          "mistralai-devstral-small",
+          "devstral-small",
+          "mistralai-devstral-small-2507",
+          "devstral-small-2507",
+          "mistral-devstral-small-1-1"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000003",
+        "cacheReadTokenPriceUsd": "0.00000001"
+      },
+      {
+        "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+        "canonicalSlug": "venice/uncensored",
+        "displayName": "Venice: Uncensored (free)",
+        "normalizedNames": [
+          "cognitivecomputations-dolphin-mistral-24b-venice-edition-free",
+          "dolphin-mistral-24b-venice-edition-free",
+          "venice-uncensored",
+          "uncensored",
+          "venice-uncensored-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "tencent/hunyuan-a13b-instruct",
+        "canonicalSlug": "tencent/hunyuan-a13b-instruct",
+        "displayName": "Tencent: Hunyuan A13B Instruct",
+        "normalizedNames": [
+          "tencent-hunyuan-a13b-instruct",
+          "hunyuan-a13b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000014",
+        "completionTokenPriceUsd": "0.00000057"
+      },
+      {
+        "id": "morph/morph-v3-large",
+        "canonicalSlug": "morph/morph-v3-large",
+        "displayName": "Morph: Morph V3 Large",
+        "normalizedNames": [
+          "morph-morph-v3-large",
+          "morph-v3-large"
+        ],
+        "promptTokenPriceUsd": "0.0000009",
+        "completionTokenPriceUsd": "0.0000019"
+      },
+      {
+        "id": "morph/morph-v3-fast",
+        "canonicalSlug": "morph/morph-v3-fast",
+        "displayName": "Morph: Morph V3 Fast",
+        "normalizedNames": [
+          "morph-morph-v3-fast",
+          "morph-v3-fast"
+        ],
+        "promptTokenPriceUsd": "0.0000008",
+        "completionTokenPriceUsd": "0.0000012"
+      },
+      {
+        "id": "baidu/ernie-4.5-vl-424b-a47b",
+        "canonicalSlug": "baidu/ernie-4.5-vl-424b-a47b",
+        "displayName": "Baidu: ERNIE 4.5 VL 424B A47B ",
+        "normalizedNames": [
+          "baidu-ernie-4-5-vl-424b-a47b",
+          "ernie-4-5-vl-424b-a47b"
+        ],
+        "promptTokenPriceUsd": "0.00000042",
+        "completionTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "baidu/ernie-4.5-300b-a47b",
+        "canonicalSlug": "baidu/ernie-4.5-300b-a47b",
+        "displayName": "Baidu: ERNIE 4.5 300B A47B ",
+        "normalizedNames": [
+          "baidu-ernie-4-5-300b-a47b",
+          "ernie-4-5-300b-a47b"
+        ],
+        "promptTokenPriceUsd": "0.00000028",
+        "completionTokenPriceUsd": "0.0000011"
+      },
+      {
+        "id": "mistralai/mistral-small-3.2-24b-instruct",
+        "canonicalSlug": "mistralai/mistral-small-3.2-24b-instruct-2506",
+        "displayName": "Mistral: Mistral Small 3.2 24B",
+        "normalizedNames": [
+          "mistralai-mistral-small-3-2-24b-instruct",
+          "mistral-small-3-2-24b-instruct",
+          "mistralai-mistral-small-3-2-24b-instruct-2506",
+          "mistral-small-3-2-24b-instruct-2506",
+          "mistral-mistral-small-3-2-24b"
+        ],
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "minimax/minimax-m1",
+        "canonicalSlug": "minimax/minimax-m1",
+        "displayName": "MiniMax: MiniMax M1",
+        "normalizedNames": [
+          "minimax-minimax-m1",
+          "minimax-m1"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000022"
+      },
+      {
+        "id": "google/gemini-2.5-flash",
+        "canonicalSlug": "google/gemini-2.5-flash",
+        "displayName": "Google: Gemini 2.5 Flash",
+        "normalizedNames": [
+          "google-gemini-2-5-flash",
+          "gemini-2-5-flash"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000025",
+        "cacheReadTokenPriceUsd": "0.00000003",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "google/gemini-2.5-pro",
+        "canonicalSlug": "google/gemini-2.5-pro",
+        "displayName": "Google: Gemini 2.5 Pro",
+        "normalizedNames": [
+          "google-gemini-2-5-pro",
+          "gemini-2-5-pro"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "openai/o3-pro",
+        "canonicalSlug": "openai/o3-pro-2025-06-10",
+        "displayName": "OpenAI: o3 Pro",
+        "normalizedNames": [
+          "openai-o3-pro",
+          "o3-pro",
+          "openai-o3-pro-2025-06-10",
+          "o3-pro-2025-06-10"
+        ],
+        "promptTokenPriceUsd": "0.00002",
+        "completionTokenPriceUsd": "0.00008"
+      },
+      {
+        "id": "google/gemini-2.5-pro-preview",
+        "canonicalSlug": "google/gemini-2.5-pro-preview-06-05",
+        "displayName": "Google: Gemini 2.5 Pro Preview 06-05",
+        "normalizedNames": [
+          "google-gemini-2-5-pro-preview",
+          "gemini-2-5-pro-preview",
+          "google-gemini-2-5-pro-preview-06-05",
+          "gemini-2-5-pro-preview-06-05"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "deepseek/deepseek-r1-0528",
+        "canonicalSlug": "deepseek/deepseek-r1-0528",
+        "displayName": "DeepSeek: R1 0528",
+        "normalizedNames": [
+          "deepseek-deepseek-r1-0528",
+          "deepseek-r1-0528"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.00000215",
+        "cacheReadTokenPriceUsd": "0.00000035"
+      },
+      {
+        "id": "anthropic/claude-opus-4",
+        "canonicalSlug": "anthropic/claude-4-opus-20250522",
+        "displayName": "Anthropic: Claude Opus 4",
+        "normalizedNames": [
+          "anthropic-claude-opus-4",
+          "claude-opus-4",
+          "anthropic-claude-4-opus-20250522",
+          "claude-4-opus-20250522"
+        ],
+        "promptTokenPriceUsd": "0.000015",
+        "completionTokenPriceUsd": "0.000075",
+        "cacheReadTokenPriceUsd": "0.0000015",
+        "cacheWriteTokenPriceUsd": "0.00001875"
+      },
+      {
+        "id": "anthropic/claude-sonnet-4",
+        "canonicalSlug": "anthropic/claude-4-sonnet-20250522",
+        "displayName": "Anthropic: Claude Sonnet 4",
+        "normalizedNames": [
+          "anthropic-claude-sonnet-4",
+          "claude-sonnet-4",
+          "anthropic-claude-4-sonnet-20250522",
+          "claude-4-sonnet-20250522"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000015",
+        "cacheReadTokenPriceUsd": "0.0000003",
+        "cacheWriteTokenPriceUsd": "0.00000375"
+      },
+      {
+        "id": "google/gemma-3n-e4b-it",
+        "canonicalSlug": "google/gemma-3n-e4b-it",
+        "displayName": "Google: Gemma 3n 4B",
+        "normalizedNames": [
+          "google-gemma-3n-e4b-it",
+          "gemma-3n-e4b-it",
+          "google-gemma-3n-4b"
+        ],
+        "promptTokenPriceUsd": "0.00000006",
+        "completionTokenPriceUsd": "0.00000012"
+      },
+      {
+        "id": "mistralai/mistral-medium-3",
+        "canonicalSlug": "mistralai/mistral-medium-3",
+        "displayName": "Mistral: Mistral Medium 3",
+        "normalizedNames": [
+          "mistralai-mistral-medium-3",
+          "mistral-medium-3",
+          "mistral-mistral-medium-3"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.000002",
+        "cacheReadTokenPriceUsd": "0.00000004"
+      },
+      {
+        "id": "google/gemini-2.5-pro-preview-05-06",
+        "canonicalSlug": "google/gemini-2.5-pro-preview-03-25",
+        "displayName": "Google: Gemini 2.5 Pro Preview 05-06",
+        "normalizedNames": [
+          "google-gemini-2-5-pro-preview-05-06",
+          "gemini-2-5-pro-preview-05-06",
+          "google-gemini-2-5-pro-preview-03-25",
+          "gemini-2-5-pro-preview-03-25"
+        ],
+        "promptTokenPriceUsd": "0.00000125",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.000000125",
+        "cacheWriteTokenPriceUsd": "0.000000375"
+      },
+      {
+        "id": "arcee-ai/spotlight",
+        "canonicalSlug": "arcee-ai/spotlight",
+        "displayName": "Arcee AI: Spotlight",
+        "normalizedNames": [
+          "arcee-ai-spotlight",
+          "spotlight"
+        ],
+        "promptTokenPriceUsd": "0.00000018",
+        "completionTokenPriceUsd": "0.00000018"
+      },
+      {
+        "id": "arcee-ai/maestro-reasoning",
+        "canonicalSlug": "arcee-ai/maestro-reasoning",
+        "displayName": "Arcee AI: Maestro Reasoning",
+        "normalizedNames": [
+          "arcee-ai-maestro-reasoning",
+          "maestro-reasoning"
+        ],
+        "promptTokenPriceUsd": "0.0000009",
+        "completionTokenPriceUsd": "0.0000033"
+      },
+      {
+        "id": "arcee-ai/virtuoso-large",
+        "canonicalSlug": "arcee-ai/virtuoso-large",
+        "displayName": "Arcee AI: Virtuoso Large",
+        "normalizedNames": [
+          "arcee-ai-virtuoso-large",
+          "virtuoso-large"
+        ],
+        "promptTokenPriceUsd": "0.00000075",
+        "completionTokenPriceUsd": "0.0000012"
+      },
+      {
+        "id": "arcee-ai/coder-large",
+        "canonicalSlug": "arcee-ai/coder-large",
+        "displayName": "Arcee AI: Coder Large",
+        "normalizedNames": [
+          "arcee-ai-coder-large",
+          "coder-large"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.0000008"
+      },
+      {
+        "id": "meta-llama/llama-guard-4-12b",
+        "canonicalSlug": "meta-llama/llama-guard-4-12b",
+        "displayName": "Meta: Llama Guard 4 12B",
+        "normalizedNames": [
+          "meta-llama-llama-guard-4-12b",
+          "llama-guard-4-12b",
+          "meta-llama-guard-4-12b"
+        ],
+        "promptTokenPriceUsd": "0.00000018",
+        "completionTokenPriceUsd": "0.00000018"
+      },
+      {
+        "id": "qwen/qwen3-30b-a3b",
+        "canonicalSlug": "qwen/qwen3-30b-a3b-04-28",
+        "displayName": "Qwen: Qwen3 30B A3B",
+        "normalizedNames": [
+          "qwen-qwen3-30b-a3b",
+          "qwen3-30b-a3b",
+          "qwen-qwen3-30b-a3b-04-28",
+          "qwen3-30b-a3b-04-28"
+        ],
+        "promptTokenPriceUsd": "0.00000009",
+        "completionTokenPriceUsd": "0.00000045"
+      },
+      {
+        "id": "qwen/qwen3-8b",
+        "canonicalSlug": "qwen/qwen3-8b-04-28",
+        "displayName": "Qwen: Qwen3 8B",
+        "normalizedNames": [
+          "qwen-qwen3-8b",
+          "qwen3-8b",
+          "qwen-qwen3-8b-04-28",
+          "qwen3-8b-04-28"
+        ],
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.00000005"
+      },
+      {
+        "id": "qwen/qwen3-14b",
+        "canonicalSlug": "qwen/qwen3-14b-04-28",
+        "displayName": "Qwen: Qwen3 14B",
+        "normalizedNames": [
+          "qwen-qwen3-14b",
+          "qwen3-14b",
+          "qwen-qwen3-14b-04-28",
+          "qwen3-14b-04-28"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.00000024"
+      },
+      {
+        "id": "qwen/qwen3-32b",
+        "canonicalSlug": "qwen/qwen3-32b-04-28",
+        "displayName": "Qwen: Qwen3 32B",
+        "normalizedNames": [
+          "qwen-qwen3-32b",
+          "qwen3-32b",
+          "qwen-qwen3-32b-04-28",
+          "qwen3-32b-04-28"
+        ],
+        "promptTokenPriceUsd": "0.00000008",
+        "completionTokenPriceUsd": "0.00000028"
+      },
+      {
+        "id": "qwen/qwen3-235b-a22b",
+        "canonicalSlug": "qwen/qwen3-235b-a22b-04-28",
+        "displayName": "Qwen: Qwen3 235B A22B",
+        "normalizedNames": [
+          "qwen-qwen3-235b-a22b",
+          "qwen3-235b-a22b",
+          "qwen-qwen3-235b-a22b-04-28",
+          "qwen3-235b-a22b-04-28"
+        ],
+        "promptTokenPriceUsd": "0.000000455",
+        "completionTokenPriceUsd": "0.00000182"
+      },
+      {
+        "id": "openai/o4-mini-high",
+        "canonicalSlug": "openai/o4-mini-high-2025-04-16",
+        "displayName": "OpenAI: o4 Mini High",
+        "normalizedNames": [
+          "openai-o4-mini-high",
+          "o4-mini-high",
+          "openai-o4-mini-high-2025-04-16",
+          "o4-mini-high-2025-04-16"
+        ],
+        "promptTokenPriceUsd": "0.0000011",
+        "completionTokenPriceUsd": "0.0000044",
+        "cacheReadTokenPriceUsd": "0.000000275"
+      },
+      {
+        "id": "openai/o3",
+        "canonicalSlug": "openai/o3-2025-04-16",
+        "displayName": "OpenAI: o3",
+        "normalizedNames": [
+          "openai-o3",
+          "o3",
+          "openai-o3-2025-04-16",
+          "o3-2025-04-16"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000008",
+        "cacheReadTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "openai/o4-mini",
+        "canonicalSlug": "openai/o4-mini-2025-04-16",
+        "displayName": "OpenAI: o4 Mini",
+        "normalizedNames": [
+          "openai-o4-mini",
+          "o4-mini",
+          "openai-o4-mini-2025-04-16",
+          "o4-mini-2025-04-16"
+        ],
+        "promptTokenPriceUsd": "0.0000011",
+        "completionTokenPriceUsd": "0.0000044",
+        "cacheReadTokenPriceUsd": "0.000000275"
+      },
+      {
+        "id": "openai/gpt-4.1",
+        "canonicalSlug": "openai/gpt-4.1-2025-04-14",
+        "displayName": "OpenAI: GPT-4.1",
+        "normalizedNames": [
+          "openai-gpt-4-1",
+          "gpt-4-1",
+          "openai-gpt-4-1-2025-04-14",
+          "gpt-4-1-2025-04-14"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000008",
+        "cacheReadTokenPriceUsd": "0.0000005"
+      },
+      {
+        "id": "openai/gpt-4.1-mini",
+        "canonicalSlug": "openai/gpt-4.1-mini-2025-04-14",
+        "displayName": "OpenAI: GPT-4.1 Mini",
+        "normalizedNames": [
+          "openai-gpt-4-1-mini",
+          "gpt-4-1-mini",
+          "openai-gpt-4-1-mini-2025-04-14",
+          "gpt-4-1-mini-2025-04-14"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000016",
+        "cacheReadTokenPriceUsd": "0.0000001"
+      },
+      {
+        "id": "openai/gpt-4.1-nano",
+        "canonicalSlug": "openai/gpt-4.1-nano-2025-04-14",
+        "displayName": "OpenAI: GPT-4.1 Nano",
+        "normalizedNames": [
+          "openai-gpt-4-1-nano",
+          "gpt-4-1-nano",
+          "openai-gpt-4-1-nano-2025-04-14",
+          "gpt-4-1-nano-2025-04-14"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.000000025"
+      },
+      {
+        "id": "alfredpros/codellama-7b-instruct-solidity",
+        "canonicalSlug": "alfredpros/codellama-7b-instruct-solidity",
+        "displayName": "AlfredPros: CodeLLaMa 7B Instruct Solidity",
+        "normalizedNames": [
+          "alfredpros-codellama-7b-instruct-solidity",
+          "codellama-7b-instruct-solidity"
+        ],
+        "promptTokenPriceUsd": "0.0000008",
+        "completionTokenPriceUsd": "0.0000012"
+      },
+      {
+        "id": "meta-llama/llama-4-maverick",
+        "canonicalSlug": "meta-llama/llama-4-maverick-17b-128e-instruct",
+        "displayName": "Meta: Llama 4 Maverick",
+        "normalizedNames": [
+          "meta-llama-llama-4-maverick",
+          "llama-4-maverick",
+          "meta-llama-llama-4-maverick-17b-128e-instruct",
+          "llama-4-maverick-17b-128e-instruct",
+          "meta-llama-4-maverick"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006"
+      },
+      {
+        "id": "meta-llama/llama-4-scout",
+        "canonicalSlug": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "displayName": "Meta: Llama 4 Scout",
+        "normalizedNames": [
+          "meta-llama-llama-4-scout",
+          "llama-4-scout",
+          "meta-llama-llama-4-scout-17b-16e-instruct",
+          "llama-4-scout-17b-16e-instruct",
+          "meta-llama-4-scout"
+        ],
+        "promptTokenPriceUsd": "0.00000008",
+        "completionTokenPriceUsd": "0.0000003"
+      },
+      {
+        "id": "deepseek/deepseek-chat-v3-0324",
+        "canonicalSlug": "deepseek/deepseek-chat-v3-0324",
+        "displayName": "DeepSeek: DeepSeek V3 0324",
+        "normalizedNames": [
+          "deepseek-deepseek-chat-v3-0324",
+          "deepseek-chat-v3-0324",
+          "deepseek-deepseek-v3-0324"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.00000077",
+        "cacheReadTokenPriceUsd": "0.000000135"
+      },
+      {
+        "id": "openai/o1-pro",
+        "canonicalSlug": "openai/o1-pro",
+        "displayName": "OpenAI: o1-pro",
+        "normalizedNames": [
+          "openai-o1-pro",
+          "o1-pro"
+        ],
+        "promptTokenPriceUsd": "0.00015",
+        "completionTokenPriceUsd": "0.0006"
+      },
+      {
+        "id": "mistralai/mistral-small-3.1-24b-instruct",
+        "canonicalSlug": "mistralai/mistral-small-3.1-24b-instruct-2503",
+        "displayName": "Mistral: Mistral Small 3.1 24B",
+        "normalizedNames": [
+          "mistralai-mistral-small-3-1-24b-instruct",
+          "mistral-small-3-1-24b-instruct",
+          "mistralai-mistral-small-3-1-24b-instruct-2503",
+          "mistral-small-3-1-24b-instruct-2503",
+          "mistral-mistral-small-3-1-24b"
+        ],
+        "promptTokenPriceUsd": "0.000000351",
+        "completionTokenPriceUsd": "0.000000555"
+      },
+      {
+        "id": "google/gemma-3-4b-it",
+        "canonicalSlug": "google/gemma-3-4b-it",
+        "displayName": "Google: Gemma 3 4B",
+        "normalizedNames": [
+          "google-gemma-3-4b-it",
+          "gemma-3-4b-it",
+          "google-gemma-3-4b"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "google/gemma-3-12b-it",
+        "canonicalSlug": "google/gemma-3-12b-it",
+        "displayName": "Google: Gemma 3 12B",
+        "normalizedNames": [
+          "google-gemma-3-12b-it",
+          "gemma-3-12b-it",
+          "google-gemma-3-12b"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000013"
+      },
+      {
+        "id": "cohere/command-a",
+        "canonicalSlug": "cohere/command-a-03-2025",
+        "displayName": "Cohere: Command A",
+        "normalizedNames": [
+          "cohere-command-a",
+          "command-a",
+          "cohere-command-a-03-2025",
+          "command-a-03-2025"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "openai/gpt-4o-mini-search-preview",
+        "canonicalSlug": "openai/gpt-4o-mini-search-preview-2025-03-11",
+        "displayName": "OpenAI: GPT-4o-mini Search Preview",
+        "normalizedNames": [
+          "openai-gpt-4o-mini-search-preview",
+          "gpt-4o-mini-search-preview",
+          "openai-gpt-4o-mini-search-preview-2025-03-11",
+          "gpt-4o-mini-search-preview-2025-03-11"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006"
+      },
+      {
+        "id": "openai/gpt-4o-search-preview",
+        "canonicalSlug": "openai/gpt-4o-search-preview-2025-03-11",
+        "displayName": "OpenAI: GPT-4o Search Preview",
+        "normalizedNames": [
+          "openai-gpt-4o-search-preview",
+          "gpt-4o-search-preview",
+          "openai-gpt-4o-search-preview-2025-03-11",
+          "gpt-4o-search-preview-2025-03-11"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "rekaai/reka-flash-3",
+        "canonicalSlug": "rekaai/reka-flash-3",
+        "displayName": "Reka Flash 3",
+        "normalizedNames": [
+          "rekaai-reka-flash-3",
+          "reka-flash-3"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "google/gemma-3-27b-it",
+        "canonicalSlug": "google/gemma-3-27b-it",
+        "displayName": "Google: Gemma 3 27B",
+        "normalizedNames": [
+          "google-gemma-3-27b-it",
+          "gemma-3-27b-it",
+          "google-gemma-3-27b"
+        ],
+        "promptTokenPriceUsd": "0.00000008",
+        "completionTokenPriceUsd": "0.00000016"
+      },
+      {
+        "id": "thedrummer/skyfall-36b-v2",
+        "canonicalSlug": "thedrummer/skyfall-36b-v2",
+        "displayName": "TheDrummer: Skyfall 36B V2",
+        "normalizedNames": [
+          "thedrummer-skyfall-36b-v2",
+          "skyfall-36b-v2"
+        ],
+        "promptTokenPriceUsd": "0.00000055",
+        "completionTokenPriceUsd": "0.0000008",
+        "cacheReadTokenPriceUsd": "0.00000025"
+      },
+      {
+        "id": "perplexity/sonar-reasoning-pro",
+        "canonicalSlug": "perplexity/sonar-reasoning-pro",
+        "displayName": "Perplexity: Sonar Reasoning Pro",
+        "normalizedNames": [
+          "perplexity-sonar-reasoning-pro",
+          "sonar-reasoning-pro"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000008"
+      },
+      {
+        "id": "perplexity/sonar-pro",
+        "canonicalSlug": "perplexity/sonar-pro",
+        "displayName": "Perplexity: Sonar Pro",
+        "normalizedNames": [
+          "perplexity-sonar-pro",
+          "sonar-pro"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000015"
+      },
+      {
+        "id": "perplexity/sonar-deep-research",
+        "canonicalSlug": "perplexity/sonar-deep-research",
+        "displayName": "Perplexity: Sonar Deep Research",
+        "normalizedNames": [
+          "perplexity-sonar-deep-research",
+          "sonar-deep-research"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000008"
+      },
+      {
+        "id": "google/gemini-2.0-flash-lite-001",
+        "canonicalSlug": "google/gemini-2.0-flash-lite-001",
+        "displayName": "Google: Gemini 2.0 Flash Lite",
+        "normalizedNames": [
+          "google-gemini-2-0-flash-lite-001",
+          "gemini-2-0-flash-lite-001",
+          "google-gemini-2-0-flash-lite"
+        ],
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.0000003"
+      },
+      {
+        "id": "mistralai/mistral-saba",
+        "canonicalSlug": "mistralai/mistral-saba-2502",
+        "displayName": "Mistral: Saba",
+        "normalizedNames": [
+          "mistralai-mistral-saba",
+          "mistral-saba",
+          "mistralai-mistral-saba-2502",
+          "mistral-saba-2502"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.0000006",
+        "cacheReadTokenPriceUsd": "0.00000002"
+      },
+      {
+        "id": "meta-llama/llama-guard-3-8b",
+        "canonicalSlug": "meta-llama/llama-guard-3-8b",
+        "displayName": "Llama Guard 3 8B",
+        "normalizedNames": [
+          "meta-llama-llama-guard-3-8b",
+          "llama-guard-3-8b"
+        ],
+        "promptTokenPriceUsd": "0.000000484",
+        "completionTokenPriceUsd": "0.00000003"
+      },
+      {
+        "id": "openai/o3-mini-high",
+        "canonicalSlug": "openai/o3-mini-high-2025-01-31",
+        "displayName": "OpenAI: o3 Mini High",
+        "normalizedNames": [
+          "openai-o3-mini-high",
+          "o3-mini-high",
+          "openai-o3-mini-high-2025-01-31",
+          "o3-mini-high-2025-01-31"
+        ],
+        "promptTokenPriceUsd": "0.0000011",
+        "completionTokenPriceUsd": "0.0000044",
+        "cacheReadTokenPriceUsd": "0.00000055"
+      },
+      {
+        "id": "google/gemini-2.0-flash-001",
+        "canonicalSlug": "google/gemini-2.0-flash-001",
+        "displayName": "Google: Gemini 2.0 Flash",
+        "normalizedNames": [
+          "google-gemini-2-0-flash-001",
+          "gemini-2-0-flash-001",
+          "google-gemini-2-0-flash"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000004",
+        "cacheReadTokenPriceUsd": "0.000000025",
+        "cacheWriteTokenPriceUsd": "0.00000008333333333333334"
+      },
+      {
+        "id": "aion-labs/aion-1.0",
+        "canonicalSlug": "aion-labs/aion-1.0",
+        "displayName": "AionLabs: Aion-1.0",
+        "normalizedNames": [
+          "aion-labs-aion-1-0",
+          "aion-1-0",
+          "aionlabs-aion-1-0"
+        ],
+        "promptTokenPriceUsd": "0.000004",
+        "completionTokenPriceUsd": "0.000008"
+      },
+      {
+        "id": "aion-labs/aion-1.0-mini",
+        "canonicalSlug": "aion-labs/aion-1.0-mini",
+        "displayName": "AionLabs: Aion-1.0-Mini",
+        "normalizedNames": [
+          "aion-labs-aion-1-0-mini",
+          "aion-1-0-mini",
+          "aionlabs-aion-1-0-mini"
+        ],
+        "promptTokenPriceUsd": "0.0000007",
+        "completionTokenPriceUsd": "0.0000014"
+      },
+      {
+        "id": "aion-labs/aion-rp-llama-3.1-8b",
+        "canonicalSlug": "aion-labs/aion-rp-llama-3.1-8b",
+        "displayName": "AionLabs: Aion-RP 1.0 (8B)",
+        "normalizedNames": [
+          "aion-labs-aion-rp-llama-3-1-8b",
+          "aion-rp-llama-3-1-8b",
+          "aionlabs-aion-rp-1-0-8b"
+        ],
+        "promptTokenPriceUsd": "0.0000008",
+        "completionTokenPriceUsd": "0.0000016"
+      },
+      {
+        "id": "qwen/qwen2.5-vl-72b-instruct",
+        "canonicalSlug": "qwen/qwen2.5-vl-72b-instruct",
+        "displayName": "Qwen: Qwen2.5 VL 72B Instruct",
+        "normalizedNames": [
+          "qwen-qwen2-5-vl-72b-instruct",
+          "qwen2-5-vl-72b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.00000075"
+      },
+      {
+        "id": "qwen/qwen-plus",
+        "canonicalSlug": "qwen/qwen-plus-2025-01-25",
+        "displayName": "Qwen: Qwen-Plus",
+        "normalizedNames": [
+          "qwen-qwen-plus",
+          "qwen-plus",
+          "qwen-qwen-plus-2025-01-25",
+          "qwen-plus-2025-01-25"
+        ],
+        "promptTokenPriceUsd": "0.00000026",
+        "completionTokenPriceUsd": "0.00000078",
+        "cacheReadTokenPriceUsd": "0.000000052",
+        "cacheWriteTokenPriceUsd": "0.000000325"
+      },
+      {
+        "id": "openai/o3-mini",
+        "canonicalSlug": "openai/o3-mini-2025-01-31",
+        "displayName": "OpenAI: o3 Mini",
+        "normalizedNames": [
+          "openai-o3-mini",
+          "o3-mini",
+          "openai-o3-mini-2025-01-31",
+          "o3-mini-2025-01-31"
+        ],
+        "promptTokenPriceUsd": "0.0000011",
+        "completionTokenPriceUsd": "0.0000044",
+        "cacheReadTokenPriceUsd": "0.00000055"
+      },
+      {
+        "id": "mistralai/mistral-small-24b-instruct-2501",
+        "canonicalSlug": "mistralai/mistral-small-24b-instruct-2501",
+        "displayName": "Mistral: Mistral Small 3",
+        "normalizedNames": [
+          "mistralai-mistral-small-24b-instruct-2501",
+          "mistral-small-24b-instruct-2501",
+          "mistral-mistral-small-3"
+        ],
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.00000008"
+      },
+      {
+        "id": "deepseek/deepseek-r1-distill-qwen-32b",
+        "canonicalSlug": "deepseek/deepseek-r1-distill-qwen-32b",
+        "displayName": "DeepSeek: R1 Distill Qwen 32B",
+        "normalizedNames": [
+          "deepseek-deepseek-r1-distill-qwen-32b",
+          "deepseek-r1-distill-qwen-32b"
+        ],
+        "promptTokenPriceUsd": "0.00000029",
+        "completionTokenPriceUsd": "0.00000029"
+      },
+      {
+        "id": "perplexity/sonar",
+        "canonicalSlug": "perplexity/sonar",
+        "displayName": "Perplexity: Sonar",
+        "normalizedNames": [
+          "perplexity-sonar",
+          "sonar"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "deepseek/deepseek-r1-distill-llama-70b",
+        "canonicalSlug": "deepseek/deepseek-r1-distill-llama-70b",
+        "displayName": "DeepSeek: R1 Distill Llama 70B",
+        "normalizedNames": [
+          "deepseek-deepseek-r1-distill-llama-70b",
+          "deepseek-r1-distill-llama-70b"
+        ],
+        "promptTokenPriceUsd": "0.0000007",
+        "completionTokenPriceUsd": "0.0000008"
+      },
+      {
+        "id": "deepseek/deepseek-r1",
+        "canonicalSlug": "deepseek/deepseek-r1",
+        "displayName": "DeepSeek: R1",
+        "normalizedNames": [
+          "deepseek-deepseek-r1",
+          "deepseek-r1"
+        ],
+        "promptTokenPriceUsd": "0.0000007",
+        "completionTokenPriceUsd": "0.0000025"
+      },
+      {
+        "id": "minimax/minimax-01",
+        "canonicalSlug": "minimax/minimax-01",
+        "displayName": "MiniMax: MiniMax-01",
+        "normalizedNames": [
+          "minimax-minimax-01",
+          "minimax-01"
+        ],
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.0000011"
+      },
+      {
+        "id": "microsoft/phi-4",
+        "canonicalSlug": "microsoft/phi-4",
+        "displayName": "Microsoft: Phi 4",
+        "normalizedNames": [
+          "microsoft-phi-4",
+          "phi-4"
+        ],
+        "promptTokenPriceUsd": "0.000000065",
+        "completionTokenPriceUsd": "0.00000014"
+      },
+      {
+        "id": "sao10k/l3.1-70b-hanami-x1",
+        "canonicalSlug": "sao10k/l3.1-70b-hanami-x1",
+        "displayName": "Sao10K: Llama 3.1 70B Hanami x1",
+        "normalizedNames": [
+          "sao10k-l3-1-70b-hanami-x1",
+          "l3-1-70b-hanami-x1",
+          "sao10k-llama-3-1-70b-hanami-x1"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000003"
+      },
+      {
+        "id": "deepseek/deepseek-chat",
+        "canonicalSlug": "deepseek/deepseek-chat-v3",
+        "displayName": "DeepSeek: DeepSeek V3",
+        "normalizedNames": [
+          "deepseek-deepseek-chat",
+          "deepseek-chat",
+          "deepseek-deepseek-chat-v3",
+          "deepseek-chat-v3",
+          "deepseek-deepseek-v3"
+        ],
+        "promptTokenPriceUsd": "0.0000002288",
+        "completionTokenPriceUsd": "0.0000009144"
+      },
+      {
+        "id": "sao10k/l3.3-euryale-70b",
+        "canonicalSlug": "sao10k/l3.3-euryale-70b-v2.3",
+        "displayName": "Sao10K: Llama 3.3 Euryale 70B",
+        "normalizedNames": [
+          "sao10k-l3-3-euryale-70b",
+          "l3-3-euryale-70b",
+          "sao10k-l3-3-euryale-70b-v2-3",
+          "l3-3-euryale-70b-v2-3",
+          "sao10k-llama-3-3-euryale-70b"
+        ],
+        "promptTokenPriceUsd": "0.00000065",
+        "completionTokenPriceUsd": "0.00000075"
+      },
+      {
+        "id": "openai/o1",
+        "canonicalSlug": "openai/o1-2024-12-17",
+        "displayName": "OpenAI: o1",
+        "normalizedNames": [
+          "openai-o1",
+          "o1",
+          "openai-o1-2024-12-17",
+          "o1-2024-12-17"
+        ],
+        "promptTokenPriceUsd": "0.000015",
+        "completionTokenPriceUsd": "0.00006",
+        "cacheReadTokenPriceUsd": "0.0000075"
+      },
+      {
+        "id": "cohere/command-r7b-12-2024",
+        "canonicalSlug": "cohere/command-r7b-12-2024",
+        "displayName": "Cohere: Command R7B (12-2024)",
+        "normalizedNames": [
+          "cohere-command-r7b-12-2024",
+          "command-r7b-12-2024"
+        ],
+        "promptTokenPriceUsd": "0.0000000375",
+        "completionTokenPriceUsd": "0.00000015"
+      },
+      {
+        "id": "meta-llama/llama-3.3-70b-instruct:free",
+        "canonicalSlug": "meta-llama/llama-3.3-70b-instruct",
+        "displayName": "Meta: Llama 3.3 70B Instruct (free)",
+        "normalizedNames": [
+          "meta-llama-llama-3-3-70b-instruct-free",
+          "llama-3-3-70b-instruct-free",
+          "meta-llama-llama-3-3-70b-instruct",
+          "llama-3-3-70b-instruct",
+          "meta-llama-3-3-70b-instruct-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "meta-llama/llama-3.3-70b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.3-70b-instruct",
+        "displayName": "Meta: Llama 3.3 70B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-3-70b-instruct",
+          "llama-3-3-70b-instruct",
+          "meta-llama-3-3-70b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.00000032"
+      },
+      {
+        "id": "amazon/nova-lite-v1",
+        "canonicalSlug": "amazon/nova-lite-v1",
+        "displayName": "Amazon: Nova Lite 1.0",
+        "normalizedNames": [
+          "amazon-nova-lite-v1",
+          "nova-lite-v1",
+          "amazon-nova-lite-1-0"
+        ],
+        "promptTokenPriceUsd": "0.00000006",
+        "completionTokenPriceUsd": "0.00000024"
+      },
+      {
+        "id": "amazon/nova-micro-v1",
+        "canonicalSlug": "amazon/nova-micro-v1",
+        "displayName": "Amazon: Nova Micro 1.0",
+        "normalizedNames": [
+          "amazon-nova-micro-v1",
+          "nova-micro-v1",
+          "amazon-nova-micro-1-0"
+        ],
+        "promptTokenPriceUsd": "0.000000035",
+        "completionTokenPriceUsd": "0.00000014"
+      },
+      {
+        "id": "amazon/nova-pro-v1",
+        "canonicalSlug": "amazon/nova-pro-v1",
+        "displayName": "Amazon: Nova Pro 1.0",
+        "normalizedNames": [
+          "amazon-nova-pro-v1",
+          "nova-pro-v1",
+          "amazon-nova-pro-1-0"
+        ],
+        "promptTokenPriceUsd": "0.0000008",
+        "completionTokenPriceUsd": "0.0000032"
+      },
+      {
+        "id": "openai/gpt-4o-2024-11-20",
+        "canonicalSlug": "openai/gpt-4o-2024-11-20",
+        "displayName": "OpenAI: GPT-4o (2024-11-20)",
+        "normalizedNames": [
+          "openai-gpt-4o-2024-11-20",
+          "gpt-4o-2024-11-20"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "mistralai/mistral-large-2411",
+        "canonicalSlug": "mistralai/mistral-large-2411",
+        "displayName": "Mistral Large 2411",
+        "normalizedNames": [
+          "mistralai-mistral-large-2411",
+          "mistral-large-2411"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000006",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "mistralai/mistral-large-2407",
+        "canonicalSlug": "mistralai/mistral-large-2407",
+        "displayName": "Mistral Large 2407",
+        "normalizedNames": [
+          "mistralai-mistral-large-2407",
+          "mistral-large-2407"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000006",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "mistralai/pixtral-large-2411",
+        "canonicalSlug": "mistralai/pixtral-large-2411",
+        "displayName": "Mistral: Pixtral Large 2411",
+        "normalizedNames": [
+          "mistralai-pixtral-large-2411",
+          "pixtral-large-2411",
+          "mistral-pixtral-large-2411"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000006",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "qwen/qwen-2.5-coder-32b-instruct",
+        "canonicalSlug": "qwen/qwen-2.5-coder-32b-instruct",
+        "displayName": "Qwen2.5 Coder 32B Instruct",
+        "normalizedNames": [
+          "qwen-qwen-2-5-coder-32b-instruct",
+          "qwen-2-5-coder-32b-instruct",
+          "qwen2-5-coder-32b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000066",
+        "completionTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "thedrummer/unslopnemo-12b",
+        "canonicalSlug": "thedrummer/unslopnemo-12b",
+        "displayName": "TheDrummer: UnslopNemo 12B",
+        "normalizedNames": [
+          "thedrummer-unslopnemo-12b",
+          "unslopnemo-12b"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "anthropic/claude-3.5-haiku",
+        "canonicalSlug": "anthropic/claude-3-5-haiku",
+        "displayName": "Anthropic: Claude 3.5 Haiku",
+        "normalizedNames": [
+          "anthropic-claude-3-5-haiku",
+          "claude-3-5-haiku"
+        ],
+        "promptTokenPriceUsd": "0.0000008",
+        "completionTokenPriceUsd": "0.000004",
+        "cacheReadTokenPriceUsd": "0.00000008",
+        "cacheWriteTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "anthracite-org/magnum-v4-72b",
+        "canonicalSlug": "anthracite-org/magnum-v4-72b",
+        "displayName": "Magnum v4 72B",
+        "normalizedNames": [
+          "anthracite-org-magnum-v4-72b",
+          "magnum-v4-72b"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000005"
+      },
+      {
+        "id": "qwen/qwen-2.5-7b-instruct",
+        "canonicalSlug": "qwen/qwen-2.5-7b-instruct",
+        "displayName": "Qwen: Qwen2.5 7B Instruct",
+        "normalizedNames": [
+          "qwen-qwen-2-5-7b-instruct",
+          "qwen-2-5-7b-instruct",
+          "qwen-qwen2-5-7b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.0000001"
+      },
+      {
+        "id": "inflection/inflection-3-pi",
+        "canonicalSlug": "inflection/inflection-3-pi",
+        "displayName": "Inflection: Inflection 3 Pi",
+        "normalizedNames": [
+          "inflection-inflection-3-pi",
+          "inflection-3-pi"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "inflection/inflection-3-productivity",
+        "canonicalSlug": "inflection/inflection-3-productivity",
+        "displayName": "Inflection: Inflection 3 Productivity",
+        "normalizedNames": [
+          "inflection-inflection-3-productivity",
+          "inflection-3-productivity"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "thedrummer/rocinante-12b",
+        "canonicalSlug": "thedrummer/rocinante-12b",
+        "displayName": "TheDrummer: Rocinante 12B",
+        "normalizedNames": [
+          "thedrummer-rocinante-12b",
+          "rocinante-12b"
+        ],
+        "promptTokenPriceUsd": "0.00000017",
+        "completionTokenPriceUsd": "0.00000043"
+      },
+      {
+        "id": "meta-llama/llama-3.2-1b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.2-1b-instruct",
+        "displayName": "Meta: Llama 3.2 1B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-2-1b-instruct",
+          "llama-3-2-1b-instruct",
+          "meta-llama-3-2-1b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000000027",
+        "completionTokenPriceUsd": "0.000000201"
+      },
+      {
+        "id": "meta-llama/llama-3.2-11b-vision-instruct",
+        "canonicalSlug": "meta-llama/llama-3.2-11b-vision-instruct",
+        "displayName": "Meta: Llama 3.2 11B Vision Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-2-11b-vision-instruct",
+          "llama-3-2-11b-vision-instruct",
+          "meta-llama-3-2-11b-vision-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000000245",
+        "completionTokenPriceUsd": "0.000000245"
+      },
+      {
+        "id": "meta-llama/llama-3.2-3b-instruct:free",
+        "canonicalSlug": "meta-llama/llama-3.2-3b-instruct",
+        "displayName": "Meta: Llama 3.2 3B Instruct (free)",
+        "normalizedNames": [
+          "meta-llama-llama-3-2-3b-instruct-free",
+          "llama-3-2-3b-instruct-free",
+          "meta-llama-llama-3-2-3b-instruct",
+          "llama-3-2-3b-instruct",
+          "meta-llama-3-2-3b-instruct-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "meta-llama/llama-3.2-3b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.2-3b-instruct",
+        "displayName": "Meta: Llama 3.2 3B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-2-3b-instruct",
+          "llama-3-2-3b-instruct",
+          "meta-llama-3-2-3b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.0000000509",
+        "completionTokenPriceUsd": "0.000000335"
+      },
+      {
+        "id": "qwen/qwen-2.5-72b-instruct",
+        "canonicalSlug": "qwen/qwen-2.5-72b-instruct",
+        "displayName": "Qwen2.5 72B Instruct",
+        "normalizedNames": [
+          "qwen-qwen-2-5-72b-instruct",
+          "qwen-2-5-72b-instruct",
+          "qwen2-5-72b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000036",
+        "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "cohere/command-r-08-2024",
+        "canonicalSlug": "cohere/command-r-08-2024",
+        "displayName": "Cohere: Command R (08-2024)",
+        "normalizedNames": [
+          "cohere-command-r-08-2024",
+          "command-r-08-2024"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006"
+      },
+      {
+        "id": "cohere/command-r-plus-08-2024",
+        "canonicalSlug": "cohere/command-r-plus-08-2024",
+        "displayName": "Cohere: Command R+ (08-2024)",
+        "normalizedNames": [
+          "cohere-command-r-plus-08-2024",
+          "command-r-plus-08-2024",
+          "cohere-command-r-08-2024"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "sao10k/l3.1-euryale-70b",
+        "canonicalSlug": "sao10k/l3.1-euryale-70b",
+        "displayName": "Sao10K: Llama 3.1 Euryale 70B v2.2",
+        "normalizedNames": [
+          "sao10k-l3-1-euryale-70b",
+          "l3-1-euryale-70b",
+          "sao10k-llama-3-1-euryale-70b-v2-2"
+        ],
+        "promptTokenPriceUsd": "0.00000085",
+        "completionTokenPriceUsd": "0.00000085"
+      },
+      {
+        "id": "nousresearch/hermes-3-llama-3.1-70b",
+        "canonicalSlug": "nousresearch/hermes-3-llama-3.1-70b",
+        "displayName": "Nous: Hermes 3 70B Instruct",
+        "normalizedNames": [
+          "nousresearch-hermes-3-llama-3-1-70b",
+          "hermes-3-llama-3-1-70b",
+          "nous-hermes-3-70b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000003"
+      },
+      {
+        "id": "nousresearch/hermes-3-llama-3.1-405b:free",
+        "canonicalSlug": "nousresearch/hermes-3-llama-3.1-405b",
+        "displayName": "Nous: Hermes 3 405B Instruct (free)",
+        "normalizedNames": [
+          "nousresearch-hermes-3-llama-3-1-405b-free",
+          "hermes-3-llama-3-1-405b-free",
+          "nousresearch-hermes-3-llama-3-1-405b",
+          "hermes-3-llama-3-1-405b",
+          "nous-hermes-3-405b-instruct-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nousresearch/hermes-3-llama-3.1-405b",
+        "canonicalSlug": "nousresearch/hermes-3-llama-3.1-405b",
+        "displayName": "Nous: Hermes 3 405B Instruct",
+        "normalizedNames": [
+          "nousresearch-hermes-3-llama-3-1-405b",
+          "hermes-3-llama-3-1-405b",
+          "nous-hermes-3-405b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "sao10k/l3-lunaris-8b",
+        "canonicalSlug": "sao10k/l3-lunaris-8b",
+        "displayName": "Sao10K: Llama 3 8B Lunaris",
+        "normalizedNames": [
+          "sao10k-l3-lunaris-8b",
+          "l3-lunaris-8b",
+          "sao10k-llama-3-8b-lunaris"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000005"
+      },
+      {
+        "id": "openai/gpt-4o-2024-08-06",
+        "canonicalSlug": "openai/gpt-4o-2024-08-06",
+        "displayName": "OpenAI: GPT-4o (2024-08-06)",
+        "normalizedNames": [
+          "openai-gpt-4o-2024-08-06",
+          "gpt-4o-2024-08-06"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001",
+        "cacheReadTokenPriceUsd": "0.00000125"
+      },
+      {
+        "id": "meta-llama/llama-3.1-8b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.1-8b-instruct",
+        "displayName": "Meta: Llama 3.1 8B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-1-8b-instruct",
+          "llama-3-1-8b-instruct",
+          "meta-llama-3-1-8b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000002",
+        "completionTokenPriceUsd": "0.00000005"
+      },
+      {
+        "id": "meta-llama/llama-3.1-70b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.1-70b-instruct",
+        "displayName": "Meta: Llama 3.1 70B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-1-70b-instruct",
+          "llama-3-1-70b-instruct",
+          "meta-llama-3-1-70b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "mistralai/mistral-nemo",
+        "canonicalSlug": "mistralai/mistral-nemo",
+        "displayName": "Mistral: Mistral Nemo",
+        "normalizedNames": [
+          "mistralai-mistral-nemo",
+          "mistral-nemo",
+          "mistral-mistral-nemo"
+        ],
+        "promptTokenPriceUsd": "0.00000002",
+        "completionTokenPriceUsd": "0.00000003"
+      },
+      {
+        "id": "openai/gpt-4o-mini",
+        "canonicalSlug": "openai/gpt-4o-mini",
+        "displayName": "OpenAI: GPT-4o-mini",
+        "normalizedNames": [
+          "openai-gpt-4o-mini",
+          "gpt-4o-mini"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006",
+        "cacheReadTokenPriceUsd": "0.000000075"
+      },
+      {
+        "id": "openai/gpt-4o-mini-2024-07-18",
+        "canonicalSlug": "openai/gpt-4o-mini-2024-07-18",
+        "displayName": "OpenAI: GPT-4o-mini (2024-07-18)",
+        "normalizedNames": [
+          "openai-gpt-4o-mini-2024-07-18",
+          "gpt-4o-mini-2024-07-18"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006",
+        "cacheReadTokenPriceUsd": "0.000000075"
+      },
+      {
+        "id": "google/gemma-2-27b-it",
+        "canonicalSlug": "google/gemma-2-27b-it",
+        "displayName": "Google: Gemma 2 27B",
+        "normalizedNames": [
+          "google-gemma-2-27b-it",
+          "gemma-2-27b-it",
+          "google-gemma-2-27b"
+        ],
+        "promptTokenPriceUsd": "0.00000065",
+        "completionTokenPriceUsd": "0.00000065"
+      },
+      {
+        "id": "sao10k/l3-euryale-70b",
+        "canonicalSlug": "sao10k/l3-euryale-70b",
+        "displayName": "Sao10k: Llama 3 Euryale 70B v2.1",
+        "normalizedNames": [
+          "sao10k-l3-euryale-70b",
+          "l3-euryale-70b",
+          "sao10k-llama-3-euryale-70b-v2-1"
+        ],
+        "promptTokenPriceUsd": "0.00000148",
+        "completionTokenPriceUsd": "0.00000148"
+      },
+      {
+        "id": "nousresearch/hermes-2-pro-llama-3-8b",
+        "canonicalSlug": "nousresearch/hermes-2-pro-llama-3-8b",
+        "displayName": "NousResearch: Hermes 2 Pro - Llama-3 8B",
+        "normalizedNames": [
+          "nousresearch-hermes-2-pro-llama-3-8b",
+          "hermes-2-pro-llama-3-8b"
+        ],
+        "promptTokenPriceUsd": "0.00000014",
+        "completionTokenPriceUsd": "0.00000014"
+      },
+      {
+        "id": "openai/gpt-4o-2024-05-13",
+        "canonicalSlug": "openai/gpt-4o-2024-05-13",
+        "displayName": "OpenAI: GPT-4o (2024-05-13)",
+        "normalizedNames": [
+          "openai-gpt-4o-2024-05-13",
+          "gpt-4o-2024-05-13"
+        ],
+        "promptTokenPriceUsd": "0.000005",
+        "completionTokenPriceUsd": "0.000015"
+      },
+      {
+        "id": "openai/gpt-4o",
+        "canonicalSlug": "openai/gpt-4o",
+        "displayName": "OpenAI: GPT-4o",
+        "normalizedNames": [
+          "openai-gpt-4o",
+          "gpt-4o"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "meta-llama/llama-3-70b-instruct",
+        "canonicalSlug": "meta-llama/llama-3-70b-instruct",
+        "displayName": "Meta: Llama 3 70B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-70b-instruct",
+          "llama-3-70b-instruct",
+          "meta-llama-3-70b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000051",
+        "completionTokenPriceUsd": "0.00000074"
+      },
+      {
+        "id": "meta-llama/llama-3-8b-instruct",
+        "canonicalSlug": "meta-llama/llama-3-8b-instruct",
+        "displayName": "Meta: Llama 3 8B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-8b-instruct",
+          "llama-3-8b-instruct",
+          "meta-llama-3-8b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000004"
+      },
+      {
+        "id": "mistralai/mixtral-8x22b-instruct",
+        "canonicalSlug": "mistralai/mixtral-8x22b-instruct",
+        "displayName": "Mistral: Mixtral 8x22B Instruct",
+        "normalizedNames": [
+          "mistralai-mixtral-8x22b-instruct",
+          "mixtral-8x22b-instruct",
+          "mistral-mixtral-8x22b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000006",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "microsoft/wizardlm-2-8x22b",
+        "canonicalSlug": "microsoft/wizardlm-2-8x22b",
+        "displayName": "WizardLM-2 8x22B",
+        "normalizedNames": [
+          "microsoft-wizardlm-2-8x22b",
+          "wizardlm-2-8x22b"
+        ],
+        "promptTokenPriceUsd": "0.00000062",
+        "completionTokenPriceUsd": "0.00000062"
+      },
+      {
+        "id": "openai/gpt-4-turbo",
+        "canonicalSlug": "openai/gpt-4-turbo",
+        "displayName": "OpenAI: GPT-4 Turbo",
+        "normalizedNames": [
+          "openai-gpt-4-turbo",
+          "gpt-4-turbo"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00003"
+      },
+      {
+        "id": "anthropic/claude-3-haiku",
+        "canonicalSlug": "anthropic/claude-3-haiku",
+        "displayName": "Anthropic: Claude 3 Haiku",
+        "normalizedNames": [
+          "anthropic-claude-3-haiku",
+          "claude-3-haiku"
+        ],
+        "promptTokenPriceUsd": "0.00000025",
+        "completionTokenPriceUsd": "0.00000125",
+        "cacheReadTokenPriceUsd": "0.00000003",
+        "cacheWriteTokenPriceUsd": "0.0000003"
+      },
+      {
+        "id": "mistralai/mistral-large",
+        "canonicalSlug": "mistralai/mistral-large",
+        "displayName": "Mistral Large",
+        "normalizedNames": [
+          "mistralai-mistral-large",
+          "mistral-large"
+        ],
+        "promptTokenPriceUsd": "0.000002",
+        "completionTokenPriceUsd": "0.000006",
+        "cacheReadTokenPriceUsd": "0.0000002"
+      },
+      {
+        "id": "openai/gpt-3.5-turbo-0613",
+        "canonicalSlug": "openai/gpt-3.5-turbo-0613",
+        "displayName": "OpenAI: GPT-3.5 Turbo (older v0613)",
+        "normalizedNames": [
+          "openai-gpt-3-5-turbo-0613",
+          "gpt-3-5-turbo-0613",
+          "openai-gpt-3-5-turbo-older-v0613"
+        ],
+        "promptTokenPriceUsd": "0.000001",
+        "completionTokenPriceUsd": "0.000002"
+      },
+      {
+        "id": "openai/gpt-4-turbo-preview",
+        "canonicalSlug": "openai/gpt-4-turbo-preview",
+        "displayName": "OpenAI: GPT-4 Turbo Preview",
+        "normalizedNames": [
+          "openai-gpt-4-turbo-preview",
+          "gpt-4-turbo-preview"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00003"
+      },
+      {
+        "id": "openrouter/auto",
+        "canonicalSlug": "openrouter/auto",
+        "displayName": "Auto Router",
+        "normalizedNames": [
+          "openrouter-auto",
+          "auto",
+          "auto-router"
+        ],
+        "promptTokenPriceUsd": "-1",
+        "completionTokenPriceUsd": "-1"
+      },
+      {
+        "id": "openai/gpt-4-1106-preview",
+        "canonicalSlug": "openai/gpt-4-1106-preview",
+        "displayName": "OpenAI: GPT-4 Turbo (older v1106)",
+        "normalizedNames": [
+          "openai-gpt-4-1106-preview",
+          "gpt-4-1106-preview",
+          "openai-gpt-4-turbo-older-v1106"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00003"
+      },
+      {
+        "id": "openai/gpt-3.5-turbo-instruct",
+        "canonicalSlug": "openai/gpt-3.5-turbo-instruct",
+        "displayName": "OpenAI: GPT-3.5 Turbo Instruct",
+        "normalizedNames": [
+          "openai-gpt-3-5-turbo-instruct",
+          "gpt-3-5-turbo-instruct"
+        ],
+        "promptTokenPriceUsd": "0.0000015",
+        "completionTokenPriceUsd": "0.000002"
+      },
+      {
+        "id": "mistralai/mistral-7b-instruct-v0.1",
+        "canonicalSlug": "mistralai/mistral-7b-instruct-v0.1",
+        "displayName": "Mistral: Mistral 7B Instruct v0.1",
+        "normalizedNames": [
+          "mistralai-mistral-7b-instruct-v0-1",
+          "mistral-7b-instruct-v0-1",
+          "mistral-mistral-7b-instruct-v0-1"
+        ],
+        "promptTokenPriceUsd": "0.00000011",
+        "completionTokenPriceUsd": "0.00000019"
+      },
+      {
+        "id": "openai/gpt-3.5-turbo-16k",
+        "canonicalSlug": "openai/gpt-3.5-turbo-16k",
+        "displayName": "OpenAI: GPT-3.5 Turbo 16k",
+        "normalizedNames": [
+          "openai-gpt-3-5-turbo-16k",
+          "gpt-3-5-turbo-16k"
+        ],
+        "promptTokenPriceUsd": "0.000003",
+        "completionTokenPriceUsd": "0.000004"
+      },
+      {
+        "id": "mancer/weaver",
+        "canonicalSlug": "mancer/weaver",
+        "displayName": "Mancer: Weaver (alpha)",
+        "normalizedNames": [
+          "mancer-weaver",
+          "weaver",
+          "mancer-weaver-alpha"
+        ],
+        "promptTokenPriceUsd": "0.00000075",
+        "completionTokenPriceUsd": "0.000001"
+      },
+      {
+        "id": "undi95/remm-slerp-l2-13b",
+        "canonicalSlug": "undi95/remm-slerp-l2-13b",
+        "displayName": "ReMM SLERP 13B",
+        "normalizedNames": [
+          "undi95-remm-slerp-l2-13b",
+          "remm-slerp-l2-13b",
+          "remm-slerp-13b"
+        ],
+        "promptTokenPriceUsd": "0.00000045",
+        "completionTokenPriceUsd": "0.00000065"
+      },
+      {
+        "id": "gryphe/mythomax-l2-13b",
+        "canonicalSlug": "gryphe/mythomax-l2-13b",
+        "displayName": "MythoMax 13B",
+        "normalizedNames": [
+          "gryphe-mythomax-l2-13b",
+          "mythomax-l2-13b",
+          "mythomax-13b"
+        ],
+        "promptTokenPriceUsd": "0.00000006",
+        "completionTokenPriceUsd": "0.00000006"
+      },
+      {
+        "id": "openai/gpt-4-0314",
+        "canonicalSlug": "openai/gpt-4-0314",
+        "displayName": "OpenAI: GPT-4 (older v0314)",
+        "normalizedNames": [
+          "openai-gpt-4-0314",
+          "gpt-4-0314",
+          "openai-gpt-4-older-v0314"
+        ],
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00006"
+      },
+      {
+        "id": "openai/gpt-3.5-turbo",
+        "canonicalSlug": "openai/gpt-3.5-turbo",
+        "displayName": "OpenAI: GPT-3.5 Turbo",
+        "normalizedNames": [
+          "openai-gpt-3-5-turbo",
+          "gpt-3-5-turbo"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.0000015"
+      },
+      {
+        "id": "openai/gpt-4",
+        "canonicalSlug": "openai/gpt-4",
+        "displayName": "OpenAI: GPT-4",
+        "normalizedNames": [
+          "openai-gpt-4",
+          "gpt-4"
+        ],
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00006"
+      }
+    ]
+  }
+}]]></component>
+</application>

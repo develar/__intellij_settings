@@ -1,0 +1,26 @@
+<application>
+  <component name="CodexThreadPathIndex"><![CDATA[{
+  "entriesByThreadId": {
+    "019e7286-b35e-7483-9abf-494f6637a572": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/05/29/rollout-2026-05-29T08-58-10-019e7286-b35e-7483-9abf-494f6637a572.jsonl",
+      "updatedAt": 1780037890000,
+      "frozenCost": {
+        "amountUsd": "2.0091180",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019e727c-8b33-77c3-a674-82c20a70bec4": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/05/29/rollout-2026-05-29T08-47-05-019e727c-8b33-77c3-a674-82c20a70bec4.jsonl",
+      "updatedAt": 1780037225000,
+      "frozenCost": {
+        "amountUsd": "11.2696430",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    }
+  }
+}]]></component>
+</application>
