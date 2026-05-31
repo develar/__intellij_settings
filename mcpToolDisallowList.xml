@@ -1,0 +1,151 @@
+<application>
+  <component name="McpToolDisallowListSettings">
+    <toolStates>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.apply_patch">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_exec">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_list_dir">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_read_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_search_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_search_regex">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_search_text">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.container_write_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.extract_container_session_changes">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.agent.workbench.container.mcp.ContainerMcpToolset.finalize_container_session">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.cancelSqlQuery">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.createDbConnection">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.editDbConnection">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.executeQuery">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.fetchQueryResult">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.getDatabaseObjectDescription">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.introspectSchema">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.listDatabaseConnections">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.listDatabaseSchemas">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.listRecentQueries">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.listSchemaObjectKinds">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.listSchemaObjects">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.previewTable">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.testDatabaseConnection">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_expand_macros_recursively">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_get_expression_type">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_get_macro_expansion">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_multiresolve">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_read_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+    </toolStates>
+  </component>
+</application>
