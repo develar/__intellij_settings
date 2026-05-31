@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780222635335,
+    "fetchedAt": 1780243428526,
     "entries": [
       {
         "id": "stepfun/step-3.7-flash",
@@ -130,9 +130,9 @@
           "inclusionai-ring-2-6-1t-20260508",
           "ring-2-6-1t-20260508"
         ],
-        "promptTokenPriceUsd": "0.000000075",
-        "completionTokenPriceUsd": "0.000000625",
-        "cacheReadTokenPriceUsd": "0.000000015"
+        "promptTokenPriceUsd": "0.0000003",
+        "completionTokenPriceUsd": "0.0000025",
+        "cacheReadTokenPriceUsd": "0.00000006"
       },
       {
         "id": "google/gemini-3.1-flash-lite",
@@ -451,19 +451,6 @@
         "promptTokenPriceUsd": "0.000000435",
         "completionTokenPriceUsd": "0.00000087",
         "cacheReadTokenPriceUsd": "0.000000003625"
-      },
-      {
-        "id": "deepseek/deepseek-v4-flash:free",
-        "canonicalSlug": "deepseek/deepseek-v4-flash-20260423",
-        "displayName": "DeepSeek: DeepSeek V4 Flash (free)",
-        "normalizedNames": [
-          "deepseek-deepseek-v4-flash-free",
-          "deepseek-v4-flash-free",
-          "deepseek-deepseek-v4-flash-20260423",
-          "deepseek-v4-flash-20260423"
-        ],
-        "promptTokenPriceUsd": "0",
-        "completionTokenPriceUsd": "0"
       },
       {
         "id": "deepseek/deepseek-v4-flash",
@@ -837,34 +824,6 @@
         ],
         "promptTokenPriceUsd": "0.0000001",
         "completionTokenPriceUsd": "0.0000001"
-      },
-      {
-        "id": "xiaomi/mimo-v2-omni",
-        "canonicalSlug": "xiaomi/mimo-v2-omni-20260318",
-        "displayName": "Xiaomi: MiMo-V2-Omni",
-        "normalizedNames": [
-          "xiaomi-mimo-v2-omni",
-          "mimo-v2-omni",
-          "xiaomi-mimo-v2-omni-20260318",
-          "mimo-v2-omni-20260318"
-        ],
-        "promptTokenPriceUsd": "0.0000004",
-        "completionTokenPriceUsd": "0.000002",
-        "cacheReadTokenPriceUsd": "0.00000008"
-      },
-      {
-        "id": "xiaomi/mimo-v2-pro",
-        "canonicalSlug": "xiaomi/mimo-v2-pro-20260318",
-        "displayName": "Xiaomi: MiMo-V2-Pro",
-        "normalizedNames": [
-          "xiaomi-mimo-v2-pro",
-          "mimo-v2-pro",
-          "xiaomi-mimo-v2-pro-20260318",
-          "mimo-v2-pro-20260318"
-        ],
-        "promptTokenPriceUsd": "0.000001",
-        "completionTokenPriceUsd": "0.000003",
-        "cacheReadTokenPriceUsd": "0.0000002"
       },
       {
         "id": "minimax/minimax-m2.7",
@@ -2856,36 +2815,6 @@
         "completionTokenPriceUsd": "0.0000023"
       },
       {
-        "id": "mistralai/devstral-medium",
-        "canonicalSlug": "mistralai/devstral-medium-2507",
-        "displayName": "Mistral: Devstral Medium",
-        "normalizedNames": [
-          "mistralai-devstral-medium",
-          "devstral-medium",
-          "mistralai-devstral-medium-2507",
-          "devstral-medium-2507",
-          "mistral-devstral-medium"
-        ],
-        "promptTokenPriceUsd": "0.0000004",
-        "completionTokenPriceUsd": "0.000002",
-        "cacheReadTokenPriceUsd": "0.00000004"
-      },
-      {
-        "id": "mistralai/devstral-small",
-        "canonicalSlug": "mistralai/devstral-small-2507",
-        "displayName": "Mistral: Devstral Small 1.1",
-        "normalizedNames": [
-          "mistralai-devstral-small",
-          "devstral-small",
-          "mistralai-devstral-small-2507",
-          "devstral-small-2507",
-          "mistral-devstral-small-1-1"
-        ],
-        "promptTokenPriceUsd": "0.0000001",
-        "completionTokenPriceUsd": "0.0000003",
-        "cacheReadTokenPriceUsd": "0.00000001"
-      },
-      {
         "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
         "canonicalSlug": "venice/uncensored",
         "displayName": "Venice: Uncensored (free)",
@@ -3877,37 +3806,12 @@
         "cacheReadTokenPriceUsd": "0.00000125"
       },
       {
-        "id": "mistralai/mistral-large-2411",
-        "canonicalSlug": "mistralai/mistral-large-2411",
-        "displayName": "Mistral Large 2411",
-        "normalizedNames": [
-          "mistralai-mistral-large-2411",
-          "mistral-large-2411"
-        ],
-        "promptTokenPriceUsd": "0.000002",
-        "completionTokenPriceUsd": "0.000006",
-        "cacheReadTokenPriceUsd": "0.0000002"
-      },
-      {
         "id": "mistralai/mistral-large-2407",
         "canonicalSlug": "mistralai/mistral-large-2407",
         "displayName": "Mistral Large 2407",
         "normalizedNames": [
           "mistralai-mistral-large-2407",
           "mistral-large-2407"
-        ],
-        "promptTokenPriceUsd": "0.000002",
-        "completionTokenPriceUsd": "0.000006",
-        "cacheReadTokenPriceUsd": "0.0000002"
-      },
-      {
-        "id": "mistralai/pixtral-large-2411",
-        "canonicalSlug": "mistralai/pixtral-large-2411",
-        "displayName": "Mistral: Pixtral Large 2411",
-        "normalizedNames": [
-          "mistralai-pixtral-large-2411",
-          "pixtral-large-2411",
-          "mistral-pixtral-large-2411"
         ],
         "promptTokenPriceUsd": "0.000002",
         "completionTokenPriceUsd": "0.000006",
