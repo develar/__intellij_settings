@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780150978230,
+    "fetchedAt": 1780213451232,
     "entries": [
       {
         "id": "stepfun/step-3.7-flash",
@@ -1256,19 +1256,6 @@
         "completionTokenPriceUsd": "0.00000234"
       },
       {
-        "id": "minimax/minimax-m2.5:free",
-        "canonicalSlug": "minimax/minimax-m2.5-20260211",
-        "displayName": "MiniMax: MiniMax M2.5 (free)",
-        "normalizedNames": [
-          "minimax-minimax-m2-5-free",
-          "minimax-m2-5-free",
-          "minimax-minimax-m2-5-20260211",
-          "minimax-m2-5-20260211"
-        ],
-        "promptTokenPriceUsd": "0",
-        "completionTokenPriceUsd": "0"
-      },
-      {
         "id": "minimax/minimax-m2.5",
         "canonicalSlug": "minimax/minimax-m2.5-20260211",
         "displayName": "MiniMax: MiniMax M2.5",
@@ -1374,18 +1361,6 @@
         "promptTokenPriceUsd": "0.0000004",
         "completionTokenPriceUsd": "0.0000019",
         "cacheReadTokenPriceUsd": "0.00000009"
-      },
-      {
-        "id": "upstage/solar-pro-3",
-        "canonicalSlug": "upstage/solar-pro-3",
-        "displayName": "Upstage: Solar Pro 3",
-        "normalizedNames": [
-          "upstage-solar-pro-3",
-          "solar-pro-3"
-        ],
-        "promptTokenPriceUsd": "0.00000015",
-        "completionTokenPriceUsd": "0.0000006",
-        "cacheReadTokenPriceUsd": "0.000000015"
       },
       {
         "id": "minimax/minimax-m2-her",
@@ -2168,17 +2143,6 @@
         "completionTokenPriceUsd": "0.0000004"
       },
       {
-        "id": "baidu/ernie-4.5-21b-a3b-thinking",
-        "canonicalSlug": "baidu/ernie-4.5-21b-a3b-thinking",
-        "displayName": "Baidu: ERNIE 4.5 21B A3B Thinking",
-        "normalizedNames": [
-          "baidu-ernie-4-5-21b-a3b-thinking",
-          "ernie-4-5-21b-a3b-thinking"
-        ],
-        "promptTokenPriceUsd": "0.00000007",
-        "completionTokenPriceUsd": "0.00000028"
-      },
-      {
         "id": "google/gemini-2.5-flash-image",
         "canonicalSlug": "google/gemini-2.5-flash-image",
         "displayName": "Google: Nano Banana (Gemini 2.5 Flash Image)",
@@ -2551,17 +2515,6 @@
         "cacheReadTokenPriceUsd": "0.00000004"
       },
       {
-        "id": "baidu/ernie-4.5-21b-a3b",
-        "canonicalSlug": "baidu/ernie-4.5-21b-a3b",
-        "displayName": "Baidu: ERNIE 4.5 21B A3B",
-        "normalizedNames": [
-          "baidu-ernie-4-5-21b-a3b",
-          "ernie-4-5-21b-a3b"
-        ],
-        "promptTokenPriceUsd": "0.00000007",
-        "completionTokenPriceUsd": "0.00000028"
-      },
-      {
         "id": "baidu/ernie-4.5-vl-28b-a3b",
         "canonicalSlug": "baidu/ernie-4.5-vl-28b-a3b",
         "displayName": "Baidu: ERNIE 4.5 VL 28B A3B",
@@ -2794,8 +2747,9 @@
           "qwen-qwen3-235b-a22b-thinking-2507",
           "qwen3-235b-a22b-thinking-2507"
         ],
-        "promptTokenPriceUsd": "0.0000001495",
-        "completionTokenPriceUsd": "0.000001495"
+        "promptTokenPriceUsd": "0.0000001",
+        "completionTokenPriceUsd": "0.0000001",
+        "cacheReadTokenPriceUsd": "0.0000001"
       },
       {
         "id": "z-ai/glm-4-32b",
@@ -3366,17 +3320,6 @@
         "promptTokenPriceUsd": "0.0000001",
         "completionTokenPriceUsd": "0.0000004",
         "cacheReadTokenPriceUsd": "0.000000025"
-      },
-      {
-        "id": "alfredpros/codellama-7b-instruct-solidity",
-        "canonicalSlug": "alfredpros/codellama-7b-instruct-solidity",
-        "displayName": "AlfredPros: CodeLLaMa 7B Instruct Solidity",
-        "normalizedNames": [
-          "alfredpros-codellama-7b-instruct-solidity",
-          "codellama-7b-instruct-solidity"
-        ],
-        "promptTokenPriceUsd": "0.0000008",
-        "completionTokenPriceUsd": "0.0000012"
       },
       {
         "id": "meta-llama/llama-4-maverick",
