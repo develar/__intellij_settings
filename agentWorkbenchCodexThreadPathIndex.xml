@@ -1509,6 +1509,20 @@
       "cwd": "/Users/develar/projects/idea-3",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/01/rollout-2026-06-01T11-44-56-019e8292-7331-7590-a8d8-913c83161d6b.jsonl",
       "updatedAt": 1780307774000
+    },
+    "new-e25b1619-bb25-4038-8cdc-5d9b12285e0c": {
+      "updatedAt": 1780310746911,
+      "frozenCost": {
+        "kind": "UNAVAILABLE"
+      }
+    },
+    "019e82ca-2bdb-79c2-8acd-625383f3e593": {
+      "cwd": "/Users/develar/projects/idea-3",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/01/rollout-2026-06-01T12-45-48-019e82ca-2bdb-79c2-8acd-625383f3e593.jsonl",
+      "updatedAt": 1780310764000,
+      "frozenCost": {
+        "kind": "UNAVAILABLE"
+      }
     }
   }
 }]]></component>
