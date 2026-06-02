@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780382448999,
+    "fetchedAt": 1780405415793,
     "entries": [
       {
         "id": "minimax/minimax-m3",
