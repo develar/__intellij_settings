@@ -1708,9 +1708,9 @@
     "019e8715-dcb9-75e0-a7d6-67342ac05cf2": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/02/rollout-2026-06-02T08-46-57-019e8715-dcb9-75e0-a7d6-67342ac05cf2.jsonl",
-      "updatedAt": 1780389732000,
+      "updatedAt": 1780399519000,
       "frozenCost": {
-        "amountUsd": "29.6259740",
+        "amountUsd": "30.7803030",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -1756,9 +1756,41 @@
     "019e87f7-97af-7c31-85f3-c85cdc07f3b5": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/02/rollout-2026-06-02T12-53-31-019e87f7-97af-7c31-85f3-c85cdc07f3b5.jsonl",
-      "updatedAt": 1780399200000,
+      "updatedAt": 1780399436000,
       "frozenCost": {
-        "amountUsd": "3.2248180",
+        "amountUsd": "4.0691110",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "new-b44e4adc-b0f6-4461-badc-4ec56ca2ed38": {
+      "updatedAt": 1780399486576,
+      "frozenCost": {
+        "kind": "UNAVAILABLE"
+      }
+    },
+    "new-4214bdae-c9cd-4702-99e8-2c37fecc8da8": {
+      "updatedAt": 1780399541568,
+      "frozenCost": {
+        "kind": "UNAVAILABLE"
+      }
+    },
+    "019e8815-1068-7ac1-accc-5399191d955d": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/02/rollout-2026-06-02T13-25-42-019e8815-1068-7ac1-accc-5399191d955d.jsonl",
+      "updatedAt": 1780400299000,
+      "frozenCost": {
+        "amountUsd": "3.6542280",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019e8814-3b26-7971-8b64-e331e3c2937a": {
+      "cwd": "/Users/develar/projects/idea-3",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/02/rollout-2026-06-02T13-24-47-019e8814-3b26-7971-8b64-e331e3c2937a.jsonl",
+      "updatedAt": 1780400573000,
+      "frozenCost": {
+        "amountUsd": "5.2814350",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
