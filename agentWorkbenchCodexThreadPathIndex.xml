@@ -1746,6 +1746,12 @@
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
+    },
+    "new-02bb255c-12bc-4313-a115-e13bfe0d3343": {
+      "updatedAt": 1780397608604,
+      "frozenCost": {
+        "kind": "UNAVAILABLE"
+      }
     }
   }
 }]]></component>
