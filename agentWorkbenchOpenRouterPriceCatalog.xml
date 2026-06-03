@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780405415793,
+    "fetchedAt": 1780484731914,
     "entries": [
       {
         "id": "minimax/minimax-m3",
@@ -122,6 +122,17 @@
         "cacheWriteTokenPriceUsd": "0.0000375"
       },
       {
+        "id": "openrouter/fusion",
+        "canonicalSlug": "openrouter/fusion",
+        "displayName": "OpenRouter: Fusion",
+        "normalizedNames": [
+          "openrouter-fusion",
+          "fusion"
+        ],
+        "promptTokenPriceUsd": "-1",
+        "completionTokenPriceUsd": "-1"
+      },
+      {
         "id": "perceptron/perceptron-mk1",
         "canonicalSlug": "perceptron/perceptron-mk1-20260512",
         "displayName": "Perceptron: Perceptron Mk1",
@@ -144,9 +155,9 @@
           "inclusionai-ring-2-6-1t-20260508",
           "ring-2-6-1t-20260508"
         ],
-        "promptTokenPriceUsd": "0.0000003",
-        "completionTokenPriceUsd": "0.0000025",
-        "cacheReadTokenPriceUsd": "0.00000006"
+        "promptTokenPriceUsd": "0.000000075",
+        "completionTokenPriceUsd": "0.000000625",
+        "cacheReadTokenPriceUsd": "0.000000015"
       },
       {
         "id": "google/gemini-3.1-flash-lite",
@@ -1252,7 +1263,7 @@
           "glm-5-20260211"
         ],
         "promptTokenPriceUsd": "0.0000006",
-        "completionTokenPriceUsd": "0.00000208",
+        "completionTokenPriceUsd": "0.00000192",
         "cacheReadTokenPriceUsd": "0.00000012"
       },
       {
@@ -3910,18 +3921,6 @@
         "completionTokenPriceUsd": "0.000000201"
       },
       {
-        "id": "meta-llama/llama-3.2-11b-vision-instruct",
-        "canonicalSlug": "meta-llama/llama-3.2-11b-vision-instruct",
-        "displayName": "Meta: Llama 3.2 11B Vision Instruct",
-        "normalizedNames": [
-          "meta-llama-llama-3-2-11b-vision-instruct",
-          "llama-3-2-11b-vision-instruct",
-          "meta-llama-3-2-11b-vision-instruct"
-        ],
-        "promptTokenPriceUsd": "0.000000245",
-        "completionTokenPriceUsd": "0.000000245"
-      },
-      {
         "id": "meta-llama/llama-3.2-3b-instruct:free",
         "canonicalSlug": "meta-llama/llama-3.2-3b-instruct",
         "displayName": "Meta: Llama 3.2 3B Instruct (free)",
@@ -3948,6 +3947,18 @@
         "completionTokenPriceUsd": "0.000000335"
       },
       {
+        "id": "meta-llama/llama-3.2-11b-vision-instruct",
+        "canonicalSlug": "meta-llama/llama-3.2-11b-vision-instruct",
+        "displayName": "Meta: Llama 3.2 11B Vision Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-2-11b-vision-instruct",
+          "llama-3-2-11b-vision-instruct",
+          "meta-llama-3-2-11b-vision-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000000245",
+        "completionTokenPriceUsd": "0.000000245"
+      },
+      {
         "id": "qwen/qwen-2.5-72b-instruct",
         "canonicalSlug": "qwen/qwen-2.5-72b-instruct",
         "displayName": "Qwen2.5 72B Instruct",
@@ -3960,17 +3971,6 @@
         "completionTokenPriceUsd": "0.0000004"
       },
       {
-        "id": "cohere/command-r-08-2024",
-        "canonicalSlug": "cohere/command-r-08-2024",
-        "displayName": "Cohere: Command R (08-2024)",
-        "normalizedNames": [
-          "cohere-command-r-08-2024",
-          "command-r-08-2024"
-        ],
-        "promptTokenPriceUsd": "0.00000015",
-        "completionTokenPriceUsd": "0.0000006"
-      },
-      {
         "id": "cohere/command-r-plus-08-2024",
         "canonicalSlug": "cohere/command-r-plus-08-2024",
         "displayName": "Cohere: Command R+ (08-2024)",
@@ -3981,6 +3981,17 @@
         ],
         "promptTokenPriceUsd": "0.0000025",
         "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "cohere/command-r-08-2024",
+        "canonicalSlug": "cohere/command-r-08-2024",
+        "displayName": "Cohere: Command R (08-2024)",
+        "normalizedNames": [
+          "cohere-command-r-08-2024",
+          "command-r-08-2024"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006"
       },
       {
         "id": "sao10k/l3.1-euryale-70b",
@@ -4057,18 +4068,6 @@
         "cacheReadTokenPriceUsd": "0.00000125"
       },
       {
-        "id": "meta-llama/llama-3.1-8b-instruct",
-        "canonicalSlug": "meta-llama/llama-3.1-8b-instruct",
-        "displayName": "Meta: Llama 3.1 8B Instruct",
-        "normalizedNames": [
-          "meta-llama-llama-3-1-8b-instruct",
-          "llama-3-1-8b-instruct",
-          "meta-llama-3-1-8b-instruct"
-        ],
-        "promptTokenPriceUsd": "0.00000002",
-        "completionTokenPriceUsd": "0.00000005"
-      },
-      {
         "id": "meta-llama/llama-3.1-70b-instruct",
         "canonicalSlug": "meta-llama/llama-3.1-70b-instruct",
         "displayName": "Meta: Llama 3.1 70B Instruct",
@@ -4079,6 +4078,18 @@
         ],
         "promptTokenPriceUsd": "0.0000004",
         "completionTokenPriceUsd": "0.0000004"
+      },
+      {
+        "id": "meta-llama/llama-3.1-8b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.1-8b-instruct",
+        "displayName": "Meta: Llama 3.1 8B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-1-8b-instruct",
+          "llama-3-1-8b-instruct",
+          "meta-llama-3-1-8b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000002",
+        "completionTokenPriceUsd": "0.00000005"
       },
       {
         "id": "mistralai/mistral-nemo",
@@ -4093,24 +4104,24 @@
         "completionTokenPriceUsd": "0.00000003"
       },
       {
-        "id": "openai/gpt-4o-mini",
-        "canonicalSlug": "openai/gpt-4o-mini",
-        "displayName": "OpenAI: GPT-4o-mini",
-        "normalizedNames": [
-          "openai-gpt-4o-mini",
-          "gpt-4o-mini"
-        ],
-        "promptTokenPriceUsd": "0.00000015",
-        "completionTokenPriceUsd": "0.0000006",
-        "cacheReadTokenPriceUsd": "0.000000075"
-      },
-      {
         "id": "openai/gpt-4o-mini-2024-07-18",
         "canonicalSlug": "openai/gpt-4o-mini-2024-07-18",
         "displayName": "OpenAI: GPT-4o-mini (2024-07-18)",
         "normalizedNames": [
           "openai-gpt-4o-mini-2024-07-18",
           "gpt-4o-mini-2024-07-18"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006",
+        "cacheReadTokenPriceUsd": "0.000000075"
+      },
+      {
+        "id": "openai/gpt-4o-mini",
+        "canonicalSlug": "openai/gpt-4o-mini",
+        "displayName": "OpenAI: GPT-4o-mini",
+        "normalizedNames": [
+          "openai-gpt-4o-mini",
+          "gpt-4o-mini"
         ],
         "promptTokenPriceUsd": "0.00000015",
         "completionTokenPriceUsd": "0.0000006",
@@ -4152,17 +4163,6 @@
         "completionTokenPriceUsd": "0.00000014"
       },
       {
-        "id": "openai/gpt-4o",
-        "canonicalSlug": "openai/gpt-4o",
-        "displayName": "OpenAI: GPT-4o",
-        "normalizedNames": [
-          "openai-gpt-4o",
-          "gpt-4o"
-        ],
-        "promptTokenPriceUsd": "0.0000025",
-        "completionTokenPriceUsd": "0.00001"
-      },
-      {
         "id": "openai/gpt-4o-2024-05-13",
         "canonicalSlug": "openai/gpt-4o-2024-05-13",
         "displayName": "OpenAI: GPT-4o (2024-05-13)",
@@ -4174,16 +4174,15 @@
         "completionTokenPriceUsd": "0.000015"
       },
       {
-        "id": "meta-llama/llama-3-8b-instruct",
-        "canonicalSlug": "meta-llama/llama-3-8b-instruct",
-        "displayName": "Meta: Llama 3 8B Instruct",
+        "id": "openai/gpt-4o",
+        "canonicalSlug": "openai/gpt-4o",
+        "displayName": "OpenAI: GPT-4o",
         "normalizedNames": [
-          "meta-llama-llama-3-8b-instruct",
-          "llama-3-8b-instruct",
-          "meta-llama-3-8b-instruct"
+          "openai-gpt-4o",
+          "gpt-4o"
         ],
-        "promptTokenPriceUsd": "0.00000004",
-        "completionTokenPriceUsd": "0.00000004"
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
       },
       {
         "id": "meta-llama/llama-3-70b-instruct",
@@ -4196,6 +4195,18 @@
         ],
         "promptTokenPriceUsd": "0.00000051",
         "completionTokenPriceUsd": "0.00000074"
+      },
+      {
+        "id": "meta-llama/llama-3-8b-instruct",
+        "canonicalSlug": "meta-llama/llama-3-8b-instruct",
+        "displayName": "Meta: Llama 3 8B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-8b-instruct",
+          "llama-3-8b-instruct",
+          "meta-llama-3-8b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.00000004",
+        "completionTokenPriceUsd": "0.00000004"
       },
       {
         "id": "mistralai/mixtral-8x22b-instruct",
@@ -4258,17 +4269,6 @@
         "cacheReadTokenPriceUsd": "0.0000002"
       },
       {
-        "id": "openai/gpt-4-turbo-preview",
-        "canonicalSlug": "openai/gpt-4-turbo-preview",
-        "displayName": "OpenAI: GPT-4 Turbo Preview",
-        "normalizedNames": [
-          "openai-gpt-4-turbo-preview",
-          "gpt-4-turbo-preview"
-        ],
-        "promptTokenPriceUsd": "0.00001",
-        "completionTokenPriceUsd": "0.00003"
-      },
-      {
         "id": "openai/gpt-3.5-turbo-0613",
         "canonicalSlug": "openai/gpt-3.5-turbo-0613",
         "displayName": "OpenAI: GPT-3.5 Turbo (older v0613)",
@@ -4279,6 +4279,17 @@
         ],
         "promptTokenPriceUsd": "0.000001",
         "completionTokenPriceUsd": "0.000002"
+      },
+      {
+        "id": "openai/gpt-4-turbo-preview",
+        "canonicalSlug": "openai/gpt-4-turbo-preview",
+        "displayName": "OpenAI: GPT-4 Turbo Preview",
+        "normalizedNames": [
+          "openai-gpt-4-turbo-preview",
+          "gpt-4-turbo-preview"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00003"
       },
       {
         "id": "openrouter/auto",
@@ -4363,15 +4374,16 @@
         "completionTokenPriceUsd": "0.00000006"
       },
       {
-        "id": "openai/gpt-3.5-turbo",
-        "canonicalSlug": "openai/gpt-3.5-turbo",
-        "displayName": "OpenAI: GPT-3.5 Turbo",
+        "id": "openai/gpt-4-0314",
+        "canonicalSlug": "openai/gpt-4-0314",
+        "displayName": "OpenAI: GPT-4 (older v0314)",
         "normalizedNames": [
-          "openai-gpt-3-5-turbo",
-          "gpt-3-5-turbo"
+          "openai-gpt-4-0314",
+          "gpt-4-0314",
+          "openai-gpt-4-older-v0314"
         ],
-        "promptTokenPriceUsd": "0.0000005",
-        "completionTokenPriceUsd": "0.0000015"
+        "promptTokenPriceUsd": "0.00003",
+        "completionTokenPriceUsd": "0.00006"
       },
       {
         "id": "openai/gpt-4",
@@ -4385,16 +4397,15 @@
         "completionTokenPriceUsd": "0.00006"
       },
       {
-        "id": "openai/gpt-4-0314",
-        "canonicalSlug": "openai/gpt-4-0314",
-        "displayName": "OpenAI: GPT-4 (older v0314)",
+        "id": "openai/gpt-3.5-turbo",
+        "canonicalSlug": "openai/gpt-3.5-turbo",
+        "displayName": "OpenAI: GPT-3.5 Turbo",
         "normalizedNames": [
-          "openai-gpt-4-0314",
-          "gpt-4-0314",
-          "openai-gpt-4-older-v0314"
+          "openai-gpt-3-5-turbo",
+          "gpt-3-5-turbo"
         ],
-        "promptTokenPriceUsd": "0.00003",
-        "completionTokenPriceUsd": "0.00006"
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.0000015"
       }
     ]
   }
