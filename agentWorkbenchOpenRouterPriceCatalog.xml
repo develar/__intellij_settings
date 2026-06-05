@@ -1,8 +1,50 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780507641290,
+    "fetchedAt": 1780638636613,
     "entries": [
+      {
+        "id": "nvidia/nemotron-3.5-content-safety:free",
+        "canonicalSlug": "nvidia/nemotron-3.5-content-safety-20260604",
+        "displayName": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-3-5-content-safety-free",
+          "nemotron-3-5-content-safety-free",
+          "nvidia-nemotron-3-5-content-safety-20260604",
+          "nemotron-3-5-content-safety-20260604"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "canonicalSlug": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+        "displayName": "NVIDIA: Nemotron 3 Ultra (free)",
+        "normalizedNames": [
+          "nvidia-nemotron-3-ultra-550b-a55b-free",
+          "nemotron-3-ultra-550b-a55b-free",
+          "nvidia-nemotron-3-ultra-550b-a55b-20260604",
+          "nemotron-3-ultra-550b-a55b-20260604",
+          "nvidia-nemotron-3-ultra-free"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
+      {
+        "id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "canonicalSlug": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+        "displayName": "NVIDIA: Nemotron 3 Ultra",
+        "normalizedNames": [
+          "nvidia-nemotron-3-ultra-550b-a55b",
+          "nemotron-3-ultra-550b-a55b",
+          "nvidia-nemotron-3-ultra-550b-a55b-20260604",
+          "nemotron-3-ultra-550b-a55b-20260604",
+          "nvidia-nemotron-3-ultra"
+        ],
+        "promptTokenPriceUsd": "0.0000005",
+        "completionTokenPriceUsd": "0.0000025",
+        "cacheReadTokenPriceUsd": "0.00000015"
+      },
       {
         "id": "qwen/qwen3.7-plus",
         "canonicalSlug": "qwen/qwen3.7-plus-20260602",
@@ -2709,8 +2751,8 @@
           "qwen-qwen3-30b-a3b-instruct-2507",
           "qwen3-30b-a3b-instruct-2507"
         ],
-        "promptTokenPriceUsd": "0.0000000428",
-        "completionTokenPriceUsd": "0.0000001716"
+        "promptTokenPriceUsd": "0.00000004815",
+        "completionTokenPriceUsd": "0.00000019305"
       },
       {
         "id": "z-ai/glm-4.5",
@@ -3891,23 +3933,23 @@
         "completionTokenPriceUsd": "0.0000001"
       },
       {
-        "id": "inflection/inflection-3-pi",
-        "canonicalSlug": "inflection/inflection-3-pi",
-        "displayName": "Inflection: Inflection 3 Pi",
-        "normalizedNames": [
-          "inflection-inflection-3-pi",
-          "inflection-3-pi"
-        ],
-        "promptTokenPriceUsd": "0.0000025",
-        "completionTokenPriceUsd": "0.00001"
-      },
-      {
         "id": "inflection/inflection-3-productivity",
         "canonicalSlug": "inflection/inflection-3-productivity",
         "displayName": "Inflection: Inflection 3 Productivity",
         "normalizedNames": [
           "inflection-inflection-3-productivity",
           "inflection-3-productivity"
+        ],
+        "promptTokenPriceUsd": "0.0000025",
+        "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "inflection/inflection-3-pi",
+        "canonicalSlug": "inflection/inflection-3-pi",
+        "displayName": "Inflection: Inflection 3 Pi",
+        "normalizedNames": [
+          "inflection-inflection-3-pi",
+          "inflection-3-pi"
         ],
         "promptTokenPriceUsd": "0.0000025",
         "completionTokenPriceUsd": "0.00001"
@@ -3922,18 +3964,6 @@
         ],
         "promptTokenPriceUsd": "0.00000017",
         "completionTokenPriceUsd": "0.00000043"
-      },
-      {
-        "id": "meta-llama/llama-3.2-1b-instruct",
-        "canonicalSlug": "meta-llama/llama-3.2-1b-instruct",
-        "displayName": "Meta: Llama 3.2 1B Instruct",
-        "normalizedNames": [
-          "meta-llama-llama-3-2-1b-instruct",
-          "llama-3-2-1b-instruct",
-          "meta-llama-3-2-1b-instruct"
-        ],
-        "promptTokenPriceUsd": "0.000000027",
-        "completionTokenPriceUsd": "0.000000201"
       },
       {
         "id": "meta-llama/llama-3.2-3b-instruct:free",
@@ -3962,6 +3992,18 @@
         "completionTokenPriceUsd": "0.000000335"
       },
       {
+        "id": "meta-llama/llama-3.2-1b-instruct",
+        "canonicalSlug": "meta-llama/llama-3.2-1b-instruct",
+        "displayName": "Meta: Llama 3.2 1B Instruct",
+        "normalizedNames": [
+          "meta-llama-llama-3-2-1b-instruct",
+          "llama-3-2-1b-instruct",
+          "meta-llama-3-2-1b-instruct"
+        ],
+        "promptTokenPriceUsd": "0.000000027",
+        "completionTokenPriceUsd": "0.000000201"
+      },
+      {
         "id": "meta-llama/llama-3.2-11b-vision-instruct",
         "canonicalSlug": "meta-llama/llama-3.2-11b-vision-instruct",
         "displayName": "Meta: Llama 3.2 11B Vision Instruct",
@@ -3986,17 +4028,6 @@
         "completionTokenPriceUsd": "0.0000004"
       },
       {
-        "id": "cohere/command-r-08-2024",
-        "canonicalSlug": "cohere/command-r-08-2024",
-        "displayName": "Cohere: Command R (08-2024)",
-        "normalizedNames": [
-          "cohere-command-r-08-2024",
-          "command-r-08-2024"
-        ],
-        "promptTokenPriceUsd": "0.00000015",
-        "completionTokenPriceUsd": "0.0000006"
-      },
-      {
         "id": "cohere/command-r-plus-08-2024",
         "canonicalSlug": "cohere/command-r-plus-08-2024",
         "displayName": "Cohere: Command R+ (08-2024)",
@@ -4007,6 +4038,17 @@
         ],
         "promptTokenPriceUsd": "0.0000025",
         "completionTokenPriceUsd": "0.00001"
+      },
+      {
+        "id": "cohere/command-r-08-2024",
+        "canonicalSlug": "cohere/command-r-08-2024",
+        "displayName": "Cohere: Command R (08-2024)",
+        "normalizedNames": [
+          "cohere-command-r-08-2024",
+          "command-r-08-2024"
+        ],
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.0000006"
       },
       {
         "id": "sao10k/l3.1-euryale-70b",
@@ -4092,7 +4134,7 @@
           "meta-llama-3-1-8b-instruct"
         ],
         "promptTokenPriceUsd": "0.00000002",
-        "completionTokenPriceUsd": "0.00000005"
+        "completionTokenPriceUsd": "0.00000003"
       },
       {
         "id": "meta-llama/llama-3.1-70b-instruct",
@@ -4284,6 +4326,17 @@
         "cacheReadTokenPriceUsd": "0.0000002"
       },
       {
+        "id": "openai/gpt-4-turbo-preview",
+        "canonicalSlug": "openai/gpt-4-turbo-preview",
+        "displayName": "OpenAI: GPT-4 Turbo Preview",
+        "normalizedNames": [
+          "openai-gpt-4-turbo-preview",
+          "gpt-4-turbo-preview"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00003"
+      },
+      {
         "id": "openai/gpt-3.5-turbo-0613",
         "canonicalSlug": "openai/gpt-3.5-turbo-0613",
         "displayName": "OpenAI: GPT-3.5 Turbo (older v0613)",
@@ -4294,17 +4347,6 @@
         ],
         "promptTokenPriceUsd": "0.000001",
         "completionTokenPriceUsd": "0.000002"
-      },
-      {
-        "id": "openai/gpt-4-turbo-preview",
-        "canonicalSlug": "openai/gpt-4-turbo-preview",
-        "displayName": "OpenAI: GPT-4 Turbo Preview",
-        "normalizedNames": [
-          "openai-gpt-4-turbo-preview",
-          "gpt-4-turbo-preview"
-        ],
-        "promptTokenPriceUsd": "0.00001",
-        "completionTokenPriceUsd": "0.00003"
       },
       {
         "id": "openrouter/auto",
@@ -4389,13 +4431,12 @@
         "completionTokenPriceUsd": "0.00000006"
       },
       {
-        "id": "openai/gpt-4-0314",
-        "canonicalSlug": "openai/gpt-4-0314",
-        "displayName": "OpenAI: GPT-4 (older v0314)",
+        "id": "openai/gpt-4",
+        "canonicalSlug": "openai/gpt-4",
+        "displayName": "OpenAI: GPT-4",
         "normalizedNames": [
-          "openai-gpt-4-0314",
-          "gpt-4-0314",
-          "openai-gpt-4-older-v0314"
+          "openai-gpt-4",
+          "gpt-4"
         ],
         "promptTokenPriceUsd": "0.00003",
         "completionTokenPriceUsd": "0.00006"
@@ -4410,17 +4451,6 @@
         ],
         "promptTokenPriceUsd": "0.0000005",
         "completionTokenPriceUsd": "0.0000015"
-      },
-      {
-        "id": "openai/gpt-4",
-        "canonicalSlug": "openai/gpt-4",
-        "displayName": "OpenAI: GPT-4",
-        "normalizedNames": [
-          "openai-gpt-4",
-          "gpt-4"
-        ],
-        "promptTokenPriceUsd": "0.00003",
-        "completionTokenPriceUsd": "0.00006"
       }
     ]
   }
