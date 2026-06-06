@@ -2,7 +2,7 @@
   <component name="Logs.Categories"><![CDATA[{
   "categories": [
     {
-      "category": "com.intellij.ml.llm.agents.claude.code",
+      "category": "com.intellij.agent.workbench.chat.AgentChatScopedTerminalRefreshController",
       "level": "DEBUG"
     }
   ]
