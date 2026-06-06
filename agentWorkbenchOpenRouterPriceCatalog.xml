@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780657120511,
+    "fetchedAt": 1780735455296,
     "entries": [
       {
         "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -782,7 +782,8 @@
           "google-gemma-4-31b"
         ],
         "promptTokenPriceUsd": "0.00000012",
-        "completionTokenPriceUsd": "0.00000037"
+        "completionTokenPriceUsd": "0.00000036",
+        "cacheReadTokenPriceUsd": "0.00000009"
       },
       {
         "id": "qwen/qwen3.6-plus",
@@ -4195,29 +4196,6 @@
         ],
         "promptTokenPriceUsd": "0.00000065",
         "completionTokenPriceUsd": "0.00000065"
-      },
-      {
-        "id": "sao10k/l3-euryale-70b",
-        "canonicalSlug": "sao10k/l3-euryale-70b",
-        "displayName": "Sao10k: Llama 3 Euryale 70B v2.1",
-        "normalizedNames": [
-          "sao10k-l3-euryale-70b",
-          "l3-euryale-70b",
-          "sao10k-llama-3-euryale-70b-v2-1"
-        ],
-        "promptTokenPriceUsd": "0.00000148",
-        "completionTokenPriceUsd": "0.00000148"
-      },
-      {
-        "id": "nousresearch/hermes-2-pro-llama-3-8b",
-        "canonicalSlug": "nousresearch/hermes-2-pro-llama-3-8b",
-        "displayName": "NousResearch: Hermes 2 Pro - Llama-3 8B",
-        "normalizedNames": [
-          "nousresearch-hermes-2-pro-llama-3-8b",
-          "hermes-2-pro-llama-3-8b"
-        ],
-        "promptTokenPriceUsd": "0.00000014",
-        "completionTokenPriceUsd": "0.00000014"
       },
       {
         "id": "openai/gpt-4o-2024-05-13",
