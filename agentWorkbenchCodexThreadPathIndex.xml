@@ -2077,7 +2077,7 @@
     "019e8d57-69e7-7732-9c02-7b63f1aa4eb4": {
       "cwd": "/Users/develar/projects/idea-5",
       "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-03T13-56-16-019e8d57-69e7-7732-9c02-7b63f1aa4eb4.jsonl",
-      "updatedAt": 1780488670000,
+      "updatedAt": 1780757749000,
       "frozenCost": {
         "amountUsd": "2.9844850",
         "kind": "ESTIMATED",
@@ -2810,7 +2810,12 @@
     "019e9baa-a2f5-7d90-b6be-de37dd55a012": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/06/rollout-2026-06-06T08-41-51-019e9baa-a2f5-7d90-b6be-de37dd55a012.jsonl",
-      "updatedAt": 1780747641000
+      "updatedAt": 1780747641000,
+      "frozenCost": {
+        "amountUsd": "14.6265960",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019e9bae-568f-7111-bc0c-97045f847887": {
       "cwd": "/Users/develar/projects/idea-3",
@@ -2905,13 +2910,28 @@
     },
     "019e9d13-3766-79e2-9294-8cca4fa2e700": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/06/rollout-2026-06-06T15-15-42-019e9d13-3766-79e2-9294-8cca4fa2e700.jsonl",
-      "updatedAt": 1780751742000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-06T15-15-42-019e9d13-3766-79e2-9294-8cca4fa2e700.jsonl",
+      "updatedAt": 1780754876000,
+      "frozenCost": {
+        "amountUsd": "3.7317510",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019e9d17-c3e1-7840-8c7c-06050c050054": {
       "cwd": "/Users/develar/projects/idea-2",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/06/rollout-2026-06-06T15-20-40-019e9d17-c3e1-7840-8c7c-06050c050054.jsonl",
-      "updatedAt": 1780754951000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-06T15-20-40-019e9d17-c3e1-7840-8c7c-06050c050054.jsonl",
+      "updatedAt": 1780754951000,
+      "frozenCost": {
+        "amountUsd": "3.5835680",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019e9d44-fec9-7922-89b0-2757c6dba7a1": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/06/rollout-2026-06-06T16-10-05-019e9d44-fec9-7922-89b0-2757c6dba7a1.jsonl",
+      "updatedAt": 1780755005000
     }
   }
 }]]></component>
