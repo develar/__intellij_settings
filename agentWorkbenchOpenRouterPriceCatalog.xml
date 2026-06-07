@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780735455296,
+    "fetchedAt": 1780851823850,
     "entries": [
       {
         "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -490,8 +490,8 @@
           "qwen-qwen3-6-27b-20260422",
           "qwen3-6-27b-20260422"
         ],
-        "promptTokenPriceUsd": "0.00000029",
-        "completionTokenPriceUsd": "0.0000032"
+        "promptTokenPriceUsd": "0.000000289",
+        "completionTokenPriceUsd": "0.0000024"
       },
       {
         "id": "openai/gpt-5.5-pro",
@@ -1027,7 +1027,7 @@
           "qwen-qwen3-5-9b-20260310",
           "qwen3-5-9b-20260310"
         ],
-        "promptTokenPriceUsd": "0.00000004",
+        "promptTokenPriceUsd": "0.0000001",
         "completionTokenPriceUsd": "0.00000015"
       },
       {
@@ -2192,7 +2192,7 @@
           "nvidia-llama-3-3-nemotron-super-49b-v1-5",
           "llama-3-3-nemotron-super-49b-v1-5"
         ],
-        "promptTokenPriceUsd": "0.0000001",
+        "promptTokenPriceUsd": "0.0000004",
         "completionTokenPriceUsd": "0.0000004"
       },
       {
@@ -2568,17 +2568,6 @@
         "cacheReadTokenPriceUsd": "0.00000004"
       },
       {
-        "id": "baidu/ernie-4.5-vl-28b-a3b",
-        "canonicalSlug": "baidu/ernie-4.5-vl-28b-a3b",
-        "displayName": "Baidu: ERNIE 4.5 VL 28B A3B",
-        "normalizedNames": [
-          "baidu-ernie-4-5-vl-28b-a3b",
-          "ernie-4-5-vl-28b-a3b"
-        ],
-        "promptTokenPriceUsd": "0.00000014",
-        "completionTokenPriceUsd": "0.00000056"
-      },
-      {
         "id": "z-ai/glm-4.5v",
         "canonicalSlug": "z-ai/glm-4.5v",
         "displayName": "Z.ai: GLM 4.5V",
@@ -2882,7 +2871,7 @@
           "qwen3-235b-a22b-07-25",
           "qwen-qwen3-235b-a22b-instruct-2507"
         ],
-        "promptTokenPriceUsd": "0.000000071",
+        "promptTokenPriceUsd": "0.00000009",
         "completionTokenPriceUsd": "0.0000001"
       },
       {
@@ -3128,17 +3117,6 @@
         "cacheWriteTokenPriceUsd": "0.000000375"
       },
       {
-        "id": "arcee-ai/spotlight",
-        "canonicalSlug": "arcee-ai/spotlight",
-        "displayName": "Arcee AI: Spotlight",
-        "normalizedNames": [
-          "arcee-ai-spotlight",
-          "spotlight"
-        ],
-        "promptTokenPriceUsd": "0.00000018",
-        "completionTokenPriceUsd": "0.00000018"
-      },
-      {
         "id": "arcee-ai/maestro-reasoning",
         "canonicalSlug": "arcee-ai/maestro-reasoning",
         "displayName": "Arcee AI: Maestro Reasoning",
@@ -3193,8 +3171,8 @@
           "qwen-qwen3-30b-a3b-04-28",
           "qwen3-30b-a3b-04-28"
         ],
-        "promptTokenPriceUsd": "0.00000009",
-        "completionTokenPriceUsd": "0.00000045"
+        "promptTokenPriceUsd": "0.00000012",
+        "completionTokenPriceUsd": "0.0000005"
       },
       {
         "id": "qwen/qwen3-8b",
@@ -3358,7 +3336,7 @@
           "llama-4-scout-17b-16e-instruct",
           "meta-llama-4-scout"
         ],
-        "promptTokenPriceUsd": "0.00000008",
+        "promptTokenPriceUsd": "0.0000001",
         "completionTokenPriceUsd": "0.0000003"
       },
       {
@@ -3408,8 +3386,8 @@
           "gemma-3-4b-it",
           "google-gemma-3-4b"
         ],
-        "promptTokenPriceUsd": "0.00000004",
-        "completionTokenPriceUsd": "0.00000008"
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.0000001"
       },
       {
         "id": "google/gemma-3-12b-it",
@@ -3420,8 +3398,8 @@
           "gemma-3-12b-it",
           "google-gemma-3-12b"
         ],
-        "promptTokenPriceUsd": "0.00000004",
-        "completionTokenPriceUsd": "0.00000013"
+        "promptTokenPriceUsd": "0.00000005",
+        "completionTokenPriceUsd": "0.00000015"
       },
       {
         "id": "cohere/command-a",
@@ -4013,8 +3991,8 @@
           "llama-3-2-11b-vision-instruct",
           "meta-llama-3-2-11b-vision-instruct"
         ],
-        "promptTokenPriceUsd": "0.000000245",
-        "completionTokenPriceUsd": "0.000000245"
+        "promptTokenPriceUsd": "0.000000345",
+        "completionTokenPriceUsd": "0.000000345"
       },
       {
         "id": "qwen/qwen-2.5-72b-instruct",
@@ -4072,8 +4050,8 @@
           "hermes-3-llama-3-1-70b",
           "nous-hermes-3-70b-instruct"
         ],
-        "promptTokenPriceUsd": "0.0000003",
-        "completionTokenPriceUsd": "0.0000003"
+        "promptTokenPriceUsd": "0.0000007",
+        "completionTokenPriceUsd": "0.0000007"
       },
       {
         "id": "nousresearch/hermes-3-llama-3.1-405b:free",
@@ -4228,8 +4206,8 @@
           "llama-3-8b-instruct",
           "meta-llama-3-8b-instruct"
         ],
-        "promptTokenPriceUsd": "0.00000004",
-        "completionTokenPriceUsd": "0.00000004"
+        "promptTokenPriceUsd": "0.00000014",
+        "completionTokenPriceUsd": "0.00000014"
       },
       {
         "id": "meta-llama/llama-3-70b-instruct",
@@ -4337,18 +4315,6 @@
         ],
         "promptTokenPriceUsd": "-1",
         "completionTokenPriceUsd": "-1"
-      },
-      {
-        "id": "openai/gpt-4-1106-preview",
-        "canonicalSlug": "openai/gpt-4-1106-preview",
-        "displayName": "OpenAI: GPT-4 Turbo (older v1106)",
-        "normalizedNames": [
-          "openai-gpt-4-1106-preview",
-          "gpt-4-1106-preview",
-          "openai-gpt-4-turbo-older-v1106"
-        ],
-        "promptTokenPriceUsd": "0.00001",
-        "completionTokenPriceUsd": "0.00003"
       },
       {
         "id": "openai/gpt-3.5-turbo-instruct",
