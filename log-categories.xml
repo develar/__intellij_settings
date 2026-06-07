@@ -4,6 +4,38 @@
     {
       "category": "com.intellij.agent.workbench.chat.AgentChatScopedTerminalRefreshController",
       "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.agent.workbench.sessions.service.AgentSessionRefreshScheduler",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.agent.workbench.sessions.service.AgentSessionRefreshCoordinator",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.agent.workbench.sessions.service.AgentSessionRefreshService",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.agent.workbench.sessions.service.AgentSessionProviderRefreshRunner",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.configurationStore.ScopedVfsRefreshScheduler",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.configurationStore.ComponentStoreImpl",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.openapi.vfs.newvfs.RefreshSession",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.openapi.vfs.newvfs.RefreshQueue",
+      "level": "DEBUG"
     }
   ]
 }]]></component>
