@@ -3227,6 +3227,11 @@
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T10-51-06-019ea66d-acb3-79d1-a730-22fb66c0dce5.jsonl",
       "updatedAt": 1780908783000
+    },
+    "019ea68b-8d95-7d00-b534-3c6da3fbf7cd": {
+      "cwd": "/Users/develar/projects/idea-3",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T11-23-44-019ea68b-8d95-7d00-b534-3c6da3fbf7cd.jsonl",
+      "updatedAt": 1780910624000
     }
   }
 }]]></component>
