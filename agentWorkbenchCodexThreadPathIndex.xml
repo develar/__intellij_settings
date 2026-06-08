@@ -3170,7 +3170,7 @@
     },
     "019ea5dc-3a83-7873-9d17-d355d7b20aa1": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T08-12-14-019ea5dc-3a83-7873-9d17-d355d7b20aa1.jsonl",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-08T08-12-14-019ea5dc-3a83-7873-9d17-d355d7b20aa1.jsonl",
       "updatedAt": 1780907021000,
       "frozenCost": {
         "amountUsd": "22.6608520",
@@ -3180,10 +3180,10 @@
     },
     "019ea5dd-8c5e-7610-ac60-1c32e8f239fa": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T08-13-40-019ea5dd-8c5e-7610-ac60-1c32e8f239fa.jsonl",
-      "updatedAt": 1780899220000,
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-08T08-13-40-019ea5dd-8c5e-7610-ac60-1c32e8f239fa.jsonl",
+      "updatedAt": 1780900415000,
       "frozenCost": {
-        "amountUsd": "2.6669790",
+        "amountUsd": "3.3125960",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -3200,23 +3200,28 @@
     },
     "019ea5fd-8591-7df2-9309-7bbbd5fc405c": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T08-48-36-019ea5fd-8591-7df2-9309-7bbbd5fc405c.jsonl",
-      "updatedAt": 1780901316000
-    },
-    "019ea628-b731-7cc0-b122-9582ed68b7ef": {
-      "cwd": "/Users/develar/projects/idea-2",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T09-35-46-019ea628-b731-7cc0-b122-9582ed68b7ef.jsonl",
-      "updatedAt": 1780907413000,
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-08T08-48-36-019ea5fd-8591-7df2-9309-7bbbd5fc405c.jsonl",
+      "updatedAt": 1780902516000,
       "frozenCost": {
-        "amountUsd": "7.5275900",
+        "amountUsd": "1.0101260",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
     },
+    "019ea628-b731-7cc0-b122-9582ed68b7ef": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T09-35-46-019ea628-b731-7cc0-b122-9582ed68b7ef.jsonl",
+      "updatedAt": 1780904146000
+    },
     "019ea64c-3a31-7ed2-b3fa-d7d1e301a840": {
       "cwd": "/Users/develar/projects/idea-2",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T10-14-34-019ea64c-3a31-7ed2-b3fa-d7d1e301a840.jsonl",
-      "updatedAt": 1780906474000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-08T10-14-34-019ea64c-3a31-7ed2-b3fa-d7d1e301a840.jsonl",
+      "updatedAt": 1780906905000,
+      "frozenCost": {
+        "amountUsd": "1.1047750",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019ea64d-5bbe-77b2-8d2b-4522b2e18c75": {
       "cwd": "/Users/develar/projects/idea-1",
@@ -3226,12 +3231,22 @@
     "019ea66d-acb3-79d1-a730-22fb66c0dce5": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T10-51-06-019ea66d-acb3-79d1-a730-22fb66c0dce5.jsonl",
-      "updatedAt": 1780908783000
+      "updatedAt": 1780908783000,
+      "frozenCost": {
+        "amountUsd": "0.7749500",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019ea68b-8d95-7d00-b534-3c6da3fbf7cd": {
       "cwd": "/Users/develar/projects/idea-3",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T11-23-44-019ea68b-8d95-7d00-b534-3c6da3fbf7cd.jsonl",
-      "updatedAt": 1780910624000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-08T11-23-44-019ea68b-8d95-7d00-b534-3c6da3fbf7cd.jsonl",
+      "updatedAt": 1780911889000,
+      "frozenCost": {
+        "amountUsd": "3.0868350",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
