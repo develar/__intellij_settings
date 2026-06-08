@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780851823850,
+    "fetchedAt": 1780898047072,
     "entries": [
       {
         "id": "nvidia/nemotron-3.5-content-safety:free",
