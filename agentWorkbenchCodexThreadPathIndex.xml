@@ -3167,6 +3167,16 @@
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
+    },
+    "019ea5dc-3a83-7873-9d17-d355d7b20aa1": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T08-12-14-019ea5dc-3a83-7873-9d17-d355d7b20aa1.jsonl",
+      "updatedAt": 1780899134000
+    },
+    "019ea5dd-8c5e-7610-ac60-1c32e8f239fa": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/08/rollout-2026-06-08T08-13-40-019ea5dd-8c5e-7610-ac60-1c32e8f239fa.jsonl",
+      "updatedAt": 1780899220000
     }
   }
 }]]></component>
