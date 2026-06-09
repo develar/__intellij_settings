@@ -40,6 +40,14 @@
     {
       "category": "com.intellij.agent.workbench.sessions.toolwindow.ui.AgentSessionsActivityService",
       "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.agent.workbench.sessions.toolwindow.actions.AgentSessionsMainToolbarActivityGroup",
+      "level": "DEBUG"
+    },
+    {
+      "category": "com.intellij.agent.workbench.sessions.toolwindow.ui.AgentSessionsActivityCounterAction",
+      "level": "DEBUG"
     }
   ]
 }]]></component>
