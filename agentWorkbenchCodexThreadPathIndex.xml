@@ -3535,6 +3535,46 @@
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T15-17-48-019eac88-3584-7e32-b769-9560dabd3424.jsonl",
       "updatedAt": 1781011068000
+    },
+    "019eac88-b46a-7fe3-bc21-a1615c206b28": {
+      "cwd": "/Users/develar/projects/idea-5",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T15-18-20-019eac88-b46a-7fe3-bc21-a1615c206b28.jsonl",
+      "updatedAt": 1781011100000
+    },
+    "019eac89-75b5-72d3-b43d-0d0b9732c525": {
+      "cwd": "/Users/develar/projects/idea-5",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-09T15-19-10-019eac89-75b5-72d3-b43d-0d0b9732c525.jsonl",
+      "updatedAt": 1781011557000,
+      "frozenCost": {
+        "amountUsd": "1.7670200",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019e9b83-8020-7f60-88bf-b6542a00db68": {
+      "cwd": "/Users/develar/IdeaProjects/untitled2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/06/rollout-2026-06-06T07-59-07-019e9b83-8020-7f60-88bf-b6542a00db68.jsonl",
+      "updatedAt": 1780725556000
+    },
+    "019eab96-d896-7813-8782-11e8766bd63c": {
+      "cwd": "/Users/develar/IdeaProjects/untitled2",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-09T10-54-10-019eab96-d896-7813-8782-11e8766bd63c.jsonl",
+      "updatedAt": 1780995255000,
+      "frozenCost": {
+        "amountUsd": "0.011852700",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.4-mini"
+      }
+    },
+    "019e9ba0-ce51-7f91-9e71-de57f600e9c9": {
+      "cwd": "/Users/develar/IdeaProjects/untitled2",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-06T08-31-07-019e9ba0-ce51-7f91-9e71-de57f600e9c9.jsonl",
+      "updatedAt": 1780727498000
+    },
+    "019eac8f-d257-7041-afda-317d549fb6fb": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T15-26-07-019eac8f-d257-7041-afda-317d549fb6fb.jsonl",
+      "updatedAt": 1781011567000
     }
   }
 }]]></component>
