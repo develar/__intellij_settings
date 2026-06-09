@@ -3460,8 +3460,13 @@
     },
     "019eab29-b3da-7962-9d09-38615a19594d": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T08-54-57-019eab29-b3da-7962-9d09-38615a19594d.jsonl",
-      "updatedAt": 1780988097000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-09T08-54-57-019eab29-b3da-7962-9d09-38615a19594d.jsonl",
+      "updatedAt": 1781003057000,
+      "frozenCost": {
+        "amountUsd": "21.8612300",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019eab2f-6f18-7331-b5fd-ba00e6c79e5f": {
       "cwd": "/Users/develar/projects/idea-1",
@@ -3497,24 +3502,29 @@
     },
     "019eab96-2eca-7ed1-a4b2-3aa900485196": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T10-53-26-019eab96-2eca-7ed1-a4b2-3aa900485196.jsonl",
-      "updatedAt": 1780995206000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-09T10-53-26-019eab96-2eca-7ed1-a4b2-3aa900485196.jsonl",
+      "updatedAt": 1781004767000,
+      "frozenCost": {
+        "amountUsd": "34.8034690",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019eabd0-2f7f-7bc1-949c-9666bdf0b768": {
       "cwd": "/Users/develar/projects/idea-3",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T11-56-48-019eabd0-2f7f-7bc1-949c-9666bdf0b768.jsonl",
-      "updatedAt": 1780999008000,
-      "frozenCost": {
-        "amountUsd": "15.2017100",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1780999008000
     },
     "019eabc4-8bbf-7061-80d2-713a1593f224": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-09T11-44-05-019eabc4-8bbf-7061-80d2-713a1593f224.jsonl",
       "parentThreadId": "019eab8c-892d-7d73-836c-0e50c97acd98",
       "updatedAt": 1780999437000
+    },
+    "019eac17-c2f6-7221-8351-178491056242": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/09/rollout-2026-06-09T13-14-59-019eac17-c2f6-7221-8351-178491056242.jsonl",
+      "updatedAt": 1781003699000
     }
   }
 }]]></component>
