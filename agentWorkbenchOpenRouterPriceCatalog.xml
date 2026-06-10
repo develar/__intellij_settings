@@ -1,8 +1,49 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1780898047072,
+    "fetchedAt": 1781072711638,
     "entries": [
+      {
+        "id": "~anthropic/claude-fable-latest",
+        "canonicalSlug": "~anthropic/claude-fable-latest",
+        "displayName": "Anthropic: Claude Fable Latest",
+        "normalizedNames": [
+          "anthropic-claude-fable-latest",
+          "claude-fable-latest"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00005",
+        "cacheReadTokenPriceUsd": "0.000001",
+        "cacheWriteTokenPriceUsd": "0.0000125"
+      },
+      {
+        "id": "anthropic/claude-fable-5",
+        "canonicalSlug": "anthropic/claude-5-fable-20260609",
+        "displayName": "Anthropic: Claude Fable 5",
+        "normalizedNames": [
+          "anthropic-claude-fable-5",
+          "claude-fable-5",
+          "anthropic-claude-5-fable-20260609",
+          "claude-5-fable-20260609"
+        ],
+        "promptTokenPriceUsd": "0.00001",
+        "completionTokenPriceUsd": "0.00005",
+        "cacheReadTokenPriceUsd": "0.000001",
+        "cacheWriteTokenPriceUsd": "0.0000125"
+      },
+      {
+        "id": "nex-agi/nex-n2-pro:free",
+        "canonicalSlug": "nex-agi/nex-n2-pro",
+        "displayName": "Nex AGI: Nex-N2-Pro (free)",
+        "normalizedNames": [
+          "nex-agi-nex-n2-pro-free",
+          "nex-n2-pro-free",
+          "nex-agi-nex-n2-pro",
+          "nex-n2-pro"
+        ],
+        "promptTokenPriceUsd": "0",
+        "completionTokenPriceUsd": "0"
+      },
       {
         "id": "nvidia/nemotron-3.5-content-safety:free",
         "canonicalSlug": "nvidia/nemotron-3.5-content-safety-20260604",
@@ -386,9 +427,9 @@
           "moonshotai-kimi-latest",
           "kimi-latest"
         ],
-        "promptTokenPriceUsd": "0.000000684",
-        "completionTokenPriceUsd": "0.00000342",
-        "cacheReadTokenPriceUsd": "0.000000144"
+        "promptTokenPriceUsd": "0.00000068",
+        "completionTokenPriceUsd": "0.00000341",
+        "cacheReadTokenPriceUsd": "0.00000034"
       },
       {
         "id": "~google/gemini-flash-latest",
@@ -680,9 +721,9 @@
           "moonshotai-kimi-k2-6-20260420",
           "kimi-k2-6-20260420"
         ],
-        "promptTokenPriceUsd": "0.000000684",
-        "completionTokenPriceUsd": "0.00000342",
-        "cacheReadTokenPriceUsd": "0.000000144"
+        "promptTokenPriceUsd": "0.00000068",
+        "completionTokenPriceUsd": "0.00000341",
+        "cacheReadTokenPriceUsd": "0.00000034"
       },
       {
         "id": "anthropic/claude-opus-4.7",
@@ -800,20 +841,6 @@
         "cacheWriteTokenPriceUsd": "0.00000040625"
       },
       {
-        "id": "z-ai/glm-5v-turbo",
-        "canonicalSlug": "z-ai/glm-5v-turbo-20260401",
-        "displayName": "Z.ai: GLM 5V Turbo",
-        "normalizedNames": [
-          "z-ai-glm-5v-turbo",
-          "glm-5v-turbo",
-          "z-ai-glm-5v-turbo-20260401",
-          "glm-5v-turbo-20260401"
-        ],
-        "promptTokenPriceUsd": "0.0000012",
-        "completionTokenPriceUsd": "0.000004",
-        "cacheReadTokenPriceUsd": "0.00000024"
-      },
-      {
         "id": "arcee-ai/trinity-large-thinking",
         "canonicalSlug": "arcee-ai/trinity-large-thinking",
         "displayName": "Arcee AI: Trinity Large Thinking",
@@ -918,8 +945,9 @@
           "minimax-minimax-m2-7-20260318",
           "minimax-m2-7-20260318"
         ],
-        "promptTokenPriceUsd": "0.000000279",
-        "completionTokenPriceUsd": "0.0000012"
+        "promptTokenPriceUsd": "0.00000027",
+        "completionTokenPriceUsd": "0.00000108",
+        "cacheReadTokenPriceUsd": "0.000000054"
       },
       {
         "id": "openai/gpt-5.4-nano",
@@ -1308,7 +1336,8 @@
           "minimax-m2-5-20260211"
         ],
         "promptTokenPriceUsd": "0.00000015",
-        "completionTokenPriceUsd": "0.00000115"
+        "completionTokenPriceUsd": "0.0000009",
+        "cacheReadTokenPriceUsd": "0.00000005"
       },
       {
         "id": "z-ai/glm-5",
@@ -1400,9 +1429,8 @@
           "moonshotai-kimi-k2-5-0127",
           "kimi-k2-5-0127"
         ],
-        "promptTokenPriceUsd": "0.0000004",
-        "completionTokenPriceUsd": "0.0000019",
-        "cacheReadTokenPriceUsd": "0.00000009"
+        "promptTokenPriceUsd": "0.00000035",
+        "completionTokenPriceUsd": "0.00000189"
       },
       {
         "id": "upstage/solar-pro-3",
@@ -1705,18 +1733,7 @@
         ],
         "promptTokenPriceUsd": "0.0000003",
         "completionTokenPriceUsd": "0.0000009",
-        "cacheReadTokenPriceUsd": "0.00000005"
-      },
-      {
-        "id": "nex-agi/deepseek-v3.1-nex-n1",
-        "canonicalSlug": "nex-agi/deepseek-v3.1-nex-n1",
-        "displayName": "Nex AGI: DeepSeek V3.1 Nex N1",
-        "normalizedNames": [
-          "nex-agi-deepseek-v3-1-nex-n1",
-          "deepseek-v3-1-nex-n1"
-        ],
-        "promptTokenPriceUsd": "0.000000135",
-        "completionTokenPriceUsd": "0.0000005"
+        "cacheReadTokenPriceUsd": "0.000000055"
       },
       {
         "id": "essentialai/rnj-1-instruct",
@@ -2757,19 +2774,6 @@
         "cacheReadTokenPriceUsd": "0.00000011"
       },
       {
-        "id": "z-ai/glm-4.5-air:free",
-        "canonicalSlug": "z-ai/glm-4.5-air",
-        "displayName": "Z.ai: GLM 4.5 Air (free)",
-        "normalizedNames": [
-          "z-ai-glm-4-5-air-free",
-          "glm-4-5-air-free",
-          "z-ai-glm-4-5-air",
-          "glm-4-5-air"
-        ],
-        "promptTokenPriceUsd": "0",
-        "completionTokenPriceUsd": "0"
-      },
-      {
         "id": "z-ai/glm-4.5-air",
         "canonicalSlug": "z-ai/glm-4.5-air",
         "displayName": "Z.ai: GLM 4.5 Air",
@@ -2792,19 +2796,6 @@
         "promptTokenPriceUsd": "0.0000001",
         "completionTokenPriceUsd": "0.0000001",
         "cacheReadTokenPriceUsd": "0.0000001"
-      },
-      {
-        "id": "z-ai/glm-4-32b",
-        "canonicalSlug": "z-ai/glm-4-32b-0414",
-        "displayName": "Z.ai: GLM 4 32B ",
-        "normalizedNames": [
-          "z-ai-glm-4-32b",
-          "glm-4-32b",
-          "z-ai-glm-4-32b-0414",
-          "glm-4-32b-0414"
-        ],
-        "promptTokenPriceUsd": "0.0000001",
-        "completionTokenPriceUsd": "0.0000001"
       },
       {
         "id": "qwen/qwen3-coder:free",
@@ -3115,17 +3106,6 @@
         "completionTokenPriceUsd": "0.00001",
         "cacheReadTokenPriceUsd": "0.000000125",
         "cacheWriteTokenPriceUsd": "0.000000375"
-      },
-      {
-        "id": "arcee-ai/maestro-reasoning",
-        "canonicalSlug": "arcee-ai/maestro-reasoning",
-        "displayName": "Arcee AI: Maestro Reasoning",
-        "normalizedNames": [
-          "arcee-ai-maestro-reasoning",
-          "maestro-reasoning"
-        ],
-        "promptTokenPriceUsd": "0.0000009",
-        "completionTokenPriceUsd": "0.0000033"
       },
       {
         "id": "arcee-ai/virtuoso-large",
