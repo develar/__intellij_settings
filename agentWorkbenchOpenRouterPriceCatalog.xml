@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781088801196,
+    "fetchedAt": 1781111745087,
     "entries": [
       {
         "id": "~anthropic/claude-fable-latest",
@@ -1429,8 +1429,9 @@
           "moonshotai-kimi-k2-5-0127",
           "kimi-k2-5-0127"
         ],
-        "promptTokenPriceUsd": "0.00000035",
-        "completionTokenPriceUsd": "0.00000189"
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000019",
+        "cacheReadTokenPriceUsd": "0.00000009"
       },
       {
         "id": "upstage/solar-pro-3",
