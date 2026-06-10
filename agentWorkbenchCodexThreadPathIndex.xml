@@ -3989,10 +3989,10 @@
     },
     "019eb1ba-f769-7880-ac05-2b8a5937dc1c": {
       "cwd": "/Users/develar/projects/idea-3",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/10/rollout-2026-06-10T15-31-20-019eb1ba-f769-7880-ac05-2b8a5937dc1c.jsonl",
-      "updatedAt": 1781104578000,
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-10T15-31-20-019eb1ba-f769-7880-ac05-2b8a5937dc1c.jsonl",
+      "updatedAt": 1781110635000,
       "frozenCost": {
-        "amountUsd": "40.9716480",
+        "amountUsd": "62.3447360",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -4020,17 +4020,17 @@
     "019eb21a-181f-7422-9082-282844cca06d": {
       "cwd": "/Users/develar/projects/idea-5",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/10/rollout-2026-06-10T17-15-15-019eb21a-181f-7422-9082-282844cca06d.jsonl",
-      "updatedAt": 1781104579000,
-      "frozenCost": {
-        "amountUsd": "0.2474420",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1781105097000
     },
     "019eb25d-99d9-7723-8f54-45b52cfe8beb": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/10/rollout-2026-06-10T18-28-59-019eb25d-99d9-7723-8f54-45b52cfe8beb.jsonl",
-      "updatedAt": 1781108940000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-10T18-28-59-019eb25d-99d9-7723-8f54-45b52cfe8beb.jsonl",
+      "updatedAt": 1781109661000,
+      "frozenCost": {
+        "amountUsd": "6.1463260",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
