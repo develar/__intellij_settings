@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781111745087,
+    "fetchedAt": 1781165212882,
     "entries": [
       {
         "id": "~anthropic/claude-fable-latest",
@@ -504,8 +504,9 @@
           "qwen-qwen3-6-35b-a3b-20260415",
           "qwen3-6-35b-a3b-20260415"
         ],
-        "promptTokenPriceUsd": "0.00000014",
-        "completionTokenPriceUsd": "0.000001"
+        "promptTokenPriceUsd": "0.00000015",
+        "completionTokenPriceUsd": "0.000001",
+        "cacheReadTokenPriceUsd": "0.00000005"
       },
       {
         "id": "qwen/qwen3.6-max-preview",
@@ -697,19 +698,6 @@
         ],
         "promptTokenPriceUsd": "-1",
         "completionTokenPriceUsd": "-1"
-      },
-      {
-        "id": "moonshotai/kimi-k2.6:free",
-        "canonicalSlug": "moonshotai/kimi-k2.6-20260420",
-        "displayName": "MoonshotAI: Kimi K2.6 (free)",
-        "normalizedNames": [
-          "moonshotai-kimi-k2-6-free",
-          "kimi-k2-6-free",
-          "moonshotai-kimi-k2-6-20260420",
-          "kimi-k2-6-20260420"
-        ],
-        "promptTokenPriceUsd": "0",
-        "completionTokenPriceUsd": "0"
       },
       {
         "id": "moonshotai/kimi-k2.6",
@@ -1429,9 +1417,8 @@
           "moonshotai-kimi-k2-5-0127",
           "kimi-k2-5-0127"
         ],
-        "promptTokenPriceUsd": "0.0000004",
-        "completionTokenPriceUsd": "0.0000019",
-        "cacheReadTokenPriceUsd": "0.00000009"
+        "promptTokenPriceUsd": "0.00000035",
+        "completionTokenPriceUsd": "0.00000189"
       },
       {
         "id": "upstage/solar-pro-3",
