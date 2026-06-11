@@ -4199,6 +4199,11 @@
       "frozenCost": {
         "kind": "UNAVAILABLE"
       }
+    },
+    "019eb739-0e5e-7d81-a874-5bc818972789": {
+      "cwd": "/Users/develar/projects/idea-3",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/11/rollout-2026-06-11T17-07-10-019eb739-0e5e-7d81-a874-5bc818972789.jsonl",
+      "updatedAt": 1781190431000
     }
   }
 }]]></component>
