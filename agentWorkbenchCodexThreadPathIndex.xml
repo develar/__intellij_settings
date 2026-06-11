@@ -4175,7 +4175,12 @@
     "019eb6d6-ab80-76f1-8eaf-0c48dcf48bef": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/11/rollout-2026-06-11T15-19-42-019eb6d6-ab80-76f1-8eaf-0c48dcf48bef.jsonl",
-      "updatedAt": 1781183982000
+      "updatedAt": 1781184250831,
+      "frozenCost": {
+        "amountUsd": "4.8024330",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
