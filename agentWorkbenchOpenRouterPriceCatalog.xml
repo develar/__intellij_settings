@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781250377060,
+    "fetchedAt": 1781256213813,
     "entries": [
       {
         "id": "~anthropic/claude-fable-latest",
