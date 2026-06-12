@@ -1,8 +1,22 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781256213813,
+    "fetchedAt": 1781296204582,
     "entries": [
+      {
+        "id": "moonshotai/kimi-k2.7-code",
+        "canonicalSlug": "moonshotai/kimi-k2.7-code-20260612",
+        "displayName": "MoonshotAI: Kimi K2.7 Code",
+        "normalizedNames": [
+          "moonshotai-kimi-k2-7-code",
+          "kimi-k2-7-code",
+          "moonshotai-kimi-k2-7-code-20260612",
+          "kimi-k2-7-code-20260612"
+        ],
+        "promptTokenPriceUsd": "0.00000095",
+        "completionTokenPriceUsd": "0.000004",
+        "cacheReadTokenPriceUsd": "0.00000019"
+      },
       {
         "id": "~anthropic/claude-fable-latest",
         "canonicalSlug": "~anthropic/claude-fable-latest",
@@ -427,9 +441,9 @@
           "moonshotai-kimi-latest",
           "kimi-latest"
         ],
-        "promptTokenPriceUsd": "0.00000067",
-        "completionTokenPriceUsd": "0.00000339",
-        "cacheReadTokenPriceUsd": "0.00000014"
+        "promptTokenPriceUsd": "0.00000068",
+        "completionTokenPriceUsd": "0.00000341",
+        "cacheReadTokenPriceUsd": "0.00000034"
       },
       {
         "id": "~google/gemini-flash-latest",
@@ -532,8 +546,8 @@
           "qwen-qwen3-6-27b-20260422",
           "qwen3-6-27b-20260422"
         ],
-        "promptTokenPriceUsd": "0.000000289",
-        "completionTokenPriceUsd": "0.0000024"
+        "promptTokenPriceUsd": "0.0000002885",
+        "completionTokenPriceUsd": "0.00000317"
       },
       {
         "id": "openai/gpt-5.5-pro",
@@ -709,9 +723,9 @@
           "moonshotai-kimi-k2-6-20260420",
           "kimi-k2-6-20260420"
         ],
-        "promptTokenPriceUsd": "0.00000067",
-        "completionTokenPriceUsd": "0.00000339",
-        "cacheReadTokenPriceUsd": "0.00000014"
+        "promptTokenPriceUsd": "0.00000068",
+        "completionTokenPriceUsd": "0.00000341",
+        "cacheReadTokenPriceUsd": "0.00000034"
       },
       {
         "id": "anthropic/claude-opus-4.7",
@@ -1417,8 +1431,9 @@
           "moonshotai-kimi-k2-5-0127",
           "kimi-k2-5-0127"
         ],
-        "promptTokenPriceUsd": "0.00000035",
-        "completionTokenPriceUsd": "0.00000189"
+        "promptTokenPriceUsd": "0.0000004",
+        "completionTokenPriceUsd": "0.0000019",
+        "cacheReadTokenPriceUsd": "0.00000009"
       },
       {
         "id": "upstage/solar-pro-3",
@@ -3478,17 +3493,6 @@
         "promptTokenPriceUsd": "0.0000002",
         "completionTokenPriceUsd": "0.0000006",
         "cacheReadTokenPriceUsd": "0.00000002"
-      },
-      {
-        "id": "meta-llama/llama-guard-3-8b",
-        "canonicalSlug": "meta-llama/llama-guard-3-8b",
-        "displayName": "Llama Guard 3 8B",
-        "normalizedNames": [
-          "meta-llama-llama-guard-3-8b",
-          "llama-guard-3-8b"
-        ],
-        "promptTokenPriceUsd": "0.000000484",
-        "completionTokenPriceUsd": "0.00000003"
       },
       {
         "id": "openai/o3-mini-high",
