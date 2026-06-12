@@ -1,4 +1,5 @@
 <application>
+  <component name="AgentSessionProviderSettings"><![CDATA[{}]]></component>
   <component name="AgentWorkbenchSettings"><![CDATA[{
   "showAgentActivityInMainToolbar": true
 }]]></component>
