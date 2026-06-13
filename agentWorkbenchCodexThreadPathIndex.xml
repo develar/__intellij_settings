@@ -4595,7 +4595,7 @@
     "019ec01d-e539-7ff0-9e1d-565574f81d9e": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/13/rollout-2026-06-13T10-34-05-019ec01d-e539-7ff0-9e1d-565574f81d9e.jsonl",
-      "updatedAt": 1781345515000
+      "updatedAt": 1781361252000
     },
     "019ec02f-392f-70a3-b4cd-9b8067104969": {
       "cwd": "/Users/develar/projects/idea-1",
@@ -4626,7 +4626,17 @@
     "019ec077-633e-7213-b87b-21677bc053c3": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/13/rollout-2026-06-13T12-11-50-019ec077-633e-7213-b87b-21677bc053c3.jsonl",
-      "updatedAt": 1781345511000
+      "updatedAt": 1781360842000
+    },
+    "019ec15b-0860-7183-8a33-561719e0108c": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/13/rollout-2026-06-13T16-20-29-019ec15b-0860-7183-8a33-561719e0108c.jsonl",
+      "updatedAt": 1781360429000
+    },
+    "019ec161-c8b4-7803-b735-346e9abc697a": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/13/rollout-2026-06-13T16-27-51-019ec161-c8b4-7803-b735-346e9abc697a.jsonl",
+      "updatedAt": 1781361242000
     }
   }
 }]]></component>
