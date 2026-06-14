@@ -1,8 +1,19 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781296204582,
+    "fetchedAt": 1781461475048,
     "entries": [
+      {
+        "id": "openrouter/fusion",
+        "canonicalSlug": "openrouter/fusion",
+        "displayName": "OpenRouter: Fusion",
+        "normalizedNames": [
+          "openrouter-fusion",
+          "fusion"
+        ],
+        "promptTokenPriceUsd": "-1",
+        "completionTokenPriceUsd": "-1"
+      },
       {
         "id": "moonshotai/kimi-k2.7-code",
         "canonicalSlug": "moonshotai/kimi-k2.7-code-20260612",
@@ -13,9 +24,9 @@
           "moonshotai-kimi-k2-7-code-20260612",
           "kimi-k2-7-code-20260612"
         ],
-        "promptTokenPriceUsd": "0.00000095",
-        "completionTokenPriceUsd": "0.000004",
-        "cacheReadTokenPriceUsd": "0.00000019"
+        "promptTokenPriceUsd": "0.00000075",
+        "completionTokenPriceUsd": "0.0000035",
+        "cacheReadTokenPriceUsd": "0.00000016"
       },
       {
         "id": "~anthropic/claude-fable-latest",
@@ -232,17 +243,6 @@
         "completionTokenPriceUsd": "0.00015",
         "cacheReadTokenPriceUsd": "0.000003",
         "cacheWriteTokenPriceUsd": "0.0000375"
-      },
-      {
-        "id": "openrouter/fusion",
-        "canonicalSlug": "openrouter/fusion",
-        "displayName": "OpenRouter: Fusion",
-        "normalizedNames": [
-          "openrouter-fusion",
-          "fusion"
-        ],
-        "promptTokenPriceUsd": "-1",
-        "completionTokenPriceUsd": "-1"
       },
       {
         "id": "perceptron/perceptron-mk1",
@@ -600,8 +600,8 @@
           "deepseek-deepseek-v4-flash-20260423",
           "deepseek-v4-flash-20260423"
         ],
-        "promptTokenPriceUsd": "0.000000098",
-        "completionTokenPriceUsd": "0.000000196",
+        "promptTokenPriceUsd": "0.00000009",
+        "completionTokenPriceUsd": "0.00000018",
         "cacheReadTokenPriceUsd": "0.00000002"
       },
       {
@@ -1431,9 +1431,8 @@
           "moonshotai-kimi-k2-5-0127",
           "kimi-k2-5-0127"
         ],
-        "promptTokenPriceUsd": "0.0000004",
-        "completionTokenPriceUsd": "0.0000019",
-        "cacheReadTokenPriceUsd": "0.00000009"
+        "promptTokenPriceUsd": "0.000000375",
+        "completionTokenPriceUsd": "0.000002025"
       },
       {
         "id": "upstage/solar-pro-3",
