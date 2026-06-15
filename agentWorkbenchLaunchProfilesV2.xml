@@ -1,0 +1,24 @@
+<application>
+  <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
+  "launchProfiles": [
+    {
+      "id": "user:1781542286948",
+      "name": "High",
+      "providerId": "junie",
+      "generationSettings": {
+        "reasoningEffort": "HIGH"
+      }
+    },
+    {
+      "id": "user:1781542450416",
+      "name": "Medium Plan High",
+      "providerId": "codex",
+      "generationSettings": {
+        "reasoningEffort": "MEDIUM",
+        "planReasoningEffort": "HIGH"
+      }
+    }
+  ],
+  "activeLaunchProfileId": "user:1781542450416"
+}]]></component>
+</application>
