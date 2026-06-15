@@ -4931,32 +4931,17 @@
     "019ec9db-ca27-7290-be2e-ee87eb28cf4a": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/15/rollout-2026-06-15T07-58-05-019ec9db-ca27-7290-be2e-ee87eb28cf4a.jsonl",
-      "updatedAt": 1781503693000,
-      "frozenCost": {
-        "amountUsd": "2.2645920",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1781506097000
     },
     "019ec9e7-2e64-7233-900b-e755998188f2": {
       "cwd": "/Users/develar/projects/idea-3",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/15/rollout-2026-06-15T08-10-31-019ec9e7-2e64-7233-900b-e755998188f2.jsonl",
-      "updatedAt": 1781504504441,
-      "frozenCost": {
-        "amountUsd": "2.4847940",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1781506989000
     },
     "019ec9e7-e1a1-7bf3-8c67-d7829b9ba307": {
       "cwd": "/Users/develar/projects/idea-3",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/15/rollout-2026-06-15T08-11-17-019ec9e7-e1a1-7bf3-8c67-d7829b9ba307.jsonl",
-      "updatedAt": 1781504022243,
-      "frozenCost": {
-        "amountUsd": "1.0861910",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1781505940000
     },
     "019ec9e8-7200-7d62-a3ef-a4e1b6658f3c": {
       "cwd": "/Users/develar/projects/idea-3",
@@ -4967,6 +4952,16 @@
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
+    },
+    "019eca0a-354f-7df1-8439-053ce1f4b69f": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/15/rollout-2026-06-15T08-48-47-019eca0a-354f-7df1-8439-053ce1f4b69f.jsonl",
+      "updatedAt": 1781507922000
+    },
+    "019eca1c-0594-7772-bc1a-f3259622193e": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/15/rollout-2026-06-15T09-08-14-019eca1c-0594-7772-bc1a-f3259622193e.jsonl",
+      "updatedAt": 1781507343000
     }
   }
 }]]></component>
