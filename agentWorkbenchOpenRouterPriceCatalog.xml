@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781615622807,
+    "fetchedAt": 1781615795847,
     "entries": [
       {
         "id": "openrouter/fusion",
