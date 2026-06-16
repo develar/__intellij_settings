@@ -1,7 +1,7 @@
 <application>
   <component name="OpenRouterPriceCatalogService"><![CDATA[{
   "snapshot": {
-    "fetchedAt": 1781614560239,
+    "fetchedAt": 1781615622807,
     "entries": [
       {
         "id": "openrouter/fusion",
@@ -150,8 +150,9 @@
           "stepfun-step-3-7-flash-20260528",
           "step-3-7-flash-20260528"
         ],
-        "promptTokenPriceUsd": "0",
-        "completionTokenPriceUsd": "0"
+        "promptTokenPriceUsd": "0.0000002",
+        "completionTokenPriceUsd": "0.00000115",
+        "cacheReadTokenPriceUsd": "0.00000004"
       },
       {
         "id": "anthropic/claude-opus-4.8-fast",
