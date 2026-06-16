@@ -17,8 +17,26 @@
         "reasoningEffort": "MEDIUM",
         "planReasoningEffort": "HIGH"
       }
+    },
+    {
+      "id": "user:1781608236587",
+      "name": "XHigh Plan XHigh",
+      "providerId": "codex",
+      "generationSettings": {
+        "reasoningEffort": "MEDIUM",
+        "planReasoningEffort": "XHIGH"
+      }
+    },
+    {
+      "id": "user:1781608725136",
+      "name": "Extra High Plan Extra High",
+      "providerId": "codex",
+      "generationSettings": {
+        "reasoningEffort": "XHIGH",
+        "planReasoningEffort": "XHIGH"
+      }
     }
   ],
-  "activeLaunchProfileId": "user:1781542450416"
+  "activeLaunchProfileId": "user:1781608725136"
 }]]></component>
 </application>
