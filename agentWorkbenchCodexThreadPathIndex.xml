@@ -5569,7 +5569,12 @@
     "019ed427-eaa2-72a1-b32b-6e8872730fb7": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/17/rollout-2026-06-17T07-57-26-019ed427-eaa2-72a1-b32b-6e8872730fb7.jsonl",
-      "updatedAt": 1781676344000
+      "updatedAt": 1781677710000
+    },
+    "019ed444-272a-73d1-a030-4d9b7c9408f1": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/17/rollout-2026-06-17T08-28-16-019ed444-272a-73d1-a030-4d9b7c9408f1.jsonl",
+      "updatedAt": 1781677710000
     }
   }
 }]]></component>
