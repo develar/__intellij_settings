@@ -35,6 +35,12 @@
         "reasoningEffort": "XHIGH",
         "planReasoningEffort": "XHIGH"
       }
+    },
+    {
+      "id": "user:1781758789962",
+      "name": "Claude haiku",
+      "providerId": "claude",
+      "launchMode": "YOLO"
     }
   ],
   "activeLaunchProfileId": "user:1781608725136"
