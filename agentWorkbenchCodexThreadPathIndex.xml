@@ -5991,7 +5991,12 @@
     "019edbc8-96de-79c3-9ede-3fe49882177f": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/18/rollout-2026-06-18T19-30-16-019edbc8-96de-79c3-9ede-3fe49882177f.jsonl",
-      "updatedAt": 1781803817780,
+      "updatedAt": 1781804203000
+    },
+    "019edbce-9202-7e20-b556-720d3deafd93": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/18/rollout-2026-06-18T19-36-48-019edbce-9202-7e20-b556-720d3deafd93.jsonl",
+      "updatedAt": 1781804210753,
       "frozenCost": {
         "kind": "UNAVAILABLE"
       }
