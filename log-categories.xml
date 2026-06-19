@@ -30,6 +30,10 @@
       "level": "DEBUG"
     },
     {
+      "category": "com.intellij.agent.workbench.claude.sessions.ClaudeHookBridge",
+      "level": "DEBUG"
+    },
+    {
       "category": "com.intellij.openapi.vfs.newvfs.RefreshSession",
       "level": "DEBUG"
     },
