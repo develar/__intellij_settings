@@ -6273,18 +6273,38 @@
     },
     "019ee374-7b36-75f2-a28b-ce3ccecaea21": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T07-15-22-019ee374-7b36-75f2-a28b-ce3ccecaea21.jsonl",
-      "updatedAt": 1781933429000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-20T07-15-22-019ee374-7b36-75f2-a28b-ce3ccecaea21.jsonl",
+      "updatedAt": 1781936793000,
+      "frozenCost": {
+        "amountUsd": "4.86990500",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019ee377-3fae-75d0-9fee-67387c3e64b5": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T07-18-23-019ee377-3fae-75d0-9fee-67387c3e64b5.jsonl",
-      "updatedAt": 1781933432000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-20T07-18-23-019ee377-3fae-75d0-9fee-67387c3e64b5.jsonl",
+      "updatedAt": 1781934026000,
+      "frozenCost": {
+        "amountUsd": "9.69602600",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019ee388-a2a3-7100-a4fb-0718874782eb": {
       "cwd": "/Users/develar/projects/idea-5",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T07-37-23-019ee388-a2a3-7100-a4fb-0718874782eb.jsonl",
-      "updatedAt": 1781933843000
+      "updatedAt": 1781937158000
+    },
+    "019ee3ba-eaca-7841-a179-f2c087956cbb": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T08-32-18-019ee3ba-eaca-7841-a179-f2c087956cbb.jsonl",
+      "updatedAt": 1781937167000
+    },
+    "019ee3bc-92b2-7770-9cfa-38ca73e031ea": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T08-34-06-019ee3bc-92b2-7770-9cfa-38ca73e031ea.jsonl",
+      "updatedAt": 1781937246000
     }
   }
 }]]></component>
