@@ -6349,9 +6349,9 @@
     "019ee5dc-b7eb-7580-9e95-cd29ed0943d3": {
       "cwd": "/Users/develar/projects/idea-5",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T18-28-28-019ee5dc-b7eb-7580-9e95-cd29ed0943d3.jsonl",
-      "updatedAt": 1781979577855,
+      "updatedAt": 1781981388211,
       "frozenCost": {
-        "amountUsd": "29.55288600",
+        "amountUsd": "40.53047100",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -6388,10 +6388,10 @@
     },
     "019ee62c-637d-71a1-9919-3d0527231b8b": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T19-55-29-019ee62c-637d-71a1-9919-3d0527231b8b.jsonl",
-      "updatedAt": 1781978989000,
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-20T19-55-29-019ee62c-637d-71a1-9919-3d0527231b8b.jsonl",
+      "updatedAt": 1781981132000,
       "frozenCost": {
-        "amountUsd": "3.14999800",
+        "amountUsd": "15.20206600",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -6399,7 +6399,22 @@
     "019ee64f-502b-7f93-8cc1-a3553f654c41": {
       "cwd": "/Users/develar/projects/idea-2",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T20-33-38-019ee64f-502b-7f93-8cc1-a3553f654c41.jsonl",
-      "updatedAt": 1781980419000
+      "updatedAt": 1781981400742,
+      "frozenCost": {
+        "amountUsd": "9.18580600",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019ee65b-1b23-7f80-a1d6-37cbc1b09e14": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/20/rollout-2026-06-20T20-46-30-019ee65b-1b23-7f80-a1d6-37cbc1b09e14.jsonl",
+      "updatedAt": 1781981308678,
+      "frozenCost": {
+        "amountUsd": "0.77528400",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
