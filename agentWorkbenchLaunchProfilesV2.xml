@@ -37,6 +37,7 @@
       }
     }
   ],
-  "activeLaunchProfileId": "user:1781608725136"
+  "activeLaunchProfileId": "user:1781608725136",
+  "activeVcsMergeLaunchProfileId": "builtin:claude:standard"
 }]]></component>
 </application>
