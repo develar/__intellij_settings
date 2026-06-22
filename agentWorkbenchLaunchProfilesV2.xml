@@ -31,7 +31,10 @@
       "id": "user:1781758789962",
       "name": "Claude haiku",
       "providerId": "claude",
-      "launchMode": "YOLO"
+      "launchMode": "YOLO",
+      "generationSettings": {
+        "modelId": "haiku"
+      }
     }
   ],
   "activeLaunchProfileId": "user:1781608725136"
