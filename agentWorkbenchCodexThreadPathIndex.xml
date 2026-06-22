@@ -6731,6 +6731,16 @@
       "frozenCost": {
         "kind": "UNAVAILABLE"
       }
+    },
+    "019ef012-25e0-7ae0-a322-c2db71cb3ace": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/22/rollout-2026-06-22T18-03-01-019ef012-25e0-7ae0-a322-c2db71cb3ace.jsonl",
+      "updatedAt": 1782144256000
+    },
+    "019ef013-5df0-7442-b76e-bcb6b2f647c8": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/22/rollout-2026-06-22T18-04-21-019ef013-5df0-7442-b76e-bcb6b2f647c8.jsonl",
+      "updatedAt": 1782144262000
     }
   }
 }]]></component>
