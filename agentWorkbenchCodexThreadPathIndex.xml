@@ -6961,7 +6961,12 @@
     "019ef554-d0db-7d92-ad5c-a363ed937b5a": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/23/rollout-2026-06-23T18-33-56-019ef554-d0db-7d92-ad5c-a363ed937b5a.jsonl",
-      "updatedAt": 1782232490000
+      "updatedAt": 1782232436000
+    },
+    "019ef55f-ec13-73c2-ae95-c319a7dd76d1": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/23/rollout-2026-06-23T18-46-04-019ef55f-ec13-73c2-ae95-c319a7dd76d1.jsonl",
+      "updatedAt": 1782233652000
     }
   }
 }]]></component>
