@@ -7250,12 +7250,7 @@
     "019efdc2-63f5-77f2-8d6e-e525a3cd6f6b": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/25/rollout-2026-06-25T09-50-35-019efdc2-63f5-77f2-8d6e-e525a3cd6f6b.jsonl",
-      "updatedAt": 1782385121000,
-      "frozenCost": {
-        "amountUsd": "86.96864000",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1782386326000
     },
     "019efdc7-bd94-7a62-ab18-a8dd4422061b": {
       "cwd": "/Users/develar/projects/idea-2",
@@ -7308,19 +7303,14 @@
     "019efe57-7944-7d03-b1ec-217de59ee8a1": {
       "cwd": "/Users/develar/projects/idea-3",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/25/rollout-2026-06-25T12-33-26-019efe57-7944-7d03-b1ec-217de59ee8a1.jsonl",
-      "updatedAt": 1782385131000,
-      "frozenCost": {
-        "amountUsd": "10.21756900",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1782386340000
     },
     "019efe69-3dd8-74d0-a6d4-2bd967d5ec0f": {
       "cwd": "/Users/develar/projects/idea-4",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/25/rollout-2026-06-25T12-52-50-019efe69-3dd8-74d0-a6d4-2bd967d5ec0f.jsonl",
-      "updatedAt": 1782385132000,
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-25T12-52-50-019efe69-3dd8-74d0-a6d4-2bd967d5ec0f.jsonl",
+      "updatedAt": 1782385357000,
       "frozenCost": {
-        "amountUsd": "2.67142700",
+        "amountUsd": "4.02562100",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -7338,12 +7328,7 @@
     "019efe6d-3733-7571-8c97-da819d0d9daa": {
       "cwd": "/Users/develar/projects/idea-2",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/25/rollout-2026-06-25T12-57-10-019efe6d-3733-7571-8c97-da819d0d9daa.jsonl",
-      "updatedAt": 1782385132000,
-      "frozenCost": {
-        "amountUsd": "0.68612300",
-        "kind": "ESTIMATED",
-        "matchedModelId": "openai/gpt-5.5"
-      }
+      "updatedAt": 1782385897000
     }
   }
 }]]></component>
