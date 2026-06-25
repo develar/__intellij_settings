@@ -1,7 +1,6 @@
 <application>
   <component name="AgentSessionProviderSettings"><![CDATA[{}]]></component>
   <component name="AgentWorkbenchSettings"><![CDATA[{
-  "showAgentActivityInMainToolbar": true,
-  "agentThreadsCurrentProjectOnly": true
+  "showAgentActivityInMainToolbar": true
 }]]></component>
 </application>
