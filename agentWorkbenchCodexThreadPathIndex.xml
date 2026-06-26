@@ -7888,18 +7888,38 @@
     },
     "019f0413-ef2d-79e0-9aa1-26beb8d16f6e": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T15-17-23-019f0413-ef2d-79e0-9aa1-26beb8d16f6e.jsonl",
-      "updatedAt": 1782481320000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T15-17-23-019f0413-ef2d-79e0-9aa1-26beb8d16f6e.jsonl",
+      "updatedAt": 1782481799000,
+      "frozenCost": {
+        "amountUsd": "14.41285100",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019f0420-04d7-7e93-ba05-75f1999dce95": {
       "cwd": "/Users/develar/projects/idea-5",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T15-30-35-019f0420-04d7-7e93-ba05-75f1999dce95.jsonl",
-      "updatedAt": 1782480636000
+      "updatedAt": 1782482270000
     },
     "019f0425-f5e9-7621-9eab-e3cb03dd8f9c": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T15-37-04-019f0425-f5e9-7621-9eab-e3cb03dd8f9c.jsonl",
-      "updatedAt": 1782481320000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T15-37-04-019f0425-f5e9-7621-9eab-e3cb03dd8f9c.jsonl",
+      "updatedAt": 1782482512000,
+      "frozenCost": {
+        "amountUsd": "6.73834300",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019f042f-da0b-7771-9630-109a3e672272": {
+      "cwd": "/Users/develar/projects/idea-3",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T15-47-52-019f042f-da0b-7771-9630-109a3e672272.jsonl",
+      "updatedAt": 1782482152000
+    },
+    "019f0434-c3a1-7e63-bc78-47db6806c063": {
+      "cwd": "/Users/develar/projects/idea-3",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T15-53-14-019f0434-c3a1-7e63-bc78-47db6806c063.jsonl",
+      "updatedAt": 1782482579000
     }
   }
 }]]></component>
