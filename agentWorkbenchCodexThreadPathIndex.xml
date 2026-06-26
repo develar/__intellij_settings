@@ -7618,10 +7618,10 @@
     },
     "019f024d-7f3b-7643-a061-ef518f574e86": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-01-01-019f024d-7f3b-7643-a061-ef518f574e86.jsonl",
-      "updatedAt": 1782456012000,
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T07-01-01-019f024d-7f3b-7643-a061-ef518f574e86.jsonl",
+      "updatedAt": 1782456462000,
       "frozenCost": {
-        "amountUsd": "55.09252800",
+        "amountUsd": "58.34708400",
         "kind": "ESTIMATED",
         "matchedModelId": "openai/gpt-5.5"
       }
@@ -7648,13 +7648,13 @@
     },
     "019f0271-9430-7861-924b-3583abe4ea0c": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-40-25-019f0271-9430-7861-924b-3583abe4ea0c.jsonl",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T07-40-25-019f0271-9430-7861-924b-3583abe4ea0c.jsonl",
       "parentThreadId": "019f024d-7f3b-7643-a061-ef518f574e86",
       "updatedAt": 1782452763000
     },
     "019f0271-949d-7d20-836c-03c6172e1638": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-40-25-019f0271-949d-7d20-836c-03c6172e1638.jsonl",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T07-40-25-019f0271-949d-7d20-836c-03c6172e1638.jsonl",
       "parentThreadId": "019f024d-7f3b-7643-a061-ef518f574e86",
       "updatedAt": 1782452760000
     },
@@ -7670,7 +7670,7 @@
     },
     "019f028f-9605-7852-a5c2-a64f22d5c763": {
       "cwd": "/Users/develar/projects/idea-3",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T08-13-12-019f028f-9605-7852-a5c2-a64f22d5c763.jsonl",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T08-13-12-019f028f-9605-7852-a5c2-a64f22d5c763.jsonl",
       "updatedAt": 1782455961000,
       "frozenCost": {
         "amountUsd": "9.62143000",
