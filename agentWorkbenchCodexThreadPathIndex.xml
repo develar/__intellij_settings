@@ -7619,17 +7619,44 @@
     "019f024d-7f3b-7643-a061-ef518f574e86": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-01-01-019f024d-7f3b-7643-a061-ef518f574e86.jsonl",
-      "updatedAt": 1782452200000
+      "updatedAt": 1782452875000
     },
     "019f026a-8408-7de3-9eaa-cbe7f22f18c1": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-32-42-019f026a-8408-7de3-9eaa-cbe7f22f18c1.jsonl",
-      "updatedAt": 1782452139000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T07-32-42-019f026a-8408-7de3-9eaa-cbe7f22f18c1.jsonl",
+      "updatedAt": 1782453064000,
+      "frozenCost": {
+        "amountUsd": "10.64256400",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019f026e-a012-7211-802e-1972d08349c1": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-37-12-019f026e-a012-7211-802e-1972d08349c1.jsonl",
-      "updatedAt": 1782452232000
+      "updatedAt": 1782453068000
+    },
+    "019f0271-9430-7861-924b-3583abe4ea0c": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-40-25-019f0271-9430-7861-924b-3583abe4ea0c.jsonl",
+      "parentThreadId": "019f024d-7f3b-7643-a061-ef518f574e86",
+      "updatedAt": 1782452763000
+    },
+    "019f0271-949d-7d20-836c-03c6172e1638": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T07-40-25-019f0271-949d-7d20-836c-03c6172e1638.jsonl",
+      "parentThreadId": "019f024d-7f3b-7643-a061-ef518f574e86",
+      "updatedAt": 1782452760000
+    },
+    "019f026d-372d-7230-8443-48dd525c5665": {
+      "cwd": "/Users/develar/IdeaProjects/untitled2",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-06-26T07-35-39-019f026d-372d-7230-8443-48dd525c5665.jsonl",
+      "updatedAt": 1782452173000,
+      "frozenCost": {
+        "amountUsd": "0.17816100",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
