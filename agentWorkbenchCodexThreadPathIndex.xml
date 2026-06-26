@@ -7829,7 +7829,12 @@
     "019f0398-6627-7542-9a70-015c8bd93f8f": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T13-02-27-019f0398-6627-7542-9a70-015c8bd93f8f.jsonl",
-      "updatedAt": 1782472054000
+      "updatedAt": 1782471747000
+    },
+    "019f03a9-54fa-7bd2-abbe-3f1d8f7d2333": {
+      "cwd": "/Users/develar/projects/idea-2",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/26/rollout-2026-06-26T13-20-56-019f03a9-54fa-7bd2-abbe-3f1d8f7d2333.jsonl",
+      "updatedAt": 1782472860000
     }
   }
 }]]></component>
