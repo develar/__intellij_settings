@@ -8514,7 +8514,12 @@
     "019f0a74-194d-7750-982c-a7309a750f9e": {
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/27/rollout-2026-06-27T21-00-08-019f0a74-194d-7750-982c-a7309a750f9e.jsonl",
-      "updatedAt": 1782587325000
+      "updatedAt": 1782588764000
+    },
+    "019f0cdb-0229-78a1-9a30-4c8e9d5e3e9c": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/06/28/rollout-2026-06-28T08-11-47-019f0cdb-0229-78a1-9a30-4c8e9d5e3e9c.jsonl",
+      "updatedAt": 1782627272000
     }
   }
 }]]></component>
