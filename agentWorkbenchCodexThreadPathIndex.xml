@@ -8799,7 +8799,12 @@
     "019f1246-3287-7a63-bd55-67571799a080": {
       "cwd": "/Users/develar/projects/idea-3",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/06/29/rollout-2026-06-29T09-26-58-019f1246-3287-7a63-bd55-67571799a080.jsonl",
-      "updatedAt": 1782718018000
+      "updatedAt": 1782718018000,
+      "frozenCost": {
+        "amountUsd": "2.72232700",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
