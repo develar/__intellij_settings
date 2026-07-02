@@ -9639,8 +9639,8 @@
     },
     "019f2441-4d95-7481-8c40-b5b21def48e1": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-07-02T21-14-47-019f2441-4d95-7481-8c40-b5b21def48e1.jsonl",
-      "updatedAt": 1783020036000,
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/02/rollout-2026-07-02T21-14-47-019f2441-4d95-7481-8c40-b5b21def48e1.jsonl",
+      "updatedAt": 1783035747000,
       "frozenCost": {
         "amountUsd": "0.88804500",
         "kind": "ESTIMATED",
