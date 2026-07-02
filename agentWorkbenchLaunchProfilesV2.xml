@@ -46,6 +46,6 @@
     }
   ],
   "activeLaunchProfileId": "builtin:claude:standard",
-  "activeVcsMergeLaunchProfileId": "builtin:claude:standard"
+  "activeVcsMergeLaunchProfileId": "builtin:codex:standard"
 }]]></component>
 </application>
