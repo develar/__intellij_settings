@@ -35,9 +35,17 @@
       "generationSettings": {
         "modelId": "haiku"
       }
+    },
+    {
+      "id": "builtin:claude:standard",
+      "name": "Claude",
+      "providerId": "claude",
+      "generationSettings": {
+        "modelId": "fable"
+      }
     }
   ],
-  "activeLaunchProfileId": "user:1781608725136",
+  "activeLaunchProfileId": "builtin:claude:standard",
   "activeVcsMergeLaunchProfileId": "builtin:claude:standard"
 }]]></component>
 </application>
