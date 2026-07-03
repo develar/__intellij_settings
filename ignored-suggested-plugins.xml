@@ -20,6 +20,13 @@
         <option value="Lombook Plugin" />
         <option value="intellij.nextjs" />
         <option value="com.intellij.react" />
+        <option value="org.jetbrains.plugins.astro" />
+        <option value="org.intellij.prisma" />
+        <option value="com.deadlock.scsyntax" />
+        <option value="AngularJS" />
+        <option value="tslint" />
+        <option value="intellij.webpack" />
+        <option value="Karma" />
       </list>
     </option>
   </component>
