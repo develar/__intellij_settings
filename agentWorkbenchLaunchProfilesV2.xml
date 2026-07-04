@@ -4,48 +4,31 @@
     {
       "id": "user:1781542286948",
       "name": "High",
-      "providerId": "junie",
-      "generationSettings": {
-        "reasoningEffort": "HIGH"
-      }
+      "providerId": "junie"
     },
     {
       "id": "user:1781542450416",
       "name": "Medium Plan High",
-      "providerId": "codex",
-      "generationSettings": {
-        "reasoningEffort": "MEDIUM",
-        "planReasoningEffort": "HIGH"
-      }
+      "providerId": "codex"
     },
     {
       "id": "user:1781608725136",
       "name": "Extra High Plan Extra High",
-      "providerId": "codex",
-      "generationSettings": {
-        "reasoningEffort": "XHIGH",
-        "planReasoningEffort": "XHIGH"
-      }
+      "providerId": "codex"
     },
     {
       "id": "user:1781758789962",
       "name": "Claude haiku",
       "providerId": "claude",
-      "launchMode": "YOLO",
-      "generationSettings": {
-        "modelId": "haiku"
-      }
+      "launchMode": "YOLO"
     },
     {
       "id": "builtin:claude:standard",
       "name": "Claude",
-      "providerId": "claude",
-      "generationSettings": {
-        "modelId": "fable"
-      }
+      "providerId": "claude"
     }
   ],
-  "activeLaunchProfileId": "user:1781608725136",
+  "activeLaunchProfileId": "builtin:claude:standard",
   "activeVcsMergeLaunchProfileId": "builtin:codex:standard"
 }]]></component>
 </application>
