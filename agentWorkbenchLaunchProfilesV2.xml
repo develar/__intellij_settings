@@ -25,7 +25,8 @@
     {
       "id": "builtin:claude:standard",
       "name": "Claude",
-      "providerId": "claude"
+      "providerId": "claude",
+      "modelId": "fable"
     }
   ],
   "activeLaunchProfileId": "builtin:codex:standard",
