@@ -28,7 +28,7 @@
       "providerId": "claude"
     }
   ],
-  "activeLaunchProfileId": "builtin:claude:standard",
+  "activeLaunchProfileId": "builtin:codex:standard",
   "activeVcsMergeLaunchProfileId": "builtin:codex:standard"
 }]]></component>
 </application>
