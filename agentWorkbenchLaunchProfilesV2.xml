@@ -18,9 +18,10 @@
     },
     {
       "id": "user:1781758789962",
-      "name": "Claude haiku",
+      "name": "Claude Opus",
       "providerId": "claude",
-      "launchMode": "YOLO"
+      "launchMode": "YOLO",
+      "modelId": "opus"
     },
     {
       "id": "builtin:claude:standard",
