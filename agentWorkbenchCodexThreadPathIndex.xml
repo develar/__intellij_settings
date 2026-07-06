@@ -9961,6 +9961,16 @@
       "cwd": "/Users/develar/projects/idea-1",
       "rolloutPath": "/Users/develar/.codex/sessions/2026/07/06/rollout-2026-07-06T09-28-49-019f3654-68a1-7f73-a94c-23a1016ddf4a.jsonl",
       "updatedAt": 1783324885000
+    },
+    "019f36d0-dab2-73b0-8b48-83207f7d7709": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/06/rollout-2026-07-06T11-44-45-019f36d0-dab2-73b0-8b48-83207f7d7709.jsonl",
+      "updatedAt": 1783331085000
+    },
+    "019f36ec-c6a5-7961-ba5d-d5eb03d2e019": {
+      "cwd": "/Users/develar/projects/idea-4",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/06/rollout-2026-07-06T12-15-14-019f36ec-c6a5-7961-ba5d-d5eb03d2e019.jsonl",
+      "updatedAt": 1783332914000
     }
   }
 }]]></component>
