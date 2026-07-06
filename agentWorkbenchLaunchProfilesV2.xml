@@ -23,7 +23,6 @@
       "id": "user:1781758789962",
       "name": "Claude Opus",
       "providerId": "claude",
-      "launchMode": "YOLO",
       "modelId": "opus"
     },
     {
