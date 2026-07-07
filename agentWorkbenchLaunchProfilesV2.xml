@@ -30,6 +30,16 @@
       "name": "Claude",
       "providerId": "claude",
       "modelId": "fable"
+    },
+    {
+      "id": "user:1783431151174",
+      "name": "gui claude",
+      "providerId": "claude",
+      "acp": {
+        "agentId": "acp.registry.claude-acp"
+      },
+      "surfaceId": "acp",
+      "modelId": "fable"
     }
   ],
   "activeLaunchProfileId": "user:1781608725136",
