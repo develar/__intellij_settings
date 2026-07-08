@@ -121,6 +121,21 @@
           <option name="enabled" value="false" />
         </ToolStateBean>
       </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.UniversalToolset.execute_tool">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.terminal.TerminalToolset.execute_terminal_command">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.ml.llm.agents.contrib.shared.search.tools.SkillSearchToolset.skill_search">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
       <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_expand_macros_recursively">
         <ToolStateBean>
           <option name="enabled" value="false" />
