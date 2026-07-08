@@ -10352,13 +10352,43 @@
     },
     "019f421d-198c-7b41-b75e-6c13290b1518": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/08/rollout-2026-07-08T16-23-51-019f421d-198c-7b41-b75e-6c13290b1518.jsonl",
-      "updatedAt": 1783521411000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-07-08T16-23-51-019f421d-198c-7b41-b75e-6c13290b1518.jsonl",
+      "updatedAt": 1783521641000,
+      "frozenCost": {
+        "amountUsd": "3.03382500",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     },
     "019f4224-cb09-7281-ab4b-17b7c43f1710": {
       "cwd": "/Users/develar/projects/idea-1",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/08/rollout-2026-07-08T16-32-15-019f4224-cb09-7281-ab4b-17b7c43f1710.jsonl",
-      "updatedAt": 1783521425000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-07-08T16-32-15-019f4224-cb09-7281-ab4b-17b7c43f1710.jsonl",
+      "updatedAt": 1783525418000,
+      "frozenCost": {
+        "amountUsd": "4.06943900",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019f4265-4687-7091-a11b-ec0990d00ce3": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/08/rollout-2026-07-08T17-42-41-019f4265-4687-7091-a11b-ec0990d00ce3.jsonl",
+      "updatedAt": 1783526102000
+    },
+    "019f4275-9578-7ea3-ba7a-2eb586c090f7": {
+      "cwd": "/Users/develar/projects/idea-1",
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-07-08T18-00-30-019f4275-9578-7ea3-ba7a-2eb586c090f7.jsonl",
+      "updatedAt": 1783527136000,
+      "frozenCost": {
+        "amountUsd": "4.91660600",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
+    },
+    "019f4283-bd5f-7462-bcde-b44110c13f66": {
+      "cwd": "/Users/develar/projects/idea-4",
+      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/08/rollout-2026-07-08T18-15-57-019f4283-bd5f-7462-bcde-b44110c13f66.jsonl",
+      "updatedAt": 1783527714000
     }
   }
 }]]></component>
