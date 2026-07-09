@@ -10437,8 +10437,13 @@
     },
     "019f459b-f485-7f53-8898-94d17629125a": {
       "cwd": "/Users/develar/projects/idea-3",
-      "rolloutPath": "/Users/develar/.codex/sessions/2026/07/09/rollout-2026-07-09T08-41-16-019f459b-f485-7f53-8898-94d17629125a.jsonl",
-      "updatedAt": 1783579974000
+      "rolloutPath": "/Users/develar/.codex/archived_sessions/rollout-2026-07-09T08-41-16-019f459b-f485-7f53-8898-94d17629125a.jsonl",
+      "updatedAt": 1783579974000,
+      "frozenCost": {
+        "amountUsd": "3.17710700",
+        "kind": "ESTIMATED",
+        "matchedModelId": "openai/gpt-5.5"
+      }
     }
   }
 }]]></component>
