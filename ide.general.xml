@@ -36,6 +36,7 @@
         <entry key="McpServerStatusBarWidget" value="false" />
         <entry key="ReadOnlyAttribute" value="false" />
         <entry key="TypeScriptInfo" value="false" />
+        <entry key="jbcentral.quota" value="true" />
         <entry key="kotlin.fir.ide" value="false" />
       </map>
     </option>
