@@ -15,6 +15,7 @@
       "id": "user:1781542450416",
       "name": "Medium Plan High",
       "agentId": "codex",
+      "modelId": "gpt-5.6-sol",
       "reasoningEffort": "MEDIUM"
     },
     {
@@ -36,6 +37,14 @@
       "name": "Claude",
       "agentId": "claude",
       "modelId": "fable"
+    },
+    {
+      "id": "user:1783692480072",
+      "name": "GPT-5.6-Sol Extra High Plan Extra High",
+      "agentId": "codex",
+      "modelId": "gpt-5.6-sol",
+      "reasoningEffort": "HIGH",
+      "planReasoningEffort": "HIGH"
     }
   ],
   "activeLaunchProfileId": "user:1781608725136",
