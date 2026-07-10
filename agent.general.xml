@@ -1,7 +1,0 @@
-<application>
-  <component name="AgentGeneral"><![CDATA[{
-  "openInDedicatedFrame": true,
-  "showAgentActivityInMainToolbar": true,
-  "threadCostPresentationEnabled": true
-}]]></component>
-</application>

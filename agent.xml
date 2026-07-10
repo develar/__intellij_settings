@@ -1,4 +1,9 @@
 <application>
+  <component name="AgentGeneral"><![CDATA[{
+  "openInDedicatedFrame": true,
+  "showAgentActivityInMainToolbar": true,
+  "threadCostPresentationEnabled": true
+}]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
     {
@@ -31,17 +36,10 @@
       "name": "Claude",
       "agentId": "claude",
       "modelId": "fable"
-    },
-    {
-      "id": "user:1783658397986",
-      "name": "Extra High Plan Extra High 2",
-      "agentId": "codex",
-      "modelId": "gpt-5.6",
-      "reasoningEffort": "XHIGH",
-      "planReasoningEffort": "XHIGH"
     }
   ],
   "activeLaunchProfileId": "user:1781608725136",
   "activeVcsMergeLaunchProfileId": "builtin:codex:standard"
 }]]></component>
+  <component name="AgentSessionProviderSettings"><![CDATA[{}]]></component>
 </application>
