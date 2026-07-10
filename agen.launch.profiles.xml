@@ -4,37 +4,38 @@
     {
       "id": "user:1781542286948",
       "name": "High",
-      "providerId": "junie"
+      "agentId": "junie"
     },
     {
       "id": "user:1781542450416",
       "name": "Medium Plan High",
-      "providerId": "codex",
+      "agentId": "codex",
       "reasoningEffort": "MEDIUM"
     },
     {
       "id": "user:1781608725136",
       "name": "Extra High Plan Extra High",
-      "providerId": "codex",
+      "agentId": "codex",
+      "modelId": "gpt-5.6-sol",
       "reasoningEffort": "XHIGH",
       "planReasoningEffort": "XHIGH"
     },
     {
       "id": "user:1781758789962",
       "name": "Claude Opus",
-      "providerId": "claude",
+      "agentId": "claude",
       "modelId": "opus"
     },
     {
       "id": "builtin:claude:standard",
       "name": "Claude",
-      "providerId": "claude",
+      "agentId": "claude",
       "modelId": "fable"
     },
     {
       "id": "user:1783658397986",
       "name": "Extra High Plan Extra High 2",
-      "providerId": "codex",
+      "agentId": "codex",
       "modelId": "gpt-5.6",
       "reasoningEffort": "XHIGH",
       "planReasoningEffort": "XHIGH"

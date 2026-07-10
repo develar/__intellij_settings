@@ -1,7 +1,3 @@
 <application>
   <component name="AgentSessionProviderSettings"><![CDATA[{}]]></component>
-  <component name="AgentWorkbenchSettings"><![CDATA[{
-  "openInDedicatedFrame": true,
-  "showAgentActivityInMainToolbar": true
-}]]></component>
 </application>

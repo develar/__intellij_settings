@@ -1,0 +1,6 @@
+<application>
+  <component name="AgentGeneral"><![CDATA[{
+  "openInDedicatedFrame": true,
+  "showAgentActivityInMainToolbar": true
+}]]></component>
+</application>
