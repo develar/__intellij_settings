@@ -30,6 +30,14 @@
       "name": "Claude",
       "providerId": "claude",
       "modelId": "fable"
+    },
+    {
+      "id": "user:1783658397986",
+      "name": "Extra High Plan Extra High 2",
+      "providerId": "codex",
+      "modelId": "gpt-5.6",
+      "reasoningEffort": "XHIGH",
+      "planReasoningEffort": "XHIGH"
     }
   ],
   "activeLaunchProfileId": "user:1781608725136",
