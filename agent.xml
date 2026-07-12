@@ -40,7 +40,7 @@
     },
     {
       "id": "user:1783692480072",
-      "name": "GPT-5.6-Sol Extra High Plan Extra High",
+      "name": "High Plan High",
       "agentId": "codex",
       "modelId": "gpt-5.6-sol",
       "reasoningEffort": "HIGH",
