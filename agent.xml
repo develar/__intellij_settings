@@ -2,10 +2,7 @@
   <component name="AgentGeneral"><![CDATA[{
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
-  "threadCostPresentationEnabled": true,
-  "promptSettings": {
-    "startsInPlanMode": false
-  }
+  "threadCostPresentationEnabled": true
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
