@@ -47,7 +47,7 @@
       "planReasoningEffort": "HIGH"
     }
   ],
-  "activeLaunchProfileId": "user:1781608725136",
+  "activeLaunchProfileId": "builtin:pi:standard",
   "activeVcsMergeLaunchProfileId": "builtin:codex:standard"
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{}]]></component>
