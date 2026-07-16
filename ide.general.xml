@@ -20,6 +20,8 @@
     <entry key="debugger.auto.attach.from.console" value="true" source="SYSTEM" />
     <entry key="llm.ignore.default.prompt.rules.aie" value="false" source="SYSTEM" />
     <entry key="llm.nextEdit.render.rating.controls" value="true" source="SYSTEM" />
+    <entry key="air.session.view.surface.tabs" value="true" source="USER" />
+    <entry key="air.codex.gui.surface" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
