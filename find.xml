@@ -3,11 +3,12 @@
     <option name="customScope" value="ignored" />
     <option name="defaultScopeName" value="ignored" />
     <option name="SEARCH_SCOPE" value="ignored" />
-    <mask>*.iml</mask>
+    <option name="FILE_MASK" value="*.iml" />
     <mask>*.yaml</mask>
     <mask>*.xml</mask>
     <mask>product-modules.xml</mask>
     <mask>*.md</mask>
     <mask>*.bazel</mask>
+    <mask>*.iml</mask>
   </component>
 </application>
