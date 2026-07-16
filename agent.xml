@@ -2,19 +2,24 @@
   <component name="AgentGeneral"><![CDATA[{
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
-  "threadCostPresentationEnabled": true
+  "threadCostPresentationEnabled": true,
+  "sessionChangedFilesEnabled": true
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
     {
       "id": "user:1781542286948",
       "name": "High",
-      "agentId": "junie"
+      "agentId": "junie",
+      "launchTargetId": "terminal.junie",
+      "interactionSurfaceId": "terminal"
     },
     {
       "id": "user:1781542450416",
       "name": "Medium Plan High",
       "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
       "modelId": "gpt-5.6-sol",
       "reasoningEffort": "MEDIUM"
     },
@@ -22,6 +27,8 @@
       "id": "user:1781608725136",
       "name": "High Plan Extra High",
       "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
       "modelId": "gpt-5.6-sol",
       "reasoningEffort": "HIGH",
       "planReasoningEffort": "XHIGH"
@@ -30,18 +37,24 @@
       "id": "user:1781758789962",
       "name": "Claude Opus",
       "agentId": "claude",
+      "launchTargetId": "terminal.claude",
+      "interactionSurfaceId": "terminal",
       "modelId": "opus"
     },
     {
       "id": "builtin:claude:standard",
       "name": "Claude",
       "agentId": "claude",
+      "launchTargetId": "terminal.claude",
+      "interactionSurfaceId": "terminal",
       "modelId": "fable"
     },
     {
       "id": "user:1783692480072",
       "name": "High Plan High",
       "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
       "modelId": "gpt-5.6-sol",
       "reasoningEffort": "HIGH",
       "planReasoningEffort": "HIGH"
