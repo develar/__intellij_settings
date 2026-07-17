@@ -3,7 +3,10 @@
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
   "threadCostPresentationEnabled": true,
-  "sessionChangedFilesEnabled": true
+  "sessionChangedFilesEnabled": true,
+  "promptSettings": {
+    "startsInPlanMode": false
+  }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
