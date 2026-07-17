@@ -25,12 +25,12 @@
     },
     {
       "id": "user:1781608725136",
-      "name": "High Plan Extra High",
+      "name": "Extra Plan Extra High",
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
       "modelId": "gpt-5.6-sol",
-      "reasoningEffort": "HIGH",
+      "reasoningEffort": "XHIGH",
       "planReasoningEffort": "XHIGH"
     },
     {
