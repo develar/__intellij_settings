@@ -15,25 +15,6 @@
       "interactionSurfaceId": "terminal"
     },
     {
-      "id": "user:1781542450416",
-      "name": "Medium Plan High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "modelId": "gpt-5.6-sol",
-      "reasoningEffort": "MEDIUM"
-    },
-    {
-      "id": "user:1781608725136",
-      "name": "Extra Plan Extra High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "modelId": "gpt-5.6-sol",
-      "reasoningEffort": "XHIGH",
-      "planReasoningEffort": "XHIGH"
-    },
-    {
       "id": "user:1781758789962",
       "name": "Claude Opus",
       "agentId": "claude",
@@ -42,26 +23,34 @@
       "modelId": "opus"
     },
     {
+      "id": "user:1783692480072",
+      "name": "Extra High Plan Extra High",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "modelId": "gpt-5.6-sol",
+      "reasoningEffort": "XHIGH",
+      "planReasoningEffort": "XHIGH"
+    },
+    {
       "id": "builtin:claude:standard",
       "name": "Claude",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
       "interactionSurfaceId": "terminal",
       "modelId": "fable"
-    },
-    {
-      "id": "user:1783692480072",
-      "name": "High Plan High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "modelId": "gpt-5.6-sol",
-      "reasoningEffort": "HIGH",
-      "planReasoningEffort": "HIGH"
     }
   ],
-  "activeLaunchProfileId": "user:1781608725136",
-  "activeVcsMergeLaunchProfileId": "builtin:codex:standard"
+  "activeLaunchProfileId": "user:1783692480072",
+  "activeVcsMergeLaunchProfileId": "builtin:codex:standard",
+  "hiddenBuiltInLaunchProfileIds": [
+    "builtin:claude:standard",
+    "builtin:junie:standard"
+  ]
 }]]></component>
-  <component name="AgentSessionProviderSettings"><![CDATA[{}]]></component>
+  <component name="AgentSessionProviderSettings"><![CDATA[{
+  "disabledAgentIds": [
+    "junie"
+  ]
+}]]></component>
 </application>
