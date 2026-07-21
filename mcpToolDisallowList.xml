@@ -51,6 +51,66 @@
           <option name="enabled" value="false" />
         </ToolStateBean>
       </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.apply_patch">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_exec">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_list_dir">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_read_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_search_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_search_regex">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_search_text">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.container_write_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.extract_container_session_changes">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.finalize_container_session">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseDataExportToolset.exportQueryResult">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.database.mcp.toolsets.DatabaseDataExportToolset.listDataExtractors">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
       <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.cancelSqlQuery">
         <ToolStateBean>
           <option name="enabled" value="false" />
@@ -117,6 +177,16 @@
         </ToolStateBean>
       </entry>
       <entry key="com.intellij.database.mcp.toolsets.DatabaseToolset.testDatabaseConnection">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.FileToolset.create_new_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.FileToolset.list_directory_tree">
         <ToolStateBean>
           <option name="enabled" value="false" />
         </ToolStateBean>
