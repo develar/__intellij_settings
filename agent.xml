@@ -33,6 +33,14 @@
       "planReasoningEffort": "XHIGH"
     },
     {
+      "id": "user:1784645939156",
+      "name": "Claude Fable",
+      "agentId": "claude",
+      "launchTargetId": "terminal.claude",
+      "interactionSurfaceId": "terminal",
+      "modelId": "fable"
+    },
+    {
       "id": "builtin:claude:standard",
       "name": "Claude",
       "agentId": "claude",
