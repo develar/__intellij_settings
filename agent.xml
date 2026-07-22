@@ -37,7 +37,10 @@
       "name": "Claude Fable",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal"
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "modelId": "fable"
+      }
     },
     {
       "id": "builtin:claude:standard",
