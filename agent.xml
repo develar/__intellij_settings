@@ -19,8 +19,7 @@
       "name": "Claude Opus",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
-      "modelId": "opus"
+      "interactionSurfaceId": "terminal"
     },
     {
       "id": "user:1783692480072",
@@ -28,25 +27,24 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
-      "modelId": "gpt-5.6-sol",
-      "reasoningEffort": "XHIGH",
-      "planReasoningEffort": "XHIGH"
+      "generationPreferences": {
+        "reasoningEffort": "XHIGH",
+        "planReasoningEffort": "XHIGH"
+      }
     },
     {
       "id": "user:1784645939156",
       "name": "Claude Fable",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
-      "modelId": "fable"
+      "interactionSurfaceId": "terminal"
     },
     {
       "id": "builtin:claude:standard",
       "name": "Claude",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
-      "modelId": "fable"
+      "interactionSurfaceId": "terminal"
     }
   ],
   "activeLaunchProfileId": "user:1783692480072",
