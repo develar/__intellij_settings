@@ -43,6 +43,17 @@
       }
     },
     {
+      "id": "user:1784831932390",
+      "name": "Extra High Plan Ultra High",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "reasoningEffort": "XHIGH",
+        "planReasoningEffort": "ULTRA"
+      }
+    },
+    {
       "id": "builtin:claude:standard",
       "name": "Claude",
       "agentId": "claude",
@@ -55,6 +66,18 @@
   "hiddenBuiltInLaunchProfileIds": [
     "builtin:claude:standard",
     "builtin:junie:standard"
+  ],
+  "launchProfileOrder": [
+    "builtin:codex:standard",
+    "builtin:pi:standard",
+    "user:1781542286948",
+    "user:1781758789962",
+    "user:1783692480072",
+    "user:1784831932390",
+    "user:1784645939156",
+    "builtin:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2OTc0Njg3NTYyMmQ2MzZmNzA2OTZjNmY3NA:standard",
+    "builtin:codex:yolo",
+    "builtin:claude:yolo"
   ]
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{
