@@ -28,7 +28,7 @@
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
       "generationPreferences": {
-        "reasoningEffort": "XHIGH",
+        "reasoningEffort": "ULTRA",
         "planReasoningEffort": "XHIGH"
       }
     },
