@@ -3,7 +3,10 @@
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
   "threadCostPresentationEnabled": true,
-  "sessionChangedFilesEnabled": true
+  "sessionChangedFilesEnabled": true,
+  "promptSettings": {
+    "useLastUsedLaunchProfileForNewSessions": false
+  }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
