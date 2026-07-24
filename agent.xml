@@ -28,7 +28,7 @@
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
       "generationPreferences": {
-        "reasoningEffort": "ULTRA",
+        "reasoningEffort": "XHIGH",
         "planReasoningEffort": "XHIGH"
       }
     },
@@ -65,7 +65,8 @@
   "activeVcsMergeLaunchProfileId": "builtin:codex:standard",
   "hiddenBuiltInLaunchProfileIds": [
     "builtin:claude:standard",
-    "builtin:junie:standard"
+    "builtin:junie:standard",
+    "builtin:acp.dynamic.6163702e72656769737472792e616d702d616370:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjE2ZDcwMmQ2MTYzNzA:standard"
   ],
   "launchProfileOrder": [
     "builtin:codex:standard",
