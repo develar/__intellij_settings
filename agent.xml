@@ -22,7 +22,10 @@
       "name": "Claude Opus",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal"
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "modelId": "claude-opus-5"
+      }
     },
     {
       "id": "user:1783692480072",
@@ -57,6 +60,18 @@
       }
     },
     {
+      "id": "user:1784961382703",
+      "name": "Terra Max",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "modelId": "gpt-5.6-terra",
+        "reasoningEffort": "MAX",
+        "planReasoningEffort": "MAX"
+      }
+    },
+    {
       "id": "builtin:claude:standard",
       "name": "Claude",
       "agentId": "claude",
@@ -78,8 +93,9 @@
     "user:1781758789962",
     "user:1783692480072",
     "user:1784831932390",
+    "user:1784961382703",
     "user:1784645939156",
-    "builtin:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2OTc0Njg3NTYyMmQ2MzZmNzA2OTZjNmY3NA:standard",
+    "builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:standard",
     "builtin:codex:yolo",
     "builtin:claude:yolo"
   ]
