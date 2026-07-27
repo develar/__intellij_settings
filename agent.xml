@@ -1,4 +1,5 @@
 <application>
+  <component name="AcpAgentDownloadConsent"><![CDATA[{}]]></component>
   <component name="AgentGeneral"><![CDATA[{
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
@@ -69,34 +70,26 @@
         "reasoningEffort": "MAX",
         "planReasoningEffort": "MAX"
       }
-    },
-    {
-      "id": "builtin:claude:standard",
-      "name": "Claude",
-      "agentId": "claude",
-      "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal"
     }
   ],
   "activeLaunchProfileId": "user:1781758789962",
-  "activeVcsMergeLaunchProfileId": "builtin:codex:standard",
-  "hiddenBuiltInLaunchProfileIds": [
-    "builtin:claude:standard",
-    "builtin:junie:standard",
-    "builtin:acp.dynamic.6163702e72656769737472792e616d702d616370:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjE2ZDcwMmQ2MTYzNzA:standard"
+  "activeVcsMergeLaunchProfileId": "builtin:codex:default",
+  "deletedBuiltInLaunchProfileIds": [
+    "builtin:claude:default",
+    "builtin:junie:default"
   ],
   "launchProfileOrder": [
-    "builtin:codex:standard",
-    "builtin:pi:standard",
+    "builtin:codex:default",
+    "builtin:pi:default",
     "user:1781542286948",
     "user:1781758789962",
     "user:1783692480072",
     "user:1784831932390",
     "user:1784961382703",
     "user:1784645939156",
-    "builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:standard",
-    "builtin:codex:yolo",
-    "builtin:claude:yolo"
+    "builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:default",
+    "builtin:codex:full_access",
+    "builtin:claude:full_access"
   ]
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{
