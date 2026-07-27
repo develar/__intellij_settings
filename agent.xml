@@ -70,6 +70,17 @@
         "reasoningEffort": "MAX",
         "planReasoningEffort": "MAX"
       }
+    },
+    {
+      "id": "user:1785184404423",
+      "name": "Medium Plan Medium",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "reasoningEffort": "MEDIUM",
+        "planReasoningEffort": "MEDIUM"
+      }
     }
   ],
   "activeLaunchProfileId": "user:1781758789962",
@@ -80,16 +91,13 @@
   ],
   "launchProfileOrder": [
     "builtin:codex:default",
-    "builtin:pi:default",
     "user:1781542286948",
     "user:1781758789962",
     "user:1783692480072",
     "user:1784831932390",
+    "user:1785184404423",
     "user:1784961382703",
-    "user:1784645939156",
-    "builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:default",
-    "builtin:codex:full_access",
-    "builtin:claude:full_access"
+    "user:1784645939156"
   ]
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{
