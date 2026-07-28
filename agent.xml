@@ -15,10 +15,7 @@
       "name": "Claude Opus",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
-      "generationPreferences": {
-        "modelId": "claude-opus-5"
-      }
+      "interactionSurfaceId": "terminal"
     },
     {
       "id": "user:1783692480072",
