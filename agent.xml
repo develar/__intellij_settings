@@ -63,12 +63,11 @@
       "id": "user:1784961382703",
       "name": "Terra Max",
       "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
+      "launchTargetId": "acp.v1.6163702e72656769737472792e636f6465782d616370",
+      "interactionSurfaceId": "native",
       "generationPreferences": {
         "modelId": "gpt-5.6-terra",
-        "reasoningEffort": "MAX",
-        "planReasoningEffort": "MAX"
+        "reasoningEffort": "MAX"
       }
     },
     {
