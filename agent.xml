@@ -11,13 +11,6 @@
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
     {
-      "id": "user:1781542286948",
-      "name": "High",
-      "agentId": "junie",
-      "launchTargetId": "terminal.junie",
-      "interactionSurfaceId": "terminal"
-    },
-    {
       "id": "user:1781758789962",
       "name": "Claude Opus",
       "agentId": "claude",
@@ -63,8 +56,8 @@
       "id": "user:1784961382703",
       "name": "Terra Max",
       "agentId": "codex",
-      "launchTargetId": "acp.v1.6163702e72656769737472792e636f6465782d616370",
-      "interactionSurfaceId": "native",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
       "generationPreferences": {
         "modelId": "gpt-5.6-terra",
         "reasoningEffort": "MAX"
@@ -80,6 +73,13 @@
         "reasoningEffort": "MEDIUM",
         "planReasoningEffort": "MEDIUM"
       }
+    },
+    {
+      "id": "builtin:codex:default",
+      "name": "Codex",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal"
     }
   ],
   "activeLaunchProfileId": "user:1781758789962",
@@ -90,7 +90,6 @@
   ],
   "launchProfileOrder": [
     "builtin:codex:default",
-    "user:1781542286948",
     "user:1781758789962",
     "user:1783692480072",
     "user:1784831932390",
