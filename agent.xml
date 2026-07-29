@@ -77,6 +77,16 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal"
+    },
+    {
+      "id": "user:1785324186140",
+      "name": "сс chat",
+      "agentId": "claude",
+      "launchTargetId": "acp.v1.6163702e72656769737472792e636c617564652d616370",
+      "interactionSurfaceId": "native",
+      "generationPreferences": {
+        "modelId": "sonnet"
+      }
     }
   ],
   "activeLaunchProfileId": "user:1781758789962",
