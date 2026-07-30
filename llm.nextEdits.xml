@@ -8,7 +8,8 @@
   <component name="NextEditSettings"><![CDATA[{
   "legacyMlCompletionResetApplied": true,
   "languageToEnabled": {
-    "Markdown": false
+    "Markdown": false,
+    "markdown": false
   }
 }]]></component>
   <component name="NextEditUnifiedModelMigrationState">
