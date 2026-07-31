@@ -40,7 +40,7 @@
     },
     {
       "id": "user:1784831932390",
-      "name": "Extra High Plan Ultra High",
+      "name": "Extra High Plan Ultra",
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
