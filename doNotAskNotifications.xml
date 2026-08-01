@@ -1,0 +1,10 @@
+<application>
+  <component name="DoNotAskAppManager">
+    <option name="idToDisplayName">
+      <map>
+        <entry key="updates.plugins.autoupdate.notification" value="Enable auto-update for plugins" />
+        <entry key="vcs.commit.finished" value="3 files committed" />
+      </map>
+    </option>
+  </component>
+</application>

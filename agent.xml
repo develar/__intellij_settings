@@ -87,6 +87,17 @@
       "generationPreferences": {
         "modelId": "sonnet"
       }
+    },
+    {
+      "id": "user:1785603340639",
+      "name": "High Plan Extra High",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "reasoningEffort": "HIGH",
+        "planReasoningEffort": "XHIGH"
+      }
     }
   ],
   "activeLaunchProfileId": "user:1783692480072",
@@ -100,9 +111,15 @@
     "user:1781758789962",
     "user:1783692480072",
     "user:1784831932390",
+    "user:1785603340639",
     "user:1785184404423",
     "user:1784961382703",
-    "user:1784645939156"
+    "user:1784645939156",
+    "builtin:acp.dynamic.6163702e72656769737472792e617567676965:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjE3NTY3Njc2OTY1:default",
+    "builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:default",
+    "builtin:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2OTc0Njg3NTYyMmQ2MzZmNzA2OTZjNmY3NA:default",
+    "builtin:acp.dynamic.6163702e72656769737472792e70692d616370:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNzA2OTJkNjE2Mzcw:default",
+    "user:1785324186140"
   ]
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{
