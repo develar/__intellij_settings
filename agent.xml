@@ -98,6 +98,17 @@
         "reasoningEffort": "HIGH",
         "planReasoningEffort": "XHIGH"
       }
+    },
+    {
+      "id": "user:1785772764422",
+      "name": "Medium Plan High",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "generationPreferences": {
+        "reasoningEffort": "MEDIUM",
+        "planReasoningEffort": "HIGH"
+      }
     }
   ],
   "activeLaunchProfileId": "user:1785603340639",
@@ -113,6 +124,7 @@
     "user:1784831932390",
     "user:1785603340639",
     "user:1785184404423",
+    "user:1785772764422",
     "user:1784961382703",
     "user:1784645939156",
     "builtin:acp.dynamic.6163702e72656769737472792e617567676965:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjE3NTY3Njc2OTY1:default",
