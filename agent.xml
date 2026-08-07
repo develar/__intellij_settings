@@ -5,7 +5,6 @@
   "showAgentActivityInMainToolbar": true,
   "threadCostPresentationEnabled": true,
   "promptSettings": {
-    "startsInPlanMode": false,
     "useLastUsedLaunchProfileForNewSessions": false
   }
 }]]></component>
