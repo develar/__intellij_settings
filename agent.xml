@@ -62,14 +62,10 @@
     },
     {
       "id": "user:1785184404423",
-      "name": "Medium Plan Medium",
+      "name": "Codex 2",
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "generationPreferences": {
-        "reasoningEffort": "MEDIUM",
-        "planReasoningEffort": "MEDIUM"
-      }
+      "interactionSurfaceId": "terminal"
     },
     {
       "id": "builtin:codex:default",
