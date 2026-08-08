@@ -5,7 +5,8 @@
   "showAgentActivityInMainToolbar": true,
   "threadCostPresentationEnabled": true,
   "promptSettings": {
-    "useLastUsedLaunchProfileForNewSessions": false
+    "useLastUsedLaunchProfileForNewSessions": false,
+    "startNewSessionsInTerminal": true
   }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
@@ -15,7 +16,8 @@
       "name": "Claude Opus",
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal"
+      "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL"
     },
     {
       "id": "user:1783692480072",
@@ -23,6 +25,7 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "reasoningEffort": "XHIGH",
         "planReasoningEffort": "XHIGH"
@@ -34,6 +37,7 @@
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
       "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "modelId": "fable"
       }
@@ -44,6 +48,7 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "reasoningEffort": "XHIGH",
         "planReasoningEffort": "ULTRA"
@@ -55,6 +60,7 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "modelId": "gpt-5.6-terra",
         "reasoningEffort": "MAX"
@@ -65,14 +71,16 @@
       "name": "Codex 2",
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal"
+      "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL"
     },
     {
       "id": "builtin:codex:default",
       "name": "Codex",
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal"
+      "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL"
     },
     {
       "id": "user:1785324186140",
@@ -80,6 +88,7 @@
       "agentId": "claude",
       "launchTargetId": "acp.v1.6163702e72656769737472792e636c617564652d616370",
       "interactionSurfaceId": "native",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "modelId": "sonnet"
       }
@@ -90,6 +99,7 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "reasoningEffort": "HIGH",
         "planReasoningEffort": "XHIGH"
@@ -101,6 +111,7 @@
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
       "generationPreferences": {
         "reasoningEffort": "MEDIUM",
         "planReasoningEffort": "HIGH"

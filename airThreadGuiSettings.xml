@@ -1,6 +1,5 @@
 <application>
   <component name="AirThreadGuiSettings">
-    <option name="limitChatColumns" value="false" />
     <option name="userPromptAlignment" value="2" />
   </component>
 </application>
