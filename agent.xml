@@ -5,6 +5,7 @@
   "showAgentActivityInMainToolbar": true,
   "threadCostPresentationEnabled": true,
   "promptSettings": {
+    "startsInPlanMode": false,
     "useLastUsedLaunchProfileForNewSessions": false,
     "startNewSessionsInTerminal": true
   }
@@ -116,6 +117,18 @@
         "reasoningEffort": "MEDIUM",
         "planReasoningEffort": "HIGH"
       }
+    },
+    {
+      "id": "user:1786609119020",
+      "name": "Extra High Plan Extra High",
+      "agentId": "codex",
+      "launchTargetId": "terminal.codex",
+      "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
+      "generationPreferences": {
+        "reasoningEffort": "XHIGH",
+        "planReasoningEffort": "XHIGH"
+      }
     }
   ],
   "activeLaunchProfileId": "user:1785603340639",
@@ -134,6 +147,7 @@
     "user:1783692480072",
     "user:1784831932390",
     "user:1785603340639",
+    "user:1786609119020",
     "user:1785184404423",
     "user:1785772764422",
     "user:1784961382703",
