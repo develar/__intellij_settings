@@ -148,6 +148,12 @@
   <component name="AgentSessionProviderSettings"><![CDATA[{
   "disabledAgentIds": [
     "junie"
+  ],
+  "activatedDefaultPresetAgentIds": [
+    "codex",
+    "claude",
+    "pi",
+    "opencode"
   ]
 }]]></component>
 </application>
