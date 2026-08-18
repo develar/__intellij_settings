@@ -4,6 +4,7 @@
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
   "threadCostPresentationEnabled": true,
+  "sessionChangedFilesEnabled": false,
   "promptSettings": {
     "useLastUsedLaunchProfileForNewSessions": false,
     "startNewSessionsInTerminal": true
