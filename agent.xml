@@ -121,6 +121,19 @@
         "reasoningEffort": "XHIGH",
         "planReasoningEffort": "XHIGH"
       }
+    },
+    {
+      "id": "user:1787384190656",
+      "name": "Claude Opus (golang)",
+      "agentId": "claude",
+      "launchTargetId": "terminal.claude",
+      "interactionSurfaceId": "terminal",
+      "interactionSurfacePreference": "GLOBAL",
+      "sessionModeId": "default",
+      "customCliArguments": [
+        "--plugin-dir",
+        "~/.claude/plugin-profiles/cc-skills-golang"
+      ]
     }
   ],
   "activeLaunchProfileId": "user:1785603340639",
@@ -136,6 +149,7 @@
   "launchProfileOrder": [
     "builtin:codex:default",
     "user:1781758789962",
+    "user:1787384190656",
     "user:1783692480072",
     "user:1784831932390",
     "user:1785603340639",
@@ -143,7 +157,9 @@
     "user:1785772764422",
     "user:1784961382703",
     "user:1784645939156",
-    "user:1785324186140"
+    "user:1785324186140",
+    "builtin:pi:default",
+    "builtin:opencode:default"
   ]
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{
