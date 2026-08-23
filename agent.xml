@@ -39,8 +39,9 @@
       "launchTargetId": "terminal.claude",
       "interactionSurfaceId": "terminal",
       "interactionSurfacePreference": "GLOBAL",
+      "sessionModeId": "default",
       "generationPreferences": {
-        "modelId": "fable"
+        "modelId": "claude-fable-5[1m]"
       }
     },
     {
