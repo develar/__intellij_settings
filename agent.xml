@@ -18,7 +18,8 @@
       "agentId": "claude",
       "launchTargetId": "terminal.claude",
       "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL"
+      "interactionSurfacePreference": "GLOBAL",
+      "sessionModeId": "plan"
     },
     {
       "id": "user:1783692480072",
@@ -39,7 +40,7 @@
       "launchTargetId": "terminal.claude",
       "interactionSurfaceId": "terminal",
       "interactionSurfacePreference": "GLOBAL",
-      "sessionModeId": "default",
+      "sessionModeId": "plan",
       "generationPreferences": {
         "modelId": "claude-fable-5[1m]"
       }
@@ -124,7 +125,7 @@
       }
     }
   ],
-  "activeLaunchProfileId": "user:1781758789962",
+  "activeLaunchProfileId": "user:1784645939156",
   "activeVcsMergeLaunchProfileId": "builtin:codex:default",
   "deletedBuiltInLaunchProfileIds": [
     "builtin:junie:default",
