@@ -21,7 +21,7 @@
       "interactionSurfacePreference": "GLOBAL",
       "sessionModeId": "plan",
       "generationPreferences": {
-        "modelId": "opus"
+        "modelId": "opus[1m]"
       }
     },
     {
