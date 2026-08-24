@@ -19,7 +19,10 @@
       "launchTargetId": "terminal.claude",
       "interactionSurfaceId": "terminal",
       "interactionSurfacePreference": "GLOBAL",
-      "sessionModeId": "plan"
+      "sessionModeId": "plan",
+      "generationPreferences": {
+        "modelId": "opus"
+      }
     },
     {
       "id": "user:1783692480072",
@@ -125,7 +128,7 @@
       }
     }
   ],
-  "activeLaunchProfileId": "user:1784645939156",
+  "activeLaunchProfileId": "user:1781758789962",
   "activeVcsMergeLaunchProfileId": "builtin:codex:default",
   "deletedBuiltInLaunchProfileIds": [
     "builtin:junie:default",
