@@ -40,8 +40,8 @@
       "id": "user:1784645939156",
       "name": "Claude Fable",
       "agentId": "claude",
-      "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
+      "launchTargetId": "acp.v1.6163702e72656769737472792e636c617564652d616370",
+      "interactionSurfaceId": "native",
       "interactionSurfacePreference": "GLOBAL",
       "sessionModeId": "plan",
       "generationPreferences": {
