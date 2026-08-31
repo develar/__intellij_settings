@@ -3,6 +3,7 @@
   <component name="AgentGeneral"><![CDATA[{
   "openInDedicatedFrame": true,
   "showAgentActivityInMainToolbar": true,
+  "compactNewSessionButtonInMainToolbar": true,
   "threadCostPresentationEnabled": true,
   "sessionChangedFilesEnabled": false,
   "promptSettings": {
