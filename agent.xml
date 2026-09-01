@@ -142,7 +142,7 @@
       "prompt": "Plan-approval handoff: when the user approves a plan you created in native plan mode, do NOT implement it yourself. \nInstead invoke the slash command `/orc:delegate execute the approved plan` and let it execute the plan as-is.\nThis applies only to executing an approved plan; everything else in the session is unaffected."
     }
   ],
-  "activeLaunchProfileId": "user:1781758789962",
+  "activeLaunchProfileId": "user:1784645939156",
   "activeVcsMergeLaunchProfileId": "builtin:codex:default",
   "deletedBuiltInLaunchProfileIds": [
     "builtin:junie:default",
