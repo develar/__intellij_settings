@@ -46,7 +46,7 @@
       "interactionSurfacePreference": "GLOBAL",
       "sessionModeId": "plan",
       "generationPreferences": {
-        "modelId": "claude-fable-5[1m]"
+        "modelId": "claude-fable-5-1"
       }
     },
     {
