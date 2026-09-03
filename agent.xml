@@ -143,7 +143,7 @@
     }
   ],
   "activeLaunchProfileId": "user:1784645939156",
-  "activeVcsMergeLaunchProfileId": "builtin:codex:default",
+  "activeVcsMergeLaunchProfileId": "user:1781758789962",
   "deletedBuiltInLaunchProfileIds": [
     "builtin:junie:default",
     "builtin:claude:default",
