@@ -9,7 +9,8 @@
   "promptSettings": {
     "useLastUsedLaunchProfileForNewSessions": false,
     "startNewSessionsInTerminal": true
-  }
+  },
+  "sessionFilterMode": "COMPLETED"
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
@@ -94,7 +95,7 @@
     },
     {
       "id": "user:1785603340639",
-      "name": "Full Access High Plan Extra High",
+      "name": "High Plan Extra High",
       "agentId": "codex",
       "launchTargetId": "terminal.codex",
       "interactionSurfaceId": "terminal",
@@ -144,7 +145,7 @@
     }
   ],
   "activeLaunchProfileId": "user:1785603340639",
-  "activeVcsMergeLaunchProfileId": "user:1781758789962",
+  "activeVcsMergeLaunchProfileId": "user:1785772764422",
   "deletedBuiltInLaunchProfileIds": [
     "builtin:junie:default",
     "builtin:claude:default",
