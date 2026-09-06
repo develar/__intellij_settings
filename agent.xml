@@ -9,8 +9,7 @@
   "promptSettings": {
     "useLastUsedLaunchProfileForNewSessions": false,
     "startNewSessionsInTerminal": true
-  },
-  "sessionFilterMode": "COMPLETED"
+  }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
