@@ -35,7 +35,8 @@
       "generationPreferences": {
         "reasoningEffort": "XHIGH",
         "planReasoningEffort": "XHIGH"
-      }
+      },
+      "planMode": true
     },
     {
       "id": "user:1784645939156",
@@ -59,7 +60,8 @@
       "generationPreferences": {
         "reasoningEffort": "XHIGH",
         "planReasoningEffort": "ULTRA"
-      }
+      },
+      "planMode": true
     },
     {
       "id": "user:1784961382703",
@@ -103,7 +105,8 @@
       "generationPreferences": {
         "reasoningEffort": "HIGH",
         "planReasoningEffort": "XHIGH"
-      }
+      },
+      "planMode": true
     },
     {
       "id": "user:1785772764422",
