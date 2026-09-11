@@ -1,8 +1,8 @@
 <application>
-  <component name="AcpAgentDownloadConsent"><![CDATA[{}]]></component>
+  <component name="AcpAgentDownloadConsent">{}</component>
   <component name="AgentGeneral"><![CDATA[{
   "openSessionsInAgentSessionsWindow": true,
-  "showAgentActivityInMainToolbar": true,
+  "agentActivityPlacement": "BOTH",
   "compactNewSessionButtonInMainToolbar": true,
   "threadCostPresentationEnabled": true,
   "sessionChangedFilesEnabled": false,
@@ -47,7 +47,7 @@
       "interactionSurfacePreference": "GLOBAL",
       "sessionModeId": "plan",
       "generationPreferences": {
-        "modelId": "claude-fable-5-1"
+        "modelId": "fable"
       }
     },
     {
@@ -141,7 +141,7 @@
       "interactionSurfacePreference": "GLOBAL",
       "sessionModeId": "plan",
       "generationPreferences": {
-        "modelId": "Fable"
+        "modelId": "fable"
       },
       "prompt": "Plan-approval handoff: when the user approves a plan you created in native plan mode, do NOT implement it yourself. \nInstead invoke the slash command `/orc:delegate execute the approved plan` and let it execute the plan as-is.\nThis applies only to executing an approved plan; everything else in the session is unaffected."
     }
