@@ -7,8 +7,8 @@
   "threadCostPresentationEnabled": true,
   "sessionChangedFilesEnabled": false,
   "promptSettings": {
-    "useLastUsedLaunchProfileForNewSessions": false,
-    "startNewSessionsInTerminal": true
+    "startNewSessionsInTerminal": true,
+    "useLastUsedLaunchProfileForNewSessions": false
   }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
@@ -171,15 +171,160 @@
     "builtin:pi:default"
   ]
 }]]></component>
-  <component name="AgentSessionProviderSettings"><![CDATA[{
-  "disabledAgentIds": [
-    "junie",
-    "opencode"
+  <component name="AgentSessionPresetState"><![CDATA[{
+  "presets": [
+    {
+      "id": "preset:3446be65-398b-3413-b013-1c51660f0848",
+      "name": "Codex",
+      "agentId": "codex"
+    },
+    {
+      "id": "preset:798c81fb-f565-3dcc-8c24-1b5b84878486",
+      "name": "Claude Opus",
+      "agentId": "claude",
+      "sessionParameters": {
+        "sessionModeId": "plan",
+        "generationPreferences": {
+          "modelId": "opus[1m]"
+        }
+      }
+    },
+    {
+      "id": "preset:2bea4d20-eb87-378d-94ee-5c2781dfb3f8",
+      "name": "Claude Fable (Orc)",
+      "agentId": "claude",
+      "sessionParameters": {
+        "sessionModeId": "plan",
+        "generationPreferences": {
+          "modelId": "fable"
+        }
+      },
+      "prePrompt": "Plan-approval handoff: when the user approves a plan you created in native plan mode, do NOT implement it yourself. \nInstead invoke the slash command `/orc:delegate execute the approved plan` and let it execute the plan as-is.\nThis applies only to executing an approved plan; everything else in the session is unaffected."
+    },
+    {
+      "id": "preset:4f03dafb-64d3-395a-939a-d1104993debb",
+      "name": "Claude Fable",
+      "agentId": "claude",
+      "sessionParameters": {
+        "sessionModeId": "plan",
+        "generationPreferences": {
+          "modelId": "fable"
+        }
+      }
+    },
+    {
+      "id": "preset:ee41701b-cd50-3d9b-9311-015aa610c897",
+      "name": "Extra High Plan Extra High",
+      "agentId": "codex",
+      "sessionParameters": {
+        "generationPreferences": {
+          "reasoningEffort": "XHIGH",
+          "planReasoningEffort": "XHIGH"
+        },
+        "planMode": true
+      }
+    },
+    {
+      "id": "preset:b990f1e4-d7ce-3074-9047-cbb116b78cb8",
+      "name": "Extra High Plan Ultra",
+      "agentId": "codex",
+      "sessionParameters": {
+        "generationPreferences": {
+          "reasoningEffort": "XHIGH",
+          "planReasoningEffort": "ULTRA"
+        },
+        "planMode": true
+      }
+    },
+    {
+      "id": "preset:48bf2cdd-49f3-320d-bd26-bcfa5a9fb180",
+      "name": "High Plan Extra High",
+      "agentId": "codex",
+      "sessionParameters": {
+        "sessionModeId": "agent-full-access",
+        "generationPreferences": {
+          "reasoningEffort": "HIGH",
+          "planReasoningEffort": "XHIGH"
+        },
+        "planMode": true
+      }
+    },
+    {
+      "id": "preset:9bea2186-e600-3a6f-b71d-0e83578db930",
+      "name": "Extra High Plan Extra High",
+      "agentId": "codex",
+      "sessionParameters": {
+        "generationPreferences": {
+          "reasoningEffort": "XHIGH",
+          "planReasoningEffort": "XHIGH"
+        }
+      }
+    },
+    {
+      "id": "preset:732344dd-3926-3dbd-acc7-b0717539858b",
+      "name": "Medium Plan High",
+      "agentId": "codex",
+      "sessionParameters": {
+        "generationPreferences": {
+          "reasoningEffort": "MEDIUM",
+          "planReasoningEffort": "HIGH"
+        }
+      }
+    },
+    {
+      "id": "preset:d74f1735-9ca0-3842-b660-15cbd5be8863",
+      "name": "Terra Max",
+      "agentId": "codex",
+      "sessionParameters": {
+        "generationPreferences": {
+          "modelId": "gpt-5.6-terra",
+          "reasoningEffort": "MAX"
+        }
+      }
+    },
+    {
+      "id": "preset:7792ab87-c340-318c-a5d5-189d0b62b2a4",
+      "name": "сс chat",
+      "agentId": "claude",
+      "sessionParameters": {
+        "generationPreferences": {
+          "modelId": "sonnet"
+        }
+      }
+    }
   ],
-  "activatedDefaultPresetAgentIds": [
-    "codex",
-    "claude",
-    "pi"
-  ]
+  "migratedFromLaunchProfiles": true
+}]]></component>
+  <component name="AgentSessionProviderSettings"><![CDATA[{
+  "agentEnablementOverridesBySource": {
+    "managed:codex": false,
+    "discovered:codex": true,
+    "custom:codex": false,
+    "managed:claude": false,
+    "discovered:claude": true,
+    "custom:claude": false,
+    "managed:junie": false,
+    "discovered:junie": false,
+    "custom:junie": false,
+    "discovered:pi": false,
+    "discovered:opencode": false,
+    "discovered:terminal": false,
+    "managed:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74": false,
+    "managed:acp.dynamic.6163702e72656769737472792e617567676965": false,
+    "managed:acp.dynamic.6163702e72656769737472792e67656d696e69": false,
+    "managed:opencode": false,
+    "managed:acp.dynamic.6163702e72656769737472792e70692d616370": false
+  },
+  "agentLaunchPreferences": {
+    "codex": {
+      "interactionSurfaceId": "terminal"
+    },
+    "claude": {
+      "interactionSurfaceId": "terminal"
+    },
+    "junie": {
+      "interactionSurfaceId": "terminal"
+    }
+  }
 }]]></component>
 </application>
