@@ -304,7 +304,7 @@
     "discovered:claude": true,
     "custom:claude": false,
     "managed:junie": false,
-    "discovered:junie": false,
+    "discovered:junie": true,
     "custom:junie": false,
     "discovered:pi": false,
     "discovered:opencode": false,
