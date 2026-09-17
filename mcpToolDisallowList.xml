@@ -191,6 +191,11 @@
           <option name="enabled" value="false" />
         </ToolStateBean>
       </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.PatchToolset.apply_patch">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
       <entry key="com.intellij.mcpserver.toolsets.general.UniversalToolset.execute_tool">
         <ToolStateBean>
           <option name="enabled" value="false" />
