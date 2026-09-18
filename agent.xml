@@ -308,12 +308,15 @@
     "custom:junie": false,
     "discovered:pi": false,
     "discovered:opencode": false,
-    "discovered:terminal": false,
+    "discovered:terminal": true,
     "managed:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74": false,
     "managed:acp.dynamic.6163702e72656769737472792e617567676965": false,
     "managed:acp.dynamic.6163702e72656769737472792e67656d696e69": false,
     "managed:opencode": false,
-    "managed:acp.dynamic.6163702e72656769737472792e70692d616370": false
+    "managed:acp.dynamic.6163702e72656769737472792e70692d616370": false,
+    "custom:acp-replay": true,
+    "managed:terminal": false,
+    "custom:terminal": false
   },
   "agentLaunchPreferences": {
     "codex": {
@@ -324,7 +327,13 @@
     },
     "junie": {
       "interactionSurfaceId": "terminal"
+    },
+    "terminal": {
+      "interactionSurfaceId": "terminal"
     }
+  },
+  "lastEnabledEntryKindByAgentId": {
+    "terminal": "DISCOVERED"
   }
 }]]></component>
 </application>
