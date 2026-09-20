@@ -51,6 +51,21 @@
           <option name="enabled" value="false" />
         </ToolStateBean>
       </entry>
+      <entry key="com.intellij.air.acp.mcp.AcpSessionTitleMcpToolset.air_set_session_title">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.backend.sdd.mcp.SpecToolset.reportStatus">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.air.backend.sdd.mcp.SpecToolset.specifyFinished">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
       <entry key="com.intellij.air.container.mcp.ContainerMcpToolset.apply_patch">
         <ToolStateBean>
           <option name="enabled" value="false" />
@@ -181,12 +196,107 @@
           <option name="enabled" value="false" />
         </ToolStateBean>
       </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.attach_to_process">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.control_session">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.evaluate_expression">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.get_debugger_status">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.get_frame_values">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.get_process_output">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.get_stack">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.get_threads">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.get_value_by_path">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.list_breakpoints">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.remove_breakpoint">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.run_to_line">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.set_breakpoint">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.set_variable">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.debuggerMcp.DebuggerToolset.start_debugger_session">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.AnalysisToolset.build_project">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.AnalysisToolset.get_file_problems">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
       <entry key="com.intellij.mcpserver.toolsets.general.FileToolset.create_new_file">
         <ToolStateBean>
           <option name="enabled" value="false" />
         </ToolStateBean>
       </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.FileToolset.get_all_open_file_paths">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
       <entry key="com.intellij.mcpserver.toolsets.general.FileToolset.list_directory_tree">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.general.FileToolset.open_file_in_editor">
         <ToolStateBean>
           <option name="enabled" value="false" />
         </ToolStateBean>
@@ -202,6 +312,41 @@
         </ToolStateBean>
       </entry>
       <entry key="com.intellij.mcpserver.toolsets.terminal.TerminalToolset.execute_terminal_command">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.ChangeListToolset.create_changelist">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.ChangeListToolset.delete_changelist">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.ChangeListToolset.get_changelists">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.ChangeListToolset.move_changes_to_changelist">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.ChangeListToolset.set_active_changelist">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.VcsToolset.get_repositories">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="com.intellij.mcpserver.toolsets.vcs.VcsToolset.git_status">
         <ToolStateBean>
           <option name="enabled" value="false" />
         </ToolStateBean>
@@ -232,6 +377,11 @@
         </ToolStateBean>
       </entry>
       <entry key="com.intellij.rustrover.mcp.RustRoverInternalToolset.rust_internal_read_file">
+        <ToolStateBean>
+          <option name="enabled" value="false" />
+        </ToolStateBean>
+      </entry>
+      <entry key="org.jetbrains.kotlin.j2k.mcp.J2kMcpToolset.convert_java_to_kotlin">
         <ToolStateBean>
           <option name="enabled" value="false" />
         </ToolStateBean>
