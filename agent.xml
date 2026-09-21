@@ -8,7 +8,8 @@
   "sessionChangedFilesEnabled": false,
   "promptSettings": {
     "startNewSessionsInTerminal": true,
-    "useLastUsedLaunchProfileForNewSessions": false
+    "useLastUsedLaunchProfileForNewSessions": false,
+    "defaultPickId": "junie"
   }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
@@ -334,6 +335,7 @@
   },
   "lastEnabledEntryKindByAgentId": {
     "terminal": "DISCOVERED"
-  }
+  },
+  "migratedLegacyDynamicAgentEnablement": true
 }]]></component>
 </application>
