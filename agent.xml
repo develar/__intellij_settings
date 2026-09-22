@@ -175,6 +175,34 @@
   <component name="AgentSessionPresetState"><![CDATA[{
   "presets": [
     {
+      "id": "preset:49458282-cec4-4056-b397-856a9ea6238f",
+      "name": "Junie Mix High",
+      "agentId": "junie",
+      "sessionParameters": {
+        "launchMode": "FULL_ACCESS",
+        "sessionModeId": "FULL_ACCESS",
+        "generationPreferences": {
+          "modelId": "v1:12:jetbrains-ai:junie-mix",
+          "reasoningEffort": "HIGH"
+        },
+        "planMode": true
+      }
+    },
+    {
+      "id": "preset:2b21ba51-748f-4c12-8cf2-fead005a4f37",
+      "name": "Junie Fable 5.1 High",
+      "agentId": "junie",
+      "sessionParameters": {
+        "launchMode": "FULL_ACCESS",
+        "sessionModeId": "FULL_ACCESS",
+        "generationPreferences": {
+          "modelId": "v1:12:jetbrains-ai:claude-fable-5-1",
+          "reasoningEffort": "HIGH"
+        },
+        "planMode": true
+      }
+    },
+    {
       "id": "preset:3446be65-398b-3413-b013-1c51660f0848",
       "name": "Codex",
       "agentId": "codex"
