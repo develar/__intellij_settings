@@ -9,7 +9,7 @@
   "promptSettings": {
     "startNewSessionsInTerminal": true,
     "useLastUsedLaunchProfileForNewSessions": false,
-    "defaultPickId": "junie"
+    "defaultPickId": "preset:2b21ba51-748f-4c12-8cf2-fead005a4f37"
   }
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
