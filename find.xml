@@ -3,7 +3,6 @@
     <option name="customScope" value="Recently Viewed Files" />
     <option name="defaultScopeName" value="Recently Viewed Files" />
     <option name="SEARCH_SCOPE" value="Recently Viewed Files" />
-    <option name="FILE_MASK" value="*.kt" />
     <mask>*.yaml</mask>
     <mask>product-modules.xml</mask>
     <mask>*.bazel</mask>
