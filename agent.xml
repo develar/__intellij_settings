@@ -5,6 +5,7 @@
   "agentActivityPlacement": "BOTH",
   "compactNewSessionButtonInMainToolbar": true,
   "threadCostPresentationEnabled": true,
+  "sessionSubAgentsEnabled": true,
   "sessionChangedFilesEnabled": false,
   "promptSettings": {
     "startNewSessionsInTerminal": true,
