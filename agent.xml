@@ -12,7 +12,8 @@
     "defaultPickId": "preset:4f03dafb-64d3-395a-939a-d1104993debb"
   },
   "answeredShortcutTakeovers": [
-    "AGENT_SESSIONS_NUMBER_SHORTCUT"
+    "AGENT_SESSIONS_NUMBER_SHORTCUT",
+    "GLOBAL_PROMPT_DOUBLE_CTRL"
   ]
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
