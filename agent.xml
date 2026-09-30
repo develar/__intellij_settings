@@ -213,18 +213,26 @@
       }
     },
     {
-      "id": "preset:3446be65-398b-3413-b013-1c51660f0848",
-      "name": "Codex",
-      "agentId": "codex"
-    },
-    {
       "id": "preset:798c81fb-f565-3dcc-8c24-1b5b84878486",
       "name": "Claude Opus",
       "agentId": "claude",
       "sessionParameters": {
         "sessionModeId": "plan",
         "generationPreferences": {
-          "modelId": "opus[1m]"
+          "modelId": "opus[1m]",
+          "reasoningEffort": "HIGH"
+        }
+      }
+    },
+    {
+      "id": "preset:4f03dafb-64d3-395a-939a-d1104993debb",
+      "name": "Claude Fable",
+      "agentId": "claude",
+      "sessionParameters": {
+        "sessionModeId": "plan",
+        "generationPreferences": {
+          "modelId": "fable",
+          "reasoningEffort": "HIGH"
         }
       }
     },
@@ -241,16 +249,9 @@
       "prePrompt": "Plan-approval handoff: when the user approves a plan you created in native plan mode, do NOT implement it yourself. \nInstead invoke the slash command `/orc:delegate execute the approved plan` and let it execute the plan as-is.\nThis applies only to executing an approved plan; everything else in the session is unaffected."
     },
     {
-      "id": "preset:4f03dafb-64d3-395a-939a-d1104993debb",
-      "name": "Claude Fable",
-      "agentId": "claude",
-      "sessionParameters": {
-        "sessionModeId": "plan",
-        "generationPreferences": {
-          "modelId": "fable",
-          "reasoningEffort": "HIGH"
-        }
-      }
+      "id": "preset:3446be65-398b-3413-b013-1c51660f0848",
+      "name": "Codex",
+      "agentId": "codex"
     },
     {
       "id": "preset:ee41701b-cd50-3d9b-9311-015aa610c897",
