@@ -10,7 +10,10 @@
     "startNewSessionsInTerminal": true,
     "useLastUsedLaunchProfileForNewSessions": false,
     "defaultPickId": "preset:4f03dafb-64d3-395a-939a-d1104993debb"
-  }
+  },
+  "answeredShortcutTakeovers": [
+    "AGENT_SESSIONS_NUMBER_SHORTCUT"
+  ]
 }]]></component>
   <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
   "launchProfiles": [
