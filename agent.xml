@@ -5,7 +5,6 @@
   "agentActivityPlacement": "BOTH",
   "compactNewSessionButtonInMainToolbar": true,
   "threadCostPresentationEnabled": true,
-  "sessionSubAgentsEnabled": true,
   "sessionChangedFilesEnabled": false,
   "promptSettings": {
     "startNewSessionsInTerminal": true,
@@ -209,11 +208,15 @@
     },
     {
       "id": "preset:11612892-b006-48d5-a7e8-028655e14db0",
-      "name": "Junie Model unavailable",
+      "name": "Junie Local",
       "agentId": "junie",
       "sessionParameters": {
+        "launchMode": "FULL_ACCESS",
+        "sessionModeId": "FULL_ACCESS",
         "generationPreferences": {
-          "modelId": "claude-opus-5-5"
+          "modelId": "v1:6:custom:custom:local-qwen3.8-3.6-27b-blend-4bit",
+          "reasoningEffort": "HIGH",
+          "modelDisplayName": "Qwen 3.8/3.6 Blend"
         }
       }
     },
