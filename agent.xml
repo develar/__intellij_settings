@@ -259,7 +259,14 @@
     {
       "id": "preset:3446be65-398b-3413-b013-1c51660f0848",
       "name": "Codex",
-      "agentId": "codex"
+      "agentId": "codex",
+      "sessionParameters": {
+        "generationPreferences": {
+          "modelId": "gpt-6-astra",
+          "reasoningEffort": "XHIGH",
+          "modelDisplayName": "GPT-6-Astra"
+        }
+      }
     },
     {
       "id": "preset:ee41701b-cd50-3d9b-9311-015aa610c897",
