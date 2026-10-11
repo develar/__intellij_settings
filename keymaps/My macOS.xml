@@ -40,6 +40,7 @@
   <action id="QuickList.qrqwe">
     <keyboard-shortcut first-keystroke="alt c" />
   </action>
+  <action id="RunAnything" />
   <action id="SmartTypeCompletion">
     <keyboard-shortcut first-keystroke="meta space" />
   </action>
