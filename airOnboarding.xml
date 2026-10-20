@@ -1,0 +1,8 @@
+<application>
+  <component name="AirOnboardingSettings"><![CDATA[{
+  "answeredShortcutTakeovers": [
+    "AGENT_SESSIONS_NUMBER_SHORTCUT",
+    "GLOBAL_PROMPT_DOUBLE_CTRL"
+  ]
+}]]></component>
+</application>

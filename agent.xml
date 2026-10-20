@@ -1,181 +1,170 @@
 <application>
   <component name="AcpAgentDownloadConsent">{}</component>
   <component name="AgentGeneral"><![CDATA[{
-  "openSessionsInAgentSessionsWindow": true,
-  "agentActivityPlacement": "BOTH",
-  "compactNewSessionButtonInMainToolbar": true,
-  "threadCostPresentationEnabled": true,
-  "sessionChangedFilesEnabled": false,
   "promptSettings": {
-    "startNewSessionsInTerminal": true,
-    "useLastUsedLaunchProfileForNewSessions": false,
-    "defaultPickId": "preset:798c81fb-f565-3dcc-8c24-1b5b84878486"
-  },
-  "answeredShortcutTakeovers": [
-    "AGENT_SESSIONS_NUMBER_SHORTCUT",
-    "GLOBAL_PROMPT_DOUBLE_CTRL"
-  ]
+    "startNewSessionsInTerminal": true
+  }
 }]]></component>
-  <component name="AgentSessionLaunchProfileStateV2"><![CDATA[{
-  "launchProfiles": [
+  <component name="AgentSessionLaunchProfileStateV2">{
+  &quot;launchProfiles&quot;: [
     {
-      "id": "user:1781758789962",
-      "name": "Claude Opus",
-      "agentId": "claude",
-      "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "sessionModeId": "plan",
-      "generationPreferences": {
-        "modelId": "opus[1m]"
+      &quot;id&quot;: &quot;user:1781758789962&quot;,
+      &quot;name&quot;: &quot;Claude Opus&quot;,
+      &quot;agentId&quot;: &quot;claude&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.claude&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;sessionModeId&quot;: &quot;plan&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;modelId&quot;: &quot;opus[1m]&quot;
       }
     },
     {
-      "id": "user:1783692480072",
-      "name": "Extra High Plan Extra High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "generationPreferences": {
-        "reasoningEffort": "XHIGH",
-        "planReasoningEffort": "XHIGH"
+      &quot;id&quot;: &quot;user:1783692480072&quot;,
+      &quot;name&quot;: &quot;Extra High Plan Extra High&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;reasoningEffort&quot;: &quot;XHIGH&quot;,
+        &quot;planReasoningEffort&quot;: &quot;XHIGH&quot;
       },
-      "planMode": true
+      &quot;planMode&quot;: true
     },
     {
-      "id": "user:1784645939156",
-      "name": "Claude Fable",
-      "agentId": "claude",
-      "launchTargetId": "acp.v1.6163702e72656769737472792e636c617564652d616370",
-      "interactionSurfaceId": "native",
-      "interactionSurfacePreference": "GLOBAL",
-      "sessionModeId": "plan",
-      "generationPreferences": {
-        "modelId": "fable"
+      &quot;id&quot;: &quot;user:1784645939156&quot;,
+      &quot;name&quot;: &quot;Claude Fable&quot;,
+      &quot;agentId&quot;: &quot;claude&quot;,
+      &quot;launchTargetId&quot;: &quot;acp.v1.6163702e72656769737472792e636c617564652d616370&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;native&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;sessionModeId&quot;: &quot;plan&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;modelId&quot;: &quot;fable&quot;
       }
     },
     {
-      "id": "user:1784831932390",
-      "name": "Extra High Plan Ultra",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "generationPreferences": {
-        "reasoningEffort": "XHIGH",
-        "planReasoningEffort": "ULTRA"
+      &quot;id&quot;: &quot;user:1784831932390&quot;,
+      &quot;name&quot;: &quot;Extra High Plan Ultra&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;reasoningEffort&quot;: &quot;XHIGH&quot;,
+        &quot;planReasoningEffort&quot;: &quot;ULTRA&quot;
       },
-      "planMode": true
+      &quot;planMode&quot;: true
     },
     {
-      "id": "user:1784961382703",
-      "name": "Terra Max",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "generationPreferences": {
-        "modelId": "gpt-5.6-terra",
-        "reasoningEffort": "MAX"
+      &quot;id&quot;: &quot;user:1784961382703&quot;,
+      &quot;name&quot;: &quot;Terra Max&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;modelId&quot;: &quot;gpt-5.6-terra&quot;,
+        &quot;reasoningEffort&quot;: &quot;MAX&quot;
       }
     },
     {
-      "id": "builtin:codex:default",
-      "name": "Codex",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL"
+      &quot;id&quot;: &quot;builtin:codex:default&quot;,
+      &quot;name&quot;: &quot;Codex&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;
     },
     {
-      "id": "user:1785324186140",
-      "name": "сс chat",
-      "agentId": "claude",
-      "launchTargetId": "acp.v1.6163702e72656769737472792e636c617564652d616370",
-      "interactionSurfaceId": "native",
-      "interactionSurfacePreference": "GLOBAL",
-      "generationPreferences": {
-        "modelId": "sonnet"
+      &quot;id&quot;: &quot;user:1785324186140&quot;,
+      &quot;name&quot;: &quot;сс chat&quot;,
+      &quot;agentId&quot;: &quot;claude&quot;,
+      &quot;launchTargetId&quot;: &quot;acp.v1.6163702e72656769737472792e636c617564652d616370&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;native&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;modelId&quot;: &quot;sonnet&quot;
       }
     },
     {
-      "id": "user:1785603340639",
-      "name": "High Plan Extra High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "sessionModeId": "agent-full-access",
-      "generationPreferences": {
-        "reasoningEffort": "HIGH",
-        "planReasoningEffort": "XHIGH"
+      &quot;id&quot;: &quot;user:1785603340639&quot;,
+      &quot;name&quot;: &quot;High Plan Extra High&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;sessionModeId&quot;: &quot;agent-full-access&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;reasoningEffort&quot;: &quot;HIGH&quot;,
+        &quot;planReasoningEffort&quot;: &quot;XHIGH&quot;
       },
-      "planMode": true
+      &quot;planMode&quot;: true
     },
     {
-      "id": "user:1785772764422",
-      "name": "Medium Plan High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "generationPreferences": {
-        "reasoningEffort": "MEDIUM",
-        "planReasoningEffort": "HIGH"
+      &quot;id&quot;: &quot;user:1785772764422&quot;,
+      &quot;name&quot;: &quot;Medium Plan High&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;reasoningEffort&quot;: &quot;MEDIUM&quot;,
+        &quot;planReasoningEffort&quot;: &quot;HIGH&quot;
       }
     },
     {
-      "id": "user:1786609119020",
-      "name": "Extra High Plan Extra High",
-      "agentId": "codex",
-      "launchTargetId": "terminal.codex",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "generationPreferences": {
-        "reasoningEffort": "XHIGH",
-        "planReasoningEffort": "XHIGH"
+      &quot;id&quot;: &quot;user:1786609119020&quot;,
+      &quot;name&quot;: &quot;Extra High Plan Extra High&quot;,
+      &quot;agentId&quot;: &quot;codex&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.codex&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;reasoningEffort&quot;: &quot;XHIGH&quot;,
+        &quot;planReasoningEffort&quot;: &quot;XHIGH&quot;
       }
     },
     {
-      "id": "user:1787591273666",
-      "name": "Claude Fable (Orc)",
-      "agentId": "claude",
-      "launchTargetId": "terminal.claude",
-      "interactionSurfaceId": "terminal",
-      "interactionSurfacePreference": "GLOBAL",
-      "sessionModeId": "plan",
-      "generationPreferences": {
-        "modelId": "fable"
+      &quot;id&quot;: &quot;user:1787591273666&quot;,
+      &quot;name&quot;: &quot;Claude Fable (Orc)&quot;,
+      &quot;agentId&quot;: &quot;claude&quot;,
+      &quot;launchTargetId&quot;: &quot;terminal.claude&quot;,
+      &quot;interactionSurfaceId&quot;: &quot;terminal&quot;,
+      &quot;interactionSurfacePreference&quot;: &quot;GLOBAL&quot;,
+      &quot;sessionModeId&quot;: &quot;plan&quot;,
+      &quot;generationPreferences&quot;: {
+        &quot;modelId&quot;: &quot;fable&quot;
       },
-      "prompt": "Plan-approval handoff: when the user approves a plan you created in native plan mode, do NOT implement it yourself. \nInstead invoke the slash command `/orc:delegate execute the approved plan` and let it execute the plan as-is.\nThis applies only to executing an approved plan; everything else in the session is unaffected."
+      &quot;prompt&quot;: &quot;Plan-approval handoff: when the user approves a plan you created in native plan mode, do NOT implement it yourself. \nInstead invoke the slash command `/orc:delegate execute the approved plan` and let it execute the plan as-is.\nThis applies only to executing an approved plan; everything else in the session is unaffected.&quot;
     }
   ],
-  "activeLaunchProfileId": "user:1784645939156",
-  "activeVcsMergeLaunchProfileId": "user:1784645939156",
-  "deletedBuiltInLaunchProfileIds": [
-    "builtin:junie:default",
-    "builtin:claude:default",
-    "builtin:acp.dynamic.6163702e72656769737472792e617567676965:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjE3NTY3Njc2OTY1:default",
-    "builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:default",
-    "builtin:acp.dynamic.6163702e72656769737472792e70692d616370:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNzA2OTJkNjE2Mzcw:default",
-    "builtin:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2OTc0Njg3NTYyMmQ2MzZmNzA2OTZjNmY3NA:default"
+  &quot;activeLaunchProfileId&quot;: &quot;user:1784645939156&quot;,
+  &quot;activeVcsMergeLaunchProfileId&quot;: &quot;user:1784645939156&quot;,
+  &quot;deletedBuiltInLaunchProfileIds&quot;: [
+    &quot;builtin:junie:default&quot;,
+    &quot;builtin:claude:default&quot;,
+    &quot;builtin:acp.dynamic.6163702e72656769737472792e617567676965:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjE3NTY3Njc2OTY1:default&quot;,
+    &quot;builtin:acp.dynamic.6163702e72656769737472792e67656d696e69:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2NTZkNjk2ZTY5:default&quot;,
+    &quot;builtin:acp.dynamic.6163702e72656769737472792e70692d616370:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNzA2OTJkNjE2Mzcw:default&quot;,
+    &quot;builtin:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74:acp-agent:YWNwLnYxLjYxNjM3MDJlNzI2NTY3Njk3Mzc0NzI3OTJlNjc2OTc0Njg3NTYyMmQ2MzZmNzA2OTZjNmY3NA:default&quot;
   ],
-  "launchProfileOrder": [
-    "builtin:codex:default",
-    "user:1781758789962",
-    "user:1787591273666",
-    "user:1784645939156",
-    "user:1783692480072",
-    "user:1784831932390",
-    "user:1785603340639",
-    "user:1786609119020",
-    "user:1785772764422",
-    "user:1784961382703",
-    "user:1785324186140",
-    "builtin:pi:default"
+  &quot;launchProfileOrder&quot;: [
+    &quot;builtin:codex:default&quot;,
+    &quot;user:1781758789962&quot;,
+    &quot;user:1787591273666&quot;,
+    &quot;user:1784645939156&quot;,
+    &quot;user:1783692480072&quot;,
+    &quot;user:1784831932390&quot;,
+    &quot;user:1785603340639&quot;,
+    &quot;user:1786609119020&quot;,
+    &quot;user:1785772764422&quot;,
+    &quot;user:1784961382703&quot;,
+    &quot;user:1785324186140&quot;,
+    &quot;builtin:pi:default&quot;
   ]
-}]]></component>
+}</component>
   <component name="AgentSessionPresetState"><![CDATA[{
   "presets": [
     {

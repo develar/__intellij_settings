@@ -23,6 +23,7 @@
     <entry key="air.codex.appServer.survive.restart" value="true" source="USER" />
     <entry key="air.claude.session.daemonHosted" value="true" source="USER" />
     <entry key="air.session.toolwindow.enabled" value="true" source="USER" />
+    <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
