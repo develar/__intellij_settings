@@ -27,6 +27,7 @@
         <option value="tslint" />
         <option value="intellij.webpack" />
         <option value="Karma" />
+        <option value="com.jetbrains.rust" />
       </list>
     </option>
   </component>
