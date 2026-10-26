@@ -1,10 +1,7 @@
 <application>
   <component name="AcpAgentDownloadConsent">{}</component>
-  <component name="AgentGeneral"><![CDATA[{
-  "promptSettings": {
-    "startNewSessionsInTerminal": true
-  }
-}]]></component>
+  <component name="AgentCommitMessage"><![CDATA[{}]]></component>
+  <component name="AgentGeneral"><![CDATA[{}]]></component>
   <component name="AgentSessionLaunchProfileStateV2">{
   &quot;launchProfiles&quot;: [
     {
@@ -337,8 +334,7 @@
         }
       }
     }
-  ],
-  "migratedFromLaunchProfiles": true
+  ]
 }]]></component>
   <component name="AgentSessionProviderSettings"><![CDATA[{
   "agentEnablementOverridesBySource": {
@@ -380,7 +376,6 @@
   "lastEnabledEntryKindByAgentId": {
     "terminal": "DISCOVERED",
     "junie": "DISCOVERED"
-  },
-  "migratedLegacyDynamicAgentEnablement": true
+  }
 }]]></component>
 </application>
