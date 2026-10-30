@@ -1,6 +1,6 @@
 <application>
   <component name="AcpAgentDownloadConsent">{}</component>
-  <component name="AgentCommitMessage"><![CDATA[{}]]></component>
+  <component name="AgentCommitMessage">{}</component>
   <component name="AgentGeneral"><![CDATA[{}]]></component>
   <component name="AgentSessionLaunchProfileStateV2">{
   &quot;launchProfiles&quot;: [
@@ -171,10 +171,6 @@
       "sessionParameters": {
         "launchMode": "FULL_ACCESS",
         "sessionModeId": "FULL_ACCESS",
-        "generationPreferences": {
-          "modelId": "v1:12:jetbrains-ai:junie-mix",
-          "reasoningEffort": "HIGH"
-        },
         "planMode": true
       }
     },
