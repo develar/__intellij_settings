@@ -1,6 +1,7 @@
 <application>
   <component name="AirSessionsSettings"><![CDATA[{
   "activityPlacement": "BOTH",
-  "compactNewSessionButtonInMainToolbar": true
+  "compactNewSessionButtonInMainToolbar": true,
+  "classicalTreeView": true
 }]]></component>
 </application>
