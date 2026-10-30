@@ -1,6 +1,6 @@
 <application>
   <component name="AcpAgentDownloadConsent">{}</component>
-  <component name="AgentCommitMessage">{}</component>
+  <component name="AgentCommitMessage"><![CDATA[{}]]></component>
   <component name="AgentCommitMessageAgent"><![CDATA[{}]]></component>
   <component name="AgentGeneral"><![CDATA[{}]]></component>
   <component name="AgentSessionLaunchProfileStateV2">{
