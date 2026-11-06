@@ -1,6 +1,6 @@
 <application>
   <component name="AcpAgentDownloadConsent">{}</component>
-  <component name="AgentCommitMessage"><![CDATA[{}]]></component>
+  <component name="AgentCommitMessage">{}</component>
   <component name="AgentCommitMessageAgent"><![CDATA[{}]]></component>
   <component name="AgentGeneral"><![CDATA[{}]]></component>
   <component name="AgentSessionLaunchProfileStateV2">{
@@ -344,7 +344,7 @@
     "managed:junie": false,
     "discovered:junie": true,
     "custom:junie": false,
-    "discovered:pi": false,
+    "discovered:pi": true,
     "discovered:opencode": false,
     "discovered:terminal": true,
     "managed:acp.dynamic.6163702e72656769737472792e6769746875622d636f70696c6f74": false,
@@ -354,7 +354,9 @@
     "managed:acp.dynamic.6163702e72656769737472792e70692d616370": false,
     "custom:acp-replay": true,
     "managed:terminal": false,
-    "custom:terminal": false
+    "custom:terminal": false,
+    "managed:pi": false,
+    "custom:pi": false
   },
   "agentLaunchPreferences": {
     "codex": {
@@ -368,11 +370,15 @@
     },
     "terminal": {
       "interactionSurfaceId": "terminal"
+    },
+    "pi": {
+      "interactionSurfaceId": "terminal"
     }
   },
   "lastEnabledEntryKindByAgentId": {
     "terminal": "DISCOVERED",
-    "junie": "DISCOVERED"
+    "junie": "DISCOVERED",
+    "pi": "DISCOVERED"
   }
 }]]></component>
 </application>
