@@ -222,7 +222,7 @@
       "sessionParameters": {
         "sessionModeId": "plan",
         "generationPreferences": {
-          "modelId": "fable",
+          "modelId": "claude-fable-5-2",
           "reasoningEffort": "HIGH"
         }
       }
