@@ -20,12 +20,10 @@
     <entry key="debugger.auto.attach.from.console" value="true" source="SYSTEM" />
     <entry key="llm.ignore.default.prompt.rules.aie" value="false" source="SYSTEM" />
     <entry key="llm.nextEdit.render.rating.controls" value="true" source="SYSTEM" />
-    <entry key="air.codex.appServer.survive.restart" value="true" source="USER" />
-    <entry key="air.claude.session.daemonHosted" value="true" source="USER" />
     <entry key="air.session.toolwindow.enabled" value="true" source="USER" />
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
     <entry key="air.sessions.tree.plain" value="true" source="USER" />
-    <entry key="monorepo.devkit.dev.build.bazel.dist" value="true" source="USER" />
+    <entry key="air.session.hosted" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
