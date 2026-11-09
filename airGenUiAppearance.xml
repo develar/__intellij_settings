@@ -1,3 +1,8 @@
 <application>
-  <component name="AirGenUiAppearance"><![CDATA[{}]]></component>
+  <component name="AirGenUiAppearance"><![CDATA[{
+  "values": {
+    "theme": "modern-minimal",
+    "mode": "light"
+  }
+}]]></component>
 </application>
