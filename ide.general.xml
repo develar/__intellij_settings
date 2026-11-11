@@ -24,6 +24,7 @@
     <entry key="vcs.log.index.enable" value="true" source="SYSTEM" />
     <entry key="air.sessions.tree.plain" value="true" source="USER" />
     <entry key="air.session.hosted" value="true" source="USER" />
+    <entry key="air.session.issue.links" value="true" source="USER" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
