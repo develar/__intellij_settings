@@ -1,6 +1,7 @@
 <application>
   <component name="AgentSessionPlacement"><![CDATA[{
   "openSessionsInAgentSessionsWindow": true,
-  "currentProjectOnly": false
+  "currentProjectOnly": false,
+  "sessionListSeeded": true
 }]]></component>
 </application>
