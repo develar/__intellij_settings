@@ -210,8 +210,9 @@
       "sessionParameters": {
         "sessionModeId": "plan",
         "generationPreferences": {
-          "modelId": "opus[1m]",
-          "reasoningEffort": "HIGH"
+          "modelId": "claude-opus-5-5",
+          "reasoningEffort": "HIGH",
+          "modelDisplayName": "Claude Opus 5.5"
         }
       }
     },
